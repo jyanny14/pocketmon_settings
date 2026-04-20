@@ -32,6 +32,16 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T22b — 노력치(SP) + 성격 UI · 실효 스탯 계산 ✅
+
+각 슬롯 카드의 "상세 설정(접힘)" 영역이 이제 3개 블록: **기술(T22a) · 훈련(성격 · SP · 실효 스탯)**. 요약은 `상세 설정 · 기술 N/4 · SP X/66 · 성격 Y`.
+
+- `web/assets/stats.js` 신규 — Champions 실효 스탯 공식. `spToEv(sp)` = 0 (sp=0) / 8·sp−4 (sp≥1). Level 50, IV 31 고정. HP = `⌊(2·base+31+⌊ev/4⌋)·50/100⌋+50+10`, 기타 = `⌊(⌊(2·base+31+⌊ev/4⌋)·50/100⌋+5)·natureMod⌋`. Nature modifier 는 `party-encode.js` 의 `natureMultipliers` 재사용.
+- `web/assets/party.js` — `loadMoves`/`fetch natures.json` 동시 로드, `state.natures` 신설. `makeExtendedSection` 이 moves/nature/SP 블록을 한 `<details>` 아래 묶음. `makeNatureSelect` 는 25종 드롭다운 + 보정 스탯 툴팁("+atk / −spAtk" 식). `makeSpInputs` 는 6개 number input(0–32), 헤더에 `X/66` 합계 · 초과 시 빨간 강조, 입력 단위로 clamp 하고 총합 초과 시 해당 입력을 revert.
+- 실효 스탯은 SP/nature 가 바뀔 때마다 카드 내부에서 즉시 재계산돼 한 줄 요약("HP 205 · 공격 320 …") 으로 노출.
+- i18n: `party.extras.title`, `party.training.title`, `party.nature.*`, `party.sp.*` ko/en 추가.
+- `web/assets/style.css` 의 `.slot-card__moves` 섹션을 `.slot-card__extra` 계열로 확장: SP 그리드(모바일 3×2 → 데스크톱 6×1), `.slot-card__sp-total--over` 초과 경고, `.slot-card__sp-effective` 요약 줄 스타일.
+
 ### T22a — 기술 4칸 피커 UI + STAB 커버리지 실반영 ✅
 
 각 슬롯 카드 하단에 `<details class="slot-card__moves">` 접힘 영역 추가. 기본 접힘이지만 moves 가 한 개라도 있으면 auto-open.

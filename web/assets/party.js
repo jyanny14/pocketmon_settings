@@ -16,7 +16,16 @@ import {
   t,
   getLang,
 } from "./app.js";
-import { SLOT_COUNT, encodeParty, decodeParty, emptySps } from "./party-encode.js";
+import {
+  SLOT_COUNT,
+  encodeParty,
+  decodeParty,
+  emptySps,
+  SP_PER_STAT_MAX,
+  SP_TOTAL_MAX,
+  SP_STAT_KEYS,
+} from "./party-encode.js";
+import { effectiveStats, effectiveStatsTotal } from "./stats.js";
 
 const TYPE_ORDER = [
   "normal", "fire", "water", "electric", "grass", "ice",
@@ -34,6 +43,7 @@ const state = {
   abilityMap: /** @type {Map<string, any>} */ (new Map()),
   items: [],
   moveMap: /** @type {Map<string, any>} */ (new Map()),
+  natures: /** @type {{slug:string, nameKo:string, nameEn:string, increased:string|null, decreased:string|null}[]} */ ([]),
   typeChart: null,
   // Party: Array of Slot|null, fixed length SLOT_COUNT
   party: /** @type {(Slot|null)[]} */ (Array(SLOT_COUNT).fill(null)),
@@ -62,12 +72,13 @@ const els = {
 
 async function init() {
   try {
-    const [pokemon, abilities, items, moves, typeChart] = await Promise.all([
+    const [pokemon, abilities, items, moves, typeChart, natures] = await Promise.all([
       loadPokemon(),
       loadAbilities(),
       loadItems(),
       loadMoves(),
       fetch(new URL("../data/type_chart.json", import.meta.url), { cache: "no-cache" }).then((r) => r.json()),
+      fetch(new URL("../data/natures.json", import.meta.url), { cache: "no-cache" }).then((r) => r.json()),
     ]);
     state.pokemon = pokemon;
     for (const p of pokemon) state.pokemonMap.set(p.slug, p);
@@ -75,6 +86,7 @@ async function init() {
     for (const m of moves) state.moveMap.set(m.slug, m);
     state.items = items;
     state.typeChart = typeChart;
+    state.natures = natures;
   } catch (err) {
     els.grid.innerHTML = `<p class="empty-state">${t("error.loadFailed")}: ${err.message}</p>`;
     return;
@@ -205,22 +217,48 @@ function renderSlot(index, slot) {
   totalLabel.textContent = `${t("pokemon.statTotal")} ${total}`;
   stats.appendChild(totalLabel);
 
-  const moves = makeMovesSection(index, pokemon, slot);
+  const extras = makeExtendedSection(index, pokemon, form, slot);
 
-  card.append(header, types, controls, stats, moves);
+  card.append(header, types, controls, stats, extras);
   return card;
 }
 
-function makeMovesSection(index, pokemon, slot) {
+function makeExtendedSection(index, pokemon, form, slot) {
   const details = document.createElement("details");
-  details.className = "slot-card__moves";
-  details.open = (slot.moves || []).length > 0;
+  details.className = "slot-card__extra";
+  const hasMoves = (slot.moves || []).length > 0;
+  const hasSps = (slot.sps || []).some((v) => v > 0);
+  const hasNature = !!slot.nature;
+  details.open = hasMoves || hasSps || hasNature;
 
   const summary = document.createElement("summary");
-  summary.className = "slot-card__moves-summary";
-  const count = (slot.moves || []).length;
-  summary.textContent = `${t("party.moves.title")} (${count}/4)`;
+  summary.className = "slot-card__extra-summary";
+  summary.textContent = buildExtraSummary(slot);
   details.appendChild(summary);
+
+  // moves block
+  details.appendChild(buildMovesBlock(index, pokemon, slot));
+  // nature + SP block
+  details.appendChild(buildTrainingBlock(index, form, slot));
+  return details;
+}
+
+function buildExtraSummary(slot) {
+  const movesN = (slot.moves || []).length;
+  const spTotal = (slot.sps || []).reduce((a, b) => a + b, 0);
+  const natureSlug = slot.nature;
+  const natureLabel = natureSlug ? t(`nature.${natureSlug}`) : "—";
+  return `${t("party.extras.title")} · ${t("party.moves.title")} ${movesN}/4 · SP ${spTotal}/${SP_TOTAL_MAX} · ${t("party.nature.title")} ${natureLabel}`;
+}
+
+function buildMovesBlock(index, pokemon, slot) {
+  const block = document.createElement("div");
+  block.className = "slot-card__extra-block";
+
+  const heading = document.createElement("div");
+  heading.className = "slot-card__extra-heading";
+  heading.textContent = t("party.moves.title");
+  block.appendChild(heading);
 
   const learnable = (pokemon.moves || [])
     .map((s) => state.moveMap.get(s))
@@ -231,13 +269,160 @@ function makeMovesSection(index, pokemon, slot) {
 
   const row = document.createElement("div");
   row.className = "slot-card__moves-row";
-
   for (let i = 0; i < 4; i++) {
     row.appendChild(makeMoveSelect(index, pokemon, slot, learnable, i));
   }
+  block.appendChild(row);
+  return block;
+}
 
-  details.appendChild(row);
-  return details;
+function buildTrainingBlock(index, form, slot) {
+  const block = document.createElement("div");
+  block.className = "slot-card__extra-block";
+
+  const heading = document.createElement("div");
+  heading.className = "slot-card__extra-heading";
+  heading.textContent = t("party.training.title");
+  block.appendChild(heading);
+
+  // Nature dropdown
+  block.appendChild(makeNatureSelect(index, slot));
+
+  // SP inputs
+  block.appendChild(makeSpInputs(index, form, slot));
+
+  return block;
+}
+
+function makeNatureSelect(index, slot) {
+  const wrap = document.createElement("label");
+  wrap.className = "slot-card__field";
+
+  const label = document.createElement("span");
+  label.className = "slot-card__field-label";
+  label.textContent = t("party.nature.title");
+
+  const sel = document.createElement("select");
+  sel.className = "field__control";
+
+  const none = document.createElement("option");
+  none.value = "";
+  none.textContent = t("party.nature.none");
+  if (!slot.nature) none.selected = true;
+  sel.appendChild(none);
+
+  const natures = [...state.natures].sort((a, b) =>
+    (a.nameKo || a.nameEn).localeCompare(b.nameKo || b.nameEn, getLang() === "ko" ? "ko" : "en"),
+  );
+  for (const n of natures) {
+    const opt = document.createElement("option");
+    opt.value = n.slug;
+    const displayName = getLang() === "ko" ? (n.nameKo || n.nameEn) : n.nameEn;
+    const modTag =
+      n.increased && n.decreased
+        ? ` (+${statShortLabel(n.increased)} / −${statShortLabel(n.decreased)})`
+        : ` (${t("party.nature.neutral")})`;
+    opt.textContent = `${displayName}${modTag}`;
+    opt.title = modTag.trim();
+    if (n.slug === slot.nature) opt.selected = true;
+    sel.appendChild(opt);
+  }
+
+  sel.addEventListener("change", () => {
+    const current = state.party[index];
+    if (!current) return;
+    state.party[index] = { ...current, nature: sel.value || null };
+    writePartyToUrl();
+    renderAll();
+  });
+
+  wrap.append(label, sel);
+  return wrap;
+}
+
+function statShortLabel(statKey) {
+  const map = {
+    hp: t("stat.hp"),
+    atk: t("stat.atk"),
+    def: t("stat.def"),
+    spAtk: t("stat.spAtk"),
+    spDef: t("stat.spDef"),
+    speed: t("stat.speed"),
+  };
+  return map[statKey] || statKey;
+}
+
+function makeSpInputs(index, form, slot) {
+  const wrap = document.createElement("div");
+  wrap.className = "slot-card__sp";
+
+  const sps = (slot.sps && slot.sps.length === 6) ? [...slot.sps] : emptySps();
+  const total = sps.reduce((a, b) => a + b, 0);
+  const over = total > SP_TOTAL_MAX;
+
+  const header = document.createElement("div");
+  header.className = "slot-card__sp-header";
+  header.innerHTML = `<span>${t("party.sp.title")}</span><span class="slot-card__sp-total${over ? " slot-card__sp-total--over" : ""}">${total}/${SP_TOTAL_MAX}</span>`;
+  wrap.appendChild(header);
+
+  const grid = document.createElement("div");
+  grid.className = "slot-card__sp-grid";
+
+  SP_STAT_KEYS.forEach((key, i) => {
+    const cell = document.createElement("label");
+    cell.className = "slot-card__sp-cell";
+
+    const lab = document.createElement("span");
+    lab.className = "slot-card__sp-label";
+    lab.textContent = statShortLabel(key);
+    cell.appendChild(lab);
+
+    const input = document.createElement("input");
+    input.type = "number";
+    input.className = "slot-card__sp-input field__control";
+    input.min = "0";
+    input.max = String(SP_PER_STAT_MAX);
+    input.step = "1";
+    input.inputMode = "numeric";
+    input.value = String(sps[i] || 0);
+
+    input.addEventListener("change", () => {
+      const current = state.party[index];
+      if (!current) return;
+      let v = parseInt(input.value, 10);
+      if (!Number.isFinite(v) || v < 0) v = 0;
+      if (v > SP_PER_STAT_MAX) v = SP_PER_STAT_MAX;
+      const nextSps = [...(current.sps && current.sps.length === 6 ? current.sps : emptySps())];
+      nextSps[i] = v;
+      // clamp total — if over 66, reject change (revert)
+      const newTotal = nextSps.reduce((a, b) => a + b, 0);
+      if (newTotal > SP_TOTAL_MAX) {
+        input.value = String((current.sps || emptySps())[i] || 0);
+        return;
+      }
+      state.party[index] = { ...current, sps: nextSps };
+      writePartyToUrl();
+      renderAll();
+    });
+
+    cell.appendChild(input);
+    grid.appendChild(cell);
+  });
+
+  wrap.appendChild(grid);
+
+  // Effective stats preview
+  const effective = effectiveStats(form.baseStats, sps, slot.nature, state.natures);
+  const effTotal = effectiveStatsTotal(effective);
+  const eff = document.createElement("div");
+  eff.className = "slot-card__sp-effective";
+  const parts = SP_STAT_KEYS.map(
+    (k) => `<span><span class="muted">${statShortLabel(k)}</span> ${effective[k]}</span>`,
+  );
+  eff.innerHTML = `<span class="muted">${t("party.sp.effective")} (${t("party.sp.level")} 50 · IV 31, ${t("party.sp.total")} ${effTotal}):</span> ${parts.join(" · ")}`;
+  wrap.appendChild(eff);
+
+  return wrap;
 }
 
 function makeMoveSelect(index, pokemon, slot, learnable, slotPos) {
