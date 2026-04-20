@@ -32,6 +32,12 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T19 기술 nameKo 35건 수동 보강 ✅ 481/481
+
+- PokeAPI 한국어 이름이 없던 Gen 9 이후 기술 35건 전체를 SV 공식 한국어명으로 채움. `data/manual/move_names_ko.json` 신설.
+- `scripts/build_moves.py` — `MOVE_NAMES_KO_OVERRIDE_PATH` + `_load_move_names_ko()` 추가. 로직은 **fetch 된 nameKo 가 비어 있을 때만 manual 값을 사용** (PokeAPI 후속 갱신 시 자동 흡수 되도록). 빌드 로그에 `manual nameKo filled=N` 줄 추가.
+- 결과: `moves.json[].nameKo` 446 → 481/481 (0 누락). 포켓몬 상세 기술 테이블 영문 이름 완전 해소.
+
 ### T18 어빌리티 gameTextKo 16건 수동 보강 ✅ 192/192
 
 - PokeAPI 한국어 flavor text 가 없는 16개(Gen 9/Champions 신규 위주 + `hospitality`, `supersweetsyrup` 2건) 을 수동 번역.

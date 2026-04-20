@@ -24,6 +24,9 @@ log = logging.getLogger("build_moves")
 
 SRC = PROJECT_ROOT / "data" / "processed" / "moves.json"
 UPDATED_ATTACKS_PATH = PROJECT_ROOT / "data" / "processed" / "updated_attacks.json"
+# Manual Korean-name override, filled in for moves whose PokeAPI entry has no
+# Korean name yet (Gen 9 and later). Shape: {slug: nameKo}.
+MOVE_NAMES_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_ko.json"
 OUT = PROJECT_ROOT / "web" / "data" / "moves.json"
 
 
@@ -39,6 +42,19 @@ def _load_updated_attacks() -> dict[str, dict]:
     return {e["slug"]: e for e in data if isinstance(e, dict) and e.get("slug")}
 
 
+def _load_move_names_ko() -> dict[str, str]:
+    if not MOVE_NAMES_KO_OVERRIDE_PATH.exists():
+        return {}
+    try:
+        data = json.loads(MOVE_NAMES_KO_OVERRIDE_PATH.read_text(encoding="utf-8"))
+    except Exception as exc:  # noqa: BLE001
+        log.warning("move_names_ko read failed: %s", exc)
+        return {}
+    if not isinstance(data, dict):
+        return {}
+    return {k: v for k, v in data.items() if v and not k.startswith("_")}
+
+
 def main() -> int:
     logging.basicConfig(
         level=logging.INFO,
@@ -50,15 +66,22 @@ def main() -> int:
         return 1
     data = json.loads(SRC.read_text(encoding="utf-8"))
     overlay = _load_updated_attacks()
+    names_ko_override = _load_move_names_ko()
+    manual_applied = 0
     updated = 0
     rows: list[dict] = []
     for slug in sorted(data):
         e = data[slug]
+        fetched_name_ko = N(e.get("nameKo", ""))
+        name_ko = fetched_name_ko
+        if not name_ko and slug in names_ko_override:
+            name_ko = N(names_ko_override[slug])
+            manual_applied += 1
         row = {
             "slug": slug,
             "pokeapiSlug": e.get("pokeapiSlug", ""),
             "nameEn": N(e.get("nameEn", "")),
-            "nameKo": N(e.get("nameKo", "")),
+            "nameKo": name_ko,
             "type": e.get("type", ""),
             "category": e.get("category", ""),
             "power": e.get("power"),
@@ -87,7 +110,13 @@ def main() -> int:
         rows.append(row)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
-    log.info("wrote %d moves (Champions overlay applied to %d) → %s", len(rows), updated, OUT)
+    log.info(
+        "wrote %d moves (Champions overlay=%d, manual nameKo filled=%d) → %s",
+        len(rows),
+        updated,
+        manual_applied,
+        OUT,
+    )
     return 0
 
 

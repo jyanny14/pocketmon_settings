@@ -206,10 +206,11 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - `scripts/fetch_ability_descriptions_ko.py --force` 주기 재실행 시 PokeAPI 가 뒤늦게 같은 slug 에 한국어를 반영해도 manual 쪽이 이긴다. 원치 않으면 manual 엔트리를 비우고 PokeAPI 값으로 돌리면 됨.
 - 잔여: T4b (nameKo 14건) — 14 slug 중 일부는 Champions 신규라 공식 한국어명이 확정되지 않은 상태. 공식 정보 확인 후 별도 진행.
 
-### T19. 기술 `nameKo` 미매칭 35건 수동 보강
-- T10 수집 결과 446/481. 미매칭 slug 전체 (`aquacutter`, `aquastep`, `armorcannon`, `axekick`, `bitterblade`, `chillingwater`, `chillyreception`, `comeuppance`, `direclaw`, `flowertrick`, `gigatonhammer`, `headlongrush`, `icespinner`, `jetpunch`, `kowtowcleave`, …) 는 전부 Gen 9/Champions 후반 추가 기술.
-- `data/manual/move_names_ko.json` 신설 → `scripts/build_moves.py` 병합 → `web/data/moves.json[].nameKo` 에 반영.
-- `scripts/fetch_moves.py --force` 재실행으로 PokeAPI 추후 반영분 자동 흡수.
+### T19. 기술 `nameKo` 미매칭 35건 수동 보강 ✅ (2026-04-20)
+- T10 수집 결과 446/481 → 이번에 35건 채워 **481/481 완료**. 대상은 전부 Gen 9 이후 추가 기술이라 SV/바이올렛 공식 한국어명을 따랐음(예: `gigatonhammer`→대왕해머, `wavecrash`→파도격돌, `chillyreception`→썰렁한말장난).
+- `data/manual/move_names_ko.json` 신설 (단순 `{slug: nameKo}` 맵) + `scripts/build_moves.py` `_load_move_names_ko()` 추가 → fetch 된 nameKo 가 비어 있을 때만 덮어씀. PokeAPI 값이 이미 있으면 건드리지 않음.
+- `scripts/fetch_moves.py --force` 재실행으로 PokeAPI 가 뒤늦게 반영해도 자동 흡수(그 시점에 processed 쪽에 값이 들어오니 manual 은 자연스레 no-op).
+- 번역은 이번에 SV 기준으로 채웠지만 Champions 에서 일부 기술 명칭이 바뀐 경우가 확인되면 이 파일만 수정.
 
 ### T20. 기술 `flavorTextKo` 미매칭 44건 수동 보강
 - T10 수집 결과 437/481. T19 와 slug 집합이 거의 겹침.
