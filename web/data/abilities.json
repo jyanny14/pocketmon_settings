@@ -138,7 +138,7 @@
   {
     "slug": "armortail",
     "nameEn": "Armor Tail",
-    "nameKo": "",
+    "nameKo": "테일아머",
     "description": "The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.",
     "descriptionKo": "",
     "gameText": "The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.",
@@ -470,7 +470,7 @@
   {
     "slug": "cudchew",
     "nameEn": "Cud Chew",
-    "nameKo": "",
+    "nameKo": "되새김질",
     "description": "When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.",
     "descriptionKo": "",
     "gameText": "When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.",
@@ -630,7 +630,7 @@
   {
     "slug": "dragonize",
     "nameEn": "Dragonize",
-    "nameKo": "",
+    "nameKo": "드래곤스킨",
     "description": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.",
     "descriptionKo": "",
     "gameText": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.",
@@ -734,7 +734,7 @@
   {
     "slug": "eartheater",
     "nameEn": "Earth Eater",
-    "nameKo": "",
+    "nameKo": "흙먹기",
     "description": "The user recovers 25% of its maximum Hit Points when a Ground-type move is used against it",
     "descriptionKo": "",
     "gameText": "If hit by a Ground-type move, the Pokémon has its HP restored instead of taking damage.",
@@ -750,7 +750,7 @@
   {
     "slug": "electromorphosis",
     "nameEn": "Electromorphosis",
-    "nameKo": "",
+    "nameKo": "전기로바꾸기",
     "description": "The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses.",
     "descriptionKo": "",
     "gameText": "The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses.",
@@ -2074,7 +2074,7 @@
   {
     "slug": "megasol",
     "nameEn": "Mega Sol",
-    "nameKo": "",
+    "nameKo": "메가솔라",
     "description": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.",
     "descriptionKo": "",
     "gameText": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.",
@@ -2422,7 +2422,7 @@
   {
     "slug": "opportunist",
     "nameEn": "Opportunist",
-    "nameKo": "",
+    "nameKo": "편승",
     "description": "If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.",
     "descriptionKo": "",
     "gameText": "If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.",
@@ -2626,7 +2626,7 @@
   {
     "slug": "piercingdrill",
     "nameEn": "Piercing Drill",
-    "nameKo": "",
+    "nameKo": "관통드릴",
     "description": "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.",
     "descriptionKo": "",
     "gameText": "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.",
@@ -2858,7 +2858,7 @@
   {
     "slug": "purifyingsalt",
     "nameEn": "Purifying Salt",
-    "nameKo": "",
+    "nameKo": "정화의소금",
     "description": "The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.",
     "descriptionKo": "",
     "gameText": "The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.",
@@ -3374,7 +3374,7 @@
   {
     "slug": "sharpness",
     "nameEn": "Sharpness",
-    "nameKo": "",
+    "nameKo": "예리함",
     "description": "Increases the power of Slicing moves used by this Pokémon by 50%",
     "descriptionKo": "",
     "gameText": "Powers up slicing moves.",
@@ -3746,7 +3746,7 @@
   {
     "slug": "spicyspray",
     "nameEn": "Spicy Spray",
-    "nameKo": "",
+    "nameKo": "하바네로분출",
     "description": "When the Pokémon takes damage from a move, it burns the attacker.",
     "descriptionKo": "",
     "gameText": "When the Pokémon takes damage from a move, it burns the attacker.",
@@ -4062,7 +4062,7 @@
   {
     "slug": "supremeoverlord",
     "nameEn": "Supreme Overlord",
-    "nameKo": "",
+    "nameKo": "총대장",
     "description": "When the Pokémon enters a battle, its Attack and Sp. Atk stats are boosted by 10% for each of the allies in its party that have already been defeated.",
     "descriptionKo": "",
     "gameText": "When the Pokémon enters a battle, its Attack and Sp. Atk stats are boosted by 10% for each of the allies in its party that have already been defeated.",
@@ -4422,7 +4422,7 @@
   {
     "slug": "toxicdebris",
     "nameEn": "Toxic Debris",
-    "nameKo": "",
+    "nameKo": "독치장",
     "description": "Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.",
     "descriptionKo": "",
     "gameText": "Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.",
@@ -4706,7 +4706,7 @@
   {
     "slug": "zerotohero",
     "nameEn": "Zero to Hero",
-    "nameKo": "",
+    "nameKo": "마이티체인지",
     "description": "The Pokémon transforms into its Hero Form when it switches out.",
     "descriptionKo": "",
     "gameText": "The Pokémon transforms into its Hero Form when it switches out.",

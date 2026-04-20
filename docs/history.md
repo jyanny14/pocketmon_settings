@@ -32,6 +32,14 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T4b + T8b 완료 — Bulbapedia 기반 38건 검증·반영 ✅
+
+- 원래 "Champions 한국어판 발매 전엔 공식값이 없을 것" 으로 비워 뒀던 T4b(어빌리티 14) + T8b(도구 24) 를 Bulbapedia "In other languages" 섹션으로 확인해보니 **38건 전부 이미 공식 한국어명이 등재돼 있음**. 즉 공식값은 존재했고, 우리 PokeAPI 파이프라인이 그걸 수확하지 못했을 뿐.
+- Bulbapedia 페이지 38건 각각 fetch 해서 한국어명 추출 → `data/manual/ability_names_ko.json`(14) · `data/manual/item_names_ko.json`(24) 에 전부 반영.
+- 내가 처음 추정 번역했던 값 중 **3건은 공식과 달랐다** — `armortail`(무장꼬리→테일아머), `electromorphosis`(전기바뀜→전기로바꾸기), `supremeoverlord`(백전노장→총대장). 잘못 반영 대신 빈값 유지한 게 실제로 사고를 막았다.
+- `abilities.json[].nameKo` 192/192, `items.json[].nameKo` 117/117. corpus 987 KB.
+- `docs/review-translations.md` §A 업데이트: T4b/T8b 섹션에 반영된 값 테이블 + 초기 추정과 차이 표시. `docs/TODO.md` T4b/T8b 를 완료로 마감.
+
 ### T21 prompts 페이지 i18n ✅
 
 - 기존 하드코딩 한국어 → `prompts.*` i18n 키 24개(+`party.aiPrompts`)로 전환. EN 모드에서 자연스러운 영어 출력.

@@ -12,55 +12,64 @@
 
 ---
 
-## A. 비어 있음 — 공식 한국어명 미확정으로 남겨둠
+## A. 비어 있음 — ~~공식 한국어명 미확정으로 남겨둠~~ ✅ 2026-04-20 Bulbapedia 기준 전부 반영
 
-### T4b · 어빌리티 `nameKo` 14건 🔴 — `data/manual/ability_names_ko.json`
+**T4b (어빌리티 nameKo 14건)** 과 **T8b (도구 nameKo 24건)** 모두 Bulbapedia "In other languages" 섹션에 공식 한국어명이 등재돼 있어 그대로 채웠습니다. 아래는 반영된 값 — 이후 공식 확인 시 대조용:
 
-| slug | nameEn | 비고 |
+### T4b 최종 값
+
+| slug | 반영된 nameKo | 비고 |
 |---|---|---|
-| armortail | Armor Tail | Gen 9, SV 공식 한국어명 확인 필요 |
-| cudchew | Cud Chew | Gen 9, SV 공식 |
-| dragonize | Dragonize | **Champions 신규** — 공식 번역 없을 가능성 |
-| eartheater | Earth Eater | Gen 9, SV 공식 |
-| electromorphosis | Electromorphosis | Gen 9, SV 공식 |
-| megasol | Mega Sol | **Champions 신규** — 공식 번역 없을 가능성 |
-| opportunist | Opportunist | Gen 9, SV 공식 |
-| piercingdrill | Piercing Drill | **Champions 신규** — 공식 번역 없을 가능성 |
-| purifyingsalt | Purifying Salt | Gen 9, SV 공식 |
-| sharpness | Sharpness | Gen 9, SV 공식 |
-| spicyspray | Spicy Spray | **Champions 신규** — 공식 번역 없을 가능성 |
-| supremeoverlord | Supreme Overlord | Gen 9, SV 공식 |
-| toxicdebris | Toxic Debris | Gen 9, SV 공식 |
-| zerotohero | Zero to Hero | Gen 9, SV 공식 |
+| armortail | 테일아머 | (내 초기 추정 "무장꼬리" ❌) |
+| cudchew | 되새김질 | |
+| dragonize | 드래곤스킨 | Champions 신규 — Bulbapedia 등재 확인 |
+| eartheater | 흙먹기 | |
+| electromorphosis | 전기로바꾸기 | (내 초기 추정 "전기바뀜" ❌) |
+| megasol | 메가솔라 | Champions 신규 — Bulbapedia 등재 확인 |
+| opportunist | 편승 | |
+| piercingdrill | 관통드릴 | Champions 신규 — Bulbapedia 등재 확인 |
+| purifyingsalt | 정화의소금 | |
+| sharpness | 예리함 | |
+| spicyspray | 하바네로분출 | Champions 신규 — Bulbapedia 등재 확인 |
+| supremeoverlord | 총대장 | (내 초기 추정 "백전노장" ❌) |
+| toxicdebris | 독치장 | |
+| zerotohero | 마이티체인지 | |
 
-### T8b · 도구 `nameKo` 24건 🔴 — `data/manual/item_names_ko.json`
+### T8b 최종 값
 
-| slug | nameEn | 비고 |
-|---|---|---|
-| fairy-feather | Fairy Feather | 페어리 강화 도구 |
-| chandelurite | Chandelurite | Champions 신규 메가스톤 |
-| chesnaughtite | Chesnaughtite | Champions 신규 메가스톤 |
-| chimechite | Chimechite | Champions 신규 메가스톤 |
-| clefablite | Clefablite | Champions 신규 메가스톤 |
-| crabominite | Crabominite | Champions 신규 메가스톤 |
-| delphoxite | Delphoxite | Champions 신규 메가스톤 |
-| dragoninite | Dragoninite | Champions 신규 메가스톤 |
-| drampanite | Drampanite | Champions 신규 메가스톤 |
-| emboarite | Emboarite | Champions 신규 메가스톤 |
-| excadrite | Excadrite | Champions 신규 메가스톤 |
-| feraligite | Feraligite | Champions 신규 메가스톤 |
-| floettite | Floettite | Champions 신규 메가스톤 (영원의꽃) |
-| froslassite | Froslassite | Champions 신규 메가스톤 |
-| glimmoranite | Glimmoranite | Champions 신규 메가스톤 |
-| golurkite | Golurkite | Champions 신규 메가스톤 |
-| greninjite | Greninjite | Champions 신규 메가스톤 |
-| hawluchanite | Hawluchanite | Champions 신규 메가스톤 |
-| meganiumite | Meganiumite | Champions 신규 메가스톤 |
-| meowsticite | Meowsticite | Champions 신규 메가스톤 |
-| scovillainite | Scovillainite | Champions 신규 메가스톤 |
-| skarmorite | Skarmorite | Champions 신규 메가스톤 |
-| starminite | Starminite | Champions 신규 메가스톤 |
-| victreebelite | Victreebelite | Champions 신규 메가스톤 |
+| slug | 반영된 nameKo |
+|---|---|
+| fairy-feather | 요정의깃털 |
+| chandelurite | 샹델라나이트 |
+| chesnaughtite | 브리가론나이트 |
+| chimechite | 치렁나이트 |
+| clefablite | 픽시나이트 |
+| crabominite | 모단단게나이트 |
+| delphoxite | 마폭시나이트 |
+| dragoninite | 망나뇽나이트 |
+| drampanite | 할비롱나이트 |
+| emboarite | 염무왕나이트 |
+| excadrite | 몰드류나이트 |
+| feraligite | 장크로다일나이트 |
+| floettite | 플라엣테나이트 |
+| froslassite | 눈여아나이트 |
+| glimmoranite | 킬라플로르나이트 |
+| golurkite | 골루그나이트 |
+| greninjite | 개굴닌자나이트 |
+| hawluchanite | 루차불나이트 |
+| meganiumite | 메가니움나이트 |
+| meowsticite | 냐오닉스나이트 |
+| scovillainite | 스코빌런나이트 |
+| skarmorite | 무장조나이트 |
+| starminite | 아쿠스타나이트 |
+| victreebelite | 우츠보트나이트 |
+
+**모든 메가스톤은 `{포켓몬 한국어명}나이트` 패턴**. `fairy-feather` 만 예외 ("요정의깃털").
+
+### T4b/T8b 최종 커버리지
+
+- 어빌리티 `nameKo`: **192/192** ✅
+- 도구 `nameKo`: **117/117** ✅
 
 ---
 

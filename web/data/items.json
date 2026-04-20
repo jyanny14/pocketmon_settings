@@ -62,7 +62,7 @@
   {
     "slug": "fairy-feather",
     "nameEn": "Fairy Feather",
-    "nameKo": "",
+    "nameKo": "요정의깃털",
     "effect": "An item to be held by a Pokémon. This feather, which gleams faintly when hit by light, boosts the power of the holder's Fairy-type moves.",
     "effectKo": "포켓몬이 지닐 수 있는 도구. 빛을 받으면 희미하게 빛나는 깃털. 지닌 포켓몬의 페어리타입 기술 위력이 올라간다.",
     "location": "Shop 700 VP",
@@ -422,7 +422,7 @@
   {
     "slug": "chandelurite",
     "nameEn": "Chandelurite",
-    "nameKo": "",
+    "nameKo": "샹델라나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Chandelure holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 샹델라에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -452,7 +452,7 @@
   {
     "slug": "chesnaughtite",
     "nameEn": "Chesnaughtite",
-    "nameKo": "",
+    "nameKo": "브리가론나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Chesnaught holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 브리가론에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Deposit a Chesnaught from Pokémon Legends: Z-A",
@@ -462,7 +462,7 @@
   {
     "slug": "chimechite",
     "nameEn": "Chimechite",
-    "nameKo": "",
+    "nameKo": "치렁나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Chimecho holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 치렁에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -472,7 +472,7 @@
   {
     "slug": "clefablite",
     "nameEn": "Clefablite",
-    "nameKo": "",
+    "nameKo": "픽시나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Clefable holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 픽시에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -482,7 +482,7 @@
   {
     "slug": "crabominite",
     "nameEn": "Crabominite",
-    "nameKo": "",
+    "nameKo": "모단단게나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Crabominable holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 모단단게에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -492,7 +492,7 @@
   {
     "slug": "delphoxite",
     "nameEn": "Delphoxite",
-    "nameKo": "",
+    "nameKo": "마폭시나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Delphox holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 마폭시에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Deposit a Delphox from Pokémon Legends: Z-A",
@@ -502,7 +502,7 @@
   {
     "slug": "dragoninite",
     "nameEn": "Dragoninite",
-    "nameKo": "",
+    "nameKo": "망나뇽나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Dragonite holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 망나뇽에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -512,7 +512,7 @@
   {
     "slug": "drampanite",
     "nameEn": "Drampanite",
-    "nameKo": "",
+    "nameKo": "할비롱나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Drampa holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 할비롱에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -522,7 +522,7 @@
   {
     "slug": "emboarite",
     "nameEn": "Emboarite",
-    "nameKo": "",
+    "nameKo": "염무왕나이트",
     "effect": "One of a variety of mysterious Mega Stones. An Emboar holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 염무왕에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -532,7 +532,7 @@
   {
     "slug": "excadrite",
     "nameEn": "Excadrite",
-    "nameKo": "",
+    "nameKo": "몰드류나이트",
     "effect": "One of a variety of mysterious Mega Stones. An Excadrill holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 몰드류에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -542,7 +542,7 @@
   {
     "slug": "feraligite",
     "nameEn": "Feraligite",
-    "nameKo": "",
+    "nameKo": "장크로다일나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Feraligatr holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 장크로다일에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -552,7 +552,7 @@
   {
     "slug": "floettite",
     "nameEn": "Floettite",
-    "nameKo": "",
+    "nameKo": "플라엣테나이트",
     "effect": "One of a variety of mysterious Mega Stones. A special Floette holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 특별한 플라엣테에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Deposit a Floette Eternal Flower from Pokémon Legends: Z-A",
@@ -562,7 +562,7 @@
   {
     "slug": "froslassite",
     "nameEn": "Froslassite",
-    "nameKo": "",
+    "nameKo": "눈여아나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Froslass holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 눈여아에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -622,7 +622,7 @@
   {
     "slug": "glimmoranite",
     "nameEn": "Glimmoranite",
-    "nameKo": "",
+    "nameKo": "킬라플로르나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Glimmora holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 킬라플로르에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -632,7 +632,7 @@
   {
     "slug": "golurkite",
     "nameEn": "Golurkite",
-    "nameKo": "",
+    "nameKo": "골루그나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Golurk holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 골루그에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -642,7 +642,7 @@
   {
     "slug": "greninjite",
     "nameEn": "Greninjite",
-    "nameKo": "",
+    "nameKo": "개굴닌자나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Greninja holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 개굴닌자에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Deposit a Greninja from Pokémon Legends: Z-A",
@@ -662,7 +662,7 @@
   {
     "slug": "hawluchanite",
     "nameEn": "Hawluchanite",
-    "nameKo": "",
+    "nameKo": "루차불나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Hawlucha holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 루차불에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -742,7 +742,7 @@
   {
     "slug": "meganiumite",
     "nameEn": "Meganiumite",
-    "nameKo": "",
+    "nameKo": "메가니움나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Meganium holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 메가니움에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -752,7 +752,7 @@
   {
     "slug": "meowsticite",
     "nameEn": "Meowsticite",
-    "nameKo": "",
+    "nameKo": "냐오닉스나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Meowstic holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 냐오닉스에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -802,7 +802,7 @@
   {
     "slug": "scovillainite",
     "nameEn": "Scovillainite",
-    "nameKo": "",
+    "nameKo": "스코빌런나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Scovillain holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 스코빌런에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -822,7 +822,7 @@
   {
     "slug": "skarmorite",
     "nameEn": "Skarmorite",
-    "nameKo": "",
+    "nameKo": "무장조나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Skarmory holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 무장조에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -842,7 +842,7 @@
   {
     "slug": "starminite",
     "nameEn": "Starminite",
-    "nameKo": "",
+    "nameKo": "아쿠스타나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Starmie holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 아쿠스타에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",
@@ -882,7 +882,7 @@
   {
     "slug": "victreebelite",
     "nameEn": "Victreebelite",
-    "nameKo": "",
+    "nameKo": "우츠보트나이트",
     "effect": "One of a variety of mysterious Mega Stones. A Victreebel holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "신기한 메가스톤의 일종. 우츠보트에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
     "location": "Shop 2000 VP",

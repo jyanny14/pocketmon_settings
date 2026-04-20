@@ -38,17 +38,16 @@
 - `scripts/build.py` — pokemon/items/abilities 의 자연어 필드(이름/설명/효과/gameText/location)에 전부 적용
 - 재빌드 결과: pokemon 필드 변화 0 (원본 깨끗), items 변화 0, abilities 12건 변화(모두 문장 중간 double-space → single-space). 부작용 없음
 
-### T8b. 아이템 한글명 미매칭 24건 수동 보강 (후속)
-- `data/manual/item_names_ko.json` 의 24개 키(`fairy-feather` 1개 + Champions 신규 메가스톤 23개)가 빈 값
-- 공식 번역명(게임 한국어 UI, 포켓몬 Korea 공식 사이트 등) 확인 후 파일에 기입 → `python scripts/build.py` 재실행
-- PokeAPI 가 뒤늦게 반영했는지 주기적으로 확인: `python scripts/fetch_item_names_ko.py --force`
+### T8b. 아이템 한글명 미매칭 24건 ✅ (2026-04-20)
+- Bulbapedia "In other languages" 섹션에서 24건 전부 공식 한국어명이 등재된 것을 확인하고 `data/manual/item_names_ko.json` 에 반영. 패턴: `{포켓몬 한국어명}나이트` (메가스톤 23건) + fairy-feather 는 `요정의깃털`.
+- `items.json[].nameKo` 117/117 커버. 상세 값 및 출처는 `docs/review-translations.md` §A.
+- `scripts/fetch_item_names_ko.py --force` 로 PokeAPI 뒤늦게 반영 시 자동 흡수. manual 값은 fetched 가 비어 있을 때만 활성화되는 게 아니라 우선 덮어쓰는 구조이므로 PokeAPI 표기가 원치 않을 경우 manual 우선 유지.
 
-### T4b. 어빌리티 한글명 미매칭 14건 수동 보강 (후속)
-- `data/manual/ability_names_ko.json`의 14개 키 값이 빈 문자열 상태
-- 대상: `armortail`, `cudchew`, `dragonize`, `eartheater`, `electromorphosis`, `megasol`, `opportunist`, `piercingdrill`, `purifyingsalt`, `sharpness`, `spicyspray`, `supremeoverlord`, `toxicdebris`, `zerotohero`
-- PokeAPI가 한국어를 아직 반영하지 않은 Gen 9/Champions 신규 특성
-- 진행 방식: 공식 출처(게임 내 한국어 UI, Pokémon Korea 공식 사이트, 신뢰 가능한 한국 팬위키) 확인 후 파일에 기입 → `python scripts/build.py` 재실행만 하면 abilities.json에 반영됨
-- 주기적으로 `python scripts/fetch_ability_names_ko.py --force` 재실행해서 PokeAPI가 뒤늦게 한국어를 반영했는지 확인 가능
+### T4b. 어빌리티 한글명 미매칭 14건 ✅ (2026-04-20)
+- Bulbapedia "In other languages" 섹션에서 14건 전부 공식 한국어명이 등재되어 있어 `data/manual/ability_names_ko.json` 에 반영. Champions 신규 4건(드래곤스킨·메가솔라·관통드릴·하바네로분출) 포함.
+- `abilities.json[].nameKo` 192/192 커버. 상세 값은 `docs/review-translations.md` §A.
+- 초기 추정 후 실제로 다른 것: `armortail`(무장꼬리→테일아머), `electromorphosis`(전기바뀜→전기로바꾸기), `supremeoverlord`(백전노장→총대장). 잘못 추정해서 반영하지 않고 비워두길 잘한 케이스 — **추정 대신 공식 확인 우선** 원칙 재확인.
+- 주기적 `scripts/fetch_ability_names_ko.py --force` 재실행으로 PokeAPI 뒤늦은 반영 확인 가능.
 
 ### T4. 어빌리티 한글명 수집 — `scripts/fetch_ability_names_ko.py` ✅ 완료 (2026-04-17)
 - PokeAPI `ability/{slug}/` → `names[language.name='ko'].name`
