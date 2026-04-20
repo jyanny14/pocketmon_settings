@@ -32,6 +32,18 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### TODO 추가 — Champions 전투 상세(기술·SP·Nature) 파티 빌더 확장
+
+`docs/TODO.md` 에 T22 / T22a / T22b / T22c 로 나눠 등재. Serebii `training.shtml` + Bulbapedia `Pokémon Champions` 에서 확인한 메커니즘:
+
+- IV 31 고정, Level 50 고정 (UI 노출 불필요)
+- Stat Points(SP) — EV 대체. 첫 SP=4 EV, 추가 SP=8 EV. 스탯당 ≤32, **총합 ≤66** (2스탯 집중 시 65, 5–6스탯 분산 시 66)
+- Nature 25종 유지 / ±10% 보정
+- Moves 4기술 (learnable 범위)
+- Ability 변경은 기존 필드 내에서
+
+파티 슬롯 스키마를 `slug:form:ability:item:moves:sps:nature` 로 확장하되 뒤쪽 필드 optional 로 해서 **기존 공유 URL 호환** 유지. AI 프롬프트 인라인 JSON 도 moves·sps·nature 포함시켜 정확도 향상.
+
 ### 검토 문서 정리 — review-translations.md 재작성
 
 번역 검증이 100% 끝나면서 `docs/review-translations.md` 가 "비어 있음/추정 번역" 체크리스트 형태로 남아 있던 내용을 실제 상태에 맞게 **반영 이력 + 출처 참고서** 형태로 갈아끼움. 최종 커버리지 표 · 사용한 소스(PokeAPI·Bulbapedia·Fandom KR API) · 접근 실패한 소스(namu.wiki·web.archive.org) · 이번 라운드에서 얻은 교훈 5개(추정 번역 오차율, Fandom 텍스트 오타, WebFetch Hangul 글자 깨짐 등) · 남은 유의점 · 재빌드 절차 · 핵심 규칙으로 구성. `docs/TODO.md` 의 한국어 커버리지 섹션 헤더도 완료 표시로 전환.

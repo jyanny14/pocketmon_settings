@@ -220,6 +220,85 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - 톤은 공식 게임 텍스트 `~한다/~된다` 풍. 1–2문장.
 - 빌드 로그: `manual nameKo=35, manual flavorKo=44`. corpus 981 → 986 KB.
 
+## 파티 빌더 확장 — Champions 전투 상세 (2026-04-20 추가)
+
+Champions 기준으로 각 파티 슬롯에 **기술 4개 / Stat Points / Nature** 를 지정할 수 있게 한다. 지금은 `{slug, formName, abilitySlug, itemSlug}` 4필드만 가져 분석 품질·AI 프롬프트 정확도가 제한됨.
+
+### 참고 — Pokémon Champions 훈련 메커니즘
+
+Serebii (`pokemonchampions/training.shtml`) + Bulbapedia (`Pokémon Champions`) 교차 확인.
+
+- **IV**: 모든 스탯 31 고정. UI 노출·편집 불필요.
+- **Level**: 배틀은 전부 레벨 50. 표시 없음.
+- **Stat Points (SP) — EV 대체**:
+  - EV → SP 변환: 첫 SP = 4 EV, 이후 SP = 8 EV 씩 (같은 스탯 내).
+  - 스탯당 최대 32 SP(=본편 EV 252).
+  - 총합 **65~66 SP** (2스탯 집중 시 65, 5~6스탯 분산 시 66).
+  - Champions 에서는 메뉴에서 **직접 SP 할당** (2 VP/SP). Training Ticket 으로 무료 변경 가능.
+- **Nature**: 25종 전통 체계. `+10% / -10%` 보정. 200 VP 로 변경.
+- **Moves**: 4기술 세팅. 100 VP/기술 변경. 해당 폼의 learnable 범위 안에서만.
+- **Ability**: 400 VP 로 변경. 해당 폼의 abilities 안에서 (Champions 에서 숨겨진 특성도 활성화 가능).
+
+우리 파티 빌더는 "배틀 상태"를 저장하는 용도이므로 VP·Training Ticket 모델은 무시하고 최종 세팅값만 다룬다.
+
+### T22. 공통 인프라 (먼저 진행)
+
+- `party-encode.js` 슬롯 스키마 확장 — 뒤쪽에 optional 필드 추가:
+  ```
+  slug:form:ability:item:m1,m2,m3,m4:sp1/sp2/sp3/sp4/sp5/sp6:nature
+  ```
+  기존 공유 URL(`slug:form:ability:item` 까지만) 은 그대로 디코드 되어야 함. 뒤 필드 누락 시 각각 `[]` / `[0,0,0,0,0,0]` / `null` 기본값.
+- `docs/schema.md` Party Slot 섹션 갱신.
+- 파티 빌더 슬롯 카드 UI 에 **"상세 설정" 접힘 영역**(기본 접힘). 기존 간단 파티 공유 흐름 해치지 않음.
+- AI 프롬프트 인라인 JSON(`prompts.js`) 의 slot 발췌에 moves·sps·nature 필드 포함.
+
+### T22a. 기술 4기술 세팅
+
+- 슬롯마다 기술 4칸 피커. 각 칸은 해당 폼의 `pokemon.moves` (learnable) 목록에서 선택.
+- 중복 선택 금지.
+- 저장: `moves: [slug, slug, slug, slug]` (길이 0~4, 빈칸 허용).
+- 파티 분석 변경: 공격 STAB 커버리지를 **자속 전 타입 가정** → **실제 선택 기술의 타입 기준** 으로 재계산. 변화·상태 기술만 고른 슬롯은 STAB 기여 0 로.
+- AI 프롬프트 인라인 JSON 에 `slot.moves` 포함. 현재 `learnableMoves` 전체(최대 60+)를 보내는데 4개만 확정되면 토큰 절약 + AI 판단 정확도 ↑.
+- UI 참고: `pokemon-detail.js` 의 기술 테이블 재사용 가능.
+
+### T22b. Stat Points (노력치)
+
+- 슬롯마다 6스탯 정수 입력 (hp·atk·def·spAtk·spDef·speed).
+- 제약: **각 스탯 0~32**, **총합 ≤66**. 초과 시 빨간 border + submit 블록.
+- 저장: `sps: [hp, atk, def, spAtk, spDef, speed]`.
+- 실효 스탯 계산 헬퍼 신설 (`web/assets/stats.js`):
+  - SP → EV 변환: `SP=0 → EV=0`, `SP≥1 → EV = 8*SP - 4` (첫 4 + 8씩 추가)
+  - level 50, IV 31 고정 가정
+  - HP: `floor((2*base + 31 + floor(EV/4)) * 50 / 100) + 50 + 10`
+  - 기타: `floor((floor((2*base + 31 + floor(EV/4)) * 50 / 100) + 5) * natureMod)`
+- 분석 패널: "종족값 합계" 옆/아래에 "실효 스탯 합계(Lv50, IV31, nature·SP 반영)" 추가.
+- 저장된 파티(localStorage) 마이그레이션 — 구버전 저장본에 sps 없으면 `[0×6]` 기본값.
+
+### T22c. Nature (성격)
+
+- 신규 데이터 파일 `web/data/natures.json` — 25종, 각 `{slug, nameEn, nameKo, increased, decreased}`.
+  - 중립 5종(Hardy/Docile/Serious/Bashful/Quirky) 은 `increased == decreased == null`.
+- 생성 스크립트 `scripts/build_natures.py` — 리터럴 테이블, 네트워크 없음.
+- `manifest.json` 의 files 목록에 `natures` 추가. `corpus.json` bundler 에도 포함.
+- 슬롯 드롭다운: 25개. 선택 시 툴팁 "공격 ↑ / 방어 ↓" 식.
+- 저장: `nature: slug` (중립일 경우도 slug 유지, 계산 시 modifier 모두 1.0).
+- i18n `nature.adamant`~`nature.quirky` 25개 ko/en 추가.
+
+### 의존성·작업 순서
+
+1. **T22 (공통 인프라)** 먼저 — 인코딩·UI 접힘 영역·문서 갱신.
+2. **T22c (Nature)** — 데이터 파일만 만들면 되고 T22b 의 실효 스탯 계산에서 필수.
+3. **T22a (Moves)** — Nature 와 독립이라 어느 순서든 가능.
+4. **T22b (SP)** — 실효 스탯 계산은 nature 를 알아야 하므로 마지막. 가장 복잡.
+
+### 검증 시 유의
+
+- 공식 SV 공식 스탯 계산식과 Champions 실효 스탯이 정확히 일치하는지 게임 내 몇 마리로 sanity check.
+- 0 SP 일 때도 natureMod 는 적용되는 게 맞는지(맞음 — nature 는 SP 와 독립).
+- 저장된 파티 마이그레이션이 구조적으로 깨지지 않는지.
+
+---
+
 ### T21. `prompts` 페이지 i18n 적용 (역방향) ✅ (2026-04-20)
 - 페이지 chrome + JS 동적 문자열 + 템플릿 title/desc 를 i18n 키 `prompts.*` 로 전부 전환. EN 모드에서 자연스러운 영어로 출력.
 - 대상 파일:
