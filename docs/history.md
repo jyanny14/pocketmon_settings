@@ -32,6 +32,10 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### 기술(Moves) 탭 신설 ✅
+
+`web/moves.html` 신규. 481개 기술 전수 목록. 검색(이름 ko/en·slug·flavor), 타입 multi-chip 필터, 물리/특수/변화 분류 chip, "Champions 재밸런스 기술만" 체크박스, 이름·타입·위력·명중·PP 정렬. URL 쿼리로 모든 필터 상태 공유 가능. 재밸런스 16건은 ⚡ 배지 + 왼쪽 강조선. 모든 기존 페이지 nav 에 기술 링크 추가, 인덱스에 카드(count 라이브 반영 위해 `app.js` hydrateCounts 에 `move-count` 키 신설), `llms.txt` 엔드포인트 목록에 `/moves.html?q=&types=&cat=&champions=&sort=` 추가. 데이터 변동 없음 (moves.json/corpus.json 그대로).
+
 ### TODO 추가 — Champions 전투 상세(기술·SP·Nature) 파티 빌더 확장
 
 `docs/TODO.md` 에 T22 / T22a / T22b / T22c 로 나눠 등재. Serebii `training.shtml` + Bulbapedia `Pokémon Champions` 에서 확인한 메커니즘:
