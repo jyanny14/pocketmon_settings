@@ -1,0 +1,20 @@
+{
+  "_comment": "어빌리티 한국어 설명 수동 오버라이드. build.py 가 processed/ability_descriptions_ko.json 에 이 파일을 덮어써 abilities.json[].gameTextKo / descriptionKo 로 주입. PokeAPI 가 아직 반영하지 않은 Gen 9/Champions 신규 특성 위주. gameText 는 '~된다/~한다' 문체로 공식 게임 톤에 맞춤.",
+
+  "armortail": { "gameTextKo": "신비한 꼬리가 머리를 덮고 있어 자신과 같은편에 대한 선제공격 기술을 받지 않는다." },
+  "cudchew": { "gameTextKo": "나무열매를 먹으면 다음 턴의 마지막에 한 번 더 되새김질해 먹는다." },
+  "dragonize": { "gameTextKo": "자신의 노말타입 기술이 드래곤타입이 되고 위력이 20% 올라간다." },
+  "eartheater": { "gameTextKo": "땅타입 기술을 받으면 대미지를 받지 않고 HP 를 회복한다." },
+  "electromorphosis": { "gameTextKo": "대미지를 받으면 차지 상태가 되어 다음에 쓸 전기타입 기술 위력이 올라간다." },
+  "hospitality": { "gameTextKo": "등장했을 때 같은편을 대접해서 HP 를 조금 회복한다." },
+  "megasol": { "gameTextKo": "햇살이 강해지지 않아도 햇살이 강하다로 간주해 기술을 쓸 수 있다." },
+  "opportunist": { "gameTextKo": "상대의 능력이 올라가면 자신도 편승해 같은 능력을 올린다." },
+  "piercingdrill": { "gameTextKo": "접촉 기술로 공격할 때 방어 중인 상대에게도 닿으며 본래 대미지의 1/4 만큼 피해를 준다. 방어 효과를 제외한 부가 효과는 그대로 발동한다." },
+  "purifyingsalt": { "gameTextKo": "깨끗한 소금이 상태 이상으로부터 지켜주며 고스트타입 기술로 받는 대미지가 반감된다." },
+  "sharpness": { "gameTextKo": "베는 기술의 위력이 올라간다." },
+  "spicyspray": { "gameTextKo": "기술로 대미지를 받으면 상대를 화상 상태로 만든다." },
+  "supersweetsyrup": { "gameTextKo": "등장했을 때 달콤한 향기가 처음 한 번만 퍼져 나가 상대의 회피율을 낮춘다." },
+  "supremeoverlord": { "gameTextKo": "등장했을 때 쓰러진 같은편 포켓몬의 수만큼 자신의 공격과 특수공격이 10% 씩 올라간다." },
+  "toxicdebris": { "gameTextKo": "물리 기술로 대미지를 받으면 상대 발밑에 독압정을 뿌린다." },
+  "zerotohero": { "gameTextKo": "교대해서 물러나면 영웅의 모습으로 변한다." }
+}

@@ -73,6 +73,8 @@ ITEM_EFFECTS_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_effects
 
 # {slug: {gameTextKo?, descriptionKo?}} — fetch_ability_descriptions_ko.py
 ABILITY_DESC_KO_PATH = PROJECT_ROOT / "data" / "processed" / "ability_descriptions_ko.json"
+# Optional manual overrides (same shape). Manual values win per-field.
+ABILITY_DESC_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_descriptions_ko.json"
 
 # Champions-only new abilities list (from newabilities.shtml)
 NEW_ABILITIES_PATH = PROJECT_ROOT / "data" / "processed" / "new_abilities.json"
@@ -115,20 +117,23 @@ def _load_item_effects_ko() -> dict[str, str]:
 
 
 def _load_ability_descriptions_ko() -> dict[str, dict[str, str]]:
-    if not ABILITY_DESC_KO_PATH.exists():
-        return {}
-    try:
-        data = json.loads(ABILITY_DESC_KO_PATH.read_text(encoding="utf-8"))
-    except Exception as exc:  # noqa: BLE001
-        log.warning("ability descriptions read failed: %s", exc)
-        return {}
-    if not isinstance(data, dict):
-        return {}
-    return {
-        slug: {k: v for k, v in entry.items() if v}
-        for slug, entry in data.items()
-        if not slug.startswith("_") and isinstance(entry, dict)
-    }
+    merged: dict[str, dict[str, str]] = {}
+    for path in (ABILITY_DESC_KO_PATH, ABILITY_DESC_KO_OVERRIDE_PATH):
+        if not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:  # noqa: BLE001
+            log.warning("ability descriptions read failed (%s): %s", path, exc)
+            continue
+        if not isinstance(data, dict):
+            continue
+        for slug, entry in data.items():
+            if slug.startswith("_") or not isinstance(entry, dict):
+                continue
+            bucket = merged.setdefault(slug, {})
+            bucket.update({k: v for k, v in entry.items() if v})
+    return merged
 
 
 def _load_game_sources() -> dict[str, dict[str, list[str]]]:

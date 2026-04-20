@@ -199,10 +199,12 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
   - A. ✅ **완료 (2026-04-20)** — `abilityDescription()` 을 KO 모드에서 `descriptionKo` 전용으로 바꾸고, `abilities-list.js` 가 빈 값이면 `.ability-card__desc` 단락 자체를 DOM 에서 생략. KO 모드는 상단의 `gameTextKo` 한 줄만 표시되어 더 이상 영문 덩어리가 붙지 않음. 176/192 카드는 실질적 한국어, 16장은 gameTextKo 도 비어 gameText 영문 한 줄만 노출 (T18 과 겹침).
   - B. (잔여) `data/manual/ability_descriptions_ko.json` 생성 후 192건 상세 번역. A 안으로 체감 이슈 해소돼 B 는 후순위. 공식 한국어 effect 가 존재하지 않아 직접 작문 필요 → 품질 보증 어려움. 필요해지면 착수.
 
-### T18. 어빌리티 `gameTextKo` 미매칭 16건 수동 보강
-- T11 수집 결과 176/192. 미매칭은 Gen 9/Champions 신규 특성이 주. T4b 와 겹치는 slug 집합 확인 필요.
-- `data/manual/ability_names_ko.json` 가 nameKo 전용이므로 **`data/manual/ability_game_texts_ko.json` 신설** 후 build 병합.
-- `scripts/fetch_ability_descriptions_ko.py --force` 주기 재실행으로 PokeAPI 추후 반영분 자동 흡수.
+### T18. 어빌리티 `gameTextKo` 미매칭 16건 수동 보강 ✅ (2026-04-20)
+- T11 수집 결과 176/192. 미매칭 16건: `armortail`, `cudchew`, `dragonize`, `eartheater`, `electromorphosis`, `hospitality`, `megasol`, `opportunist`, `piercingdrill`, `purifyingsalt`, `sharpness`, `spicyspray`, `supersweetsyrup`, `supremeoverlord`, `toxicdebris`, `zerotohero`. T4b (nameKo 14) 와 14개 겹침, 나머지 2건(`hospitality`=대접, `supersweetsyrup`=감미로운꿀) 은 nameKo 만 있고 gameTextKo 가 비어 있던 케이스.
+- `data/manual/ability_descriptions_ko.json` 신설 (processed 파일과 같은 shape). build.py `_load_ability_descriptions_ko` 가 processed + manual 을 per-field merge (manual 승) 하도록 확장.
+- 결과: `abilities.json[].gameTextKo` **192/192 커버**. KO 모드 어빌리티 카드가 전부 한국어 gameText 로 노출.
+- `scripts/fetch_ability_descriptions_ko.py --force` 주기 재실행 시 PokeAPI 가 뒤늦게 같은 slug 에 한국어를 반영해도 manual 쪽이 이긴다. 원치 않으면 manual 엔트리를 비우고 PokeAPI 값으로 돌리면 됨.
+- 잔여: T4b (nameKo 14건) — 14 slug 중 일부는 Champions 신규라 공식 한국어명이 확정되지 않은 상태. 공식 정보 확인 후 별도 진행.
 
 ### T19. 기술 `nameKo` 미매칭 35건 수동 보강
 - T10 수집 결과 446/481. 미매칭 slug 전체 (`aquacutter`, `aquastep`, `armorcannon`, `axekick`, `bitterblade`, `chillingwater`, `chillyreception`, `comeuppance`, `direclaw`, `flowertrick`, `gigatonhammer`, `headlongrush`, `icespinner`, `jetpunch`, `kowtowcleave`, …) 는 전부 Gen 9/Champions 후반 추가 기술.

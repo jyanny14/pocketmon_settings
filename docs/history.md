@@ -32,6 +32,15 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T18 어빌리티 gameTextKo 16건 수동 보강 ✅ 192/192
+
+- PokeAPI 한국어 flavor text 가 없는 16개(Gen 9/Champions 신규 위주 + `hospitality`, `supersweetsyrup` 2건) 을 수동 번역.
+- `data/manual/ability_descriptions_ko.json` 신설 — processed 파일과 같은 shape(`{slug: {gameTextKo, descriptionKo}}`). 이번 배치는 `gameTextKo` 만 채움.
+- `scripts/build.py` `_load_ability_descriptions_ko` 를 **processed + manual merge (manual 승, per-field)** 로 확장. 기존 자동 수집값은 유지하고 누락분만 덮음. `ABILITY_DESC_KO_OVERRIDE_PATH` 상수 추가.
+- 번역 스타일은 공식 게임 톤(`~된다/~한다`) 유지. 예: "땅타입 기술을 받으면 대미지를 받지 않고 HP 를 회복한다" (earth-eater).
+- 빌드: `abilities.json[].gameTextKo` 192/192 커버. corpus 979→981 KB.
+- 잔여: T4b (nameKo 14건) — Champions 신규 abilities 는 공식 한글명이 확정 안 된 것이 있어 미결. T17 A안과 합치면 KO 모드 어빌리티 카드는 이제 전원 한국어 gameText 만 보이므로 체감 이슈 대부분 해소.
+
 ### T17 어빌리티 descriptionKo — A안 적용 ✅
 
 - `abilities.json[].descriptionKo` 가 0/192 라 KO 모드 어빌리티 카드가 Korean gameText 밑에 English description 을 달고 있어 섞여 보였던 문제.
