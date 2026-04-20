@@ -153,6 +153,59 @@ SV 공식 이름을 기반으로 채웠으나 개인 기억 의존 부분이 있
 
 ---
 
+## 참조 자료 — 공식 한국어명 어디서 확인하나
+
+### 일반 원칙
+
+1. **공식 > 팬 위키** — 의심스러우면 팬 위키 표기는 참고로만, 최종값은 공식 출처를 따름.
+2. **Gen 9 (SV) 항목**: 스칼렛/바이올렛 한국어판 게임 내 표기가 기준.
+3. **Champions 고유 항목**: 한국어판 발매 전이면 공식값이 존재하지 않을 수 있음. 그 경우 빈 문자열 유지가 맞는 선택 (추정 번역보다 영문 폴백이 투명함).
+
+### 1차 공식 출처
+
+| 소스 | URL / 위치 | 커버 범위 | 신뢰도 |
+|---|---|---|---|
+| **포켓몬 코리아 공식 도감** | https://pokemonkorea.co.kr/pokedex | 포켓몬 이름, 특성 이름 일부 | 🟢 공식 |
+| **포켓몬 코리아 공식 사이트** | https://pokemonkorea.co.kr/ | 각 게임별 공식 발표 자료 | 🟢 공식 |
+| **Scarlet/Violet 인게임** (한국어 모드) | 직접 게임에서 확인 | 어빌리티·기술·도구 효과 원문 전부 | 🟢 공식 (1차) |
+| **Pokémon HOME** (한국어 UI) | 모바일/Switch 앱 | 포켓몬·도구 이름 | 🟢 공식 |
+| **Legends: Arceus / BDSP / LGPE 한국어판** | 각 게임 인게임 | 해당 세대 기술(예: `stoneaxe` = 바위도끼) | 🟢 공식 |
+
+### 2차 커뮤니티 출처 (교차 검증용)
+
+| 소스 | URL | 장점 | 주의 |
+|---|---|---|---|
+| **나무위키 — 포켓몬** | https://namu.wiki/w/포켓몬스터 | Gen 9 항목 커버리지 높음, 한글명·기술 목록 상세 | 기여자 편집이라 오류 가능. 공식 소스와 반드시 대조 |
+| **포켓몬 위키 (fandom)** | https://pokemon.fandom.com/ko/ | 위키 형태 | 업데이트 지연 잦음 |
+| **Bulbapedia** (영문) | https://bulbapedia.bulbagarden.net/ | 모든 세대·언어 표기 병기 | 한국어명 누락 시 일본어·영어는 정확. Korean 란은 공식 발표 후 업데이트 |
+| **PokéAPI** (prog) | https://pokeapi.co/ | 우리 파이프라인이 이미 사용 중 | Champions 신규는 미반영. 재시도는 `scripts/fetch_ability_names_ko.py --force` 등 |
+
+### Champions 고유 항목 (2025-) 특이사항
+
+| 대상 | 전략 |
+|---|---|
+| **T4b 특성 `dragonize` · `megasol` · `piercingdrill` · `spicyspray`** | 한국어판 Champions 발매 전까지 **빈값 유지 권장**. 영문 표기가 오히려 정확. 한국어판 나오면 즉시 교체 |
+| **T8b 메가스톤 23종** (chandelurite 등) | 동일. 한국어판 발매 전까지 영문 폴백이 더 안전 |
+| 검증 방법 | `data/raw/www.serebii.net/pokemonchampions_*.html` 의 Champions 원문 영어만 신뢰. 한국어는 게임 출시 전엔 없음 |
+
+### Gen 9 공식이 확정된 항목 — 바로 확인 가능
+
+아래는 SV 게임 자체에 포함된 항목이라 공식 확인이 오늘 당장 가능:
+
+- T4b 나머지 10건(`armortail`, `cudchew`, `eartheater`, `electromorphosis`, `opportunist`, `purifyingsalt`, `sharpness`, `supremeoverlord`, `toxicdebris`, `zerotohero`) — SV 인게임 특성창 / 나무위키 특성 문서
+- T18 🟡 16건 — SV 인게임 특성 설명창
+- T19 🟡 23건 중 `populationbomb/pounce/ragingbull/saltcure/shedtail/snowscape/spicyextract/syrupbomb/torchsong/trailblaze/wavecrash` 등 — SV 인게임 기술 설명창 또는 나무위키 기술 목록
+- T20 🟡 44건 중 SV 공식 기술의 flavor 텍스트 — SV 인게임 기술 설명창 원문
+
+### 추천 워크플로
+
+1. SV 또는 HOME 한국어 UI 를 켜 놓고 2–3개씩 슬러그를 체크.
+2. 확정된 값만 `data/manual/*.json` 에 반영.
+3. 불확실 상태로 재빌드는 **절대 하지 않음** — 잘못 반영되면 데이터가 오염됨.
+4. Gen 9 확정 항목을 1차 배치로 처리하고, Champions 신규는 한국어판 발매 후 2차 배치.
+
+---
+
 ## 수정 후 재빌드 절차
 
 ```bash

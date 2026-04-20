@@ -45,6 +45,8 @@
 
 `docs/review-translations.md` 신규 — T4b/T8b 의 비어 있는 항목(어빌리티 nameKo 14 + 도구 nameKo 24)과, T18/T19/T20 에서 본인이 임의로 채운 항목들(어빌리티 gameTextKo 16·기술 nameKo 35·기술 flavorTextKo 44)을 🔴/🟡/🟢 색으로 분류해 체크리스트로 제공. `docs/TODO.md` §한국어 커버리지 보강 섹션 상단에서 본 문서를 참조.
 
+참조 자료 섹션 추가: 공식 출처(포켓몬 코리아 도감·SV 인게임·HOME 한국어 UI 등) 와 2차 커뮤니티 출처(나무위키·포켓몬 위키 fandom·Bulbapedia·PokeAPI) 를 표로 정리. Champions 고유 항목은 **한국어판 발매 전까지 빈값 유지 권장** 을 명시 — 추정 번역보다 영문 폴백이 투명함. Gen 9 확정 항목은 SV 인게임으로 오늘 당장 확인 가능한 slug 목록을 따로 분류.
+
 ### T20 기술 flavorTextKo 44건 수동 보강 ✅ 481/481
 
 - PokeAPI 한국어 flavor text 없는 44건(Gen 9 이후) 을 공식 게임 톤(~한다/~된다) 으로 번역. 1–2문장.
