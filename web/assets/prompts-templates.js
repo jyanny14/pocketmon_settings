@@ -4,8 +4,8 @@ export const SHARED_DISCLAIMER =
 export const TEMPLATES = [
   {
     id: "weakness",
-    title: "약점 분석",
-    description: "현재 파티의 공통 약점 타입과 방어 빈구멍을 짚어달라.",
+    titleKey: "prompts.tmpl.weakness.title",
+    descKey: "prompts.tmpl.weakness.desc",
     requiresPokemonPool: false,
     body: `${SHARED_DISCLAIMER}
 
@@ -29,8 +29,8 @@ export const TEMPLATES = [
 
   {
     id: "swap",
-    title: "교체 추천",
-    description: "한 마리를 바꾼다면 누구? 후보와 근거 제시.",
+    titleKey: "prompts.tmpl.swap.title",
+    descKey: "prompts.tmpl.swap.desc",
     requiresPokemonPool: true,
     body: `${SHARED_DISCLAIMER}
 
@@ -57,8 +57,8 @@ export const TEMPLATES = [
 
   {
     id: "moveset",
-    title: "기술 조합",
-    description: "각 포켓몬의 4기술 세팅 제안.",
+    titleKey: "prompts.tmpl.moveset.title",
+    descKey: "prompts.tmpl.moveset.desc",
     requiresPokemonPool: false,
     body: `${SHARED_DISCLAIMER}
 
@@ -87,8 +87,8 @@ export const TEMPLATES = [
 
   {
     id: "counter",
-    title: "상대 파티 카운터",
-    description: "상대 파티 URL 을 붙여 맞춤 대응 전략.",
+    titleKey: "prompts.tmpl.counter.title",
+    descKey: "prompts.tmpl.counter.desc",
     requiresPokemonPool: false,
     body: `${SHARED_DISCLAIMER}
 
@@ -116,8 +116,8 @@ export const TEMPLATES = [
 
   {
     id: "free",
-    title: "자유 질문",
-    description: "파티 컨텍스트만 주입하고 원하는 질문을 이어서.",
+    titleKey: "prompts.tmpl.free.title",
+    descKey: "prompts.tmpl.free.desc",
     requiresPokemonPool: false,
     body: `${SHARED_DISCLAIMER}
 

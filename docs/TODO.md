@@ -170,6 +170,10 @@
 
 ## 한국어 커버리지 보강 (2026-04-20 추가)
 
+> 📋 **번역 검토 목록**: [`docs/review-translations.md`](./review-translations.md) —
+> T4b / T8b / T18 / T19 / T20 에서 비어 있거나 본인이 임의로 채운 항목을 색별로
+> 정리해둔 체크리스트. 공식 한국어 텍스트와 대조 후 manual JSON 을 고치세요.
+
 KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/audit` 참조):
 
 | # | 항목 | 미번역 건수 | 영향 |
@@ -219,13 +223,14 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - 톤은 공식 게임 텍스트 `~한다/~된다` 풍. 1–2문장.
 - 빌드 로그: `manual nameKo=35, manual flavorKo=44`. corpus 981 → 986 KB.
 
-### T21. `prompts` 페이지 i18n 적용 (역방향)
-- KO→EN 이 아닌 EN 모드에서 한국어 고정이 되는 문제. 사용자 질문의 범위 밖이지만 전체 품질 관점에서 같이 정리.
+### T21. `prompts` 페이지 i18n 적용 (역방향) ✅ (2026-04-20)
+- 페이지 chrome + JS 동적 문자열 + 템플릿 title/desc 를 i18n 키 `prompts.*` 로 전부 전환. EN 모드에서 자연스러운 영어로 출력.
 - 대상 파일:
-  - `web/prompts.html` — `<title>`, `<meta description>`, 페이지 제목·리드, 섹션 label, 푸터. `data-i18n` 속성 일괄 부여.
-  - `web/assets/prompts.js` — 버튼 라벨 ("프롬프트만 복사", "프롬프트 + 데이터 복사", "복사됨 ✓", "복사할 텍스트를 선택…"), 알림 문구 ("데이터 로드 실패", "파티가 비어 있어서…"), 빈 파티 안내문.
-  - `web/assets/prompts-templates.js` — 템플릿 title/description 만 i18n 하고 `body` 는 현재 한국어 고정 유지 (프롬프트 자체를 영어로 바꿀지는 별도 의사결정 필요).
-- `i18n.js` 에 `prompts.*` 키 블록 신설. EN 번역은 자연스럽게 작성.
+  - `web/prompts.html` — skip-link · 페이지 제목/리드 · 인트로 · 섹션 aria-label · 푸터 에 `data-i18n` / `data-i18n-aria` 부여.
+  - `web/assets/prompts.js` — 로드 에러, 빈 파티 안내, 카드 태그/버튼 라벨/미리보기 aria, 복사 결과 토글, fallback prompt, URL-only hint 모두 `t()` 경유.
+  - `web/assets/prompts-templates.js` — `title`/`description` 제거하고 `titleKey`/`descKey` 로 대체. body 는 한국어 고정 유지 (프롬프트 자체는 AI 와의 한국어 대화용이라는 의사결정).
+  - `web/assets/i18n.js` — `prompts.*` 24개 키 + `party.aiPrompts` 추가. ko/en 양쪽 정의.
+- 제외: `<title>`, `<meta description>` 은 다른 페이지도 전부 하드코딩 상태라 일관성 유지 목적에서 유지.
 
 ## 선행 결정 사항
 

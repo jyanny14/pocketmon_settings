@@ -5,6 +5,7 @@ import {
   loadMoves,
   findForm,
   formDisplayName,
+  t,
 } from "./app.js";
 import { decodeParty } from "./party-encode.js";
 import { TEMPLATES } from "./prompts-templates.js";
@@ -38,7 +39,7 @@ async function init() {
     for (const m of moves) state.moveMap.set(m.slug, m);
     state.items = items;
   } catch (err) {
-    els.cards.innerHTML = `<p class="empty-state">데이터 로드 실패: ${err.message}</p>`;
+    els.cards.innerHTML = `<p class="empty-state">${t("prompts.loadError")}: ${err.message}</p>`;
     return;
   }
 
@@ -133,9 +134,7 @@ function currentUrls() {
 
 function substitute(body, { includeData }) {
   const u = currentUrls();
-  const inline = includeData
-    ? buildInlineJson()
-    : "// (이 버전은 URL 만 제공합니다. AI 가 위 PARTY_URL 을 fetch 해서 파티를 확인하도록 해주세요.)";
+  const inline = includeData ? buildInlineJson() : t("prompts.urlOnlyHint");
   return body
     .replaceAll("{{PARTY_URL}}", u.partyUrl)
     .replaceAll("{{LLMS_TXT_URL}}", u.llmsUrl)
@@ -148,7 +147,7 @@ function substitute(body, { includeData }) {
 function renderSummary() {
   const filled = state.party.filter(Boolean);
   if (filled.length === 0) {
-    els.summary.innerHTML = `<p class="prompts-summary__empty">아직 파티가 비어 있습니다. <a href="./party.html">파티 빌더</a> 에서 먼저 구성한 뒤 돌아오면 프롬프트가 자동으로 채워집니다.</p>`;
+    els.summary.innerHTML = `<p class="prompts-summary__empty">${t("prompts.emptyBefore")} <a href="./party.html">${t("prompts.emptyLink")}</a>${t("prompts.emptyAfter")}</p>`;
     return;
   }
   els.summary.innerHTML = filled
@@ -169,15 +168,19 @@ function renderCards() {
   for (const tpl of TEMPLATES) {
     const card = document.createElement("article");
     card.className = "card prompt-card";
+    const title = t(tpl.titleKey);
+    const desc = t(tpl.descKey);
     card.innerHTML = `
-      <h2 class="card__title">${tpl.title}${
-        tpl.requiresPokemonPool ? '<span class="prompt-card__tag">· pokemon.json fetch 필요</span>' : ""
+      <h2 class="card__title">${title}${
+        tpl.requiresPokemonPool
+          ? `<span class="prompt-card__tag">${t("prompts.fetchRequired")}</span>`
+          : ""
       }</h2>
-      <p class="card__desc">${tpl.description}</p>
-      <pre class="prompt-card__preview" aria-label="프롬프트 미리보기"></pre>
+      <p class="card__desc">${desc}</p>
+      <pre class="prompt-card__preview" aria-label="${t("prompts.previewAria")}"></pre>
       <div class="prompt-card__actions">
-        <button type="button" class="button" data-action="copy-url">프롬프트만 복사</button>
-        <button type="button" class="button button--primary" data-action="copy-full">프롬프트 + 데이터 복사</button>
+        <button type="button" class="button" data-action="copy-url">${t("prompts.copyUrlOnly")}</button>
+        <button type="button" class="button button--primary" data-action="copy-full">${t("prompts.copyWithData")}</button>
       </div>
     `;
     const pre = card.querySelector(".prompt-card__preview");
@@ -192,7 +195,7 @@ function renderCards() {
     });
     btnFull.addEventListener("click", () => {
       if (!hasParty) {
-        alert("파티가 비어 있어서 인라인 데이터가 없습니다. 파티 빌더에서 먼저 구성해주세요.");
+        alert(t("prompts.emptyCantCopy"));
         return;
       }
       copyToClipboard(substitute(tpl.body, { includeData: true }), btnFull);
@@ -206,10 +209,10 @@ async function copyToClipboard(text, btn) {
   try {
     await navigator.clipboard.writeText(text);
     const original = btn.textContent;
-    btn.textContent = "복사됨 ✓";
+    btn.textContent = t("prompts.copied");
     setTimeout(() => (btn.textContent = original), 1500);
   } catch {
-    prompt("복사할 텍스트를 선택 후 Ctrl+C 로 복사하세요", text);
+    prompt(t("prompts.copyFallbackHint"), text);
   }
 }
 

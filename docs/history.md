@@ -32,6 +32,19 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T21 prompts 페이지 i18n ✅
+
+- 기존 하드코딩 한국어 → `prompts.*` i18n 키 24개(+`party.aiPrompts`)로 전환. EN 모드에서 자연스러운 영어 출력.
+- `web/assets/i18n.js` ko/en 양쪽에 `prompts.*` 블록 신설.
+- `web/prompts.html` — skip-link / page 제목 / 리드 / 인트로 / 섹션 aria / 푸터 에 `data-i18n` · `data-i18n-aria`. 인트로의 `<code>` 태그는 번역 범위 밖이라 인라인 스타일 제거.
+- `web/assets/prompts.js` — 로드 에러, 빈 파티 안내 HTML, 카드 태그/버튼 라벨/미리보기 aria, 복사 결과 토글, fallback prompt, URL-only hint 모두 `t()` 경유.
+- `web/assets/prompts-templates.js` — `title`/`description` 제거, `titleKey`/`descKey` 로 대체. body 는 한국어 고정 (AI 프롬프트 자체는 한국어 대화용).
+- 제외: `<title>`·`<meta description>` 은 다른 페이지 전반이 하드코딩 상태라 일관성 유지.
+
+### 번역 검토 문서 작성
+
+`docs/review-translations.md` 신규 — T4b/T8b 의 비어 있는 항목(어빌리티 nameKo 14 + 도구 nameKo 24)과, T18/T19/T20 에서 본인이 임의로 채운 항목들(어빌리티 gameTextKo 16·기술 nameKo 35·기술 flavorTextKo 44)을 🔴/🟡/🟢 색으로 분류해 체크리스트로 제공. `docs/TODO.md` §한국어 커버리지 보강 섹션 상단에서 본 문서를 참조.
+
 ### T20 기술 flavorTextKo 44건 수동 보강 ✅ 481/481
 
 - PokeAPI 한국어 flavor text 없는 44건(Gen 9 이후) 을 공식 게임 톤(~한다/~된다) 으로 번역. 1–2문장.
