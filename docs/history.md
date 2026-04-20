@@ -32,6 +32,10 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### 검토 문서 정리 — review-translations.md 재작성
+
+번역 검증이 100% 끝나면서 `docs/review-translations.md` 가 "비어 있음/추정 번역" 체크리스트 형태로 남아 있던 내용을 실제 상태에 맞게 **반영 이력 + 출처 참고서** 형태로 갈아끼움. 최종 커버리지 표 · 사용한 소스(PokeAPI·Bulbapedia·Fandom KR API) · 접근 실패한 소스(namu.wiki·web.archive.org) · 이번 라운드에서 얻은 교훈 5개(추정 번역 오차율, Fandom 텍스트 오타, WebFetch Hangul 글자 깨짐 등) · 남은 유의점 · 재빌드 절차 · 핵심 규칙으로 구성. `docs/TODO.md` 의 한국어 커버리지 섹션 헤더도 완료 표시로 전환.
+
 ### 번역 전수 웹 검증 (T16·T18·T19·T20) ✅
 
 본인이 작성한 추정 텍스트를 전부 걷어내고 웹 소스로 교체.
