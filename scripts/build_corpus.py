@@ -32,7 +32,7 @@ log = logging.getLogger("build_corpus")
 DIST_DIR = PROJECT_ROOT / "web" / "data"
 OUT_PATH = DIST_DIR / "corpus.json"
 
-FILES = ["manifest", "pokemon", "items", "abilities", "type_chart", "moves"]
+FILES = ["manifest", "pokemon", "items", "abilities", "type_chart", "moves", "natures"]
 
 
 def main() -> int:

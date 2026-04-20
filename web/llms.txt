@@ -35,7 +35,8 @@ AI 에이전트(Claude, ChatGPT 등) 가 이 사이트를 사용해 수행하기
 - `/data/abilities.json` — 192. 한·영명/게임 설명(`gameText`/`gameTextKo`)/상세 설명(`description`)/보유 포켓몬 역인덱스. `isNewInChampions: true` 플래그로 Champions 신규 특성 4건(Piercing Drill, Dragonize, Mega Sol, Spicy Spray) 구분 가능.
 - `/data/moves.json` — 481. 한·영명/타입/분류(물리·특수·변화)/위력·명중·PP/한·영 flavor 텍스트. 커버리지: 한국어명 446/481, 한국어 설명 437/481. `updatedInChampions: true` 플래그로 본작에서 수치 변경된 16개 기술 구분 (예: crabhammer PP 10→12 acc 90→95, ironhead PP 15→16). 수치는 Champions 값으로 덮어써 저장됨.
 - `/data/type_chart.json` — 18×18 상성 매트릭스. `matrix[attacker][defender] = 0 | 0.5 | 1 | 2`. 이중 타입은 두 배수 곱.
-- `/data/corpus.json` — 위 전부를 하나로 묶은 단일 파일 (~924 KB). LLM 컨텍스트에 한 번에 주입용.
+- `/data/natures.json` — 성격 25종. `{slug, nameEn, nameKo, increased, decreased}`. 중립 5종(Hardy/Docile/Serious/Bashful/Quirky) 은 increased/decreased 가 null. Champions 는 본편 25 nature 체계 그대로 유지 (+10% / -10% stat modifier).
+- `/data/corpus.json` — 위 전부를 하나로 묶은 단일 파일 (~994 KB). LLM 컨텍스트에 한 번에 주입용.
 
 데이터 스키마는 `/docs/schema.md` 또는 이 저장소의 `docs/schema.md` 에 정의.
 

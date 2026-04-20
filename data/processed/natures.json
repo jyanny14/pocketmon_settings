@@ -1,0 +1,177 @@
+[
+  {
+    "slug": "adamant",
+    "nameEn": "Adamant",
+    "nameKo": "고집",
+    "increased": "atk",
+    "decreased": "spAtk"
+  },
+  {
+    "slug": "bashful",
+    "nameEn": "Bashful",
+    "nameKo": "수줍음",
+    "increased": null,
+    "decreased": null
+  },
+  {
+    "slug": "bold",
+    "nameEn": "Bold",
+    "nameKo": "대담",
+    "increased": "def",
+    "decreased": "atk"
+  },
+  {
+    "slug": "brave",
+    "nameEn": "Brave",
+    "nameKo": "용감",
+    "increased": "atk",
+    "decreased": "speed"
+  },
+  {
+    "slug": "calm",
+    "nameEn": "Calm",
+    "nameKo": "차분",
+    "increased": "spDef",
+    "decreased": "atk"
+  },
+  {
+    "slug": "careful",
+    "nameEn": "Careful",
+    "nameKo": "신중",
+    "increased": "spDef",
+    "decreased": "spAtk"
+  },
+  {
+    "slug": "docile",
+    "nameEn": "Docile",
+    "nameKo": "온순",
+    "increased": null,
+    "decreased": null
+  },
+  {
+    "slug": "gentle",
+    "nameEn": "Gentle",
+    "nameKo": "얌전",
+    "increased": "spDef",
+    "decreased": "def"
+  },
+  {
+    "slug": "hardy",
+    "nameEn": "Hardy",
+    "nameKo": "노력",
+    "increased": null,
+    "decreased": null
+  },
+  {
+    "slug": "hasty",
+    "nameEn": "Hasty",
+    "nameKo": "성급",
+    "increased": "speed",
+    "decreased": "def"
+  },
+  {
+    "slug": "impish",
+    "nameEn": "Impish",
+    "nameKo": "장난꾸러기",
+    "increased": "def",
+    "decreased": "spAtk"
+  },
+  {
+    "slug": "jolly",
+    "nameEn": "Jolly",
+    "nameKo": "명랑",
+    "increased": "speed",
+    "decreased": "spAtk"
+  },
+  {
+    "slug": "lax",
+    "nameEn": "Lax",
+    "nameKo": "촐랑",
+    "increased": "def",
+    "decreased": "spDef"
+  },
+  {
+    "slug": "lonely",
+    "nameEn": "Lonely",
+    "nameKo": "외로움",
+    "increased": "atk",
+    "decreased": "def"
+  },
+  {
+    "slug": "mild",
+    "nameEn": "Mild",
+    "nameKo": "의젓",
+    "increased": "spAtk",
+    "decreased": "def"
+  },
+  {
+    "slug": "modest",
+    "nameEn": "Modest",
+    "nameKo": "조심",
+    "increased": "spAtk",
+    "decreased": "atk"
+  },
+  {
+    "slug": "naive",
+    "nameEn": "Naive",
+    "nameKo": "천진난만",
+    "increased": "speed",
+    "decreased": "spDef"
+  },
+  {
+    "slug": "naughty",
+    "nameEn": "Naughty",
+    "nameKo": "개구쟁이",
+    "increased": "atk",
+    "decreased": "spDef"
+  },
+  {
+    "slug": "quiet",
+    "nameEn": "Quiet",
+    "nameKo": "냉정",
+    "increased": "spAtk",
+    "decreased": "speed"
+  },
+  {
+    "slug": "quirky",
+    "nameEn": "Quirky",
+    "nameKo": "변덕",
+    "increased": null,
+    "decreased": null
+  },
+  {
+    "slug": "rash",
+    "nameEn": "Rash",
+    "nameKo": "덜렁",
+    "increased": "spAtk",
+    "decreased": "spDef"
+  },
+  {
+    "slug": "relaxed",
+    "nameEn": "Relaxed",
+    "nameKo": "무사태평",
+    "increased": "def",
+    "decreased": "speed"
+  },
+  {
+    "slug": "sassy",
+    "nameEn": "Sassy",
+    "nameKo": "건방",
+    "increased": "spDef",
+    "decreased": "speed"
+  },
+  {
+    "slug": "serious",
+    "nameEn": "Serious",
+    "nameKo": "성실",
+    "increased": null,
+    "decreased": null
+  },
+  {
+    "slug": "timid",
+    "nameEn": "Timid",
+    "nameKo": "겁쟁이",
+    "increased": "speed",
+    "decreased": "atk"
+  }
+]

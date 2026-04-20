@@ -357,6 +357,39 @@ type Move = {
 - 한글 이름 (`nameKo`): 446/481 (92.7%)
 - 한글 설명 (`flavorTextKo`): 437/481 (90.9%)
 - 미매칭분은 PokeAPI 가 한국어 번역을 반영하지 않은 기술들 (주로 신규)
+  - 2026-04-20 재검증 라운드에서 `data/manual/move_names_ko.json` + `move_flavors_ko.json` 으로 479/481 커버. 자세한 이력은 `docs/review-translations.md`.
+
+---
+
+## `natures.json`
+
+배열. 25개. Pokémon Champions 가 본편과 동일한 25 성격 체계 사용.
+
+```typescript
+type Nature = {
+  slug: string;            // 예: "adamant"
+  nameEn: string;          // "Adamant"
+  nameKo: string;          // "고집"
+  increased: StatKey | null;  // +10% 보정 대상 (중립일 때 null)
+  decreased: StatKey | null;  // -10% 보정 대상 (중립일 때 null)
+};
+// StatKey ∈ "atk" | "def" | "spAtk" | "spDef" | "speed"  (HP 는 대상 아님)
+```
+
+### 샘플
+
+```json
+{
+  "slug": "adamant",
+  "nameEn": "Adamant",
+  "nameKo": "고집",
+  "increased": "atk",
+  "decreased": "spAtk"
+}
+```
+
+- 중립 5종 (Hardy/Docile/Serious/Bashful/Quirky) 은 `increased == decreased == null`. 실효 스탯 계산 시 modifier 는 전 스탯 1.0.
+- 보정 수치는 `increased` 스탯 × 1.1, `decreased` 스탯 × 0.9 (HP 제외).
 
 ---
 

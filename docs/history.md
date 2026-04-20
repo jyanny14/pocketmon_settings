@@ -32,6 +32,22 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T22c — Nature(성격) 데이터 파이프라인 구축 ✅
+
+Champions 는 본편과 동일한 25 성격 체계를 유지하므로 PokeAPI `/nature/{slug}/` 를 그대로 수집.
+
+- `scripts/fetch_natures.py` 신규 — PokeAPI 25번 호출, ko/en 이름 + increased/decreased 스탯 추출. PokeAPI stat slug (`attack` 등) 를 우리 baseStats key (`atk` 등) 로 변환. 캐시 사용, `--force` 지원.
+- `scripts/build_natures.py` 신규 — processed 에서 shape 정규화 후 `web/data/natures.json` 작성. 25개 slug 정렬.
+- `scripts/build.py` `write_manifest` 에 natures 엔트리 추가 (다른 JSON 과 동일 해시 관리).
+- `scripts/build_corpus.py` `FILES` 목록에 `natures` 추가 → corpus.json 에 자동 포함 (990 → 994 KB).
+- `web/assets/i18n.js` 에 `nature.<slug>` 25키 × ko/en 추가. 중립 5종(Hardy/Docile/Serious/Bashful/Quirky) 포함.
+- `web/llms.txt` 데이터 엔드포인트 목록에 `/data/natures.json` 행 추가.
+- `docs/schema.md` 에 Natures 스키마 섹션 추가 (StatKey 정의, 보정 ±10%, 중립 규칙).
+
+빌드 결과: natures.json 25건 저장. abilities.json diff 는 직전 커밋 Floette rename 의 역인덱스 propagation 2건만 (floette 보유 특성에서 form name "Eternal Floette" 로).
+
+다음: T22 공통 인프라 — slot 인코딩 확장 + UI 접힘 영역.
+
 ### Floette 폼 "Eternal Floette" 로 정정
 
 사용자 지적 — Fandom 한국어 위키(플라엣테)에 있는 "영원의 꽃 플라엣테" 폼이 우리 데이터에 반영되지 않음. 실측 원인: serebii Champions 페이지의 Name/Type 테이블이 "Floette" 로 열리고 Stats 테이블이 "Stats - Eternal Floette" 로 닫히는 구조라, 파서가 form.name 을 "Floette" 로 남겨 둔 상태. 실제 baseStats(HP 74/Atk 65/Def 67/SpA 125/SpD 128/Spe 92, Total 551)는 Eternal Flower 수치를 반영 중이었으나 라벨이 잘못된 것.
