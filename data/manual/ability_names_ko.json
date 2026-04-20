@@ -1,0 +1,17 @@
+{
+  "_comment": "수동 override. 값을 공식 한국어명으로 채우면 build.py가 이 값으로 PokeAPI 매핑을 덮어씁니다. 빈 문자열이면 영문 폴백. PokeAPI에 한국어가 아직 없는 Gen9/Champions 신규 특성들이 여기 모여 있습니다.",
+  "armortail": "",
+  "cudchew": "",
+  "dragonize": "",
+  "eartheater": "",
+  "electromorphosis": "",
+  "megasol": "",
+  "opportunist": "",
+  "piercingdrill": "",
+  "purifyingsalt": "",
+  "sharpness": "",
+  "spicyspray": "",
+  "supremeoverlord": "",
+  "toxicdebris": "",
+  "zerotohero": ""
+}

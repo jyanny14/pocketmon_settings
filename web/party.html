@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title>파티 빌더 · 포켓몬 챔피언스</title>
+  <meta name="description" content="최대 6마리 파티를 구성하고 종족값 합계와 타입 커버리지를 분석해보세요." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ef4444' stroke='%23111' stroke-width='4'/%3E%3Crect x='4' y='30' width='56' height='4' fill='%23111'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff' stroke='%23111' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="brand-area">
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="언어 전환">
+          <span class="lang-toggle__opt" data-lang="ko">한</span>
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+        </button>
+        <a class="brand" href="./index.html" data-i18n-aria="brand">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name" data-i18n="brand">포켓몬 챔피언스</span>
+        </a>
+      </div>
+      <nav class="primary-nav" data-i18n-aria="nav.pokemon">
+        <a href="./pokemon.html" data-i18n="nav.pokemon">포켓몬</a>
+        <a href="./items.html" data-i18n="nav.items">도구</a>
+        <a href="./abilities.html" data-i18n="nav.abilities">특성</a>
+        <a href="./party.html" data-i18n="nav.party">파티 빌더</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="page-header">
+      <h1 class="page-title" data-i18n="party.title">파티 빌더</h1>
+      <p class="page-lead" data-i18n="party.lead">최대 6마리 파티를 구성하고 종족값·타입 커버리지를 분석해보세요. URL을 복사하면 파티를 공유할 수 있습니다.</p>
+    </section>
+
+    <section class="party-actions" aria-label="파티 관리">
+      <button class="button" id="share-party" type="button" data-i18n="party.copyUrl">URL 복사</button>
+      <button class="button" id="save-party" type="button" data-i18n="party.save">로컬 저장</button>
+      <select class="field__control" id="load-saved" aria-label="저장된 파티 불러오기">
+        <option value="" data-i18n="party.loadSaved">저장된 파티…</option>
+      </select>
+      <a class="button" id="ai-prompts" href="./prompts.html" data-i18n="party.aiPrompts">AI 분석</a>
+      <button class="button" id="reset-party" type="button" data-i18n="party.reset">초기화</button>
+    </section>
+
+    <div class="party-grid" id="party-grid" role="list" aria-label="파티 슬롯"></div>
+
+    <section class="party-analysis" id="analysis" aria-label="파티 분석" hidden></section>
+  </main>
+
+  <!-- Pokemon picker modal -->
+  <dialog class="picker-modal" id="picker-modal" aria-label="포켓몬 선택">
+    <form method="dialog" class="picker-modal__head">
+      <input class="picker-modal__search" id="picker-search" type="search" placeholder="이름(한/영) 검색…" data-i18n-ph="party.pickerSearch" />
+      <div class="picker-modal__types" id="picker-type-filters" role="group" aria-label="타입 필터"></div>
+      <button class="button" type="submit" value="cancel" data-i18n="party.close">닫기</button>
+    </form>
+    <div class="picker-modal__list" id="picker-list" role="listbox"></div>
+    <p class="empty-state" id="picker-empty" hidden data-i18n="empty">결과가 없습니다.</p>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>
+        <span data-i18n="footer.source">데이터 출처:</span>
+        <a href="https://www.serebii.net/pokemonchampions/" rel="noopener external">serebii.net</a> ·
+        <a href="https://pokeapi.co/" rel="noopener external">PokeAPI</a>
+      </p>
+      <p class="muted" data-i18n="footer.copyright">
+        Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트입니다.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="./assets/party.js"></script>
+</body>
+</html>

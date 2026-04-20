@@ -1,0 +1,530 @@
+{
+  "adaptability": {
+    "gameTextKo": "자신과 같은 타입의 기술 위력이 올라간다."
+  },
+  "aerilate": {
+    "gameTextKo": "노말타입의 기술이 비행타입이 된다. 위력이 조금 올라간다."
+  },
+  "aftermath": {
+    "gameTextKo": "기절했을 때 접촉한 상대에게 데미지를 준다."
+  },
+  "analytic": {
+    "gameTextKo": "제일 마지막에 기술을 쓰면 기술의 위력이 올라간다."
+  },
+  "angerpoint": {
+    "gameTextKo": "급소에 공격이 맞으면 크게 분노해 공격력이 최대가 된다."
+  },
+  "anticipation": {
+    "gameTextKo": "상대가 지닌 위험한 기술을 감지할 수 있다."
+  },
+  "aromaveil": {
+    "gameTextKo": "자신과 같은 편으로 향하는 멘탈 공격을 막을 수 있다."
+  },
+  "battlebond": {
+    "gameTextKo": "상대를 쓰러뜨리면 트레이너와의 유대감이 깊어져서 지우개굴닌자로 변한다. 물수리검이 강해진다."
+  },
+  "berserk": {
+    "gameTextKo": "상대의 공격으로 HP가 절반이 되면 특수공격이 올라간다."
+  },
+  "bigpecks": {
+    "gameTextKo": "방어를 떨어뜨리는 효과를 받지 않는다."
+  },
+  "blaze": {
+    "gameTextKo": "HP가 줄었을 때 불꽃타입 기술의 위력이 올라간다."
+  },
+  "bulletproof": {
+    "gameTextKo": "상대 구슬이나 폭탄 등 기술을 막을 수 있다."
+  },
+  "cheekpouch": {
+    "gameTextKo": "어떤 나무열매라도 먹으면 HP도 회복한다."
+  },
+  "chlorophyll": {
+    "gameTextKo": "날씨가 맑을 때 스피드가 올라간다."
+  },
+  "clearbody": {
+    "gameTextKo": "상대 기술이나 특성으로 능력을 떨어뜨릴 수 없다."
+  },
+  "cloudnine": {
+    "gameTextKo": "모든 날씨의 영향이 없어진다."
+  },
+  "competitive": {
+    "gameTextKo": "능력이 떨어지면 특수공격이 크게 올라간다."
+  },
+  "compoundeyes": {
+    "gameTextKo": "복안을 가지고 있어 기술의 명중률이 올라간다."
+  },
+  "contrary": {
+    "gameTextKo": "능력의 변화가 역전해서 올라갈 때 떨어지고 떨어질 때 올라간다."
+  },
+  "corrosion": {
+    "gameTextKo": "강철타입이나 독타입도 독 상태로 만들 수 있다."
+  },
+  "curiousmedicine": {
+    "gameTextKo": "등장했을 때 조개껍질에서 약을 흩뿌려서 능력 변화를 원래대로 되돌린다."
+  },
+  "cursedbody": {
+    "gameTextKo": "공격을 받으면 상대의 기술을 사슬묶기 상태로 만들 때가 있다."
+  },
+  "cutecharm": {
+    "gameTextKo": "자신과 접촉한 상대를 헤롱헤롱 상태로 만들 때가 있다."
+  },
+  "damp": {
+    "gameTextKo": "주변을 습하게 함으로써 자폭 등 폭발하는 기술을 아무도 못 쓰게 한다."
+  },
+  "defiant": {
+    "gameTextKo": "능력이 떨어지면 공격이 크게 올라간다."
+  },
+  "disguise": {
+    "gameTextKo": "몸을 덮는 탈로 1번 공격을 막을 수 있다."
+  },
+  "drizzle": {
+    "gameTextKo": "등장했을 때 날씨를 비로 만든다."
+  },
+  "drought": {
+    "gameTextKo": "등장했을 때 날씨를 맑음으로 만든다."
+  },
+  "dryskin": {
+    "gameTextKo": "비가 오는 날씨나 물타입의 기술로 HP가 회복되고 맑을 때나 불꽃타입의 기술로는 줄어든다."
+  },
+  "earlybird": {
+    "gameTextKo": "잠듦 상태가 되어도 2배 스피드로 깨어날 수 있다."
+  },
+  "fairyaura": {
+    "gameTextKo": "전원의 페어리타입 기술이 강해진다."
+  },
+  "filter": {
+    "gameTextKo": "효과가 굉장한 공격의 위력을 약하게 만든다."
+  },
+  "flamebody": {
+    "gameTextKo": "자신과 접촉한 상대를 화상 상태로 만들 때가 있다."
+  },
+  "flashfire": {
+    "gameTextKo": "불꽃타입의 기술을 받으면 불꽃을 받아서 자신이 사용하는 불꽃타입의 기술이 강해진다."
+  },
+  "flowerveil": {
+    "gameTextKo": "같은 편의 풀타입 포켓몬은 능력이 떨어지지 않고 상태 이상도 되지 않는다."
+  },
+  "forecast": {
+    "gameTextKo": "날씨의 영향을 받아 물타입, 불꽃타입, 얼음타입 중 하나로 변화한다."
+  },
+  "friendguard": {
+    "gameTextKo": "같은 편의 데미지를 줄일 수 있다."
+  },
+  "frisk": {
+    "gameTextKo": "등장했을 때 상대의 지닌 물건을 통찰할 수 있다."
+  },
+  "furcoat": {
+    "gameTextKo": "상대로부터 받는 물리 기술의 데미지가 절반이 된다."
+  },
+  "galewings": {
+    "gameTextKo": "HP가 꽉 찼을 때 비행타입의 기술을 먼저 쓸 수 있다."
+  },
+  "gluttony": {
+    "gameTextKo": "HP가 줄어들면 먹을 나무열매를 HP가 절반일 때 먹어버린다."
+  },
+  "gooey": {
+    "gameTextKo": "공격으로 자신과 접촉한 상대의 스피드를 떨어뜨린다."
+  },
+  "guts": {
+    "gameTextKo": "상태 이상이 되면 근성을 보여서 공격이 올라간다."
+  },
+  "harvest": {
+    "gameTextKo": "사용한 나무열매를 몇 번이고 만들어 낸다."
+  },
+  "healer": {
+    "gameTextKo": "같은 편의 상태 이상을 가끔 회복시킨다."
+  },
+  "heatproof": {
+    "gameTextKo": "내열인 몸으로 인해 불꽃타입 공격의 데미지를 반감한다."
+  },
+  "heavymetal": {
+    "gameTextKo": "자신의 무게가 2배가 된다."
+  },
+  "hugepower": {
+    "gameTextKo": "물리공격의 위력이 2배가 된다."
+  },
+  "hungerswitch": {
+    "gameTextKo": "턴이 끝날 때마다 배부른 모양, 배고픈 모양, 배부른 모양...으로 번갈아서 모습을 바꾼다."
+  },
+  "hustle": {
+    "gameTextKo": "자신의 공격이 높아지지만 명중률이 떨어진다."
+  },
+  "hydration": {
+    "gameTextKo": "비가 오는 날씨일 때 상태 이상이 회복된다."
+  },
+  "hypercutter": {
+    "gameTextKo": "힘이 자랑인 집게를 가지고 있어 상대가 공격을 떨어뜨리지 못한다."
+  },
+  "icebody": {
+    "gameTextKo": "날씨가 싸라기눈일 때 HP를 조금씩 회복한다."
+  },
+  "illuminate": {
+    "gameTextKo": "주변을 밝게 하는 것으로 야생 포켓몬과 만나기 쉬워진다."
+  },
+  "illusion": {
+    "gameTextKo": "지닌 포켓몬 중 제일 뒤에 있는 포켓몬으로 둔갑하여 나와서 상대를 속인다."
+  },
+  "immunity": {
+    "gameTextKo": "체내에 면역을 가지고 있어 독 상태가 되지 않는다."
+  },
+  "imposter": {
+    "gameTextKo": "눈앞의 포켓몬으로 변신해버린다."
+  },
+  "infiltrator": {
+    "gameTextKo": "상대의 벽이나 대타출동을 뚫고 공격할 수 있다."
+  },
+  "innardsout": {
+    "gameTextKo": "상대가 쓰러뜨렸을 때 HP의 남은 양만큼 상대에게 데미지를 준다."
+  },
+  "innerfocus": {
+    "gameTextKo": "단련한 정신으로 인하여 상대의 공격에 풀죽지 않는다."
+  },
+  "insomnia": {
+    "gameTextKo": "잠들지 못하는 체질이라 잠듦 상태가 되지 않는다."
+  },
+  "intimidate": {
+    "gameTextKo": "등장했을 때 위협해서 상대를 위축시켜 상대의 공격을 떨어뜨린다."
+  },
+  "ironfist": {
+    "gameTextKo": "펀치를 사용하는 기술의 위력이 올라간다."
+  },
+  "justified": {
+    "gameTextKo": "악타입 공격을 받으면 정의감으로 공격이 올라간다."
+  },
+  "keeneye": {
+    "gameTextKo": "날카로운 눈 덕분에 명중률이 떨어지지 않는다."
+  },
+  "klutz": {
+    "gameTextKo": "지니고 있는 도구를 쓸 수 없다."
+  },
+  "leafguard": {
+    "gameTextKo": "날씨가 맑을 때는 상태 이상이 되지 않는다."
+  },
+  "levitate": {
+    "gameTextKo": "땅에서 뜨는 것으로 땅타입의 기술을 받지 않는다."
+  },
+  "lightmetal": {
+    "gameTextKo": "자신의 무게가 절반이 된다."
+  },
+  "lightningrod": {
+    "gameTextKo": "전기타입의 기술을 자신에게 끌어모아 데미지를 받지 않고 특수공격을 올린다."
+  },
+  "limber": {
+    "gameTextKo": "유연한 몸으로 인해 마비 상태가 되지 않는다."
+  },
+  "liquidvoice": {
+    "gameTextKo": "모든 소리 기술이 물타입이 된다."
+  },
+  "longreach": {
+    "gameTextKo": "모든 기술을 상대에게 접촉하지 않고 사용할 수 있다."
+  },
+  "magicbounce": {
+    "gameTextKo": "상대가 쓴 변화 기술을 받지 않고 그대로 되받아칠 수 있다."
+  },
+  "magicguard": {
+    "gameTextKo": "공격 이외에는 데미지를 입지 않는다."
+  },
+  "magician": {
+    "gameTextKo": "기술을 맞은 상대의 도구를 빼앗아 버린다."
+  },
+  "magmaarmor": {
+    "gameTextKo": "뜨거운 마그마를 몸에 둘러서 얼음 상태가 되지 않는다."
+  },
+  "marvelscale": {
+    "gameTextKo": "상태 이상이 되면 이상한 비늘이 반응해서 방어가 올라간다."
+  },
+  "megalauncher": {
+    "gameTextKo": "파동 기술의 위력이 올라간다."
+  },
+  "merciless": {
+    "gameTextKo": "독 상태의 상대를 공격하면 반드시 급소에 맞는다."
+  },
+  "mimicry": {
+    "gameTextKo": "필드의 상태에 따라 포켓몬의 타입이 바뀐다."
+  },
+  "minus": {
+    "gameTextKo": "플러스나 마이너스의 특성을 가진 포켓몬이 동료에 있으면 자신의 특수공격이 올라간다."
+  },
+  "mirrorarmor": {
+    "gameTextKo": "자신이 받는 능력 다운 효과에 한해 되받아친다."
+  },
+  "moldbreaker": {
+    "gameTextKo": "상대 특성에 방해받지 않고 상대에게 기술을 쓸 수 있다."
+  },
+  "moody": {
+    "gameTextKo": "매 턴 능력 중 하나가 크게 오르고 하나가 떨어진다."
+  },
+  "motordrive": {
+    "gameTextKo": "전기타입의 기술을 받으면 데미지를 받지 않고 스피드가 올라간다."
+  },
+  "moxie": {
+    "gameTextKo": "상대를 쓰러뜨리면 자신감이 붙어서 공격이 올라간다."
+  },
+  "multiscale": {
+    "gameTextKo": "HP가 꽉 찼을 때 받는 데미지가 줄어든다."
+  },
+  "mummy": {
+    "gameTextKo": "상대가 접촉하면 상대를 미라로 만들어버린다."
+  },
+  "naturalcure": {
+    "gameTextKo": "지닌 포켓몬으로 돌아오면 상태 이상이 회복된다."
+  },
+  "noguard": {
+    "gameTextKo": "노가드전법에 따라 서로가 사용하는 기술이 반드시 맞게 된다."
+  },
+  "oblivious": {
+    "gameTextKo": "둔감해서 헤롱헤롱이나 도발 상태가 되지 않는다."
+  },
+  "overcoat": {
+    "gameTextKo": "모래바람이나 싸라기눈 등의 데미지를 입지 않는다. 가루의 기술을 받지 않는다."
+  },
+  "overgrow": {
+    "gameTextKo": "HP가 줄었을 때 풀타입 기술의 위력이 올라간다."
+  },
+  "owntempo": {
+    "gameTextKo": "마이페이스라서 혼란 상태가 되지 않는다."
+  },
+  "parentalbond": {
+    "gameTextKo": "부모와 자식 2마리로 2번 공격할 수 있다."
+  },
+  "pickpocket": {
+    "gameTextKo": "접촉한 상대의 도구를 훔친다."
+  },
+  "pickup": {
+    "gameTextKo": "상대가 사용한 도구를 주워올 때가 있다. 모험 중에도 주워온다."
+  },
+  "pixilate": {
+    "gameTextKo": "노말타입의 기술이 페어리타입이 된다. 위력이 조금 올라간다."
+  },
+  "plus": {
+    "gameTextKo": "플러스나 마이너스의 특성을 가진 포켓몬이 동료에 있으면 자신의 특수공격이 올라간다."
+  },
+  "poisonheal": {
+    "gameTextKo": "독 상태가 되면 HP가 줄지 않고 증가한다."
+  },
+  "poisonpoint": {
+    "gameTextKo": "자신과 접촉한 상대를 독 상태로 만들 때가 있다."
+  },
+  "poisontouch": {
+    "gameTextKo": "접촉하기만 해도 상대를 독 상태로 만들 때가 있다."
+  },
+  "prankster": {
+    "gameTextKo": "변화 기술을 먼저 쓸 수 있다."
+  },
+  "pressure": {
+    "gameTextKo": "프레셔를 줘서 상대가 쓰는 기술의 PP를 많이 줄인다."
+  },
+  "protean": {
+    "gameTextKo": "자신이 사용한 기술과 같은 타입으로 변화한다."
+  },
+  "purepower": {
+    "gameTextKo": "요가의 힘으로 물리공격의 위력이 2배가 된다."
+  },
+  "queenlymajesty": {
+    "gameTextKo": "상대에게 위압감을 줘서 이쪽을 향한 선제 기술을 사용할 수 없게 한다."
+  },
+  "quickdraw": {
+    "gameTextKo": "상대보다 먼저 행동할 수도 있다."
+  },
+  "quickfeet": {
+    "gameTextKo": "상태 이상이 되면 스피드가 올라간다."
+  },
+  "raindish": {
+    "gameTextKo": "비가 오는 날씨일 때 조금씩 HP를 회복한다."
+  },
+  "receiver": {
+    "gameTextKo": "쓰러진 같은 편의 특성을 이어받아 같은 특성이 된다."
+  },
+  "reckless": {
+    "gameTextKo": "반동 데미지를 받는 기술의 위력이 올라간다."
+  },
+  "refrigerate": {
+    "gameTextKo": "노말타입의 기술이 얼음타입이 된다. 위력이 조금 올라간다."
+  },
+  "regenerator": {
+    "gameTextKo": "지닌 포켓몬으로 돌아오면 HP를 조금 회복한다."
+  },
+  "ripen": {
+    "gameTextKo": "나무열매를 숙성시켜서 효과가 2배가 된다."
+  },
+  "rivalry": {
+    "gameTextKo": "성별이 같으면 투쟁심을 불태워 강해진다. 성별이 다르면 약해진다."
+  },
+  "rockhead": {
+    "gameTextKo": "반동을 받는 기술을 사용해도 HP가 줄지 않는다."
+  },
+  "roughskin": {
+    "gameTextKo": "공격을 받았을 때 자신에게 접촉한 상대를 까칠까칠한 피부로 상처를 입힌다."
+  },
+  "sandforce": {
+    "gameTextKo": "날씨가 모래바람일 때 바위타입과 땅타입과 강철타입의 위력이 올라간다."
+  },
+  "sandrush": {
+    "gameTextKo": "날씨가 모래바람일 때 스피드가 올라간다."
+  },
+  "sandspit": {
+    "gameTextKo": "공격을 받으면 모래바람을 일으킨다."
+  },
+  "sandstream": {
+    "gameTextKo": "등장했을 때 날씨를 모래바람으로 만든다."
+  },
+  "sandveil": {
+    "gameTextKo": "모래바람일 때 회피율이 올라간다."
+  },
+  "sapsipper": {
+    "gameTextKo": "풀타입 기술을 받으면 데미지를 입지 않고 공격이 올라간다."
+  },
+  "scrappy": {
+    "gameTextKo": "고스트타입 포켓몬에게 노말타입과 격투타입의 기술을 맞게 한다."
+  },
+  "screencleaner": {
+    "gameTextKo": "등장했을 때 상대와 같은 편의 빛의장막, 리플렉터, 오로라베일의 효과가 사라진다."
+  },
+  "shadowtag": {
+    "gameTextKo": "상대의 그림자를 밟아 도망치거나 교체할 수 없게 한다."
+  },
+  "shedskin": {
+    "gameTextKo": "몸의 껍질을 벗어 던져 상태 이상을 회복할 때가 있다."
+  },
+  "sheerforce": {
+    "gameTextKo": "기술의 추가 효과가 없어지지만 그만큼 높은 위력으로 기술을 사용할 수 있다."
+  },
+  "shellarmor": {
+    "gameTextKo": "단단한 껍질의 보호를 받아 상대의 공격이 급소에 맞지 않는다."
+  },
+  "shielddust": {
+    "gameTextKo": "인분에 보호받아 기술의 추가 효과를 받지 않게 된다."
+  },
+  "skilllink": {
+    "gameTextKo": "연속 기술을 사용하면 항상 최고 횟수를 사용할 수 있다."
+  },
+  "slushrush": {
+    "gameTextKo": "날씨가 싸라기눈일 때 스피드가 올라간다."
+  },
+  "sniper": {
+    "gameTextKo": "공격을 급소에 맞혔을 때 위력이 더욱 올라간다."
+  },
+  "snowcloak": {
+    "gameTextKo": "날씨가 싸라기눈일 때 회피율이 올라간다."
+  },
+  "snowwarning": {
+    "gameTextKo": "등장했을 때 날씨를 싸라기눈으로 만든다."
+  },
+  "solarpower": {
+    "gameTextKo": "날씨가 맑으면 특수공격이 올라가지만 매 턴 HP가 줄어든다."
+  },
+  "solidrock": {
+    "gameTextKo": "효과가 굉장한 공격의 위력을 약하게 만든다."
+  },
+  "soundproof": {
+    "gameTextKo": "소리를 차단하는 것으로 소리 공격을 받지 않는다."
+  },
+  "speedboost": {
+    "gameTextKo": "매 턴 스피드가 올라간다."
+  },
+  "stall": {
+    "gameTextKo": "기술을 사용하는 순서가 반드시 마지막이 된다."
+  },
+  "stalwart": {
+    "gameTextKo": "상대의 기술을 끌어모으는 특성이나 기술의 영향을 받지 않는다."
+  },
+  "stamina": {
+    "gameTextKo": "공격을 받으면 방어가 올라간다."
+  },
+  "stancechange": {
+    "gameTextKo": "공격 기술을 쓰면 블레이드폼으로 기술 킹실드를 쓰면 실드폼으로 변한다."
+  },
+  "static": {
+    "gameTextKo": "정전기를 몸에 둘러 접촉한 상대를 마비시킬 때가 있다."
+  },
+  "steadfast": {
+    "gameTextKo": "풀죽을 때마다 불굴의 마음을 불태워 스피드가 올라간다."
+  },
+  "stench": {
+    "gameTextKo": "악취를 풍겨서 공격했을 때 상대가 풀죽을 때가 있다."
+  },
+  "stickyhold": {
+    "gameTextKo": "점착질의 몸에 도구가 달라붙어 있어 상대에게 도구를 뺏기지 않는다."
+  },
+  "strongjaw": {
+    "gameTextKo": "턱이 튼튼하여 무는 기술의 위력이 올라간다."
+  },
+  "sturdy": {
+    "gameTextKo": "상대 기술을 받아도 일격으로 쓰러지지 않는다. 일격필살 기술도 효과 없다."
+  },
+  "superluck": {
+    "gameTextKo": "대운을 가지고 있어 상대의 급소에 공격이 맞기 쉽다."
+  },
+  "surgesurfer": {
+    "gameTextKo": "일렉트릭필드일 때 스피드가 2배가 된다."
+  },
+  "swarm": {
+    "gameTextKo": "HP가 줄었을 때 벌레타입 기술의 위력이 올라간다."
+  },
+  "sweetveil": {
+    "gameTextKo": "같은 편의 포켓몬이 잠들지 않게 된다."
+  },
+  "swiftswim": {
+    "gameTextKo": "비가 오는 날씨일 때 스피드가 올라간다."
+  },
+  "symbiosis": {
+    "gameTextKo": "같은 편이 도구를 쓰면 자신이 지니고 있는 도구를 같은 편에게 건넨다."
+  },
+  "synchronize": {
+    "gameTextKo": "자신이 걸린 독이나 마비, 화상을 상대에게 옮긴다."
+  },
+  "tangledfeet": {
+    "gameTextKo": "혼란 상태일 때는 회피율이 올라간다."
+  },
+  "technician": {
+    "gameTextKo": "위력이 약한 기술의 위력을 올려서 공격할 수 있다."
+  },
+  "telepathy": {
+    "gameTextKo": "같은 편의 공격의 낌새를 읽고 기술을 회피한다."
+  },
+  "thickfat": {
+    "gameTextKo": "두꺼운 지방으로 보호되고 있어 불꽃타입과 얼음타입의 기술의 데미지를 반감시킨다."
+  },
+  "torrent": {
+    "gameTextKo": "HP가 줄었을 때 물타입 기술의 위력이 올라간다."
+  },
+  "toughclaws": {
+    "gameTextKo": "상대에게 접촉하는 기술의 위력이 올라간다."
+  },
+  "trace": {
+    "gameTextKo": "등장했을 때 상대의 특성을 트레이스해서 같은 특성이 된다."
+  },
+  "unaware": {
+    "gameTextKo": "상대의 능력 변화를 무시하고 공격할 수 있다."
+  },
+  "unburden": {
+    "gameTextKo": "지니던 도구가 없어지면 스피드가 올라간다."
+  },
+  "unnerve": {
+    "gameTextKo": "상대를 긴장시켜 나무열매를 먹지 못하게 한다."
+  },
+  "unseenfist": {
+    "gameTextKo": "상대에게 접촉하는 기술을 사용하면 방어의 효과를 무시하고 공격할 수 있다."
+  },
+  "vitalspirit": {
+    "gameTextKo": "의기양양해져서 잠듦 상태가 되지 않는다."
+  },
+  "voltabsorb": {
+    "gameTextKo": "전기타입의 기술을 받으면 데미지를 받지 않고 회복한다."
+  },
+  "wanderingspirit": {
+    "gameTextKo": "접촉하는 기술로 공격해온 포켓몬과 특성을 바꾼다."
+  },
+  "waterabsorb": {
+    "gameTextKo": "물타입의 기술을 받으면 데미지를 받지 않고 회복한다."
+  },
+  "waterbubble": {
+    "gameTextKo": "자신을 향하는 불꽃타입 기술의 위력을 떨어뜨린다. 화상을 입지 않는다."
+  },
+  "weakarmor": {
+    "gameTextKo": "물리 기술로 데미지를 받으면 방어가 떨어지고 스피드가 크게 올라간다."
+  },
+  "whitesmoke": {
+    "gameTextKo": "하얀 연기의 보호를 받아 상대가 능력을 떨어뜨릴 수 없다."
+  }
+}

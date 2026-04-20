@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title>포켓몬 챔피언스 파티 빌더</title>
+  <meta name="description" content="Pokemon Champions 등장 포켓몬·도구·특성을 한국어로 찾아보고 나만의 파티를 구성해보세요." />
+  <meta property="og:title" content="포켓몬 챔피언스 파티 빌더" />
+  <meta property="og:description" content="Pokemon Champions 등장 포켓몬·도구·특성을 한국어로 찾아보고 나만의 파티를 구성해보세요." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ef4444' stroke='%23111' stroke-width='4'/%3E%3Crect x='4' y='30' width='56' height='4' fill='%23111'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff' stroke='%23111' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="brand-area">
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="언어 전환">
+          <span class="lang-toggle__opt" data-lang="ko">한</span>
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+        </button>
+        <a class="brand" href="./index.html" data-i18n-aria="brand">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name" data-i18n="brand">포켓몬 챔피언스</span>
+        </a>
+      </div>
+      <nav class="primary-nav" data-i18n-aria="nav.pokemon">
+        <a href="./pokemon.html" data-i18n="nav.pokemon">포켓몬</a>
+        <a href="./items.html" data-i18n="nav.items">도구</a>
+        <a href="./abilities.html" data-i18n="nav.abilities">특성</a>
+        <a href="./party.html" data-i18n="nav.party">파티 빌더</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <h1 class="hero__title" data-i18n="index.title">Pokemon Champions 파티 빌더</h1>
+      <p class="hero__lead" data-i18n="index.lead">
+        등장 포켓몬·도구·특성을 한곳에서 검색하고, 나만의 파티를 직접 구성해보세요.
+        모든 데이터는 serebii.net과 PokeAPI에서 수집한 정적 스냅샷입니다.
+      </p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="./pokemon.html" data-i18n="index.browsePokemon">포켓몬 둘러보기</a>
+        <a class="button" href="./party.html" data-i18n="index.startParty">파티 빌더 시작</a>
+      </div>
+    </section>
+
+    <section class="card-grid" aria-labelledby="nav-heading">
+      <h2 id="nav-heading" class="sr-only" data-i18n="index.sections">섹션</h2>
+
+      <a class="card" href="./pokemon.html">
+        <h3 class="card__title" data-i18n="index.card.pokemon.title">포켓몬 목록</h3>
+        <p class="card__desc" data-i18n="index.card.pokemon.desc">한·영 검색, 타입·입수 경로 필터, 폼(메가/지역폼) 확인</p>
+        <p class="card__meta" data-stat="pokemon-count">— 마리</p>
+      </a>
+
+      <a class="card" href="./items.html">
+        <h3 class="card__title" data-i18n="index.card.items.title">도구</h3>
+        <p class="card__desc" data-i18n="index.card.items.desc">지닌 도구·메가스톤·나무열매 목록과 효과</p>
+        <p class="card__meta" data-stat="item-count">— 개</p>
+      </a>
+
+      <a class="card" href="./abilities.html">
+        <h3 class="card__title" data-i18n="index.card.abilities.title">특성</h3>
+        <p class="card__desc" data-i18n="index.card.abilities.desc">특성 설명과 보유 포켓몬 역인덱스</p>
+        <p class="card__meta" data-stat="ability-count">— 개</p>
+      </a>
+
+      <a class="card" href="./party.html">
+        <h3 class="card__title" data-i18n="index.card.party.title">파티 빌더</h3>
+        <p class="card__desc" data-i18n="index.card.party.desc">최대 6마리 파티 구성 · 종족값 합계 · 타입 커버리지</p>
+        <p class="card__meta" data-i18n="index.card.party.meta">6슬롯 · URL 공유</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>
+        <span data-i18n="footer.source">데이터 출처:</span>
+        <a href="https://www.serebii.net/pokemonchampions/" rel="noopener external">serebii.net</a> ·
+        <a href="https://pokeapi.co/" rel="noopener external">PokeAPI</a>
+      </p>
+      <p class="muted" data-i18n="footer.copyright">
+        Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트입니다.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="./assets/app.js"></script>
+</body>
+</html>

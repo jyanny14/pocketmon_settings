@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title>특성 · Pokemon Champions 파티 빌더</title>
+  <meta name="description" content="Pokemon Champions에 등장하는 특성 목록. 이름·설명 검색과 보유 포켓몬 역인덱스를 제공합니다." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ef4444' stroke='%23111' stroke-width='4'/%3E%3Crect x='4' y='30' width='56' height='4' fill='%23111'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff' stroke='%23111' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="brand-area">
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="언어 전환">
+          <span class="lang-toggle__opt" data-lang="ko">한</span>
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+        </button>
+        <a class="brand" href="./index.html" data-i18n-aria="brand">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name" data-i18n="brand">포켓몬 챔피언스</span>
+        </a>
+      </div>
+      <nav class="primary-nav" aria-label="주요 메뉴">
+        <a href="./pokemon.html" data-i18n="nav.pokemon">포켓몬</a>
+        <a href="./items.html" data-i18n="nav.items">도구</a>
+        <a href="./abilities.html" data-i18n="nav.abilities">특성</a>
+        <a href="./party.html" data-i18n="nav.party">파티 빌더</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="page-header">
+      <h1 data-i18n="abilities.title">특성</h1>
+      <p class="muted" data-i18n="abilities.desc">Pokemon Champions에 등장하는 모든 특성. 이름·설명으로 검색하고, 해당 특성을 보유한 포켓몬을 확인할 수 있습니다.</p>
+    </section>
+
+    <section class="filters" aria-label="필터">
+      <div class="filters__row">
+        <label class="field field--grow">
+          <span class="field__label" data-i18n="search">검색</span>
+          <input
+            type="search"
+            id="search"
+            class="field__input"
+            data-i18n-ph="abilities.searchPlaceholder"
+            placeholder="특성 이름 · 슬러그 · 설명"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </label>
+
+        <label class="field">
+          <span class="field__label" data-i18n="pokemon.sort">정렬</span>
+          <select id="sort" class="field__input">
+            <option value="nameEn" data-i18n="abilities.sort.nameEn">이름(영)</option>
+            <option value="holders" data-i18n="abilities.sort.holders">보유 포켓몬 수</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filters__row filters__row--between">
+        <p class="result-count" aria-live="polite">
+          <span id="result-count">—</span> / <span id="total-count">—</span> <span data-i18n="abilities.unit">개</span>
+        </p>
+        <button type="button" id="reset-filters" class="button button--ghost" data-i18n="reset">초기화</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="result-heading">
+      <h2 id="result-heading" class="sr-only">검색 결과</h2>
+      <div id="ability-grid" class="ability-grid" aria-live="polite"></div>
+      <p id="empty-state" class="empty-state" hidden data-i18n="abilities.empty">조건에 맞는 특성이 없습니다.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>
+        <span data-i18n="footer.source">데이터 출처:</span>
+        <a href="https://www.serebii.net/pokemonchampions/" rel="noopener external">serebii.net</a> ·
+        <a href="https://pokeapi.co/" rel="noopener external">PokeAPI</a>
+      </p>
+      <p class="muted" data-i18n="footer.copyright">
+        Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트입니다.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="./assets/app.js"></script>
+  <script type="module" src="./assets/abilities-list.js"></script>
+</body>
+</html>

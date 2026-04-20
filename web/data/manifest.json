@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-17T17:44:01Z",
+  "schemaVersion": "1.0.0",
+  "sources": {
+    "serebii_champions": "https://www.serebii.net/pokemonchampions/",
+    "pokeapi": "https://pokeapi.co/api/v2",
+    "pokeapi_sprites": "https://github.com/PokeAPI/sprites"
+  },
+  "files": [
+    {
+      "name": "pokemon",
+      "path": "pokemon.json",
+      "count": 186,
+      "sha256": "e3be21106054d0793e7b59de824b0d9b5624db6e64bc9186502c642198c169e2"
+    },
+    {
+      "name": "items",
+      "path": "items.json",
+      "count": 117,
+      "sha256": "5fafafcfdbbb9943ff38bb598619f93bba0c60e1e540c673e9196a811df20e84"
+    },
+    {
+      "name": "abilities",
+      "path": "abilities.json",
+      "count": 192,
+      "sha256": "a39f5bb003f3a1080fad2eb85350ea64ee78e5af5402ed139a3ae8bed59a64c5"
+    },
+    {
+      "name": "type_chart",
+      "path": "type_chart.json",
+      "count": 18,
+      "sha256": "401f615e4e1c9191b4ab8044658e3f8dd67471ae563c2df1361599b71b2b4e8d"
+    },
+    {
+      "name": "moves",
+      "path": "moves.json",
+      "count": 481,
+      "sha256": "edd04b9c9781366781932030d0f5bc1ff72a8db86c7694c84a62d2f69b1f93b6"
+    }
+  ]
+}

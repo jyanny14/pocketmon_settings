@@ -1,0 +1,4726 @@
+[
+  {
+    "slug": "adaptability",
+    "nameEn": "Adaptability",
+    "nameKo": "적응력",
+    "description": "Increases the Same Type Attack Bonus from *1.5 to *2.",
+    "descriptionKo": "",
+    "gameText": "Powers up moves of the same type as the Pokémon.",
+    "gameTextKo": "자신과 같은 타입의 기술 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "basculegion",
+        "form": "Basculegion"
+      },
+      {
+        "slug": "basculegion",
+        "form": "Female"
+      },
+      {
+        "slug": "beedrill",
+        "form": "Mega Beedrill"
+      },
+      {
+        "slug": "glimmora",
+        "form": "Mega Glimmora"
+      },
+      {
+        "slug": "lucario",
+        "form": "Mega Lucario"
+      }
+    ]
+  },
+  {
+    "slug": "aerilate",
+    "nameEn": "Aerilate",
+    "nameKo": "스카이스킨",
+    "description": "Increases the power of Normal-type moves by 20%. It then changes those moves to Flying-type.",
+    "descriptionKo": "",
+    "gameText": "Normal-type moves become Flying-type moves. The power of those moves is boosted a little.",
+    "gameTextKo": "노말타입의 기술이 비행타입이 된다. 위력이 조금 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "pinsir",
+        "form": "Mega Pinsir"
+      }
+    ]
+  },
+  {
+    "slug": "aftermath",
+    "nameEn": "Aftermath",
+    "nameKo": "유폭",
+    "description": "The foe that dealt the final hit loses 1/4 of its maximum HP if the move made physical contact.",
+    "descriptionKo": "",
+    "gameText": "Damages the attacker if it contacts the Pokémon with a finishing hit.",
+    "gameTextKo": "기절했을 때 접촉한 상대에게 데미지를 준다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "garbodor",
+        "form": "Garbodor"
+      }
+    ]
+  },
+  {
+    "slug": "analytic",
+    "nameEn": "Analytic",
+    "nameKo": "애널라이즈",
+    "description": "Attack power increases by 30% if the Pokémon is the last Pokémon to attack this turn",
+    "descriptionKo": "",
+    "gameText": "Boosts move power when the Pokémon moves last.",
+    "gameTextKo": "제일 마지막에 기술을 쓰면 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "starmie",
+        "form": "Starmie"
+      },
+      {
+        "slug": "watchog",
+        "form": "Watchog"
+      }
+    ]
+  },
+  {
+    "slug": "angerpoint",
+    "nameEn": "Anger Point",
+    "nameKo": "분노의경혈",
+    "description": "Increases Attack to maximum level upon taking a critical hit.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.",
+    "gameTextKo": "급소에 공격이 맞으면 크게 분노해 공격력이 최대가 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "camerupt",
+        "form": "Camerupt"
+      },
+      {
+        "slug": "crabominable",
+        "form": "Crabominable"
+      },
+      {
+        "slug": "krookodile",
+        "form": "Krookodile"
+      },
+      {
+        "slug": "tauros",
+        "form": "Paldean Tauros"
+      },
+      {
+        "slug": "tauros",
+        "form": "Tauros"
+      }
+    ]
+  },
+  {
+    "slug": "anticipation",
+    "nameEn": "Anticipation",
+    "nameKo": "위험예지",
+    "description": "Warns when the foe knows 1-hit KO or super-effective moves.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon can sense an opposing Pokémon's dangerous moves.",
+    "gameTextKo": "상대가 지닌 위험한 기술을 감지할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "hatterene",
+        "form": "Hatterene"
+      },
+      {
+        "slug": "toxicroak",
+        "form": "Toxicroak"
+      }
+    ]
+  },
+  {
+    "slug": "armortail",
+    "nameEn": "Armor Tail",
+    "nameKo": "",
+    "description": "The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.",
+    "descriptionKo": "",
+    "gameText": "The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "farigiraf",
+        "form": "Farigiraf"
+      }
+    ]
+  },
+  {
+    "slug": "aromaveil",
+    "nameEn": "Aroma Veil",
+    "nameKo": "아로마베일",
+    "description": "Protects itself and its allies from attacks that limit their move choices.",
+    "descriptionKo": "",
+    "gameText": "Protects itself and its allies from attacks that limit their move choices.",
+    "gameTextKo": "자신과 같은 편으로 향하는 멘탈 공격을 막을 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "alcremie",
+        "form": "Alcremie"
+      },
+      {
+        "slug": "aromatisse",
+        "form": "Aromatisse"
+      }
+    ]
+  },
+  {
+    "slug": "battlebond",
+    "nameEn": "Battle Bond",
+    "nameKo": "유대변화",
+    "description": "When the user knocks out a target, its Attack, Sp. Attack and Speed stats are boosted by 1 stage once per battle",
+    "descriptionKo": "",
+    "gameText": "Defeating an opposing Pokémon strengthens the Pokémon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful. In Scarlet & Violet, changes to boost Attack, Speed and Special Attack when opponents are knocked out.",
+    "gameTextKo": "상대를 쓰러뜨리면 트레이너와의 유대감이 깊어져서 지우개굴닌자로 변한다. 물수리검이 강해진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "greninja",
+        "form": "Greninja"
+      }
+    ]
+  },
+  {
+    "slug": "berserk",
+    "nameEn": "Berserk",
+    "nameKo": "발끈",
+    "description": "Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to become half or less.",
+    "gameTextKo": "상대의 공격으로 HP가 절반이 되면 특수공격이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "drampa",
+        "form": "Drampa"
+      },
+      {
+        "slug": "drampa",
+        "form": "Mega Drampa"
+      }
+    ]
+  },
+  {
+    "slug": "bigpecks",
+    "nameEn": "Big Pecks",
+    "nameKo": "부풀린가슴",
+    "description": "Protects the Pokémon from Defense-lowering effects.",
+    "descriptionKo": "",
+    "gameText": "Protects the Pokémon from Defense-lowering effects.",
+    "gameTextKo": "방어를 떨어뜨리는 효과를 받지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "pidgeot",
+        "form": "Pidgeot"
+      }
+    ]
+  },
+  {
+    "slug": "blaze",
+    "nameEn": "Blaze",
+    "nameKo": "맹화",
+    "description": "When HP is below 1/3rd its maximum, power of Fire-type moves is increased by 50%.",
+    "descriptionKo": "",
+    "gameText": "Powers up Fire-type moves when the Pokémon's HP is low.",
+    "gameTextKo": "HP가 줄었을 때 불꽃타입 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "charizard",
+        "form": "Charizard"
+      },
+      {
+        "slug": "delphox",
+        "form": "Delphox"
+      },
+      {
+        "slug": "emboar",
+        "form": "Emboar"
+      },
+      {
+        "slug": "incineroar",
+        "form": "Incineroar"
+      },
+      {
+        "slug": "infernape",
+        "form": "Infernape"
+      },
+      {
+        "slug": "simisear",
+        "form": "Simisear"
+      },
+      {
+        "slug": "skeledirge",
+        "form": "Skeledirge"
+      },
+      {
+        "slug": "typhlosion",
+        "form": "Hisuian Typhlosion"
+      },
+      {
+        "slug": "typhlosion",
+        "form": "Typhlosion"
+      }
+    ]
+  },
+  {
+    "slug": "bulletproof",
+    "nameEn": "Bulletproof",
+    "nameKo": "방탄",
+    "description": "Protects the Pokémon from some ball and bomb moves.",
+    "descriptionKo": "",
+    "gameText": "Protects the Pokémon from some ball and bomb moves.",
+    "gameTextKo": "상대 구슬이나 폭탄 등 기술을 막을 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "chesnaught",
+        "form": "Chesnaught"
+      },
+      {
+        "slug": "chesnaught",
+        "form": "Mega Chesnaught"
+      },
+      {
+        "slug": "kommo-o",
+        "form": "Kommo-o"
+      }
+    ]
+  },
+  {
+    "slug": "cheekpouch",
+    "nameEn": "Cheek Pouch",
+    "nameKo": "볼주머니",
+    "description": "Restores HP as well when the Pokémon eats a Berry.",
+    "descriptionKo": "",
+    "gameText": "Restores HP as well when the Pokémon eats a Berry.",
+    "gameTextKo": "어떤 나무열매라도 먹으면 HP도 회복한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "dedenne",
+        "form": "Dedenne"
+      },
+      {
+        "slug": "diggersby",
+        "form": "Diggersby"
+      },
+      {
+        "slug": "maushold",
+        "form": "Maushold"
+      }
+    ]
+  },
+  {
+    "slug": "chlorophyll",
+    "nameEn": "Chlorophyll",
+    "nameKo": "엽록소",
+    "description": "When sunny, the Pokémon’s Speed doubles.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Pokémon's Speed stat in sunshine.",
+    "gameTextKo": "날씨가 맑을 때 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "leafeon",
+        "form": "Leafeon"
+      },
+      {
+        "slug": "scovillain",
+        "form": "Scovillain"
+      },
+      {
+        "slug": "venusaur",
+        "form": "Venusaur"
+      },
+      {
+        "slug": "victreebel",
+        "form": "Victreebel"
+      },
+      {
+        "slug": "whimsicott",
+        "form": "Whimsicott"
+      }
+    ]
+  },
+  {
+    "slug": "clearbody",
+    "nameEn": "Clear Body",
+    "nameKo": "클리어바디",
+    "description": "Opponents’ moves which lower this Pokémon’s stats have no effect. However this Pokémon may lower its own stats with its own moves.",
+    "descriptionKo": "",
+    "gameText": "Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.",
+    "gameTextKo": "상대 기술이나 특성으로 능력을 떨어뜨릴 수 없다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "dragapult",
+        "form": "Dragapult"
+      },
+      {
+        "slug": "garganacl",
+        "form": "Garganacl"
+      }
+    ]
+  },
+  {
+    "slug": "cloudnine",
+    "nameEn": "Cloud Nine",
+    "nameKo": "날씨부정",
+    "description": "All weather effects are negated while the Pokémon is on the field.",
+    "descriptionKo": "",
+    "gameText": "Eliminates the effects of weather.",
+    "gameTextKo": "모든 날씨의 영향이 없어진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "altaria",
+        "form": "Altaria"
+      },
+      {
+        "slug": "drampa",
+        "form": "Drampa"
+      }
+    ]
+  },
+  {
+    "slug": "competitive",
+    "nameEn": "Competitive",
+    "nameKo": "승기",
+    "description": "Raises Sp. Atk stat by two stages whenever a stat is lowered",
+    "descriptionKo": "",
+    "gameText": "Boosts the Sp. Atk stat sharply when a stat is lowered.",
+    "gameTextKo": "능력이 떨어지면 특수공격이 크게 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "empoleon",
+        "form": "Empoleon"
+      },
+      {
+        "slug": "meowstic",
+        "form": "Meowstic"
+      },
+      {
+        "slug": "milotic",
+        "form": "Milotic"
+      }
+    ]
+  },
+  {
+    "slug": "compoundeyes",
+    "nameEn": "Compoundeyes",
+    "nameKo": "복안",
+    "description": "Raises the Pokémon’s accuracy by 30%.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's compound eyes boost its accuracy.",
+    "gameTextKo": "복안을 가지고 있어 기술의 명중률이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "vivillon",
+        "form": "Vivillon"
+      }
+    ]
+  },
+  {
+    "slug": "contrary",
+    "nameEn": "Contrary",
+    "nameKo": "심술꾸러기",
+    "description": "Moves used on the Pokémon that raise stats lower the stats, while the moves that lower the stats raise the stat",
+    "descriptionKo": "",
+    "gameText": "Makes stat changes have an opposite effect.",
+    "gameTextKo": "능력의 변화가 역전해서 올라갈 때 떨어지고 떨어질 때 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "serperior",
+        "form": "Serperior"
+      }
+    ]
+  },
+  {
+    "slug": "corrosion",
+    "nameEn": "Corrosion",
+    "nameKo": "부식",
+    "description": "The Pokémon can poison the target even if it's a Steel or Poison type.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon can poison the target even if it's a Steel or Poison type.",
+    "gameTextKo": "강철타입이나 독타입도 독 상태로 만들 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "glimmora",
+        "form": "Glimmora"
+      },
+      {
+        "slug": "salazzle",
+        "form": "Salazzle"
+      }
+    ]
+  },
+  {
+    "slug": "cudchew",
+    "nameEn": "Cud Chew",
+    "nameKo": "",
+    "description": "When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.",
+    "descriptionKo": "",
+    "gameText": "When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "farigiraf",
+        "form": "Farigiraf"
+      },
+      {
+        "slug": "tauros",
+        "form": "Paldean Tauros"
+      },
+      {
+        "slug": "tauros",
+        "form": "Tauros"
+      }
+    ]
+  },
+  {
+    "slug": "curiousmedicine",
+    "nameEn": "Curious Medicine",
+    "nameKo": "기묘한약",
+    "description": "When the Pokémon is brought into battle, any stat alterations of allies are removed",
+    "descriptionKo": "",
+    "gameText": "When the Pokémon is brought into battle, any stat alterations of allies are removed",
+    "gameTextKo": "등장했을 때 조개껍질에서 약을 흩뿌려서 능력 변화를 원래대로 되돌린다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "slowking",
+        "form": "Galarian Slowking"
+      },
+      {
+        "slug": "slowking",
+        "form": "Slowking"
+      }
+    ]
+  },
+  {
+    "slug": "cursedbody",
+    "nameEn": "Cursed Body",
+    "nameKo": "저주받은바디",
+    "description": "When a move hits the Pokémon, that move has a 30% chance of getting disabled",
+    "descriptionKo": "",
+    "gameText": "May disable a move used on the Pokémon.",
+    "gameTextKo": "공격을 받으면 상대의 기술을 사슬묶기 상태로 만들 때가 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "banette",
+        "form": "Banette"
+      },
+      {
+        "slug": "dragapult",
+        "form": "Dragapult"
+      },
+      {
+        "slug": "froslass",
+        "form": "Froslass"
+      },
+      {
+        "slug": "gengar",
+        "form": "Gengar"
+      },
+      {
+        "slug": "polteageist",
+        "form": "Polteageist"
+      }
+    ]
+  },
+  {
+    "slug": "cutecharm",
+    "nameEn": "Cute Charm",
+    "nameKo": "헤롱헤롱바디",
+    "description": "The opponent has a 30% chance of being induced with Attract when using an attack, that requires physical contact, against this Pokémon.",
+    "descriptionKo": "",
+    "gameText": "Contact with the Pokémon may cause infatuation.",
+    "gameTextKo": "자신과 접촉한 상대를 헤롱헤롱 상태로 만들 때가 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "clefable",
+        "form": "Clefable"
+      },
+      {
+        "slug": "lopunny",
+        "form": "Lopunny"
+      },
+      {
+        "slug": "milotic",
+        "form": "Milotic"
+      },
+      {
+        "slug": "sylveon",
+        "form": "Sylveon"
+      }
+    ]
+  },
+  {
+    "slug": "damp",
+    "nameEn": "Damp",
+    "nameKo": "습기",
+    "description": "Explosion, Selfdestruct, Mind Blown & Misty Explosion will not work while the Pokémon is on the field.",
+    "descriptionKo": "",
+    "gameText": "Prevents the use of explosive moves such as Self-Destruct by dampening its surroundings.",
+    "gameTextKo": "주변을 습하게 함으로써 자폭 등 폭발하는 기술을 아무도 못 쓰게 한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "bellibolt",
+        "form": "Bellibolt"
+      },
+      {
+        "slug": "politoed",
+        "form": "Politoed"
+      }
+    ]
+  },
+  {
+    "slug": "defiant",
+    "nameEn": "Defiant",
+    "nameKo": "오기",
+    "description": "Attack is raised by two stages when the Pokémon has its stats lowered. Doesn't work on self inflicted stat drops or drops from allies",
+    "descriptionKo": "",
+    "gameText": "Boosts the Pokémon's Attack stat sharply when its stats are lowered.",
+    "gameTextKo": "능력이 떨어지면 공격이 크게 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "kingambit",
+        "form": "Kingambit"
+      },
+      {
+        "slug": "passimian",
+        "form": "Passimian"
+      }
+    ]
+  },
+  {
+    "slug": "disguise",
+    "nameEn": "Disguise",
+    "nameKo": "탈",
+    "description": "Once per battle, the Pokémon can withstand one damaging attack without receiving any damage. Damage inflicted through entry hazards, weather or status conditions will not break the disguise. Damage from Confusion will break the Disguise. It causes 1/8th of max Hit Point damage when it breaks",
+    "descriptionKo": "",
+    "gameText": "Once per battle, the shroud that covers the Pokémon can protect it from an attack.",
+    "gameTextKo": "몸을 덮는 탈로 1번 공격을 막을 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "mimikyu",
+        "form": "Mimikyu"
+      }
+    ]
+  },
+  {
+    "slug": "dragonize",
+    "nameEn": "Dragonize",
+    "nameKo": "",
+    "description": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.",
+    "gameTextKo": "",
+    "isNewInChampions": true,
+    "pokemon": [
+      {
+        "slug": "feraligatr",
+        "form": "Mega Feraligatr"
+      }
+    ]
+  },
+  {
+    "slug": "drizzle",
+    "nameEn": "Drizzle",
+    "nameKo": "잔비",
+    "description": "Weather changes to Heavy Rain when the Pokémon enters the battle. As of X & Y, this lasts 5 turns.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon makes it rain when it enters a battle.",
+    "gameTextKo": "등장했을 때 날씨를 비로 만든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "pelipper",
+        "form": "Pelipper"
+      },
+      {
+        "slug": "politoed",
+        "form": "Politoed"
+      }
+    ]
+  },
+  {
+    "slug": "drought",
+    "nameEn": "Drought",
+    "nameKo": "가뭄",
+    "description": "Weather changes to Intense Sunshine when the Pokémon enters the battle. As of X & Y, this lasts 5 turns.",
+    "descriptionKo": "",
+    "gameText": "Turns the sunlight harsh when the Pokémon enters a battle.",
+    "gameTextKo": "등장했을 때 날씨를 맑음으로 만든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "charizard",
+        "form": "Mega Charizard Y"
+      },
+      {
+        "slug": "ninetales",
+        "form": "Alolan Ninetales"
+      },
+      {
+        "slug": "ninetales",
+        "form": "Ninetales"
+      },
+      {
+        "slug": "torkoal",
+        "form": "Torkoal"
+      }
+    ]
+  },
+  {
+    "slug": "dryskin",
+    "nameEn": "Dry Skin",
+    "nameKo": "건조피부",
+    "description": "HP is restored when hit by Water-type moves or when it is raining but also makes the Pokémon weak to Fire-type moves and reduces HP during strong sunlight.",
+    "descriptionKo": "",
+    "gameText": "Restores HP in rain or when hit by Water-type moves. Reduces HP in sunshine, and increases the damage received from Fire-type moves.",
+    "gameTextKo": "비가 오는 날씨나 물타입의 기술로 HP가 회복되고 맑을 때나 불꽃타입의 기술로는 줄어든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "heliolisk",
+        "form": "Heliolisk"
+      },
+      {
+        "slug": "toxicroak",
+        "form": "Toxicroak"
+      }
+    ]
+  },
+  {
+    "slug": "earlybird",
+    "nameEn": "Early Bird",
+    "nameKo": "일찍기상",
+    "description": "Sleep conditions lasts for half as long, rounding down. For example, half of three turns is 1.5, which rounds down to one turn. When the number of turns to sleep is one, half of this rounded down is zero, and the Pokémon wakes up instantly.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon awakens twice as fast as other Pokémon from sleep.",
+    "gameTextKo": "잠듦 상태가 되어도 2배 스피드로 깨어날 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "houndoom",
+        "form": "Houndoom"
+      },
+      {
+        "slug": "kangaskhan",
+        "form": "Kangaskhan"
+      }
+    ]
+  },
+  {
+    "slug": "eartheater",
+    "nameEn": "Earth Eater",
+    "nameKo": "",
+    "description": "The user recovers 25% of its maximum Hit Points when a Ground-type move is used against it",
+    "descriptionKo": "",
+    "gameText": "If hit by a Ground-type move, the Pokémon has its HP restored instead of taking damage.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "orthworm",
+        "form": "Orthworm"
+      }
+    ]
+  },
+  {
+    "slug": "electromorphosis",
+    "nameEn": "Electromorphosis",
+    "nameKo": "",
+    "description": "The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "bellibolt",
+        "form": "Bellibolt"
+      }
+    ]
+  },
+  {
+    "slug": "fairyaura",
+    "nameEn": "Fairy Aura",
+    "nameKo": "페어리오라",
+    "description": "Powers up every Pokémon in play's Fairy-type moves by 33%",
+    "descriptionKo": "",
+    "gameText": "Powers up each Pokémon's Fairy-type moves.",
+    "gameTextKo": "전원의 페어리타입 기술이 강해진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "floette",
+        "form": "Mega Floette"
+      }
+    ]
+  },
+  {
+    "slug": "filter",
+    "nameEn": "Filter",
+    "nameKo": "필터",
+    "description": "Damage by super-effective moves is reduced by 25%.",
+    "descriptionKo": "",
+    "gameText": "Reduces the power of supereffective attacks taken.",
+    "gameTextKo": "효과가 굉장한 공격의 위력을 약하게 만든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aggron",
+        "form": "Mega Aggron"
+      }
+    ]
+  },
+  {
+    "slug": "flamebody",
+    "nameEn": "Flame Body",
+    "nameKo": "불꽃몸",
+    "description": "The opponent has a 30% chance of being induced with Burn when using an attack, that requires physical contact, against this Pokémon.",
+    "descriptionKo": "",
+    "gameText": "Contact with the Pokémon may burn the attacker.",
+    "gameTextKo": "자신과 접촉한 상대를 화상 상태로 만들 때가 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "chandelure",
+        "form": "Chandelure"
+      },
+      {
+        "slug": "talonflame",
+        "form": "Talonflame"
+      },
+      {
+        "slug": "volcarona",
+        "form": "Volcarona"
+      }
+    ]
+  },
+  {
+    "slug": "flashfire",
+    "nameEn": "Flash Fire",
+    "nameKo": "타오르는불꽃",
+    "description": "Activates when user is hit by a damaging Fire-type move (including Fire-type Hidden Power). Once activated, user’s Fire-type moves deal 1.5 times damage. While this ability is in effect, this Pokémon is immune to damage from Fire-type attacks and Fire-type Hidden Power (accuracy and effect from these moves are ignored). For Fire-type Pokémon with this ability, Will-O-Wisp activates this ability without having an effect.",
+    "descriptionKo": "",
+    "gameText": "Powers up the Pokémon's Fire-type moves if it's hit by one.",
+    "gameTextKo": "불꽃타입의 기술을 받으면 불꽃을 받아서 자신이 사용하는 불꽃타입의 기술이 강해진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "arcanine",
+        "form": "Arcanine"
+      },
+      {
+        "slug": "arcanine",
+        "form": "Hisuian Arcanine"
+      },
+      {
+        "slug": "armarouge",
+        "form": "Armarouge"
+      },
+      {
+        "slug": "ceruledge",
+        "form": "Ceruledge"
+      },
+      {
+        "slug": "chandelure",
+        "form": "Chandelure"
+      },
+      {
+        "slug": "flareon",
+        "form": "Flareon"
+      },
+      {
+        "slug": "houndoom",
+        "form": "Houndoom"
+      },
+      {
+        "slug": "ninetales",
+        "form": "Alolan Ninetales"
+      },
+      {
+        "slug": "ninetales",
+        "form": "Ninetales"
+      },
+      {
+        "slug": "typhlosion",
+        "form": "Hisuian Typhlosion"
+      },
+      {
+        "slug": "typhlosion",
+        "form": "Typhlosion"
+      }
+    ]
+  },
+  {
+    "slug": "flowerveil",
+    "nameEn": "Flower Veil",
+    "nameKo": "플라워베일",
+    "description": "Ally Grass-type Pokémon are protected from status conditions and the lowering of their stats.",
+    "descriptionKo": "",
+    "gameText": "Ally Grass-type Pokémon are protected from status conditions and the lowering of their stats.",
+    "gameTextKo": "같은 편의 풀타입 포켓몬은 능력이 떨어지지 않고 상태 이상도 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "floette",
+        "form": "Floette"
+      },
+      {
+        "slug": "florges",
+        "form": "Florges"
+      }
+    ]
+  },
+  {
+    "slug": "forecast",
+    "nameEn": "Forecast",
+    "nameKo": "기분파",
+    "description": "This Pokémon’ changes its form and type if Harsh Sunlight, Heavy Rain or Snow is in effect.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon transforms with the weather to change its type to Water, Fire, or Ice.",
+    "gameTextKo": "날씨의 영향을 받아 물타입, 불꽃타입, 얼음타입 중 하나로 변화한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "castform",
+        "form": "Castform"
+      }
+    ]
+  },
+  {
+    "slug": "friendguard",
+    "nameEn": "Friend Guard",
+    "nameKo": "프렌드가드",
+    "description": "In Double battles, the damage that ally Pokémon receive from attacks is reduced by 25%.",
+    "descriptionKo": "",
+    "gameText": "Reduces damage done to allies.",
+    "gameTextKo": "같은 편의 데미지를 줄일 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "maushold",
+        "form": "Maushold"
+      },
+      {
+        "slug": "vivillon",
+        "form": "Vivillon"
+      }
+    ]
+  },
+  {
+    "slug": "frisk",
+    "nameEn": "Frisk",
+    "nameKo": "통찰",
+    "description": "Reveals the foe’s held item.",
+    "descriptionKo": "",
+    "gameText": "When it enters a battle, the Pokémon can check an opposing Pokémon's held item.",
+    "gameTextKo": "등장했을 때 상대의 지닌 물건을 통찰할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "banette",
+        "form": "Banette"
+      },
+      {
+        "slug": "espathra",
+        "form": "Espathra"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Gourgeist"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Jumbo Variety"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Large Variety"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Small Variety"
+      },
+      {
+        "slug": "noivern",
+        "form": "Noivern"
+      },
+      {
+        "slug": "trevenant",
+        "form": "Trevenant"
+      },
+      {
+        "slug": "typhlosion",
+        "form": "Hisuian Typhlosion"
+      },
+      {
+        "slug": "typhlosion",
+        "form": "Typhlosion"
+      },
+      {
+        "slug": "wyrdeer",
+        "form": "Wyrdeer"
+      }
+    ]
+  },
+  {
+    "slug": "furcoat",
+    "nameEn": "Fur Coat",
+    "nameKo": "퍼코트",
+    "description": "Halves the damage from physical moves onto this Pokémon.",
+    "descriptionKo": "",
+    "gameText": "Halves the damage from physical moves onto this Pokémon.",
+    "gameTextKo": "상대로부터 받는 물리 기술의 데미지가 절반이 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "furfrou",
+        "form": "Furfrou"
+      }
+    ]
+  },
+  {
+    "slug": "galewings",
+    "nameEn": "Gale Wings",
+    "nameKo": "질풍날개",
+    "description": "All Flying-type moves have their Speed Priority increased by 1 if the Pokémon's Hit Points are at maximum",
+    "descriptionKo": "",
+    "gameText": "Gives priority to Flying-type moves when the Pokémon's HP is full.",
+    "gameTextKo": "HP가 꽉 찼을 때 비행타입의 기술을 먼저 쓸 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "talonflame",
+        "form": "Talonflame"
+      }
+    ]
+  },
+  {
+    "slug": "gluttony",
+    "nameEn": "Gluttony",
+    "nameKo": "먹보",
+    "description": "The Pokémon will use a berry when its Hit Points are below 50%.",
+    "descriptionKo": "",
+    "gameText": "Makes the Pokémon eat a held Berry when its HP drops to half or less, which is sooner than usual.",
+    "gameTextKo": "HP가 줄어들면 먹을 나무열매를 HP가 절반일 때 먹어버린다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "appletun",
+        "form": "Appletun"
+      },
+      {
+        "slug": "flapple",
+        "form": "Flapple"
+      },
+      {
+        "slug": "simipour",
+        "form": "Simipour"
+      },
+      {
+        "slug": "simisage",
+        "form": "Simisage"
+      },
+      {
+        "slug": "simisear",
+        "form": "Simisear"
+      },
+      {
+        "slug": "snorlax",
+        "form": "Snorlax"
+      },
+      {
+        "slug": "victreebel",
+        "form": "Victreebel"
+      }
+    ]
+  },
+  {
+    "slug": "gooey",
+    "nameEn": "Gooey",
+    "nameKo": "미끈미끈",
+    "description": "Lowers the opponent's Speed by one stage when it makes physical contact.",
+    "descriptionKo": "",
+    "gameText": "Contact with the Pokémon lowers the attacker's Speed stat.",
+    "gameTextKo": "공격으로 자신과 접촉한 상대의 스피드를 떨어뜨린다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "goodra",
+        "form": "Goodra"
+      },
+      {
+        "slug": "goodra",
+        "form": "Hisuian Goodra"
+      }
+    ]
+  },
+  {
+    "slug": "guts",
+    "nameEn": "Guts",
+    "nameKo": "근성",
+    "description": "Attack is increased by 50% when induced with a status (BURN, PARALYZE, SLEEP, POISON, FREEZE). Burn’s effect of lowering Attack is not applied.",
+    "descriptionKo": "",
+    "gameText": "It's so gutsy that having a status condition boosts the Pokémon's Attack stat.",
+    "gameTextKo": "상태 이상이 되면 근성을 보여서 공격이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "conkeldurr",
+        "form": "Conkeldurr"
+      },
+      {
+        "slug": "flareon",
+        "form": "Flareon"
+      },
+      {
+        "slug": "heracross",
+        "form": "Heracross"
+      },
+      {
+        "slug": "luxray",
+        "form": "Luxray"
+      },
+      {
+        "slug": "machamp",
+        "form": "Machamp"
+      }
+    ]
+  },
+  {
+    "slug": "harvest",
+    "nameEn": "Harvest",
+    "nameKo": "수확",
+    "description": "The Pokémon has a 50% chance of restoring a consumed berry. During sunshine, this chance increases to 100%",
+    "descriptionKo": "",
+    "gameText": "May create another Berry after one is used.",
+    "gameTextKo": "사용한 나무열매를 몇 번이고 만들어 낸다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "trevenant",
+        "form": "Trevenant"
+      }
+    ]
+  },
+  {
+    "slug": "healer",
+    "nameEn": "Healer",
+    "nameKo": "치유의마음",
+    "description": "At the end of the turn, there is a 30% chance of either Ally being healed from a status condition",
+    "descriptionKo": "",
+    "gameText": "Sometimes heals an ally's status condition.",
+    "gameTextKo": "같은 편의 상태 이상을 가끔 회복시킨다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aromatisse",
+        "form": "Aromatisse"
+      },
+      {
+        "slug": "audino",
+        "form": "Audino"
+      },
+      {
+        "slug": "audino",
+        "form": "Mega Audino"
+      },
+      {
+        "slug": "hatterene",
+        "form": "Hatterene"
+      }
+    ]
+  },
+  {
+    "slug": "heatproof",
+    "nameEn": "Heatproof",
+    "nameKo": "내열",
+    "description": "Damage from Fire-type moves and the Burn status is halved.",
+    "descriptionKo": "",
+    "gameText": "The heatproof body of the Pokémon halves the damage from Fire-type moves that hit it.",
+    "gameTextKo": "내열인 몸으로 인해 불꽃타입 공격의 데미지를 반감한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "sinistcha",
+        "form": "Sinistcha"
+      }
+    ]
+  },
+  {
+    "slug": "heavymetal",
+    "nameEn": "Heavy Metal",
+    "nameKo": "헤비메탈",
+    "description": "Doubles the Pokémon's weight.",
+    "descriptionKo": "",
+    "gameText": "Doubles the Pokémon's weight.",
+    "gameTextKo": "자신의 무게가 2배가 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aggron",
+        "form": "Aggron"
+      }
+    ]
+  },
+  {
+    "slug": "hospitality",
+    "nameEn": "Hospitality",
+    "nameKo": "대접",
+    "description": "Heals up to 25% of its partner Pokémon's Maximum Hit Points when it enters battle",
+    "descriptionKo": "",
+    "gameText": "When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "sinistcha",
+        "form": "Sinistcha"
+      }
+    ]
+  },
+  {
+    "slug": "hugepower",
+    "nameEn": "Huge Power",
+    "nameKo": "천하장사",
+    "description": "The Pokémon's Attack stat is doubled while it has this ability.",
+    "descriptionKo": "",
+    "gameText": "Doubles the Pokémon's Attack stat.",
+    "gameTextKo": "물리공격의 위력이 2배가 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "azumarill",
+        "form": "Azumarill"
+      },
+      {
+        "slug": "diggersby",
+        "form": "Diggersby"
+      },
+      {
+        "slug": "starmie",
+        "form": "Mega Starmie"
+      }
+    ]
+  },
+  {
+    "slug": "hungerswitch",
+    "nameEn": "Hunger Switch",
+    "nameKo": "꼬르륵스위치",
+    "description": "The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.",
+    "gameTextKo": "턴이 끝날 때마다 배부른 모양, 배고픈 모양, 배부른 모양...으로 번갈아서 모습을 바꾼다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "morpeko",
+        "form": "Morpeko"
+      }
+    ]
+  },
+  {
+    "slug": "hustle",
+    "nameEn": "Hustle",
+    "nameKo": "의욕",
+    "description": "Damage from physical attacks is increased by 50%, but average accuracy is only 80%.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Attack stat, but lowers accuracy.",
+    "gameTextKo": "자신의 공격이 높아지지만 명중률이 떨어진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "flapple",
+        "form": "Flapple"
+      }
+    ]
+  },
+  {
+    "slug": "hydration",
+    "nameEn": "Hydration",
+    "nameKo": "촉촉바디",
+    "description": "All status problems: Burn, Paralysis, Sleep, Frozen and Poison, are healed when raining.",
+    "descriptionKo": "",
+    "gameText": "Heals status conditions if it's raining.",
+    "gameTextKo": "비가 오는 날씨일 때 상태 이상이 회복된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "goodra",
+        "form": "Goodra"
+      },
+      {
+        "slug": "goodra",
+        "form": "Hisuian Goodra"
+      },
+      {
+        "slug": "vaporeon",
+        "form": "Vaporeon"
+      }
+    ]
+  },
+  {
+    "slug": "hypercutter",
+    "nameEn": "Hyper Cutter",
+    "nameKo": "괴력집게",
+    "description": "Opponent cannot lower this Pokémon’s Attack value. This Pokémon may still lower its own Attack value using a move of by itself.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's proud of its powerful pincers. They prevent other Pokémon from lowering its Attack stat.",
+    "gameTextKo": "힘이 자랑인 집게를 가지고 있어 상대가 공격을 떨어뜨리지 못한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "crabominable",
+        "form": "Crabominable"
+      },
+      {
+        "slug": "gliscor",
+        "form": "Gliscor"
+      },
+      {
+        "slug": "pinsir",
+        "form": "Pinsir"
+      }
+    ]
+  },
+  {
+    "slug": "icebody",
+    "nameEn": "Ice Body",
+    "nameKo": "아이스바디",
+    "description": "HP is restored by 1/16th of maximum HP when its Snowing.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon gradually regains HP in a Snowstorm.",
+    "gameTextKo": "날씨가 싸라기눈일 때 HP를 조금씩 회복한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "avalugg",
+        "form": "Avalugg"
+      },
+      {
+        "slug": "avalugg",
+        "form": "Hisuian Avalugg"
+      },
+      {
+        "slug": "glaceon",
+        "form": "Glaceon"
+      },
+      {
+        "slug": "glalie",
+        "form": "Glalie"
+      },
+      {
+        "slug": "mr.rime",
+        "form": "Mr. Rime"
+      },
+      {
+        "slug": "vanilluxe",
+        "form": "Vanilluxe"
+      }
+    ]
+  },
+  {
+    "slug": "illuminate",
+    "nameEn": "Illuminate",
+    "nameKo": "발광",
+    "description": "By Iluminating its surroundings, the Pokémon prevents its accuracy from being lowered",
+    "descriptionKo": "",
+    "gameText": "Raises the likelihood of meeting wild Pokémon by illuminating the surroundings.",
+    "gameTextKo": "주변을 밝게 하는 것으로 야생 포켓몬과 만나기 쉬워진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "starmie",
+        "form": "Starmie"
+      },
+      {
+        "slug": "watchog",
+        "form": "Watchog"
+      }
+    ]
+  },
+  {
+    "slug": "illusion",
+    "nameEn": "Illusion",
+    "nameKo": "일루전",
+    "description": "When sent out into battle, it takes the name and appearance of the last non-fainted Pokémon within your party. It breaks when an attack does damage on the Pokémon but not from Weather Effects or Entry Hazards.",
+    "descriptionKo": "",
+    "gameText": "Comes out disguised as the Pokémon in the party's last spot.",
+    "gameTextKo": "지닌 포켓몬 중 제일 뒤에 있는 포켓몬으로 둔갑하여 나와서 상대를 속인다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "zoroark",
+        "form": "Hisuian Zoroark"
+      },
+      {
+        "slug": "zoroark",
+        "form": "Zoroark"
+      }
+    ]
+  },
+  {
+    "slug": "immunity",
+    "nameEn": "Immunity",
+    "nameKo": "면역",
+    "description": "The Pokémon cannot be Poisoned while having this ability.",
+    "descriptionKo": "",
+    "gameText": "The immune system of the Pokémon prevents it from getting poisoned.",
+    "gameTextKo": "체내에 면역을 가지고 있어 독 상태가 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "snorlax",
+        "form": "Snorlax"
+      }
+    ]
+  },
+  {
+    "slug": "imposter",
+    "nameEn": "Imposter",
+    "nameKo": "괴짜",
+    "description": "When sent into battle, the Pokémon automatically transforms into a random opponent that is on the field.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon transforms itself into the Pokémon it's facing.",
+    "gameTextKo": "눈앞의 포켓몬으로 변신해버린다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "ditto",
+        "form": "Ditto"
+      }
+    ]
+  },
+  {
+    "slug": "infiltrator",
+    "nameEn": "Infiltrator",
+    "nameKo": "틈새포착",
+    "description": "The protections and stat boosts caused by the moves Substitute, Reflect, Light Screen and Safeguard by the opponent are ignored.",
+    "descriptionKo": "",
+    "gameText": "Passes through the opposing Pokémon's barrier, substitute, and the like and strikes.",
+    "gameTextKo": "상대의 벽이나 대타출동을 뚫고 공격할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "chandelure",
+        "form": "Chandelure"
+      },
+      {
+        "slug": "chandelure",
+        "form": "Mega Chandelure"
+      },
+      {
+        "slug": "dragapult",
+        "form": "Dragapult"
+      },
+      {
+        "slug": "meowstic",
+        "form": "Meowstic"
+      },
+      {
+        "slug": "noivern",
+        "form": "Noivern"
+      },
+      {
+        "slug": "spiritomb",
+        "form": "Spiritomb"
+      },
+      {
+        "slug": "whimsicott",
+        "form": "Whimsicott"
+      }
+    ]
+  },
+  {
+    "slug": "innardsout",
+    "nameEn": "Innards Out",
+    "nameKo": "내용물분출",
+    "description": "Damages the attacker landing the finishing hit by the amount equal to its last HP.",
+    "descriptionKo": "",
+    "gameText": "Damages the attacker landing the finishing hit by the amount equal to its last HP.",
+    "gameTextKo": "상대가 쓰러뜨렸을 때 HP의 남은 양만큼 상대에게 데미지를 준다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "victreebel",
+        "form": "Mega Victreebel"
+      }
+    ]
+  },
+  {
+    "slug": "innerfocus",
+    "nameEn": "Inner Focus",
+    "nameKo": "정신력",
+    "description": "This Pokémon will not flinch. Does not prevent flinching with Focus Punch. Also prevents stats from being lowered by the ability Intimidate",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's intensely focused, and that protects the Pokémon from flinching.",
+    "gameTextKo": "단련한 정신으로 인하여 상대의 공격에 풀죽지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "alakazam",
+        "form": "Alakazam"
+      },
+      {
+        "slug": "dragonite",
+        "form": "Dragonite"
+      },
+      {
+        "slug": "gallade",
+        "form": "Mega Gallade"
+      },
+      {
+        "slug": "glalie",
+        "form": "Glalie"
+      },
+      {
+        "slug": "kangaskhan",
+        "form": "Kangaskhan"
+      },
+      {
+        "slug": "lucario",
+        "form": "Lucario"
+      },
+      {
+        "slug": "mudsdale",
+        "form": "Mudsdale"
+      },
+      {
+        "slug": "oranguru",
+        "form": "Oranguru"
+      },
+      {
+        "slug": "umbreon",
+        "form": "Umbreon"
+      }
+    ]
+  },
+  {
+    "slug": "insomnia",
+    "nameEn": "Insomnia",
+    "nameKo": "불면",
+    "description": "The Pokémon cannot be put to Sleep while having this ability.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is suffering from insomnia and cannot fall asleep.",
+    "gameTextKo": "잠들지 못하는 체질이라 잠듦 상태가 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "ariados",
+        "form": "Ariados"
+      },
+      {
+        "slug": "banette",
+        "form": "Banette"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Gourgeist"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Jumbo Variety"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Large Variety"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Small Variety"
+      },
+      {
+        "slug": "scovillain",
+        "form": "Scovillain"
+      }
+    ]
+  },
+  {
+    "slug": "intimidate",
+    "nameEn": "Intimidate",
+    "nameKo": "위협",
+    "description": "Upon entering battle or receiving the ability, the opponent’s Attack lowers one stage. In a Double Battle, both opponents’ Attack are lowered. Pokémon with the Clear Body, Hyper Cutter, or White Smoke ability are unaffected. In a link battle, if both sides switch on the same turn, and first player sends out a Pokémon with Intimidate, the opponent’s Attack will be lowered before the opponent’s Pokémon switches.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon intimidates opposing Pokémon upon entering battle, lowering their Attack stat.",
+    "gameTextKo": "등장했을 때 위협해서 상대를 위축시켜 상대의 공격을 떨어뜨린다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "arbok",
+        "form": "Arbok"
+      },
+      {
+        "slug": "arcanine",
+        "form": "Arcanine"
+      },
+      {
+        "slug": "arcanine",
+        "form": "Hisuian Arcanine"
+      },
+      {
+        "slug": "gyarados",
+        "form": "Gyarados"
+      },
+      {
+        "slug": "incineroar",
+        "form": "Incineroar"
+      },
+      {
+        "slug": "krookodile",
+        "form": "Krookodile"
+      },
+      {
+        "slug": "luxray",
+        "form": "Luxray"
+      },
+      {
+        "slug": "manectric",
+        "form": "Mega Manectric"
+      },
+      {
+        "slug": "tauros",
+        "form": "Paldean Tauros"
+      },
+      {
+        "slug": "tauros",
+        "form": "Tauros"
+      },
+      {
+        "slug": "wyrdeer",
+        "form": "Wyrdeer"
+      }
+    ]
+  },
+  {
+    "slug": "ironfist",
+    "nameEn": "Iron Fist",
+    "nameKo": "철주먹",
+    "description": "The power of punching moves is increased by 20%. This stacks with Punching Glove .",
+    "descriptionKo": "",
+    "gameText": "Powers up punching moves.",
+    "gameTextKo": "펀치를 사용하는 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "conkeldurr",
+        "form": "Conkeldurr"
+      },
+      {
+        "slug": "crabominable",
+        "form": "Crabominable"
+      },
+      {
+        "slug": "crabominable",
+        "form": "Mega Crabominable"
+      },
+      {
+        "slug": "golurk",
+        "form": "Golurk"
+      },
+      {
+        "slug": "infernape",
+        "form": "Infernape"
+      },
+      {
+        "slug": "pangoro",
+        "form": "Pangoro"
+      }
+    ]
+  },
+  {
+    "slug": "justified",
+    "nameEn": "Justified",
+    "nameKo": "정의의마음",
+    "description": "Attack is raised by one stage when the Pokémon is hit by a Dark-type move",
+    "descriptionKo": "",
+    "gameText": "Being hit by a Dark-type move boosts the Attack stat of the Pokémon, for justice.",
+    "gameTextKo": "악타입 공격을 받으면 정의감으로 공격이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "absol",
+        "form": "Absol"
+      },
+      {
+        "slug": "arcanine",
+        "form": "Arcanine"
+      },
+      {
+        "slug": "arcanine",
+        "form": "Hisuian Arcanine"
+      },
+      {
+        "slug": "gallade",
+        "form": "Gallade"
+      },
+      {
+        "slug": "lucario",
+        "form": "Lucario"
+      }
+    ]
+  },
+  {
+    "slug": "keeneye",
+    "nameEn": "Keen Eye",
+    "nameKo": "날카로운눈",
+    "description": "Opponent cannot lower this Pokémon’s accuracy. The Pokémon ignores evasion boosts of the opponent",
+    "descriptionKo": "",
+    "gameText": "Keen eyes prevent other Pokémon from lowering this Pokémon's accuracy.",
+    "gameTextKo": "날카로운 눈 덕분에 명중률이 떨어지지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "lycanroc",
+        "form": "Dusk Form"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Lycanroc"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Midnight Form"
+      },
+      {
+        "slug": "meowstic",
+        "form": "Meowstic"
+      },
+      {
+        "slug": "pelipper",
+        "form": "Pelipper"
+      },
+      {
+        "slug": "pidgeot",
+        "form": "Pidgeot"
+      },
+      {
+        "slug": "sableye",
+        "form": "Sableye"
+      },
+      {
+        "slug": "skarmory",
+        "form": "Skarmory"
+      },
+      {
+        "slug": "toucannon",
+        "form": "Toucannon"
+      },
+      {
+        "slug": "watchog",
+        "form": "Watchog"
+      }
+    ]
+  },
+  {
+    "slug": "klutz",
+    "nameEn": "Klutz",
+    "nameKo": "서투름",
+    "description": "The Pokémon cannot receive any effect of hold items except those that affect experience, EVs, friendship etc. such as Amulet Coin, Soothe Bell, Lucky Egg, Exp.Share, Macho Brace or the Power Items.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon can't use any held items.",
+    "gameTextKo": "지니고 있는 도구를 쓸 수 없다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "audino",
+        "form": "Audino"
+      },
+      {
+        "slug": "golurk",
+        "form": "Golurk"
+      },
+      {
+        "slug": "lopunny",
+        "form": "Lopunny"
+      }
+    ]
+  },
+  {
+    "slug": "leafguard",
+    "nameEn": "Leaf Guard",
+    "nameKo": "리프가드",
+    "description": "Prevents the Pokémon from being afflicted by status conditions during strong sunlight.",
+    "descriptionKo": "",
+    "gameText": "Prevents status conditions in sunny weather.",
+    "gameTextKo": "날씨가 맑을 때는 상태 이상이 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "leafeon",
+        "form": "Leafeon"
+      },
+      {
+        "slug": "meganium",
+        "form": "Meganium"
+      },
+      {
+        "slug": "tsareena",
+        "form": "Tsareena"
+      }
+    ]
+  },
+  {
+    "slug": "levitate",
+    "nameEn": "Levitate",
+    "nameKo": "부유",
+    "description": "Damage dealing Ground-type moves have no effect on this Pokémon. Cannot be trapped by Arena Trap ability. Takes no damage from Spikes.",
+    "descriptionKo": "",
+    "gameText": "By floating in the air, the Pokémon receives full immunity to all Ground-type moves.",
+    "gameTextKo": "땅에서 뜨는 것으로 땅타입의 기술을 받지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "chimecho",
+        "form": "Chimecho"
+      },
+      {
+        "slug": "chimecho",
+        "form": "Mega Chimecho"
+      },
+      {
+        "slug": "delphox",
+        "form": "Mega Delphox"
+      },
+      {
+        "slug": "hydreigon",
+        "form": "Hydreigon"
+      },
+      {
+        "slug": "rotom",
+        "form": "Alternate Forms"
+      },
+      {
+        "slug": "rotom",
+        "form": "Rotom"
+      }
+    ]
+  },
+  {
+    "slug": "lightmetal",
+    "nameEn": "Light Metal",
+    "nameKo": "라이트메탈",
+    "description": "Halves the Pokémon's weight.",
+    "descriptionKo": "",
+    "gameText": "Halves the Pokémon's weight.",
+    "gameTextKo": "자신의 무게가 절반이 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "scizor",
+        "form": "Scizor"
+      }
+    ]
+  },
+  {
+    "slug": "lightningrod",
+    "nameEn": "Lightning Rod",
+    "nameKo": "피뢰침",
+    "description": "Electric-type moves are drawn to this Pokémon. Electric-type moves will do no damage and the Pokémon's SP ATK is raised one stage.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon draws in all Electric-type moves. Instead of being hit by Electric-type moves, it boosts its Sp. Atk.",
+    "gameTextKo": "전기타입의 기술을 자신에게 끌어모아 데미지를 받지 않고 특수공격을 올린다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "manectric",
+        "form": "Manectric"
+      },
+      {
+        "slug": "pikachu",
+        "form": "Pikachu"
+      },
+      {
+        "slug": "raichu",
+        "form": "Alolan Raichu"
+      },
+      {
+        "slug": "raichu",
+        "form": "Raichu"
+      },
+      {
+        "slug": "rhyperior",
+        "form": "Rhyperior"
+      }
+    ]
+  },
+  {
+    "slug": "limber",
+    "nameEn": "Limber",
+    "nameKo": "유연",
+    "description": "The Pokémon cannot be Paralysed while having this ability.",
+    "descriptionKo": "",
+    "gameText": "Its limber body protects the Pokémon from paralysis.",
+    "gameTextKo": "유연한 몸으로 인해 마비 상태가 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "ditto",
+        "form": "Ditto"
+      },
+      {
+        "slug": "hawlucha",
+        "form": "Hawlucha"
+      },
+      {
+        "slug": "liepard",
+        "form": "Liepard"
+      },
+      {
+        "slug": "lopunny",
+        "form": "Lopunny"
+      },
+      {
+        "slug": "stunfisk",
+        "form": "Galarian Stunfisk"
+      },
+      {
+        "slug": "stunfisk",
+        "form": "Stunfisk"
+      },
+      {
+        "slug": "toxapex",
+        "form": "Toxapex"
+      }
+    ]
+  },
+  {
+    "slug": "liquidvoice",
+    "nameEn": "Liquid Voice",
+    "nameKo": "촉촉보이스",
+    "description": "All sound-based moves become Water-type moves.",
+    "descriptionKo": "",
+    "gameText": "All sound-based moves become Water-type moves.",
+    "gameTextKo": "모든 소리 기술이 물타입이 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "primarina",
+        "form": "Primarina"
+      }
+    ]
+  },
+  {
+    "slug": "longreach",
+    "nameEn": "Long Reach",
+    "nameKo": "원격",
+    "description": "The Pokémon uses its moves without making contact with the target.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon uses its moves without making contact with the target.",
+    "gameTextKo": "모든 기술을 상대에게 접촉하지 않고 사용할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "decidueye",
+        "form": "Decidueye"
+      },
+      {
+        "slug": "decidueye",
+        "form": "Hisuian Decidueye"
+      }
+    ]
+  },
+  {
+    "slug": "magicbounce",
+    "nameEn": "Magic Bounce",
+    "nameKo": "매직미러",
+    "description": "Reflects non-attacking moves used on the Pokémon back to the attacking Pokémon",
+    "descriptionKo": "",
+    "gameText": "Reflects status moves, instead of getting hit by them.",
+    "gameTextKo": "상대가 쓴 변화 기술을 받지 않고 그대로 되받아칠 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "absol",
+        "form": "Mega Absol"
+      },
+      {
+        "slug": "clefable",
+        "form": "Mega Clefable"
+      },
+      {
+        "slug": "espeon",
+        "form": "Espeon"
+      },
+      {
+        "slug": "hatterene",
+        "form": "Hatterene"
+      },
+      {
+        "slug": "sableye",
+        "form": "Mega Sableye"
+      }
+    ]
+  },
+  {
+    "slug": "magicguard",
+    "nameEn": "Magic Guard",
+    "nameKo": "매직가드",
+    "description": "Prevents all no damage except from direct-attack moves, excluding damage self inflicted from Substitute, Belly Drum, Curse & Pain Split.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon only takes damage from attacks.",
+    "gameTextKo": "공격 이외에는 데미지를 입지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "alakazam",
+        "form": "Alakazam"
+      },
+      {
+        "slug": "clefable",
+        "form": "Clefable"
+      },
+      {
+        "slug": "reuniclus",
+        "form": "Reuniclus"
+      }
+    ]
+  },
+  {
+    "slug": "magician",
+    "nameEn": "Magician",
+    "nameKo": "매지션",
+    "description": "The Pokémon steals the held item of a Pokémon it hits with a move.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon steals the held item of a Pokémon it hits with a move.",
+    "gameTextKo": "기술을 맞은 상대의 도구를 빼앗아 버린다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "delphox",
+        "form": "Delphox"
+      },
+      {
+        "slug": "klefki",
+        "form": "Klefki"
+      }
+    ]
+  },
+  {
+    "slug": "magmaarmor",
+    "nameEn": "Magma Armor",
+    "nameKo": "마그마의무장",
+    "description": "This Pokémon cannot be Frozen while having this ability.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is covered with hot magma, which prevents the Pokémon from becoming frozen.",
+    "gameTextKo": "뜨거운 마그마를 몸에 둘러서 얼음 상태가 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "camerupt",
+        "form": "Camerupt"
+      }
+    ]
+  },
+  {
+    "slug": "marvelscale",
+    "nameEn": "Marvel Scale",
+    "nameKo": "이상한비늘",
+    "description": "Defense is increased by 50% when induced with a status (BURN, PARALYZE, SLEEP, POISON, FREEZE).",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's marvelous scales boost the Defense stat if it has a status condition.",
+    "gameTextKo": "상태 이상이 되면 이상한 비늘이 반응해서 방어가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "milotic",
+        "form": "Milotic"
+      }
+    ]
+  },
+  {
+    "slug": "megalauncher",
+    "nameEn": "Mega Launcher",
+    "nameKo": "메가런처",
+    "description": "Increases the power of Aura and Pulse moves by 50%",
+    "descriptionKo": "",
+    "gameText": "Powers up aura and pulse moves.",
+    "gameTextKo": "파동 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "blastoise",
+        "form": "Mega Blastoise"
+      },
+      {
+        "slug": "clawitzer",
+        "form": "Clawitzer"
+      }
+    ]
+  },
+  {
+    "slug": "megasol",
+    "nameEn": "Mega Sol",
+    "nameKo": "",
+    "description": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.",
+    "descriptionKo": "",
+    "gameText": "Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.",
+    "gameTextKo": "",
+    "isNewInChampions": true,
+    "pokemon": [
+      {
+        "slug": "meganium",
+        "form": "Mega Meganium"
+      }
+    ]
+  },
+  {
+    "slug": "merciless",
+    "nameEn": "Merciless",
+    "nameKo": "무도한행동",
+    "description": "The Pokémon's attacks become critical hits if the target is poisoned.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's attacks become critical hits if the target is poisoned.",
+    "gameTextKo": "독 상태의 상대를 공격하면 반드시 급소에 맞는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "toxapex",
+        "form": "Toxapex"
+      }
+    ]
+  },
+  {
+    "slug": "mimicry",
+    "nameEn": "Mimicry",
+    "nameKo": "의태",
+    "description": "Changes to Electric-type in Electric Terrain, Psychic-type in Psychic Terrain, Grass-type in Grassy Terrain and Fairy type in Fairy-terrain. The type reverts to normal when the terrain ends.",
+    "descriptionKo": "",
+    "gameText": "Changes the Pokémon's type depending on the terrain.",
+    "gameTextKo": "필드의 상태에 따라 포켓몬의 타입이 바뀐다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "stunfisk",
+        "form": "Galarian Stunfisk"
+      },
+      {
+        "slug": "stunfisk",
+        "form": "Stunfisk"
+      }
+    ]
+  },
+  {
+    "slug": "minus",
+    "nameEn": "Minus",
+    "nameKo": "마이너스",
+    "description": "When battling with Plus or Minus, Special Attack increases by 50%.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Sp. Atk stat of the Pokémon if an ally with the Plus or Minus Ability is also in battle.",
+    "gameTextKo": "플러스나 마이너스의 특성을 가진 포켓몬이 동료에 있으면 자신의 특수공격이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "manectric",
+        "form": "Manectric"
+      }
+    ]
+  },
+  {
+    "slug": "mirrorarmor",
+    "nameEn": "Mirror Armor",
+    "nameKo": "미러아머",
+    "description": "Bounces back only the stat-lowering effects that the Pokémon receives.",
+    "descriptionKo": "",
+    "gameText": "Bounces back only the stat-lowering effects that the Pokémon receives.",
+    "gameTextKo": "자신이 받는 능력 다운 효과에 한해 되받아친다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "corviknight",
+        "form": "Corviknight"
+      }
+    ]
+  },
+  {
+    "slug": "moldbreaker",
+    "nameEn": "Mold Breaker",
+    "nameKo": "틀깨기",
+    "description": "The Pokémon's moves are not affected by foe’s abilities during battle",
+    "descriptionKo": "",
+    "gameText": "Moves can be used on the target regardless of its Abilities.",
+    "gameTextKo": "상대 특성에 방해받지 않고 상대에게 기술을 쓸 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "ampharos",
+        "form": "Mega Ampharos"
+      },
+      {
+        "slug": "basculegion",
+        "form": "Basculegion"
+      },
+      {
+        "slug": "basculegion",
+        "form": "Female"
+      },
+      {
+        "slug": "emboar",
+        "form": "Mega Emboar"
+      },
+      {
+        "slug": "excadrill",
+        "form": "Excadrill"
+      },
+      {
+        "slug": "gyarados",
+        "form": "Mega Gyarados"
+      },
+      {
+        "slug": "hawlucha",
+        "form": "Hawlucha"
+      },
+      {
+        "slug": "pangoro",
+        "form": "Pangoro"
+      },
+      {
+        "slug": "pinsir",
+        "form": "Pinsir"
+      },
+      {
+        "slug": "rampardos",
+        "form": "Rampardos"
+      },
+      {
+        "slug": "tinkaton",
+        "form": "Tinkaton"
+      }
+    ]
+  },
+  {
+    "slug": "moody",
+    "nameEn": "Moody",
+    "nameKo": "변덕쟁이",
+    "description": "At the end of every turn, a random stat (except Accuracy and Evasion) is raised by two stages while another is lowered by one stage.",
+    "descriptionKo": "",
+    "gameText": "Raises one stat sharply and lowers another every turn.",
+    "gameTextKo": "매 턴 능력 중 하나가 크게 오르고 하나가 떨어진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "glalie",
+        "form": "Glalie"
+      },
+      {
+        "slug": "scovillain",
+        "form": "Scovillain"
+      }
+    ]
+  },
+  {
+    "slug": "motordrive",
+    "nameEn": "Motor Drive",
+    "nameKo": "전기엔진",
+    "description": "The Pokémon takes no damage from Electric-type attacks and Speed raises by one level.",
+    "descriptionKo": "",
+    "gameText": "Boosts its Speed stat if hit by an Electric-type move, instead of taking damage.",
+    "gameTextKo": "전기타입의 기술을 받으면 데미지를 받지 않고 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "emolga",
+        "form": "Emolga"
+      }
+    ]
+  },
+  {
+    "slug": "moxie",
+    "nameEn": "Moxie",
+    "nameKo": "자기과신",
+    "description": "Attack is raised by one stage when the Pokémon knocks out another Pokémon",
+    "descriptionKo": "",
+    "gameText": "The Pokémon shows moxie, and that boosts the Attack stat after knocking out any Pokémon.",
+    "gameTextKo": "상대를 쓰러뜨리면 자신감이 붙어서 공격이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "gyarados",
+        "form": "Gyarados"
+      },
+      {
+        "slug": "heracross",
+        "form": "Heracross"
+      },
+      {
+        "slug": "krookodile",
+        "form": "Krookodile"
+      },
+      {
+        "slug": "pinsir",
+        "form": "Pinsir"
+      },
+      {
+        "slug": "quaquaval",
+        "form": "Quaquaval"
+      }
+    ]
+  },
+  {
+    "slug": "multiscale",
+    "nameEn": "Multiscale",
+    "nameKo": "멀티스케일",
+    "description": "Reduces damage afflicted to the Pokémon by 50% if at maximum HP",
+    "descriptionKo": "",
+    "gameText": "Reduces the amount of damage the Pokémon takes when its HP is full.",
+    "gameTextKo": "HP가 꽉 찼을 때 받는 데미지가 줄어든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "dragonite",
+        "form": "Dragonite"
+      },
+      {
+        "slug": "dragonite",
+        "form": "Mega Dragonite"
+      }
+    ]
+  },
+  {
+    "slug": "mummy",
+    "nameEn": "Mummy",
+    "nameKo": "미라",
+    "description": "Contact with the Pokémon changes the attacker's Ability to Mummy.",
+    "descriptionKo": "",
+    "gameText": "Contact with the Pokémon changes the attacker's Ability to Mummy.",
+    "gameTextKo": "상대가 접촉하면 상대를 미라로 만들어버린다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "cofagrigus",
+        "form": "Cofagrigus"
+      }
+    ]
+  },
+  {
+    "slug": "naturalcure",
+    "nameEn": "Natural Cure",
+    "nameKo": "자연회복",
+    "description": "The Pokémon’s status (BURN, PARALYZE, SLEEP, POISON, FREEZE) is healed when withdrawn from battle.",
+    "descriptionKo": "",
+    "gameText": "All status conditions heal when the Pokémon switches out.",
+    "gameTextKo": "지닌 포켓몬으로 돌아오면 상태 이상이 회복된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "altaria",
+        "form": "Altaria"
+      },
+      {
+        "slug": "roserade",
+        "form": "Roserade"
+      },
+      {
+        "slug": "starmie",
+        "form": "Starmie"
+      },
+      {
+        "slug": "trevenant",
+        "form": "Trevenant"
+      }
+    ]
+  },
+  {
+    "slug": "noguard",
+    "nameEn": "No Guard",
+    "nameKo": "노가드",
+    "description": "The accuracy of all moves known by this Pokémon and all Pokémon targeting this Pokémon raises to 100%",
+    "descriptionKo": "",
+    "gameText": "The Pokémon employs no-guard tactics to ensure incoming and outgoing attacks always land.",
+    "gameTextKo": "노가드전법에 따라 서로가 사용하는 기술이 반드시 맞게 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "golurk",
+        "form": "Golurk"
+      },
+      {
+        "slug": "hawlucha",
+        "form": "Mega Hawlucha"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Dusk Form"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Lycanroc"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Midnight Form"
+      },
+      {
+        "slug": "machamp",
+        "form": "Machamp"
+      },
+      {
+        "slug": "pidgeot",
+        "form": "Mega Pidgeot"
+      }
+    ]
+  },
+  {
+    "slug": "oblivious",
+    "nameEn": "Oblivious",
+    "nameKo": "둔감",
+    "description": "The Pokémon cannot be under the Attract condition, Intimidated, or be taunted, while having this ability.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is oblivious, and that keeps it from being infatuated or falling for taunts.",
+    "gameTextKo": "둔감해서 헤롱헤롱이나 도발 상태가 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "mamoswine",
+        "form": "Mamoswine"
+      },
+      {
+        "slug": "salazzle",
+        "form": "Salazzle"
+      },
+      {
+        "slug": "slowbro",
+        "form": "Galarian Slowbro"
+      },
+      {
+        "slug": "slowbro",
+        "form": "Slowbro"
+      },
+      {
+        "slug": "slowking",
+        "form": "Galarian Slowking"
+      },
+      {
+        "slug": "slowking",
+        "form": "Slowking"
+      }
+    ]
+  },
+  {
+    "slug": "opportunist",
+    "nameEn": "Opportunist",
+    "nameKo": "",
+    "description": "If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.",
+    "descriptionKo": "",
+    "gameText": "If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "espathra",
+        "form": "Espathra"
+      }
+    ]
+  },
+  {
+    "slug": "overcoat",
+    "nameEn": "Overcoat",
+    "nameKo": "방진",
+    "description": "Protects Pokémon from Weather Effects and Powder moves such as Sleep Powder, Poison Powder etc.",
+    "descriptionKo": "",
+    "gameText": "Protects the Pokémon from things like sand, hail, and powder.",
+    "gameTextKo": "모래바람이나 싸라기눈 등의 데미지를 입지 않는다. 가루의 기술을 받지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "forretress",
+        "form": "Forretress"
+      },
+      {
+        "slug": "kommo-o",
+        "form": "Kommo-o"
+      },
+      {
+        "slug": "reuniclus",
+        "form": "Reuniclus"
+      }
+    ]
+  },
+  {
+    "slug": "overgrow",
+    "nameEn": "Overgrow",
+    "nameKo": "심록",
+    "description": "When HP is below 1/3rd its maximum, power of Grass-type moves is increased by 50%.",
+    "descriptionKo": "",
+    "gameText": "Powers up Grass-type moves when the Pokémon's HP is low.",
+    "gameTextKo": "HP가 줄었을 때 풀타입 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "chesnaught",
+        "form": "Chesnaught"
+      },
+      {
+        "slug": "decidueye",
+        "form": "Decidueye"
+      },
+      {
+        "slug": "decidueye",
+        "form": "Hisuian Decidueye"
+      },
+      {
+        "slug": "meganium",
+        "form": "Meganium"
+      },
+      {
+        "slug": "meowscarada",
+        "form": "Meowscarada"
+      },
+      {
+        "slug": "serperior",
+        "form": "Serperior"
+      },
+      {
+        "slug": "simisage",
+        "form": "Simisage"
+      },
+      {
+        "slug": "torterra",
+        "form": "Torterra"
+      },
+      {
+        "slug": "venusaur",
+        "form": "Venusaur"
+      }
+    ]
+  },
+  {
+    "slug": "owntempo",
+    "nameEn": "Own Tempo",
+    "nameKo": "마이페이스",
+    "description": "The Pokémon cannot be Confused while having this ability. Blocks Intimidate",
+    "descriptionKo": "",
+    "gameText": "This Pokémon has its own tempo, and that prevents it from becoming confused.",
+    "gameTextKo": "마이페이스라서 혼란 상태가 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "avalugg",
+        "form": "Avalugg"
+      },
+      {
+        "slug": "avalugg",
+        "form": "Hisuian Avalugg"
+      },
+      {
+        "slug": "mudsdale",
+        "form": "Mudsdale"
+      },
+      {
+        "slug": "slowbro",
+        "form": "Galarian Slowbro"
+      },
+      {
+        "slug": "slowbro",
+        "form": "Slowbro"
+      },
+      {
+        "slug": "slowking",
+        "form": "Galarian Slowking"
+      },
+      {
+        "slug": "slowking",
+        "form": "Slowking"
+      },
+      {
+        "slug": "tinkaton",
+        "form": "Tinkaton"
+      }
+    ]
+  },
+  {
+    "slug": "parentalbond",
+    "nameEn": "Parental Bond",
+    "nameKo": "부자유친",
+    "description": "Every move used by the Pokémon will hit twice. The damage inflicted by the second hit is reduced to 25%. If the move used is a damaging move, each hit is capable of afflicting Secondary Effects and Critical Hits",
+    "descriptionKo": "",
+    "gameText": "Parent and child each attacks.",
+    "gameTextKo": "부모와 자식 2마리로 2번 공격할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "kangaskhan",
+        "form": "Mega Kangaskhan"
+      }
+    ]
+  },
+  {
+    "slug": "pickpocket",
+    "nameEn": "Pickpocket",
+    "nameKo": "나쁜손버릇",
+    "description": "When a Pokémon makes physical contact with the Pokémon, the item of the opponent is stolen.",
+    "descriptionKo": "",
+    "gameText": "Steals an item from an attacker that made direct contact.",
+    "gameTextKo": "접촉한 상대의 도구를 훔친다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "tinkaton",
+        "form": "Tinkaton"
+      },
+      {
+        "slug": "weavile",
+        "form": "Weavile"
+      }
+    ]
+  },
+  {
+    "slug": "pickup",
+    "nameEn": "Pickup",
+    "nameKo": "픽업",
+    "description": "Has a 10% chance of finding and holding an item after battle. Will not work if this Pokémon is already holding an item. From Black & White, it allows for the user to pick up the item of its opponent or ally if they used up the item in battle.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon may pick up the item an opposing Pokémon used during a battle. It may pick up items outside of battle, too.",
+    "gameTextKo": "상대가 사용한 도구를 주워올 때가 있다. 모험 중에도 주워온다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "dedenne",
+        "form": "Dedenne"
+      },
+      {
+        "slug": "diggersby",
+        "form": "Diggersby"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Gourgeist"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Jumbo Variety"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Large Variety"
+      },
+      {
+        "slug": "gourgeist",
+        "form": "Small Variety"
+      }
+    ]
+  },
+  {
+    "slug": "piercingdrill",
+    "nameEn": "Piercing Drill",
+    "nameKo": "",
+    "description": "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.",
+    "descriptionKo": "",
+    "gameText": "When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered.",
+    "gameTextKo": "",
+    "isNewInChampions": true,
+    "pokemon": [
+      {
+        "slug": "excadrill",
+        "form": "Mega Excadrill"
+      }
+    ]
+  },
+  {
+    "slug": "pixilate",
+    "nameEn": "Pixilate",
+    "nameKo": "페어리스킨",
+    "description": "Increases the power of Normal-type moves by 20%. It then changes those moves to Fairy-type.",
+    "descriptionKo": "",
+    "gameText": "Normal-type moves become Fairy-type moves. The power of those moves is boosted a little.",
+    "gameTextKo": "노말타입의 기술이 페어리타입이 된다. 위력이 조금 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "altaria",
+        "form": "Mega Altaria"
+      },
+      {
+        "slug": "gardevoir",
+        "form": "Mega Gardevoir"
+      },
+      {
+        "slug": "sylveon",
+        "form": "Sylveon"
+      }
+    ]
+  },
+  {
+    "slug": "plus",
+    "nameEn": "Plus",
+    "nameKo": "플러스",
+    "description": "When battling with Plus or Minus, Special Attack increases by 50%.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Sp. Atk stat of the Pokémon if an ally with the Plus or Minus Ability is also in battle.",
+    "gameTextKo": "플러스나 마이너스의 특성을 가진 포켓몬이 동료에 있으면 자신의 특수공격이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "ampharos",
+        "form": "Ampharos"
+      },
+      {
+        "slug": "dedenne",
+        "form": "Dedenne"
+      }
+    ]
+  },
+  {
+    "slug": "poisonheal",
+    "nameEn": "Poison Heal",
+    "nameKo": "포이즌힐",
+    "description": "HP is restored by 1/8th the maximum HP every turn while the Pokémon has the Poison condition.",
+    "descriptionKo": "",
+    "gameText": "Restores HP if the Pokémon is poisoned, instead of losing HP.",
+    "gameTextKo": "독 상태가 되면 HP가 줄지 않고 증가한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "gliscor",
+        "form": "Gliscor"
+      }
+    ]
+  },
+  {
+    "slug": "poisonpoint",
+    "nameEn": "Poison Point",
+    "nameKo": "독가시",
+    "description": "The opponent has a 30% chance of being induced with Poison when using an attack, that requires physical contact, against this Pokémon.",
+    "descriptionKo": "",
+    "gameText": "Contact with the Pokémon may poison the attacker.",
+    "gameTextKo": "자신과 접촉한 상대를 독 상태로 만들 때가 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "roserade",
+        "form": "Roserade"
+      }
+    ]
+  },
+  {
+    "slug": "poisontouch",
+    "nameEn": "Poison Touch",
+    "nameKo": "독수",
+    "description": "When the Pokémon attacks its opponents with a move that causes Physical Contact, there is a 30% chance that the target is Poisoned.",
+    "descriptionKo": "",
+    "gameText": "May poison a target when the Pokémon makes contact.",
+    "gameTextKo": "접촉하기만 해도 상대를 독 상태로 만들 때가 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "sneasler",
+        "form": "Sneasler"
+      },
+      {
+        "slug": "toxicroak",
+        "form": "Toxicroak"
+      }
+    ]
+  },
+  {
+    "slug": "prankster",
+    "nameEn": "Prankster",
+    "nameKo": "짓궂은마음",
+    "description": "Status category moves have their Speed Priority increased by 1. Moves increased by this that are used on Dark-type opponents will fail.",
+    "descriptionKo": "",
+    "gameText": "Gives priority to a status move.",
+    "gameTextKo": "변화 기술을 먼저 쓸 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "banette",
+        "form": "Mega Banette"
+      },
+      {
+        "slug": "klefki",
+        "form": "Klefki"
+      },
+      {
+        "slug": "liepard",
+        "form": "Liepard"
+      },
+      {
+        "slug": "meowstic",
+        "form": "Meowstic"
+      },
+      {
+        "slug": "sableye",
+        "form": "Sableye"
+      },
+      {
+        "slug": "whimsicott",
+        "form": "Whimsicott"
+      }
+    ]
+  },
+  {
+    "slug": "pressure",
+    "nameEn": "Pressure",
+    "nameKo": "프레셔",
+    "description": "When this Pokémon is hit by a move, the opponent’s PP lowers by 2 rather than 1.",
+    "descriptionKo": "",
+    "gameText": "By putting pressure on the opposing Pokémon, it raises their PP usage.",
+    "gameTextKo": "프레셔를 줘서 상대가 쓰는 기술의 PP를 많이 줄인다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "absol",
+        "form": "Absol"
+      },
+      {
+        "slug": "aerodactyl",
+        "form": "Aerodactyl"
+      },
+      {
+        "slug": "corviknight",
+        "form": "Corviknight"
+      },
+      {
+        "slug": "kingambit",
+        "form": "Kingambit"
+      },
+      {
+        "slug": "sneasler",
+        "form": "Sneasler"
+      },
+      {
+        "slug": "spiritomb",
+        "form": "Spiritomb"
+      },
+      {
+        "slug": "weavile",
+        "form": "Weavile"
+      }
+    ]
+  },
+  {
+    "slug": "protean",
+    "nameEn": "Protean",
+    "nameKo": "변환자재",
+    "description": "Before the Pokémon uses a move, it becomes a pure Pokémon of that type. This only works once per switch in.",
+    "descriptionKo": "",
+    "gameText": "Changes the Pokémon's type to the type of the move it's about to use.",
+    "gameTextKo": "자신이 사용한 기술과 같은 타입으로 변화한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "greninja",
+        "form": "Greninja"
+      },
+      {
+        "slug": "greninja",
+        "form": "Mega Greninja"
+      },
+      {
+        "slug": "meowscarada",
+        "form": "Meowscarada"
+      }
+    ]
+  },
+  {
+    "slug": "purepower",
+    "nameEn": "Pure Power",
+    "nameKo": "순수한힘",
+    "description": "The Pokémon’s Attack stat is doubled in battle while having this ability.",
+    "descriptionKo": "",
+    "gameText": "Using its pure power, the Pokémon doubles its Attack stat.",
+    "gameTextKo": "요가의 힘으로 물리공격의 위력이 2배가 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "medicham",
+        "form": "Medicham"
+      },
+      {
+        "slug": "medicham",
+        "form": "Mega Medicham"
+      }
+    ]
+  },
+  {
+    "slug": "purifyingsalt",
+    "nameEn": "Purifying Salt",
+    "nameKo": "",
+    "description": "The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "garganacl",
+        "form": "Garganacl"
+      }
+    ]
+  },
+  {
+    "slug": "queenlymajesty",
+    "nameEn": "Queenly Majesty",
+    "nameKo": "여왕의위엄",
+    "description": "Prevents the opponent from using moves with increased Speed Priority on this Pokémon or its allies.",
+    "descriptionKo": "",
+    "gameText": "Its majesty pressures the opposing Pokémon, making it unable to attack using priority moves.",
+    "gameTextKo": "상대에게 위압감을 줘서 이쪽을 향한 선제 기술을 사용할 수 없게 한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "tsareena",
+        "form": "Tsareena"
+      }
+    ]
+  },
+  {
+    "slug": "quickdraw",
+    "nameEn": "Quick Draw",
+    "nameKo": "퀵드로",
+    "description": "At the start of each turn, this Pokémon has a 30% chance of moving first in the Speed Priority Bracket",
+    "descriptionKo": "",
+    "gameText": "Enables the Pokémon to move first occasionally.",
+    "gameTextKo": "상대보다 먼저 행동할 수도 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "slowbro",
+        "form": "Galarian Slowbro"
+      },
+      {
+        "slug": "slowbro",
+        "form": "Slowbro"
+      }
+    ]
+  },
+  {
+    "slug": "quickfeet",
+    "nameEn": "Quick Feet",
+    "nameKo": "속보",
+    "description": "Speed is increased by 50% when induced with a status (Burn, Poison, Sleep, Frozen & Paralysis). If Paralysed, the speed drop is ignored.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Speed stat if the Pokémon has a status condition.",
+    "gameTextKo": "상태 이상이 되면 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "jolteon",
+        "form": "Jolteon"
+      }
+    ]
+  },
+  {
+    "slug": "raindish",
+    "nameEn": "Rain Dish",
+    "nameKo": "젖은접시",
+    "description": "If Heavy Rain weather is in effect, recovers 1/16th max Hit Points at the end of the turn.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon gradually regains HP in rain.",
+    "gameTextKo": "비가 오는 날씨일 때 조금씩 HP를 회복한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "blastoise",
+        "form": "Blastoise"
+      },
+      {
+        "slug": "pelipper",
+        "form": "Pelipper"
+      }
+    ]
+  },
+  {
+    "slug": "receiver",
+    "nameEn": "Receiver",
+    "nameKo": "리시버",
+    "description": "The Pokémon copies the Ability of a defeated ally.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon copies the Ability of a defeated ally.",
+    "gameTextKo": "쓰러진 같은 편의 특성을 이어받아 같은 특성이 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "passimian",
+        "form": "Passimian"
+      }
+    ]
+  },
+  {
+    "slug": "reckless",
+    "nameEn": "Reckless",
+    "nameKo": "이판사판",
+    "description": "The power of moves that have recoil damage is increased by 20%.",
+    "descriptionKo": "",
+    "gameText": "Powers up moves that have recoil damage.",
+    "gameTextKo": "반동 데미지를 받는 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "emboar",
+        "form": "Emboar"
+      },
+      {
+        "slug": "rhyperior",
+        "form": "Rhyperior"
+      }
+    ]
+  },
+  {
+    "slug": "refrigerate",
+    "nameEn": "Refrigerate",
+    "nameKo": "프리즈스킨",
+    "description": "Increases the power of Normal-type moves by 20%. It then changes those moves to Ice-type.",
+    "descriptionKo": "",
+    "gameText": "Normal-type moves become Ice-type moves. The power of those moves is boosted a little.",
+    "gameTextKo": "노말타입의 기술이 얼음타입이 된다. 위력이 조금 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aurorus",
+        "form": "Aurorus"
+      },
+      {
+        "slug": "glalie",
+        "form": "Mega Glalie"
+      }
+    ]
+  },
+  {
+    "slug": "regenerator",
+    "nameEn": "Regenerator",
+    "nameKo": "재생력",
+    "description": "When the Pokémon switches out of battle, up to 33.3% of its maximum Hit Points are restored",
+    "descriptionKo": "",
+    "gameText": "Restores a little HP when withdrawn from battle.",
+    "gameTextKo": "지닌 포켓몬으로 돌아오면 HP를 조금 회복한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "audino",
+        "form": "Audino"
+      },
+      {
+        "slug": "hydrapple",
+        "form": "Hydrapple"
+      },
+      {
+        "slug": "reuniclus",
+        "form": "Reuniclus"
+      },
+      {
+        "slug": "slowbro",
+        "form": "Galarian Slowbro"
+      },
+      {
+        "slug": "slowbro",
+        "form": "Slowbro"
+      },
+      {
+        "slug": "slowking",
+        "form": "Galarian Slowking"
+      },
+      {
+        "slug": "slowking",
+        "form": "Slowking"
+      },
+      {
+        "slug": "toxapex",
+        "form": "Toxapex"
+      }
+    ]
+  },
+  {
+    "slug": "ripen",
+    "nameEn": "Ripen",
+    "nameKo": "숙성",
+    "description": "Ripens Berries and doubles their effect.",
+    "descriptionKo": "",
+    "gameText": "Ripens Berries and doubles their effect.",
+    "gameTextKo": "나무열매를 숙성시켜서 효과가 2배가 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "appletun",
+        "form": "Appletun"
+      },
+      {
+        "slug": "flapple",
+        "form": "Flapple"
+      }
+    ]
+  },
+  {
+    "slug": "rivalry",
+    "nameEn": "Rivalry",
+    "nameKo": "투쟁심",
+    "description": "Attack & Special Attack is increased by 25% if the foe is of the same gender; Attack & Special Attack is decreased by 25% if the foe is of the opposite gender.",
+    "descriptionKo": "",
+    "gameText": "Becomes competitive and deals more damage to Pokémon of the same gender, but deals less to Pokémon of the opposite gender.",
+    "gameTextKo": "성별이 같으면 투쟁심을 불태워 강해진다. 성별이 다르면 약해진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "luxray",
+        "form": "Luxray"
+      }
+    ]
+  },
+  {
+    "slug": "rockhead",
+    "nameEn": "Rock Head",
+    "nameKo": "돌머리",
+    "description": "Does not receive recoil damage from recoil-causing damages.",
+    "descriptionKo": "",
+    "gameText": "Protects the Pokémon from recoil damage.",
+    "gameTextKo": "반동을 받는 기술을 사용해도 HP가 줄지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aerodactyl",
+        "form": "Aerodactyl"
+      },
+      {
+        "slug": "aggron",
+        "form": "Aggron"
+      },
+      {
+        "slug": "arcanine",
+        "form": "Arcanine"
+      },
+      {
+        "slug": "arcanine",
+        "form": "Hisuian Arcanine"
+      },
+      {
+        "slug": "steelix",
+        "form": "Steelix"
+      },
+      {
+        "slug": "tyrantrum",
+        "form": "Tyrantrum"
+      }
+    ]
+  },
+  {
+    "slug": "roughskin",
+    "nameEn": "Rough Skin",
+    "nameKo": "까칠한피부",
+    "description": "The opponent is hurt by 1/8th of his maxium Hit Points of recoil when using an attack, that requires physical contact, against this Pokémon.",
+    "descriptionKo": "",
+    "gameText": "This Pokémon inflicts damage with its rough skin to the attacker on contact.",
+    "gameTextKo": "공격을 받았을 때 자신에게 접촉한 상대를 까칠까칠한 피부로 상처를 입힌다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "garchomp",
+        "form": "Garchomp"
+      },
+      {
+        "slug": "sharpedo",
+        "form": "Sharpedo"
+      }
+    ]
+  },
+  {
+    "slug": "sandforce",
+    "nameEn": "Sand Force",
+    "nameKo": "모래의힘",
+    "description": "Ground-type, Rock-type & Steel-type moves have their power increased by 30% in a Sandstorm and will not receive damage",
+    "descriptionKo": "",
+    "gameText": "Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm.",
+    "gameTextKo": "날씨가 모래바람일 때 바위타입과 땅타입과 강철타입의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "excadrill",
+        "form": "Excadrill"
+      },
+      {
+        "slug": "garchomp",
+        "form": "Mega Garchomp"
+      },
+      {
+        "slug": "hippowdon",
+        "form": "Hippowdon"
+      },
+      {
+        "slug": "steelix",
+        "form": "Mega Steelix"
+      }
+    ]
+  },
+  {
+    "slug": "sandrush",
+    "nameEn": "Sand Rush",
+    "nameKo": "모래헤치기",
+    "description": "Speed is doubled within a sandstorm",
+    "descriptionKo": "",
+    "gameText": "Boosts the Pokémon's Speed stat in a sandstorm.",
+    "gameTextKo": "날씨가 모래바람일 때 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "excadrill",
+        "form": "Excadrill"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Dusk Form"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Lycanroc"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Midnight Form"
+      }
+    ]
+  },
+  {
+    "slug": "sandspit",
+    "nameEn": "Sand Spit",
+    "nameKo": "모래뿜기",
+    "description": "The Pokémon creates a sandstorm when it's hit by an attack.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon creates a sandstorm when it's hit by an attack.",
+    "gameTextKo": "공격을 받으면 모래바람을 일으킨다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "sandaconda",
+        "form": "Sandaconda"
+      }
+    ]
+  },
+  {
+    "slug": "sandstream",
+    "nameEn": "Sand Stream",
+    "nameKo": "모래날림",
+    "description": "Sandstorm blows when the Pokémon enters battle. As of X & Y, this lasts 5 turns.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon summons a sandstorm when it enters a battle.",
+    "gameTextKo": "등장했을 때 날씨를 모래바람으로 만든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "hippowdon",
+        "form": "Hippowdon"
+      },
+      {
+        "slug": "tyranitar",
+        "form": "Mega Tyranitar"
+      },
+      {
+        "slug": "tyranitar",
+        "form": "Tyranitar"
+      }
+    ]
+  },
+  {
+    "slug": "sandveil",
+    "nameEn": "Sand Veil",
+    "nameKo": "모래숨기",
+    "description": "Raises the Pokémon’s evasion during a sandstorm by one level.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Pokémon's evasion in a sandstorm.",
+    "gameTextKo": "모래바람일 때 회피율이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "garchomp",
+        "form": "Garchomp"
+      },
+      {
+        "slug": "gliscor",
+        "form": "Gliscor"
+      },
+      {
+        "slug": "heliolisk",
+        "form": "Heliolisk"
+      },
+      {
+        "slug": "orthworm",
+        "form": "Orthworm"
+      },
+      {
+        "slug": "sandaconda",
+        "form": "Sandaconda"
+      },
+      {
+        "slug": "stunfisk",
+        "form": "Galarian Stunfisk"
+      },
+      {
+        "slug": "stunfisk",
+        "form": "Stunfisk"
+      }
+    ]
+  },
+  {
+    "slug": "sapsipper",
+    "nameEn": "Sap Sipper",
+    "nameKo": "초식",
+    "description": "Attack is raised by one stage when the Pokémon is hit by a Grass-type move. User receives no damage from Grass-type attacks.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Attack stat if hit by a Grass-type move, instead of taking damage.",
+    "gameTextKo": "풀타입 기술을 받으면 데미지를 입지 않고 공격이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "azumarill",
+        "form": "Azumarill"
+      },
+      {
+        "slug": "drampa",
+        "form": "Drampa"
+      },
+      {
+        "slug": "farigiraf",
+        "form": "Farigiraf"
+      },
+      {
+        "slug": "goodra",
+        "form": "Goodra"
+      },
+      {
+        "slug": "goodra",
+        "form": "Hisuian Goodra"
+      },
+      {
+        "slug": "wyrdeer",
+        "form": "Wyrdeer"
+      }
+    ]
+  },
+  {
+    "slug": "scrappy",
+    "nameEn": "Scrappy",
+    "nameKo": "배짱",
+    "description": "Allows the Pokémon to hit Ghost-type Pokémon with Normal-type and Fighting-type moves. Blocks Intimidate",
+    "descriptionKo": "",
+    "gameText": "The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves.",
+    "gameTextKo": "고스트타입 포켓몬에게 노말타입과 격투타입의 기술을 맞게 한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "decidueye",
+        "form": "Decidueye"
+      },
+      {
+        "slug": "decidueye",
+        "form": "Hisuian Decidueye"
+      },
+      {
+        "slug": "kangaskhan",
+        "form": "Kangaskhan"
+      },
+      {
+        "slug": "lopunny",
+        "form": "Mega Lopunny"
+      },
+      {
+        "slug": "pangoro",
+        "form": "Pangoro"
+      }
+    ]
+  },
+  {
+    "slug": "screencleaner",
+    "nameEn": "Screen Cleaner",
+    "nameKo": "배리어프리",
+    "description": "When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.",
+    "descriptionKo": "",
+    "gameText": "When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.",
+    "gameTextKo": "등장했을 때 상대와 같은 편의 빛의장막, 리플렉터, 오로라베일의 효과가 사라진다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "mr.rime",
+        "form": "Mr. Rime"
+      }
+    ]
+  },
+  {
+    "slug": "shadowtag",
+    "nameEn": "Shadow Tag",
+    "nameKo": "그림자밟기",
+    "description": "The opponent cannot run nor switch while this Pokémon is in play. The opponent may still switch by using Baton Pass, U-turn or Volt Switch, if it is holding a Shed Shell or is a Ghost-type.",
+    "descriptionKo": "",
+    "gameText": "This Pokémon steps on the opposing Pokémon's shadow to prevent it from escaping.",
+    "gameTextKo": "상대의 그림자를 밟아 도망치거나 교체할 수 없게 한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "gengar",
+        "form": "Mega Gengar"
+      }
+    ]
+  },
+  {
+    "slug": "sharpness",
+    "nameEn": "Sharpness",
+    "nameKo": "",
+    "description": "Increases the power of Slicing moves used by this Pokémon by 50%",
+    "descriptionKo": "",
+    "gameText": "Powers up slicing moves.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "gallade",
+        "form": "Gallade"
+      },
+      {
+        "slug": "kleavor",
+        "form": "Kleavor"
+      },
+      {
+        "slug": "samurott",
+        "form": "Hisuian Samurott"
+      },
+      {
+        "slug": "samurott",
+        "form": "Samurott"
+      }
+    ]
+  },
+  {
+    "slug": "shedskin",
+    "nameEn": "Shed Skin",
+    "nameKo": "탈피",
+    "description": "Every turn, it has a 1 in 3 chance of healing from a status condition (BURN, PARALYZE, SLEEP, POISON, FREEZE).",
+    "descriptionKo": "",
+    "gameText": "The Pokémon may heal its own status conditions by shedding its skin.",
+    "gameTextKo": "몸의 껍질을 벗어 던져 상태 이상을 회복할 때가 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "arbok",
+        "form": "Arbok"
+      },
+      {
+        "slug": "sandaconda",
+        "form": "Sandaconda"
+      }
+    ]
+  },
+  {
+    "slug": "sheerforce",
+    "nameEn": "Sheer Force",
+    "nameKo": "우격다짐",
+    "description": "Moves with a secondary effect are increased in power by 30% but lose their secondary effect",
+    "descriptionKo": "",
+    "gameText": "Removes additional effects to increase the power of moves when attacking.",
+    "gameTextKo": "기술의 추가 효과가 없어지지만 그만큼 높은 위력으로 기술을 사용할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "camerupt",
+        "form": "Mega Camerupt"
+      },
+      {
+        "slug": "conkeldurr",
+        "form": "Conkeldurr"
+      },
+      {
+        "slug": "feraligatr",
+        "form": "Feraligatr"
+      },
+      {
+        "slug": "kleavor",
+        "form": "Kleavor"
+      },
+      {
+        "slug": "rampardos",
+        "form": "Rampardos"
+      },
+      {
+        "slug": "steelix",
+        "form": "Steelix"
+      },
+      {
+        "slug": "tauros",
+        "form": "Paldean Tauros"
+      },
+      {
+        "slug": "tauros",
+        "form": "Tauros"
+      },
+      {
+        "slug": "toucannon",
+        "form": "Toucannon"
+      }
+    ]
+  },
+  {
+    "slug": "shellarmor",
+    "nameEn": "Shell Armor",
+    "nameKo": "조가비갑옷",
+    "description": "Opponent’s moves cannot Critical Hit.",
+    "descriptionKo": "",
+    "gameText": "A hard shell protects the Pokémon from critical hits.",
+    "gameTextKo": "단단한 껍질의 보호를 받아 상대의 공격이 급소에 맞지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "goodra",
+        "form": "Goodra"
+      },
+      {
+        "slug": "goodra",
+        "form": "Hisuian Goodra"
+      },
+      {
+        "slug": "samurott",
+        "form": "Hisuian Samurott"
+      },
+      {
+        "slug": "samurott",
+        "form": "Samurott"
+      },
+      {
+        "slug": "slowbro",
+        "form": "Mega Slowbro"
+      },
+      {
+        "slug": "torkoal",
+        "form": "Torkoal"
+      },
+      {
+        "slug": "torterra",
+        "form": "Torterra"
+      }
+    ]
+  },
+  {
+    "slug": "shielddust",
+    "nameEn": "Shield Dust",
+    "nameKo": "인분",
+    "description": "Damaging moves used by the opponent will not have an additional effect.",
+    "descriptionKo": "",
+    "gameText": "This Pokémon's dust blocks the additional effects of attacks taken.",
+    "gameTextKo": "인분에 보호받아 기술의 추가 효과를 받지 않게 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "vivillon",
+        "form": "Vivillon"
+      }
+    ]
+  },
+  {
+    "slug": "skilllink",
+    "nameEn": "Skill Link",
+    "nameKo": "스킬링크",
+    "description": "Moves that attack 2-5 times always hit 5 times.",
+    "descriptionKo": "",
+    "gameText": "Maximizes the number of times multi-strike moves hit.",
+    "gameTextKo": "연속 기술을 사용하면 항상 최고 횟수를 사용할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "heracross",
+        "form": "Mega Heracross"
+      },
+      {
+        "slug": "toucannon",
+        "form": "Toucannon"
+      }
+    ]
+  },
+  {
+    "slug": "slushrush",
+    "nameEn": "Slush Rush",
+    "nameKo": "눈치우기",
+    "description": "Doubles the Pokémon's Speed when Snow is in effect",
+    "descriptionKo": "",
+    "gameText": "Boosts the Pokémon's Speed stat in a Snowstorm.",
+    "gameTextKo": "날씨가 싸라기눈일 때 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "beartic",
+        "form": "Beartic"
+      }
+    ]
+  },
+  {
+    "slug": "sniper",
+    "nameEn": "Sniper",
+    "nameKo": "스나이퍼",
+    "description": "Power of critical-hit moves is increased to 225% rather than 150%.",
+    "descriptionKo": "",
+    "gameText": "Powers up moves if they become critical hits when attacking.",
+    "gameTextKo": "공격을 급소에 맞혔을 때 위력이 더욱 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "ariados",
+        "form": "Ariados"
+      },
+      {
+        "slug": "beedrill",
+        "form": "Beedrill"
+      }
+    ]
+  },
+  {
+    "slug": "snowcloak",
+    "nameEn": "Snow Cloak",
+    "nameKo": "눈숨기",
+    "description": "Raises the Pokémon’s evasion during a Snowstorm by one level.",
+    "descriptionKo": "",
+    "gameText": "Boosts evasion in a Snowstorm.",
+    "gameTextKo": "날씨가 싸라기눈일 때 회피율이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "beartic",
+        "form": "Beartic"
+      },
+      {
+        "slug": "froslass",
+        "form": "Froslass"
+      },
+      {
+        "slug": "glaceon",
+        "form": "Glaceon"
+      },
+      {
+        "slug": "mamoswine",
+        "form": "Mamoswine"
+      },
+      {
+        "slug": "ninetales",
+        "form": "Alolan Ninetales"
+      },
+      {
+        "slug": "ninetales",
+        "form": "Ninetales"
+      }
+    ]
+  },
+  {
+    "slug": "snowwarning",
+    "nameEn": "Snow Warning",
+    "nameKo": "눈퍼뜨리기",
+    "description": "Snowstorm blows when the Pokémon enters battle. As of X & Y, this lasts 5 turns.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon summons a Snowstorm when it enters a battle.",
+    "gameTextKo": "등장했을 때 날씨를 싸라기눈으로 만든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "abomasnow",
+        "form": "Abomasnow"
+      },
+      {
+        "slug": "abomasnow",
+        "form": "Mega Abomasnow"
+      },
+      {
+        "slug": "aurorus",
+        "form": "Aurorus"
+      },
+      {
+        "slug": "froslass",
+        "form": "Mega Froslass"
+      },
+      {
+        "slug": "ninetales",
+        "form": "Alolan Ninetales"
+      },
+      {
+        "slug": "ninetales",
+        "form": "Ninetales"
+      },
+      {
+        "slug": "vanilluxe",
+        "form": "Vanilluxe"
+      }
+    ]
+  },
+  {
+    "slug": "solarpower",
+    "nameEn": "Solar Power",
+    "nameKo": "선파워",
+    "description": "During sunshine, the Pokémon’s Special Attack raises to 1.5 times but HP decreases by 1/8th the maximum HP every turn.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Sp. Atk stat in sunny weather, but HP decreases every turn.",
+    "gameTextKo": "날씨가 맑으면 특수공격이 올라가지만 매 턴 HP가 줄어든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "charizard",
+        "form": "Charizard"
+      },
+      {
+        "slug": "heliolisk",
+        "form": "Heliolisk"
+      },
+      {
+        "slug": "houndoom",
+        "form": "Mega Houndoom"
+      }
+    ]
+  },
+  {
+    "slug": "solidrock",
+    "nameEn": "Solid Rock",
+    "nameKo": "하드록",
+    "description": "Damage by super-effective moves is reduced by 25%.",
+    "descriptionKo": "",
+    "gameText": "Reduces the power of supereffective attacks taken.",
+    "gameTextKo": "효과가 굉장한 공격의 위력을 약하게 만든다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "camerupt",
+        "form": "Camerupt"
+      },
+      {
+        "slug": "rhyperior",
+        "form": "Rhyperior"
+      }
+    ]
+  },
+  {
+    "slug": "soundproof",
+    "nameEn": "Soundproof",
+    "nameKo": "방음",
+    "description": "Unaffected by sound moves. If this Pokémon switches out with Baton Pass, Perish Song against the switched out will not be nullified.",
+    "descriptionKo": "",
+    "gameText": "Soundproofing of the Pokémon itself gives full immunity to all sound-based moves.",
+    "gameTextKo": "소리를 차단하는 것으로 소리 공격을 받지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "abomasnow",
+        "form": "Abomasnow"
+      },
+      {
+        "slug": "bastiodon",
+        "form": "Bastiodon"
+      },
+      {
+        "slug": "kommo-o",
+        "form": "Kommo-o"
+      }
+    ]
+  },
+  {
+    "slug": "speedboost",
+    "nameEn": "Speed Boost",
+    "nameKo": "가속",
+    "description": "Speed increases by one stage at the end of each turn.",
+    "descriptionKo": "",
+    "gameText": "Its Speed stat is boosted every turn.",
+    "gameTextKo": "매 턴 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "espathra",
+        "form": "Espathra"
+      },
+      {
+        "slug": "sharpedo",
+        "form": "Sharpedo"
+      }
+    ]
+  },
+  {
+    "slug": "spicyspray",
+    "nameEn": "Spicy Spray",
+    "nameKo": "",
+    "description": "When the Pokémon takes damage from a move, it burns the attacker.",
+    "descriptionKo": "",
+    "gameText": "When the Pokémon takes damage from a move, it burns the attacker.",
+    "gameTextKo": "",
+    "isNewInChampions": true,
+    "pokemon": [
+      {
+        "slug": "scovillain",
+        "form": "Mega Scovillain"
+      }
+    ]
+  },
+  {
+    "slug": "stall",
+    "nameEn": "Stall",
+    "nameKo": "시간벌기",
+    "description": "The Pokémon always attacks last.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon moves after all other Pokémon do.",
+    "gameTextKo": "기술을 사용하는 순서가 반드시 마지막이 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "sableye",
+        "form": "Sableye"
+      }
+    ]
+  },
+  {
+    "slug": "stalwart",
+    "nameEn": "Stalwart",
+    "nameKo": "굳건한신념",
+    "description": "Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.",
+    "descriptionKo": "",
+    "gameText": "Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.",
+    "gameTextKo": "상대의 기술을 끌어모으는 특성이나 기술의 영향을 받지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "archaludon",
+        "form": "Archaludon"
+      },
+      {
+        "slug": "skarmory",
+        "form": "Mega Skarmory"
+      }
+    ]
+  },
+  {
+    "slug": "stamina",
+    "nameEn": "Stamina",
+    "nameKo": "지구력",
+    "description": "Boosts the Defense stat when hit by an attack.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Defense stat when hit by an attack.",
+    "gameTextKo": "공격을 받으면 방어가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "archaludon",
+        "form": "Archaludon"
+      },
+      {
+        "slug": "mudsdale",
+        "form": "Mudsdale"
+      }
+    ]
+  },
+  {
+    "slug": "stancechange",
+    "nameEn": "Stance Change",
+    "nameKo": "배틀스위치",
+    "description": "The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King's Shield.",
+    "gameTextKo": "공격 기술을 쓰면 블레이드폼으로 기술 킹실드를 쓰면 실드폼으로 변한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aegislash",
+        "form": "Aegislash"
+      },
+      {
+        "slug": "aegislash",
+        "form": "Blade Forme"
+      }
+    ]
+  },
+  {
+    "slug": "static",
+    "nameEn": "Static",
+    "nameKo": "정전기",
+    "description": "The opponent has a 30% chance of being induced with PARALYZE when using an attack, that requires physical contact, against this Pokémon.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is charged with static electricity, so contact with it may cause paralysis.",
+    "gameTextKo": "정전기를 몸에 둘러 접촉한 상대를 마비시킬 때가 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "ampharos",
+        "form": "Ampharos"
+      },
+      {
+        "slug": "bellibolt",
+        "form": "Bellibolt"
+      },
+      {
+        "slug": "emolga",
+        "form": "Emolga"
+      },
+      {
+        "slug": "manectric",
+        "form": "Manectric"
+      },
+      {
+        "slug": "pikachu",
+        "form": "Pikachu"
+      },
+      {
+        "slug": "raichu",
+        "form": "Alolan Raichu"
+      },
+      {
+        "slug": "raichu",
+        "form": "Raichu"
+      },
+      {
+        "slug": "stunfisk",
+        "form": "Galarian Stunfisk"
+      },
+      {
+        "slug": "stunfisk",
+        "form": "Stunfisk"
+      }
+    ]
+  },
+  {
+    "slug": "steadfast",
+    "nameEn": "Steadfast",
+    "nameKo": "불굴의마음",
+    "description": "Speed raises by one level every time the Pokémon flinches.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's determination boosts the Speed stat each time the Pokémon flinches.",
+    "gameTextKo": "풀죽을 때마다 불굴의 마음을 불태워 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "gallade",
+        "form": "Gallade"
+      },
+      {
+        "slug": "lucario",
+        "form": "Lucario"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Dusk Form"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Lycanroc"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Midnight Form"
+      },
+      {
+        "slug": "machamp",
+        "form": "Machamp"
+      }
+    ]
+  },
+  {
+    "slug": "stench",
+    "nameEn": "Stench",
+    "nameKo": "악취",
+    "description": "If the Pokémon uses a move that deals damage on the opponent, there is a chance the opponent flinches",
+    "descriptionKo": "",
+    "gameText": "By releasing stench when attacking, this Pokémon may cause the target to flinch.",
+    "gameTextKo": "악취를 풍겨서 공격했을 때 상대가 풀죽을 때가 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "garbodor",
+        "form": "Garbodor"
+      }
+    ]
+  },
+  {
+    "slug": "stickyhold",
+    "nameEn": "Sticky Hold",
+    "nameKo": "점착",
+    "description": "This Pokémon’s item cannot be taken.",
+    "descriptionKo": "",
+    "gameText": "Items held by the Pokémon are stuck fast and cannot be removed by other Pokémon.",
+    "gameTextKo": "점착질의 몸에 도구가 달라붙어 있어 상대에게 도구를 뺏기지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "hydrapple",
+        "form": "Hydrapple"
+      }
+    ]
+  },
+  {
+    "slug": "strongjaw",
+    "nameEn": "Strong Jaw",
+    "nameKo": "옹골찬턱",
+    "description": "Increases the power of biting moves by 50%",
+    "descriptionKo": "",
+    "gameText": "The Pokémon's strong jaw boosts the power of its biting moves.",
+    "gameTextKo": "턱이 튼튼하여 무는 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "avalugg",
+        "form": "Avalugg"
+      },
+      {
+        "slug": "avalugg",
+        "form": "Hisuian Avalugg"
+      },
+      {
+        "slug": "sharpedo",
+        "form": "Mega Sharpedo"
+      },
+      {
+        "slug": "tyrantrum",
+        "form": "Tyrantrum"
+      }
+    ]
+  },
+  {
+    "slug": "sturdy",
+    "nameEn": "Sturdy",
+    "nameKo": "옹골참",
+    "description": "The Pokémon will remain with 1 HP if it was going to be knocked out by a move when at full Hit Points, and it is immune to One Hit KO moves.",
+    "descriptionKo": "",
+    "gameText": "It cannot be knocked out with one hit. One-hit KO moves cannot knock it out, either.",
+    "gameTextKo": "상대 기술을 받아도 일격으로 쓰러지지 않는다. 일격필살 기술도 효과 없다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aggron",
+        "form": "Aggron"
+      },
+      {
+        "slug": "archaludon",
+        "form": "Archaludon"
+      },
+      {
+        "slug": "avalugg",
+        "form": "Avalugg"
+      },
+      {
+        "slug": "avalugg",
+        "form": "Hisuian Avalugg"
+      },
+      {
+        "slug": "bastiodon",
+        "form": "Bastiodon"
+      },
+      {
+        "slug": "forretress",
+        "form": "Forretress"
+      },
+      {
+        "slug": "garganacl",
+        "form": "Garganacl"
+      },
+      {
+        "slug": "skarmory",
+        "form": "Skarmory"
+      },
+      {
+        "slug": "steelix",
+        "form": "Steelix"
+      }
+    ]
+  },
+  {
+    "slug": "superluck",
+    "nameEn": "Super Luck",
+    "nameKo": "대운",
+    "description": "Raises the critical-hit ratio of moves by one level.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is so lucky that the critical-hit ratios of its moves are boosted.",
+    "gameTextKo": "대운을 가지고 있어 상대의 급소에 공격이 맞기 쉽다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "absol",
+        "form": "Absol"
+      }
+    ]
+  },
+  {
+    "slug": "supersweetsyrup",
+    "nameEn": "Supersweet Syrup",
+    "nameKo": "감미로운꿀",
+    "description": "Lowers the evasion of opposing Pokémon by 1 stage when first sent into battle",
+    "descriptionKo": "",
+    "gameText": "A sickly sweet scent spreads across the field the first time the Pokémon enters a battle, lowering the evasiveness of opposing Pokémon.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "hydrapple",
+        "form": "Hydrapple"
+      }
+    ]
+  },
+  {
+    "slug": "supremeoverlord",
+    "nameEn": "Supreme Overlord",
+    "nameKo": "",
+    "description": "When the Pokémon enters a battle, its Attack and Sp. Atk stats are boosted by 10% for each of the allies in its party that have already been defeated.",
+    "descriptionKo": "",
+    "gameText": "When the Pokémon enters a battle, its Attack and Sp. Atk stats are boosted by 10% for each of the allies in its party that have already been defeated.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "kingambit",
+        "form": "Kingambit"
+      }
+    ]
+  },
+  {
+    "slug": "surgesurfer",
+    "nameEn": "Surge Surfer",
+    "nameKo": "서핑테일",
+    "description": "Doubles the Pokémon's Speed stat on Electric Terrain.",
+    "descriptionKo": "",
+    "gameText": "Doubles the Pokémon's Speed stat on Electric Terrain.",
+    "gameTextKo": "일렉트릭필드일 때 스피드가 2배가 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "raichu",
+        "form": "Alolan Raichu"
+      },
+      {
+        "slug": "raichu",
+        "form": "Raichu"
+      }
+    ]
+  },
+  {
+    "slug": "swarm",
+    "nameEn": "Swarm",
+    "nameKo": "벌레의알림",
+    "description": "When HP is below 1/3rd its maximum, power of Bug-type moves is increased by 50%.",
+    "descriptionKo": "",
+    "gameText": "Powers up Bug-type moves when the Pokémon's HP is low.",
+    "gameTextKo": "HP가 줄었을 때 벌레타입 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "ariados",
+        "form": "Ariados"
+      },
+      {
+        "slug": "beedrill",
+        "form": "Beedrill"
+      },
+      {
+        "slug": "heracross",
+        "form": "Heracross"
+      },
+      {
+        "slug": "kleavor",
+        "form": "Kleavor"
+      },
+      {
+        "slug": "scizor",
+        "form": "Scizor"
+      },
+      {
+        "slug": "volcarona",
+        "form": "Volcarona"
+      }
+    ]
+  },
+  {
+    "slug": "sweetveil",
+    "nameEn": "Sweet Veil",
+    "nameKo": "스위트베일",
+    "description": "Prevents itself and ally Pokémon from falling asleep.",
+    "descriptionKo": "",
+    "gameText": "Prevents itself and ally Pokémon from falling asleep.",
+    "gameTextKo": "같은 편의 포켓몬이 잠들지 않게 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "alcremie",
+        "form": "Alcremie"
+      },
+      {
+        "slug": "slurpuff",
+        "form": "Slurpuff"
+      },
+      {
+        "slug": "tsareena",
+        "form": "Tsareena"
+      }
+    ]
+  },
+  {
+    "slug": "swiftswim",
+    "nameEn": "Swift Swim",
+    "nameKo": "쓱쓱",
+    "description": "When rainy, The Pokémon’s Speed doubles.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Pokémon's Speed stat in rain.",
+    "gameTextKo": "비가 오는 날씨일 때 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "basculegion",
+        "form": "Basculegion"
+      },
+      {
+        "slug": "basculegion",
+        "form": "Female"
+      },
+      {
+        "slug": "beartic",
+        "form": "Beartic"
+      }
+    ]
+  },
+  {
+    "slug": "symbiosis",
+    "nameEn": "Symbiosis",
+    "nameKo": "공생",
+    "description": "Passes the Pokémon's hold item to its adjacent ally when that ally consumes its hold item",
+    "descriptionKo": "",
+    "gameText": "The Pokémon passes its item to an ally that has used up an item.",
+    "gameTextKo": "같은 편이 도구를 쓰면 자신이 지니고 있는 도구를 같은 편에게 건넨다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "floette",
+        "form": "Floette"
+      },
+      {
+        "slug": "florges",
+        "form": "Florges"
+      },
+      {
+        "slug": "oranguru",
+        "form": "Oranguru"
+      }
+    ]
+  },
+  {
+    "slug": "synchronize",
+    "nameEn": "Synchronize",
+    "nameKo": "싱크로",
+    "description": "When this Pokémon becomes Poisoned, Paralyzed, or Burned, so does the opponent. However, Fire-type and Water Veil ability Pokémon cannot be Burned, Poison-type and Steel-type and Immunity ability Pokémon cannot be Poisoned, and Limber ability Pokémon cannot be Paralyzed.",
+    "descriptionKo": "",
+    "gameText": "The attacker will receive the same status condition if it inflicts a burn, poison, or paralysis to the Pokémon.",
+    "gameTextKo": "자신이 걸린 독이나 마비, 화상을 상대에게 옮긴다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "alakazam",
+        "form": "Alakazam"
+      },
+      {
+        "slug": "espeon",
+        "form": "Espeon"
+      },
+      {
+        "slug": "gardevoir",
+        "form": "Gardevoir"
+      },
+      {
+        "slug": "umbreon",
+        "form": "Umbreon"
+      }
+    ]
+  },
+  {
+    "slug": "tangledfeet",
+    "nameEn": "Tangled Feet",
+    "nameKo": "갈지자걸음",
+    "description": "Pokémon’s evasion raises one level when Confused.",
+    "descriptionKo": "",
+    "gameText": "Raises evasion if the Pokémon is confused.",
+    "gameTextKo": "혼란 상태일 때는 회피율이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "mr.rime",
+        "form": "Mr. Rime"
+      },
+      {
+        "slug": "pidgeot",
+        "form": "Pidgeot"
+      }
+    ]
+  },
+  {
+    "slug": "technician",
+    "nameEn": "Technician",
+    "nameKo": "테크니션",
+    "description": "Moves with a base power of 60 or less are boosted in power by 50%",
+    "descriptionKo": "",
+    "gameText": "Powers up the Pokémon's weaker moves.",
+    "gameTextKo": "위력이 약한 기술의 위력을 올려서 공격할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "maushold",
+        "form": "Maushold"
+      },
+      {
+        "slug": "roserade",
+        "form": "Roserade"
+      },
+      {
+        "slug": "scizor",
+        "form": "Mega Scizor"
+      },
+      {
+        "slug": "scizor",
+        "form": "Scizor"
+      }
+    ]
+  },
+  {
+    "slug": "telepathy",
+    "nameEn": "Telepathy",
+    "nameKo": "텔레파시",
+    "description": "Prevents damage from team-mates during Double battles",
+    "descriptionKo": "",
+    "gameText": "Anticipates an ally's attack and dodges it.",
+    "gameTextKo": "같은 편의 공격의 낌새를 읽고 기술을 회피한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "gardevoir",
+        "form": "Gardevoir"
+      },
+      {
+        "slug": "medicham",
+        "form": "Medicham"
+      },
+      {
+        "slug": "noivern",
+        "form": "Noivern"
+      },
+      {
+        "slug": "oranguru",
+        "form": "Oranguru"
+      }
+    ]
+  },
+  {
+    "slug": "thickfat",
+    "nameEn": "Thick Fat",
+    "nameKo": "두꺼운지방",
+    "description": "Fire and Ice-type moves deal 50% damage.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves.",
+    "gameTextKo": "두꺼운 지방으로 보호되고 있어 불꽃타입과 얼음타입의 기술의 데미지를 반감시킨다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "appletun",
+        "form": "Appletun"
+      },
+      {
+        "slug": "azumarill",
+        "form": "Azumarill"
+      },
+      {
+        "slug": "mamoswine",
+        "form": "Mamoswine"
+      },
+      {
+        "slug": "snorlax",
+        "form": "Snorlax"
+      },
+      {
+        "slug": "venusaur",
+        "form": "Mega Venusaur"
+      }
+    ]
+  },
+  {
+    "slug": "torrent",
+    "nameEn": "Torrent",
+    "nameKo": "급류",
+    "description": "When HP is below 1/3rd its maximum, power of Water-type moves is increased by 50%.",
+    "descriptionKo": "",
+    "gameText": "Powers up Water-type moves when the Pokémon's HP is low.",
+    "gameTextKo": "HP가 줄었을 때 물타입 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "blastoise",
+        "form": "Blastoise"
+      },
+      {
+        "slug": "empoleon",
+        "form": "Empoleon"
+      },
+      {
+        "slug": "feraligatr",
+        "form": "Feraligatr"
+      },
+      {
+        "slug": "greninja",
+        "form": "Greninja"
+      },
+      {
+        "slug": "primarina",
+        "form": "Primarina"
+      },
+      {
+        "slug": "quaquaval",
+        "form": "Quaquaval"
+      },
+      {
+        "slug": "samurott",
+        "form": "Hisuian Samurott"
+      },
+      {
+        "slug": "samurott",
+        "form": "Samurott"
+      },
+      {
+        "slug": "simipour",
+        "form": "Simipour"
+      }
+    ]
+  },
+  {
+    "slug": "toughclaws",
+    "nameEn": "Tough Claws",
+    "nameKo": "단단한발톱",
+    "description": "Increases the power of moves that make physical contact by 30%",
+    "descriptionKo": "",
+    "gameText": "Powers up moves that make direct contact.",
+    "gameTextKo": "상대에게 접촉하는 기술의 위력이 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aerodactyl",
+        "form": "Mega Aerodactyl"
+      },
+      {
+        "slug": "charizard",
+        "form": "Mega Charizard X"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Dusk Form"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Lycanroc"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Midnight Form"
+      }
+    ]
+  },
+  {
+    "slug": "toxicdebris",
+    "nameEn": "Toxic Debris",
+    "nameKo": "",
+    "description": "Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.",
+    "descriptionKo": "",
+    "gameText": "Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "glimmora",
+        "form": "Glimmora"
+      }
+    ]
+  },
+  {
+    "slug": "trace",
+    "nameEn": "Trace",
+    "nameKo": "트레이스",
+    "description": "Ability becomes the same as that of the opponent. Switching this Pokémon out of battle restores its original ability. In a Double Battle, a random opponent’s ability will be copied.",
+    "descriptionKo": "",
+    "gameText": "When it enters a battle, the Pokémon copies an opposing Pokémon's Ability.",
+    "gameTextKo": "등장했을 때 상대의 특성을 트레이스해서 같은 특성이 된다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "alakazam",
+        "form": "Mega Alakazam"
+      },
+      {
+        "slug": "gardevoir",
+        "form": "Gardevoir"
+      },
+      {
+        "slug": "meowstic",
+        "form": "Mega Meowstic"
+      }
+    ]
+  },
+  {
+    "slug": "unaware",
+    "nameEn": "Unaware",
+    "nameKo": "천진",
+    "description": "Foe’s stat modifications are ignored.",
+    "descriptionKo": "",
+    "gameText": "When attacking, the Pokémon ignores the target Pokémon's stat changes.",
+    "gameTextKo": "상대의 능력 변화를 무시하고 공격할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "clefable",
+        "form": "Clefable"
+      },
+      {
+        "slug": "skeledirge",
+        "form": "Skeledirge"
+      }
+    ]
+  },
+  {
+    "slug": "unburden",
+    "nameEn": "Unburden",
+    "nameKo": "곡예",
+    "description": "Speed is doubled once the held item is consumed.",
+    "descriptionKo": "",
+    "gameText": "Boosts the Speed stat if the Pokémon's held item is used or lost.",
+    "gameTextKo": "지니던 도구가 없어지면 스피드가 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "hawlucha",
+        "form": "Hawlucha"
+      },
+      {
+        "slug": "liepard",
+        "form": "Liepard"
+      },
+      {
+        "slug": "slurpuff",
+        "form": "Slurpuff"
+      },
+      {
+        "slug": "sneasler",
+        "form": "Sneasler"
+      }
+    ]
+  },
+  {
+    "slug": "unnerve",
+    "nameEn": "Unnerve",
+    "nameKo": "긴장감",
+    "description": "The opponent Pokémon will never use their held Berry while the Pokémon is in battle.",
+    "descriptionKo": "",
+    "gameText": "Unnerves opposing Pokémon and makes them unable to eat Berries.",
+    "gameTextKo": "상대를 긴장시켜 나무열매를 먹지 못하게 한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "aerodactyl",
+        "form": "Aerodactyl"
+      },
+      {
+        "slug": "arbok",
+        "form": "Arbok"
+      },
+      {
+        "slug": "corviknight",
+        "form": "Corviknight"
+      },
+      {
+        "slug": "houndoom",
+        "form": "Houndoom"
+      },
+      {
+        "slug": "tyranitar",
+        "form": "Tyranitar"
+      }
+    ]
+  },
+  {
+    "slug": "unseenfist",
+    "nameEn": "Unseen Fist",
+    "nameKo": "보이지않는주먹",
+    "description": "The Pokémon can deal damage with moves that make physical contact, even if the target is protected. This damage is reduced to 25%",
+    "descriptionKo": "",
+    "gameText": "The Pokémon can deal damage with moves that make physical contact, even if the target is protected. This damage is reduced to 25%",
+    "gameTextKo": "상대에게 접촉하는 기술을 사용하면 방어의 효과를 무시하고 공격할 수 있다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "golurk",
+        "form": "Mega Golurk"
+      }
+    ]
+  },
+  {
+    "slug": "vitalspirit",
+    "nameEn": "Vital Spirit",
+    "nameKo": "의기양양",
+    "description": "The Pokémon cannot be Asleep while having this ability.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is full of vitality, and that prevents it from falling asleep.",
+    "gameTextKo": "의기양양해져서 잠듦 상태가 되지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "lycanroc",
+        "form": "Dusk Form"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Lycanroc"
+      },
+      {
+        "slug": "lycanroc",
+        "form": "Midnight Form"
+      }
+    ]
+  },
+  {
+    "slug": "voltabsorb",
+    "nameEn": "Volt Absorb",
+    "nameKo": "축전",
+    "description": "The Pokémon heals up to 1/4 of its maximum Hit Points when hit with Electric-type moves.",
+    "descriptionKo": "",
+    "gameText": "Restores HP if hit by an Electric-type move, instead of taking damage.",
+    "gameTextKo": "전기타입의 기술을 받으면 데미지를 받지 않고 회복한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "jolteon",
+        "form": "Jolteon"
+      }
+    ]
+  },
+  {
+    "slug": "wanderingspirit",
+    "nameEn": "Wandering Spirit",
+    "nameKo": "떠도는영혼",
+    "description": "The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.",
+    "gameTextKo": "접촉하는 기술로 공격해온 포켓몬과 특성을 바꾼다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "runerigus",
+        "form": "Runerigus"
+      }
+    ]
+  },
+  {
+    "slug": "waterabsorb",
+    "nameEn": "Water Absorb",
+    "nameKo": "저수",
+    "description": "The Pokémon heals up to 1/4 of its maximum Hit Points when hit with Water-type moves.",
+    "descriptionKo": "",
+    "gameText": "Restores HP if hit by a Water-type move, instead of taking damage.",
+    "gameTextKo": "물타입의 기술을 받으면 데미지를 받지 않고 회복한다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "araquanid",
+        "form": "Araquanid"
+      },
+      {
+        "slug": "politoed",
+        "form": "Politoed"
+      },
+      {
+        "slug": "vaporeon",
+        "form": "Vaporeon"
+      }
+    ]
+  },
+  {
+    "slug": "waterbubble",
+    "nameEn": "Water Bubble",
+    "nameKo": "수포",
+    "description": "Decreases Fire-type move power on the Pokémon by 50%. Increases power of Water-type moves used by the Pokémon by 100% before adding STAB. Prevents Burn",
+    "descriptionKo": "",
+    "gameText": "Lowers the power of Fire-type moves done to the Pokémon and prevents the Pokémon from getting a burn.",
+    "gameTextKo": "자신을 향하는 불꽃타입 기술의 위력을 떨어뜨린다. 화상을 입지 않는다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "araquanid",
+        "form": "Araquanid"
+      }
+    ]
+  },
+  {
+    "slug": "weakarmor",
+    "nameEn": "Weak Armor",
+    "nameKo": "깨어진갑옷",
+    "description": "When hit by an attack, the Pokémon's Defense is lowered by one stage but Speed is increased by two stages.",
+    "descriptionKo": "",
+    "gameText": "Physical attacks to the Pokémon lower its Defense stat but sharply raise its Speed stat.",
+    "gameTextKo": "물리 기술로 데미지를 받으면 방어가 떨어지고 스피드가 크게 올라간다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "armarouge",
+        "form": "Armarouge"
+      },
+      {
+        "slug": "ceruledge",
+        "form": "Ceruledge"
+      },
+      {
+        "slug": "garbodor",
+        "form": "Garbodor"
+      },
+      {
+        "slug": "polteageist",
+        "form": "Polteageist"
+      },
+      {
+        "slug": "skarmory",
+        "form": "Skarmory"
+      },
+      {
+        "slug": "vanilluxe",
+        "form": "Vanilluxe"
+      }
+    ]
+  },
+  {
+    "slug": "whitesmoke",
+    "nameEn": "White Smoke",
+    "nameKo": "하얀연기",
+    "description": "Opponents’ moves which lower this Pokémon’s stats have no effect. However this Pokémon may lower its own stats with its own moves.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon is protected by its white smoke, which prevents other Pokémon from lowering its stats.",
+    "gameTextKo": "하얀 연기의 보호를 받아 상대가 능력을 떨어뜨릴 수 없다.",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "torkoal",
+        "form": "Torkoal"
+      }
+    ]
+  },
+  {
+    "slug": "zerotohero",
+    "nameEn": "Zero to Hero",
+    "nameKo": "",
+    "description": "The Pokémon transforms into its Hero Form when it switches out.",
+    "descriptionKo": "",
+    "gameText": "The Pokémon transforms into its Hero Form when it switches out.",
+    "gameTextKo": "",
+    "isNewInChampions": false,
+    "pokemon": [
+      {
+        "slug": "palafin",
+        "form": "Hero Form"
+      },
+      {
+        "slug": "palafin",
+        "form": "Palafin"
+      }
+    ]
+  }
+]

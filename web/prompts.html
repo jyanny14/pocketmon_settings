@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title>AI 분석 프롬프트 · 포켓몬 챔피언스</title>
+  <meta name="description" content="구성한 파티를 Claude·ChatGPT 같은 AI 에게 물어볼 때 쓰는 프롬프트 템플릿." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ef4444' stroke='%23111' stroke-width='4'/%3E%3Crect x='4' y='30' width='56' height='4' fill='%23111'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff' stroke='%23111' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <style>
+    .prompts-summary { display: flex; gap: .5rem; flex-wrap: wrap; margin: 0 0 1.25rem; padding: .75rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-elevated); align-items: center; }
+    .prompts-summary__chip { display: inline-flex; align-items: center; gap: .4rem; font-size: .9rem; padding: .25rem .55rem; border-radius: 999px; background: var(--bg); border: 1px solid var(--border); }
+    .prompts-summary__chip img { width: 28px; height: 28px; image-rendering: pixelated; }
+    .prompts-summary__empty { color: var(--text-muted); font-size: .95rem; }
+    .prompt-card { display: flex; flex-direction: column; gap: .75rem; }
+    .prompt-card__preview { font-family: var(--font-mono, ui-monospace, monospace); font-size: .8rem; line-height: 1.45; max-height: 8.5rem; overflow: auto; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm, 6px); padding: .5rem .65rem; white-space: pre-wrap; word-break: break-word; }
+    .prompt-card__actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .prompt-card__tag { display: inline-block; font-size: .75rem; color: var(--accent); margin-left: .35rem; }
+    .prompts-intro { color: var(--text-muted); margin-bottom: 1.25rem; }
+    .prompts-intro code { background: var(--bg); padding: 0 .3rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="brand-area">
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="언어 전환">
+          <span class="lang-toggle__opt" data-lang="ko">한</span>
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+        </button>
+        <a class="brand" href="./index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name" data-i18n="brand">포켓몬 챔피언스</span>
+        </a>
+      </div>
+      <nav class="primary-nav">
+        <a href="./pokemon.html" data-i18n="nav.pokemon">포켓몬</a>
+        <a href="./items.html" data-i18n="nav.items">도구</a>
+        <a href="./abilities.html" data-i18n="nav.abilities">특성</a>
+        <a href="./party.html" data-i18n="nav.party">파티 빌더</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="page-header">
+      <h1 class="page-title">AI 분석 프롬프트</h1>
+      <p class="page-lead">현재 파티를 Claude·ChatGPT 같은 AI 에게 붙여넣고 분석을 받을 때 쓰는 템플릿 모음. URL fetch 가 가능한 AI 는 링크로, 그렇지 않으면 인라인 데이터 버전으로 복사하세요.</p>
+    </section>
+
+    <p class="prompts-intro">
+      파티는 URL 쿼리 <code>?p=…</code> 로 전달됩니다.
+      <a href="./party.html" id="back-to-party">← 파티 빌더로 돌아가 구성을 바꾸기</a>
+    </p>
+
+    <section id="party-summary" class="prompts-summary" aria-label="현재 파티 요약"></section>
+
+    <section id="prompt-cards" class="card-grid" aria-label="프롬프트 카드"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>
+        <span>데이터 출처:</span>
+        <a href="https://www.serebii.net/pokemonchampions/" rel="noopener external">serebii.net</a> ·
+        <a href="https://pokeapi.co/" rel="noopener external">PokeAPI</a>
+      </p>
+      <p class="muted">
+        Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트입니다.
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="./assets/prompts.js"></script>
+</body>
+</html>

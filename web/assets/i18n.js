@@ -1,0 +1,355 @@
+// ── i18n — lightweight bilingual support (ko / en) ───────────
+// localStorage persists the choice; page reloads on switch.
+
+const STRINGS = {
+  ko: {
+    // Common
+    "skip": "본문으로 건너뛰기",
+    "brand": "포켓몬 챔피언스",
+    "nav.pokemon": "포켓몬",
+    "nav.items": "도구",
+    "nav.abilities": "특성",
+    "nav.party": "파티 빌더",
+    "footer.source": "데이터 출처:",
+    "footer.copyright": "Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트입니다.",
+    "reset": "초기화",
+    "search": "검색",
+
+    // Index
+    "index.title": "Pokemon Champions 파티 빌더",
+    "index.lead": "등장 포켓몬·도구·특성을 한곳에서 검색하고, 나만의 파티를 직접 구성해보세요. 모든 데이터는 serebii.net과 PokeAPI에서 수집한 정적 스냅샷입니다.",
+    "index.browsePokemon": "포켓몬 둘러보기",
+    "index.startParty": "파티 빌더 시작",
+    "index.card.pokemon.title": "포켓몬 목록",
+    "index.card.pokemon.desc": "한·영 검색, 타입·입수 경로 필터, 폼(메가/지역폼) 확인",
+    "index.card.items.title": "도구",
+    "index.card.items.desc": "지닌 도구·메가스톤·나무열매 목록과 효과",
+    "index.card.abilities.title": "특성",
+    "index.card.abilities.desc": "특성 설명과 보유 포켓몬 역인덱스",
+    "index.card.party.title": "파티 빌더",
+    "index.card.party.desc": "최대 6마리 파티 구성 · 종족값 합계 · 타입 커버리지",
+    "index.card.party.meta": "6슬롯 · URL 공유",
+    "index.sections": "섹션",
+
+    // Pokemon
+    "pokemon.title": "포켓몬 목록",
+    "pokemon.desc": "Pokemon Champions에 등장하는 모든 포켓몬. 한국어·영문 이름 검색과 타입·입수 경로 필터를 지원합니다.",
+    "pokemon.searchPlaceholder": "한국어 이름 · 영문 이름 · 슬러그",
+    "pokemon.sort": "정렬",
+    "pokemon.sort.number": "도감번호",
+    "pokemon.sort.nameKo": "이름(한)",
+    "pokemon.sort.nameEn": "이름(영)",
+    "pokemon.sort.statTotal": "종족값 합계",
+    "pokemon.filterType": "타입",
+    "pokemon.filterObtain": "입수 경로",
+    "pokemon.unit": "마리",
+    "pokemon.empty": "조건에 맞는 포켓몬이 없습니다.",
+    "pokemon.statTotal": "합계",
+    "pokemon.forms": "폼",
+
+    // Items
+    "items.title": "도구",
+    "items.desc": "Pokemon Champions의 지닌 도구, 메가스톤, 나무열매 목록입니다.",
+    "items.searchPlaceholder": "이름 · 효과 · 슬러그",
+    "items.filterCategory": "카테고리",
+    "items.cat.held": "지닌 도구",
+    "items.cat.mega-stone": "메가스톤",
+    "items.cat.berry": "나무열매",
+    "items.unit": "개",
+    "items.empty": "조건에 맞는 도구가 없습니다.",
+
+    // Abilities
+    "abilities.title": "특성",
+    "abilities.desc": "Pokemon Champions에 등장하는 모든 특성. 이름·설명으로 검색하고, 해당 특성을 보유한 포켓몬을 확인할 수 있습니다.",
+    "abilities.searchPlaceholder": "특성 이름 · 슬러그 · 설명",
+    "abilities.sort.nameEn": "이름(영)",
+    "abilities.sort.holders": "보유 포켓몬 수",
+    "abilities.unit": "개",
+    "abilities.empty": "조건에 맞는 특성이 없습니다.",
+    "abilities.holderUnit": "마리",
+
+    // Types
+    "type.normal": "노말", "type.fire": "불꽃", "type.water": "물",
+    "type.electric": "전기", "type.grass": "풀", "type.ice": "얼음",
+    "type.fighting": "격투", "type.poison": "독", "type.ground": "땅",
+    "type.flying": "비행", "type.psychic": "에스퍼", "type.bug": "벌레",
+    "type.rock": "바위", "type.ghost": "고스트", "type.dragon": "드래곤",
+    "type.dark": "악", "type.steel": "강철", "type.fairy": "페어리",
+
+    // Obtain
+    "obtain.recruit": "리크루트", "obtain.transfer": "전송 전용",
+    "obtain.gift": "선물", "obtain.default": "기본 보유",
+
+    // Detail page
+    "detail.loading": "불러오는 중…",
+    "detail.notFound": "포켓몬을 찾을 수 없습니다.",
+    "detail.backToList": "포켓몬 목록",
+    "detail.baseStats": "종족값",
+    "detail.abilities": "특성",
+    "detail.forms": "폼",
+    "detail.moves": "기술",
+    "detail.movesSearch": "기술 이름·타입 검색…",
+    "detail.move.name": "기술",
+    "detail.move.type": "타입",
+    "detail.move.category": "분류",
+    "detail.move.power": "위력",
+    "detail.move.accuracy": "명중",
+    "detail.move.pp": "PP",
+    "move.cat.physical": "물리",
+    "move.cat.special": "특수",
+    "move.cat.status": "변화",
+
+    // Stat labels
+    "stat.hp": "HP",
+    "stat.atk": "공격",
+    "stat.def": "방어",
+    "stat.spAtk": "특공",
+    "stat.spDef": "특방",
+    "stat.speed": "스피드",
+
+    // Party builder
+    "party.title": "파티 빌더",
+    "party.lead": "최대 6마리 파티를 구성하고 종족값·타입 커버리지를 분석해보세요. URL을 복사하면 파티를 공유할 수 있습니다.",
+    "party.addSlot": "슬롯에 포켓몬 추가",
+    "party.removeSlot": "슬롯 비우기",
+    "party.noItem": "도구 없음",
+    "party.copyUrl": "URL 복사",
+    "party.copied": "복사됨!",
+    "party.save": "로컬 저장",
+    "party.saveAs": "파티 이름을 입력하세요",
+    "party.loadSaved": "저장된 파티…",
+    "party.emptyCantSave": "빈 파티는 저장할 수 없습니다.",
+    "party.reset": "초기화",
+    "party.pickerSearch": "이름(한/영) 검색…",
+    "party.close": "닫기",
+    "party.alreadyInParty": "이미 파티에 있음",
+    "party.analysis.stats": "종족값 합계",
+    "party.analysis.totalBase": "파티 전체 합",
+    "party.analysis.types": "타입 분포",
+    "party.analysis.duplicateCombo": "중복 타입 조합",
+    "party.analysis.offense": "공격 커버리지 (STAB 기준)",
+    "party.analysis.offenseHint": "각 방어 타입에 대해 파티원의 자기 타입(STAB) 공격이 낼 수 있는 최대 배수.",
+    "party.analysis.bestVs": "최대 배수 vs",
+    "party.analysis.noSuperEffective": "효과 뛰어남(2배 이상) 커버 안 되는 타입",
+    "party.analysis.defense": "방어 프로필",
+    "party.analysis.defenseHint": "각 공격 타입에 대해 파티원 중 몇 마리가 2배 이상 피해를 받는지.",
+    "party.analysis.weakCount": "약점",
+    "party.analysis.resistCount": "저항",
+    "party.analysis.immuneCount": "무효",
+    "party.analysis.sharedWeakness": "공유 약점(3마리 이상)",
+    "party.analysis.games": "HOME 연동 게임",
+    "party.analysis.gamesHint": "파티원 전원을 Pokémon HOME 으로 옮기려면 어느 게임 조합이 필요한지.",
+    "party.analysis.allMembersGames": "전원이 동일하게 얻을 수 있는 게임",
+    "party.analysis.noSingleGame": "단일 게임으로 전원 수집 불가 — 게임 조합 필요",
+    "party.analysis.noDirectHome": "파티에 HOME 직접 연동 불가(예: Alolan 폼) 포켓몬이 있습니다.",
+    "empty": "결과가 없습니다.",
+
+    // Games (HOME-direct)
+    "game.sword": "소드",
+    "game.shield": "실드",
+    "game.brilliant-diamond": "브릴리언트 다이아몬드",
+    "game.shining-pearl": "샤이닝 펄",
+    "game.legends-arceus": "레전드 아르세우스",
+    "game.scarlet": "스칼렛",
+    "game.violet": "바이올렛",
+    "game.lets-go-pikachu": "Let's Go 피카츄",
+    "game.lets-go-eevee": "Let's Go 이브이",
+
+    // Misc
+    "error.loadFailed": "데이터를 불러오지 못했습니다",
+    "error.noData": "데이터 없음",
+  },
+
+  en: {
+    "skip": "Skip to content",
+    "brand": "Pokémon Champions",
+    "nav.pokemon": "Pokémon",
+    "nav.items": "Items",
+    "nav.abilities": "Abilities",
+    "nav.party": "Party Builder",
+    "footer.source": "Data sources:",
+    "footer.copyright": "Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. This is a non-commercial fan project.",
+    "reset": "Reset",
+    "search": "Search",
+
+    "index.title": "Pokemon Champions Party Builder",
+    "index.lead": "Search Pokémon, items, and abilities in one place and build your own team. All data is a static snapshot collected from serebii.net and PokeAPI.",
+    "index.browsePokemon": "Browse Pokémon",
+    "index.startParty": "Start Party Builder",
+    "index.card.pokemon.title": "Pokémon List",
+    "index.card.pokemon.desc": "Search by KR·EN name, filter by type & obtain method, check forms (Mega/regional)",
+    "index.card.items.title": "Items",
+    "index.card.items.desc": "Held items, mega stones, berries and their effects",
+    "index.card.abilities.title": "Abilities",
+    "index.card.abilities.desc": "Ability descriptions and holder Pokémon reverse index",
+    "index.card.party.title": "Party Builder",
+    "index.card.party.desc": "Build a team of up to 6 · Base stat totals · Type coverage",
+    "index.card.party.meta": "6 slots · URL share",
+    "index.sections": "Sections",
+
+    "pokemon.title": "Pokémon List",
+    "pokemon.desc": "All Pokémon in Pokemon Champions. Search by Korean or English name, filter by type and obtain method.",
+    "pokemon.searchPlaceholder": "Korean name · English name · slug",
+    "pokemon.sort": "Sort",
+    "pokemon.sort.number": "Dex number",
+    "pokemon.sort.nameKo": "Name (KR)",
+    "pokemon.sort.nameEn": "Name (EN)",
+    "pokemon.sort.statTotal": "Base stat total",
+    "pokemon.filterType": "Type",
+    "pokemon.filterObtain": "Obtain method",
+    "pokemon.unit": "Pokémon",
+    "pokemon.empty": "No Pokémon match your filters.",
+    "pokemon.statTotal": "Total",
+    "pokemon.forms": "Forms",
+
+    "items.title": "Items",
+    "items.desc": "Held items, mega stones, and berries in Pokemon Champions.",
+    "items.searchPlaceholder": "Name · effect · slug",
+    "items.filterCategory": "Category",
+    "items.cat.held": "Held Items",
+    "items.cat.mega-stone": "Mega Stones",
+    "items.cat.berry": "Berries",
+    "items.unit": "items",
+    "items.empty": "No items match your filters.",
+
+    "abilities.title": "Abilities",
+    "abilities.desc": "All abilities in Pokemon Champions. Search by name or description, and see which Pokémon can have each ability.",
+    "abilities.searchPlaceholder": "Ability name · slug · description",
+    "abilities.sort.nameEn": "Name (EN)",
+    "abilities.sort.holders": "Holder count",
+    "abilities.unit": "abilities",
+    "abilities.empty": "No abilities match your filters.",
+    "abilities.holderUnit": "holders",
+
+    "type.normal": "Normal", "type.fire": "Fire", "type.water": "Water",
+    "type.electric": "Electric", "type.grass": "Grass", "type.ice": "Ice",
+    "type.fighting": "Fighting", "type.poison": "Poison", "type.ground": "Ground",
+    "type.flying": "Flying", "type.psychic": "Psychic", "type.bug": "Bug",
+    "type.rock": "Rock", "type.ghost": "Ghost", "type.dragon": "Dragon",
+    "type.dark": "Dark", "type.steel": "Steel", "type.fairy": "Fairy",
+
+    "obtain.recruit": "Recruit", "obtain.transfer": "Transfer Only",
+    "obtain.gift": "Gift", "obtain.default": "Default",
+
+    // Detail page
+    "detail.loading": "Loading…",
+    "detail.notFound": "Pokémon not found.",
+    "detail.backToList": "Pokémon List",
+    "detail.baseStats": "Base Stats",
+    "detail.abilities": "Abilities",
+    "detail.forms": "Forms",
+    "detail.moves": "Moves",
+    "detail.movesSearch": "Search move name or type…",
+    "detail.move.name": "Move",
+    "detail.move.type": "Type",
+    "detail.move.category": "Class",
+    "detail.move.power": "Pwr",
+    "detail.move.accuracy": "Acc",
+    "detail.move.pp": "PP",
+    "move.cat.physical": "Physical",
+    "move.cat.special": "Special",
+    "move.cat.status": "Status",
+
+    // Stat labels
+    "stat.hp": "HP",
+    "stat.atk": "Atk",
+    "stat.def": "Def",
+    "stat.spAtk": "Sp.Atk",
+    "stat.spDef": "Sp.Def",
+    "stat.speed": "Speed",
+
+    // Party builder
+    "party.title": "Party Builder",
+    "party.lead": "Build a team of up to six, and analyse base stats and type coverage. Copy the URL to share your party.",
+    "party.addSlot": "Add Pokémon",
+    "party.removeSlot": "Clear slot",
+    "party.noItem": "No item",
+    "party.copyUrl": "Copy URL",
+    "party.copied": "Copied!",
+    "party.save": "Save locally",
+    "party.saveAs": "Name this party",
+    "party.loadSaved": "Saved parties…",
+    "party.emptyCantSave": "Cannot save an empty party.",
+    "party.reset": "Reset",
+    "party.pickerSearch": "Search name (KR/EN)…",
+    "party.close": "Close",
+    "party.alreadyInParty": "Already in party",
+    "party.analysis.stats": "Base stat totals",
+    "party.analysis.totalBase": "Party total",
+    "party.analysis.types": "Type distribution",
+    "party.analysis.duplicateCombo": "Duplicate type combos",
+    "party.analysis.offense": "Offensive coverage (STAB only)",
+    "party.analysis.offenseHint": "Highest multiplier any member can deal to each defending type, using only their own types (STAB).",
+    "party.analysis.bestVs": "Best multiplier vs",
+    "party.analysis.noSuperEffective": "Types with no super-effective STAB from this party",
+    "party.analysis.defense": "Defensive profile",
+    "party.analysis.defenseHint": "For each attacking type, how many party members take ≥2× damage.",
+    "party.analysis.weakCount": "weak",
+    "party.analysis.resistCount": "resist",
+    "party.analysis.immuneCount": "immune",
+    "party.analysis.sharedWeakness": "Shared weaknesses (3+ members)",
+    "party.analysis.games": "HOME-direct source games",
+    "party.analysis.gamesHint": "Which game combinations can supply every member via Pokémon HOME.",
+    "party.analysis.allMembersGames": "Games that cover every member",
+    "party.analysis.noSingleGame": "No single game covers the whole party — multiple games required",
+    "party.analysis.noDirectHome": "Party contains Pokémon that cannot be HOME-transferred directly (e.g. Alolan forms).",
+    "empty": "No results.",
+
+    "game.sword": "Sword",
+    "game.shield": "Shield",
+    "game.brilliant-diamond": "Brilliant Diamond",
+    "game.shining-pearl": "Shining Pearl",
+    "game.legends-arceus": "Legends: Arceus",
+    "game.scarlet": "Scarlet",
+    "game.violet": "Violet",
+    "game.lets-go-pikachu": "Let's Go Pikachu",
+    "game.lets-go-eevee": "Let's Go Eevee",
+
+    "error.loadFailed": "Failed to load data",
+    "error.noData": "No data",
+  },
+};
+
+let _lang = localStorage.getItem("lang") || "ko";
+
+export function getLang() {
+  return _lang;
+}
+
+export function setLang(lang) {
+  _lang = lang;
+  localStorage.setItem("lang", lang);
+  location.reload();
+}
+
+export function t(key) {
+  return STRINGS[_lang]?.[key] ?? STRINGS.ko[key] ?? key;
+}
+
+/** Scan DOM for [data-i18n] / [data-i18n-ph] / [data-i18n-aria] and apply. */
+export function applyTranslations() {
+  document.documentElement.lang = _lang;
+
+  for (const el of document.querySelectorAll("[data-i18n]")) {
+    const val = t(el.dataset.i18n);
+    if (val) el.textContent = val;
+  }
+  for (const el of document.querySelectorAll("[data-i18n-ph]")) {
+    el.placeholder = t(el.dataset.i18nPh);
+  }
+  for (const el of document.querySelectorAll("[data-i18n-aria]")) {
+    el.setAttribute("aria-label", t(el.dataset.i18nAria));
+  }
+}
+
+/** Wire up the #lang-toggle button. */
+export function initLangToggle() {
+  const btn = document.getElementById("lang-toggle");
+  if (!btn) return;
+  for (const opt of btn.querySelectorAll("[data-lang]")) {
+    opt.classList.toggle("lang-toggle__opt--active", opt.dataset.lang === _lang);
+  }
+  btn.addEventListener("click", () => {
+    setLang(_lang === "ko" ? "en" : "ko");
+  });
+}

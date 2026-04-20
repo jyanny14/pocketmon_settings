@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "growth",
+    "nameEn": "Growth",
+    "pp": 20,
+    "power": null,
+    "accuracy": null,
+    "effectEn": "Boosts the user's Attack and Sp. Atk stats by 1 stage. In harsh sunlight these stats will be boosted by 2 stages instead.",
+    "effectChance": 0
+  },
+  {
+    "slug": "crabhammer",
+    "nameEn": "Crabhammer",
+    "pp": 12,
+    "power": 100,
+    "accuracy": 95,
+    "effectEn": "This move has a 1-stage Critical-Hit Ratio Boost.",
+    "effectChance": 0
+  },
+  {
+    "slug": "bonerush",
+    "nameEn": "Bone Rush",
+    "pp": 12,
+    "power": 30,
+    "accuracy": 90,
+    "effectEn": "The user attacks 2 to 5 times in a row.",
+    "effectChance": 0
+  },
+  {
+    "slug": "ironhead",
+    "nameEn": "Iron Head",
+    "pp": 16,
+    "power": 80,
+    "accuracy": 100,
+    "effectEn": "Has a 20% chance of making the target flinch.",
+    "effectChance": 20
+  },
+  {
+    "slug": "nightdaze",
+    "nameEn": "Night Daze",
+    "pp": 12,
+    "power": 90,
+    "accuracy": 95,
+    "effectEn": "Has a 40% chance of lowering the target's accuracy by 1 stage.",
+    "effectChance": 40
+  },
+  {
+    "slug": "moonblast",
+    "nameEn": "Moonblast",
+    "pp": 16,
+    "power": 95,
+    "accuracy": 100,
+    "effectEn": "Has a 10% chance of lowering the target's Sp. Atk stat by 1 stage.",
+    "effectChance": 10
+  },
+  {
+    "slug": "firstimpression",
+    "nameEn": "First Impression",
+    "pp": 12,
+    "power": 100,
+    "accuracy": 100,
+    "effectEn": "This move fails unless it is the first move used by the user after it enters a battle.",
+    "effectChance": 0
+  },
+  {
+    "slug": "spiritshackle",
+    "nameEn": "Spirit Shackle",
+    "pp": 12,
+    "power": 90,
+    "accuracy": 100,
+    "effectEn": "Gives the target the Can't Escape status.",
+    "effectChance": 0
+  },
+  {
+    "slug": "firelash",
+    "nameEn": "Fire Lash",
+    "pp": 16,
+    "power": 90,
+    "accuracy": 100,
+    "effectEn": "Lowers the target's Defense stat by 1 stage.",
+    "effectChance": 0
+  },
+  {
+    "slug": "tropkick",
+    "nameEn": "Trop Kick",
+    "pp": 16,
+    "power": 85,
+    "accuracy": 100,
+    "effectEn": "Lowers the target's Attack stat by 1 stage.",
+    "effectChance": 0
+  },
+  {
+    "slug": "beakblast",
+    "nameEn": "Beak Blast",
+    "pp": 8,
+    "power": 120,
+    "accuracy": 100,
+    "effectEn": "If the user is hit by a contact move before it uses this move the attacker will be burned.",
+    "effectChance": 0
+  },
+  {
+    "slug": "snaptrap",
+    "nameEn": "Snap Trap",
+    "pp": 16,
+    "power": 35,
+    "accuracy": 100,
+    "effectEn": "Gives the target the Bound status.",
+    "effectChance": 100
+  },
+  {
+    "slug": "appleacid",
+    "nameEn": "Apple Acid",
+    "pp": 12,
+    "power": 90,
+    "accuracy": 100,
+    "effectEn": "Lowers the target's Sp. Def stat by 1 stage.",
+    "effectChance": 0
+  },
+  {
+    "slug": "gravapple",
+    "nameEn": "Grav Apple",
+    "pp": 12,
+    "power": 90,
+    "accuracy": 100,
+    "effectEn": "Lowers the target's Defense stat by 1 stage. This move's power is boosted by 50% when the Gravity status is active.",
+    "effectChance": 0
+  },
+  {
+    "slug": "direclaw",
+    "nameEn": "Dire Claw",
+    "pp": 16,
+    "power": 80,
+    "accuracy": 100,
+    "effectEn": "Has a 30% chance of leaving the target poisoned paralyzed or asleep.",
+    "effectChance": 30
+  },
+  {
+    "slug": "psyshieldbash",
+    "nameEn": "Psyshield Bash",
+    "pp": 12,
+    "power": 90,
+    "accuracy": 90,
+    "effectEn": "Boosts the user's Defense stat by 1 stage.",
+    "effectChance": 0
+  },
+  {
+    "slug": "mountaingale",
+    "nameEn": "Mountain Gale",
+    "pp": 12,
+    "power": 120,
+    "accuracy": 85,
+    "effectEn": "Has a 30% chance of making the target flinch.",
+    "effectChance": 30
+  },
+  {
+    "slug": "infernalparade",
+    "nameEn": "Infernal Parade",
+    "pp": 16,
+    "power": 65,
+    "accuracy": 100,
+    "effectEn": "Has a 30% chance of burning the target. This move's power is doubled if the target has a status condition.",
+    "effectChance": 30
+  },
+  {
+    "slug": "revivalblessing",
+    "nameEn": "Revival Blessing",
+    "pp": null,
+    "power": null,
+    "accuracy": null,
+    "effectEn": "Revives a Pokémon in the user's party that has fainted and restores 1/2 of that Pokémon's max HP.",
+    "effectChance": 0
+  },
+  {
+    "slug": "doubleshock",
+    "nameEn": "Double Shock",
+    "pp": null,
+    "power": null,
+    "accuracy": null,
+    "effectEn": "The user loses the Electric type. This move fails unless it is used by an Electric type.",
+    "effectChance": 0
+  },
+  {
+    "slug": "syrupbomb",
+    "nameEn": "Syrup Bomb",
+    "pp": 12,
+    "power": 60,
+    "accuracy": 90,
+    "effectEn": "Gives the target the Syrupy status for 3 turns.",
+    "effectChance": 100
+  }
+]
