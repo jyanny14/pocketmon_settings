@@ -150,7 +150,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user attacks the target using its angelic voice. This also confuses the target if its stats have been boosted during the turn.",
-    "flavorTextKo": "",
+    "flavorTextKo": "천사 같은 목소리로 상대를 공격한다. 이 턴 동안 상대의 능력이 올라갔다면 상대를 혼란시킨다.",
     "updatedInChampions": false
   },
   {
@@ -221,7 +221,7 @@
     "accuracy": 100,
     "pp": 20,
     "flavorTextEn": "The user expels pressurized water to cut at the target like a blade. This move has a heightened chance of landing a critical hit.",
-    "flavorTextKo": "",
+    "flavorTextKo": "수압으로 만든 칼날로 상대를 베어 공격한다. 급소에 맞을 확률이 높다.",
     "updatedInChampions": false
   },
   {
@@ -263,7 +263,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user toys with the target and attacks it using light and fluid dance steps. This also boosts the user's Speed stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "가볍고 유려한 스텝으로 상대를 농락하며 공격한다. 자신의 스피드가 올라간다.",
     "updatedInChampions": false
   },
   {
@@ -291,7 +291,7 @@
     "accuracy": 100,
     "pp": 5,
     "flavorTextEn": "The user shoots its own armor out as blazing projectiles. This also lowers the user’s Defense and Sp. Def stats.",
-    "flavorTextKo": "",
+    "flavorTextKo": "자신의 껍데기를 불꽃 포탄으로 발사해 상대를 공격한다. 자신의 방어와 특수방어가 떨어진다.",
     "updatedInChampions": false
   },
   {
@@ -403,7 +403,7 @@
     "accuracy": 90,
     "pp": 10,
     "flavorTextEn": "The user attacks by kicking up into the air and slamming its heel down upon the target. This may also confuse the target. If it misses, the user takes damage instead.",
-    "flavorTextKo": "",
+    "flavorTextKo": "공중으로 뛰어올라 발뒤꿈치로 상대를 내리찍는다. 상대를 혼란시킬 때가 있다. 빗나가면 자신도 대미지를 받는다.",
     "updatedInChampions": false
   },
   {
@@ -544,7 +544,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user focuses its bitter feelings toward the world of the living into a slashing attack. The user's HP is restored by up to half the damage taken by the target.",
-    "flavorTextKo": "",
+    "flavorTextKo": "이승에 대한 애절한 마음을 담아 베어 공격한다. 상대에게 준 대미지의 절반만큼 자신의 HP 가 회복된다.",
     "updatedInChampions": false
   },
   {
@@ -909,7 +909,7 @@
     "accuracy": 100,
     "pp": 20,
     "flavorTextEn": "The user attacks the target by showering it with water that's so cold it saps the target's power. This also lowers the target's Attack stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "차가운 물을 끼얹어 공격한다. 공격한 상대의 공격을 떨어뜨린다.",
     "updatedInChampions": false
   },
   {
@@ -923,7 +923,7 @@
     "accuracy": null,
     "pp": 10,
     "flavorTextEn": "The user tells a chillingly bad joke before switching places with a party Pokémon in waiting. This summons a snowstorm lasting five turns.",
-    "flavorTextKo": "",
+    "flavorTextKo": "썰렁한 말장난을 한 뒤 대기 중인 같은편과 교대한다. 5턴 동안 눈보라를 부른다.",
     "updatedInChampions": false
   },
   {
@@ -1035,7 +1035,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user retaliates with much greater force against the opponent that last inflicted damage on it.",
-    "flavorTextKo": "",
+    "flavorTextKo": "마지막으로 자신에게 대미지를 준 상대에게 훨씬 큰 위력으로 되갚아 준다.",
     "updatedInChampions": false
   },
   {
@@ -1358,7 +1358,7 @@
     "accuracy": 100,
     "pp": 16,
     "flavorTextEn": "The user lashes out at the target with ruinous claws. This may also leave the target poisoned, paralyzed, or asleep.",
-    "flavorTextKo": "",
+    "flavorTextKo": "무서운 손톱으로 상대를 할퀸다. 상대를 독, 마비, 잠듦 중 하나의 상태로 만들 때가 있다.",
     "updatedInChampions": true,
     "championsEffectEn": "Has a 30% chance of leaving the target poisoned paralyzed or asleep."
   },
@@ -1471,7 +1471,7 @@
     "accuracy": 0,
     "pp": 15,
     "flavorTextEn": "The user raises its allies’ morale with a draconic cry so that their future attacks have a heightened chance of landing critical hits. This rouses Dragon types more.",
-    "flavorTextKo": "",
+    "flavorTextKo": "용맹한 포효로 같은편의 사기를 북돋아 급소에 맞을 확률을 올린다. 드래곤타입 같은편은 효과가 더 크다.",
     "updatedInChampions": false
   },
   {
@@ -1737,7 +1737,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user gathers electricity on the first turn, boosting its Sp. Atk stat, then fires a high-voltage shot on the next turn. The shot will be fired immediately in rain.",
-    "flavorTextKo": "",
+    "flavorTextKo": "1턴째에 전기를 모아 특수공격을 올리고, 2턴째에 고전압 빔을 발사한다. 비가 내릴 때는 바로 발사한다.",
     "updatedInChampions": false
   },
   {
@@ -2003,7 +2003,7 @@
     "accuracy": 100,
     "pp": 5,
     "flavorTextEn": "The user shoots a beam of light to inflict damage. Sometimes all the user's heads shoot beams in unison, doubling the move's power.",
-    "flavorTextKo": "",
+    "flavorTextKo": "빛의 빔을 쏘아 공격한다. 기분에 따라 모든 머리가 동시에 빔을 쏠 때가 있으며, 그때는 위력이 2배가 된다.",
     "updatedInChampions": false
   },
   {
@@ -2257,7 +2257,7 @@
     "accuracy": null,
     "pp": 10,
     "flavorTextEn": "The user throws a rigged bouquet of flowers at the target. This attack never misses and always lands a critical hit.",
-    "flavorTextKo": "",
+    "flavorTextKo": "장치된 꽃다발을 상대에게 던진다. 반드시 명중하고 반드시 급소에 맞는다.",
     "updatedInChampions": false
   },
   {
@@ -2481,7 +2481,7 @@
     "accuracy": 100,
     "pp": 5,
     "flavorTextEn": "The user swings its whole body around to attack with its huge hammer. This move can't be used twice in a row.",
-    "flavorTextKo": "",
+    "flavorTextKo": "몸 전체를 휘둘러 거대한 해머로 공격한다. 2턴 연속으로 쓸 수는 없다.",
     "updatedInChampions": false
   },
   {
@@ -2679,7 +2679,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The target is crushed with an arm, a claw, or the like to inflict damage. The more HP the target has left, the greater the move's power.",
-    "flavorTextKo": "",
+    "flavorTextKo": "팔이나 집게 등으로 상대를 짓눌러 공격한다. 상대의 남은 HP 가 많을수록 위력이 올라간다.",
     "updatedInChampions": false
   },
   {
@@ -2707,7 +2707,7 @@
     "accuracy": 100,
     "pp": 5,
     "flavorTextEn": "The user smashes into the target in a full-body tackle. This also lowers the user’s Defense and Sp. Def stats.",
-    "flavorTextKo": "",
+    "flavorTextKo": "몸통 박치기로 상대에게 정면으로 돌진한다. 자신의 방어와 특수방어가 떨어진다.",
     "updatedInChampions": false
   },
   {
@@ -3071,7 +3071,7 @@
     "accuracy": 100,
     "pp": 15,
     "flavorTextEn": "The user covers its feet in thin ice and twirls around, slamming into the target. This move's spinning motion also destroys the terrain.",
-    "flavorTextKo": "",
+    "flavorTextKo": "얇은 얼음으로 발을 감싼 채 회전하며 상대에게 부딪친다. 회전의 여파로 필드 상태를 파괴한다.",
     "updatedInChampions": false
   },
   {
@@ -3240,7 +3240,7 @@
     "accuracy": 100,
     "pp": 15,
     "flavorTextEn": "The user summons a torrent around its fist and punches at blinding speed. This move always goes first.",
-    "flavorTextKo": "",
+    "flavorTextKo": "주먹에 격류를 두른 채 초고속 펀치를 날린다. 반드시 먼저 공격한다.",
     "updatedInChampions": false
   },
   {
@@ -3282,7 +3282,7 @@
     "accuracy": null,
     "pp": 10,
     "flavorTextEn": "The user slashes at the target after kowtowing to make the target let down its guard. This attack never misses.",
-    "flavorTextKo": "",
+    "flavorTextKo": "굽신거려 방심하게 만든 상대를 벤다. 반드시 명중한다.",
     "updatedInChampions": false
   },
   {
@@ -3324,7 +3324,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user attacks to avenge its allies. The more defeated allies there are in the user's party, the greater the move's power.",
-    "flavorTextKo": "",
+    "flavorTextKo": "쓰러진 같은편의 원한을 풀어주기 위해 공격한다. 쓰러진 같은편의 수가 많을수록 위력이 올라간다.",
     "updatedInChampions": false
   },
   {
@@ -3506,7 +3506,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user attacks by unleashing a peculiar light that even affects the mind. This also harshly lowers the target's Sp. Def stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "정신에까지 영향을 주는 기묘한 빛을 쏘아 공격한다. 상대의 특수방어를 크게 떨어뜨린다.",
     "updatedInChampions": false
   },
   {
@@ -3604,7 +3604,7 @@
     "accuracy": 90,
     "pp": 15,
     "flavorTextEn": "The user fires a blast of tea that it mixed. The user's HP is restored by up to half the damage taken by the target. This may also leave the target with a burn.",
-    "flavorTextKo": "",
+    "flavorTextKo": "직접 만든 말차를 상대에게 뿌려 공격한다. 상대에게 준 대미지의 절반만큼 자신의 HP 가 회복된다. 상대를 화상 상태로 만들 때가 있다.",
     "updatedInChampions": false
   },
   {
@@ -3829,7 +3829,7 @@
     "accuracy": 100,
     "pp": 15,
     "flavorTextEn": "The user performs a spin attack that can also eliminate the effects of such moves as Bind, Wrap, and Leech Seed. This also poisons opposing Pokémon.",
-    "flavorTextKo": "",
+    "flavorTextKo": "회전하며 공격한다. 조르기 기술의 효과나 씨뿌리기 등도 날려버린다. 상대를 독 상태로 만든다.",
     "updatedInChampions": false
   },
   {
@@ -4236,7 +4236,7 @@
     "accuracy": 90,
     "pp": 10,
     "flavorTextEn": "The user’s fellows gather in droves to perform a combo attack that hits the target one to ten times in a row.",
-    "flavorTextKo": "",
+    "flavorTextKo": "같은편이 우르르 몰려와 상대를 1~10회 연속 공격한다.",
     "updatedInChampions": false
   },
   {
@@ -4250,7 +4250,7 @@
     "accuracy": 100,
     "pp": 20,
     "flavorTextEn": "The user attacks by pouncing on the target. This also lowers the target's Speed stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "상대에게 덤벼들어 공격한다. 상대의 스피드를 떨어뜨린다.",
     "updatedInChampions": false
   },
   {
@@ -4404,7 +4404,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user attacks the target with unpleasant sound waves. For two turns, the target is prevented from recovering HP through moves, Abilities, or held items.",
-    "flavorTextKo": "",
+    "flavorTextKo": "상대에게 불쾌한 음파로 공격한다. 2턴 동안 상대는 기술, 특성, 지닌 도구로 HP 를 회복할 수 없게 된다.",
     "updatedInChampions": false
   },
   {
@@ -4460,7 +4460,7 @@
     "accuracy": 90,
     "pp": 12,
     "flavorTextEn": "Cloaking itself in psychic energy, the user slams into the target. This also boosts the user’s Defense stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "사이킥 에너지를 몸에 두른 채 상대에게 돌진한다. 자신의 방어가 올라간다.",
     "updatedInChampions": true,
     "championsEffectEn": "Boosts the user's Defense stat by 1 stage."
   },
@@ -4559,7 +4559,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user performs a tackle like a raging bull. This move's type depends on the user's form. It can also break barriers, such as Light Screen and Reflect.",
-    "flavorTextKo": "",
+    "flavorTextKo": "난폭한 황소처럼 돌진해 공격한다. 자신의 모습에 따라 타입이 바뀐다. 빛의장막이나 리플렉터 등을 깨뜨린다.",
     "updatedInChampions": false
   },
   {
@@ -4573,7 +4573,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user rampages around spewing flames for two to three turns. The user then becomes confused.",
-    "flavorTextKo": "",
+    "flavorTextKo": "2~3턴 동안 불꽃을 내뿜으며 계속 날뛴다. 그 후 자신이 혼란 상태가 된다.",
     "updatedInChampions": false
   },
   {
@@ -4881,7 +4881,7 @@
     "accuracy": 100,
     "pp": 15,
     "flavorTextEn": "The user salt cures the target, inflicting damage every turn. Steel and Water types are more strongly affected by this move.",
-    "flavorTextKo": "",
+    "flavorTextKo": "상대를 소금절임으로 만들어 매 턴 대미지를 준다. 강철타입·물타입 포켓몬은 더 큰 대미지를 받는다.",
     "updatedInChampions": false
   },
   {
@@ -5091,7 +5091,7 @@
     "accuracy": null,
     "pp": 10,
     "flavorTextEn": "The user creates a substitute for itself using its own HP before switching places with a party Pokémon in waiting.",
-    "flavorTextKo": "",
+    "flavorTextKo": "자신의 HP 를 깎아 분신을 만들고, 대기 중인 같은편과 교대한다.",
     "updatedInChampions": false
   },
   {
@@ -5329,7 +5329,7 @@
     "accuracy": null,
     "pp": 10,
     "flavorTextEn": "The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types.",
-    "flavorTextKo": "",
+    "flavorTextKo": "5턴 동안 눈보라를 부른다. 얼음타입의 방어가 올라간다.",
     "updatedInChampions": false
   },
   {
@@ -5413,7 +5413,7 @@
     "accuracy": null,
     "pp": 15,
     "flavorTextEn": "The user emits an incredibly spicy extract, sharply boosting the target's Attack stat and harshly lowering the target's Defense stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "매우 매운 추출물을 내뿜는다. 상대의 공격이 크게 올라가고 방어가 크게 떨어진다.",
     "updatedInChampions": false
   },
   {
@@ -5596,7 +5596,7 @@
     "accuracy": 90,
     "pp": 15,
     "flavorTextEn": "The user swings its stone axes at the target. Stone splinters left behind by this attack float around the target.",
-    "flavorTextKo": "",
+    "flavorTextKo": "돌도끼를 상대에게 휘둘러 공격한다. 흩어진 돌 조각이 상대 주위를 떠돈다.",
     "updatedInChampions": false
   },
   {
@@ -5764,7 +5764,7 @@
     "accuracy": 95,
     "pp": 15,
     "flavorTextEn": "The user electrifies its body and drops onto the target to inflict damage. If this move misses, the user takes damage instead.",
-    "flavorTextKo": "",
+    "flavorTextKo": "몸에 전기를 두른 채 상대에게 내리꽂아 공격한다. 빗나가면 자신도 대미지를 받는다.",
     "updatedInChampions": false
   },
   {
@@ -5918,7 +5918,7 @@
     "accuracy": 90,
     "pp": 12,
     "flavorTextEn": "The user sets off an explosion of sticky candy syrup, which coats the target and causes the target's Speed stat to drop each turn for three turns.",
-    "flavorTextKo": "",
+    "flavorTextKo": "끈적한 시럽을 터뜨려 상대에게 뿌린다. 3턴 동안 상대의 스피드가 매 턴 떨어진다.",
     "updatedInChampions": true,
     "championsEffectEn": "Gives the target the Syrupy status for 3 turns."
   },
@@ -6017,7 +6017,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "Spurred by desperation, the user attacks the target. This move's power is doubled if the user's previous move failed.",
-    "flavorTextKo": "",
+    "flavorTextKo": "발끈하며 상대를 공격한다. 직전 턴에 기술이 실패했다면 위력이 2배가 된다.",
     "updatedInChampions": false
   },
   {
@@ -6171,7 +6171,7 @@
     "accuracy": null,
     "pp": 10,
     "flavorTextEn": "The user tidies up and removes the effects of Spikes, Stealth Rock, Sticky Web, Toxic Spikes, and Substitute. This also boosts the user’s Attack and Speed stats.",
-    "flavorTextKo": "",
+    "flavorTextKo": "깨끗하게 정리해 압정뿌리기, 스텔스록, 끈적끈적네트, 독압정, 분신을 해제한다. 자신의 공격과 스피드가 올라간다.",
     "updatedInChampions": false
   },
   {
@@ -6185,7 +6185,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user blows out raging flames as if singing a song, scorching the target. This also boosts the user's Sp. Atk stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "노래하듯 격렬한 불꽃을 뿜어내 상대를 태운다. 자신의 특수공격이 올라간다.",
     "updatedInChampions": false
   },
   {
@@ -6255,7 +6255,7 @@
     "accuracy": 100,
     "pp": 20,
     "flavorTextEn": "The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Speed stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "수풀에서 뛰쳐나오듯 기습 공격한다. 가벼운 스텝으로 자신의 스피드가 올라간다.",
     "updatedInChampions": false
   },
   {
@@ -6368,7 +6368,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user shoots mystical beams from its eyes to inflict damage. The target is hit twice in a row.",
-    "flavorTextKo": "",
+    "flavorTextKo": "눈에서 신비한 빔을 2연속 쏴서 상대를 공격한다.",
     "updatedInChampions": false
   },
   {
@@ -6396,7 +6396,7 @@
     "accuracy": 100,
     "pp": 15,
     "flavorTextEn": "The user reacts to the target's movement and strikes with the heel of its palm, making the target flinch. This move fails if the target is not readying a priority move.",
-    "flavorTextKo": "",
+    "flavorTextKo": "상대의 움직임에 반응해 손바닥 아랫부분으로 올려쳐서 풀죽게 만든다. 상대가 선제공격 기술을 쓰려 하지 않으면 실패한다.",
     "updatedInChampions": false
   },
   {
@@ -6536,7 +6536,7 @@
     "accuracy": 100,
     "pp": 10,
     "flavorTextEn": "The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user quite a lot.",
-    "flavorTextKo": "",
+    "flavorTextKo": "물을 두르고 몸 전체로 상대에게 격돌한다. 자신도 상당한 대미지를 받는다.",
     "updatedInChampions": false
   },
   {

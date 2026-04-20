@@ -212,10 +212,12 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - `scripts/fetch_moves.py --force` 재실행으로 PokeAPI 가 뒤늦게 반영해도 자동 흡수(그 시점에 processed 쪽에 값이 들어오니 manual 은 자연스레 no-op).
 - 번역은 이번에 SV 기준으로 채웠지만 Champions 에서 일부 기술 명칭이 바뀐 경우가 확인되면 이 파일만 수정.
 
-### T20. 기술 `flavorTextKo` 미매칭 44건 수동 보강
-- T10 수집 결과 437/481. T19 와 slug 집합이 거의 겹침.
-- `data/manual/move_flavors_ko.json` 신설, 같은 경로로 병합.
-- 우선순위는 T19 보다 낮음 (UI 노출 빈도 낮음).
+### T20. 기술 `flavorTextKo` 미매칭 44건 수동 보강 ✅ (2026-04-20)
+- T10 수집 결과 437/481 → 이번에 44건 추가 → **481/481 완료**. T19 35건에 Gen 9 후반 추가 기술 9건(alluringvoice, dragoncheer, electroshot, ficklebeam, hardpress, psychicnoise, supercellslam, temperflare, upperhand) 이 더해져 총 44건.
+- `data/manual/move_flavors_ko.json` 신설 (`{slug: flavorTextKo}`). `scripts/build_moves.py` 에 `_load_slug_map` / `_load_move_flavors_ko` 추가, fetched 값이 비어 있을 때만 덮어씀 (이름과 동일 패턴).
+- 노출 위치: `pokemon-detail.js:182` — 기술 테이블 이름 셀 tooltip(`title` 속성). KO 모드에서 한국어 설명으로 표시됨.
+- 톤은 공식 게임 텍스트 `~한다/~된다` 풍. 1–2문장.
+- 빌드 로그: `manual nameKo=35, manual flavorKo=44`. corpus 981 → 986 KB.
 
 ### T21. `prompts` 페이지 i18n 적용 (역방향)
 - KO→EN 이 아닌 EN 모드에서 한국어 고정이 되는 문제. 사용자 질문의 범위 밖이지만 전체 품질 관점에서 같이 정리.

@@ -27,6 +27,8 @@ UPDATED_ATTACKS_PATH = PROJECT_ROOT / "data" / "processed" / "updated_attacks.js
 # Manual Korean-name override, filled in for moves whose PokeAPI entry has no
 # Korean name yet (Gen 9 and later). Shape: {slug: nameKo}.
 MOVE_NAMES_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_ko.json"
+# Manual Korean flavor-text override. Shape: {slug: flavorTextKo}.
+MOVE_FLAVORS_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_flavors_ko.json"
 OUT = PROJECT_ROOT / "web" / "data" / "moves.json"
 
 
@@ -42,17 +44,25 @@ def _load_updated_attacks() -> dict[str, dict]:
     return {e["slug"]: e for e in data if isinstance(e, dict) and e.get("slug")}
 
 
-def _load_move_names_ko() -> dict[str, str]:
-    if not MOVE_NAMES_KO_OVERRIDE_PATH.exists():
+def _load_slug_map(path) -> dict[str, str]:
+    if not path.exists():
         return {}
     try:
-        data = json.loads(MOVE_NAMES_KO_OVERRIDE_PATH.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
     except Exception as exc:  # noqa: BLE001
-        log.warning("move_names_ko read failed: %s", exc)
+        log.warning("read failed (%s): %s", path, exc)
         return {}
     if not isinstance(data, dict):
         return {}
     return {k: v for k, v in data.items() if v and not k.startswith("_")}
+
+
+def _load_move_names_ko() -> dict[str, str]:
+    return _load_slug_map(MOVE_NAMES_KO_OVERRIDE_PATH)
+
+
+def _load_move_flavors_ko() -> dict[str, str]:
+    return _load_slug_map(MOVE_FLAVORS_KO_OVERRIDE_PATH)
 
 
 def main() -> int:
@@ -67,7 +77,9 @@ def main() -> int:
     data = json.loads(SRC.read_text(encoding="utf-8"))
     overlay = _load_updated_attacks()
     names_ko_override = _load_move_names_ko()
-    manual_applied = 0
+    flavors_ko_override = _load_move_flavors_ko()
+    manual_name_applied = 0
+    manual_flavor_applied = 0
     updated = 0
     rows: list[dict] = []
     for slug in sorted(data):
@@ -76,7 +88,12 @@ def main() -> int:
         name_ko = fetched_name_ko
         if not name_ko and slug in names_ko_override:
             name_ko = N(names_ko_override[slug])
-            manual_applied += 1
+            manual_name_applied += 1
+        fetched_flavor_ko = N(e.get("flavorTextKo", ""))
+        flavor_ko = fetched_flavor_ko
+        if not flavor_ko and slug in flavors_ko_override:
+            flavor_ko = N(flavors_ko_override[slug])
+            manual_flavor_applied += 1
         row = {
             "slug": slug,
             "pokeapiSlug": e.get("pokeapiSlug", ""),
@@ -88,7 +105,7 @@ def main() -> int:
             "accuracy": e.get("accuracy"),
             "pp": e.get("pp"),
             "flavorTextEn": N(e.get("flavorTextEn", "")),
-            "flavorTextKo": N(e.get("flavorTextKo", "")),
+            "flavorTextKo": flavor_ko,
             "updatedInChampions": False,
         }
         if slug in overlay:
@@ -111,10 +128,11 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
     log.info(
-        "wrote %d moves (Champions overlay=%d, manual nameKo filled=%d) → %s",
+        "wrote %d moves (Champions overlay=%d, manual nameKo=%d, manual flavorKo=%d) → %s",
         len(rows),
         updated,
-        manual_applied,
+        manual_name_applied,
+        manual_flavor_applied,
         OUT,
     )
     return 0
