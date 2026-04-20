@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T09:17:29Z",
+  "generatedAt": "2026-04-20T09:26:44Z",
   "schemaVersion": "1.0.0",
   "sources": {
     "serebii_champions": "https://www.serebii.net/pokemonchampions/",
@@ -23,7 +23,7 @@
       "name": "abilities",
       "path": "abilities.json",
       "count": 192,
-      "sha256": "f9ed1e8ee7771350970163fc707e469534742ab8c52070017b9ae6700ca8aa20"
+      "sha256": "b0ff6157557b4402e8f732188d1303050c44cc34fb090df23176cfac0cb13bf1"
     },
     {
       "name": "type_chart",

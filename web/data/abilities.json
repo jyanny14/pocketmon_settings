@@ -3378,7 +3378,7 @@
     "description": "Increases the power of Slicing moves used by this Pokémon by 50%",
     "descriptionKo": "",
     "gameText": "Powers up slicing moves.",
-    "gameTextKo": "",
+    "gameTextKo": "상대를 베는 기술의 위력이 올라간다.",
     "isNewInChampions": false,
     "pokemon": [
       {
@@ -4706,11 +4706,11 @@
   {
     "slug": "zerotohero",
     "nameEn": "Zero to Hero",
-    "nameKo": "마이티체인지",
+    "nameKo": "마이티 체인지",
     "description": "The Pokémon transforms into its Hero Form when it switches out.",
     "descriptionKo": "",
     "gameText": "The Pokémon transforms into its Hero Form when it switches out.",
-    "gameTextKo": "",
+    "gameTextKo": "교대해서 물러나면 영웅의 모습으로 변한다.",
     "isNewInChampions": false,
     "pokemon": [
       {

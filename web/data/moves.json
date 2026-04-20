@@ -902,14 +902,14 @@
     "slug": "chillingwater",
     "pokeapiSlug": "chilling-water",
     "nameEn": "Chilling Water",
-    "nameKo": "",
+    "nameKo": "찬물끼얹기",
     "type": "water",
     "category": "special",
     "power": 50,
     "accuracy": 100,
     "pp": 20,
     "flavorTextEn": "The user attacks the target by showering it with water that's so cold it saps the target's power. This also lowers the target's Attack stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "상대의 기운이 빠질 정도로 차가운 물을 끼얹어서 공격한다. 상대의 공격을 떨어뜨린다.",
     "updatedInChampions": false
   },
   {
@@ -6248,14 +6248,14 @@
     "slug": "trailblaze",
     "pokeapiSlug": "trailblaze",
     "nameEn": "Trailblaze",
-    "nameKo": "",
+    "nameKo": "개척하기",
     "type": "grass",
     "category": "physical",
     "power": 50,
     "accuracy": 100,
     "pp": 20,
     "flavorTextEn": "The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Speed stat.",
-    "flavorTextKo": "",
+    "flavorTextKo": "풀숲에서 뛰어나오듯이 공격한다. 경쾌한 발재간으로 자신의 스피드를 올린다.",
     "updatedInChampions": false
   },
   {

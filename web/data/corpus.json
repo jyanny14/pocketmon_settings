@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "generatedAt": "2026-04-20T09:17:29Z",
+    "generatedAt": "2026-04-20T09:26:44Z",
     "schemaVersion": "1.0.0",
     "sources": {
       "serebii_champions": "https://www.serebii.net/pokemonchampions/",
@@ -24,7 +24,7 @@
         "name": "abilities",
         "path": "abilities.json",
         "count": 192,
-        "sha256": "f9ed1e8ee7771350970163fc707e469534742ab8c52070017b9ae6700ca8aa20"
+        "sha256": "b0ff6157557b4402e8f732188d1303050c44cc34fb090df23176cfac0cb13bf1"
       },
       {
         "name": "type_chart",
@@ -28787,7 +28787,7 @@
       "description": "Increases the power of Slicing moves used by this Pokémon by 50%",
       "descriptionKo": "",
       "gameText": "Powers up slicing moves.",
-      "gameTextKo": "",
+      "gameTextKo": "상대를 베는 기술의 위력이 올라간다.",
       "isNewInChampions": false,
       "pokemon": [
         {
@@ -30115,11 +30115,11 @@
     {
       "slug": "zerotohero",
       "nameEn": "Zero to Hero",
-      "nameKo": "마이티체인지",
+      "nameKo": "마이티 체인지",
       "description": "The Pokémon transforms into its Hero Form when it switches out.",
       "descriptionKo": "",
       "gameText": "The Pokémon transforms into its Hero Form when it switches out.",
-      "gameTextKo": "",
+      "gameTextKo": "교대해서 물러나면 영웅의 모습으로 변한다.",
       "isNewInChampions": false,
       "pokemon": [
         {
@@ -31421,14 +31421,14 @@
       "slug": "chillingwater",
       "pokeapiSlug": "chilling-water",
       "nameEn": "Chilling Water",
-      "nameKo": "",
+      "nameKo": "찬물끼얹기",
       "type": "water",
       "category": "special",
       "power": 50,
       "accuracy": 100,
       "pp": 20,
       "flavorTextEn": "The user attacks the target by showering it with water that's so cold it saps the target's power. This also lowers the target's Attack stat.",
-      "flavorTextKo": "",
+      "flavorTextKo": "상대의 기운이 빠질 정도로 차가운 물을 끼얹어서 공격한다. 상대의 공격을 떨어뜨린다.",
       "updatedInChampions": false
     },
     {
@@ -36767,14 +36767,14 @@
       "slug": "trailblaze",
       "pokeapiSlug": "trailblaze",
       "nameEn": "Trailblaze",
-      "nameKo": "",
+      "nameKo": "개척하기",
       "type": "grass",
       "category": "physical",
       "power": 50,
       "accuracy": 100,
       "pp": 20,
       "flavorTextEn": "The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Speed stat.",
-      "flavorTextKo": "",
+      "flavorTextKo": "풀숲에서 뛰어나오듯이 공격한다. 경쾌한 발재간으로 자신의 스피드를 올린다.",
       "updatedInChampions": false
     },
     {

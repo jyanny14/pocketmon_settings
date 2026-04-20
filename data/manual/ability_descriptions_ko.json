@@ -11,10 +11,10 @@
   "opportunist": { "gameTextKo": "상대의 능력이 올라가면 자신도 편승해서 똑같이 올린다." },
   "piercingdrill": { "gameTextKo": "꿰뚫는 기술을 사용할 때 방어 등을 무시하고 공격할 수 있으나 기술의 대미지가 1/4 로 감소한다." },
   "purifyingsalt": { "gameTextKo": "깨끗한 소금에 의해 상태 이상이 되지 않는다. 고스트타입 기술의 대미지를 반감시킨다." },
-  "sharpness": { "gameTextKo": "" },
+  "sharpness": { "gameTextKo": "상대를 베는 기술의 위력이 올라간다." },
   "spicyspray": { "gameTextKo": "기술로 대미지를 받으면 상대를 화상 상태로 만든다." },
   "supersweetsyrup": { "gameTextKo": "처음 등장했을 때 감미로운 꿀의 향기를 흩뿌려서 상대의 회피율을 떨어뜨린다." },
   "supremeoverlord": { "gameTextKo": "등장했을 때 지금까지 쓰러진 같은편의 수가 많을수록 조금씩 공격과 특수공격이 올라간다." },
   "toxicdebris": { "gameTextKo": "물리 기술로 대미지를 받으면 상대 발밑에 독압정을 뿌린다." },
-  "zerotohero": { "gameTextKo": "" }
+  "zerotohero": { "gameTextKo": "교대해서 물러나면 영웅의 모습으로 변한다." }
 }
