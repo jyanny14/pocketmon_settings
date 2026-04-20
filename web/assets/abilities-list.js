@@ -182,9 +182,13 @@ function renderCard(ability) {
   gameText.className = "ability-card__game-text";
   gameText.textContent = abilityGameText(ability);
 
-  const desc = document.createElement("p");
-  desc.className = "ability-card__desc";
-  desc.textContent = abilityDescription(ability);
+  const descText = abilityDescription(ability);
+  let desc = null;
+  if (descText) {
+    desc = document.createElement("p");
+    desc.className = "ability-card__desc";
+    desc.textContent = descText;
+  }
 
   const holders = document.createElement("div");
   holders.className = "ability-card__holders";
@@ -194,7 +198,7 @@ function renderCard(ability) {
     holders.appendChild(renderHolder(h));
   }
 
-  article.append(header, gameText, desc, holders);
+  article.append(header, gameText, ...(desc ? [desc] : []), holders);
   return article;
 }
 

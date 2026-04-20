@@ -32,6 +32,14 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T17 어빌리티 descriptionKo — A안 적용 ✅
+
+- `abilities.json[].descriptionKo` 가 0/192 라 KO 모드 어빌리티 카드가 Korean gameText 밑에 English description 을 달고 있어 섞여 보였던 문제.
+- `web/assets/app.js` `abilityDescription()` 을 KO 모드에서 `descriptionKo || ""` 전용으로 수정(English 폴백 제거) + JSDoc 에 KO 모드 시 빈 반환 → 호출자는 DOM 생략 원칙 명시.
+- `web/assets/abilities-list.js` 카드 렌더러가 descText 빈 문자열이면 `.ability-card__desc` 단락 자체를 DOM 에 추가하지 않도록 변경.
+- 결과: KO 모드는 gameText 한 줄만 깔끔히 표시 (176장 한국어, 16장은 gameText 영문 한 줄 — T18 과 겹침). EN 모드는 gameText + description 두 줄 유지.
+- 잔여 B안(192건 직접 번역)은 후순위로 TODO 유지. 공식 한국어 effect 가 존재하지 않아 품질 보증이 어렵고 A안이 체감 이슈 대부분을 해소하므로.
+
 ### T16 도구 effect 한국어 번역 ✅ 117/117
 
 - `data/manual/item_effects_ko.json` 신규 — 117개 도구(held 30 / mega-stone 59 / berry 28) effect 번역 모두 채움. 공식 한국어 게임 텍스트 컨벤션(~된다 문체)으로 통일. 메가스톤 이름은 `pokemon.json[].nameKo` 기반으로 일관 적용(예: 눈설왕/앱솔/리자몽/장크로다일/… 모단단게).

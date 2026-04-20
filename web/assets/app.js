@@ -81,11 +81,19 @@ export function abilityGameText(ability) {
     : (ability.gameText || "");
 }
 
-/** Ability description: currently English only; keep for symmetry. */
+/**
+ * Ability description paragraph.
+ *
+ * KO mode: descriptionKo only — returns "" when no Korean translation exists
+ *   (all 192 entries currently, per T11). Callers should hide the element
+ *   when this returns empty so Korean cards don't sprout a dangling English
+ *   paragraph under the already-localized gameText.
+ * EN mode: falls through to the English `description` from serebii.
+ */
 export function abilityDescription(ability) {
   if (!ability) return "";
   return getLang() === "ko"
-    ? (ability.descriptionKo || ability.description || "")
+    ? (ability.descriptionKo || "")
     : (ability.description || "");
 }
 

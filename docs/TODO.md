@@ -195,11 +195,9 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 
 ### T17. 어빌리티 `descriptionKo` 수동 보강
 - T11 에서 PokeAPI `effect_entries[ko]` 가 한국어를 제공하지 않아 현재 0/192.
-- 공식 한국어 설명은 존재하지 않는 경우가 많아 **T11 의 `gameTextKo` 를 `description` 대체로 표시하는 우회**도 선택지. UI 변경만으로 해결되면 본 T17 자체를 축소 가능.
 - 진행 방식 후보:
-  - A. `abilities-list.js` 에서 `descriptionKo` 비어 있고 `gameTextKo` 있으면 gameTextKo 우선 표시 (간단).
-  - B. `data/manual/ability_descriptions_ko.json` 생성 후 192건 번역.
-- 우선 A 로 체감 이슈 80% 해결 가능. 진행 전 한 번 더 의논.
+  - A. ✅ **완료 (2026-04-20)** — `abilityDescription()` 을 KO 모드에서 `descriptionKo` 전용으로 바꾸고, `abilities-list.js` 가 빈 값이면 `.ability-card__desc` 단락 자체를 DOM 에서 생략. KO 모드는 상단의 `gameTextKo` 한 줄만 표시되어 더 이상 영문 덩어리가 붙지 않음. 176/192 카드는 실질적 한국어, 16장은 gameTextKo 도 비어 gameText 영문 한 줄만 노출 (T18 과 겹침).
+  - B. (잔여) `data/manual/ability_descriptions_ko.json` 생성 후 192건 상세 번역. A 안으로 체감 이슈 해소돼 B 는 후순위. 공식 한국어 effect 가 존재하지 않아 직접 작문 필요 → 품질 보증 어려움. 필요해지면 착수.
 
 ### T18. 어빌리티 `gameTextKo` 미매칭 16건 수동 보강
 - T11 수집 결과 176/192. 미매칭은 Gen 9/Champions 신규 특성이 주. T4b 와 겹치는 slug 집합 확인 필요.
