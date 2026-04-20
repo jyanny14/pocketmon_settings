@@ -28,6 +28,9 @@
 
 검증: 로컬 서버에서 `robots.txt`·`prompts.html`·`party.html`·`llms.txt`·신규 JS 모듈 모두 200. `prompts.html?p=…` 쿼리 포함 200. 전 JS 모듈 `node --check` 통과. 실제 UI/클립보드 복사 동작은 브라우저 수동 검증 대상.
 
+- 최초 커밋(`627c6f1`) 후 `--amend --author` 로 작성자 이메일 오타(`gmailc.om`→`gmail.com`) 수정 → `--force-with-lease` 로 원격 갱신(`beaabf7`). 이후 로컬 `git config --global user.email` 도 사용자가 교정.
+- `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
+
 ---
 
 ## 2026-04-15

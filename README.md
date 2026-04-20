@@ -13,8 +13,11 @@
 
 ### 공개 배포 (GitHub Pages)
 
-레포 Settings → Pages → Source: `main` 브랜치 / Folder: `/web` 로 설정하면
-`https://<username>.github.io/pocketmon_settings/` 로 바로 서빙된다.
+레포 Settings → Pages → Source 를 **GitHub Actions** 로 설정한다.
+`.github/workflows/pages.yml` 이 `main` 에 푸시될 때마다 `web/` 디렉토리를
+Pages artifact 로 올려 `https://<username>.github.io/pocketmon_settings/` 에 배포한다.
+(Pages 의 "Deploy from a branch" 는 폴더를 `/` 또는 `/docs` 로만 허용하므로
+`web/` 을 그대로 쓰려면 Actions 경로가 필요하다.)
 검색 엔진 인덱싱은 `web/robots.txt` 로 전면 차단.
 
 ### 로컬 실행
