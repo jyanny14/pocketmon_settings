@@ -39,19 +39,33 @@ async function init() {
     for (const m of moves) state.moveMap.set(m.slug, m);
     state.items = items;
   } catch (err) {
-    els.cards.innerHTML = `<p class="empty-state">${t("prompts.loadError")}: ${err.message}</p>`;
+    showFatal(`${t("prompts.loadError")}: ${err.message}`);
     return;
   }
 
-  const params = new URLSearchParams(location.search);
-  const encoded = params.get("p") || "";
-  state.party = decodeParty(encoded, { pokemonMap: state.pokemonMap, items: state.items });
+  try {
+    const params = new URLSearchParams(location.search);
+    const encoded = params.get("p") || "";
+    state.party = decodeParty(encoded, { pokemonMap: state.pokemonMap, items: state.items });
 
-  const backQuery = encoded ? `?p=${encoded}` : "";
-  els.backToParty.href = `./party.html${backQuery}`;
+    const backQuery = encoded ? `?p=${encoded}` : "";
+    if (els.backToParty) els.backToParty.href = `./party.html${backQuery}`;
 
-  renderSummary();
-  renderCards();
+    renderSummary();
+    renderCards();
+  } catch (err) {
+    console.error("prompts render failed:", err);
+    showFatal(`렌더링 오류: ${err.message}\n${err.stack || ""}`);
+  }
+}
+
+function showFatal(msg) {
+  const host = els.cards || document.getElementById("main") || document.body;
+  const div = document.createElement("pre");
+  div.style.cssText = "background:#400;color:#fff;padding:1rem;border-radius:6px;white-space:pre-wrap;font-family:ui-monospace,monospace;font-size:.85rem;";
+  div.textContent = msg;
+  host.innerHTML = "";
+  host.appendChild(div);
 }
 
 // ── data extraction ──────────────────────────────────────────
@@ -177,11 +191,12 @@ function renderCards() {
           : ""
       }</h2>
       <p class="card__desc">${desc}</p>
-      <pre class="prompt-card__preview" aria-label="${t("prompts.previewAria")}"></pre>
       <div class="prompt-card__actions">
-        <button type="button" class="button" data-action="copy-url">${t("prompts.copyUrlOnly")}</button>
         <button type="button" class="button button--primary" data-action="copy-full">${t("prompts.copyWithData")}</button>
+        <button type="button" class="button" data-action="copy-url">${t("prompts.copyUrlOnly")}</button>
       </div>
+      <p class="prompt-card__hint">${t("prompts.previewHint")}</p>
+      <pre class="prompt-card__preview" aria-label="${t("prompts.previewAria")}"></pre>
     `;
     const pre = card.querySelector(".prompt-card__preview");
     const btnUrl = card.querySelector('[data-action="copy-url"]');

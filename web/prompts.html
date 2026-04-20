@@ -10,14 +10,16 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ef4444' stroke='%23111' stroke-width='4'/%3E%3Crect x='4' y='30' width='56' height='4' fill='%23111'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff' stroke='%23111' stroke-width='4'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="./assets/style.css" />
   <style>
+    #prompt-cards.card-grid { grid-template-columns: 1fr; }
     .prompts-summary { display: flex; gap: .5rem; flex-wrap: wrap; margin: 0 0 1.25rem; padding: .75rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-elevated); align-items: center; }
     .prompts-summary__chip { display: inline-flex; align-items: center; gap: .4rem; font-size: .9rem; padding: .25rem .55rem; border-radius: 999px; background: var(--bg); border: 1px solid var(--border); }
     .prompts-summary__chip img { width: 28px; height: 28px; image-rendering: pixelated; }
     .prompts-summary__empty { color: var(--text-muted); font-size: .95rem; }
     .prompt-card { display: flex; flex-direction: column; gap: .75rem; }
-    .prompt-card__preview { font-family: var(--font-mono, ui-monospace, monospace); font-size: .8rem; line-height: 1.45; max-height: 8.5rem; overflow: auto; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm, 6px); padding: .5rem .65rem; white-space: pre-wrap; word-break: break-word; }
+    .prompt-card__preview { font-family: var(--font-mono, ui-monospace, monospace); font-size: .8rem; line-height: 1.45; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm, 6px); padding: .75rem 1rem; white-space: pre-wrap; word-break: break-word; user-select: text; cursor: text; margin: 0; }
     .prompt-card__actions { display: flex; gap: .5rem; flex-wrap: wrap; }
     .prompt-card__tag { display: inline-block; font-size: .75rem; color: var(--accent); margin-left: .35rem; }
+    .prompt-card__hint { font-size: .8rem; color: var(--text-muted); margin: 0; }
     .prompts-intro { color: var(--text-muted); margin-bottom: 1.25rem; }
     .prompts-intro code { background: var(--bg); padding: 0 .3rem; border-radius: 4px; }
   </style>
