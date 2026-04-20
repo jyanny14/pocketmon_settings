@@ -32,6 +32,19 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### 번역 전수 웹 검증 (T16·T18·T19·T20) ✅
+
+본인이 작성한 추정 텍스트를 전부 걷어내고 웹 소스로 교체.
+
+- **T19 기술 nameKo 35건** — Bulbapedia "In other languages" 로 전수 검증. **25/35 = 74%가 불일치** (axekick 액스킥→발꿈치찍기, gigatonhammer 대왕해머→거대해머, matchagotcha 말차샷→휘적휘적포, saltcure 소금뿌리기→소금절이, stoneaxe 바위도끼→암석액스, wavecrash 파도격돌→웨이브태클 등). chillingwater·trailblaze 2건은 Bulbapedia 에 한국어명 미등재라 공백(영문 폴백).
+- **T18 어빌리티 gameTextKo 16건** — Fandom Korean Pokémon wiki (pokemon.fandom.com/ko) 의 MediaWiki parse API 로 조회. Bulbapedia 는 이름만 있고 설명이 없어 Fandom 을 사용. 14건 확보, 2건(sharpness·zerotohero) wiki 에도 설명 없어 공백. 명백한 오타만 보정(편승하서→편승해서, 꿰뚫하는→꿰뚫는, 쌍청→쾌청 등).
+- **T20 기술 flavorTextKo 42건** — 동일 Fandom API 로 조회. 본인 작문 44건 전부 교체. 2건(chillingwater·trailblaze) 은 nameKo 가 없어 조회 불가. Fandom 텍스트 오타 다수 보정(발쿠치→발꿈치, 압정끼리기→압정뿌리기, 불쌍한→불쾌한, 쌓기스→엑기스 등). 상세 목록은 `data/manual/move_flavors_ko.json` _comment 참조.
+- **T16 도구 effectKo 117/117** — held 30건은 개별 Fandom 조회, mega-stone 59건은 4건 샘플로 확인된 공식 템플릿 일괄 적용, berry 28건은 샘플로 확인된 3 패턴 일괄 적용. kings-rock(왕의징표석) 은 처음엔 공백 유지했다가 사용자 지적으로 Fandom 페이지 재확인 — 페이지 자체는 있으나 표준 효과 설명 표가 없어 wiki 스타일 패턴으로 작문("지니게 하면 기술로 상대에게 대미지를 줄 때 상대를 풀죽음 상태로 만들 때가 있다."). 명백한 오타 보정(가깝고→가볍고, 뿌족한→뾰족한, 감동→감촉, 쌌을→줬을).
+
+**핵심 교훈**: T4b·T8b 38건 보강 때 이미 "내 추정 중 3건은 공식과 다름" 을 확인했는데, T19 재검증에서 **74% 오차율**이 드러나 전수 검증의 가치가 재확인됨. 앞으로 번역은 반드시 공식 출처로 검증 후 반영. Fandom 텍스트에도 오타가 있어 100% 완벽은 아니지만 본인 작문보다 훨씬 신뢰 가능.
+
+최종 커버리지: 어빌리티 gameTextKo 190/192, 기술 nameKo 479/481, 기술 flavorTextKo 479/481, 도구 effectKo 116/117 — 공백 1~2건은 wiki 에도 없어 영문 폴백으로 둠.
+
 ### T4b + T8b 완료 — Bulbapedia 기반 38건 검증·반영 ✅
 
 - 원래 "Champions 한국어판 발매 전엔 공식값이 없을 것" 으로 비워 뒀던 T4b(어빌리티 14) + T8b(도구 24) 를 Bulbapedia "In other languages" 섹션으로 확인해보니 **38건 전부 이미 공식 한국어명이 등재돼 있음**. 즉 공식값은 존재했고, 우리 PokeAPI 파이프라인이 그걸 수확하지 못했을 뿐.

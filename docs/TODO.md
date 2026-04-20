@@ -186,7 +186,7 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 
 (이미 등록된 T4b 어빌리티 nameKo 14건 · T8b 도구 nameKo 24건 은 기존 항목 유지.)
 
-### T16. 도구 `effect` 한국어 번역 추가
+### T16. 도구 `effect` 한국어 번역 추가 ✅ (2026-04-20 재검증 완료)
 - 현재 `items.json` 에 `effectKo` 필드 자체가 **없음**. 모든 도구 카드가 영문 effect 를 그대로 표시.
 - 관련 코드: `web/assets/items-list.js:182` — `effect.textContent = it.effect`.
 - 작업:
