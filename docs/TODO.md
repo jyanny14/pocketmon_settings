@@ -220,7 +220,36 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - 톤은 공식 게임 텍스트 `~한다/~된다` 풍. 1–2문장.
 - 빌드 로그: `manual nameKo=35, manual flavorKo=44`. corpus 981 → 986 KB.
 
-## 파티 빌더 확장 — Champions 전투 상세 (2026-04-20 추가)
+## 다음 작업 후보 (2026-04-20 추가)
+
+파티 빌더 확장(T22~T22c)·한국어 커버리지·기술 탭까지 일단락. 다음 세션에서 이어갈 만한 항목:
+
+### T27. AI 프롬프트 end-to-end 검증
+- prompts.html 의 5개 템플릿(weakness / swap / moveset / counter / free) 을 실제 Claude.ai · ChatGPT 에 붙여 넣어 응답 품질 확인.
+- 이제 인라인 JSON 에 slot.moves / slot.sps / slot.nature 가 포함되므로, 단순 "종족값 기반 추천" 수준이 아니라 실제 세팅을 반영한 추천이 나오는지 검증 대상.
+- 외부 AI 가 우리 공개 URL(llms.txt · corpus.json · pokemon.json) 을 실제로 fetch 하는지, "교체 추천" 템플릿의 POKEMON_JSON_URL fetch 지시가 동작하는지 점검.
+- 발견된 문제점은 해당 템플릿 body 수정 (`web/assets/prompts-templates.js`).
+- 사용자가 브라우저에서 직접 수행해야 하는 단계 — 결과만 공유받아 개선.
+
+### T28. 파티 분석 패널에 파티 단위 실효 스탯 합계 추가
+- 현재 슬롯별 카드에는 실효 스탯 한 줄이 뜨지만(T22b), 분석 패널의 "종족값 합계" 옆/아래에 **파티 전체 실효 스탯 합계**(Lv50·IV31·SP·Nature 반영) 를 같이 보여주면 세팅 전후 비교가 쉬워짐.
+- `renderStatsSummary` 확장, 기존 baseStats 합계는 유지한 채 `effectiveStats(form.baseStats, slot.sps, slot.nature, state.natures)` 누적 행을 추가.
+
+### T29. 저장된 파티(localStorage) 마이그레이션
+- 현재 저장 키 `pc.savedParties.v1` — 값은 URL-인코딩 문자열이라 새 포맷(7필드) 도 별도 마이그레이션 없이 디코드됨.
+- 다만 구버전에서 저장한 값은 moves / sps / nature 가 비어 있어 로드 직후 "세팅 값 0" 으로 보이는 게 UX 상 자연스러움. 추가 작업 없이 유지해도 OK — 구조 깨짐 없음.
+- 필요해질 때:
+  - 저장 시점에 확장 필드도 포함하도록 `savePartyDialog` 가 `encodeParty(state.party)` 그대로 사용하는지 확인(이미 그럼, 새 포맷 자동 저장).
+  - `pc.savedParties.v2` 로 포맷 버전을 올리는 건 현재 불필요.
+
+### T30. 파티 내보내기 — Google Sheets TSV 버튼
+- `docs/sheets-export-plan.md` 의 Phase 1 (TSV 복사 버튼) 이 아직 미구현.
+- 1–2시간 분량. `party.html` `.party-actions` 에 버튼 추가, TSV 생성 로직을 party.js 에 한 함수로.
+- 컬럼에 moves / sps / nature 포함시키면 세팅 전체를 시트로 옮길 수 있음.
+
+---
+
+## 파티 빌더 확장 — Champions 전투 상세 (2026-04-20 완료 · 보존용)
 
 Champions 기준으로 각 파티 슬롯에 **기술 4개 / Stat Points / Nature** 를 지정할 수 있게 한다. 지금은 `{slug, formName, abilitySlug, itemSlug}` 4필드만 가져 분석 품질·AI 프롬프트 정확도가 제한됨.
 
@@ -241,7 +270,7 @@ Serebii (`pokemonchampions/training.shtml`) + Bulbapedia (`Pokémon Champions`) 
 
 우리 파티 빌더는 "배틀 상태"를 저장하는 용도이므로 VP·Training Ticket 모델은 무시하고 최종 세팅값만 다룬다.
 
-### T22. 공통 인프라 (먼저 진행)
+### T22. 공통 인프라 ✅ (2026-04-20 커밋 87d66a6)
 
 - `party-encode.js` 슬롯 스키마 확장 — 뒤쪽에 optional 필드 추가:
   ```
@@ -252,7 +281,7 @@ Serebii (`pokemonchampions/training.shtml`) + Bulbapedia (`Pokémon Champions`) 
 - 파티 빌더 슬롯 카드 UI 에 **"상세 설정" 접힘 영역**(기본 접힘). 기존 간단 파티 공유 흐름 해치지 않음.
 - AI 프롬프트 인라인 JSON(`prompts.js`) 의 slot 발췌에 moves·sps·nature 필드 포함.
 
-### T22a. 기술 4기술 세팅
+### T22a. 기술 4기술 세팅 ✅ (2026-04-20 커밋 6b83364)
 
 - 슬롯마다 기술 4칸 피커. 각 칸은 해당 폼의 `pokemon.moves` (learnable) 목록에서 선택.
 - 중복 선택 금지.
@@ -261,7 +290,7 @@ Serebii (`pokemonchampions/training.shtml`) + Bulbapedia (`Pokémon Champions`) 
 - AI 프롬프트 인라인 JSON 에 `slot.moves` 포함. 현재 `learnableMoves` 전체(최대 60+)를 보내는데 4개만 확정되면 토큰 절약 + AI 판단 정확도 ↑.
 - UI 참고: `pokemon-detail.js` 의 기술 테이블 재사용 가능.
 
-### T22b. Stat Points (노력치)
+### T22b. Stat Points (노력치) ✅ (2026-04-20 커밋 ccbaad5)
 
 - 슬롯마다 6스탯 정수 입력 (hp·atk·def·spAtk·spDef·speed).
 - 제약: **각 스탯 0~32**, **총합 ≤66**. 초과 시 빨간 border + submit 블록.
@@ -274,7 +303,7 @@ Serebii (`pokemonchampions/training.shtml`) + Bulbapedia (`Pokémon Champions`) 
 - 분석 패널: "종족값 합계" 옆/아래에 "실효 스탯 합계(Lv50, IV31, nature·SP 반영)" 추가.
 - 저장된 파티(localStorage) 마이그레이션 — 구버전 저장본에 sps 없으면 `[0×6]` 기본값.
 
-### T22c. Nature (성격)
+### T22c. Nature (성격) ✅ (2026-04-20 커밋 f964719)
 
 - 신규 데이터 파일 `web/data/natures.json` — 25종, 각 `{slug, nameEn, nameKo, increased, decreased}`.
   - 중립 5종(Hardy/Docile/Serious/Bashful/Quirky) 은 `increased == decreased == null`.
