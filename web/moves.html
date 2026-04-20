@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <title>특성 · Pokemon Champions 파티 빌더</title>
-  <meta name="description" content="Pokemon Champions에 등장하는 특성 목록. 이름·설명 검색과 보유 포켓몬 역인덱스를 제공합니다." />
+  <title>기술 · Pokemon Champions 파티 빌더</title>
+  <meta name="description" content="Pokemon Champions 에 등장하는 481개 기술 목록. 타입·분류·위력 검색과 필터를 지원합니다." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23ef4444' stroke='%23111' stroke-width='4'/%3E%3Crect x='4' y='30' width='56' height='4' fill='%23111'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23fff' stroke='%23111' stroke-width='4'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
@@ -36,8 +36,8 @@
 
   <main id="main" class="container">
     <section class="page-header">
-      <h1 data-i18n="abilities.title">특성</h1>
-      <p class="muted" data-i18n="abilities.desc">Pokemon Champions에 등장하는 모든 특성. 이름·설명으로 검색하고, 해당 특성을 보유한 포켓몬을 확인할 수 있습니다.</p>
+      <h1 data-i18n="moves.title">기술</h1>
+      <p class="muted" data-i18n="moves.desc">Pokemon Champions 에 등장하는 모든 기술. 타입·분류로 필터링하고 위력·명중·PP 로 정렬할 수 있습니다.</p>
     </section>
 
     <section class="filters" aria-label="필터">
@@ -48,8 +48,8 @@
             type="search"
             id="search"
             class="field__input"
-            data-i18n-ph="abilities.searchPlaceholder"
-            placeholder="특성 이름 · 슬러그 · 설명"
+            data-i18n-ph="moves.searchPlaceholder"
+            placeholder="이름(한/영) · 슬러그 · 설명"
             autocomplete="off"
             spellcheck="false"
           />
@@ -58,15 +58,36 @@
         <label class="field">
           <span class="field__label" data-i18n="pokemon.sort">정렬</span>
           <select id="sort" class="field__input">
-            <option value="nameEn" data-i18n="abilities.sort.nameEn">이름(영)</option>
-            <option value="holders" data-i18n="abilities.sort.holders">보유 포켓몬 수</option>
+            <option value="nameEn" data-i18n="moves.sort.nameEn">이름(영)</option>
+            <option value="nameKo" data-i18n="moves.sort.nameKo">이름(한)</option>
+            <option value="type" data-i18n="moves.sort.type">타입</option>
+            <option value="power" data-i18n="moves.sort.power">위력</option>
+            <option value="accuracy" data-i18n="moves.sort.accuracy">명중</option>
+            <option value="pp" data-i18n="moves.sort.pp">PP</option>
           </select>
+        </label>
+      </div>
+
+      <fieldset class="filters__group">
+        <legend class="field__label" data-i18n="pokemon.filterType">타입</legend>
+        <div id="type-filters" class="chip-row" role="group" aria-label="타입 선택"></div>
+      </fieldset>
+
+      <fieldset class="filters__group">
+        <legend class="field__label" data-i18n="moves.filterCategory">분류</legend>
+        <div id="category-filters" class="chip-row chip-row--dense" role="group" aria-label="분류 선택"></div>
+      </fieldset>
+
+      <div class="filters__row filters__row--between">
+        <label class="field field--inline">
+          <input type="checkbox" id="champions-only" class="field__checkbox" />
+          <span data-i18n="moves.championsOnly">Champions 에서 수치 변경된 기술만</span>
         </label>
       </div>
 
       <div class="filters__row filters__row--between">
         <p class="result-count" aria-live="polite">
-          <span id="result-count">—</span> / <span id="total-count">—</span> <span data-i18n="abilities.unit">개</span>
+          <span id="result-count">—</span> / <span id="total-count">—</span> <span data-i18n="moves.unit">개</span>
         </p>
         <button type="button" id="reset-filters" class="button button--ghost" data-i18n="reset">초기화</button>
       </div>
@@ -74,8 +95,23 @@
 
     <section aria-labelledby="result-heading">
       <h2 id="result-heading" class="sr-only">검색 결과</h2>
-      <div id="ability-grid" class="ability-grid" aria-live="polite"></div>
-      <p id="empty-state" class="empty-state" hidden data-i18n="abilities.empty">조건에 맞는 특성이 없습니다.</p>
+      <div class="moves-table-wrap">
+        <table class="moves-table" id="moves-table">
+          <thead>
+            <tr>
+              <th data-i18n="detail.move.name">기술</th>
+              <th data-i18n="detail.move.type">타입</th>
+              <th data-i18n="detail.move.category">분류</th>
+              <th data-i18n="detail.move.power">위력</th>
+              <th data-i18n="detail.move.accuracy">명중</th>
+              <th data-i18n="detail.move.pp">PP</th>
+              <th data-i18n="moves.col.flavor">설명</th>
+            </tr>
+          </thead>
+          <tbody id="moves-tbody" aria-live="polite"></tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="empty-state" hidden data-i18n="moves.empty">조건에 맞는 기술이 없습니다.</p>
     </section>
   </main>
 
@@ -93,6 +129,6 @@
   </footer>
 
   <script type="module" src="./assets/app.js"></script>
-  <script type="module" src="./assets/abilities-list.js"></script>
+  <script type="module" src="./assets/moves-list.js"></script>
 </body>
 </html>

@@ -48,6 +48,7 @@ AI 에이전트(Claude, ChatGPT 등) 가 이 사이트를 사용해 수행하기
 - `/pokemon-detail.html?slug=<slug>` — 포켓몬 상세. 히어로/종족값 바차트/특성/폼/기술 테이블(검색). slug 는 `pokemon.json[].slug`.
 - `/items.html?q=&cat=` — 도구 목록. `cat`(held/mega-stone/berry 콤마).
 - `/abilities.html?q=&sort=` — 특성 목록. `sort`(nameEn/holders).
+- `/moves.html?q=&types=&cat=&champions=&sort=` — 기술 목록. 481개. `types`(콤마 구분), `cat`(physical/special/status 콤마), `champions`=1 은 Champions 재밸런스 기술만, `sort`(nameEn/nameKo/type/power/accuracy/pp).
 - `/party.html?p=<encoded>` — 파티 빌더. URL 쿼리 `p` 가 파티 상태를 인코딩. 아래 규칙 참고.
 
 ## 파티 URL 인코딩

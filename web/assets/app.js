@@ -179,6 +179,10 @@ async function hydrateCounts() {
       loadAbilities().then((l) =>
         lang === "ko" ? `${l.length} 개` : `${l.length} abilities`,
       ),
+    "move-count": () =>
+      loadMoves().then((l) =>
+        lang === "ko" ? `${l.length} 개` : `${l.length} moves`,
+      ),
   };
   for (const [key, fetcher] of Object.entries(targets)) {
     const el = document.querySelector(`[data-stat="${key}"]`);
