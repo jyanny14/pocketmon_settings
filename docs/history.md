@@ -32,6 +32,18 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T22 — 파티 빌더 확장 공통 인프라 ✅
+
+슬롯 스키마를 `slug:formName:abilitySlug:itemSlug[:moves[:sps[:nature]]]` 로 확장. 뒤 3개 필드 optional 이라 **기존 4-필드 공유 URL 완전 호환** (부족 필드는 기본값으로 채움).
+
+- `web/assets/party-encode.js` — `slotToString` 이 뒤 trailing empty 필드 자동 trim, `stringToSlot` 가 learnable 범위 검증·SP clamp(per-stat ≤32, total ≤66)·nature slug 형식 검증 수행. 추가 헬퍼 `emptySps()`, `natureMultipliers(slug, natures)`, 상수 `SP_TOTAL_MAX=66`, `SP_PER_STAT_MAX=32`, `MOVES_PER_SLOT=4`, `SP_STAT_KEYS` export.
+- `web/assets/party.js` — `Slot` typedef 에 moves/sps/nature 추가, `pickForm` 에서 새 슬롯 생성 시 기본값 초기화, `onLoadSavedChange` 도 `decodeParty` 경유로 통일 (localStorage 저장된 구 포맷도 호환).
+- `web/assets/prompts.js` — AI 프롬프트 인라인 JSON 의 `extractSlot` 이 slot.moves·slot.sps·slot.nature 를 포함. learnableMoves 와 분리해 "현재 세팅" vs "가능한 풀" 을 AI 가 구분 가능.
+- `web/llms.txt` — 파티 URL 인코딩 섹션을 7-필드 스키마로 재작성, 예시 2개(레거시 / 확장) 병기.
+- `docs/schema.md` — 신규 "Party Slot" 섹션 추가.
+
+슬롯 타입은 이제 moves/sps/nature 가 in-state 존재하지만 **UI 는 아직 기존 모습** — T22a (기술 피커) / T22b (SP 입력) 후속 커밋에서 채움. AI 프롬프트는 이미 새 필드를 보고 있으므로 수동으로 URL 에 확장 슬롯을 넣어 공유하면 AI 가 활용 가능.
+
 ### T22c — Nature(성격) 데이터 파이프라인 구축 ✅
 
 Champions 는 본편과 동일한 25 성격 체계를 유지하므로 PokeAPI `/nature/{slug}/` 를 그대로 수집.

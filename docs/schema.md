@@ -361,6 +361,28 @@ type Move = {
 
 ---
 
+## Party Slot (URL 인코딩 스키마)
+
+파티 빌더(`party.html`) 와 AI 프롬프트(`prompts.html`) 양쪽에서 공유하는 슬롯 타입. 파일로 저장되지 않고 URL 쿼리 `?p=...` 및 `localStorage` (`pc.savedParties.v1`) 로만 유통.
+
+```typescript
+type Slot = {
+  slug: string;          // Pokémon slug (pokemon.json[].slug)
+  formName: string;      // form.name (영문). 잘못되면 첫 폼으로 폴백
+  abilitySlug: string;   // 해당 폼의 abilities[] 중 하나
+  itemSlug: string | null;   // items.json[].slug 또는 null
+  moves: string[];       // 최대 4개. 해당 폼의 learnable(pokemon.moves) 내에서만.
+                         //   길이 0~4, 빈 슬롯 허용
+  sps: number[];         // 길이 6: hp/atk/def/spAtk/spDef/speed
+                         //   각 0..32, 합 <=66 (Champions Stat Points)
+  nature: string | null; // natures.json[].slug 또는 null (지정 없음)
+};
+```
+
+인코딩 규칙은 `web/llms.txt` §"파티 URL 인코딩" 참조. 레거시 4-필드 URL 은 그대로 decode 되며 뒤 3개 필드는 기본값(빈 moves, 0×6 sps, null nature)으로 채워짐.
+
+---
+
 ## `natures.json`
 
 배열. 25개. Pokémon Champions 가 본편과 동일한 25 성격 체계 사용.

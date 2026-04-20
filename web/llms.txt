@@ -54,17 +54,37 @@ AI 에이전트(Claude, ChatGPT 등) 가 이 사이트를 사용해 수행하기
 
 ## 파티 URL 인코딩
 
-`?p=<slot1>|<slot2>|...|<slot6>` 형식. 각 슬롯은 `slug:formName:abilitySlug:itemSlug` 4개 필드를 `encodeURIComponent` 로 인코딩 후 `:` 로 결합. 빈 슬롯은 빈 문자열. `itemSlug` 없으면 빈 문자열.
+`?p=<slot1>|<slot2>|...|<slot6>` 형식. 각 슬롯은 최대 7개 콜론 구분 필드를 `encodeURIComponent` 로 감싸 `:` 로 결합.
+
+```
+slug : formName : abilitySlug : itemSlug [ : moves [ : sps [ : nature ] ] ]
+```
+
+| 필드 | 필수 | 설명 |
+|---|---|---|
+| `slug` | 예 | `/data/pokemon.json[].slug` |
+| `formName` | 예 | `pokemon.forms[].name` (영문). 잘못되면 첫 폼으로 폴백 |
+| `abilitySlug` | 예 | 해당 폼의 `abilities[]` 중 하나 |
+| `itemSlug` | 선택 | `/data/items.json[].slug` 또는 빈 문자열 |
+| `moves` | 선택 | 콤마 구분된 기술 slug 최대 4개. 해당 폼 learnable 범위 안에서. 예: `flamethrower,earthquake,dragondance,roost` |
+| `sps` | 선택 | 슬래시 구분된 6 정수. HP/atk/def/spAtk/spDef/speed. 각 0–32, 합 ≤66. Champions Stat Points 체계. 예: `4/0/0/32/0/32` |
+| `nature` | 선택 | `/data/natures.json[].slug` 중 하나. 빈 문자열 = 지정 없음 |
+
+뒤쪽 선택 필드가 모두 비어 있으면 URL 생성 시 끝에서부터 생략(기존 4-필드 공유 URL 호환). 빈 슬롯은 빈 문자열.
 
 예시:
 ```
+# 기본 (레거시 호환)
 ?p=charizard:Mega%20Charizard%20X:toughclaws:life-orb|pikachu:Pikachu:static:light-ball||||
+
+# 확장 (기술·SP·성격 포함)
+?p=charizard:Mega%20Charizard%20X:toughclaws:life-orb:flamethrower%2Cearthquake%2Cdragondance%2Croost:4%2F0%2F0%2F32%2F0%2F32:adamant
 ```
 
 디코딩 규칙:
 1. `|` 으로 분할 (최대 6개 슬롯).
 2. 각 슬롯을 `:` 로 분할 후 `decodeURIComponent`.
-3. `slug` 는 `/data/pokemon.json[].slug`. `formName` 은 `pokemon.forms[].name` (영문명). `abilitySlug` 는 해당 폼의 `abilities[]` 중 하나. `itemSlug` 는 `/data/items.json[].slug` 또는 빈 문자열.
+3. 부분 검증: 해당 포켓몬의 learnable 범위를 벗어난 기술·총합 66 초과 SP·무효 nature 는 무시되어 기본값으로 대체됨.
 
 파티 상태를 사용자에게 공유하려면 이 스키마로 URL 을 구성해 `/party.html?p=...` 링크를 제공하면 된다.
 

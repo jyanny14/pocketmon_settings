@@ -13,7 +13,7 @@ import {
   t,
   getLang,
 } from "./app.js";
-import { SLOT_COUNT, encodeParty, decodeParty } from "./party-encode.js";
+import { SLOT_COUNT, encodeParty, decodeParty, emptySps } from "./party-encode.js";
 
 const TYPE_ORDER = [
   "normal", "fire", "water", "electric", "grass", "ice",
@@ -23,7 +23,7 @@ const TYPE_ORDER = [
 const STAT_KEYS = ["hp", "atk", "def", "spAtk", "spDef", "speed"];
 const STORAGE_KEY = "pc.savedParties.v1";
 
-/** @typedef {{slug:string, formName:string, abilitySlug:string, itemSlug:string|null}} Slot */
+/** @typedef {{slug:string, formName:string, abilitySlug:string, itemSlug:string|null, moves:string[], sps:number[], nature:string|null}} Slot */
 
 const state = {
   pokemon: [],
@@ -434,6 +434,9 @@ function pickForm(p, form) {
     formName: form.name,
     abilitySlug: form.abilities[0] || "",
     itemSlug: null,
+    moves: [],
+    sps: emptySps(),
+    nature: null,
   };
   if (state.pickerTarget >= 0) {
     state.party[state.pickerTarget] = newSlot;
@@ -789,11 +792,7 @@ function onLoadSavedChange() {
   const saved = loadSaved();
   const encoded = saved[name];
   if (!encoded) return;
-  const parts = encoded.split("|");
-  state.party = Array(SLOT_COUNT).fill(null);
-  for (let i = 0; i < Math.min(SLOT_COUNT, parts.length); i++) {
-    state.party[i] = stringToSlot(parts[i]);
-  }
+  state.party = decodeParty(encoded, decodeCtx());
   writePartyToUrl();
   renderAll();
 }

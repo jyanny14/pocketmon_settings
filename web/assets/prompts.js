@@ -125,6 +125,12 @@ function extractSlot(slot) {
           effect: item.effect,
         }
       : null,
+    // Configured battle setup (T22a/b/c): what the trainer actually plans to
+    // run. AI should treat these as the active config; learnableMoves is only
+    // the pool the Pokémon can pull from.
+    moves: Array.isArray(slot.moves) ? slot.moves : [],
+    sps: Array.isArray(slot.sps) ? slot.sps : [0, 0, 0, 0, 0, 0],
+    nature: slot.nature || null,
     learnableMoves,
   };
 }
