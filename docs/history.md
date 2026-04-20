@@ -32,6 +32,21 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### Floette 폼 "Eternal Floette" 로 정정
+
+사용자 지적 — Fandom 한국어 위키(플라엣테)에 있는 "영원의 꽃 플라엣테" 폼이 우리 데이터에 반영되지 않음. 실측 원인: serebii Champions 페이지의 Name/Type 테이블이 "Floette" 로 열리고 Stats 테이블이 "Stats - Eternal Floette" 로 닫히는 구조라, 파서가 form.name 을 "Floette" 로 남겨 둔 상태. 실제 baseStats(HP 74/Atk 65/Def 67/SpA 125/SpD 128/Spe 92, Total 551)는 Eternal Flower 수치를 반영 중이었으나 라벨이 잘못된 것.
+
+수정:
+- `scripts/parser.py` — Stats 헤더의 variant_name 이 current form name 의 superset(예: "Eternal Floette" 의 부분문자열로 "Floette" 포함) 일 때 form 명을 variant_name 으로 채택. 가드 덕분에 다른 186마리 중 재명명 0건.
+- `scripts/form_ko.py` — `_PREFIX_KO` 에 `"Eternal": "영원의 꽃"` 추가. 이제 "Eternal Floette" → "영원의 꽃 플라엣테" 로 자동 합성.
+- `data/manual/game_sources_override.json` — 기존 `floette.Floette` 키를 `floette.Eternal Floette` 로 이름 변경 (override 는 form name 매칭 기반이라 rename 필수).
+
+재빌드 후 `pokemon.json` 의 floette 엔트리:
+- `Eternal Floette` / `영원의 꽃 플라엣테` (Total 551)
+- `Mega Floette` / `메가 플라엣테` (Total 651)
+
+기존 `?p=floette:Floette:...` 공유 URL 은 decode 단계에서 `findForm` 실패 후 `p.forms[0]` 로 폴백되어 Eternal Floette 로 해석됨 — 깨지지 않음.
+
 ### Pokémon Legends: Z-A 대량 반영 — 133/186 마리
 
 앞 커밋에서 Pidgeot/Charizard 2마리만 땜빵으로 추가했는데 사용자가 "나무위키에서 가져올 순 없나" 질문. 나무위키 자체는 WebFetch 403이지만 **Bulbapedia 의 `List of Pokémon in Pokémon Legends: Z-A`** 페이지를 MediaWiki parse API (`action=parse&prop=wikitext`) 로 읽어 대량 추출 가능.

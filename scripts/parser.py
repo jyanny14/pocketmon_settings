@@ -565,6 +565,19 @@ def parse_pokemon_detail(html: str, slug: str) -> PokemonDetail:
             if current is not None and not current.base_stats:
                 # First stats seen for the current form — assign regardless of suffix.
                 current.base_stats = stats
+                # Adopt a more specific variant name when serebii's stats header
+                # refines the form (e.g. the Floette page opens the form table as
+                # "Floette" but the stats row is "Stats - Eternal Floette" because
+                # only the Eternal Flower form is playable in Champions). Limited
+                # to cases where the variant name is a superset of the current
+                # name to avoid renaming unrelated pokemon.
+                if (
+                    variant_name
+                    and variant_name != current.name
+                    and current.name
+                    and current.name in variant_name
+                ):
+                    current.name = variant_name
             elif variant_name and base_form is not None:
                 # Pattern B: variant inheriting base abilities; types come from the
                 # per-form type map in the base info table if there's a match.

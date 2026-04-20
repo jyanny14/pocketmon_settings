@@ -25,6 +25,7 @@ _PREFIX_KO = {
     "Galarian": "가라르",
     "Hisuian": "히스이",
     "Paldean": "팔데아",
+    "Eternal": "영원의 꽃",  # Floette only (Eternal Flower form)
 }
 
 # Pure suffix / special-form names (where the form_name does NOT repeat the
