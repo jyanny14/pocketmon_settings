@@ -2,6 +2,7 @@ import {
   loadPokemon,
   loadAbilities,
   loadItems,
+  loadMoves,
   formatDex,
   statTotal,
   typeLabel,
@@ -9,6 +10,8 @@ import {
   formDisplayName,
   abilityDisplayName,
   itemDisplayName,
+  moveDisplayName,
+  moveCategoryLabel,
   findForm,
   t,
   getLang,
@@ -30,6 +33,7 @@ const state = {
   pokemonMap: /** @type {Map<string, any>} */ (new Map()),
   abilityMap: /** @type {Map<string, any>} */ (new Map()),
   items: [],
+  moveMap: /** @type {Map<string, any>} */ (new Map()),
   typeChart: null,
   // Party: Array of Slot|null, fixed length SLOT_COUNT
   party: /** @type {(Slot|null)[]} */ (Array(SLOT_COUNT).fill(null)),
@@ -58,15 +62,17 @@ const els = {
 
 async function init() {
   try {
-    const [pokemon, abilities, items, typeChart] = await Promise.all([
+    const [pokemon, abilities, items, moves, typeChart] = await Promise.all([
       loadPokemon(),
       loadAbilities(),
       loadItems(),
+      loadMoves(),
       fetch(new URL("../data/type_chart.json", import.meta.url), { cache: "no-cache" }).then((r) => r.json()),
     ]);
     state.pokemon = pokemon;
     for (const p of pokemon) state.pokemonMap.set(p.slug, p);
     for (const a of abilities) state.abilityMap.set(a.slug, a);
+    for (const m of moves) state.moveMap.set(m.slug, m);
     state.items = items;
     state.typeChart = typeChart;
   } catch (err) {
@@ -199,8 +205,89 @@ function renderSlot(index, slot) {
   totalLabel.textContent = `${t("pokemon.statTotal")} ${total}`;
   stats.appendChild(totalLabel);
 
-  card.append(header, types, controls, stats);
+  const moves = makeMovesSection(index, pokemon, slot);
+
+  card.append(header, types, controls, stats, moves);
   return card;
+}
+
+function makeMovesSection(index, pokemon, slot) {
+  const details = document.createElement("details");
+  details.className = "slot-card__moves";
+  details.open = (slot.moves || []).length > 0;
+
+  const summary = document.createElement("summary");
+  summary.className = "slot-card__moves-summary";
+  const count = (slot.moves || []).length;
+  summary.textContent = `${t("party.moves.title")} (${count}/4)`;
+  details.appendChild(summary);
+
+  const learnable = (pokemon.moves || [])
+    .map((s) => state.moveMap.get(s))
+    .filter(Boolean);
+  learnable.sort((a, b) =>
+    moveDisplayName(a).localeCompare(moveDisplayName(b), getLang() === "ko" ? "ko" : "en"),
+  );
+
+  const row = document.createElement("div");
+  row.className = "slot-card__moves-row";
+
+  for (let i = 0; i < 4; i++) {
+    row.appendChild(makeMoveSelect(index, pokemon, slot, learnable, i));
+  }
+
+  details.appendChild(row);
+  return details;
+}
+
+function makeMoveSelect(index, pokemon, slot, learnable, slotPos) {
+  const wrap = document.createElement("label");
+  wrap.className = "slot-card__field";
+
+  const label = document.createElement("span");
+  label.className = "slot-card__field-label";
+  label.textContent = `${t("party.moves.slot")} ${slotPos + 1}`;
+
+  const sel = document.createElement("select");
+  sel.className = "field__control";
+
+  const none = document.createElement("option");
+  none.value = "";
+  none.textContent = t("party.moves.none");
+  sel.appendChild(none);
+
+  const selected = slot.moves?.[slotPos] || "";
+  const excluded = new Set((slot.moves || []).filter((m, j) => m && j !== slotPos));
+
+  for (const m of learnable) {
+    if (excluded.has(m.slug)) continue;
+    const opt = document.createElement("option");
+    opt.value = m.slug;
+    const typeL = typeLabel(m.type);
+    const catL = moveCategoryLabel(m.category || "");
+    opt.textContent = `${moveDisplayName(m)} · ${typeL}${catL ? " · " + catL : ""}`;
+    if (m.slug === selected) opt.selected = true;
+    sel.appendChild(opt);
+  }
+
+  sel.addEventListener("change", () => {
+    const current = state.party[index];
+    if (!current) return;
+    const moves = [...(current.moves || [])];
+    const newValue = sel.value;
+    if (newValue) {
+      if (slotPos < moves.length) moves[slotPos] = newValue;
+      else moves.push(newValue);
+    } else if (slotPos < moves.length) {
+      moves.splice(slotPos, 1);
+    }
+    state.party[index] = { ...current, moves };
+    writePartyToUrl();
+    renderAll();
+  });
+
+  wrap.append(label, sel);
+  return wrap;
 }
 
 function makeFormSelect(index, pokemon, slot) {
@@ -567,10 +654,19 @@ function renderAttackCoverage(members) {
   intro.textContent = t("party.analysis.offenseHint");
   s.appendChild(intro);
 
-  // For each defender type, find the best multiplier any member can produce
-  // using one of their *own* types (STAB). 1× or less = not covered by STAB.
+  // For each defender type, find the best multiplier any member can produce.
+  // If a member has configured damaging moves, only those move types count
+  // (the analysis reflects the actual battle plan). Otherwise fall back to
+  // the member's own STAB types as a best-case assumption.
   const partyAttackTypes = new Set();
-  for (const m of members) for (const tt of m.form.types ?? []) partyAttackTypes.add(tt);
+  for (const m of members) {
+    const configuredTypes = collectAttackTypes(m.slot);
+    if (configuredTypes.size) {
+      for (const tt of configuredTypes) partyAttackTypes.add(tt);
+    } else {
+      for (const tt of m.form.types ?? []) partyAttackTypes.add(tt);
+    }
+  }
 
   const table = document.createElement("div");
   table.className = "coverage-grid";
@@ -606,6 +702,25 @@ function coverageClass(mul) {
   if (mul >= 1) return "1x";
   if (mul > 0) return "half";
   return "zero";
+}
+
+/**
+ * Collect damaging-move types from a slot's configured moves (T22a).
+ * Returns empty Set if no damaging moves set — caller should fall back
+ * to the slot's own form types (classic STAB assumption).
+ */
+function collectAttackTypes(slot) {
+  const result = new Set();
+  for (const slug of slot?.moves || []) {
+    const m = state.moveMap.get(slug);
+    if (!m) continue;
+    if (m.category === "status") continue;
+    // Treat non-null positive power as damaging. null / 0 often means fixed
+    // or 1-HP moves which do deal damage — include them too so moves like
+    // Seismic Toss still count as coverage.
+    if (m.type) result.add(m.type);
+  }
+  return result;
 }
 
 function formatMul(m) {

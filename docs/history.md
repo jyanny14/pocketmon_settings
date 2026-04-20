@@ -32,6 +32,17 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### T22a — 기술 4칸 피커 UI + STAB 커버리지 실반영 ✅
+
+각 슬롯 카드 하단에 `<details class="slot-card__moves">` 접힘 영역 추가. 기본 접힘이지만 moves 가 한 개라도 있으면 auto-open.
+
+- `web/assets/party.js` — `loadMoves` import, `state.moveMap` 신설, `makeMovesSection`/`makeMoveSelect` 추가. 각 슬롯은 4개 `<select>` (기술1~4) 로 노출되고, 각 드롭다운은 해당 species 의 learnable(=`pokemon.moves`) 전체를 이름순 정렬, 타입·분류 표기 포함 옵션으로 표시. 중복 선택 방지(이미 다른 slot 에 있는 기술은 옵션에서 제외).
+- 선택 값 변경 시 compact array 관리: 비우면 splice, 새로 선택하면 push/replace. state.party[i].moves 는 항상 길이 0–4 의 non-empty slug 배열.
+- **분석 변경**: `renderAttackCoverage` 가 slot 의 설정된 damaging move(category != "status") 타입을 모아 사용. 기술 미설정 시에만 과거처럼 `form.types` 로 폴백(classic STAB 가정). 즉 4기술을 채우면 실제 전투용 커버리지가 즉시 반영됨.
+- `scripts 는 변경 없음` — 이미 T10 에서 moves.json 완비.
+- i18n: `party.moves.title` / `party.moves.slot` / `party.moves.none` ko/en 추가.
+- `web/assets/style.css` — `.slot-card__moves`, `.slot-card__moves-summary`, `.slot-card__moves-row` 추가 (반응형 2열 그리드 at ≥640px).
+
 ### T22 — 파티 빌더 확장 공통 인프라 ✅
 
 슬롯 스키마를 `slug:formName:abilitySlug:itemSlug[:moves[:sps[:nature]]]` 로 확장. 뒤 3개 필드 optional 이라 **기존 4-필드 공유 URL 완전 호환** (부족 필드는 기본값으로 채움).

@@ -1524,3 +1524,27 @@ select.field__input {
   border-color: var(--accent, #f59e0b);
   color: #fff;
 }
+
+/* Party slot moves picker (T22a) */
+.slot-card__moves {
+  margin-top: var(--space-3);
+  border-top: 1px dashed var(--border);
+  padding-top: var(--space-3);
+}
+.slot-card__moves-summary {
+  font-size: .85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+  padding: .2rem 0;
+}
+.slot-card__moves-summary:hover { color: var(--text); }
+.slot-card__moves-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .4rem;
+  margin-top: .5rem;
+}
+@media (min-width: 640px) {
+  .slot-card__moves-row { grid-template-columns: 1fr 1fr; }
+}
