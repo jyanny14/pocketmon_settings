@@ -1,3 +1,13 @@
 {
-  "_comment": "수동 override. PokeAPI에 아직 반영되지 않은 신작 게임(예: Legends Z-A) 이나 보정이 필요한 케이스에 사용. 구조: { base_slug: { 'Form English Name': ['game-slug', ...] } }. 여기 지정된 값은 data/processed/pokemon_game_sources.json 의 값을 폼 단위로 대체합니다. _로 시작하는 키는 무시됩니다."
+  "_comment": "수동 override. PokeAPI에 아직 반영되지 않은 신작 게임(예: Legends Z-A) 이나 보정이 필요한 케이스에 사용. 구조: { base_slug: { 'Form English Name': ['game-slug', ...] } }. 여기 지정된 값은 data/processed/pokemon_game_sources.json 의 값을 폼 단위로 대체합니다(부분 merge 아님 — 전체 리스트를 넣어야 함). _로 시작하는 키는 무시됩니다. 2026-04-20: Pokémon Legends: Z-A 반영 시작. 카로스 지방 게임이므로 XY/Mega 연고 포켓몬이 우선 대상.",
+
+  "pidgeot": {
+    "Pidgeot": ["lets-go-eevee", "lets-go-pikachu", "legends-z-a"],
+    "Mega Pidgeot": ["lets-go-eevee", "lets-go-pikachu", "legends-z-a"]
+  },
+  "charizard": {
+    "Charizard": ["lets-go-eevee", "lets-go-pikachu", "scarlet", "shield", "sword", "violet", "legends-z-a"],
+    "Mega Charizard X": ["lets-go-eevee", "lets-go-pikachu", "scarlet", "shield", "sword", "violet", "legends-z-a"],
+    "Mega Charizard Y": ["lets-go-eevee", "lets-go-pikachu", "scarlet", "shield", "sword", "violet", "legends-z-a"]
+  }
 }
