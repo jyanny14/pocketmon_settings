@@ -95,6 +95,12 @@ export function itemDisplayName(item) {
   return getLang() === "ko" ? (item.nameKo || item.nameEn) : item.nameEn;
 }
 
+/** Item effect text: prefer effectKo in KO mode (fallback to English effect). */
+export function itemEffect(item) {
+  if (!item) return "";
+  return getLang() === "ko" ? (item.effectKo || item.effect || "") : (item.effect || "");
+}
+
 /** Move display name: prefer nameKo in KO mode (fallback nameEn). */
 export function moveDisplayName(move) {
   if (!move) return "";

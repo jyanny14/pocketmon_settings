@@ -30,6 +30,16 @@
 
 - 최초 커밋(`627c6f1`) 후 `--amend --author` 로 작성자 이메일 오타(`gmailc.om`→`gmail.com`) 수정 → `--force-with-lease` 로 원격 갱신(`beaabf7`). 이후 로컬 `git config --global user.email` 도 사용자가 교정.
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
+- KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
+
+### T16 도구 effect 한국어 번역 ✅ 117/117
+
+- `data/manual/item_effects_ko.json` 신규 — 117개 도구(held 30 / mega-stone 59 / berry 28) effect 번역 모두 채움. 공식 한국어 게임 텍스트 컨벤션(~된다 문체)으로 통일. 메가스톤 이름은 `pokemon.json[].nameKo` 기반으로 일관 적용(예: 눈설왕/앱솔/리자몽/장크로다일/… 모단단게).
+- `scripts/build.py` — `ITEM_EFFECTS_KO_OVERRIDE_PATH` + `_load_item_effects_ko()` 추가, `build_items()` 가 `effectKo` 를 병합하도록 확장.
+- `web/assets/app.js` — `itemEffect(item)` 공용 헬퍼 추가(`getLang() === 'ko' ? effectKo||effect : effect`).
+- `web/assets/items-list.js` — `effect.textContent = itemEffect(it)` 로 치환, 검색 매칭에 `effectKo` 포함.
+- `docs/schema.md` — items 스키마에 `effectKo` 필드 반영, 샘플에 black-belt 한·영 양쪽 표시.
+- 빌드 결과: `web/data/items.json` 117/117 effectKo, `corpus.json` 924KB → 979KB, manifest 갱신.
 
 ---
 

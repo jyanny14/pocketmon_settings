@@ -168,6 +168,62 @@
 - 구독 기반 접근이라 유저 경험 상 "직접 연동"과 구분 필요
 - 출시 후 사용자 피드백 받아서 결정
 
+## 한국어 커버리지 보강 (2026-04-20 추가)
+
+KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/audit` 참조):
+
+| # | 항목 | 미번역 건수 | 영향 |
+|---|---|---|---|
+| T16 | 도구 `effect` 전체 영어 | 117/117 | 가장 큼. 모든 도구 카드 효과 설명 |
+| T17 | 어빌리티 `descriptionKo` 전체 비어 | 192/192 | 특성 카드 상세 설명 문단 |
+| T18 | 어빌리티 `gameTextKo` 미매칭 | 16 | 특성 카드 게임 설명 |
+| T19 | 기술 `nameKo` 미매칭 | 35 | 포켓몬 상세 기술 테이블 이름 |
+| T20 | 기술 `flavorTextKo` 미매칭 | 44 | 기술 설명 텍스트 |
+| T21 | `prompts` 페이지 i18n 미적용 | 3 파일 | EN 모드에서 한국어 고정(역방향) |
+
+(이미 등록된 T4b 어빌리티 nameKo 14건 · T8b 도구 nameKo 24건 은 기존 항목 유지.)
+
+### T16. 도구 `effect` 한국어 번역 추가
+- 현재 `items.json` 에 `effectKo` 필드 자체가 **없음**. 모든 도구 카드가 영문 effect 를 그대로 표시.
+- 관련 코드: `web/assets/items-list.js:182` — `effect.textContent = it.effect`.
+- 작업:
+  - `data/manual/item_effects_ko.json` 신설 (slug → effectKo). 117건 수동 번역(게임 내 한국어 UI / Pokémon Korea 공식 / 신뢰 가능한 한국 위키 순).
+  - `scripts/build.py` `build_items` 에 병합 로직 추가.
+  - `web/assets/app.js` 에 `itemEffect(item)` 공용 헬퍼 추가 (getLang ko → effectKo || effect, en → effect). items-list 와 party 빌더 도구 툴팁에 적용.
+  - `docs/schema.md` items 섹션에 `effectKo` 반영.
+- 난이도: 117건 수동 번역이라 큼. 일부는 기존 본편 번역 재활용 가능하나 Champions 신규 메가스톤 다수는 새로 필요.
+
+### T17. 어빌리티 `descriptionKo` 수동 보강
+- T11 에서 PokeAPI `effect_entries[ko]` 가 한국어를 제공하지 않아 현재 0/192.
+- 공식 한국어 설명은 존재하지 않는 경우가 많아 **T11 의 `gameTextKo` 를 `description` 대체로 표시하는 우회**도 선택지. UI 변경만으로 해결되면 본 T17 자체를 축소 가능.
+- 진행 방식 후보:
+  - A. `abilities-list.js` 에서 `descriptionKo` 비어 있고 `gameTextKo` 있으면 gameTextKo 우선 표시 (간단).
+  - B. `data/manual/ability_descriptions_ko.json` 생성 후 192건 번역.
+- 우선 A 로 체감 이슈 80% 해결 가능. 진행 전 한 번 더 의논.
+
+### T18. 어빌리티 `gameTextKo` 미매칭 16건 수동 보강
+- T11 수집 결과 176/192. 미매칭은 Gen 9/Champions 신규 특성이 주. T4b 와 겹치는 slug 집합 확인 필요.
+- `data/manual/ability_names_ko.json` 가 nameKo 전용이므로 **`data/manual/ability_game_texts_ko.json` 신설** 후 build 병합.
+- `scripts/fetch_ability_descriptions_ko.py --force` 주기 재실행으로 PokeAPI 추후 반영분 자동 흡수.
+
+### T19. 기술 `nameKo` 미매칭 35건 수동 보강
+- T10 수집 결과 446/481. 미매칭 slug 전체 (`aquacutter`, `aquastep`, `armorcannon`, `axekick`, `bitterblade`, `chillingwater`, `chillyreception`, `comeuppance`, `direclaw`, `flowertrick`, `gigatonhammer`, `headlongrush`, `icespinner`, `jetpunch`, `kowtowcleave`, …) 는 전부 Gen 9/Champions 후반 추가 기술.
+- `data/manual/move_names_ko.json` 신설 → `scripts/build_moves.py` 병합 → `web/data/moves.json[].nameKo` 에 반영.
+- `scripts/fetch_moves.py --force` 재실행으로 PokeAPI 추후 반영분 자동 흡수.
+
+### T20. 기술 `flavorTextKo` 미매칭 44건 수동 보강
+- T10 수집 결과 437/481. T19 와 slug 집합이 거의 겹침.
+- `data/manual/move_flavors_ko.json` 신설, 같은 경로로 병합.
+- 우선순위는 T19 보다 낮음 (UI 노출 빈도 낮음).
+
+### T21. `prompts` 페이지 i18n 적용 (역방향)
+- KO→EN 이 아닌 EN 모드에서 한국어 고정이 되는 문제. 사용자 질문의 범위 밖이지만 전체 품질 관점에서 같이 정리.
+- 대상 파일:
+  - `web/prompts.html` — `<title>`, `<meta description>`, 페이지 제목·리드, 섹션 label, 푸터. `data-i18n` 속성 일괄 부여.
+  - `web/assets/prompts.js` — 버튼 라벨 ("프롬프트만 복사", "프롬프트 + 데이터 복사", "복사됨 ✓", "복사할 텍스트를 선택…"), 알림 문구 ("데이터 로드 실패", "파티가 비어 있어서…"), 빈 파티 안내문.
+  - `web/assets/prompts-templates.js` — 템플릿 title/description 만 i18n 하고 `body` 는 현재 한국어 고정 유지 (프롬프트 자체를 영어로 바꿀지는 별도 의사결정 필요).
+- `i18n.js` 에 `prompts.*` 키 블록 신설. EN 번역은 자연스럽게 작성.
+
 ## 선행 결정 사항
 
 - `manifest.json` 도입: **확정** (2026-04-15) — JSON 파일 구조는 그대로 두고 manifest로 메타만 관리

@@ -174,6 +174,8 @@ type Item = {
   nameEn: string;          // 영문 이름
   nameKo?: string;         // 한글 이름 (현재 대부분 미수집, 후속 과제)
   effect: string;          // 영문 효과 설명 문장
+  effectKo: string;        // 한글 효과 설명. `data/manual/item_effects_ko.json` 에서 병합.
+                           //   빈 문자열이면 UI 한국어 모드에서도 영문 effect 폴백
   location: string;        // 입수 위치. 예: "Shop 700 VP", "Achievement - ..."
   iconPath: string;        // 저장소 상대 경로. 아이콘 없으면 빈 문자열
   category: "held" | "mega-stone" | "berry";
@@ -186,7 +188,9 @@ type Item = {
 {
   "slug": "black-belt",
   "nameEn": "Black Belt",
+  "nameKo": "검은띠",
   "effect": "An item to be held by a Pokémon. This belt helps with focus and boosts the power of the holder's Fighting-type moves.",
+  "effectKo": "포켓몬이 지닐 수 있는 도구. 집중을 돕는 벨트. 지닌 포켓몬의 격투타입 기술 위력이 올라간다.",
   "location": "Shop 700 VP",
   "iconPath": "assets/items/black-belt.png",
   "category": "held"
@@ -196,7 +200,8 @@ type Item = {
 ### 주의
 
 - 리크루트 티켓/쿠폰은 `items.json` 에 포함되지 않음 (사용자 결정 2026-04-15). 필요해지면 `recruit_tickets.json` 로 분리 (T14)
-- `nameKo` 는 아직 대부분 비어 있음. PokeAPI에 Champions 전용 아이템이 없어 수동 매핑 필요 (T8)
+- `nameKo` 는 일부(24개)가 아직 비어 있음 (Champions 신규 메가스톤). PokeAPI 미반영 → `data/manual/item_names_ko.json` 수동 보강 (T8b)
+- `effectKo` 는 117/117 번역 완료 (2026-04-20, T16). 영문 소스는 유지
 
 ---
 

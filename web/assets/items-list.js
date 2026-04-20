@@ -1,4 +1,4 @@
-import { loadItems, itemDisplayName, t } from "./app.js";
+import { loadItems, itemDisplayName, itemEffect, t } from "./app.js";
 
 const CATEGORIES = [
   { slug: "held", label: t("items.cat.held") },
@@ -118,7 +118,8 @@ function matches(item, q) {
     item.nameEn.toLowerCase().includes(lq) ||
     (item.nameKo ?? "").toLowerCase().includes(lq) ||
     item.slug.toLowerCase().includes(lq) ||
-    (item.effect ?? "").toLowerCase().includes(lq)
+    (item.effect ?? "").toLowerCase().includes(lq) ||
+    (item.effectKo ?? "").toLowerCase().includes(lq)
   );
 }
 
@@ -179,7 +180,7 @@ function renderCard(it) {
 
   const effect = document.createElement("p");
   effect.className = "item-card__effect";
-  effect.textContent = it.effect || "";
+  effect.textContent = itemEffect(it);
 
   const meta = document.createElement("div");
   meta.className = "item-card__meta";

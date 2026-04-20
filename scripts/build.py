@@ -67,6 +67,10 @@ ABILITY_NAMES_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_nam
 ITEM_NAMES_KO_PATH = PROJECT_ROOT / "data" / "processed" / "item_names_ko.json"
 ITEM_NAMES_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_names_ko.json"
 
+# {slug: effectKo} — manual Korean translations of item effect text. No automated
+# source: PokeAPI has per-item flavor text but not complete Korean item "effect".
+ITEM_EFFECTS_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_effects_ko.json"
+
 # {slug: {gameTextKo?, descriptionKo?}} — fetch_ability_descriptions_ko.py
 ABILITY_DESC_KO_PATH = PROJECT_ROOT / "data" / "processed" / "ability_descriptions_ko.json"
 
@@ -104,6 +108,10 @@ def _load_ability_names_ko() -> dict[str, str]:
 
 def _load_item_names_ko() -> dict[str, str]:
     return _load_string_map(ITEM_NAMES_KO_PATH, ITEM_NAMES_KO_OVERRIDE_PATH)
+
+
+def _load_item_effects_ko() -> dict[str, str]:
+    return _load_string_map(ITEM_EFFECTS_KO_OVERRIDE_PATH)
 
 
 def _load_ability_descriptions_ko() -> dict[str, dict[str, str]]:
@@ -267,6 +275,7 @@ def build_items() -> list[dict]:
         return []
     items = parse_items_listing(html)
     names_ko = _load_item_names_ko()
+    effects_ko = _load_item_effects_ko()
     results: list[dict] = []
     for it in items:
         slug = _item_slug(it.name)
@@ -277,6 +286,7 @@ def build_items() -> list[dict]:
             "nameEn": N(it.name),
             "nameKo": N(names_ko.get(slug, "")),
             "effect": N(it.effect),
+            "effectKo": N(effects_ko.get(slug, "")),
             "location": N(it.location),
             "iconPath": icon_rel if icon_exists else "",
             "category": it.category,
