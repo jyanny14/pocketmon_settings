@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "generatedAt": "2026-04-20T08:54:18Z",
+    "generatedAt": "2026-04-20T09:14:23Z",
     "schemaVersion": "1.0.0",
     "sources": {
       "serebii_champions": "https://www.serebii.net/pokemonchampions/",
@@ -18,7 +18,7 @@
         "name": "items",
         "path": "items.json",
         "count": 117,
-        "sha256": "9a78751ed17abc94067097721dadcfc52f2d5b559e5e6483778742d41a1cbb68"
+        "sha256": "f7c8257653bfe97c03d0ffaa19f734870c56fb23ee26600e5438e7e59fbe360a"
       },
       {
         "name": "abilities",
@@ -36,7 +36,7 @@
         "name": "moves",
         "path": "moves.json",
         "count": 481,
-        "sha256": "688d70b8119c68304504c8481bdd3053fc2df4500c4aab878ebbbe49eda2a3b6"
+        "sha256": "ca0bf14f02fe0f44d3effc8904202a3c4f234ed266782bce8ca8f05cc100f4ff"
       }
     ]
   },
@@ -24241,7 +24241,7 @@
       "nameEn": "Black Belt",
       "nameKo": "검은띠",
       "effect": "An item to be held by a Pokémon. This belt helps with focus and boosts the power of the holder's Fighting-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 집중을 돕는 벨트. 지닌 포켓몬의 격투타입 기술 위력이 올라간다.",
+      "effectKo": "마음을 긴장시키는 띠. 지니게 하면 격투타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/black-belt.png",
       "category": "held"
@@ -24251,7 +24251,7 @@
       "nameEn": "Black Glasses",
       "nameKo": "검은안경",
       "effect": "An item to be held by a Pokémon. It's a pair of shady- looking glasses that boost the power of the holder's Dark-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 수상하게 보이는 선글라스. 지닌 포켓몬의 악타입 기술 위력이 올라간다.",
+      "effectKo": "수상하게 보이는 선글라스. 지니게 하면 악타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/black-glasses.png",
       "category": "held"
@@ -24261,7 +24261,7 @@
       "nameEn": "Bright Powder",
       "nameKo": "반짝가루",
       "effect": "An item to be held by a Pokémon. This glittery powder casts a tricky glare that lowers the accuracy of opposing Pokémon's moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 반짝이는 가루가 눈을 속여 상대 포켓몬 기술의 명중률을 떨어뜨린다.",
+      "effectKo": "반짝반짝 빛나는 가루. 지니게 하면 빛이 상대를 혼란시켜 기술이 명중되기 어려워진다.",
       "location": "Beginning",
       "iconPath": "assets/items/bright-powder.png",
       "category": "held"
@@ -24271,7 +24271,7 @@
       "nameEn": "Charcoal",
       "nameKo": "목탄",
       "effect": "An item to be held by a Pokémon. It's a combustible fuel that boosts the power of the holder's Fire-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 잘 타는 연료. 지닌 포켓몬의 불꽃타입 기술 위력이 올라간다.",
+      "effectKo": "물건을 태우는 연료. 지니게 하면 불꽃타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/charcoal.png",
       "category": "held"
@@ -24281,7 +24281,7 @@
       "nameEn": "Choice Scarf",
       "nameKo": "구애스카프",
       "effect": "An item to be held by a Pokémon. This curious scarf boosts the holder's Speed stat but only allows the use of a single move.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 이상한 스카프. 지니면 스피드가 올라가지만 하나의 기술만 쓸 수 있게 된다.",
+      "effectKo": "기술을 구애받는 스카프. 지니게 하면 스피드는 올라가지만 같은 기술밖에 쓸 수 없다.",
       "location": "Beginning",
       "iconPath": "assets/items/choice-scarf.png",
       "category": "held"
@@ -24291,7 +24291,7 @@
       "nameEn": "Dragon Fang",
       "nameKo": "용의이빨",
       "effect": "An item to be held by a Pokémon. This hard, sharp fang boosts the power of the holder's Dragon-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 단단하고 날카로운 이빨. 지닌 포켓몬의 드래곤타입 기술 위력이 올라간다.",
+      "effectKo": "단단하고 날카로운 이빨. 지니게 하면 드래곤타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/dragon-fang.png",
       "category": "held"
@@ -24301,7 +24301,7 @@
       "nameEn": "Fairy Feather",
       "nameKo": "요정의깃털",
       "effect": "An item to be held by a Pokémon. This feather, which gleams faintly when hit by light, boosts the power of the holder's Fairy-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 빛을 받으면 희미하게 빛나는 깃털. 지닌 포켓몬의 페어리타입 기술 위력이 올라간다.",
+      "effectKo": "빛에 비추면 희미하게 빛나는 깃털. 지니게 하면 페어리타입 기술의 위력이 쭉 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/fairy-feather.png",
       "category": "held"
@@ -24311,7 +24311,7 @@
       "nameEn": "Focus Band",
       "nameKo": "기합의머리띠",
       "effect": "An item to be held by a Pokémon. When the holder is hit with a move that should knock it out, it may be able to endure with 1 HP.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 쓰러질 정도의 대미지를 받아도 드물게 HP 1 로 버틸 때가 있다.",
+      "effectKo": "지니게 하면 기절할 듯한 기술을 받아도 HP 를 1 남겨서 견디기도 한다.",
       "location": "Beginning",
       "iconPath": "assets/items/focus-band.png",
       "category": "held"
@@ -24321,7 +24321,7 @@
       "nameEn": "Focus Sash",
       "nameKo": "기합의띠",
       "effect": "An item to be held by a Pokémon. If the holder has full HP and it is hit with a move that should knock it out, it will endure with 1 HP—but only once.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. HP 가 가득할 때 쓰러질 정도의 대미지를 받으면 한 번에 한해 HP 1 로 버틴다.",
+      "effectKo": "지니게 하면 HP 가 꽉 찼을 때 기절할 듯한 기술을 받아도 HP 1 로 한 번은 버틴다.",
       "location": "Beginning",
       "iconPath": "assets/items/focus-sash.png",
       "category": "held"
@@ -24331,7 +24331,7 @@
       "nameEn": "Hard Stone",
       "nameKo": "딱딱한돌",
       "effect": "An item to be held by a Pokémon. It's a durable stone that boosts the power of the holder's Rock-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 내구성 있는 돌. 지닌 포켓몬의 바위타입 기술 위력이 올라간다.",
+      "effectKo": "저절로 깨지지 않는 돌. 지니게 하면 바위타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/hard-stone.png",
       "category": "held"
@@ -24341,7 +24341,7 @@
       "nameEn": "King's Rock",
       "nameKo": "왕의징표석",
       "effect": "An item to be held by a Pokémon. It may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 공격으로 대미지를 주면 상대를 풀죽게 만들 때가 있다.",
+      "effectKo": "",
       "location": "Beginning",
       "iconPath": "assets/items/kings-rock.png",
       "category": "held"
@@ -24351,7 +24351,7 @@
       "nameEn": "Leftovers",
       "nameKo": "먹다남은음식",
       "effect": "An item to be held by a Pokémon. It slowly but steadily restores the holder's HP.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 지닌 포켓몬의 HP 가 매 턴 조금씩 회복된다.",
+      "effectKo": "지니게 하면 포켓몬의 HP 가 조금씩 회복된다.",
       "location": "Beginning",
       "iconPath": "assets/items/leftovers.png",
       "category": "held"
@@ -24361,7 +24361,7 @@
       "nameEn": "Light Ball",
       "nameKo": "전기구슬",
       "effect": "An item to be held by Pikachu. It's a mysterious orb that boosts Pikachu's Attack and Sp. Atk stats.",
-      "effectKo": "피카츄에게 지니게 하는 도구. 신비로운 구슬. 피카츄의 공격과 특수공격이 올라간다.",
+      "effectKo": "피카츄에게 지니게 하면 공격과 특수공격의 위력이 올라가는 이상한 구슬.",
       "location": "Shop 1000 VP",
       "iconPath": "assets/items/light-ball.png",
       "category": "held"
@@ -24371,7 +24371,7 @@
       "nameEn": "Magnet",
       "nameKo": "자석",
       "effect": "An item to be held by a Pokémon. It's a powerful magnet that boosts the power of the holder's Electric-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 강력한 자석. 지닌 포켓몬의 전기타입 기술 위력이 올라간다.",
+      "effectKo": "강력한 자석. 지니게 하면 전기타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/magnet.png",
       "category": "held"
@@ -24381,7 +24381,7 @@
       "nameEn": "Mental Herb",
       "nameKo": "멘탈허브",
       "effect": "An item to be held by a Pokémon. The holder will be able to shake off move-binding effects to move freely— but only once.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 속박하는 기술의 효과를 한 번에 한해 해제할 수 있다.",
+      "effectKo": "지니게 한 포켓몬은 헤롱헤롱 상태가 되었을 때 한 번만 회복한다.",
       "location": "Shop 1000 VP",
       "iconPath": "assets/items/mental-herb.png",
       "category": "held"
@@ -24391,7 +24391,7 @@
       "nameEn": "Metal Coat",
       "nameKo": "금속코트",
       "effect": "An item to be held by a Pokémon. It's a special metallic coating that boosts the power of the holder's Steel-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 특수한 금속 코팅. 지닌 포켓몬의 강철타입 기술 위력이 올라간다.",
+      "effectKo": "특수한 금속 장막. 지니게 하면 강철타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/metal-coat.png",
       "category": "held"
@@ -24401,7 +24401,7 @@
       "nameEn": "Miracle Seed",
       "nameKo": "기적의씨",
       "effect": "An item to be held by a Pokémon. It's a seed imbued with life force that boosts the power of the holder's Grass-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 생명력이 깃든 씨앗. 지닌 포켓몬의 풀타입 기술 위력이 올라간다.",
+      "effectKo": "생명이 뿌듯한 씨앗. 지니게 하면 풀타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/miracle-seed.png",
       "category": "held"
@@ -24411,7 +24411,7 @@
       "nameEn": "Mystic Water",
       "nameKo": "신비의물방울",
       "effect": "An item to be held by a Pokémon. This teardrop-shaped gem boosts the power of the holder's Water-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 물방울 모양의 보석. 지닌 포켓몬의 물타입 기술 위력이 올라간다.",
+      "effectKo": "물방울 모양의 보석. 지니게 하면 물타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/mystic-water.png",
       "category": "held"
@@ -24421,7 +24421,7 @@
       "nameEn": "Never-Melt Ice",
       "nameKo": "녹지않는얼음",
       "effect": "An item to be held by a Pokémon. It's a heat-repelling piece of ice that boosts the power of the holder's Ice- type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 열에 녹지 않는 얼음조각. 지닌 포켓몬의 얼음타입 기술 위력이 올라간다.",
+      "effectKo": "열을 가까이하지 않게 하는 얼음. 지니게 하면 얼음타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/never-melt-ice.png",
       "category": "held"
@@ -24431,7 +24431,7 @@
       "nameEn": "Poison Barb",
       "nameKo": "독바늘",
       "effect": "An item to be held by a Pokémon. This small poisonous barb boosts the power of the holder's Poison-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 작은 독바늘. 지닌 포켓몬의 독타입 기술 위력이 올라간다.",
+      "effectKo": "독이 있는 작은 침. 지니게 하면 독타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/poison-barb.png",
       "category": "held"
@@ -24441,7 +24441,7 @@
       "nameEn": "Quick Claw",
       "nameKo": "선제공격손톱",
       "effect": "An item to be held by a Pokémon. This light, sharp claw lets the holder occasionally unleash a move faster than it usually would.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 가볍고 날카로운 손톱. 지닌 포켓몬이 드물게 먼저 공격할 수 있게 된다.",
+      "effectKo": "가볍고 날카로운 손톱. 지니게 하면 상대보다 먼저 행동할 수도 있다.",
       "location": "Beginning",
       "iconPath": "assets/items/quick-claw.png",
       "category": "held"
@@ -24451,7 +24451,7 @@
       "nameEn": "Scope Lens",
       "nameKo": "초점렌즈",
       "effect": "An item to be held by a Pokémon. It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 약점을 노려보는 렌즈. 지닌 포켓몬의 급소 공격률이 올라간다.",
+      "effectKo": "약점이 보이는 렌즈. 지니게 한 포켓몬의 기술이 급소에 맞기 쉬워진다.",
       "location": "Shop 1000 VP",
       "iconPath": "assets/items/scope-lens.png",
       "category": "held"
@@ -24461,7 +24461,7 @@
       "nameEn": "Sharp Beak",
       "nameKo": "예리한부리",
       "effect": "An item to be held by a Pokémon. It's a long, sharp beak that boosts the power of the holder's Flying-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 길고 날카로운 부리. 지닌 포켓몬의 비행타입 기술 위력이 올라간다.",
+      "effectKo": "길고 뾰족한 부리. 지니게 하면 비행타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/sharp-beak.png",
       "category": "held"
@@ -24471,7 +24471,7 @@
       "nameEn": "Shell Bell",
       "nameKo": "조개껍질방울",
       "effect": "An item to be held by a Pokémon. The holder restores a little HP to itself every time it inflicts damage with an attack.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 공격으로 대미지를 줄 때마다 HP 가 조금씩 회복된다.",
+      "effectKo": "지니게 한 포켓몬이 공격하여 상대에게 데미지를 줬을 때 HP 를 조금 회복할 수 있다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/shell-bell.png",
       "category": "held"
@@ -24481,7 +24481,7 @@
       "nameEn": "Silk Scarf",
       "nameKo": "실크스카프",
       "effect": "An item to be held by a Pokémon. It's a sumptuous scarf that boosts the power of the holder's Normal-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 호화로운 스카프. 지닌 포켓몬의 노말타입 기술 위력이 올라간다.",
+      "effectKo": "감촉이 좋은 스카프. 지니게 하면 노말타입 기술의 위력이 쭉 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/silk-scarf.png",
       "category": "held"
@@ -24491,7 +24491,7 @@
       "nameEn": "Silver Powder",
       "nameKo": "은빛가루",
       "effect": "An item to be held by a Pokémon. It's a shiny silver powder that boosts the power of the holder's Bug-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 반짝이는 은빛 가루. 지닌 포켓몬의 벌레타입 기술 위력이 올라간다.",
+      "effectKo": "은색으로 반짝이는 가루. 지니게 하면 벌레타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/silver-powder.png",
       "category": "held"
@@ -24501,7 +24501,7 @@
       "nameEn": "Soft Sand",
       "nameKo": "부드러운모래",
       "effect": "An item to be held by a Pokémon. This loose, silky sand boosts the power of the holder's Ground-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 보드랍고 고운 모래. 지닌 포켓몬의 땅타입 기술 위력이 올라간다.",
+      "effectKo": "만지면 보슬보슬한 모래. 지니게 하면 땅타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/soft-sand.png",
       "category": "held"
@@ -24511,7 +24511,7 @@
       "nameEn": "Spell Tag",
       "nameKo": "저주의부적",
       "effect": "An item to be held by a Pokémon. It's a sinister, eerie tag that boosts the power of the holder's Ghost-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 수상한 부적. 지닌 포켓몬의 고스트타입 기술 위력이 올라간다.",
+      "effectKo": "괴상하고 으스스한 부적. 지니게 하면 고스트타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/spell-tag.png",
       "category": "held"
@@ -24521,7 +24521,7 @@
       "nameEn": "Twisted Spoon",
       "nameKo": "휘어진스푼",
       "effect": "An item to be held by a Pokémon. This spoon is imbued with telekinetic energy and boosts the power of the holder's Psychic-type moves.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 염력이 깃든 스푼. 지닌 포켓몬의 에스퍼타입 기술 위력이 올라간다.",
+      "effectKo": "염동력을 담은 숟가락. 지니게 하면 에스퍼타입 기술의 위력이 올라간다.",
       "location": "Shop 700 VP",
       "iconPath": "assets/items/twisted-spoon.png",
       "category": "held"
@@ -24531,7 +24531,7 @@
       "nameEn": "White Herb",
       "nameKo": "하양허브",
       "effect": "An item to be held by a Pokémon. It will restore any lowered stat in battle—but only once.",
-      "effectKo": "포켓몬이 지닐 수 있는 도구. 떨어진 능력치를 한 번에 한해 원래대로 되돌린다.",
+      "effectKo": "지니게 한 포켓몬의 능력이 떨어졌을 때 한 번만 원래 상태로 돌아온다.",
       "location": "Beginning",
       "iconPath": "assets/items/white-herb.png",
       "category": "held"
@@ -24541,7 +24541,7 @@
       "nameEn": "Abomasite",
       "nameKo": "눈설왕나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Abomasnow holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 눈설왕에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "눈설왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Mega Evolution Tutorial",
       "iconPath": "assets/items/abomasite.png",
       "category": "mega-stone"
@@ -24551,7 +24551,7 @@
       "nameEn": "Absolite",
       "nameKo": "앱솔나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Absol holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 앱솔에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "앱솔에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/absolite.png",
       "category": "mega-stone"
@@ -24561,7 +24561,7 @@
       "nameEn": "Aerodactylite",
       "nameKo": "프테라나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Aerodactyl holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 프테라에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "프테라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/aerodactylite.png",
       "category": "mega-stone"
@@ -24571,7 +24571,7 @@
       "nameEn": "Aggronite",
       "nameKo": "보스로라나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Aggron holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 보스로라에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "보스로라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Mega Evolution Tutorial",
       "iconPath": "assets/items/aggronite.png",
       "category": "mega-stone"
@@ -24581,7 +24581,7 @@
       "nameEn": "Alakazite",
       "nameKo": "후디나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Alakazam holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 후딘에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "후딘에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/alakazite.png",
       "category": "mega-stone"
@@ -24591,7 +24591,7 @@
       "nameEn": "Altarianite",
       "nameKo": "파비코리나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Altaria holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 파비코리에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "파비코리에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/altarianite.png",
       "category": "mega-stone"
@@ -24601,7 +24601,7 @@
       "nameEn": "Ampharosite",
       "nameKo": "전룡나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Ampharos holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 전룡에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "전룡에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/ampharosite.png",
       "category": "mega-stone"
@@ -24611,7 +24611,7 @@
       "nameEn": "Audinite",
       "nameKo": "다부니나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Audino holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 다부니에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "다부니에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/audinite.png",
       "category": "mega-stone"
@@ -24621,7 +24621,7 @@
       "nameEn": "Banettite",
       "nameKo": "다크펫나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Banette holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 다크펫에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "다크펫에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/banettite.png",
       "category": "mega-stone"
@@ -24631,7 +24631,7 @@
       "nameEn": "Beedrillite",
       "nameKo": "독침붕나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Beedrill holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 독침붕에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "독침붕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Mega Evolution Tutorial",
       "iconPath": "assets/items/beedrillite.png",
       "category": "mega-stone"
@@ -24641,7 +24641,7 @@
       "nameEn": "Blastoisinite",
       "nameKo": "거북왕나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Blastoise holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 거북왕에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "거북왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/blastoisinite.png",
       "category": "mega-stone"
@@ -24651,7 +24651,7 @@
       "nameEn": "Cameruptite",
       "nameKo": "폭타나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Camerupt holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 폭타에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "폭타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/cameruptite.png",
       "category": "mega-stone"
@@ -24661,7 +24661,7 @@
       "nameEn": "Chandelurite",
       "nameKo": "샹델라나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Chandelure holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 샹델라에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "샹델라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/chandelurite.png",
       "category": "mega-stone"
@@ -24671,7 +24671,7 @@
       "nameEn": "Charizardite X",
       "nameKo": "리자몽나이트X",
       "effect": "One of a variety of mysterious Mega Stones. A Charizard holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 리자몽에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "리자몽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/charizardite-x.png",
       "category": "mega-stone"
@@ -24681,7 +24681,7 @@
       "nameEn": "Charizardite Y",
       "nameKo": "리자몽나이트Y",
       "effect": "One of a variety of mysterious Mega Stones. A Charizard holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 리자몽에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "리자몽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/charizardite-y.png",
       "category": "mega-stone"
@@ -24691,7 +24691,7 @@
       "nameEn": "Chesnaughtite",
       "nameKo": "브리가론나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Chesnaught holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 브리가론에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "브리가론에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Deposit a Chesnaught from Pokémon Legends: Z-A",
       "iconPath": "assets/items/chesnaughtite.png",
       "category": "mega-stone"
@@ -24701,7 +24701,7 @@
       "nameEn": "Chimechite",
       "nameKo": "치렁나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Chimecho holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 치렁에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "치렁에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/chimechite.png",
       "category": "mega-stone"
@@ -24711,7 +24711,7 @@
       "nameEn": "Clefablite",
       "nameKo": "픽시나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Clefable holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 픽시에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "픽시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/clefablite.png",
       "category": "mega-stone"
@@ -24721,7 +24721,7 @@
       "nameEn": "Crabominite",
       "nameKo": "모단단게나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Crabominable holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 모단단게에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "모단단게에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/crabominite.png",
       "category": "mega-stone"
@@ -24731,7 +24731,7 @@
       "nameEn": "Delphoxite",
       "nameKo": "마폭시나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Delphox holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 마폭시에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "마폭시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Deposit a Delphox from Pokémon Legends: Z-A",
       "iconPath": "assets/items/delphoxite.png",
       "category": "mega-stone"
@@ -24741,7 +24741,7 @@
       "nameEn": "Dragoninite",
       "nameKo": "망나뇽나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Dragonite holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 망나뇽에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "망나뇽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/dragoninite.png",
       "category": "mega-stone"
@@ -24751,7 +24751,7 @@
       "nameEn": "Drampanite",
       "nameKo": "할비롱나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Drampa holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 할비롱에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "할비롱에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/drampanite.png",
       "category": "mega-stone"
@@ -24761,7 +24761,7 @@
       "nameEn": "Emboarite",
       "nameKo": "염무왕나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Emboar holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 염무왕에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "염무왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/emboarite.png",
       "category": "mega-stone"
@@ -24771,7 +24771,7 @@
       "nameEn": "Excadrite",
       "nameKo": "몰드류나이트",
       "effect": "One of a variety of mysterious Mega Stones. An Excadrill holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 몰드류에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "몰드류에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/excadrite.png",
       "category": "mega-stone"
@@ -24781,7 +24781,7 @@
       "nameEn": "Feraligite",
       "nameKo": "장크로다일나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Feraligatr holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 장크로다일에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "장크로다일에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/feraligite.png",
       "category": "mega-stone"
@@ -24791,7 +24791,7 @@
       "nameEn": "Floettite",
       "nameKo": "플라엣테나이트",
       "effect": "One of a variety of mysterious Mega Stones. A special Floette holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 특별한 플라엣테에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "플라엣테에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Deposit a Floette Eternal Flower from Pokémon Legends: Z-A",
       "iconPath": "assets/items/floettite.png",
       "category": "mega-stone"
@@ -24801,7 +24801,7 @@
       "nameEn": "Froslassite",
       "nameKo": "눈여아나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Froslass holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 눈여아에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "눈여아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/froslassite.png",
       "category": "mega-stone"
@@ -24811,7 +24811,7 @@
       "nameEn": "Galladite",
       "nameKo": "엘레이드나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Gallade holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 엘레이드에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "엘레이드에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/galladite.png",
       "category": "mega-stone"
@@ -24821,7 +24821,7 @@
       "nameEn": "Garchompite",
       "nameKo": "한카리아스나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Garchomp holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 한카리아스에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "한카리아스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Mega Evolution Tutorial",
       "iconPath": "assets/items/garchompite.png",
       "category": "mega-stone"
@@ -24831,7 +24831,7 @@
       "nameEn": "Gardevoirite",
       "nameKo": "가디안나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Gardevoir holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 가디안에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "가디안에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/gardevoirite.png",
       "category": "mega-stone"
@@ -24841,7 +24841,7 @@
       "nameEn": "Gengarite",
       "nameKo": "팬텀나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Gengar holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 팬텀에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "팬텀에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/gengarite.png",
       "category": "mega-stone"
@@ -24851,7 +24851,7 @@
       "nameEn": "Glalitite",
       "nameKo": "얼음귀신나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Glalie holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 얼음귀신에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "얼음귀신에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/glalitite.png",
       "category": "mega-stone"
@@ -24861,7 +24861,7 @@
       "nameEn": "Glimmoranite",
       "nameKo": "킬라플로르나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Glimmora holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 킬라플로르에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "킬라플로르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/glimmoranite.png",
       "category": "mega-stone"
@@ -24871,7 +24871,7 @@
       "nameEn": "Golurkite",
       "nameKo": "골루그나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Golurk holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 골루그에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "골루그에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/golurkite.png",
       "category": "mega-stone"
@@ -24881,7 +24881,7 @@
       "nameEn": "Greninjite",
       "nameKo": "개굴닌자나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Greninja holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 개굴닌자에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "개굴닌자에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Deposit a Greninja from Pokémon Legends: Z-A",
       "iconPath": "assets/items/greninjite.png",
       "category": "mega-stone"
@@ -24891,7 +24891,7 @@
       "nameEn": "Gyaradosite",
       "nameKo": "갸라도스나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Gyarados holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 갸라도스에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "갸라도스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Mega Evolution Tutorial",
       "iconPath": "assets/items/gyaradosite.png",
       "category": "mega-stone"
@@ -24901,7 +24901,7 @@
       "nameEn": "Hawluchanite",
       "nameKo": "루차불나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Hawlucha holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 루차불에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "루차불에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/hawluchanite.png",
       "category": "mega-stone"
@@ -24911,7 +24911,7 @@
       "nameEn": "Heracronite",
       "nameKo": "헤라크로스나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Heracross holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 헤라크로스에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "헤라크로스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Mega Evolution Tutorial",
       "iconPath": "assets/items/heracronite.png",
       "category": "mega-stone"
@@ -24921,7 +24921,7 @@
       "nameEn": "Houndoominite",
       "nameKo": "헬가나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Houndoom holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 헬가에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "헬가에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/houndoominite.png",
       "category": "mega-stone"
@@ -24931,7 +24931,7 @@
       "nameEn": "Kangaskhanite",
       "nameKo": "캥카나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Kangaskhan holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 캥카에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "캥카에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/kangaskhanite.png",
       "category": "mega-stone"
@@ -24941,7 +24941,7 @@
       "nameEn": "Lopunnite",
       "nameKo": "이어롭나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Lopunny holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 이어롭에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "이어롭에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/lopunnite.png",
       "category": "mega-stone"
@@ -24951,7 +24951,7 @@
       "nameEn": "Lucarionite",
       "nameKo": "루카리오나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Lucario holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 루카리오에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "루카리오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/lucarionite.png",
       "category": "mega-stone"
@@ -24961,7 +24961,7 @@
       "nameEn": "Manectite",
       "nameKo": "썬더볼트나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Manectric holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 썬더볼트에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "썬더볼트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Mega Evolution Tutorial",
       "iconPath": "assets/items/manectite.png",
       "category": "mega-stone"
@@ -24971,7 +24971,7 @@
       "nameEn": "Medichamite",
       "nameKo": "요가램나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Medicham holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 요가램에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "요가램에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/medichamite.png",
       "category": "mega-stone"
@@ -24981,7 +24981,7 @@
       "nameEn": "Meganiumite",
       "nameKo": "메가니움나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Meganium holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 메가니움에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "메가니움에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/meganiumite.png",
       "category": "mega-stone"
@@ -24991,7 +24991,7 @@
       "nameEn": "Meowsticite",
       "nameKo": "냐오닉스나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Meowstic holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 냐오닉스에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "냐오닉스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/meowsticite.png",
       "category": "mega-stone"
@@ -25001,7 +25001,7 @@
       "nameEn": "Pidgeotite",
       "nameKo": "피죤투나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Pidgeot holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 피죤투에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "피죤투에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/pidgeotite.png",
       "category": "mega-stone"
@@ -25011,7 +25011,7 @@
       "nameEn": "Pinsirite",
       "nameKo": "쁘사이저나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Pinsir holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 쁘사이저에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "쁘사이저에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/pinsirite.png",
       "category": "mega-stone"
@@ -25021,7 +25021,7 @@
       "nameEn": "Sablenite",
       "nameKo": "깜까미나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Sableye holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 깜까미에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "깜까미에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/sablenite.png",
       "category": "mega-stone"
@@ -25031,7 +25031,7 @@
       "nameEn": "Scizorite",
       "nameKo": "핫삼나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Scizor holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 핫삼에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "핫삼에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/scizorite.png",
       "category": "mega-stone"
@@ -25041,7 +25041,7 @@
       "nameEn": "Scovillainite",
       "nameKo": "스코빌런나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Scovillain holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 스코빌런에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "스코빌런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/scovillainite.png",
       "category": "mega-stone"
@@ -25051,7 +25051,7 @@
       "nameEn": "Sharpedonite",
       "nameKo": "샤크니아나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Sharpedo holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 샤크니아에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "샤크니아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/sharpedonite.png",
       "category": "mega-stone"
@@ -25061,7 +25061,7 @@
       "nameEn": "Skarmorite",
       "nameKo": "무장조나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Skarmory holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 무장조에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "무장조에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/skarmorite.png",
       "category": "mega-stone"
@@ -25071,7 +25071,7 @@
       "nameEn": "Slowbronite",
       "nameKo": "야도란나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Slowbro holding this stone will be able to Mega Evolve during battle. It won't work for a Galarian Slowbro, however.",
-      "effectKo": "신기한 메가스톤의 일종. 야도란에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다. 가라르 야도란에게는 효과가 없다.",
+      "effectKo": "야도란에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/slowbronite.png",
       "category": "mega-stone"
@@ -25081,7 +25081,7 @@
       "nameEn": "Starminite",
       "nameKo": "아쿠스타나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Starmie holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 아쿠스타에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "아쿠스타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/starminite.png",
       "category": "mega-stone"
@@ -25091,7 +25091,7 @@
       "nameEn": "Steelixite",
       "nameKo": "강철톤나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Steelix holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 강철톤에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "강철톤에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Mega Evolution Tutorial",
       "iconPath": "assets/items/steelixite.png",
       "category": "mega-stone"
@@ -25101,7 +25101,7 @@
       "nameEn": "Tyranitarite",
       "nameKo": "마기라스나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Tyranitar holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 마기라스에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "마기라스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/tyranitarite.png",
       "category": "mega-stone"
@@ -25111,7 +25111,7 @@
       "nameEn": "Venusaurite",
       "nameKo": "이상해꽃나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Venusaur holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 이상해꽃에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "이상해꽃에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/venusaurite.png",
       "category": "mega-stone"
@@ -25121,7 +25121,7 @@
       "nameEn": "Victreebelite",
       "nameKo": "우츠보트나이트",
       "effect": "One of a variety of mysterious Mega Stones. A Victreebel holding this stone will be able to Mega Evolve during battle.",
-      "effectKo": "신기한 메가스톤의 일종. 우츠보트에게 지니게 하면 싸우는 중에 메가진화할 수 있게 된다.",
+      "effectKo": "우츠보트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
       "location": "Shop 2000 VP",
       "iconPath": "assets/items/victreebelite.png",
       "category": "mega-stone"
@@ -25131,7 +25131,7 @@
       "nameEn": "Aspear Berry",
       "nameKo": "배리열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to thaw itself after being frozen.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 얼음 상태가 되면 자력으로 회복한다.",
+      "effectKo": "얼음 상태를 낫게 한다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/aspear-berry.png",
       "category": "berry"
@@ -25141,7 +25141,7 @@
       "nameEn": "Babiri Berry",
       "nameKo": "바리비열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Steel-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 강철타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 강철타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/babiri-berry.png",
       "category": "berry"
@@ -25151,7 +25151,7 @@
       "nameEn": "Charti Berry",
       "nameKo": "루미열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Rock-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 바위타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 바위타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/charti-berry.png",
       "category": "berry"
@@ -25161,7 +25161,7 @@
       "nameEn": "Cheri Berry",
       "nameKo": "버치열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to free itself from paralysis.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 마비 상태가 되면 자력으로 회복한다.",
+      "effectKo": "마비 상태를 낫게 한다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/cheri-berry.png",
       "category": "berry"
@@ -25171,7 +25171,7 @@
       "nameEn": "Chesto Berry",
       "nameKo": "유루열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to shake off its drowsiness.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 잠듦 상태가 되면 자력으로 회복한다.",
+      "effectKo": "잠듦 상태를 낫게 한다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/chesto-berry.png",
       "category": "berry"
@@ -25181,7 +25181,7 @@
       "nameEn": "Chilan Berry",
       "nameKo": "카리열매",
       "effect": "If a Pokémon holding this Berry is hit with a Normal-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 노말타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "노말타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/chilan-berry.png",
       "category": "berry"
@@ -25191,7 +25191,7 @@
       "nameEn": "Chople Berry",
       "nameKo": "로플열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Fighting-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 격투타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 격투타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/chople-berry.png",
       "category": "berry"
@@ -25201,7 +25201,7 @@
       "nameEn": "Coba Berry",
       "nameKo": "바코열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Flying-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 비행타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 비행타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/coba-berry.png",
       "category": "berry"
@@ -25211,7 +25211,7 @@
       "nameEn": "Colbur Berry",
       "nameKo": "마코열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Dark-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 악타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 악타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/colbur-berry.png",
       "category": "berry"
@@ -25221,7 +25221,7 @@
       "nameEn": "Haban Berry",
       "nameKo": "하반열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Dragon-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 드래곤타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 드래곤타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/haban-berry.png",
       "category": "berry"
@@ -25231,7 +25231,7 @@
       "nameEn": "Kasib Berry",
       "nameKo": "수불열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Ghost-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 고스트타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 고스트타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/kasib-berry.png",
       "category": "berry"
@@ -25241,7 +25241,7 @@
       "nameEn": "Kebia Berry",
       "nameKo": "으름열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Poison-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 독타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 독타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/kebia-berry.png",
       "category": "berry"
@@ -25251,7 +25251,7 @@
       "nameEn": "Leppa Berry",
       "nameKo": "과사열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to restore 10 PP to a move.",
-      "effectKo": "이 나무열매를 지닌 포켓몬의 기술 PP 가 10 회복된다.",
+      "effectKo": "지닌 포켓몬의 기술 PP 가 10 회복된다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/leppa-berry.png",
       "category": "berry"
@@ -25261,7 +25261,7 @@
       "nameEn": "Lum Berry",
       "nameKo": "리샘열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to cure itself of any status condition it may have.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 어떤 상태이상이든 걸리면 자력으로 회복한다.",
+      "effectKo": "모든 상태이상을 회복한다.",
       "location": "Beginning",
       "iconPath": "assets/items/lum-berry.png",
       "category": "berry"
@@ -25271,7 +25271,7 @@
       "nameEn": "Occa Berry",
       "nameKo": "오카열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Fire-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 불꽃타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 불꽃타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/occa-berry.png",
       "category": "berry"
@@ -25281,7 +25281,7 @@
       "nameEn": "Oran Berry",
       "nameKo": "오랭열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to restore 10 HP to itself.",
-      "effectKo": "이 나무열매를 지닌 포켓몬의 HP 가 10 회복된다.",
+      "effectKo": "지닌 포켓몬의 HP 가 10 회복된다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/oran-berry.png",
       "category": "berry"
@@ -25291,7 +25291,7 @@
       "nameEn": "Passho Berry",
       "nameKo": "꼬시개열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Water-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 물타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 물타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/passho-berry.png",
       "category": "berry"
@@ -25301,7 +25301,7 @@
       "nameEn": "Payapa Berry",
       "nameKo": "야파열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Psychic-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 에스퍼타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 에스퍼타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/payapa-berry.png",
       "category": "berry"
@@ -25311,7 +25311,7 @@
       "nameEn": "Pecha Berry",
       "nameKo": "복슝열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to lift the effects of being poisoned from itself.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 독 상태가 되면 자력으로 회복한다.",
+      "effectKo": "독 상태를 낫게 한다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/pecha-berry.png",
       "category": "berry"
@@ -25321,7 +25321,7 @@
       "nameEn": "Persim Berry",
       "nameKo": "시몬열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to cure itself of confusion.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 혼란 상태가 되면 자력으로 회복한다.",
+      "effectKo": "혼란 상태를 낫게 한다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/persim-berry.png",
       "category": "berry"
@@ -25331,7 +25331,7 @@
       "nameEn": "Rawst Berry",
       "nameKo": "복분열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to cure itself of a burn.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 화상 상태가 되면 자력으로 회복한다.",
+      "effectKo": "화상 상태를 낫게 한다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/rawst-berry.png",
       "category": "berry"
@@ -25341,7 +25341,7 @@
       "nameEn": "Rindo Berry",
       "nameKo": "린드열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Grass-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 풀타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 풀타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/rindo-berry.png",
       "category": "berry"
@@ -25351,7 +25351,7 @@
       "nameEn": "Roseli Berry",
       "nameKo": "로셀열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Fairy-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 페어리타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 페어리타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/roseli-berry.png",
       "category": "berry"
@@ -25361,7 +25361,7 @@
       "nameEn": "Shuca Berry",
       "nameKo": "슈캐열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Ground-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 땅타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 땅타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/shuca-berry.png",
       "category": "berry"
@@ -25371,7 +25371,7 @@
       "nameEn": "Sitrus Berry",
       "nameKo": "자뭉열매",
       "effect": "If a Pokémon holds one of these Berries, it will be able to restore a small amount of HP to itself.",
-      "effectKo": "이 나무열매를 지닌 포켓몬의 HP 가 조금 회복된다.",
+      "effectKo": "지닌 포켓몬의 HP 가 전체의 1/4 회복된다.",
       "location": "Beginning",
       "iconPath": "assets/items/sitrus-berry.png",
       "category": "berry"
@@ -25381,7 +25381,7 @@
       "nameEn": "Tanga Berry",
       "nameKo": "리체열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Bug-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 벌레타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 벌레타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/tanga-berry.png",
       "category": "berry"
@@ -25391,7 +25391,7 @@
       "nameEn": "Wacan Berry",
       "nameKo": "초나열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Electric-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 전기타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 전기타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/wacan-berry.png",
       "category": "berry"
@@ -25401,7 +25401,7 @@
       "nameEn": "Yache Berry",
       "nameKo": "플카열매",
       "effect": "If a Pokémon holding this Berry is hit with a supereffective Ice-type move, the power of that move will be weakened.",
-      "effectKo": "이 나무열매를 지닌 포켓몬이 효과가 굉장한 얼음타입 기술에 맞으면 그 기술의 위력을 약하게 만든다.",
+      "effectKo": "자신에게 효과있는 얼음타입 기술의 위력을 약화시킨다.",
       "location": "Shop 400 VP",
       "iconPath": "assets/items/yache-berry.png",
       "category": "berry"
