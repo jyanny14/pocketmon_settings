@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T13:07:47Z",
+  "generatedAt": "2026-04-20T13:19:28Z",
   "schemaVersion": "1.0.0",
   "sources": {
     "serebii_champions": "https://www.serebii.net/pokemonchampions/",
@@ -11,7 +11,7 @@
       "name": "pokemon",
       "path": "pokemon.json",
       "count": 186,
-      "sha256": "8ea0ddde77ed22d72dd7e1448dfefa3db0904a594d9349f955e44edb949d272f"
+      "sha256": "db7e73f2a995533112508a9dbc9e9509094ca09c936c3659ef2a1e52167ae4ba"
     },
     {
       "name": "items",

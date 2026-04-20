@@ -41,6 +41,7 @@
           "speed": 80
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -69,6 +70,7 @@
           "speed": 80
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -374,6 +376,7 @@
           "speed": 78
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -401,6 +404,7 @@
           "speed": 78
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -533,6 +537,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu"
         ],
@@ -557,6 +562,7 @@
           "speed": 145
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu"
         ],
@@ -779,6 +785,7 @@
           "speed": 80
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -906,6 +913,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -1028,6 +1036,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -1058,7 +1067,9 @@
           "spDef": 85,
           "speed": 110
         },
-        "sourceGames": [],
+        "sourceGames": [
+          "legends-z-a"
+        ],
         "spritePath": "assets/sprites/forms/raichu-alola.png"
       }
     ],
@@ -1179,6 +1190,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -1210,6 +1222,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -1661,6 +1674,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -1689,6 +1703,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -1809,6 +1824,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -1934,6 +1950,7 @@
           "speed": 70
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -1960,6 +1977,7 @@
           "speed": 70
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -2079,6 +2097,7 @@
           "speed": 30
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -2110,6 +2129,7 @@
           "speed": 30
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -2134,6 +2154,7 @@
           "speed": 30
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -2271,6 +2292,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -2302,6 +2324,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -2438,6 +2461,7 @@
           "speed": 90
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -2463,6 +2487,7 @@
           "speed": 100
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -2589,6 +2614,7 @@
           "speed": 115
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -2615,6 +2641,7 @@
           "speed": 120
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -2734,6 +2761,7 @@
           "speed": 85
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -2760,6 +2788,7 @@
           "speed": 105
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -3031,6 +3060,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -3062,6 +3092,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -3247,6 +3278,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -3366,6 +3398,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -3485,6 +3518,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -3604,6 +3638,7 @@
           "speed": 130
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -3630,6 +3665,7 @@
           "speed": 150
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "shield",
@@ -3890,6 +3926,7 @@
           "speed": 80
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -3918,6 +3955,7 @@
           "speed": 100
         },
         "sourceGames": [
+          "legends-z-a",
           "lets-go-eevee",
           "lets-go-pikachu",
           "scarlet",
@@ -4059,6 +4097,7 @@
           "speed": 80
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -4083,6 +4122,7 @@
           "speed": 80
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -4342,6 +4382,7 @@
           "speed": 78
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -4366,6 +4407,7 @@
           "speed": 78
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -4506,6 +4548,7 @@
           "speed": 40
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -4623,6 +4666,7 @@
           "speed": 55
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -4647,6 +4691,7 @@
           "speed": 45
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -5010,6 +5055,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -5135,6 +5181,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -5264,6 +5311,7 @@
           "speed": 30
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -5293,6 +5341,7 @@
           "speed": 30
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -5561,6 +5610,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "shield",
           "shining-pearl",
           "sword"
@@ -5588,6 +5638,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "shield",
           "shining-pearl",
           "sword"
@@ -5714,6 +5765,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -5743,6 +5795,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -5869,6 +5922,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -5898,6 +5952,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -6024,6 +6079,7 @@
           "speed": 70
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -6050,6 +6106,7 @@
           "speed": 110
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -6161,6 +6218,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "scarlet",
           "shining-pearl",
           "violet"
@@ -6187,6 +6245,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "scarlet",
           "shining-pearl",
           "violet"
@@ -6310,6 +6369,7 @@
           "speed": 61
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -6336,6 +6396,7 @@
           "speed": 71
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -6603,6 +6664,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -6632,6 +6694,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -6773,6 +6836,7 @@
           "speed": 50
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -6799,6 +6863,7 @@
           "speed": 20
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -6946,6 +7011,7 @@
           "speed": 50
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -6969,6 +7035,7 @@
           "speed": 50
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -7108,6 +7175,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "scarlet",
           "shining-pearl",
           "violet"
@@ -7134,6 +7202,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "scarlet",
           "shining-pearl",
           "violet"
@@ -7267,6 +7336,7 @@
           "speed": 105
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -7290,6 +7360,7 @@
           "speed": 135
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -7394,6 +7465,7 @@
           "speed": 95
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -7418,6 +7490,7 @@
           "speed": 105
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -7532,6 +7605,7 @@
           "speed": 40
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -7556,6 +7630,7 @@
           "speed": 20
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -7793,6 +7868,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -7821,6 +7897,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -7945,6 +8022,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -8149,6 +8227,7 @@
           "speed": 65
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -8172,6 +8251,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -8291,6 +8371,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shining-pearl",
           "violet"
@@ -8318,6 +8399,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shining-pearl",
           "violet"
@@ -8440,6 +8522,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "shield",
           "shining-pearl",
           "sword"
@@ -8465,6 +8548,7 @@
         },
         "sourceGames": [
           "brilliant-diamond",
+          "legends-z-a",
           "shield",
           "shining-pearl",
           "sword"
@@ -8594,6 +8678,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -8622,6 +8707,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -9259,6 +9345,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "shield",
           "shining-pearl",
           "sword"
@@ -9624,6 +9711,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "shield",
           "shining-pearl",
           "sword"
@@ -9651,6 +9739,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "shield",
           "shining-pearl",
           "sword"
@@ -9899,6 +9988,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -9928,6 +10018,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -10048,6 +10139,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -10077,6 +10169,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -10218,6 +10311,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -10472,6 +10566,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -10501,6 +10596,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -10909,6 +11005,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -11025,6 +11122,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -11404,6 +11502,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -11433,6 +11532,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -11598,6 +11698,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -11627,6 +11728,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -11753,6 +11855,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -11782,6 +11885,7 @@
         "sourceGames": [
           "brilliant-diamond",
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "shining-pearl",
@@ -11988,6 +12092,7 @@
           "speed": 65
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -12012,6 +12117,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -12288,7 +12394,9 @@
           "spDef": 69,
           "speed": 77
         },
-        "sourceGames": [],
+        "sourceGames": [
+          "legends-z-a"
+        ],
         "spritePath": "assets/sprites/505.png"
       }
     ],
@@ -12393,6 +12501,7 @@
           "speed": 106
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -12505,7 +12614,9 @@
           "spDef": 63,
           "speed": 101
         },
-        "sourceGames": [],
+        "sourceGames": [
+          "legends-z-a"
+        ],
         "spritePath": "assets/sprites/512.png"
       }
     ],
@@ -12605,7 +12716,9 @@
           "spDef": 63,
           "speed": 101
         },
-        "sourceGames": [],
+        "sourceGames": [
+          "legends-z-a"
+        ],
         "spritePath": "assets/sprites/514.png"
       }
     ],
@@ -12710,7 +12823,9 @@
           "spDef": 63,
           "speed": 101
         },
-        "sourceGames": [],
+        "sourceGames": [
+          "legends-z-a"
+        ],
         "spritePath": "assets/sprites/516.png"
       }
     ],
@@ -12817,6 +12932,7 @@
           "speed": 88
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -12843,6 +12959,7 @@
           "speed": 103
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -12953,6 +13070,7 @@
           "speed": 50
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -12977,6 +13095,7 @@
           "speed": 50
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -13330,6 +13449,7 @@
           "speed": 92
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -13466,6 +13586,7 @@
           "speed": 30
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -13575,6 +13696,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -13953,6 +14075,7 @@
           "speed": 79
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -14049,6 +14172,7 @@
           "speed": 103
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -14152,6 +14276,7 @@
           "speed": 80
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -14178,6 +14303,7 @@
           "speed": 90
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -14425,6 +14551,7 @@
           "speed": 32
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -14452,6 +14579,7 @@
           "speed": 32
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -14557,6 +14685,7 @@
           "speed": 55
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -14583,6 +14712,7 @@
           "speed": 55
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -14965,6 +15095,7 @@
           "speed": 64
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -14989,6 +15120,7 @@
           "speed": 44
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15131,6 +15263,7 @@
           "speed": 104
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15155,6 +15288,7 @@
           "speed": 134
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15284,6 +15418,7 @@
           "speed": 122
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15308,6 +15443,7 @@
           "speed": 142
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15429,6 +15565,7 @@
           "speed": 78
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -15542,6 +15679,7 @@
           "speed": 126
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -15651,6 +15789,7 @@
           "speed": 89
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15747,6 +15886,7 @@
           "speed": 92
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15770,6 +15910,7 @@
           "speed": 102
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15864,6 +16005,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -15967,6 +16109,7 @@
           "speed": 58
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -16097,7 +16240,9 @@
           "spDef": 90,
           "speed": 102
         },
-        "sourceGames": [],
+        "sourceGames": [
+          "legends-z-a"
+        ],
         "spritePath": "assets/sprites/676.png"
       }
     ],
@@ -16192,6 +16337,7 @@
           "speed": 104
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -16217,6 +16363,7 @@
           "speed": 124
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -16333,6 +16480,7 @@
           "speed": 60
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -16357,6 +16505,7 @@
           "speed": 60
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -16455,6 +16604,7 @@
           "speed": 29
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -16556,6 +16706,7 @@
           "speed": 72
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -16649,6 +16800,7 @@
           "speed": 59
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -16760,6 +16912,7 @@
           "speed": 109
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -16878,6 +17031,7 @@
           "speed": 71
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -16997,6 +17151,7 @@
           "speed": 58
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -17107,6 +17262,7 @@
         },
         "sourceGames": [
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -17221,6 +17377,7 @@
           "speed": 118
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -17247,6 +17404,7 @@
           "speed": 118
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -17380,6 +17538,7 @@
           "speed": 101
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -17490,6 +17649,7 @@
         },
         "sourceGames": [
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -17519,7 +17679,8 @@
           "speed": 60
         },
         "sourceGames": [
-          "legends-arceus"
+          "legends-arceus",
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/forms/goodra-hisui.png"
       }
@@ -17638,6 +17799,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -17741,6 +17903,7 @@
           "speed": 56
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -17873,6 +18036,7 @@
           "speed": 84
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -17899,6 +18063,7 @@
           "speed": 99
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -17925,6 +18090,7 @@
           "speed": 69
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -17951,6 +18117,7 @@
           "speed": 54
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -18069,6 +18236,7 @@
         },
         "sourceGames": [
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -18098,7 +18266,8 @@
           "speed": 38
         },
         "sourceGames": [
-          "legends-arceus"
+          "legends-arceus",
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/forms/avalugg-hisui.png"
       }
@@ -18203,6 +18372,7 @@
           "speed": 123
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -18835,6 +19005,7 @@
           "speed": 43
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -18859,6 +19030,7 @@
           "speed": 33
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -18983,6 +19155,7 @@
           "speed": 112
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19013,6 +19186,7 @@
           "speed": 82
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19043,6 +19217,7 @@
           "speed": 110
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19179,6 +19354,7 @@
           "speed": 35
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19287,6 +19463,7 @@
           "speed": 35
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19389,6 +19566,7 @@
           "speed": 42
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19497,6 +19675,7 @@
           "speed": 117
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19624,6 +19803,7 @@
           "speed": 72
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19737,6 +19917,7 @@
           "speed": 60
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19856,6 +20037,7 @@
           "speed": 80
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -19977,6 +20159,7 @@
           "speed": 96
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -20096,6 +20279,7 @@
           "speed": 36
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -20120,6 +20304,7 @@
           "speed": 36
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -20243,6 +20428,7 @@
           "speed": 85
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -20380,6 +20566,7 @@
           "speed": 67
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -20494,6 +20681,7 @@
           "speed": 70
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -20597,6 +20785,7 @@
           "speed": 30
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -20705,6 +20894,7 @@
           "speed": 71
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -21031,6 +21221,7 @@
           "speed": 70
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -21177,6 +21368,7 @@
           "speed": 30
         },
         "sourceGames": [
+          "legends-z-a",
           "shield",
           "sword"
         ],
@@ -21403,6 +21595,7 @@
           "speed": 97
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -21527,6 +21720,7 @@
           "speed": 142
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "shield",
           "sword",
@@ -21649,7 +21843,8 @@
           "speed": 65
         },
         "sourceGames": [
-          "legends-arceus"
+          "legends-arceus",
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/899.png"
       }
@@ -21767,6 +21962,7 @@
         },
         "sourceGames": [
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -21881,6 +22077,7 @@
         },
         "sourceGames": [
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -21908,6 +22105,7 @@
         },
         "sourceGames": [
           "legends-arceus",
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -22014,7 +22212,8 @@
           "speed": 120
         },
         "sourceGames": [
-          "legends-arceus"
+          "legends-arceus",
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/903.png"
       }
@@ -22579,6 +22778,7 @@
           "speed": 35
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -22688,6 +22888,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -22798,6 +22999,7 @@
           "speed": 85
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -23004,6 +23206,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -23028,6 +23231,7 @@
           "speed": 75
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -23245,6 +23449,7 @@
           "speed": 94
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -23572,6 +23777,7 @@
           "speed": 86
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],
@@ -23596,6 +23802,7 @@
           "speed": 101
         },
         "sourceGames": [
+          "legends-z-a",
           "scarlet",
           "violet"
         ],

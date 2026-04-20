@@ -32,6 +32,19 @@
 - `.github/workflows/pages.yml` 추가. 원래 계획의 "Settings → Pages / `main` / `/web`" 방식이 GitHub Pages 실제 UI 에서 불가능(폴더는 `/` 또는 `/docs` 만 허용)해 Actions 배포로 전환. 공식 `actions/configure-pages@v5` + `actions/upload-pages-artifact@v3` + `actions/deploy-pages@v4` 로 `web/` 을 artifact 로 업로드. `README.md` 배포 섹션도 Actions 방식으로 갱신.
 - KO 모드 영어 노출 실측 후 `docs/TODO.md` 에 T16–T21 신규 등재: 도구 `effect` 117/117 영어, 어빌리티 `descriptionKo` 192/192 비어, `gameTextKo` 16건, 기술 `nameKo` 35건, `flavorTextKo` 44건, 그리고 `prompts` 페이지 i18n 미적용(역방향). 기존 T4b(어빌리티 nameKo 14) / T8b(도구 nameKo 24) 도 같은 맥락이라 표에서 언급.
 
+### Pokémon Legends: Z-A 대량 반영 — 133/186 마리
+
+앞 커밋에서 Pidgeot/Charizard 2마리만 땜빵으로 추가했는데 사용자가 "나무위키에서 가져올 순 없나" 질문. 나무위키 자체는 WebFetch 403이지만 **Bulbapedia 의 `List of Pokémon in Pokémon Legends: Z-A`** 페이지를 MediaWiki parse API (`action=parse&prop=wikitext`) 로 읽어 대량 추출 가능.
+
+- 페이지 요약: Z-A 총 364마리 (base 232 + DLC Mega Dimension 132). Bulbapedia 가 다국어 번호 체계라 WebFetch 응답의 도감번호는 간혹 부정확하지만 **영문명은 신뢰 가능**.
+- 여러 차례 fetch 로 pokemon list 추출 → `za_list_tmp.txt` (임시 작업파일, git 미포함) 에 쌓아 우리 186마리 slug 와 정규화 매칭.
+- 불명확한 47마리는 별도 yes/no 질의로 확정 (Sylveon·Hawlucha·Dedenne·Goodra 등 대부분 Kalos Gen 6 포켓몬이 yes, Hisuian/Gen 9 중 상당수 no).
+- 최종: **133/186 마리 Z-A 등장**, 206개 폼에 `legends-z-a` 적용. `data/manual/game_sources_override.json` 에 폼별 전체 게임 리스트 기재 (override 는 per-form 전체 치환이므로 기존 게임 보존 위해 전량 나열 필요).
+
+**미매치 53마리** (Bulbapedia 교차 확인 시 no): ninetales, arcanine, tauros, ditto, snorlax, typhlosion, azumarill, politoed, forretress, pelipper, torkoal, castform, torterra, infernape, empoleon, luxray, rampardos, bastiodon, spiritomb, toxicroak, weavile, rhyperior, gliscor, mamoswine, serperior, samurott, conkeldurr, whimsicott, zoroark, reuniclus, beartic, hydreigon, volcarona, decidueye, incineroar, primarina, toucannon, polteageist, hatterene, alcremie, meowscarada, skeledirge, quaquaval, maushold, bellibolt, espathra, palafin, orthworm, farigiraf, kingambit, sinistcha, archaludon, hydrapple.
+
+재빌드 후 `corpus.json` 984→990 KB.
+
 ### Pokémon Legends: Z-A 소스 게임 반영 시작
 
 사용자 지적 — Pidgeot 이 Z-A 에도 있는데 HOME 연동 게임 교집합 계산에서 Let's Go 만 잡힘. 원인: `data/manual/game_sources_override.json` 이 빈 상태라 Z-A 가 어떤 포켓몬에도 추가돼 있지 않았음. 대응:

@@ -1,13 +1,1707 @@
 {
   "_comment": "수동 override. PokeAPI에 아직 반영되지 않은 신작 게임(예: Legends Z-A) 이나 보정이 필요한 케이스에 사용. 구조: { base_slug: { 'Form English Name': ['game-slug', ...] } }. 여기 지정된 값은 data/processed/pokemon_game_sources.json 의 값을 폼 단위로 대체합니다(부분 merge 아님 — 전체 리스트를 넣어야 함). _로 시작하는 키는 무시됩니다. 2026-04-20: Pokémon Legends: Z-A 반영 시작. 카로스 지방 게임이므로 XY/Mega 연고 포켓몬이 우선 대상.",
-
-  "pidgeot": {
-    "Pidgeot": ["lets-go-eevee", "lets-go-pikachu", "legends-z-a"],
-    "Mega Pidgeot": ["lets-go-eevee", "lets-go-pikachu", "legends-z-a"]
+  "venusaur": {
+    "Venusaur": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Venusaur": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
   },
   "charizard": {
-    "Charizard": ["lets-go-eevee", "lets-go-pikachu", "scarlet", "shield", "sword", "violet", "legends-z-a"],
-    "Mega Charizard X": ["lets-go-eevee", "lets-go-pikachu", "scarlet", "shield", "sword", "violet", "legends-z-a"],
-    "Mega Charizard Y": ["lets-go-eevee", "lets-go-pikachu", "scarlet", "shield", "sword", "violet", "legends-z-a"]
+    "Charizard": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Charizard X": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Charizard Y": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "blastoise": {
+    "Blastoise": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Blastoise": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "beedrill": {
+    "Beedrill": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu"
+    ],
+    "Mega Beedrill": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu"
+    ]
+  },
+  "pidgeot": {
+    "Pidgeot": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu"
+    ],
+    "Mega Pidgeot": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu"
+    ]
+  },
+  "arbok": {
+    "Arbok": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "pikachu": {
+    "Pikachu": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "raichu": {
+    "Raichu": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Alolan Raichu": [
+      "legends-z-a"
+    ]
+  },
+  "clefable": {
+    "Clefable": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Clefable": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "alakazam": {
+    "Alakazam": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ],
+    "Mega Alakazam": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ]
+  },
+  "machamp": {
+    "Machamp": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ]
+  },
+  "victreebel": {
+    "Victreebel": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Victreebel": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "slowbro": {
+    "Slowbro": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Galarian Slowbro": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Mega Slowbro": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "gengar": {
+    "Gengar": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Gengar": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "kangaskhan": {
+    "Kangaskhan": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "sword"
+    ],
+    "Mega Kangaskhan": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "sword"
+    ]
+  },
+  "starmie": {
+    "Starmie": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "sword"
+    ],
+    "Mega Starmie": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "sword"
+    ]
+  },
+  "pinsir": {
+    "Pinsir": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "sword"
+    ],
+    "Mega Pinsir": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "sword"
+    ]
+  },
+  "gyarados": {
+    "Gyarados": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Gyarados": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "vaporeon": {
+    "Vaporeon": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "jolteon": {
+    "Jolteon": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "flareon": {
+    "Flareon": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "aerodactyl": {
+    "Aerodactyl": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "sword"
+    ],
+    "Mega Aerodactyl": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "shield",
+      "sword"
+    ]
+  },
+  "dragonite": {
+    "Dragonite": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Dragonite": [
+      "legends-z-a",
+      "lets-go-eevee",
+      "lets-go-pikachu",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "meganium": {
+    "Meganium": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Meganium": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "feraligatr": {
+    "Feraligatr": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Feraligatr": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "ariados": {
+    "Ariados": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "ampharos": {
+    "Ampharos": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Ampharos": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "espeon": {
+    "Espeon": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "umbreon": {
+    "Umbreon": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "slowking": {
+    "Slowking": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Galarian Slowking": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "steelix": {
+    "Steelix": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ],
+    "Mega Steelix": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ]
+  },
+  "scizor": {
+    "Scizor": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Scizor": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "heracross": {
+    "Heracross": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Heracross": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "skarmory": {
+    "Skarmory": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Skarmory": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "houndoom": {
+    "Houndoom": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "scarlet",
+      "shining-pearl",
+      "violet"
+    ],
+    "Mega Houndoom": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "scarlet",
+      "shining-pearl",
+      "violet"
+    ]
+  },
+  "tyranitar": {
+    "Tyranitar": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Tyranitar": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "gardevoir": {
+    "Gardevoir": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Gardevoir": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "sableye": {
+    "Sableye": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Sableye": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "aggron": {
+    "Aggron": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Mega Aggron": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "medicham": {
+    "Medicham": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "scarlet",
+      "shining-pearl",
+      "violet"
+    ],
+    "Mega Medicham": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "scarlet",
+      "shining-pearl",
+      "violet"
+    ]
+  },
+  "manectric": {
+    "Manectric": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Mega Manectric": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "sharpedo": {
+    "Sharpedo": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Mega Sharpedo": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "camerupt": {
+    "Camerupt": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Camerupt": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "altaria": {
+    "Altaria": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Altaria": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "milotic": {
+    "Milotic": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "banette": {
+    "Banette": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Banette": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "chimecho": {
+    "Chimecho": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shining-pearl",
+      "violet"
+    ],
+    "Mega Chimecho": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shining-pearl",
+      "violet"
+    ]
+  },
+  "absol": {
+    "Absol": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ],
+    "Mega Absol": [
+      "brilliant-diamond",
+      "legends-z-a",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ]
+  },
+  "glalie": {
+    "Glalie": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Glalie": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "roserade": {
+    "Roserade": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ]
+  },
+  "lopunny": {
+    "Lopunny": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ],
+    "Mega Lopunny": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "shield",
+      "shining-pearl",
+      "sword"
+    ]
+  },
+  "garchomp": {
+    "Garchomp": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Garchomp": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "lucario": {
+    "Lucario": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Lucario": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "hippowdon": {
+    "Hippowdon": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "abomasnow": {
+    "Abomasnow": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Abomasnow": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "leafeon": {
+    "Leafeon": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "glaceon": {
+    "Glaceon": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "gallade": {
+    "Gallade": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Gallade": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "froslass": {
+    "Froslass": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Mega Froslass": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "rotom": {
+    "Rotom": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ],
+    "Alternate Forms": [
+      "brilliant-diamond",
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "shining-pearl",
+      "sword",
+      "violet"
+    ]
+  },
+  "emboar": {
+    "Emboar": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Emboar": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "watchog": {
+    "Watchog": [
+      "legends-z-a"
+    ]
+  },
+  "liepard": {
+    "Liepard": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "simisage": {
+    "Simisage": [
+      "legends-z-a"
+    ]
+  },
+  "simisear": {
+    "Simisear": [
+      "legends-z-a"
+    ]
+  },
+  "simipour": {
+    "Simipour": [
+      "legends-z-a"
+    ]
+  },
+  "excadrill": {
+    "Excadrill": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Excadrill": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "audino": {
+    "Audino": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Mega Audino": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "krookodile": {
+    "Krookodile": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "cofagrigus": {
+    "Cofagrigus": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "garbodor": {
+    "Garbodor": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "vanilluxe": {
+    "Vanilluxe": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "emolga": {
+    "Emolga": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "chandelure": {
+    "Chandelure": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Chandelure": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "stunfisk": {
+    "Stunfisk": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Galarian Stunfisk": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "golurk": {
+    "Golurk": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Golurk": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "chesnaught": {
+    "Chesnaught": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Chesnaught": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "delphox": {
+    "Delphox": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Delphox": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "greninja": {
+    "Greninja": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Greninja": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "diggersby": {
+    "Diggersby": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "talonflame": {
+    "Talonflame": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "vivillon": {
+    "Vivillon": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "floette": {
+    "Floette": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Floette": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "florges": {
+    "Florges": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "pangoro": {
+    "Pangoro": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "furfrou": {
+    "Furfrou": [
+      "legends-z-a"
+    ]
+  },
+  "meowstic": {
+    "Meowstic": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Meowstic": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "aegislash": {
+    "Aegislash": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Blade Forme": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "aromatisse": {
+    "Aromatisse": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "slurpuff": {
+    "Slurpuff": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "clawitzer": {
+    "Clawitzer": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "heliolisk": {
+    "Heliolisk": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "tyrantrum": {
+    "Tyrantrum": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "aurorus": {
+    "Aurorus": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "sylveon": {
+    "Sylveon": [
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "hawlucha": {
+    "Hawlucha": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Mega Hawlucha": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "dedenne": {
+    "Dedenne": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "goodra": {
+    "Goodra": [
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Hisuian Goodra": [
+      "legends-arceus",
+      "legends-z-a"
+    ]
+  },
+  "klefki": {
+    "Klefki": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "trevenant": {
+    "Trevenant": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "gourgeist": {
+    "Gourgeist": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Small Variety": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Large Variety": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Jumbo Variety": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "avalugg": {
+    "Avalugg": [
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Hisuian Avalugg": [
+      "legends-arceus",
+      "legends-z-a"
+    ]
+  },
+  "noivern": {
+    "Noivern": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "crabominable": {
+    "Crabominable": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Crabominable": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "lycanroc": {
+    "Lycanroc": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Midnight Form": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ],
+    "Dusk Form": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "toxapex": {
+    "Toxapex": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "mudsdale": {
+    "Mudsdale": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "araquanid": {
+    "Araquanid": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "salazzle": {
+    "Salazzle": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "tsareena": {
+    "Tsareena": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "oranguru": {
+    "Oranguru": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "passimian": {
+    "Passimian": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "mimikyu": {
+    "Mimikyu": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "drampa": {
+    "Drampa": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ],
+    "Mega Drampa": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "kommo-o": {
+    "Kommo-o": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "corviknight": {
+    "Corviknight": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "flapple": {
+    "Flapple": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "appletun": {
+    "Appletun": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "sandaconda": {
+    "Sandaconda": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "mr.rime": {
+    "Mr. Rime": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "runerigus": {
+    "Runerigus": [
+      "legends-z-a",
+      "shield",
+      "sword"
+    ]
+  },
+  "morpeko": {
+    "Morpeko": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "dragapult": {
+    "Dragapult": [
+      "legends-z-a",
+      "scarlet",
+      "shield",
+      "sword",
+      "violet"
+    ]
+  },
+  "wyrdeer": {
+    "Wyrdeer": [
+      "legends-arceus",
+      "legends-z-a"
+    ]
+  },
+  "kleavor": {
+    "Kleavor": [
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "basculegion": {
+    "Basculegion": [
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Female": [
+      "legends-arceus",
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "sneasler": {
+    "Sneasler": [
+      "legends-arceus",
+      "legends-z-a"
+    ]
+  },
+  "garganacl": {
+    "Garganacl": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "armarouge": {
+    "Armarouge": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "ceruledge": {
+    "Ceruledge": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "scovillain": {
+    "Scovillain": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Scovillain": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "tinkaton": {
+    "Tinkaton": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
+  },
+  "glimmora": {
+    "Glimmora": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ],
+    "Mega Glimmora": [
+      "legends-z-a",
+      "scarlet",
+      "violet"
+    ]
   }
 }
