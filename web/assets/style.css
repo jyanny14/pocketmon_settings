@@ -2063,11 +2063,11 @@ select.field__input {
 .slot-card__sp-label-arrow--up { color: #16a34a; }
 .slot-card__sp-label-arrow--down { color: #dc2626; }
 
-/* Stepper row: [«] [−] [input] [+] [»]
-   « and » are budget-aware jumps to 0 and this stat's max (respects the
-   66-point party budget, not just per-stat 32). Flanking the − / + keeps
-   the numeric input in the middle with as much width as possible so the
-   current value stays readable even on narrow cards. */
+/* Stepper row: [«] [‹] [input] [›] [»]
+   ‹ / › step by 1, « / » jump to 0 / budget-aware max (respects the
+   66-point party budget, not just the per-stat 32). Flanking the inner
+   steppers keeps the numeric input in the middle with as much width as
+   possible so the current value stays readable even on narrow cards. */
 .slot-card__sp-stepper {
   display: grid;
   grid-template-columns: 1.4rem 1.4rem minmax(0, 1fr) 1.4rem 1.4rem;

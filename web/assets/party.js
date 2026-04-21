@@ -621,10 +621,10 @@ function makeSpInputs(index, form, slot) {
     }
     cell.appendChild(lab);
 
-    // Stepper row: [«] [−] [input] [+] [»]
-    // « jumps to 0, » jumps to this stat's budget-aware MAX. Having them
-    // inline with − / + lets the numeric input take the full remaining width
-    // of the cell, so the current value is always legible.
+    // Stepper row: [«] [‹] [input] [›] [»]
+    // ‹ / › step by 1, « / » jump to 0 / budget-aware MAX respectively.
+    // Keeping the numeric input in the middle lets it use the full remaining
+    // width of the cell, so the current value is always legible.
     const stepper = document.createElement("div");
     stepper.className = "slot-card__sp-stepper";
 
@@ -642,7 +642,7 @@ function makeSpInputs(index, form, slot) {
     const dec = document.createElement("button");
     dec.type = "button";
     dec.className = "slot-card__sp-step";
-    dec.textContent = "−";
+    dec.textContent = "‹";
     dec.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.dec")}`);
     dec.disabled = sps[i] <= 0;
     dec.addEventListener("click", () => commit(i, sps[i] - 1));
@@ -667,7 +667,7 @@ function makeSpInputs(index, form, slot) {
     const inc = document.createElement("button");
     inc.type = "button";
     inc.className = "slot-card__sp-step";
-    inc.textContent = "+";
+    inc.textContent = "›";
     inc.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.inc")}`);
     inc.disabled = sps[i] >= headroom;
     inc.addEventListener("click", () => commit(i, sps[i] + 1));
