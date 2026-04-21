@@ -18,6 +18,7 @@ const state = {
   moveMap: new Map(),
   items: [],
   party: [],
+  mode: localStorage.getItem("battleMode") === "double" ? "double" : "single",
 };
 
 const els = {
@@ -25,6 +26,7 @@ const els = {
   cards: document.getElementById("prompt-cards"),
   backToParty: document.getElementById("back-to-party"),
   dataBundleButton: document.getElementById("data-bundle-download"),
+  modeToggle: document.getElementById("mode-toggle"),
 };
 
 async function init() {
@@ -56,6 +58,7 @@ async function init() {
     renderSummary();
     renderCards();
     wireDataBundleButton();
+    wireModeToggle();
   } catch (err) {
     console.error("prompts render failed:", err);
     showFatal(`렌더링 오류: ${err.message}\n${err.stack || ""}`);
@@ -165,10 +168,14 @@ function currentUrls() {
 
 // Template bodies are keyed by language — pick the one that matches the
 // current UI toggle so AI conversations happen in the user's language.
+// Battle mode adds a "Double" suffix — falls back to the single-mode body
+// if a template doesn't define a double-mode variant.
 function resolveBody(bodySpec) {
   if (typeof bodySpec === "string") return bodySpec; // legacy single-string fallback
   const lang = getLang();
-  return bodySpec[lang] || bodySpec.ko || bodySpec.en || "";
+  const suffix = state.mode === "double" ? "Double" : "";
+  const modeKey = `${lang}${suffix}`;
+  return bodySpec[modeKey] || bodySpec[lang] || bodySpec.ko || bodySpec.en || "";
 }
 
 function substitute(bodySpec, { includeData }) {
@@ -217,7 +224,13 @@ function renderSummary() {
 function renderCards() {
   const hasParty = state.party.some(Boolean);
   els.cards.innerHTML = "";
-  for (const tpl of TEMPLATES) {
+  // Templates with `mode: "double"` only show in double mode. Anything else
+  // (undefined / "both") shows in both modes — the body itself branches via
+  // resolveBody above.
+  const visible = TEMPLATES.filter(
+    (t) => t.mode !== "double" || state.mode === "double",
+  );
+  for (const tpl of visible) {
     const card = document.createElement("article");
     card.className = "card prompt-card";
     const title = t(tpl.titleKey);
@@ -268,6 +281,35 @@ function renderCards() {
 function wireDataBundleButton() {
   if (!els.dataBundleButton) return;
   els.dataBundleButton.addEventListener("click", downloadDataBundle);
+}
+
+// ── battle mode toggle ──────────────────────────────────────
+// Single ↔ double changes which body variant resolveBody picks and whether
+// double-only templates render. Persist in localStorage so the choice sticks
+// across reloads and shared party-URL trips.
+
+function wireModeToggle() {
+  if (!els.modeToggle) return;
+  syncModeToggleUI();
+  els.modeToggle.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-mode]");
+    if (!btn) return;
+    const next = btn.dataset.mode === "double" ? "double" : "single";
+    if (next === state.mode) return;
+    state.mode = next;
+    localStorage.setItem("battleMode", next);
+    syncModeToggleUI();
+    renderCards();
+  });
+}
+
+function syncModeToggleUI() {
+  if (!els.modeToggle) return;
+  for (const btn of els.modeToggle.querySelectorAll("[data-mode]")) {
+    const active = btn.dataset.mode === state.mode;
+    btn.classList.toggle("mode-toggle__opt--active", active);
+    btn.setAttribute("aria-checked", active ? "true" : "false");
+  }
 }
 
 // Fields to drop based on current UI language. Slugs and functional

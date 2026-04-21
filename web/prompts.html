@@ -34,6 +34,18 @@
     .prompts-data-bundle__title { margin: 0 0 .5rem; font-size: 1rem; }
     .prompts-data-bundle__steps { margin: 0 0 .75rem; padding-left: 1.1rem; color: var(--text-muted); font-size: .9rem; line-height: 1.6; list-style: none; }
     .prompts-data-bundle__steps li { margin: .15rem 0; }
+    .mode-toggle-wrap { margin: 0 0 1.25rem; padding: .85rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-elevated); display: grid; grid-template-columns: auto auto 1fr; gap: .5rem 1rem; align-items: center; }
+    .mode-toggle-wrap__label { font-size: .85rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
+    .mode-toggle { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 999px; padding: 2px; background: var(--bg); gap: 0; }
+    .mode-toggle__opt { all: unset; padding: 4px 14px; border-radius: 999px; color: var(--text-muted); font-size: .85rem; font-weight: 600; cursor: pointer; user-select: none; transition: background .15s, color .15s; }
+    .mode-toggle__opt:hover { color: var(--text); }
+    .mode-toggle__opt--active { background: var(--accent); color: var(--accent-fg); }
+    .mode-toggle__opt:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+    .mode-toggle-wrap__hint { grid-column: 1 / -1; margin: 0; font-size: .82rem; color: var(--text-muted); line-height: 1.5; }
+    @media (max-width: 40rem) {
+      .mode-toggle-wrap { grid-template-columns: 1fr; gap: .5rem; }
+      .mode-toggle-wrap__hint { grid-column: 1; }
+    }
   </style>
 </head>
 <body>
@@ -71,6 +83,15 @@
       <span data-i18n="prompts.introQuery">파티는 URL 쿼리 ?p=… 로 전달됩니다.</span>
       <a href="./party.html" id="back-to-party" data-i18n="prompts.back">← 파티 빌더로 돌아가 구성을 바꾸기</a>
     </p>
+
+    <section class="mode-toggle-wrap" aria-labelledby="mode-label">
+      <span class="mode-toggle-wrap__label" id="mode-label" data-i18n="prompts.mode.label">배틀 모드</span>
+      <div class="mode-toggle" id="mode-toggle" role="radiogroup" aria-labelledby="mode-label">
+        <button type="button" class="mode-toggle__opt" data-mode="single" data-i18n="prompts.mode.single" role="radio" aria-checked="true">싱글</button>
+        <button type="button" class="mode-toggle__opt" data-mode="double" data-i18n="prompts.mode.double" role="radio" aria-checked="false">더블</button>
+      </div>
+      <p class="mode-toggle-wrap__hint" data-i18n="prompts.mode.hint">더블 모드는 리드 조합·스프레드 기술·파트너 시너지 관점으로 질문을 재작성하고, 더블 전용 카드 3개를 추가로 보여줍니다.</p>
+    </section>
 
     <section id="party-summary" class="prompts-summary" data-i18n-aria="prompts.summaryAria" aria-label="현재 파티 요약"></section>
 

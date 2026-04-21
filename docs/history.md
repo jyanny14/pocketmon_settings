@@ -8,6 +8,14 @@
 
 ## 2026-04-21
 
+- T35 MVP (더블배틀 지원) — 프롬프트 레이어에만 모드 개념 추가. 파티 빌더는 손 대지 않음. 총 9개 템플릿 (6 both + 3 double-only), 싱글 6개 / 더블 9개 카드 렌더.
+  - `web/prompts.html` — `<section class="mode-toggle-wrap">` 신규 (`.mode-toggle` radiogroup, lang-toggle 스타일 재활용). 인라인 `<style>` 에 모드 토글 CSS (`.mode-toggle-wrap`, `.mode-toggle__opt`, 모바일 1열 전환).
+  - `web/assets/prompts.js` — `state.mode` 추가 (localStorage `battleMode`). `resolveBody` 가 `${lang}Double` 키 조회 (없으면 싱글 fallback). `renderCards` 가 `mode === "double"` 템플릿을 싱글 모드에서 숨김. `wireModeToggle` / `syncModeToggleUI` 신규 — 클릭 시 state + localStorage 갱신 + renderCards 재호출 (페이지 리로드 없음).
+  - `web/assets/prompts-templates.js` — 기존 6개 템플릿 (weakness/swap/moveset/fill/counter/free) 의 `body` 에 `koDouble` / `enDouble` 추가. 각 더블 버전은 리드 페어 · 스프레드 · 아군 피해 · 파트너 시너지 관점으로 재작성. 신규 3개 템플릿 (`leads` / `spread` / `synergy`) 추가, 각각 `mode: "double"` 플래그. 신규 템플릿은 `koDouble` / `enDouble` 만 가짐 (싱글 모드에서는 아예 안 보이므로 싱글 버전 불필요).
+  - `web/assets/i18n.js` — ko/en 양쪽에 `prompts.mode.{label,single,double,hint}` 4키 + `prompts.tmpl.{leads,spread,synergy}.{title,desc}` 6키 신규.
+  - 생략: T35a (`moves.json` target 필드 수집 via PokeAPI). AI 가 "Earthquake 는 전체" 같은 상식을 갖고 있어서 첫 패스에 불필요. 정확도 향상 필요 시 후속 작업.
+  - 스모크: `TEMPLATES.length === 9`, 6개 both(4 키 전부), 3개 double(2 키), HTML/CSS 정상 serve. 실사용 테스트는 사용자 브라우저에서.
+
 - T33 임시 착지 (GitHub Sponsors 승인 대기 중 · 옵션 B). 랜딩 개편 때 `.btn-sponsor` CSS 만 배치하고 HTML 은 빼뒀지만, 사용자가 "일단 GitHub 프로필로 임시 연결" 선택 → Sponsors 승인 시 URL 만 한 줄 교체하면 끝.
   - `web/assets/i18n.js` — `footer.sponsor` ("후원하기" / "Sponsor"), `footer.sponsorHint` (긴 툴팁 문구, ko/en) 2키 추가. `applyTranslations` 에 `data-i18n-title` 지원 추가.
   - `web/index.html`, `web/pokemon.html`, `web/items.html`, `web/abilities.html`, `web/moves.html`, `web/party.html`, `web/prompts.html`, `web/pokemon-detail.html` — footer 출처 `<p>` 다음에 `<a class="btn-sponsor">` (Octicons heart-fill SVG + 후원하기 라벨 + 임시 연결 설명 title 속성) 삽입. 현재 연결 URL: `https://github.com/jyanny14` (임시).
