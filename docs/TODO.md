@@ -257,6 +257,13 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - 구현: `index.html` 에 `<section class="how-to">` 추가, i18n 키 `index.howTo.*` 신규 10~15개. 스크린샷은 선택(나중에 별도 이슈).
 - 공수: 텍스트 작성 1~2시간 + 마크업/스타일 30분 + i18n ko/en 30분.
 
+### T34. 검색 노출 강화 (SEO · 2026-04-21 검색 인덱싱 허용 후속)
+- **Google Search Console 등록** — 소유권 검증 방식은 HTML 파일 배치(`web/google*.html`) 가 가장 단순. 등록 후 sitemap 제출하면 크롤링 속도 ↑.
+- **`web/sitemap.xml` 생성** — index / pokemon / items / abilities / moves / party 6개 URL 정적 파일로 충분. `prompts.html` 은 noindex 이므로 제외. `robots.txt` 맨 아래에 `Sitemap: https://.../sitemap.xml` 한 줄 추가.
+- **페이지별 `<meta name="description">` 고유화** — 현재 index 외 대부분 비슷비슷한 복사본. 각 페이지 기능을 1~2문장으로 다르게 적어 검색 결과에서 "같은 사이트 다른 페이지" 로 구분되게.
+- **`<title>` 태그 i18n 화** — 현재 하드코딩. 검색결과 스니펫 에서 노출되는 가장 중요한 텍스트.
+- 공수: Search Console 등록 10분 + sitemap 20분 + meta/title 수정 1시간.
+
 ### T33. 후원 링크 (Buy Me a Coffee 류)
 - Nintendo IP 리스크 고려: "서버 비용 · 커피값 후원(개발자 수익 아님)" 문구로 순화.
 - 플랫폼 후보: Buy Me a Coffee / Ko-fi / **GitHub Sponsors** (상업 인상 가장 약함 — 권장) / 토스·카카오페이 송금.
