@@ -13,6 +13,8 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- **T32 — 랜딩 페이지 사용 방법 섹션 신규**. `web/index.html` 에 `<section class="how-to">` 추가 (card-grid 아래, footer 위). 4단계 카드 구성: (1) 데이터 둘러보기 — 4탭 검색/필터, (2) 파티 구성 — 슬롯 선택 + 상세 설정, (3) 공유·저장 — URL/localStorage/언어 토글, (4) AI 분석 — 6 템플릿 + fetch 불가 AI 대응(데이터 파일 첨부 + 프롬프트 별도 복사). `auto-fit minmax(280px,1fr)` 그리드로 반응형(데스크톱 2~4열, 모바일 1열). `index.howTo.*` 9키 ko/en 추가. 검증: KO/EN 양쪽 4개 스텝 제목·본문 전부 정상 렌더.
+
 - **프롬프트 본문 + 데이터 번들 언어 연동**. 직전까지 프롬프트 본문은 T21 에서 "AI 대화는 한국어" 라는 가정으로 한국어 고정이었고, 데이터 번들도 양쪽 언어 전부 포함 1MB 단일 파일. 사용자 요청으로 둘 다 현재 UI 언어(한/영)에 맞게 분기.
   - `web/assets/prompts-templates.js` 전면 재구조화 — `SHARED_DISCLAIMER` / `STRICT_POOL_RULES` 각각 `_KO` / `_EN` 두 개로 분리, 각 템플릿의 `body` 필드는 `string` 에서 `{ ko, en }` 객체로 변경. 6개 템플릿 본문 영문 번역 작성 (weakness / swap / moveset / fill / counter / free), STRICT_POOL_RULES 7개 규칙 영문 번역도 동일 의미 유지.
   - `web/assets/prompts.js:substitute` → 신규 `resolveBody(bodySpec)` 헬퍼가 `getLang()` 으로 ko/en 선택. 문자열 단일 body 도 하위 호환 처리. Preview · copy full · copy url · download 전부 자동 언어 전환.

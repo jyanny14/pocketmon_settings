@@ -337,6 +337,41 @@ a:hover {
 }
 
 /* ────────────────────────────────────────────────────────────────
+   How-to (landing page usage guide)
+   ──────────────────────────────────────────────────────────────── */
+.how-to {
+  margin: var(--space-8) 0 var(--space-5);
+}
+.how-to__title {
+  font-size: 1.15rem;
+  margin: 0 0 var(--space-4);
+}
+.how-to__list {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.how-to__step {
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+}
+.how-to__step-title {
+  font-size: 1rem;
+  margin: 0 0 var(--space-2);
+}
+.how-to__step p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* ────────────────────────────────────────────────────────────────
    Card grid
    ──────────────────────────────────────────────────────────────── */
 .card-grid {
