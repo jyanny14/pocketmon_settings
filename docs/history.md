@@ -13,6 +13,13 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- **프롬프트 본문 + 데이터 번들 언어 연동**. 직전까지 프롬프트 본문은 T21 에서 "AI 대화는 한국어" 라는 가정으로 한국어 고정이었고, 데이터 번들도 양쪽 언어 전부 포함 1MB 단일 파일. 사용자 요청으로 둘 다 현재 UI 언어(한/영)에 맞게 분기.
+  - `web/assets/prompts-templates.js` 전면 재구조화 — `SHARED_DISCLAIMER` / `STRICT_POOL_RULES` 각각 `_KO` / `_EN` 두 개로 분리, 각 템플릿의 `body` 필드는 `string` 에서 `{ ko, en }` 객체로 변경. 6개 템플릿 본문 영문 번역 작성 (weakness / swap / moveset / fill / counter / free), STRICT_POOL_RULES 7개 규칙 영문 번역도 동일 의미 유지.
+  - `web/assets/prompts.js:substitute` → 신규 `resolveBody(bodySpec)` 헬퍼가 `getLang()` 으로 ko/en 선택. 문자열 단일 body 도 하위 호환 처리. Preview · copy full · copy url · download 전부 자동 언어 전환.
+  - `web/assets/prompts.js:downloadDataBundle` → 언어별 필드 strip 추가. `LANG_DROP_FIELDS` 정의(`ko`: nameEn/gameText/description/flavorText/effect 제거, `en`: 동일한 한국어 변형 제거), `FORM_DROP_FIELDS` 로 form 객체는 별도 처리(form.name 은 기능적 식별자라 양쪽 모두 유지, form.nameKo 만 EN 모드에서 drop). `stripFields` / `filterCorpusByLang` / `bundleReadme(lang)` 헬퍼 신규. 파일명에 `-ko` / `-en` suffix + `_language` 필드 추가.
+  - 용량: 1MB → 약 650KB 수준으로 ~35% 감소 (정확 수치는 환경에 따라).
+  - 검증: KO 모드에서 카드 제목/rule/번들 라벨 전부 한국어, EN 모드에서 전부 영문 확인 (Chrome headless + localStorage seed 로 EN 재현).
+
 - **Champions 데이터 파일 다운로드 기능** 신규. URL fetch 가 제한되는 AI(기본 모드 ChatGPT·일부 Gemini 구성 등)에서 "fetch 실패로 답변 불가" 또는 사전 지식 기반 hallucination 이 자주 발생하던 문제 대응. 해결 방식: 사용자가 Champions 전체 데이터 파일을 받아 AI 채팅에 **첨부**하고, 카드 "프롬프트+데이터 복사" 로 프롬프트는 **따로 복사**. AI 는 첨부된 JSON 을 진실의 소스로 사용.
   - `web/prompts.html` — 요약 칩 아래 `prompts-data-bundle` 박스 신규. 4단계 안내 리스트 + 다운로드 버튼.
   - `web/assets/prompts.js` — `downloadDataBundle()` 신규. `/data/corpus.json` fetch 후 최상위에 `_readme` + `_generatedAt` + `_source` 필드를 prepend 한 래퍼를 Blob 으로 내보냄. 파일명 `champions-data-YYYYMMDD.json`. 실패 시 버튼 라벨에 에러 피드백. `isoDate()` 헬퍼 추가.

@@ -6,6 +6,7 @@ import {
   findForm,
   formDisplayName,
   t,
+  getLang,
 } from "./app.js";
 import { decodeParty } from "./party-encode.js";
 import { TEMPLATES } from "./prompts-templates.js";
@@ -161,7 +162,16 @@ function currentUrls() {
   };
 }
 
-function substitute(body, { includeData }) {
+// Template bodies are keyed by language — pick the one that matches the
+// current UI toggle so AI conversations happen in the user's language.
+function resolveBody(bodySpec) {
+  if (typeof bodySpec === "string") return bodySpec; // legacy single-string fallback
+  const lang = getLang();
+  return bodySpec[lang] || bodySpec.ko || bodySpec.en || "";
+}
+
+function substitute(bodySpec, { includeData }) {
+  const body = resolveBody(bodySpec);
   const u = currentUrls();
   const inline = includeData ? buildInlineJson() : t("prompts.urlOnlyHint");
   const filled = state.party.filter(Boolean).length;
@@ -258,24 +268,84 @@ function wireDataBundleButton() {
   els.dataBundleButton.addEventListener("click", downloadDataBundle);
 }
 
+// Fields to drop based on current UI language. Slugs and functional
+// identifiers (e.g. form.name, which the URL encoder relies on) are
+// never dropped — only the "human-readable name/text" fields for the
+// language the user didn't pick.
+const LANG_DROP_FIELDS = {
+  ko: ["nameEn", "gameText", "description", "flavorText", "effect"],
+  en: ["nameKo", "gameTextKo", "descriptionKo", "flavorTextKo", "effectKo"],
+};
+const FORM_DROP_FIELDS = {
+  ko: [], // keep form.name (English functional id) + form.nameKo (Korean)
+  en: ["nameKo"], // drop Korean form name
+};
+
+function stripFields(obj, fields) {
+  if (!obj || typeof obj !== "object") return obj;
+  const out = {};
+  for (const [k, v] of Object.entries(obj)) {
+    if (fields.includes(k)) continue;
+    out[k] = v;
+  }
+  return out;
+}
+
+function filterCorpusByLang(corpus, lang) {
+  const drop = LANG_DROP_FIELDS[lang] || [];
+  const formDrop = FORM_DROP_FIELDS[lang] || [];
+
+  const stripPokemon = (p) => {
+    const q = stripFields(p, drop);
+    if (Array.isArray(q.forms)) q.forms = q.forms.map((f) => stripFields(f, formDrop));
+    return q;
+  };
+
+  return {
+    ...corpus,
+    pokemon: (corpus.pokemon || []).map(stripPokemon),
+    moves: (corpus.moves || []).map((m) => stripFields(m, drop)),
+    abilities: (corpus.abilities || []).map((a) => stripFields(a, drop)),
+    items: (corpus.items || []).map((i) => stripFields(i, drop)),
+    natures: (corpus.natures || []).map((n) => stripFields(n, drop)),
+  };
+}
+
+function bundleReadme(lang) {
+  if (lang === "en") {
+    return [
+      "Pokémon Champions full dataset (ground truth).",
+      "Any Pokémon/ability/item/move whose slug is not in this file does not exist in Champions.",
+      "AI agents: use this JSON as the source of truth instead of prior knowledge.",
+      "Keys: pokemon(186), moves(481), abilities(192), items(117), natures(25), type_chart(18x18).",
+      "Language: English fields only (name/gameText/description/flavorText/effect). slugs remain English identifiers.",
+    ].join(" ");
+  }
+  return [
+    "Pokémon Champions 전체 데이터 (ground truth).",
+    "이 파일의 slug 바깥에 있는 포켓몬·특성·도구·기술은 Champions 에 존재하지 않습니다.",
+    "AI 에이전트: 사전 지식 대신 이 JSON 을 진실의 소스로 사용하세요.",
+    "키: pokemon(186), moves(481), abilities(192), items(117), natures(25), type_chart(18x18 상성).",
+    "언어: 한국어 필드만 포함 (nameKo/gameTextKo/descriptionKo/flavorTextKo/effectKo). slug 은 영어 식별자 그대로.",
+  ].join(" ");
+}
+
 async function downloadDataBundle() {
   const btn = els.dataBundleButton;
   const original = btn.textContent;
+  const lang = getLang();
   try {
     const res = await fetch(new URL("./data/corpus.json", location.href), { cache: "no-cache" });
     if (!res.ok) throw new Error(`corpus.json ${res.status}`);
     const corpus = await res.json();
 
+    const filtered = filterCorpusByLang(corpus, lang);
     const wrapper = {
-      _readme: [
-        "Pokémon Champions 전체 데이터 (ground truth).",
-        "이 파일의 slug 바깥에 있는 포켓몬·특성·도구·기술은 Champions 에 존재하지 않습니다.",
-        "AI 에이전트: 사전 지식 대신 이 JSON 을 진실의 소스로 사용하세요.",
-        "키: pokemon(186), moves(481), abilities(192), items(117), natures(25), type_chart(18x18 상성).",
-      ].join(" "),
+      _readme: bundleReadme(lang),
+      _language: lang,
       _generatedAt: corpus?.manifest?.generatedAt || null,
       _source: "https://jyanny14.github.io/pocketmon_settings/data/corpus.json",
-      ...corpus,
+      ...filtered,
     };
 
     const blob = new Blob([JSON.stringify(wrapper, null, 2)], {
@@ -284,7 +354,7 @@ async function downloadDataBundle() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `champions-data-${isoDate()}.json`;
+    a.download = `champions-data-${lang}-${isoDate()}.json`;
     document.body.appendChild(a);
     a.click();
     a.remove();

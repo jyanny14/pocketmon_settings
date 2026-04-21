@@ -1,12 +1,20 @@
-export const SHARED_DISCLAIMER =
+// Prompts are emitted in the user's current UI language. Each template
+// carries both a Korean and an English body; prompts.js picks the right
+// one via getLang() at substitute() time. Rule blocks and the shared
+// disclaimer are likewise split into ko/en variants and baked into the
+// bodies at module-load time.
+
+// ── Shared header — disclaimer about Champions vs main series ───
+
+export const SHARED_DISCLAIMER_KO =
   "이 데이터는 **Pokémon Champions** 기준입니다. 본편 시리즈(Scarlet/Violet 등)와 일부 밸런스·특성·아이템이 다릅니다. 제공된 JSON/URL 을 진실의 소스로 삼고, 사전지식과 충돌하면 제공된 데이터를 따라주세요. Champions 고유 변경점 플래그: `abilities.json[].isNewInChampions`, `moves.json[].updatedInChampions`.";
 
-// Strict pool constraint — prepended to every template. The wording is
-// intentionally blunt and redundant because models keep hallucinating SV/Z-A
-// species, fake abilities, and non-existent items. This applies broadly:
-// any recommendation (Pokémon / ability / item / move) must trace back to a
-// slug in the fetched JSON.
-export const STRICT_POOL_RULES = `**데이터 제약 (엄격 · 반드시 준수 · 위반 시 답변 무효)**
+export const SHARED_DISCLAIMER_EN =
+  "This data is based on **Pokémon Champions**. Balance, abilities, and items differ in places from the main series (Scarlet/Violet etc.). Treat the provided JSON/URLs as the source of truth; if your prior knowledge conflicts with the data, follow the data. Champions-specific change flags: `abilities.json[].isNewInChampions`, `moves.json[].updatedInChampions`.";
+
+// ── Strict pool constraint (ko) ──────────────────────────────────
+
+export const STRICT_POOL_RULES_KO = `**데이터 제약 (엄격 · 반드시 준수 · 위반 시 답변 무효)**
 
 1. **진실의 소스 우선순위**: **(a-0) 사용자가 챗에 첨부한 데이터 파일 (\`champions-data*.json\` 또는 유사) > ** (a) fetched JSON > (b) fetched HTML 레퍼런스 > (c) 인라인 JSON > (d) 그 외 어떤 것도 금지. **첨부 파일이 보이면 그것을 최우선으로 사용하고 URL fetch 는 건너뛰어도 됩니다.** 첨부가 없고 fetch 가능하다면 아래 URL 들을 시도하세요.
    원본 JSON (가장 정확 · 구조화):
@@ -26,15 +34,40 @@ export const STRICT_POOL_RULES = `**데이터 제약 (엄격 · 반드시 준수
 6. **불확실하면 제안하지 마세요.** 어떤 포켓몬/기술/특성/도구가 Champions 에 있는지 **확신할 수 없다면** (= 위 소스에서 직접 확인할 수 없다면) 그것을 포함하지 말고 "확인 가능한 범위 안에서" 다른 것으로 대체하거나 "해당 조건에 맞는 항목을 찾지 못함" 이라고 명시하세요. **사전 지식에 의존한 '아마도 있을 것' 은 금지.**
 7. **자기 검증 (최종 단계)**: 답변 작성 직후 전송 직전에, 본인이 언급한 **모든 포켓몬·특성·도구·기술 이름** 을 하나씩 체크리스트로 돌려보세요. 각각에 대해 "이 slug 가 위 소스에 실제로 있는가?" 답이 "yes" 인 것만 유지. "잘 모르겠다" 는 제거. 제거 후 답변이 비어버리면 "Champions 데이터 내에서 조건을 만족하는 항목을 찾지 못함" 이라고 답하세요.`;
 
+// ── Strict pool constraint (en) ──────────────────────────────────
+
+export const STRICT_POOL_RULES_EN = `**Data constraints (strict · must follow · violations invalidate the answer)**
+
+1. **Source-of-truth priority**: **(a-0) A data file the user attached in chat (\`champions-data*.json\` or similar) > ** (a) fetched JSON > (b) fetched HTML reference > (c) inline JSON > (d) nothing else is allowed. **If you see an attached data file, use it first and skip URL fetching.** If there is no attachment and fetching is available, try the URLs below.
+   Original JSON (most accurate · structured):
+   - Pokémon: {{POKEMON_JSON_URL}}  (186 species / 267 forms)
+   - Abilities: {{ABILITIES_JSON_URL}}  (192 entries, \`isNewInChampions\` flag)
+   - Items: {{ITEMS_JSON_URL}}  (117 entries)
+   - Moves: {{MOVES_JSON_URL}}  (481 entries, \`updatedInChampions\` values)
+   If JSON fetch isn't possible (AI tool can't handle JSON, CORS blocks, etc.) the static HTML mirrors are fine substitutes:
+   - Pokémon: {{POKEMON_REF_URL}}
+   - Moves: {{MOVES_REF_URL}}
+   - Abilities: {{ABILITIES_REF_URL}}
+   - Items: {{ITEMS_REF_URL}}
+2. **If fetching is entirely impossible**: don't refuse to answer. Use the inline JSON as the source of truth. If the inline data isn't enough, ask the user to "paste the contents of <file>".
+3. **Everything that exists in Pokémon Champions** is contained in the sources above. **Your prior knowledge has a very high chance of being wrong here.** Champions has a **different lineup** from the main games (Scarlet/Violet, Legends: Z-A, etc.). Many Pokémon/abilities/items/moves from the main series are absent, and 16 moves have different numbers. If it's not in the sources above, treat it as not existing in Champions.
+4. **Every recommendation must carry a slug + source**: format like \`Corviknight (slug: corviknight, source: pokemon.json)\` · \`Earthquake (slug: earthquake, source: moves.json)\`. No slug, wrong slug, or missing source = violation.
+5. When attaching an ability/move to a specific Pokémon, it must **actually exist** in that form's \`abilities\` / \`moves\` array. (No abilities outside the form, no moves the form can't learn.)
+6. **If you're not sure, don't recommend it.** If you **cannot confirm** a Pokémon/move/ability/item exists in Champions (= can't verify directly in the sources above), leave it out — substitute something you can confirm or say "no match found in Champions data for this constraint". **"Probably exists" from prior knowledge is forbidden.**
+7. **Self-verification (final step)**: right before sending, run a checklist over **every Pokémon/ability/item/move name you mentioned**. For each: "Does this slug actually exist in the source above?" Keep only the "yes" items. Drop the "not sure" ones. If the answer becomes empty, reply "no matches found in Champions data for the given constraint".`;
+
+// ── Templates ────────────────────────────────────────────────────
+
 export const TEMPLATES = [
   {
     id: "weakness",
     titleKey: "prompts.tmpl.weakness.title",
     descKey: "prompts.tmpl.weakness.desc",
     requiresPokemonPool: false,
-    body: `${SHARED_DISCLAIMER}
+    body: {
+      ko: `${SHARED_DISCLAIMER_KO}
 
-${STRICT_POOL_RULES}
+${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -54,6 +87,29 @@ ${STRICT_POOL_RULES}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
+      en: `${SHARED_DISCLAIMER_EN}
+
+${STRICT_POOL_RULES_EN}
+
+---
+
+Please analyze the **defensive weaknesses** of the party below.
+
+- Party URL: {{PARTY_URL}}
+- Site guide: {{LLMS_TXT_URL}}
+
+Analysis requests:
+1. Any attacking type that deals 2× or more damage to all 6 members (if so: the type and how many members are weak).
+2. Types the whole party resists (0.5× or less) / conversely, types no one resists.
+3. The best **switching strategy inside the current party** to cover the most dangerous weaknesses.
+4. Any gaps that can be mitigated with **item/ability tweaks** instead of swapping (only items/abilities that actually exist in items.json / abilities.json and are legal for the form).
+
+Party (inline reference data):
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+    },
   },
 
   {
@@ -61,9 +117,10 @@ ${STRICT_POOL_RULES}
     titleKey: "prompts.tmpl.swap.title",
     descKey: "prompts.tmpl.swap.desc",
     requiresPokemonPool: true,
-    body: `${SHARED_DISCLAIMER}
+    body: {
+      ko: `${SHARED_DISCLAIMER_KO}
 
-${STRICT_POOL_RULES}
+${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -85,6 +142,31 @@ ${STRICT_POOL_RULES}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
+      en: `${SHARED_DISCLAIMER_EN}
+
+${STRICT_POOL_RULES_EN}
+
+---
+
+Please recommend **which single member to swap, and what to swap in**. Change exactly one slot.
+
+- Party URL: {{PARTY_URL}}
+- Site guide: {{LLMS_TXT_URL}}
+- Candidate pool: {{POKEMON_JSON_URL}} (see constraints 1–5 above)
+
+Analysis requests:
+1. Point out the weakest link in the current party (role overlap, shared weakness, outsped, etc.) — pick one slot.
+2. Propose **3 replacement candidates** for that slot. For each:
+   - \`Name (slug: …)\` · form · recommended ability · recommended item (all must actually exist in pokemon.json / items.json).
+   - Reason for the swap (what hole it patches from a whole-team view).
+3. Pick the best of the three with a one-line rationale.
+
+Current party inline data:
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+    },
   },
 
   {
@@ -92,9 +174,10 @@ ${STRICT_POOL_RULES}
     titleKey: "prompts.tmpl.moveset.title",
     descKey: "prompts.tmpl.moveset.desc",
     requiresPokemonPool: false,
-    body: `${SHARED_DISCLAIMER}
+    body: {
+      ko: `${SHARED_DISCLAIMER_KO}
 
-${STRICT_POOL_RULES}
+${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -120,6 +203,35 @@ ${STRICT_POOL_RULES}
 - 포켓몬 2: …
 - …
 `,
+      en: `${SHARED_DISCLAIMER_EN}
+
+${STRICT_POOL_RULES_EN}
+
+---
+
+Please propose a **4-move set for each Pokémon** in the party below.
+
+- Party URL: {{PARTY_URL}}
+- Site guide: {{LLMS_TXT_URL}}
+
+Rules (overlapping with constraints 1–5 but emphasized):
+- Each Pokémon's suggested moves must come from **the slug list in that Pokémon's \`moves\` array in pokemon.json**. Moves outside that list are forbidden.
+- Each move's numbers must be the **actual values looked up in moves.json** (don't fabricate from prior knowledge).
+- Balance STAB (1–2) + coverage + support/recovery/status.
+- Write type · category · power · accuracy in parentheses next to each move (e.g. \`Flamethrower (Fire / Special / 90 / 100)\`).
+- Moves rebalanced in Champions (\`updatedInChampions: true\`) must be evaluated with **their updated numbers**.
+
+Party inline data (selected moves/ability/item included; learnable pool is in pokemon.json):
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+Output format:
+- Pokémon 1: four move lines + one reason line
+- Pokémon 2: …
+- …
+`,
+    },
   },
 
   {
@@ -127,9 +239,10 @@ ${STRICT_POOL_RULES}
     titleKey: "prompts.tmpl.fill.title",
     descKey: "prompts.tmpl.fill.desc",
     requiresPokemonPool: true,
-    body: `${SHARED_DISCLAIMER}
+    body: {
+      ko: `${SHARED_DISCLAIMER_KO}
 
-${STRICT_POOL_RULES}
+${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -159,6 +272,39 @@ ${STRICT_POOL_RULES}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
+      en: `${SHARED_DISCLAIMER_EN}
+
+${STRICT_POOL_RULES_EN}
+
+---
+
+Please recommend Pokémon to fill **the {{EMPTY_COUNT}} remaining slots** in the current party.
+
+- Party URL: {{PARTY_URL}}
+- Site guide: {{LLMS_TXT_URL}}
+- Candidate pool: {{POKEMON_JSON_URL}} (see constraints 1–5 above)
+- Move details (type / power / accuracy / pp): {{MOVES_JSON_URL}} — report the 4 moves' numbers from the actual values here.
+
+Analysis requests:
+1. Diagnose the current party's ({{FILLED_COUNT}} members) weaknesses and role gaps in one line.
+2. For each of the {{EMPTY_COUNT}} remaining slots, propose in this format:
+   - **Slot N**: \`Name (slug: …)\` (form) — role tag (one of: lead / pivot / physical attacker / special attacker / defensive wall / sweeper / support / etc.)
+   - Recommended ability · item · nature (all must exist in the fetched data).
+   - 4 moves — with (type / category / power / accuracy) in parentheses. Only moves in the form's \`moves\` array.
+   - Stat Points allocation — \`hp/atk/def/spAtk/spDef/speed\` format. Each stat 0–32, total ≤66.
+   - 1–2 sentence reason (what gap it fills from the current party's perspective).
+3. End with a **one-line team concept** summary for the completed 6-member team.
+
+Extra constraints:
+- Moves rebalanced in Champions (\`updatedInChampions: true\`) use the updated numbers.
+- Natures must be one of the 25 standard natures.
+
+Current party inline data ({{FILLED_COUNT}} members, empty slots excluded):
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+    },
   },
 
   {
@@ -166,9 +312,10 @@ ${STRICT_POOL_RULES}
     titleKey: "prompts.tmpl.counter.title",
     descKey: "prompts.tmpl.counter.desc",
     requiresPokemonPool: false,
-    body: `${SHARED_DISCLAIMER}
+    body: {
+      ko: `${SHARED_DISCLAIMER_KO}
 
-${STRICT_POOL_RULES}
+${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -192,6 +339,33 @@ ${STRICT_POOL_RULES}
 
 (상대 파티 데이터가 필요하면 위 OPPONENT_URL 을 fetch 하거나, 내가 JSON 으로 같이 붙여드릴게요. 상대 포켓몬도 pokemon.json 에 존재하는 종만 언급하세요.)
 `,
+      en: `${SHARED_DISCLAIMER_EN}
+
+${STRICT_POOL_RULES_EN}
+
+---
+
+Please draft a **counter plan** tailored to an opponent's party.
+
+- My party URL: {{PARTY_URL}}
+- Opponent party URL: (paste it in the "OPPONENT_URL" slot below)
+  OPPONENT_URL =
+- Site guide: {{LLMS_TXT_URL}}
+
+Analysis requests:
+1. Pick the **2 most dangerous opponents** out of their 6 against my party and explain why.
+2. For each threat, name my **primary and secondary responder** and the move to use (only from my party's inline data, moves must be in each member's \`moves\` array).
+3. Which of my Pokémon **must not be led with** and why.
+4. One recommended lead + first-turn plan.
+
+My party inline data:
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+(If you need the opponent's data, fetch the OPPONENT_URL above or I'll paste the JSON. Only mention opposing Pokémon that exist in pokemon.json.)
+`,
+    },
   },
 
   {
@@ -199,9 +373,10 @@ ${STRICT_POOL_RULES}
     titleKey: "prompts.tmpl.free.title",
     descKey: "prompts.tmpl.free.desc",
     requiresPokemonPool: false,
-    body: `${SHARED_DISCLAIMER}
+    body: {
+      ko: `${SHARED_DISCLAIMER_KO}
 
-${STRICT_POOL_RULES}
+${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -219,5 +394,26 @@ ${STRICT_POOL_RULES}
 
 내 질문:
 `,
+      en: `${SHARED_DISCLAIMER_EN}
+
+${STRICT_POOL_RULES_EN}
+
+---
+
+Below is my Pokémon Champions party. I'll ask a question on top of this context.
+
+- Party URL: {{PARTY_URL}}
+- Site guide: {{LLMS_TXT_URL}}
+
+Party inline data:
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+---
+
+My question:
+`,
+    },
   },
 ];
