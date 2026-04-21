@@ -21,6 +21,8 @@
   - 생략: T35a (`moves.json` target 필드 수집 via PokeAPI). AI 가 "Earthquake 는 전체" 같은 상식을 갖고 있어서 첫 패스에 불필요. 정확도 향상 필요 시 후속 작업.
   - 스모크: `TEMPLATES.length === 9`, 6개 both(4 키 전부), 3개 double(2 키), HTML/CSS 정상 serve. 실사용 테스트는 사용자 브라우저에서.
 
+- `docs/TODO.md` — T33 확장. 임시 착지(커피 아이콘 + GitHub 프로필 연결) 완료 상태로 갱신. **T33a** 신규 — Buy Me a Coffee / Ko-fi 등 커피 후원 플랫폼을 대안으로 열어둠 (Sponsors 승인 지연 / 한국 유저 접근성 이슈 시 전환 검토, 권장 우선순위 비교표). **T33b** 신규 — 후원 도입 시 7가지 리스크 케이스 정리: (1) Nintendo IP, (2) 개인 세무, (3) 후원자 공개 노출, (4) 상업적 표시 실수, (5) 플랫폼 BAN, (6) 복수 플랫폼 관리 부담, (7) 유저 신뢰. **T33c** 신규 — Sponsors 승인 시 즉시 진행 체크리스트 (href 일괄 교체 · 툴팁 문구 갱신 · README 환불 절차 명시).
+
 - T33 임시 착지 (GitHub Sponsors 승인 대기 중 · 옵션 B). 랜딩 개편 때 `.btn-sponsor` CSS 만 배치하고 HTML 은 빼뒀지만, 사용자가 "일단 GitHub 프로필로 임시 연결" 선택 → Sponsors 승인 시 URL 만 한 줄 교체하면 끝.
   - `web/assets/i18n.js` — `footer.sponsor` ("후원하기" / "Sponsor"), `footer.sponsorHint` (긴 툴팁 문구, ko/en) 2키 추가. `applyTranslations` 에 `data-i18n-title` 지원 추가.
   - `web/index.html`, `web/pokemon.html`, `web/items.html`, `web/abilities.html`, `web/moves.html`, `web/party.html`, `web/prompts.html`, `web/pokemon-detail.html` — footer 출처 `<p>` 다음에 `<a class="btn-sponsor">` (Octicons heart-fill SVG + 후원하기 라벨 + 임시 연결 설명 title 속성) 삽입. 현재 연결 URL: `https://github.com/jyanny14` (임시).
