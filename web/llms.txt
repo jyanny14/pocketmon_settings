@@ -40,6 +40,20 @@ AI 에이전트(Claude, ChatGPT 등) 가 이 사이트를 사용해 수행하기
 
 데이터 스키마는 `/docs/schema.md` 또는 이 저장소의 `docs/schema.md` 에 정의.
 
+## 정적 HTML 레퍼런스 (검색·AI 우선 소스)
+
+JSON 을 직접 fetch/파싱할 수 없는 AI 도구나 검색 엔진도 읽을 수 있도록 같은 데이터를 HTML 로 렌더링한 페이지들. JavaScript 없이 모든 데이터가 HTML 텍스트로 드러나 있음.
+
+- `/reference/index.html` — 아래 4개 페이지의 인덱스
+- `/reference/pokemon.html` — 186종 × 폼/타입/종족값/특성/기술 목록
+- `/reference/moves.html` — 481 기술의 타입/분류/위력/명중/PP/플레이버/Champions 재밸런스 여부
+- `/reference/abilities.html` — 192 특성의 게임 설명/상세/보유 포켓몬
+- `/reference/items.html` — 117 도구의 효과/카테고리
+
+각 섹션에는 anchor id 로 slug 가 박혀 있어 `#charizard`, `#earthquake` 같은 딥링크로 특정 항목에 바로 점프 가능.
+
+**AI 에이전트 우선순위**: 원본 JSON fetch 가 가능하면 그쪽이 더 정확하고 구조화되어 있음. JSON 이 안 되면 위 HTML 페이지로 대체해도 **같은 소스**임. 절대 안 되는 건 위 소스들 밖의 사전 지식(본편 SV/Z-A 등)으로 Champions 에 있다고 단정하는 것.
+
 ## 페이지
 
 모든 페이지는 `/` 루트 기준 정적 HTML. 상단 헤더에서 한/영 토글 가능(localStorage 영속).

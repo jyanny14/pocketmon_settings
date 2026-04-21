@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>전체 도구 목록 · Pokémon Champions</title>
+<meta name="description" content="Pokémon Champions 에 등장하는 117개 도구의 한·영 이름 · 효과 · 카테고리. 지닌 도구·메가스톤·나무열매 포함." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="" />
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; max-width: 980px; margin: 1.5rem auto; padding: 0 1rem; color: #1b1b1b; line-height: 1.55; }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #333; padding-bottom: .3rem; }
+  h2 { font-size: 1.05rem; margin-top: 1.2rem; padding: .3rem 0; border-bottom: 1px solid #ccc; }
+  h2 .slug { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #888; font-size: .85rem; font-weight: normal; }
+  nav.top { font-size: .9rem; margin-bottom: 1rem; }
+  .meta { color: #555; font-size: .9rem; }
+  dl.kv { display: grid; grid-template-columns: 9rem 1fr; gap: .15rem .75rem; margin: .3rem 0; font-size: .95rem; }
+  dl.kv dt { color: #666; font-weight: 600; }
+  table.forms, table.moves { width: 100%; border-collapse: collapse; font-size: .9rem; margin: .3rem 0; }
+  table.forms th, table.forms td, table.moves th, table.moves td { padding: 3px 7px; border: 1px solid #ddd; text-align: left; }
+  table.forms th, table.moves th { background: #f5f5f5; }
+  ul.moves-compact { columns: 3; font-family: ui-monospace, monospace; font-size: .85rem; padding-left: 1.2rem; }
+  ul.moves-compact li { break-inside: avoid; }
+  details { margin: .3rem 0; }
+  details > summary { cursor: pointer; color: #0066cc; }
+  footer { margin: 2rem 0 1rem; color: #666; font-size: .85rem; border-top: 1px solid #ddd; padding-top: .75rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1a1a1a; color: #e8e8e8; }
+    h1 { border-bottom-color: #888; }
+    h2 { border-bottom-color: #555; }
+    table.forms th, table.moves th { background: #2a2a2a; }
+    table.forms th, table.forms td, table.moves th, table.moves td { border-color: #444; }
+    details > summary { color: #7bb8ff; }
+    dl.kv dt { color: #aaa; }
+    nav.top a, footer a { color: #7bb8ff; }
+  }
+</style>
+</head>
+<body>
+<nav class="top">
+  <a href="../index.html">← 메인</a> ·
+  <a href="./index.html">레퍼런스 인덱스</a>
+</nav>
+<h1>Pokémon Champions — 전체 도구 목록</h1>
+<p class="meta">총 <strong>117종</strong>. 지닌 도구·메가스톤·나무열매 등을 포함.</p>
+<p class="meta">데이터 정본: <a href="../data/items.json"><code>/data/items.json</code></a></p>
+<section id="black-belt">
+<h2>Black Belt (검은띠) <span class="slug">slug: black-belt</span></h2>
+<p class="meta">Category: held</p>
+<p>마음을 긴장시키는 띠. 지니게 하면 격투타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="black-glasses">
+<h2>Black Glasses (검은안경) <span class="slug">slug: black-glasses</span></h2>
+<p class="meta">Category: held</p>
+<p>수상하게 보이는 선글라스. 지니게 하면 악타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="bright-powder">
+<h2>Bright Powder (반짝가루) <span class="slug">slug: bright-powder</span></h2>
+<p class="meta">Category: held</p>
+<p>반짝반짝 빛나는 가루. 지니게 하면 빛이 상대를 혼란시켜 기술이 명중되기 어려워진다.</p>
+</section>
+<section id="charcoal">
+<h2>Charcoal (목탄) <span class="slug">slug: charcoal</span></h2>
+<p class="meta">Category: held</p>
+<p>물건을 태우는 연료. 지니게 하면 불꽃타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="choice-scarf">
+<h2>Choice Scarf (구애스카프) <span class="slug">slug: choice-scarf</span></h2>
+<p class="meta">Category: held</p>
+<p>기술을 구애받는 스카프. 지니게 하면 스피드는 올라가지만 같은 기술밖에 쓸 수 없다.</p>
+</section>
+<section id="dragon-fang">
+<h2>Dragon Fang (용의이빨) <span class="slug">slug: dragon-fang</span></h2>
+<p class="meta">Category: held</p>
+<p>단단하고 날카로운 이빨. 지니게 하면 드래곤타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="fairy-feather">
+<h2>Fairy Feather (요정의깃털) <span class="slug">slug: fairy-feather</span></h2>
+<p class="meta">Category: held</p>
+<p>빛에 비추면 희미하게 빛나는 깃털. 지니게 하면 페어리타입 기술의 위력이 쭉 올라간다.</p>
+</section>
+<section id="focus-band">
+<h2>Focus Band (기합의머리띠) <span class="slug">slug: focus-band</span></h2>
+<p class="meta">Category: held</p>
+<p>지니게 하면 기절할 듯한 기술을 받아도 HP 를 1 남겨서 견디기도 한다.</p>
+</section>
+<section id="focus-sash">
+<h2>Focus Sash (기합의띠) <span class="slug">slug: focus-sash</span></h2>
+<p class="meta">Category: held</p>
+<p>지니게 하면 HP 가 꽉 찼을 때 기절할 듯한 기술을 받아도 HP 1 로 한 번은 버틴다.</p>
+</section>
+<section id="hard-stone">
+<h2>Hard Stone (딱딱한돌) <span class="slug">slug: hard-stone</span></h2>
+<p class="meta">Category: held</p>
+<p>저절로 깨지지 않는 돌. 지니게 하면 바위타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="kings-rock">
+<h2>King&#x27;s Rock (왕의징표석) <span class="slug">slug: kings-rock</span></h2>
+<p class="meta">Category: held</p>
+<p>지니게 하면 기술로 상대에게 대미지를 줄 때 상대를 풀죽음 상태로 만들 때가 있다.</p>
+</section>
+<section id="leftovers">
+<h2>Leftovers (먹다남은음식) <span class="slug">slug: leftovers</span></h2>
+<p class="meta">Category: held</p>
+<p>지니게 하면 포켓몬의 HP 가 조금씩 회복된다.</p>
+</section>
+<section id="light-ball">
+<h2>Light Ball (전기구슬) <span class="slug">slug: light-ball</span></h2>
+<p class="meta">Category: held</p>
+<p>피카츄에게 지니게 하면 공격과 특수공격의 위력이 올라가는 이상한 구슬.</p>
+</section>
+<section id="magnet">
+<h2>Magnet (자석) <span class="slug">slug: magnet</span></h2>
+<p class="meta">Category: held</p>
+<p>강력한 자석. 지니게 하면 전기타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="mental-herb">
+<h2>Mental Herb (멘탈허브) <span class="slug">slug: mental-herb</span></h2>
+<p class="meta">Category: held</p>
+<p>지니게 한 포켓몬은 헤롱헤롱 상태가 되었을 때 한 번만 회복한다.</p>
+</section>
+<section id="metal-coat">
+<h2>Metal Coat (금속코트) <span class="slug">slug: metal-coat</span></h2>
+<p class="meta">Category: held</p>
+<p>특수한 금속 장막. 지니게 하면 강철타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="miracle-seed">
+<h2>Miracle Seed (기적의씨) <span class="slug">slug: miracle-seed</span></h2>
+<p class="meta">Category: held</p>
+<p>생명이 뿌듯한 씨앗. 지니게 하면 풀타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="mystic-water">
+<h2>Mystic Water (신비의물방울) <span class="slug">slug: mystic-water</span></h2>
+<p class="meta">Category: held</p>
+<p>물방울 모양의 보석. 지니게 하면 물타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="never-melt-ice">
+<h2>Never-Melt Ice (녹지않는얼음) <span class="slug">slug: never-melt-ice</span></h2>
+<p class="meta">Category: held</p>
+<p>열을 가까이하지 않게 하는 얼음. 지니게 하면 얼음타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="poison-barb">
+<h2>Poison Barb (독바늘) <span class="slug">slug: poison-barb</span></h2>
+<p class="meta">Category: held</p>
+<p>독이 있는 작은 침. 지니게 하면 독타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="quick-claw">
+<h2>Quick Claw (선제공격손톱) <span class="slug">slug: quick-claw</span></h2>
+<p class="meta">Category: held</p>
+<p>가볍고 날카로운 손톱. 지니게 하면 상대보다 먼저 행동할 수도 있다.</p>
+</section>
+<section id="scope-lens">
+<h2>Scope Lens (초점렌즈) <span class="slug">slug: scope-lens</span></h2>
+<p class="meta">Category: held</p>
+<p>약점이 보이는 렌즈. 지니게 한 포켓몬의 기술이 급소에 맞기 쉬워진다.</p>
+</section>
+<section id="sharp-beak">
+<h2>Sharp Beak (예리한부리) <span class="slug">slug: sharp-beak</span></h2>
+<p class="meta">Category: held</p>
+<p>길고 뾰족한 부리. 지니게 하면 비행타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="shell-bell">
+<h2>Shell Bell (조개껍질방울) <span class="slug">slug: shell-bell</span></h2>
+<p class="meta">Category: held</p>
+<p>지니게 한 포켓몬이 공격하여 상대에게 데미지를 줬을 때 HP 를 조금 회복할 수 있다.</p>
+</section>
+<section id="silk-scarf">
+<h2>Silk Scarf (실크스카프) <span class="slug">slug: silk-scarf</span></h2>
+<p class="meta">Category: held</p>
+<p>감촉이 좋은 스카프. 지니게 하면 노말타입 기술의 위력이 쭉 올라간다.</p>
+</section>
+<section id="silver-powder">
+<h2>Silver Powder (은빛가루) <span class="slug">slug: silver-powder</span></h2>
+<p class="meta">Category: held</p>
+<p>은색으로 반짝이는 가루. 지니게 하면 벌레타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="soft-sand">
+<h2>Soft Sand (부드러운모래) <span class="slug">slug: soft-sand</span></h2>
+<p class="meta">Category: held</p>
+<p>만지면 보슬보슬한 모래. 지니게 하면 땅타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="spell-tag">
+<h2>Spell Tag (저주의부적) <span class="slug">slug: spell-tag</span></h2>
+<p class="meta">Category: held</p>
+<p>괴상하고 으스스한 부적. 지니게 하면 고스트타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="twisted-spoon">
+<h2>Twisted Spoon (휘어진스푼) <span class="slug">slug: twisted-spoon</span></h2>
+<p class="meta">Category: held</p>
+<p>염동력을 담은 숟가락. 지니게 하면 에스퍼타입 기술의 위력이 올라간다.</p>
+</section>
+<section id="white-herb">
+<h2>White Herb (하양허브) <span class="slug">slug: white-herb</span></h2>
+<p class="meta">Category: held</p>
+<p>지니게 한 포켓몬의 능력이 떨어졌을 때 한 번만 원래 상태로 돌아온다.</p>
+</section>
+<section id="abomasite">
+<h2>Abomasite (눈설왕나이트) <span class="slug">slug: abomasite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>눈설왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="absolite">
+<h2>Absolite (앱솔나이트) <span class="slug">slug: absolite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>앱솔에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="aerodactylite">
+<h2>Aerodactylite (프테라나이트) <span class="slug">slug: aerodactylite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>프테라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="aggronite">
+<h2>Aggronite (보스로라나이트) <span class="slug">slug: aggronite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>보스로라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="alakazite">
+<h2>Alakazite (후디나이트) <span class="slug">slug: alakazite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>후딘에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="altarianite">
+<h2>Altarianite (파비코리나이트) <span class="slug">slug: altarianite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>파비코리에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="ampharosite">
+<h2>Ampharosite (전룡나이트) <span class="slug">slug: ampharosite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>전룡에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="audinite">
+<h2>Audinite (다부니나이트) <span class="slug">slug: audinite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>다부니에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="banettite">
+<h2>Banettite (다크펫나이트) <span class="slug">slug: banettite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>다크펫에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="beedrillite">
+<h2>Beedrillite (독침붕나이트) <span class="slug">slug: beedrillite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>독침붕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="blastoisinite">
+<h2>Blastoisinite (거북왕나이트) <span class="slug">slug: blastoisinite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>거북왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="cameruptite">
+<h2>Cameruptite (폭타나이트) <span class="slug">slug: cameruptite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>폭타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="chandelurite">
+<h2>Chandelurite (샹델라나이트) <span class="slug">slug: chandelurite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>샹델라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="charizardite-x">
+<h2>Charizardite X (리자몽나이트X) <span class="slug">slug: charizardite-x</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>리자몽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="charizardite-y">
+<h2>Charizardite Y (리자몽나이트Y) <span class="slug">slug: charizardite-y</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>리자몽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="chesnaughtite">
+<h2>Chesnaughtite (브리가론나이트) <span class="slug">slug: chesnaughtite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>브리가론에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="chimechite">
+<h2>Chimechite (치렁나이트) <span class="slug">slug: chimechite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>치렁에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="clefablite">
+<h2>Clefablite (픽시나이트) <span class="slug">slug: clefablite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>픽시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="crabominite">
+<h2>Crabominite (모단단게나이트) <span class="slug">slug: crabominite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>모단단게에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="delphoxite">
+<h2>Delphoxite (마폭시나이트) <span class="slug">slug: delphoxite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>마폭시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="dragoninite">
+<h2>Dragoninite (망나뇽나이트) <span class="slug">slug: dragoninite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>망나뇽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="drampanite">
+<h2>Drampanite (할비롱나이트) <span class="slug">slug: drampanite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>할비롱에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="emboarite">
+<h2>Emboarite (염무왕나이트) <span class="slug">slug: emboarite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>염무왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="excadrite">
+<h2>Excadrite (몰드류나이트) <span class="slug">slug: excadrite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>몰드류에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="feraligite">
+<h2>Feraligite (장크로다일나이트) <span class="slug">slug: feraligite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>장크로다일에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="floettite">
+<h2>Floettite (플라엣테나이트) <span class="slug">slug: floettite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>플라엣테에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="froslassite">
+<h2>Froslassite (눈여아나이트) <span class="slug">slug: froslassite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>눈여아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="galladite">
+<h2>Galladite (엘레이드나이트) <span class="slug">slug: galladite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>엘레이드에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="garchompite">
+<h2>Garchompite (한카리아스나이트) <span class="slug">slug: garchompite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>한카리아스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="gardevoirite">
+<h2>Gardevoirite (가디안나이트) <span class="slug">slug: gardevoirite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>가디안에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="gengarite">
+<h2>Gengarite (팬텀나이트) <span class="slug">slug: gengarite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>팬텀에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="glalitite">
+<h2>Glalitite (얼음귀신나이트) <span class="slug">slug: glalitite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>얼음귀신에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="glimmoranite">
+<h2>Glimmoranite (킬라플로르나이트) <span class="slug">slug: glimmoranite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>킬라플로르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="golurkite">
+<h2>Golurkite (골루그나이트) <span class="slug">slug: golurkite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>골루그에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="greninjite">
+<h2>Greninjite (개굴닌자나이트) <span class="slug">slug: greninjite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>개굴닌자에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="gyaradosite">
+<h2>Gyaradosite (갸라도스나이트) <span class="slug">slug: gyaradosite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>갸라도스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="hawluchanite">
+<h2>Hawluchanite (루차불나이트) <span class="slug">slug: hawluchanite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>루차불에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="heracronite">
+<h2>Heracronite (헤라크로스나이트) <span class="slug">slug: heracronite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>헤라크로스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="houndoominite">
+<h2>Houndoominite (헬가나이트) <span class="slug">slug: houndoominite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>헬가에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="kangaskhanite">
+<h2>Kangaskhanite (캥카나이트) <span class="slug">slug: kangaskhanite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>캥카에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="lopunnite">
+<h2>Lopunnite (이어롭나이트) <span class="slug">slug: lopunnite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>이어롭에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="lucarionite">
+<h2>Lucarionite (루카리오나이트) <span class="slug">slug: lucarionite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>루카리오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="manectite">
+<h2>Manectite (썬더볼트나이트) <span class="slug">slug: manectite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>썬더볼트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="medichamite">
+<h2>Medichamite (요가램나이트) <span class="slug">slug: medichamite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>요가램에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="meganiumite">
+<h2>Meganiumite (메가니움나이트) <span class="slug">slug: meganiumite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>메가니움에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="meowsticite">
+<h2>Meowsticite (냐오닉스나이트) <span class="slug">slug: meowsticite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>냐오닉스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="pidgeotite">
+<h2>Pidgeotite (피죤투나이트) <span class="slug">slug: pidgeotite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>피죤투에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="pinsirite">
+<h2>Pinsirite (쁘사이저나이트) <span class="slug">slug: pinsirite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>쁘사이저에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="sablenite">
+<h2>Sablenite (깜까미나이트) <span class="slug">slug: sablenite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>깜까미에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="scizorite">
+<h2>Scizorite (핫삼나이트) <span class="slug">slug: scizorite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>핫삼에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="scovillainite">
+<h2>Scovillainite (스코빌런나이트) <span class="slug">slug: scovillainite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>스코빌런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="sharpedonite">
+<h2>Sharpedonite (샤크니아나이트) <span class="slug">slug: sharpedonite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>샤크니아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="skarmorite">
+<h2>Skarmorite (무장조나이트) <span class="slug">slug: skarmorite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>무장조에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="slowbronite">
+<h2>Slowbronite (야도란나이트) <span class="slug">slug: slowbronite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>야도란에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="starminite">
+<h2>Starminite (아쿠스타나이트) <span class="slug">slug: starminite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>아쿠스타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="steelixite">
+<h2>Steelixite (강철톤나이트) <span class="slug">slug: steelixite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>강철톤에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="tyranitarite">
+<h2>Tyranitarite (마기라스나이트) <span class="slug">slug: tyranitarite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>마기라스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="venusaurite">
+<h2>Venusaurite (이상해꽃나이트) <span class="slug">slug: venusaurite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>이상해꽃에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="victreebelite">
+<h2>Victreebelite (우츠보트나이트) <span class="slug">slug: victreebelite</span></h2>
+<p class="meta">Category: mega-stone</p>
+<p>우츠보트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.</p>
+</section>
+<section id="aspear-berry">
+<h2>Aspear Berry (배리열매) <span class="slug">slug: aspear-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>얼음 상태를 낫게 한다.</p>
+</section>
+<section id="babiri-berry">
+<h2>Babiri Berry (바리비열매) <span class="slug">slug: babiri-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 강철타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="charti-berry">
+<h2>Charti Berry (루미열매) <span class="slug">slug: charti-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 바위타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="cheri-berry">
+<h2>Cheri Berry (버치열매) <span class="slug">slug: cheri-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>마비 상태를 낫게 한다.</p>
+</section>
+<section id="chesto-berry">
+<h2>Chesto Berry (유루열매) <span class="slug">slug: chesto-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>잠듦 상태를 낫게 한다.</p>
+</section>
+<section id="chilan-berry">
+<h2>Chilan Berry (카리열매) <span class="slug">slug: chilan-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>노말타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="chople-berry">
+<h2>Chople Berry (로플열매) <span class="slug">slug: chople-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 격투타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="coba-berry">
+<h2>Coba Berry (바코열매) <span class="slug">slug: coba-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 비행타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="colbur-berry">
+<h2>Colbur Berry (마코열매) <span class="slug">slug: colbur-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 악타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="haban-berry">
+<h2>Haban Berry (하반열매) <span class="slug">slug: haban-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 드래곤타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="kasib-berry">
+<h2>Kasib Berry (수불열매) <span class="slug">slug: kasib-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 고스트타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="kebia-berry">
+<h2>Kebia Berry (으름열매) <span class="slug">slug: kebia-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 독타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="leppa-berry">
+<h2>Leppa Berry (과사열매) <span class="slug">slug: leppa-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>지닌 포켓몬의 기술 PP 가 10 회복된다.</p>
+</section>
+<section id="lum-berry">
+<h2>Lum Berry (리샘열매) <span class="slug">slug: lum-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>모든 상태이상을 회복한다.</p>
+</section>
+<section id="occa-berry">
+<h2>Occa Berry (오카열매) <span class="slug">slug: occa-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 불꽃타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="oran-berry">
+<h2>Oran Berry (오랭열매) <span class="slug">slug: oran-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>지닌 포켓몬의 HP 가 10 회복된다.</p>
+</section>
+<section id="passho-berry">
+<h2>Passho Berry (꼬시개열매) <span class="slug">slug: passho-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 물타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="payapa-berry">
+<h2>Payapa Berry (야파열매) <span class="slug">slug: payapa-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 에스퍼타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="pecha-berry">
+<h2>Pecha Berry (복슝열매) <span class="slug">slug: pecha-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>독 상태를 낫게 한다.</p>
+</section>
+<section id="persim-berry">
+<h2>Persim Berry (시몬열매) <span class="slug">slug: persim-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>혼란 상태를 낫게 한다.</p>
+</section>
+<section id="rawst-berry">
+<h2>Rawst Berry (복분열매) <span class="slug">slug: rawst-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>화상 상태를 낫게 한다.</p>
+</section>
+<section id="rindo-berry">
+<h2>Rindo Berry (린드열매) <span class="slug">slug: rindo-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 풀타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="roseli-berry">
+<h2>Roseli Berry (로셀열매) <span class="slug">slug: roseli-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 페어리타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="shuca-berry">
+<h2>Shuca Berry (슈캐열매) <span class="slug">slug: shuca-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 땅타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="sitrus-berry">
+<h2>Sitrus Berry (자뭉열매) <span class="slug">slug: sitrus-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>지닌 포켓몬의 HP 가 전체의 1/4 회복된다.</p>
+</section>
+<section id="tanga-berry">
+<h2>Tanga Berry (리체열매) <span class="slug">slug: tanga-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 벌레타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="wacan-berry">
+<h2>Wacan Berry (초나열매) <span class="slug">slug: wacan-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 전기타입 기술의 위력을 약화시킨다.</p>
+</section>
+<section id="yache-berry">
+<h2>Yache Berry (플카열매) <span class="slug">slug: yache-berry</span></h2>
+<p class="meta">Category: berry</p>
+<p>자신에게 효과있는 얼음타입 기술의 위력을 약화시킨다.</p>
+</section>
+<footer>
+  <p>Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트. 데이터 출처: <a href="https://www.serebii.net/pokemonchampions/">serebii.net</a> · <a href="https://pokeapi.co/">PokeAPI</a>.</p>
+  <p>이 페이지는 AI 어시스턴트(ChatGPT, Claude, Gemini, Perplexity 등)와 검색 엔진이 Pokémon Champions 의 정확한 데이터를 읽을 수 있도록 생성된 정적 레퍼런스입니다.</p>
+</footer>
+</body>
+</html>

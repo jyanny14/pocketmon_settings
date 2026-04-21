@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>데이터 레퍼런스 인덱스 · Pokémon Champions</title>
+<meta name="description" content="Pokémon Champions 의 포켓몬·기술·특성·도구 전체 목록을 정적 HTML 로 제공하는 레퍼런스 페이지 인덱스." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="" />
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; max-width: 980px; margin: 1.5rem auto; padding: 0 1rem; color: #1b1b1b; line-height: 1.55; }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #333; padding-bottom: .3rem; }
+  h2 { font-size: 1.05rem; margin-top: 1.2rem; padding: .3rem 0; border-bottom: 1px solid #ccc; }
+  h2 .slug { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #888; font-size: .85rem; font-weight: normal; }
+  nav.top { font-size: .9rem; margin-bottom: 1rem; }
+  .meta { color: #555; font-size: .9rem; }
+  dl.kv { display: grid; grid-template-columns: 9rem 1fr; gap: .15rem .75rem; margin: .3rem 0; font-size: .95rem; }
+  dl.kv dt { color: #666; font-weight: 600; }
+  table.forms, table.moves { width: 100%; border-collapse: collapse; font-size: .9rem; margin: .3rem 0; }
+  table.forms th, table.forms td, table.moves th, table.moves td { padding: 3px 7px; border: 1px solid #ddd; text-align: left; }
+  table.forms th, table.moves th { background: #f5f5f5; }
+  ul.moves-compact { columns: 3; font-family: ui-monospace, monospace; font-size: .85rem; padding-left: 1.2rem; }
+  ul.moves-compact li { break-inside: avoid; }
+  details { margin: .3rem 0; }
+  details > summary { cursor: pointer; color: #0066cc; }
+  footer { margin: 2rem 0 1rem; color: #666; font-size: .85rem; border-top: 1px solid #ddd; padding-top: .75rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1a1a1a; color: #e8e8e8; }
+    h1 { border-bottom-color: #888; }
+    h2 { border-bottom-color: #555; }
+    table.forms th, table.moves th { background: #2a2a2a; }
+    table.forms th, table.forms td, table.moves th, table.moves td { border-color: #444; }
+    details > summary { color: #7bb8ff; }
+    dl.kv dt { color: #aaa; }
+    nav.top a, footer a { color: #7bb8ff; }
+  }
+</style>
+</head>
+<body>
+<nav class="top">
+  <a href="../index.html">← 메인</a> ·
+  <a href="./index.html">레퍼런스 인덱스</a>
+</nav>
+<h1>Pokémon Champions — 데이터 레퍼런스</h1>
+<p>이 디렉토리는 Pokémon Champions 의 전체 데이터를 정적 HTML 로 제공하는 페이지들입니다. JavaScript 없이도 검색 엔진·AI 어시스턴트가 데이터를 읽을 수 있도록 만들어졌습니다.</p>
+<ul>
+<li><a href="./pokemon.html">포켓몬 전체 목록</a> — 186종</li>
+<li><a href="./moves.html">기술 전체 목록</a> — 481종</li>
+<li><a href="./abilities.html">특성 전체 목록</a> — 192종</li>
+<li><a href="./items.html">도구 전체 목록</a> — 117종</li>
+</ul>
+<p>원본 JSON: <a href="../data/pokemon.json">pokemon.json</a> · <a href="../data/moves.json">moves.json</a> · <a href="../data/abilities.json">abilities.json</a> · <a href="../data/items.json">items.json</a> · <a href="../data/corpus.json">corpus.json (전부 묶음)</a></p>
+<footer>
+  <p>Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트. 데이터 출처: <a href="https://www.serebii.net/pokemonchampions/">serebii.net</a> · <a href="https://pokeapi.co/">PokeAPI</a>.</p>
+  <p>이 페이지는 AI 어시스턴트(ChatGPT, Claude, Gemini, Perplexity 등)와 검색 엔진이 Pokémon Champions 의 정확한 데이터를 읽을 수 있도록 생성된 정적 레퍼런스입니다.</p>
+</footer>
+</body>
+</html>

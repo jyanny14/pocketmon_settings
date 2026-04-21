@@ -152,6 +152,10 @@ function currentUrls() {
     movesJsonUrl: new URL("./data/moves.json", location.href).href,
     itemsJsonUrl: new URL("./data/items.json", location.href).href,
     abilitiesJsonUrl: new URL("./data/abilities.json", location.href).href,
+    pokemonRefUrl: new URL("./reference/pokemon.html", location.href).href,
+    movesRefUrl: new URL("./reference/moves.html", location.href).href,
+    abilitiesRefUrl: new URL("./reference/abilities.html", location.href).href,
+    itemsRefUrl: new URL("./reference/items.html", location.href).href,
   };
 }
 
@@ -167,6 +171,10 @@ function substitute(body, { includeData }) {
     .replaceAll("{{MOVES_JSON_URL}}", u.movesJsonUrl)
     .replaceAll("{{ITEMS_JSON_URL}}", u.itemsJsonUrl)
     .replaceAll("{{ABILITIES_JSON_URL}}", u.abilitiesJsonUrl)
+    .replaceAll("{{POKEMON_REF_URL}}", u.pokemonRefUrl)
+    .replaceAll("{{MOVES_REF_URL}}", u.movesRefUrl)
+    .replaceAll("{{ABILITIES_REF_URL}}", u.abilitiesRefUrl)
+    .replaceAll("{{ITEMS_REF_URL}}", u.itemsRefUrl)
     .replaceAll("{{PARTY_INLINE_JSON}}", inline)
     .replaceAll("{{FILLED_COUNT}}", String(filled))
     .replaceAll("{{EMPTY_COUNT}}", String(empty));

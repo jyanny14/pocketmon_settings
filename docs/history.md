@@ -13,6 +13,20 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- **정적 HTML 레퍼런스 페이지 신규**. Gemini 를 비롯한 일부 AI 가 Champions 미등록 포켓몬을 지어내는 증상 + 검색 엔진이 JS 로 렌더되는 기존 목록 페이지의 데이터를 못 읽는 문제 동시 대응. `web/reference/{index,pokemon,moves,abilities,items}.html` 생성 — 모든 데이터가 정적 HTML 로 baked in 되어 있어 JS 실행 없이도 Googlebot, ChatGPT/Claude/Gemini/Perplexity 의 "search the web" 결과 snippet, 일반 AI fetch 전부 데이터 접근 가능.
+  - `scripts/build_reference_html.py` 신규 — `web/data/*.json` → HTML. 크기: pokemon 361KB (186 section × 폼테이블 + learnable moves details), moves 137KB (481-row table), abilities 72KB, items 34KB, index 4KB.
+  - 각 섹션에 `id="slug"` anchor 박아 `/reference/pokemon.html#charizard` 같은 딥링크 가능.
+  - `web/index.html` footer 에 "데이터 레퍼런스 (AI · 검색용)" 링크 + i18n `footer.reference` ko/en.
+  - `web/llms.txt` 에 "정적 HTML 레퍼런스" 섹션 추가 — AI 에게 "JSON fetch 실패 시 HTML 로 대체 가능" 명시.
+- `STRICT_POOL_RULES` **규약 강화 + HTML 레퍼런스 대체 소스 추가**. Gemini 가 Champions 에 없는 포켓몬 설명하는 문제 직격. 주요 변화:
+  - rule 1 에 JSON fallback 으로 `{{POKEMON_REF_URL}}` / `{{MOVES_REF_URL}}` / `{{ABILITIES_REF_URL}}` / `{{ITEMS_REF_URL}}` 추가 (JSON 못 다루는 AI 도 HTML 로 같은 소스 접근).
+  - rule 3 강화: "당신의 사전 지식은 이 상황에서 **틀릴 확률이 매우 높습니다**. Champions 는 본편과 다른 라인업" 문구 추가.
+  - rule 4 강화: slug 병기 + **출처 명시**(`(slug: xxx, 출처: pokemon.json)`) 요구.
+  - rule 6 신규: "**불확실하면 제안하지 마세요.**" 사전 지식 기반 '아마도 있을 것' 명시 금지.
+  - rule 7 신규 (구 rule 5 확장): 최종 전송 직전 체크리스트 방식 자기 검증. "잘 모르겠다" 항목은 제거, 제거 후 비면 "찾지 못함" 명시.
+  - `web/assets/prompts.js` — 4개 ref URL 치환자 추가.
+  - 검증: 6개 카드 전수 주입 확인 (STRICT 6, 신규 rule 6 6회, ref URL 각 6회).
+
 - `web/robots.txt` 검색 엔진 인덱싱 **허용으로 전환**. 직전 버전은 search engine 까지 기본 차단(IP 리스크 회피 보수적 선택) 이었는데, 유저 유입 통로를 완전히 막아버리면 사이트의 의의가 약함. serebii / Bulbapedia / Smogon / PokemonDB 등 동종 팬 레퍼런스 사이트가 전부 풀 인덱싱 + 10~20년 문제없이 운영되는 관례, 그리고 README 의 "권리자 문의 시 즉시 삭제" 조항을 감안한 트레이드오프 재평가 결과. 유지한 건 (1) AI 학습 크롤러 차단, (2) `prompts.html` 의 `<meta name="robots" content="noindex">` — 파티 공유 URL 이라 인덱싱 의미 없음. 최종 로직: 학습 봇 block, user-triggered AI 봇 allow, 그 외 all allow.
 
 - `web/robots.txt` 전면 재작성. 직전 버전 `User-agent: * / Disallow: /` 가 **ChatGPT/Claude.ai 의 user-triggered browsing 에이전트까지 모두 차단**하고 있었음. 유저가 AI 에 프롬프트 붙여넣어도 봇이 robots.txt 존중해서 fetch 포기 → "fetch 실패로 답변 불가" 루프. 새 정책 3단계:

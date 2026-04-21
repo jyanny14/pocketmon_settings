@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>전체 특성 목록 · Pokémon Champions</title>
+<meta name="description" content="Pokémon Champions 에 등장하는 192개 특성의 한·영 이름 · 게임 설명 · 상세 효과 · 보유 포켓몬. Champions 신규 특성 4종 포함." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="" />
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; max-width: 980px; margin: 1.5rem auto; padding: 0 1rem; color: #1b1b1b; line-height: 1.55; }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #333; padding-bottom: .3rem; }
+  h2 { font-size: 1.05rem; margin-top: 1.2rem; padding: .3rem 0; border-bottom: 1px solid #ccc; }
+  h2 .slug { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #888; font-size: .85rem; font-weight: normal; }
+  nav.top { font-size: .9rem; margin-bottom: 1rem; }
+  .meta { color: #555; font-size: .9rem; }
+  dl.kv { display: grid; grid-template-columns: 9rem 1fr; gap: .15rem .75rem; margin: .3rem 0; font-size: .95rem; }
+  dl.kv dt { color: #666; font-weight: 600; }
+  table.forms, table.moves { width: 100%; border-collapse: collapse; font-size: .9rem; margin: .3rem 0; }
+  table.forms th, table.forms td, table.moves th, table.moves td { padding: 3px 7px; border: 1px solid #ddd; text-align: left; }
+  table.forms th, table.moves th { background: #f5f5f5; }
+  ul.moves-compact { columns: 3; font-family: ui-monospace, monospace; font-size: .85rem; padding-left: 1.2rem; }
+  ul.moves-compact li { break-inside: avoid; }
+  details { margin: .3rem 0; }
+  details > summary { cursor: pointer; color: #0066cc; }
+  footer { margin: 2rem 0 1rem; color: #666; font-size: .85rem; border-top: 1px solid #ddd; padding-top: .75rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1a1a1a; color: #e8e8e8; }
+    h1 { border-bottom-color: #888; }
+    h2 { border-bottom-color: #555; }
+    table.forms th, table.moves th { background: #2a2a2a; }
+    table.forms th, table.forms td, table.moves th, table.moves td { border-color: #444; }
+    details > summary { color: #7bb8ff; }
+    dl.kv dt { color: #aaa; }
+    nav.top a, footer a { color: #7bb8ff; }
+  }
+</style>
+</head>
+<body>
+<nav class="top">
+  <a href="../index.html">← 메인</a> ·
+  <a href="./index.html">레퍼런스 인덱스</a>
+</nav>
+<h1>Pokémon Champions — 전체 특성 목록</h1>
+<p class="meta">총 <strong>192종</strong> 중 Champions 신규 특성 <strong>4종</strong>: Dragonize, Mega Sol, Piercing Drill, Spicy Spray.</p>
+<p class="meta">데이터 정본: <a href="../data/abilities.json"><code>/data/abilities.json</code></a></p>
+<section id="adaptability">
+<h2>Adaptability (적응력) <span class="slug">slug: adaptability</span></h2>
+<p><strong>게임 설명:</strong> 자신과 같은 타입의 기술 위력이 올라간다.</p>
+<p><strong>상세:</strong> Increases the Same Type Attack Bonus from *1.5 to *2.</p>
+</section>
+<section id="aerilate">
+<h2>Aerilate (스카이스킨) <span class="slug">slug: aerilate</span></h2>
+<p><strong>게임 설명:</strong> 노말타입의 기술이 비행타입이 된다. 위력이 조금 올라간다.</p>
+<p><strong>상세:</strong> Increases the power of Normal-type moves by 20%. It then changes those moves to Flying-type.</p>
+</section>
+<section id="aftermath">
+<h2>Aftermath (유폭) <span class="slug">slug: aftermath</span></h2>
+<p><strong>게임 설명:</strong> 기절했을 때 접촉한 상대에게 데미지를 준다.</p>
+<p><strong>상세:</strong> The foe that dealt the final hit loses 1/4 of its maximum HP if the move made physical contact.</p>
+</section>
+<section id="analytic">
+<h2>Analytic (애널라이즈) <span class="slug">slug: analytic</span></h2>
+<p><strong>게임 설명:</strong> 제일 마지막에 기술을 쓰면 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> Attack power increases by 30% if the Pokémon is the last Pokémon to attack this turn</p>
+</section>
+<section id="angerpoint">
+<h2>Anger Point (분노의경혈) <span class="slug">slug: angerpoint</span></h2>
+<p><strong>게임 설명:</strong> 급소에 공격이 맞으면 크게 분노해 공격력이 최대가 된다.</p>
+<p><strong>상세:</strong> Increases Attack to maximum level upon taking a critical hit.</p>
+</section>
+<section id="anticipation">
+<h2>Anticipation (위험예지) <span class="slug">slug: anticipation</span></h2>
+<p><strong>게임 설명:</strong> 상대가 지닌 위험한 기술을 감지할 수 있다.</p>
+<p><strong>상세:</strong> Warns when the foe knows 1-hit KO or super-effective moves.</p>
+</section>
+<section id="armortail">
+<h2>Armor Tail (테일아머) <span class="slug">slug: armortail</span></h2>
+<p><strong>게임 설명:</strong> 머리를 감싸고 있는 수수께끼의 꼬리가 이쪽을 향한 선제 기술을 사용할 수 없게 한다.</p>
+<p><strong>상세:</strong> The mysterious tail covering the Pokémon&#x27;s head makes opponents unable to use priority moves against the Pokémon or its allies.</p>
+</section>
+<section id="aromaveil">
+<h2>Aroma Veil (아로마베일) <span class="slug">slug: aromaveil</span></h2>
+<p><strong>게임 설명:</strong> 자신과 같은 편으로 향하는 멘탈 공격을 막을 수 있다.</p>
+<p><strong>상세:</strong> Protects itself and its allies from attacks that limit their move choices.</p>
+</section>
+<section id="battlebond">
+<h2>Battle Bond (유대변화) <span class="slug">slug: battlebond</span></h2>
+<p><strong>게임 설명:</strong> 상대를 쓰러뜨리면 트레이너와의 유대감이 깊어져서 지우개굴닌자로 변한다. 물수리검이 강해진다.</p>
+<p><strong>상세:</strong> When the user knocks out a target, its Attack, Sp. Attack and Speed stats are boosted by 1 stage once per battle</p>
+</section>
+<section id="berserk">
+<h2>Berserk (발끈) <span class="slug">slug: berserk</span></h2>
+<p><strong>게임 설명:</strong> 상대의 공격으로 HP가 절반이 되면 특수공격이 올라간다.</p>
+<p><strong>상세:</strong> Boosts the Pokémon&#x27;s Sp. Atk stat when it takes a hit that causes its HP to become half or less.</p>
+</section>
+<section id="bigpecks">
+<h2>Big Pecks (부풀린가슴) <span class="slug">slug: bigpecks</span></h2>
+<p><strong>게임 설명:</strong> 방어를 떨어뜨리는 효과를 받지 않는다.</p>
+<p><strong>상세:</strong> Protects the Pokémon from Defense-lowering effects.</p>
+</section>
+<section id="blaze">
+<h2>Blaze (맹화) <span class="slug">slug: blaze</span></h2>
+<p><strong>게임 설명:</strong> HP가 줄었을 때 불꽃타입 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> When HP is below 1/3rd its maximum, power of Fire-type moves is increased by 50%.</p>
+</section>
+<section id="bulletproof">
+<h2>Bulletproof (방탄) <span class="slug">slug: bulletproof</span></h2>
+<p><strong>게임 설명:</strong> 상대 구슬이나 폭탄 등 기술을 막을 수 있다.</p>
+<p><strong>상세:</strong> Protects the Pokémon from some ball and bomb moves.</p>
+</section>
+<section id="cheekpouch">
+<h2>Cheek Pouch (볼주머니) <span class="slug">slug: cheekpouch</span></h2>
+<p><strong>게임 설명:</strong> 어떤 나무열매라도 먹으면 HP도 회복한다.</p>
+<p><strong>상세:</strong> Restores HP as well when the Pokémon eats a Berry.</p>
+</section>
+<section id="chlorophyll">
+<h2>Chlorophyll (엽록소) <span class="slug">slug: chlorophyll</span></h2>
+<p><strong>게임 설명:</strong> 날씨가 맑을 때 스피드가 올라간다.</p>
+<p><strong>상세:</strong> When sunny, the Pokémon’s Speed doubles.</p>
+</section>
+<section id="clearbody">
+<h2>Clear Body (클리어바디) <span class="slug">slug: clearbody</span></h2>
+<p><strong>게임 설명:</strong> 상대 기술이나 특성으로 능력을 떨어뜨릴 수 없다.</p>
+<p><strong>상세:</strong> Opponents’ moves which lower this Pokémon’s stats have no effect. However this Pokémon may lower its own stats with its own moves.</p>
+</section>
+<section id="cloudnine">
+<h2>Cloud Nine (날씨부정) <span class="slug">slug: cloudnine</span></h2>
+<p><strong>게임 설명:</strong> 모든 날씨의 영향이 없어진다.</p>
+<p><strong>상세:</strong> All weather effects are negated while the Pokémon is on the field.</p>
+</section>
+<section id="competitive">
+<h2>Competitive (승기) <span class="slug">slug: competitive</span></h2>
+<p><strong>게임 설명:</strong> 능력이 떨어지면 특수공격이 크게 올라간다.</p>
+<p><strong>상세:</strong> Raises Sp. Atk stat by two stages whenever a stat is lowered</p>
+</section>
+<section id="compoundeyes">
+<h2>Compoundeyes (복안) <span class="slug">slug: compoundeyes</span></h2>
+<p><strong>게임 설명:</strong> 복안을 가지고 있어 기술의 명중률이 올라간다.</p>
+<p><strong>상세:</strong> Raises the Pokémon’s accuracy by 30%.</p>
+</section>
+<section id="contrary">
+<h2>Contrary (심술꾸러기) <span class="slug">slug: contrary</span></h2>
+<p><strong>게임 설명:</strong> 능력의 변화가 역전해서 올라갈 때 떨어지고 떨어질 때 올라간다.</p>
+<p><strong>상세:</strong> Moves used on the Pokémon that raise stats lower the stats, while the moves that lower the stats raise the stat</p>
+</section>
+<section id="corrosion">
+<h2>Corrosion (부식) <span class="slug">slug: corrosion</span></h2>
+<p><strong>게임 설명:</strong> 강철타입이나 독타입도 독 상태로 만들 수 있다.</p>
+<p><strong>상세:</strong> The Pokémon can poison the target even if it&#x27;s a Steel or Poison type.</p>
+</section>
+<section id="cudchew">
+<h2>Cud Chew (되새김질) <span class="slug">slug: cudchew</span></h2>
+<p><strong>게임 설명:</strong> 나무열매를 먹으면 다음 턴이 끝날 때 한 번 더 같은 나무열매를 먹을 수 있다.</p>
+<p><strong>상세:</strong> When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time.</p>
+</section>
+<section id="curiousmedicine">
+<h2>Curious Medicine (기묘한약) <span class="slug">slug: curiousmedicine</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 조개껍질에서 약을 흩뿌려서 능력 변화를 원래대로 되돌린다.</p>
+<p><strong>상세:</strong> When the Pokémon is brought into battle, any stat alterations of allies are removed</p>
+</section>
+<section id="cursedbody">
+<h2>Cursed Body (저주받은바디) <span class="slug">slug: cursedbody</span></h2>
+<p><strong>게임 설명:</strong> 공격을 받으면 상대의 기술을 사슬묶기 상태로 만들 때가 있다.</p>
+<p><strong>상세:</strong> When a move hits the Pokémon, that move has a 30% chance of getting disabled</p>
+</section>
+<section id="cutecharm">
+<h2>Cute Charm (헤롱헤롱바디) <span class="slug">slug: cutecharm</span></h2>
+<p><strong>게임 설명:</strong> 자신과 접촉한 상대를 헤롱헤롱 상태로 만들 때가 있다.</p>
+<p><strong>상세:</strong> The opponent has a 30% chance of being induced with Attract when using an attack, that requires physical contact, against this Pokémon.</p>
+</section>
+<section id="damp">
+<h2>Damp (습기) <span class="slug">slug: damp</span></h2>
+<p><strong>게임 설명:</strong> 주변을 습하게 함으로써 자폭 등 폭발하는 기술을 아무도 못 쓰게 한다.</p>
+<p><strong>상세:</strong> Explosion, Selfdestruct, Mind Blown &amp; Misty Explosion will not work while the Pokémon is on the field.</p>
+</section>
+<section id="defiant">
+<h2>Defiant (오기) <span class="slug">slug: defiant</span></h2>
+<p><strong>게임 설명:</strong> 능력이 떨어지면 공격이 크게 올라간다.</p>
+<p><strong>상세:</strong> Attack is raised by two stages when the Pokémon has its stats lowered. Doesn&#x27;t work on self inflicted stat drops or drops from allies</p>
+</section>
+<section id="disguise">
+<h2>Disguise (탈) <span class="slug">slug: disguise</span></h2>
+<p><strong>게임 설명:</strong> 몸을 덮는 탈로 1번 공격을 막을 수 있다.</p>
+<p><strong>상세:</strong> Once per battle, the Pokémon can withstand one damaging attack without receiving any damage. Damage inflicted through entry hazards, weather or status conditions will not break the disguise. Damage from Confusion will break the Disguise. It causes 1/8th of max Hit Point damage when it breaks</p>
+</section>
+<section id="dragonize">
+<h2>Dragonize (드래곤스킨) <span class="meta">(Champions 신규)</span> <span class="slug">slug: dragonize</span></h2>
+<p><strong>게임 설명:</strong> 사용하는 노말타입 기술이 위력이 1.2배가 되며 모두 드래곤타입이 된다.</p>
+<p><strong>상세:</strong> The Pokémon&#x27;s Normal-type moves become Dragon-type moves and their power is boosted by 20%.</p>
+</section>
+<section id="drizzle">
+<h2>Drizzle (잔비) <span class="slug">slug: drizzle</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 날씨를 비로 만든다.</p>
+<p><strong>상세:</strong> Weather changes to Heavy Rain when the Pokémon enters the battle. As of X &amp; Y, this lasts 5 turns.</p>
+</section>
+<section id="drought">
+<h2>Drought (가뭄) <span class="slug">slug: drought</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 날씨를 맑음으로 만든다.</p>
+<p><strong>상세:</strong> Weather changes to Intense Sunshine when the Pokémon enters the battle. As of X &amp; Y, this lasts 5 turns.</p>
+</section>
+<section id="dryskin">
+<h2>Dry Skin (건조피부) <span class="slug">slug: dryskin</span></h2>
+<p><strong>게임 설명:</strong> 비가 오는 날씨나 물타입의 기술로 HP가 회복되고 맑을 때나 불꽃타입의 기술로는 줄어든다.</p>
+<p><strong>상세:</strong> HP is restored when hit by Water-type moves or when it is raining but also makes the Pokémon weak to Fire-type moves and reduces HP during strong sunlight.</p>
+</section>
+<section id="earlybird">
+<h2>Early Bird (일찍기상) <span class="slug">slug: earlybird</span></h2>
+<p><strong>게임 설명:</strong> 잠듦 상태가 되어도 2배 스피드로 깨어날 수 있다.</p>
+<p><strong>상세:</strong> Sleep conditions lasts for half as long, rounding down. For example, half of three turns is 1.5, which rounds down to one turn. When the number of turns to sleep is one, half of this rounded down is zero, and the Pokémon wakes up instantly.</p>
+</section>
+<section id="eartheater">
+<h2>Earth Eater (흙먹기) <span class="slug">slug: eartheater</span></h2>
+<p><strong>게임 설명:</strong> 땅타입 기술로 공격받으면 대미지를 받지 않고 회복한다.</p>
+<p><strong>상세:</strong> The user recovers 25% of its maximum Hit Points when a Ground-type move is used against it</p>
+</section>
+<section id="electromorphosis">
+<h2>Electromorphosis (전기로바꾸기) <span class="slug">slug: electromorphosis</span></h2>
+<p><strong>게임 설명:</strong> 공격을 받으면 딱 한 번 전기타입 기술의 위력을 올린다.</p>
+<p><strong>상세:</strong> The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses.</p>
+</section>
+<section id="fairyaura">
+<h2>Fairy Aura (페어리오라) <span class="slug">slug: fairyaura</span></h2>
+<p><strong>게임 설명:</strong> 전원의 페어리타입 기술이 강해진다.</p>
+<p><strong>상세:</strong> Powers up every Pokémon in play&#x27;s Fairy-type moves by 33%</p>
+</section>
+<section id="filter">
+<h2>Filter (필터) <span class="slug">slug: filter</span></h2>
+<p><strong>게임 설명:</strong> 효과가 굉장한 공격의 위력을 약하게 만든다.</p>
+<p><strong>상세:</strong> Damage by super-effective moves is reduced by 25%.</p>
+</section>
+<section id="flamebody">
+<h2>Flame Body (불꽃몸) <span class="slug">slug: flamebody</span></h2>
+<p><strong>게임 설명:</strong> 자신과 접촉한 상대를 화상 상태로 만들 때가 있다.</p>
+<p><strong>상세:</strong> The opponent has a 30% chance of being induced with Burn when using an attack, that requires physical contact, against this Pokémon.</p>
+</section>
+<section id="flashfire">
+<h2>Flash Fire (타오르는불꽃) <span class="slug">slug: flashfire</span></h2>
+<p><strong>게임 설명:</strong> 불꽃타입의 기술을 받으면 불꽃을 받아서 자신이 사용하는 불꽃타입의 기술이 강해진다.</p>
+<p><strong>상세:</strong> Activates when user is hit by a damaging Fire-type move (including Fire-type Hidden Power). Once activated, user’s Fire-type moves deal 1.5 times damage. While this ability is in effect, this Pokémon is immune to damage from Fire-type attacks and Fire-type Hidden Power (accuracy and effect from these moves are ignored). For Fire-type Pokémon with this ability, Will-O-Wisp activates this ability without having an effect.</p>
+</section>
+<section id="flowerveil">
+<h2>Flower Veil (플라워베일) <span class="slug">slug: flowerveil</span></h2>
+<p><strong>게임 설명:</strong> 같은 편의 풀타입 포켓몬은 능력이 떨어지지 않고 상태 이상도 되지 않는다.</p>
+<p><strong>상세:</strong> Ally Grass-type Pokémon are protected from status conditions and the lowering of their stats.</p>
+</section>
+<section id="forecast">
+<h2>Forecast (기분파) <span class="slug">slug: forecast</span></h2>
+<p><strong>게임 설명:</strong> 날씨의 영향을 받아 물타입, 불꽃타입, 얼음타입 중 하나로 변화한다.</p>
+<p><strong>상세:</strong> This Pokémon’ changes its form and type if Harsh Sunlight, Heavy Rain or Snow is in effect.</p>
+</section>
+<section id="friendguard">
+<h2>Friend Guard (프렌드가드) <span class="slug">slug: friendguard</span></h2>
+<p><strong>게임 설명:</strong> 같은 편의 데미지를 줄일 수 있다.</p>
+<p><strong>상세:</strong> In Double battles, the damage that ally Pokémon receive from attacks is reduced by 25%.</p>
+</section>
+<section id="frisk">
+<h2>Frisk (통찰) <span class="slug">slug: frisk</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 상대의 지닌 물건을 통찰할 수 있다.</p>
+<p><strong>상세:</strong> Reveals the foe’s held item.</p>
+</section>
+<section id="furcoat">
+<h2>Fur Coat (퍼코트) <span class="slug">slug: furcoat</span></h2>
+<p><strong>게임 설명:</strong> 상대로부터 받는 물리 기술의 데미지가 절반이 된다.</p>
+<p><strong>상세:</strong> Halves the damage from physical moves onto this Pokémon.</p>
+</section>
+<section id="galewings">
+<h2>Gale Wings (질풍날개) <span class="slug">slug: galewings</span></h2>
+<p><strong>게임 설명:</strong> HP가 꽉 찼을 때 비행타입의 기술을 먼저 쓸 수 있다.</p>
+<p><strong>상세:</strong> All Flying-type moves have their Speed Priority increased by 1 if the Pokémon&#x27;s Hit Points are at maximum</p>
+</section>
+<section id="gluttony">
+<h2>Gluttony (먹보) <span class="slug">slug: gluttony</span></h2>
+<p><strong>게임 설명:</strong> HP가 줄어들면 먹을 나무열매를 HP가 절반일 때 먹어버린다.</p>
+<p><strong>상세:</strong> The Pokémon will use a berry when its Hit Points are below 50%.</p>
+</section>
+<section id="gooey">
+<h2>Gooey (미끈미끈) <span class="slug">slug: gooey</span></h2>
+<p><strong>게임 설명:</strong> 공격으로 자신과 접촉한 상대의 스피드를 떨어뜨린다.</p>
+<p><strong>상세:</strong> Lowers the opponent&#x27;s Speed by one stage when it makes physical contact.</p>
+</section>
+<section id="guts">
+<h2>Guts (근성) <span class="slug">slug: guts</span></h2>
+<p><strong>게임 설명:</strong> 상태 이상이 되면 근성을 보여서 공격이 올라간다.</p>
+<p><strong>상세:</strong> Attack is increased by 50% when induced with a status (BURN, PARALYZE, SLEEP, POISON, FREEZE). Burn’s effect of lowering Attack is not applied.</p>
+</section>
+<section id="harvest">
+<h2>Harvest (수확) <span class="slug">slug: harvest</span></h2>
+<p><strong>게임 설명:</strong> 사용한 나무열매를 몇 번이고 만들어 낸다.</p>
+<p><strong>상세:</strong> The Pokémon has a 50% chance of restoring a consumed berry. During sunshine, this chance increases to 100%</p>
+</section>
+<section id="healer">
+<h2>Healer (치유의마음) <span class="slug">slug: healer</span></h2>
+<p><strong>게임 설명:</strong> 같은 편의 상태 이상을 가끔 회복시킨다.</p>
+<p><strong>상세:</strong> At the end of the turn, there is a 30% chance of either Ally being healed from a status condition</p>
+</section>
+<section id="heatproof">
+<h2>Heatproof (내열) <span class="slug">slug: heatproof</span></h2>
+<p><strong>게임 설명:</strong> 내열인 몸으로 인해 불꽃타입 공격의 데미지를 반감한다.</p>
+<p><strong>상세:</strong> Damage from Fire-type moves and the Burn status is halved.</p>
+</section>
+<section id="heavymetal">
+<h2>Heavy Metal (헤비메탈) <span class="slug">slug: heavymetal</span></h2>
+<p><strong>게임 설명:</strong> 자신의 무게가 2배가 된다.</p>
+<p><strong>상세:</strong> Doubles the Pokémon&#x27;s weight.</p>
+</section>
+<section id="hospitality">
+<h2>Hospitality (대접) <span class="slug">slug: hospitality</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 같은편의 HP 를 조금 회복시킨다.</p>
+<p><strong>상세:</strong> Heals up to 25% of its partner Pokémon&#x27;s Maximum Hit Points when it enters battle</p>
+</section>
+<section id="hugepower">
+<h2>Huge Power (천하장사) <span class="slug">slug: hugepower</span></h2>
+<p><strong>게임 설명:</strong> 물리공격의 위력이 2배가 된다.</p>
+<p><strong>상세:</strong> The Pokémon&#x27;s Attack stat is doubled while it has this ability.</p>
+</section>
+<section id="hungerswitch">
+<h2>Hunger Switch (꼬르륵스위치) <span class="slug">slug: hungerswitch</span></h2>
+<p><strong>게임 설명:</strong> 턴이 끝날 때마다 배부른 모양, 배고픈 모양, 배부른 모양...으로 번갈아서 모습을 바꾼다.</p>
+<p><strong>상세:</strong> The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of each turn.</p>
+</section>
+<section id="hustle">
+<h2>Hustle (의욕) <span class="slug">slug: hustle</span></h2>
+<p><strong>게임 설명:</strong> 자신의 공격이 높아지지만 명중률이 떨어진다.</p>
+<p><strong>상세:</strong> Damage from physical attacks is increased by 50%, but average accuracy is only 80%.</p>
+</section>
+<section id="hydration">
+<h2>Hydration (촉촉바디) <span class="slug">slug: hydration</span></h2>
+<p><strong>게임 설명:</strong> 비가 오는 날씨일 때 상태 이상이 회복된다.</p>
+<p><strong>상세:</strong> All status problems: Burn, Paralysis, Sleep, Frozen and Poison, are healed when raining.</p>
+</section>
+<section id="hypercutter">
+<h2>Hyper Cutter (괴력집게) <span class="slug">slug: hypercutter</span></h2>
+<p><strong>게임 설명:</strong> 힘이 자랑인 집게를 가지고 있어 상대가 공격을 떨어뜨리지 못한다.</p>
+<p><strong>상세:</strong> Opponent cannot lower this Pokémon’s Attack value. This Pokémon may still lower its own Attack value using a move of by itself.</p>
+</section>
+<section id="icebody">
+<h2>Ice Body (아이스바디) <span class="slug">slug: icebody</span></h2>
+<p><strong>게임 설명:</strong> 날씨가 싸라기눈일 때 HP를 조금씩 회복한다.</p>
+<p><strong>상세:</strong> HP is restored by 1/16th of maximum HP when its Snowing.</p>
+</section>
+<section id="illuminate">
+<h2>Illuminate (발광) <span class="slug">slug: illuminate</span></h2>
+<p><strong>게임 설명:</strong> 주변을 밝게 하는 것으로 야생 포켓몬과 만나기 쉬워진다.</p>
+<p><strong>상세:</strong> By Iluminating its surroundings, the Pokémon prevents its accuracy from being lowered</p>
+</section>
+<section id="illusion">
+<h2>Illusion (일루전) <span class="slug">slug: illusion</span></h2>
+<p><strong>게임 설명:</strong> 지닌 포켓몬 중 제일 뒤에 있는 포켓몬으로 둔갑하여 나와서 상대를 속인다.</p>
+<p><strong>상세:</strong> When sent out into battle, it takes the name and appearance of the last non-fainted Pokémon within your party. It breaks when an attack does damage on the Pokémon but not from Weather Effects or Entry Hazards.</p>
+</section>
+<section id="immunity">
+<h2>Immunity (면역) <span class="slug">slug: immunity</span></h2>
+<p><strong>게임 설명:</strong> 체내에 면역을 가지고 있어 독 상태가 되지 않는다.</p>
+<p><strong>상세:</strong> The Pokémon cannot be Poisoned while having this ability.</p>
+</section>
+<section id="imposter">
+<h2>Imposter (괴짜) <span class="slug">slug: imposter</span></h2>
+<p><strong>게임 설명:</strong> 눈앞의 포켓몬으로 변신해버린다.</p>
+<p><strong>상세:</strong> When sent into battle, the Pokémon automatically transforms into a random opponent that is on the field.</p>
+</section>
+<section id="infiltrator">
+<h2>Infiltrator (틈새포착) <span class="slug">slug: infiltrator</span></h2>
+<p><strong>게임 설명:</strong> 상대의 벽이나 대타출동을 뚫고 공격할 수 있다.</p>
+<p><strong>상세:</strong> The protections and stat boosts caused by the moves Substitute, Reflect, Light Screen and Safeguard by the opponent are ignored.</p>
+</section>
+<section id="innardsout">
+<h2>Innards Out (내용물분출) <span class="slug">slug: innardsout</span></h2>
+<p><strong>게임 설명:</strong> 상대가 쓰러뜨렸을 때 HP의 남은 양만큼 상대에게 데미지를 준다.</p>
+<p><strong>상세:</strong> Damages the attacker landing the finishing hit by the amount equal to its last HP.</p>
+</section>
+<section id="innerfocus">
+<h2>Inner Focus (정신력) <span class="slug">slug: innerfocus</span></h2>
+<p><strong>게임 설명:</strong> 단련한 정신으로 인하여 상대의 공격에 풀죽지 않는다.</p>
+<p><strong>상세:</strong> This Pokémon will not flinch. Does not prevent flinching with Focus Punch. Also prevents stats from being lowered by the ability Intimidate</p>
+</section>
+<section id="insomnia">
+<h2>Insomnia (불면) <span class="slug">slug: insomnia</span></h2>
+<p><strong>게임 설명:</strong> 잠들지 못하는 체질이라 잠듦 상태가 되지 않는다.</p>
+<p><strong>상세:</strong> The Pokémon cannot be put to Sleep while having this ability.</p>
+</section>
+<section id="intimidate">
+<h2>Intimidate (위협) <span class="slug">slug: intimidate</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 위협해서 상대를 위축시켜 상대의 공격을 떨어뜨린다.</p>
+<p><strong>상세:</strong> Upon entering battle or receiving the ability, the opponent’s Attack lowers one stage. In a Double Battle, both opponents’ Attack are lowered. Pokémon with the Clear Body, Hyper Cutter, or White Smoke ability are unaffected. In a link battle, if both sides switch on the same turn, and first player sends out a Pokémon with Intimidate, the opponent’s Attack will be lowered before the opponent’s Pokémon switches.</p>
+</section>
+<section id="ironfist">
+<h2>Iron Fist (철주먹) <span class="slug">slug: ironfist</span></h2>
+<p><strong>게임 설명:</strong> 펀치를 사용하는 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> The power of punching moves is increased by 20%. This stacks with Punching Glove .</p>
+</section>
+<section id="justified">
+<h2>Justified (정의의마음) <span class="slug">slug: justified</span></h2>
+<p><strong>게임 설명:</strong> 악타입 공격을 받으면 정의감으로 공격이 올라간다.</p>
+<p><strong>상세:</strong> Attack is raised by one stage when the Pokémon is hit by a Dark-type move</p>
+</section>
+<section id="keeneye">
+<h2>Keen Eye (날카로운눈) <span class="slug">slug: keeneye</span></h2>
+<p><strong>게임 설명:</strong> 날카로운 눈 덕분에 명중률이 떨어지지 않는다.</p>
+<p><strong>상세:</strong> Opponent cannot lower this Pokémon’s accuracy. The Pokémon ignores evasion boosts of the opponent</p>
+</section>
+<section id="klutz">
+<h2>Klutz (서투름) <span class="slug">slug: klutz</span></h2>
+<p><strong>게임 설명:</strong> 지니고 있는 도구를 쓸 수 없다.</p>
+<p><strong>상세:</strong> The Pokémon cannot receive any effect of hold items except those that affect experience, EVs, friendship etc. such as Amulet Coin, Soothe Bell, Lucky Egg, Exp.Share, Macho Brace or the Power Items.</p>
+</section>
+<section id="leafguard">
+<h2>Leaf Guard (리프가드) <span class="slug">slug: leafguard</span></h2>
+<p><strong>게임 설명:</strong> 날씨가 맑을 때는 상태 이상이 되지 않는다.</p>
+<p><strong>상세:</strong> Prevents the Pokémon from being afflicted by status conditions during strong sunlight.</p>
+</section>
+<section id="levitate">
+<h2>Levitate (부유) <span class="slug">slug: levitate</span></h2>
+<p><strong>게임 설명:</strong> 땅에서 뜨는 것으로 땅타입의 기술을 받지 않는다.</p>
+<p><strong>상세:</strong> Damage dealing Ground-type moves have no effect on this Pokémon. Cannot be trapped by Arena Trap ability. Takes no damage from Spikes.</p>
+</section>
+<section id="lightmetal">
+<h2>Light Metal (라이트메탈) <span class="slug">slug: lightmetal</span></h2>
+<p><strong>게임 설명:</strong> 자신의 무게가 절반이 된다.</p>
+<p><strong>상세:</strong> Halves the Pokémon&#x27;s weight.</p>
+</section>
+<section id="lightningrod">
+<h2>Lightning Rod (피뢰침) <span class="slug">slug: lightningrod</span></h2>
+<p><strong>게임 설명:</strong> 전기타입의 기술을 자신에게 끌어모아 데미지를 받지 않고 특수공격을 올린다.</p>
+<p><strong>상세:</strong> Electric-type moves are drawn to this Pokémon. Electric-type moves will do no damage and the Pokémon&#x27;s SP ATK is raised one stage.</p>
+</section>
+<section id="limber">
+<h2>Limber (유연) <span class="slug">slug: limber</span></h2>
+<p><strong>게임 설명:</strong> 유연한 몸으로 인해 마비 상태가 되지 않는다.</p>
+<p><strong>상세:</strong> The Pokémon cannot be Paralysed while having this ability.</p>
+</section>
+<section id="liquidvoice">
+<h2>Liquid Voice (촉촉보이스) <span class="slug">slug: liquidvoice</span></h2>
+<p><strong>게임 설명:</strong> 모든 소리 기술이 물타입이 된다.</p>
+<p><strong>상세:</strong> All sound-based moves become Water-type moves.</p>
+</section>
+<section id="longreach">
+<h2>Long Reach (원격) <span class="slug">slug: longreach</span></h2>
+<p><strong>게임 설명:</strong> 모든 기술을 상대에게 접촉하지 않고 사용할 수 있다.</p>
+<p><strong>상세:</strong> The Pokémon uses its moves without making contact with the target.</p>
+</section>
+<section id="magicbounce">
+<h2>Magic Bounce (매직미러) <span class="slug">slug: magicbounce</span></h2>
+<p><strong>게임 설명:</strong> 상대가 쓴 변화 기술을 받지 않고 그대로 되받아칠 수 있다.</p>
+<p><strong>상세:</strong> Reflects non-attacking moves used on the Pokémon back to the attacking Pokémon</p>
+</section>
+<section id="magicguard">
+<h2>Magic Guard (매직가드) <span class="slug">slug: magicguard</span></h2>
+<p><strong>게임 설명:</strong> 공격 이외에는 데미지를 입지 않는다.</p>
+<p><strong>상세:</strong> Prevents all no damage except from direct-attack moves, excluding damage self inflicted from Substitute, Belly Drum, Curse &amp; Pain Split.</p>
+</section>
+<section id="magician">
+<h2>Magician (매지션) <span class="slug">slug: magician</span></h2>
+<p><strong>게임 설명:</strong> 기술을 맞은 상대의 도구를 빼앗아 버린다.</p>
+<p><strong>상세:</strong> The Pokémon steals the held item of a Pokémon it hits with a move.</p>
+</section>
+<section id="magmaarmor">
+<h2>Magma Armor (마그마의무장) <span class="slug">slug: magmaarmor</span></h2>
+<p><strong>게임 설명:</strong> 뜨거운 마그마를 몸에 둘러서 얼음 상태가 되지 않는다.</p>
+<p><strong>상세:</strong> This Pokémon cannot be Frozen while having this ability.</p>
+</section>
+<section id="marvelscale">
+<h2>Marvel Scale (이상한비늘) <span class="slug">slug: marvelscale</span></h2>
+<p><strong>게임 설명:</strong> 상태 이상이 되면 이상한 비늘이 반응해서 방어가 올라간다.</p>
+<p><strong>상세:</strong> Defense is increased by 50% when induced with a status (BURN, PARALYZE, SLEEP, POISON, FREEZE).</p>
+</section>
+<section id="megalauncher">
+<h2>Mega Launcher (메가런처) <span class="slug">slug: megalauncher</span></h2>
+<p><strong>게임 설명:</strong> 파동 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> Increases the power of Aura and Pulse moves by 50%</p>
+</section>
+<section id="megasol">
+<h2>Mega Sol (메가솔라) <span class="meta">(Champions 신규)</span> <span class="slug">slug: megasol</span></h2>
+<p><strong>게임 설명:</strong> 이 특성을 가진 포켓몬이 기술을 사용하면 쾌청 상태일 때와 같은 효과를 받는다.</p>
+<p><strong>상세:</strong> Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight.</p>
+</section>
+<section id="merciless">
+<h2>Merciless (무도한행동) <span class="slug">slug: merciless</span></h2>
+<p><strong>게임 설명:</strong> 독 상태의 상대를 공격하면 반드시 급소에 맞는다.</p>
+<p><strong>상세:</strong> The Pokémon&#x27;s attacks become critical hits if the target is poisoned.</p>
+</section>
+<section id="mimicry">
+<h2>Mimicry (의태) <span class="slug">slug: mimicry</span></h2>
+<p><strong>게임 설명:</strong> 필드의 상태에 따라 포켓몬의 타입이 바뀐다.</p>
+<p><strong>상세:</strong> Changes to Electric-type in Electric Terrain, Psychic-type in Psychic Terrain, Grass-type in Grassy Terrain and Fairy type in Fairy-terrain. The type reverts to normal when the terrain ends.</p>
+</section>
+<section id="minus">
+<h2>Minus (마이너스) <span class="slug">slug: minus</span></h2>
+<p><strong>게임 설명:</strong> 플러스나 마이너스의 특성을 가진 포켓몬이 동료에 있으면 자신의 특수공격이 올라간다.</p>
+<p><strong>상세:</strong> When battling with Plus or Minus, Special Attack increases by 50%.</p>
+</section>
+<section id="mirrorarmor">
+<h2>Mirror Armor (미러아머) <span class="slug">slug: mirrorarmor</span></h2>
+<p><strong>게임 설명:</strong> 자신이 받는 능력 다운 효과에 한해 되받아친다.</p>
+<p><strong>상세:</strong> Bounces back only the stat-lowering effects that the Pokémon receives.</p>
+</section>
+<section id="moldbreaker">
+<h2>Mold Breaker (틀깨기) <span class="slug">slug: moldbreaker</span></h2>
+<p><strong>게임 설명:</strong> 상대 특성에 방해받지 않고 상대에게 기술을 쓸 수 있다.</p>
+<p><strong>상세:</strong> The Pokémon&#x27;s moves are not affected by foe’s abilities during battle</p>
+</section>
+<section id="moody">
+<h2>Moody (변덕쟁이) <span class="slug">slug: moody</span></h2>
+<p><strong>게임 설명:</strong> 매 턴 능력 중 하나가 크게 오르고 하나가 떨어진다.</p>
+<p><strong>상세:</strong> At the end of every turn, a random stat (except Accuracy and Evasion) is raised by two stages while another is lowered by one stage.</p>
+</section>
+<section id="motordrive">
+<h2>Motor Drive (전기엔진) <span class="slug">slug: motordrive</span></h2>
+<p><strong>게임 설명:</strong> 전기타입의 기술을 받으면 데미지를 받지 않고 스피드가 올라간다.</p>
+<p><strong>상세:</strong> The Pokémon takes no damage from Electric-type attacks and Speed raises by one level.</p>
+</section>
+<section id="moxie">
+<h2>Moxie (자기과신) <span class="slug">slug: moxie</span></h2>
+<p><strong>게임 설명:</strong> 상대를 쓰러뜨리면 자신감이 붙어서 공격이 올라간다.</p>
+<p><strong>상세:</strong> Attack is raised by one stage when the Pokémon knocks out another Pokémon</p>
+</section>
+<section id="multiscale">
+<h2>Multiscale (멀티스케일) <span class="slug">slug: multiscale</span></h2>
+<p><strong>게임 설명:</strong> HP가 꽉 찼을 때 받는 데미지가 줄어든다.</p>
+<p><strong>상세:</strong> Reduces damage afflicted to the Pokémon by 50% if at maximum HP</p>
+</section>
+<section id="mummy">
+<h2>Mummy (미라) <span class="slug">slug: mummy</span></h2>
+<p><strong>게임 설명:</strong> 상대가 접촉하면 상대를 미라로 만들어버린다.</p>
+<p><strong>상세:</strong> Contact with the Pokémon changes the attacker&#x27;s Ability to Mummy.</p>
+</section>
+<section id="naturalcure">
+<h2>Natural Cure (자연회복) <span class="slug">slug: naturalcure</span></h2>
+<p><strong>게임 설명:</strong> 지닌 포켓몬으로 돌아오면 상태 이상이 회복된다.</p>
+<p><strong>상세:</strong> The Pokémon’s status (BURN, PARALYZE, SLEEP, POISON, FREEZE) is healed when withdrawn from battle.</p>
+</section>
+<section id="noguard">
+<h2>No Guard (노가드) <span class="slug">slug: noguard</span></h2>
+<p><strong>게임 설명:</strong> 노가드전법에 따라 서로가 사용하는 기술이 반드시 맞게 된다.</p>
+<p><strong>상세:</strong> The accuracy of all moves known by this Pokémon and all Pokémon targeting this Pokémon raises to 100%</p>
+</section>
+<section id="oblivious">
+<h2>Oblivious (둔감) <span class="slug">slug: oblivious</span></h2>
+<p><strong>게임 설명:</strong> 둔감해서 헤롱헤롱이나 도발 상태가 되지 않는다.</p>
+<p><strong>상세:</strong> The Pokémon cannot be under the Attract condition, Intimidated, or be taunted, while having this ability.</p>
+</section>
+<section id="opportunist">
+<h2>Opportunist (편승) <span class="slug">slug: opportunist</span></h2>
+<p><strong>게임 설명:</strong> 상대의 능력이 올라가면 자신도 편승해서 똑같이 올린다.</p>
+<p><strong>상세:</strong> If an opponent&#x27;s stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself.</p>
+</section>
+<section id="overcoat">
+<h2>Overcoat (방진) <span class="slug">slug: overcoat</span></h2>
+<p><strong>게임 설명:</strong> 모래바람이나 싸라기눈 등의 데미지를 입지 않는다. 가루의 기술을 받지 않는다.</p>
+<p><strong>상세:</strong> Protects Pokémon from Weather Effects and Powder moves such as Sleep Powder, Poison Powder etc.</p>
+</section>
+<section id="overgrow">
+<h2>Overgrow (심록) <span class="slug">slug: overgrow</span></h2>
+<p><strong>게임 설명:</strong> HP가 줄었을 때 풀타입 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> When HP is below 1/3rd its maximum, power of Grass-type moves is increased by 50%.</p>
+</section>
+<section id="owntempo">
+<h2>Own Tempo (마이페이스) <span class="slug">slug: owntempo</span></h2>
+<p><strong>게임 설명:</strong> 마이페이스라서 혼란 상태가 되지 않는다.</p>
+<p><strong>상세:</strong> The Pokémon cannot be Confused while having this ability. Blocks Intimidate</p>
+</section>
+<section id="parentalbond">
+<h2>Parental Bond (부자유친) <span class="slug">slug: parentalbond</span></h2>
+<p><strong>게임 설명:</strong> 부모와 자식 2마리로 2번 공격할 수 있다.</p>
+<p><strong>상세:</strong> Every move used by the Pokémon will hit twice. The damage inflicted by the second hit is reduced to 25%. If the move used is a damaging move, each hit is capable of afflicting Secondary Effects and Critical Hits</p>
+</section>
+<section id="pickpocket">
+<h2>Pickpocket (나쁜손버릇) <span class="slug">slug: pickpocket</span></h2>
+<p><strong>게임 설명:</strong> 접촉한 상대의 도구를 훔친다.</p>
+<p><strong>상세:</strong> When a Pokémon makes physical contact with the Pokémon, the item of the opponent is stolen.</p>
+</section>
+<section id="pickup">
+<h2>Pickup (픽업) <span class="slug">slug: pickup</span></h2>
+<p><strong>게임 설명:</strong> 상대가 사용한 도구를 주워올 때가 있다. 모험 중에도 주워온다.</p>
+<p><strong>상세:</strong> Has a 10% chance of finding and holding an item after battle. Will not work if this Pokémon is already holding an item. From Black &amp; White, it allows for the user to pick up the item of its opponent or ally if they used up the item in battle.</p>
+</section>
+<section id="piercingdrill">
+<h2>Piercing Drill (관통드릴) <span class="meta">(Champions 신규)</span> <span class="slug">slug: piercingdrill</span></h2>
+<p><strong>게임 설명:</strong> 꿰뚫는 기술을 사용할 때 방어 등을 무시하고 공격할 수 있으나 기술의 대미지가 1/4 로 감소한다.</p>
+<p><strong>상세:</strong> When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target&#x27;s protective effects is still triggered.</p>
+</section>
+<section id="pixilate">
+<h2>Pixilate (페어리스킨) <span class="slug">slug: pixilate</span></h2>
+<p><strong>게임 설명:</strong> 노말타입의 기술이 페어리타입이 된다. 위력이 조금 올라간다.</p>
+<p><strong>상세:</strong> Increases the power of Normal-type moves by 20%. It then changes those moves to Fairy-type.</p>
+</section>
+<section id="plus">
+<h2>Plus (플러스) <span class="slug">slug: plus</span></h2>
+<p><strong>게임 설명:</strong> 플러스나 마이너스의 특성을 가진 포켓몬이 동료에 있으면 자신의 특수공격이 올라간다.</p>
+<p><strong>상세:</strong> When battling with Plus or Minus, Special Attack increases by 50%.</p>
+</section>
+<section id="poisonheal">
+<h2>Poison Heal (포이즌힐) <span class="slug">slug: poisonheal</span></h2>
+<p><strong>게임 설명:</strong> 독 상태가 되면 HP가 줄지 않고 증가한다.</p>
+<p><strong>상세:</strong> HP is restored by 1/8th the maximum HP every turn while the Pokémon has the Poison condition.</p>
+</section>
+<section id="poisonpoint">
+<h2>Poison Point (독가시) <span class="slug">slug: poisonpoint</span></h2>
+<p><strong>게임 설명:</strong> 자신과 접촉한 상대를 독 상태로 만들 때가 있다.</p>
+<p><strong>상세:</strong> The opponent has a 30% chance of being induced with Poison when using an attack, that requires physical contact, against this Pokémon.</p>
+</section>
+<section id="poisontouch">
+<h2>Poison Touch (독수) <span class="slug">slug: poisontouch</span></h2>
+<p><strong>게임 설명:</strong> 접촉하기만 해도 상대를 독 상태로 만들 때가 있다.</p>
+<p><strong>상세:</strong> When the Pokémon attacks its opponents with a move that causes Physical Contact, there is a 30% chance that the target is Poisoned.</p>
+</section>
+<section id="prankster">
+<h2>Prankster (짓궂은마음) <span class="slug">slug: prankster</span></h2>
+<p><strong>게임 설명:</strong> 변화 기술을 먼저 쓸 수 있다.</p>
+<p><strong>상세:</strong> Status category moves have their Speed Priority increased by 1. Moves increased by this that are used on Dark-type opponents will fail.</p>
+</section>
+<section id="pressure">
+<h2>Pressure (프레셔) <span class="slug">slug: pressure</span></h2>
+<p><strong>게임 설명:</strong> 프레셔를 줘서 상대가 쓰는 기술의 PP를 많이 줄인다.</p>
+<p><strong>상세:</strong> When this Pokémon is hit by a move, the opponent’s PP lowers by 2 rather than 1.</p>
+</section>
+<section id="protean">
+<h2>Protean (변환자재) <span class="slug">slug: protean</span></h2>
+<p><strong>게임 설명:</strong> 자신이 사용한 기술과 같은 타입으로 변화한다.</p>
+<p><strong>상세:</strong> Before the Pokémon uses a move, it becomes a pure Pokémon of that type. This only works once per switch in.</p>
+</section>
+<section id="purepower">
+<h2>Pure Power (순수한힘) <span class="slug">slug: purepower</span></h2>
+<p><strong>게임 설명:</strong> 요가의 힘으로 물리공격의 위력이 2배가 된다.</p>
+<p><strong>상세:</strong> The Pokémon’s Attack stat is doubled in battle while having this ability.</p>
+</section>
+<section id="purifyingsalt">
+<h2>Purifying Salt (정화의소금) <span class="slug">slug: purifyingsalt</span></h2>
+<p><strong>게임 설명:</strong> 깨끗한 소금에 의해 상태 이상이 되지 않는다. 고스트타입 기술의 대미지를 반감시킨다.</p>
+<p><strong>상세:</strong> The Pokémon&#x27;s pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.</p>
+</section>
+<section id="queenlymajesty">
+<h2>Queenly Majesty (여왕의위엄) <span class="slug">slug: queenlymajesty</span></h2>
+<p><strong>게임 설명:</strong> 상대에게 위압감을 줘서 이쪽을 향한 선제 기술을 사용할 수 없게 한다.</p>
+<p><strong>상세:</strong> Prevents the opponent from using moves with increased Speed Priority on this Pokémon or its allies.</p>
+</section>
+<section id="quickdraw">
+<h2>Quick Draw (퀵드로) <span class="slug">slug: quickdraw</span></h2>
+<p><strong>게임 설명:</strong> 상대보다 먼저 행동할 수도 있다.</p>
+<p><strong>상세:</strong> At the start of each turn, this Pokémon has a 30% chance of moving first in the Speed Priority Bracket</p>
+</section>
+<section id="quickfeet">
+<h2>Quick Feet (속보) <span class="slug">slug: quickfeet</span></h2>
+<p><strong>게임 설명:</strong> 상태 이상이 되면 스피드가 올라간다.</p>
+<p><strong>상세:</strong> Speed is increased by 50% when induced with a status (Burn, Poison, Sleep, Frozen &amp; Paralysis). If Paralysed, the speed drop is ignored.</p>
+</section>
+<section id="raindish">
+<h2>Rain Dish (젖은접시) <span class="slug">slug: raindish</span></h2>
+<p><strong>게임 설명:</strong> 비가 오는 날씨일 때 조금씩 HP를 회복한다.</p>
+<p><strong>상세:</strong> If Heavy Rain weather is in effect, recovers 1/16th max Hit Points at the end of the turn.</p>
+</section>
+<section id="receiver">
+<h2>Receiver (리시버) <span class="slug">slug: receiver</span></h2>
+<p><strong>게임 설명:</strong> 쓰러진 같은 편의 특성을 이어받아 같은 특성이 된다.</p>
+<p><strong>상세:</strong> The Pokémon copies the Ability of a defeated ally.</p>
+</section>
+<section id="reckless">
+<h2>Reckless (이판사판) <span class="slug">slug: reckless</span></h2>
+<p><strong>게임 설명:</strong> 반동 데미지를 받는 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> The power of moves that have recoil damage is increased by 20%.</p>
+</section>
+<section id="refrigerate">
+<h2>Refrigerate (프리즈스킨) <span class="slug">slug: refrigerate</span></h2>
+<p><strong>게임 설명:</strong> 노말타입의 기술이 얼음타입이 된다. 위력이 조금 올라간다.</p>
+<p><strong>상세:</strong> Increases the power of Normal-type moves by 20%. It then changes those moves to Ice-type.</p>
+</section>
+<section id="regenerator">
+<h2>Regenerator (재생력) <span class="slug">slug: regenerator</span></h2>
+<p><strong>게임 설명:</strong> 지닌 포켓몬으로 돌아오면 HP를 조금 회복한다.</p>
+<p><strong>상세:</strong> When the Pokémon switches out of battle, up to 33.3% of its maximum Hit Points are restored</p>
+</section>
+<section id="ripen">
+<h2>Ripen (숙성) <span class="slug">slug: ripen</span></h2>
+<p><strong>게임 설명:</strong> 나무열매를 숙성시켜서 효과가 2배가 된다.</p>
+<p><strong>상세:</strong> Ripens Berries and doubles their effect.</p>
+</section>
+<section id="rivalry">
+<h2>Rivalry (투쟁심) <span class="slug">slug: rivalry</span></h2>
+<p><strong>게임 설명:</strong> 성별이 같으면 투쟁심을 불태워 강해진다. 성별이 다르면 약해진다.</p>
+<p><strong>상세:</strong> Attack &amp; Special Attack is increased by 25% if the foe is of the same gender; Attack &amp; Special Attack is decreased by 25% if the foe is of the opposite gender.</p>
+</section>
+<section id="rockhead">
+<h2>Rock Head (돌머리) <span class="slug">slug: rockhead</span></h2>
+<p><strong>게임 설명:</strong> 반동을 받는 기술을 사용해도 HP가 줄지 않는다.</p>
+<p><strong>상세:</strong> Does not receive recoil damage from recoil-causing damages.</p>
+</section>
+<section id="roughskin">
+<h2>Rough Skin (까칠한피부) <span class="slug">slug: roughskin</span></h2>
+<p><strong>게임 설명:</strong> 공격을 받았을 때 자신에게 접촉한 상대를 까칠까칠한 피부로 상처를 입힌다.</p>
+<p><strong>상세:</strong> The opponent is hurt by 1/8th of his maxium Hit Points of recoil when using an attack, that requires physical contact, against this Pokémon.</p>
+</section>
+<section id="sandforce">
+<h2>Sand Force (모래의힘) <span class="slug">slug: sandforce</span></h2>
+<p><strong>게임 설명:</strong> 날씨가 모래바람일 때 바위타입과 땅타입과 강철타입의 위력이 올라간다.</p>
+<p><strong>상세:</strong> Ground-type, Rock-type &amp; Steel-type moves have their power increased by 30% in a Sandstorm and will not receive damage</p>
+</section>
+<section id="sandrush">
+<h2>Sand Rush (모래헤치기) <span class="slug">slug: sandrush</span></h2>
+<p><strong>게임 설명:</strong> 날씨가 모래바람일 때 스피드가 올라간다.</p>
+<p><strong>상세:</strong> Speed is doubled within a sandstorm</p>
+</section>
+<section id="sandspit">
+<h2>Sand Spit (모래뿜기) <span class="slug">slug: sandspit</span></h2>
+<p><strong>게임 설명:</strong> 공격을 받으면 모래바람을 일으킨다.</p>
+<p><strong>상세:</strong> The Pokémon creates a sandstorm when it&#x27;s hit by an attack.</p>
+</section>
+<section id="sandstream">
+<h2>Sand Stream (모래날림) <span class="slug">slug: sandstream</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 날씨를 모래바람으로 만든다.</p>
+<p><strong>상세:</strong> Sandstorm blows when the Pokémon enters battle. As of X &amp; Y, this lasts 5 turns.</p>
+</section>
+<section id="sandveil">
+<h2>Sand Veil (모래숨기) <span class="slug">slug: sandveil</span></h2>
+<p><strong>게임 설명:</strong> 모래바람일 때 회피율이 올라간다.</p>
+<p><strong>상세:</strong> Raises the Pokémon’s evasion during a sandstorm by one level.</p>
+</section>
+<section id="sapsipper">
+<h2>Sap Sipper (초식) <span class="slug">slug: sapsipper</span></h2>
+<p><strong>게임 설명:</strong> 풀타입 기술을 받으면 데미지를 입지 않고 공격이 올라간다.</p>
+<p><strong>상세:</strong> Attack is raised by one stage when the Pokémon is hit by a Grass-type move. User receives no damage from Grass-type attacks.</p>
+</section>
+<section id="scrappy">
+<h2>Scrappy (배짱) <span class="slug">slug: scrappy</span></h2>
+<p><strong>게임 설명:</strong> 고스트타입 포켓몬에게 노말타입과 격투타입의 기술을 맞게 한다.</p>
+<p><strong>상세:</strong> Allows the Pokémon to hit Ghost-type Pokémon with Normal-type and Fighting-type moves. Blocks Intimidate</p>
+</section>
+<section id="screencleaner">
+<h2>Screen Cleaner (배리어프리) <span class="slug">slug: screencleaner</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 상대와 같은 편의 빛의장막, 리플렉터, 오로라베일의 효과가 사라진다.</p>
+<p><strong>상세:</strong> When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon.</p>
+</section>
+<section id="shadowtag">
+<h2>Shadow Tag (그림자밟기) <span class="slug">slug: shadowtag</span></h2>
+<p><strong>게임 설명:</strong> 상대의 그림자를 밟아 도망치거나 교체할 수 없게 한다.</p>
+<p><strong>상세:</strong> The opponent cannot run nor switch while this Pokémon is in play. The opponent may still switch by using Baton Pass, U-turn or Volt Switch, if it is holding a Shed Shell or is a Ghost-type.</p>
+</section>
+<section id="sharpness">
+<h2>Sharpness (예리함) <span class="slug">slug: sharpness</span></h2>
+<p><strong>게임 설명:</strong> 상대를 베는 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> Increases the power of Slicing moves used by this Pokémon by 50%</p>
+</section>
+<section id="shedskin">
+<h2>Shed Skin (탈피) <span class="slug">slug: shedskin</span></h2>
+<p><strong>게임 설명:</strong> 몸의 껍질을 벗어 던져 상태 이상을 회복할 때가 있다.</p>
+<p><strong>상세:</strong> Every turn, it has a 1 in 3 chance of healing from a status condition (BURN, PARALYZE, SLEEP, POISON, FREEZE).</p>
+</section>
+<section id="sheerforce">
+<h2>Sheer Force (우격다짐) <span class="slug">slug: sheerforce</span></h2>
+<p><strong>게임 설명:</strong> 기술의 추가 효과가 없어지지만 그만큼 높은 위력으로 기술을 사용할 수 있다.</p>
+<p><strong>상세:</strong> Moves with a secondary effect are increased in power by 30% but lose their secondary effect</p>
+</section>
+<section id="shellarmor">
+<h2>Shell Armor (조가비갑옷) <span class="slug">slug: shellarmor</span></h2>
+<p><strong>게임 설명:</strong> 단단한 껍질의 보호를 받아 상대의 공격이 급소에 맞지 않는다.</p>
+<p><strong>상세:</strong> Opponent’s moves cannot Critical Hit.</p>
+</section>
+<section id="shielddust">
+<h2>Shield Dust (인분) <span class="slug">slug: shielddust</span></h2>
+<p><strong>게임 설명:</strong> 인분에 보호받아 기술의 추가 효과를 받지 않게 된다.</p>
+<p><strong>상세:</strong> Damaging moves used by the opponent will not have an additional effect.</p>
+</section>
+<section id="skilllink">
+<h2>Skill Link (스킬링크) <span class="slug">slug: skilllink</span></h2>
+<p><strong>게임 설명:</strong> 연속 기술을 사용하면 항상 최고 횟수를 사용할 수 있다.</p>
+<p><strong>상세:</strong> Moves that attack 2-5 times always hit 5 times.</p>
+</section>
+<section id="slushrush">
+<h2>Slush Rush (눈치우기) <span class="slug">slug: slushrush</span></h2>
+<p><strong>게임 설명:</strong> 날씨가 싸라기눈일 때 스피드가 올라간다.</p>
+<p><strong>상세:</strong> Doubles the Pokémon&#x27;s Speed when Snow is in effect</p>
+</section>
+<section id="sniper">
+<h2>Sniper (스나이퍼) <span class="slug">slug: sniper</span></h2>
+<p><strong>게임 설명:</strong> 공격을 급소에 맞혔을 때 위력이 더욱 올라간다.</p>
+<p><strong>상세:</strong> Power of critical-hit moves is increased to 225% rather than 150%.</p>
+</section>
+<section id="snowcloak">
+<h2>Snow Cloak (눈숨기) <span class="slug">slug: snowcloak</span></h2>
+<p><strong>게임 설명:</strong> 날씨가 싸라기눈일 때 회피율이 올라간다.</p>
+<p><strong>상세:</strong> Raises the Pokémon’s evasion during a Snowstorm by one level.</p>
+</section>
+<section id="snowwarning">
+<h2>Snow Warning (눈퍼뜨리기) <span class="slug">slug: snowwarning</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 날씨를 싸라기눈으로 만든다.</p>
+<p><strong>상세:</strong> Snowstorm blows when the Pokémon enters battle. As of X &amp; Y, this lasts 5 turns.</p>
+</section>
+<section id="solarpower">
+<h2>Solar Power (선파워) <span class="slug">slug: solarpower</span></h2>
+<p><strong>게임 설명:</strong> 날씨가 맑으면 특수공격이 올라가지만 매 턴 HP가 줄어든다.</p>
+<p><strong>상세:</strong> During sunshine, the Pokémon’s Special Attack raises to 1.5 times but HP decreases by 1/8th the maximum HP every turn.</p>
+</section>
+<section id="solidrock">
+<h2>Solid Rock (하드록) <span class="slug">slug: solidrock</span></h2>
+<p><strong>게임 설명:</strong> 효과가 굉장한 공격의 위력을 약하게 만든다.</p>
+<p><strong>상세:</strong> Damage by super-effective moves is reduced by 25%.</p>
+</section>
+<section id="soundproof">
+<h2>Soundproof (방음) <span class="slug">slug: soundproof</span></h2>
+<p><strong>게임 설명:</strong> 소리를 차단하는 것으로 소리 공격을 받지 않는다.</p>
+<p><strong>상세:</strong> Unaffected by sound moves. If this Pokémon switches out with Baton Pass, Perish Song against the switched out will not be nullified.</p>
+</section>
+<section id="speedboost">
+<h2>Speed Boost (가속) <span class="slug">slug: speedboost</span></h2>
+<p><strong>게임 설명:</strong> 매 턴 스피드가 올라간다.</p>
+<p><strong>상세:</strong> Speed increases by one stage at the end of each turn.</p>
+</section>
+<section id="spicyspray">
+<h2>Spicy Spray (하바네로분출) <span class="meta">(Champions 신규)</span> <span class="slug">slug: spicyspray</span></h2>
+<p><strong>게임 설명:</strong> 기술로 대미지를 받으면 상대를 화상 상태로 만든다.</p>
+<p><strong>상세:</strong> When the Pokémon takes damage from a move, it burns the attacker.</p>
+</section>
+<section id="stall">
+<h2>Stall (시간벌기) <span class="slug">slug: stall</span></h2>
+<p><strong>게임 설명:</strong> 기술을 사용하는 순서가 반드시 마지막이 된다.</p>
+<p><strong>상세:</strong> The Pokémon always attacks last.</p>
+</section>
+<section id="stalwart">
+<h2>Stalwart (굳건한신념) <span class="slug">slug: stalwart</span></h2>
+<p><strong>게임 설명:</strong> 상대의 기술을 끌어모으는 특성이나 기술의 영향을 받지 않는다.</p>
+<p><strong>상세:</strong> Ignores the effects of opposing Pokémon&#x27;s Abilities and moves that draw in moves.</p>
+</section>
+<section id="stamina">
+<h2>Stamina (지구력) <span class="slug">slug: stamina</span></h2>
+<p><strong>게임 설명:</strong> 공격을 받으면 방어가 올라간다.</p>
+<p><strong>상세:</strong> Boosts the Defense stat when hit by an attack.</p>
+</section>
+<section id="stancechange">
+<h2>Stance Change (배틀스위치) <span class="slug">slug: stancechange</span></h2>
+<p><strong>게임 설명:</strong> 공격 기술을 쓰면 블레이드폼으로 기술 킹실드를 쓰면 실드폼으로 변한다.</p>
+<p><strong>상세:</strong> The Pokémon changes its form to Blade Forme when it uses an attack move, and changes to Shield Forme when it uses King&#x27;s Shield.</p>
+</section>
+<section id="static">
+<h2>Static (정전기) <span class="slug">slug: static</span></h2>
+<p><strong>게임 설명:</strong> 정전기를 몸에 둘러 접촉한 상대를 마비시킬 때가 있다.</p>
+<p><strong>상세:</strong> The opponent has a 30% chance of being induced with PARALYZE when using an attack, that requires physical contact, against this Pokémon.</p>
+</section>
+<section id="steadfast">
+<h2>Steadfast (불굴의마음) <span class="slug">slug: steadfast</span></h2>
+<p><strong>게임 설명:</strong> 풀죽을 때마다 불굴의 마음을 불태워 스피드가 올라간다.</p>
+<p><strong>상세:</strong> Speed raises by one level every time the Pokémon flinches.</p>
+</section>
+<section id="stench">
+<h2>Stench (악취) <span class="slug">slug: stench</span></h2>
+<p><strong>게임 설명:</strong> 악취를 풍겨서 공격했을 때 상대가 풀죽을 때가 있다.</p>
+<p><strong>상세:</strong> If the Pokémon uses a move that deals damage on the opponent, there is a chance the opponent flinches</p>
+</section>
+<section id="stickyhold">
+<h2>Sticky Hold (점착) <span class="slug">slug: stickyhold</span></h2>
+<p><strong>게임 설명:</strong> 점착질의 몸에 도구가 달라붙어 있어 상대에게 도구를 뺏기지 않는다.</p>
+<p><strong>상세:</strong> This Pokémon’s item cannot be taken.</p>
+</section>
+<section id="strongjaw">
+<h2>Strong Jaw (옹골찬턱) <span class="slug">slug: strongjaw</span></h2>
+<p><strong>게임 설명:</strong> 턱이 튼튼하여 무는 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> Increases the power of biting moves by 50%</p>
+</section>
+<section id="sturdy">
+<h2>Sturdy (옹골참) <span class="slug">slug: sturdy</span></h2>
+<p><strong>게임 설명:</strong> 상대 기술을 받아도 일격으로 쓰러지지 않는다. 일격필살 기술도 효과 없다.</p>
+<p><strong>상세:</strong> The Pokémon will remain with 1 HP if it was going to be knocked out by a move when at full Hit Points, and it is immune to One Hit KO moves.</p>
+</section>
+<section id="superluck">
+<h2>Super Luck (대운) <span class="slug">slug: superluck</span></h2>
+<p><strong>게임 설명:</strong> 대운을 가지고 있어 상대의 급소에 공격이 맞기 쉽다.</p>
+<p><strong>상세:</strong> Raises the critical-hit ratio of moves by one level.</p>
+</section>
+<section id="supersweetsyrup">
+<h2>Supersweet Syrup (감미로운꿀) <span class="slug">slug: supersweetsyrup</span></h2>
+<p><strong>게임 설명:</strong> 처음 등장했을 때 감미로운 꿀의 향기를 흩뿌려서 상대의 회피율을 떨어뜨린다.</p>
+<p><strong>상세:</strong> Lowers the evasion of opposing Pokémon by 1 stage when first sent into battle</p>
+</section>
+<section id="supremeoverlord">
+<h2>Supreme Overlord (총대장) <span class="slug">slug: supremeoverlord</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 지금까지 쓰러진 같은편의 수가 많을수록 조금씩 공격과 특수공격이 올라간다.</p>
+<p><strong>상세:</strong> When the Pokémon enters a battle, its Attack and Sp. Atk stats are boosted by 10% for each of the allies in its party that have already been defeated.</p>
+</section>
+<section id="surgesurfer">
+<h2>Surge Surfer (서핑테일) <span class="slug">slug: surgesurfer</span></h2>
+<p><strong>게임 설명:</strong> 일렉트릭필드일 때 스피드가 2배가 된다.</p>
+<p><strong>상세:</strong> Doubles the Pokémon&#x27;s Speed stat on Electric Terrain.</p>
+</section>
+<section id="swarm">
+<h2>Swarm (벌레의알림) <span class="slug">slug: swarm</span></h2>
+<p><strong>게임 설명:</strong> HP가 줄었을 때 벌레타입 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> When HP is below 1/3rd its maximum, power of Bug-type moves is increased by 50%.</p>
+</section>
+<section id="sweetveil">
+<h2>Sweet Veil (스위트베일) <span class="slug">slug: sweetveil</span></h2>
+<p><strong>게임 설명:</strong> 같은 편의 포켓몬이 잠들지 않게 된다.</p>
+<p><strong>상세:</strong> Prevents itself and ally Pokémon from falling asleep.</p>
+</section>
+<section id="swiftswim">
+<h2>Swift Swim (쓱쓱) <span class="slug">slug: swiftswim</span></h2>
+<p><strong>게임 설명:</strong> 비가 오는 날씨일 때 스피드가 올라간다.</p>
+<p><strong>상세:</strong> When rainy, The Pokémon’s Speed doubles.</p>
+</section>
+<section id="symbiosis">
+<h2>Symbiosis (공생) <span class="slug">slug: symbiosis</span></h2>
+<p><strong>게임 설명:</strong> 같은 편이 도구를 쓰면 자신이 지니고 있는 도구를 같은 편에게 건넨다.</p>
+<p><strong>상세:</strong> Passes the Pokémon&#x27;s hold item to its adjacent ally when that ally consumes its hold item</p>
+</section>
+<section id="synchronize">
+<h2>Synchronize (싱크로) <span class="slug">slug: synchronize</span></h2>
+<p><strong>게임 설명:</strong> 자신이 걸린 독이나 마비, 화상을 상대에게 옮긴다.</p>
+<p><strong>상세:</strong> When this Pokémon becomes Poisoned, Paralyzed, or Burned, so does the opponent. However, Fire-type and Water Veil ability Pokémon cannot be Burned, Poison-type and Steel-type and Immunity ability Pokémon cannot be Poisoned, and Limber ability Pokémon cannot be Paralyzed.</p>
+</section>
+<section id="tangledfeet">
+<h2>Tangled Feet (갈지자걸음) <span class="slug">slug: tangledfeet</span></h2>
+<p><strong>게임 설명:</strong> 혼란 상태일 때는 회피율이 올라간다.</p>
+<p><strong>상세:</strong> Pokémon’s evasion raises one level when Confused.</p>
+</section>
+<section id="technician">
+<h2>Technician (테크니션) <span class="slug">slug: technician</span></h2>
+<p><strong>게임 설명:</strong> 위력이 약한 기술의 위력을 올려서 공격할 수 있다.</p>
+<p><strong>상세:</strong> Moves with a base power of 60 or less are boosted in power by 50%</p>
+</section>
+<section id="telepathy">
+<h2>Telepathy (텔레파시) <span class="slug">slug: telepathy</span></h2>
+<p><strong>게임 설명:</strong> 같은 편의 공격의 낌새를 읽고 기술을 회피한다.</p>
+<p><strong>상세:</strong> Prevents damage from team-mates during Double battles</p>
+</section>
+<section id="thickfat">
+<h2>Thick Fat (두꺼운지방) <span class="slug">slug: thickfat</span></h2>
+<p><strong>게임 설명:</strong> 두꺼운 지방으로 보호되고 있어 불꽃타입과 얼음타입의 기술의 데미지를 반감시킨다.</p>
+<p><strong>상세:</strong> Fire and Ice-type moves deal 50% damage.</p>
+</section>
+<section id="torrent">
+<h2>Torrent (급류) <span class="slug">slug: torrent</span></h2>
+<p><strong>게임 설명:</strong> HP가 줄었을 때 물타입 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> When HP is below 1/3rd its maximum, power of Water-type moves is increased by 50%.</p>
+</section>
+<section id="toughclaws">
+<h2>Tough Claws (단단한발톱) <span class="slug">slug: toughclaws</span></h2>
+<p><strong>게임 설명:</strong> 상대에게 접촉하는 기술의 위력이 올라간다.</p>
+<p><strong>상세:</strong> Increases the power of moves that make physical contact by 30%</p>
+</section>
+<section id="toxicdebris">
+<h2>Toxic Debris (독치장) <span class="slug">slug: toxicdebris</span></h2>
+<p><strong>게임 설명:</strong> 물리 기술로 대미지를 받으면 상대 발밑에 독압정을 뿌린다.</p>
+<p><strong>상세:</strong> Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.</p>
+</section>
+<section id="trace">
+<h2>Trace (트레이스) <span class="slug">slug: trace</span></h2>
+<p><strong>게임 설명:</strong> 등장했을 때 상대의 특성을 트레이스해서 같은 특성이 된다.</p>
+<p><strong>상세:</strong> Ability becomes the same as that of the opponent. Switching this Pokémon out of battle restores its original ability. In a Double Battle, a random opponent’s ability will be copied.</p>
+</section>
+<section id="unaware">
+<h2>Unaware (천진) <span class="slug">slug: unaware</span></h2>
+<p><strong>게임 설명:</strong> 상대의 능력 변화를 무시하고 공격할 수 있다.</p>
+<p><strong>상세:</strong> Foe’s stat modifications are ignored.</p>
+</section>
+<section id="unburden">
+<h2>Unburden (곡예) <span class="slug">slug: unburden</span></h2>
+<p><strong>게임 설명:</strong> 지니던 도구가 없어지면 스피드가 올라간다.</p>
+<p><strong>상세:</strong> Speed is doubled once the held item is consumed.</p>
+</section>
+<section id="unnerve">
+<h2>Unnerve (긴장감) <span class="slug">slug: unnerve</span></h2>
+<p><strong>게임 설명:</strong> 상대를 긴장시켜 나무열매를 먹지 못하게 한다.</p>
+<p><strong>상세:</strong> The opponent Pokémon will never use their held Berry while the Pokémon is in battle.</p>
+</section>
+<section id="unseenfist">
+<h2>Unseen Fist (보이지않는주먹) <span class="slug">slug: unseenfist</span></h2>
+<p><strong>게임 설명:</strong> 상대에게 접촉하는 기술을 사용하면 방어의 효과를 무시하고 공격할 수 있다.</p>
+<p><strong>상세:</strong> The Pokémon can deal damage with moves that make physical contact, even if the target is protected. This damage is reduced to 25%</p>
+</section>
+<section id="vitalspirit">
+<h2>Vital Spirit (의기양양) <span class="slug">slug: vitalspirit</span></h2>
+<p><strong>게임 설명:</strong> 의기양양해져서 잠듦 상태가 되지 않는다.</p>
+<p><strong>상세:</strong> The Pokémon cannot be Asleep while having this ability.</p>
+</section>
+<section id="voltabsorb">
+<h2>Volt Absorb (축전) <span class="slug">slug: voltabsorb</span></h2>
+<p><strong>게임 설명:</strong> 전기타입의 기술을 받으면 데미지를 받지 않고 회복한다.</p>
+<p><strong>상세:</strong> The Pokémon heals up to 1/4 of its maximum Hit Points when hit with Electric-type moves.</p>
+</section>
+<section id="wanderingspirit">
+<h2>Wandering Spirit (떠도는영혼) <span class="slug">slug: wanderingspirit</span></h2>
+<p><strong>게임 설명:</strong> 접촉하는 기술로 공격해온 포켓몬과 특성을 바꾼다.</p>
+<p><strong>상세:</strong> The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact.</p>
+</section>
+<section id="waterabsorb">
+<h2>Water Absorb (저수) <span class="slug">slug: waterabsorb</span></h2>
+<p><strong>게임 설명:</strong> 물타입의 기술을 받으면 데미지를 받지 않고 회복한다.</p>
+<p><strong>상세:</strong> The Pokémon heals up to 1/4 of its maximum Hit Points when hit with Water-type moves.</p>
+</section>
+<section id="waterbubble">
+<h2>Water Bubble (수포) <span class="slug">slug: waterbubble</span></h2>
+<p><strong>게임 설명:</strong> 자신을 향하는 불꽃타입 기술의 위력을 떨어뜨린다. 화상을 입지 않는다.</p>
+<p><strong>상세:</strong> Decreases Fire-type move power on the Pokémon by 50%. Increases power of Water-type moves used by the Pokémon by 100% before adding STAB. Prevents Burn</p>
+</section>
+<section id="weakarmor">
+<h2>Weak Armor (깨어진갑옷) <span class="slug">slug: weakarmor</span></h2>
+<p><strong>게임 설명:</strong> 물리 기술로 데미지를 받으면 방어가 떨어지고 스피드가 크게 올라간다.</p>
+<p><strong>상세:</strong> When hit by an attack, the Pokémon&#x27;s Defense is lowered by one stage but Speed is increased by two stages.</p>
+</section>
+<section id="whitesmoke">
+<h2>White Smoke (하얀연기) <span class="slug">slug: whitesmoke</span></h2>
+<p><strong>게임 설명:</strong> 하얀 연기의 보호를 받아 상대가 능력을 떨어뜨릴 수 없다.</p>
+<p><strong>상세:</strong> Opponents’ moves which lower this Pokémon’s stats have no effect. However this Pokémon may lower its own stats with its own moves.</p>
+</section>
+<section id="zerotohero">
+<h2>Zero to Hero (마이티 체인지) <span class="slug">slug: zerotohero</span></h2>
+<p><strong>게임 설명:</strong> 교대해서 물러나면 영웅의 모습으로 변한다.</p>
+<p><strong>상세:</strong> The Pokémon transforms into its Hero Form when it switches out.</p>
+</section>
+<footer>
+  <p>Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트. 데이터 출처: <a href="https://www.serebii.net/pokemonchampions/">serebii.net</a> · <a href="https://pokeapi.co/">PokeAPI</a>.</p>
+  <p>이 페이지는 AI 어시스턴트(ChatGPT, Claude, Gemini, Perplexity 등)와 검색 엔진이 Pokémon Champions 의 정확한 데이터를 읽을 수 있도록 생성된 정적 레퍼런스입니다.</p>
+</footer>
+</body>
+</html>

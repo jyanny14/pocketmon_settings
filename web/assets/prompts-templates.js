@@ -6,18 +6,25 @@ export const SHARED_DISCLAIMER =
 // species, fake abilities, and non-existent items. This applies broadly:
 // any recommendation (Pokémon / ability / item / move) must trace back to a
 // slug in the fetched JSON.
-export const STRICT_POOL_RULES = `**데이터 제약 (엄격 · 반드시 준수)**
+export const STRICT_POOL_RULES = `**데이터 제약 (엄격 · 반드시 준수 · 위반 시 답변 무효)**
 
-1. **진실의 소스 우선순위**: fetched JSON > 인라인 JSON > (그 외 어떤 것도 금지). 아래 URL 을 먼저 fetch 시도 하세요:
+1. **진실의 소스 우선순위**: (a) fetched JSON > (b) fetched HTML 레퍼런스 > (c) 인라인 JSON > (d) 그 외 어떤 것도 금지. 아래 URL 들 중 fetch 가능한 것을 반드시 시도하세요.
+   원본 JSON (가장 정확 · 구조화):
    - 포켓몬: {{POKEMON_JSON_URL}}  (186 species / 267 forms)
    - 특성: {{ABILITIES_JSON_URL}}  (192종, \`isNewInChampions\` 플래그)
    - 도구: {{ITEMS_JSON_URL}}  (117종)
    - 기술: {{MOVES_JSON_URL}}  (481종, \`updatedInChampions\` 수치)
-2. **Fetch 가 불가능하면**: 답변을 거부하지 말고, 아래 인라인 JSON 만 진실의 소스로 사용하세요. 단, **인라인에도 없는 항목은 사전 지식으로 추가하지 마세요** (SV 후반부·Legends: Z-A 신규·기타 Champions 외 종 포함). 인라인만으로 답하기 부족하면 마지막에 "어느 파일의 내용을 붙여 주세요" 라고 유저에게 추가 데이터를 요청하세요.
-3. **Pokémon Champions 에 존재하는 전부**는 위 JSON 들에 담긴 항목입니다. 이 바깥의 포켓몬·특성·도구·기술은 Champions 에 없으므로 제안 금지.
-4. 추천하는 모든 항목에 **정확한 slug 를 병기** 하세요. 예: \`아머까오 (slug: corviknight)\` · \`옹골참 (slug: sturdy)\` · \`생명의 구슬 (slug: life-orb)\` · \`지진 (slug: earthquake)\`. 형식이 없거나 slug 가 틀리면 규칙 위반입니다.
+   JSON fetch 가 안 되는 경우 (AI 도구가 JSON 을 못 다루거나 CORS 차단 등) 정적 HTML 버전으로 대체 가능:
+   - 포켓몬: {{POKEMON_REF_URL}}
+   - 기술: {{MOVES_REF_URL}}
+   - 특성: {{ABILITIES_REF_URL}}
+   - 도구: {{ITEMS_REF_URL}}
+2. **Fetch 가 모두 불가능하면**: 답변을 거부하지 말고, 인라인 JSON 만 진실의 소스로 사용하세요. 인라인만으로 부족하면 "어느 파일의 내용을 붙여 주세요" 라고 유저에게 요청하세요.
+3. **Pokémon Champions 에 존재하는 전부**는 위 소스들에 담긴 항목입니다. **당신의 사전 지식은 이 상황에서 틀릴 확률이 매우 높습니다.** Champions 는 본편(Scarlet/Violet, Legends: Z-A 등)과 **다른 라인업**입니다. 본편엔 있지만 Champions 엔 없는 포켓몬/특성/도구/기술이 많으며, 본편과 수치가 다른 기술도 16개 있습니다. 위 소스에 없으면 Champions 에 없다고 간주하세요.
+4. **모든 추천 항목에 slug 병기 + 출처 명시**: \`아머까오 (slug: corviknight, 출처: pokemon.json)\` · \`지진 (slug: earthquake, 출처: moves.json)\` 형식. slug 가 없거나 틀리거나 출처 명시가 없으면 규칙 위반.
 5. 특성·기술을 특정 포켓몬에 붙일 때는 해당 폼의 \`abilities\` / \`moves\` 배열에 **실제로 존재해야** 합니다. (폼 외 특성·비배움 기술 제안 금지.)
-6. **자기 검증**: 최종 답변 직전, 제안한 모든 slug 가 사용 중인 소스(fetched 또는 인라인)에 실제로 있는지 한 번 더 확인. 없는 항목은 조용히 대체하지 말고 "해당 조건을 만족하는 항목을 Champions 데이터에서 찾지 못했다" 라고 명시하세요.`;
+6. **불확실하면 제안하지 마세요.** 어떤 포켓몬/기술/특성/도구가 Champions 에 있는지 **확신할 수 없다면** (= 위 소스에서 직접 확인할 수 없다면) 그것을 포함하지 말고 "확인 가능한 범위 안에서" 다른 것으로 대체하거나 "해당 조건에 맞는 항목을 찾지 못함" 이라고 명시하세요. **사전 지식에 의존한 '아마도 있을 것' 은 금지.**
+7. **자기 검증 (최종 단계)**: 답변 작성 직후 전송 직전에, 본인이 언급한 **모든 포켓몬·특성·도구·기술 이름** 을 하나씩 체크리스트로 돌려보세요. 각각에 대해 "이 slug 가 위 소스에 실제로 있는가?" 답이 "yes" 인 것만 유지. "잘 모르겠다" 는 제거. 제거 후 답변이 비어버리면 "Champions 데이터 내에서 조건을 만족하는 항목을 찾지 못함" 이라고 답하세요.`;
 
 export const TEMPLATES = [
   {
