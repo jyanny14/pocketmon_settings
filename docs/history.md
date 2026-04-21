@@ -13,6 +13,10 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- `web/assets/prompts-templates.js` — swap / fill 템플릿이 Champions 미등록 포켓몬을 추천하던 문제 대응. `STRICT_POOL_RULES` 쉐어드 상수 신설 후 두 템플릿 최상단(SHARED_DISCLAIMER 다음)에 주입. 5개 규칙 핵심: (1) fetch 실패 시 답변 금지, (2) 186 species/267 forms 외부 제안 금지, (3) 모든 포켓몬 추천 시 `종족명 (slug: …)` 형식 강제, (4) 특성·도구·기술 모두 fetched 데이터 안에서만, (5) 답변 직전 자기 검증 후 없는 항목은 "찾지 못함" 으로 명시. 이전 짧은 "fetch 권장" 문구로는 모델이 사전지식 기반 hallucinate 하는 걸 막지 못해 제약을 리스트 형태로 재작성 + 반복.
+
+- `docs/TODO.md` 에 **T32. 랜딩 페이지 사용 방법 상세 섹션** 및 **T33. 후원 링크** 추가. T33 에는 Nintendo IP 리스크 재점검 필요 항목 명시(문의 시 즉시 삭제 + 환불 프로세스 README 반영).
+
 - `docs/TODO.md` 에 **T31. 일본어(日) · 중국어(中) 다국어 지원** 항목 추가. 번역팀 없이 전부 PokeAPI 에서 자동 수집하는 방향. ja / zh-Hans / zh-Hant 3언어 동시 처리, 데이터 레이어(스크립트) · UI 레이어(i18n + 토글 드롭다운) · manual override · 작업 순서 기재. 부분 진행 A안(데이터만 먼저)이 가성비 높다고 판단해서 실행 시 첫 착수지점으로 명시.
 
 - prompts.html 에 **6번째 카드 "남은 슬롯 채우기" 추가**. 현재 파티의 빈 자리를 어떤 포켓몬·폼·특성·도구·기술·성격·SP 배분으로 채울지 세팅 단위로 추천받는 템플릿. `swap` 과 마찬가지로 POKEMON_JSON_URL fetch 필수. 각 빈 슬롯마다 역할 태그(선봉·피봇·물공·특공·내구벽·스위퍼·서포터)와 6스탯 SP 배분(총합 ≤66), 4기술(해당 폼 learnable 범위)까지 요청. 1~6마리 전부에서 동작 (빈 0칸이어도 AI 가 "이미 가득" 으로 응답하는 수준은 허용).

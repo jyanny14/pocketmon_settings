@@ -1,6 +1,18 @@
 export const SHARED_DISCLAIMER =
   "이 데이터는 **Pokémon Champions** 기준입니다. 본편 시리즈(Scarlet/Violet 등)와 일부 밸런스·특성·아이템이 다릅니다. 제공된 JSON/URL 을 진실의 소스로 삼고, 사전지식과 충돌하면 제공된 데이터를 따라주세요. Champions 고유 변경점 플래그: `abilities.json[].isNewInChampions`, `moves.json[].updatedInChampions`.";
 
+// Strict pool constraint — prepended to templates that ask AI to recommend
+// Pokémon (swap/fill). The wording is intentionally blunt and redundant
+// because models keep hallucinating SV/Z-A species that Champions does not
+// contain.
+export const STRICT_POOL_RULES = `**데이터 제약 (엄격 · 반드시 준수)**
+
+1. 답변 전에 먼저 {{POKEMON_JSON_URL}} 을 fetch 하세요. fetch 에 실패하면 답변하지 말고 "pokemon.json fetch 실패로 답변 불가" 라고만 응답하세요. **사전 지식으로 답을 만들지 마세요.**
+2. Pokémon Champions 에 존재하는 포켓몬은 **pokemon.json 배열의 186 species / 267 forms 가 전부입니다.** SV 후반부 미추가 종, Legends: Z-A 신규 종 일부, 그 외 어떤 포켓몬도 이 목록에 없으면 Champions 에 존재하지 않습니다. 제안 금지.
+3. 추천하는 모든 포켓몬은 \`종족명 (slug: {pokemon.json 의 정확한 slug})\` 형식으로 표기하세요. 예: \`아머까오 (slug: corviknight)\`. 이 형식이 없거나 slug 가 틀리면 규칙 위반입니다.
+4. 특성·도구·기술도 동일: 추천 특성은 해당 포켓몬 폼의 \`abilities\` 배열, 추천 도구는 items.json, 추천 기술은 해당 포켓몬의 \`moves\` 배열에 **실제로 존재해야** 합니다. 존재하지 않으면 제안 불가.
+5. **자기 검증**: 최종 답변 직전, 본인이 제안한 모든 slug(포켓몬·특성·도구·기술)가 fetch 한 데이터에 실제로 있는지 한 번 더 확인하세요. 없는 항목은 조용히 대체하지 말고 **"해당 조건을 만족하는 Champions 포켓몬을 찾지 못했다"** 라고 명시하세요.`;
+
 export const TEMPLATES = [
   {
     id: "weakness",
@@ -34,17 +46,20 @@ export const TEMPLATES = [
     requiresPokemonPool: true,
     body: `${SHARED_DISCLAIMER}
 
+${STRICT_POOL_RULES}
+
+---
+
 아래 파티에서 **한 마리만 바꾼다면 누구를, 무엇으로** 바꾸는 게 좋을지 추천해주세요.
 
 - 파티 URL: {{PARTY_URL}}
 - 사이트 가이드: {{LLMS_TXT_URL}}
-- **반드시 다음 JSON 을 fetch 해서 후보 풀로 쓰세요**: {{POKEMON_JSON_URL}}
-  (Pokémon Champions 에 등장하는 전체 포켓몬 186종. 이 파일에 없는 포켓몬은 제안 불가.)
+- 후보 풀: {{POKEMON_JSON_URL}} (위 제약 1~5 참고)
 
 분석 요청:
 1. 현 파티에서 가장 약한 고리(역할 중복·약점 공유·속도 밀림 등)를 한 슬롯 지목.
 2. 해당 슬롯을 대체할 **3후보** 제시. 각 후보에 대해:
-   - 폼·추천 특성·추천 도구 (사이트 데이터에서 실제 존재하는 것만).
+   - \`종족명 (slug: …)\` · 폼 · 추천 특성 · 추천 도구 (전부 pokemon.json / items.json 에 실제 존재하는 것만).
    - 교체 이유(파티 전체 관점에서 어떤 구멍을 메우는지).
 3. 세 후보 중 최선을 고르고 이유 한 줄.
 
@@ -92,26 +107,27 @@ export const TEMPLATES = [
     requiresPokemonPool: true,
     body: `${SHARED_DISCLAIMER}
 
+${STRICT_POOL_RULES}
+
+---
+
 현재 파티의 **남은 {{EMPTY_COUNT}}칸**을 채울 포켓몬을 추천해주세요.
 
 - 파티 URL: {{PARTY_URL}}
 - 사이트 가이드: {{LLMS_TXT_URL}}
-- **반드시 다음 JSON 을 fetch 해서 후보 풀로 쓰세요**: {{POKEMON_JSON_URL}}
-  (Pokémon Champions 에 등장하는 전체 포켓몬 186종. 이 파일에 없는 포켓몬은 제안 불가.)
+- 후보 풀: {{POKEMON_JSON_URL}} (위 제약 1~5 참고)
 
 분석 요청:
 1. 현재 파티({{FILLED_COUNT}}마리)의 약점·역할 공백을 한 줄로 진단.
 2. 남은 {{EMPTY_COUNT}}칸 각각에 대해 아래 포맷으로 제안:
-   - **슬롯 N**: 포켓몬 (폼) — 역할 태그 (선봉 / 피봇 / 물리 어태커 / 특수 어태커 / 내구 벽 / 스위퍼 / 서포터 등 중 택1)
-   - 추천 특성 · 도구 · 성격
-   - 4기술 — 이름 옆에 (타입 / 분류 / 위력 / 명중) 괄호 표기. 해당 폼이 배울 수 있는 기술만.
+   - **슬롯 N**: \`종족명 (slug: …)\` (폼) — 역할 태그 (선봉 / 피봇 / 물리 어태커 / 특수 어태커 / 내구 벽 / 스위퍼 / 서포터 등 중 택1)
+   - 추천 특성 · 도구 · 성격 (전부 fetched 데이터에 존재하는 것만)
+   - 4기술 — 이름 옆에 (타입 / 분류 / 위력 / 명중) 괄호 표기. 해당 폼의 \`moves\` 배열에 있는 기술만.
    - Stat Points 배분 — \`hp/atk/def/spAtk/spDef/speed\` 형식. 각 스탯 0~32, 총합 ≤66.
    - 선택 이유 1~2문장 (현 파티 관점에서 어떤 구멍을 메우는지).
 3. 마지막에 6마리 완성 시 **팀 컨셉 한 줄** 요약.
 
-제약:
-- 사이트 데이터에 실제로 존재하는 포켓몬·특성·도구만 제안.
-- 기술은 해당 폼의 learnable 범위 안에서만.
+추가 제약:
 - Champions 에서 수치가 바뀐 기술(\`updatedInChampions: true\`)은 수정된 수치 기준.
 - 성격은 25종 표준 성격 중 하나.
 
