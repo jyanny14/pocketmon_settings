@@ -13,6 +13,11 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- `web/assets/prompts.js:extractSlot` — 인라인 JSON 의 `learnableMoves` 필드 **제거**. 슬롯당 50~70개 × 6슬롯 × 7필드 = 6마리 파티 기준 ~60KB 낭비. 어차피 다른 포켓몬 추천하려면 pokemon.json 을 fetch 해야 하므로 현 파티의 learnable 만 따로 인라인할 이유 없다는 판단. **선택된 4기술** 은 slug 만 두면 모델이 이름/타입 모르니 상세 객체(type/category/power/accuracy/pp) 형태로 유지 (4×6=24개로 바이트 미미). 의존 템플릿 갱신:
+  - `moveset` — 기존 "인라인 learnableMoves 에서 고르세요" → "pokemon.json 의 moves 배열에서 고르고, moves.json 에서 수치 조회" 로 재작성.
+  - `fill` — moves.json URL 추가. "4기술 수치는 moves.json 에서 조회한 실제 값으로 표기" 명시.
+- `web/assets/prompts.js:currentUrls + substitute` — `{{MOVES_JSON_URL}}` 치환자 신규. 확인: 1마리 파티 렌더 DOM 에 `data/moves.json` 2회(moveset + fill) 주입.
+
 - `web/assets/prompts-templates.js` — swap / fill 템플릿이 Champions 미등록 포켓몬을 추천하던 문제 대응. `STRICT_POOL_RULES` 쉐어드 상수 신설 후 두 템플릿 최상단(SHARED_DISCLAIMER 다음)에 주입. 5개 규칙 핵심: (1) fetch 실패 시 답변 금지, (2) 186 species/267 forms 외부 제안 금지, (3) 모든 포켓몬 추천 시 `종족명 (slug: …)` 형식 강제, (4) 특성·도구·기술 모두 fetched 데이터 안에서만, (5) 답변 직전 자기 검증 후 없는 항목은 "찾지 못함" 으로 명시. 이전 짧은 "fetch 권장" 문구로는 모델이 사전지식 기반 hallucinate 하는 걸 막지 못해 제약을 리스트 형태로 재작성 + 반복.
 
 - `docs/TODO.md` 에 **T32. 랜딩 페이지 사용 방법 상세 섹션** 및 **T33. 후원 링크** 추가. T33 에는 Nintendo IP 리스크 재점검 필요 항목 명시(문의 시 즉시 삭제 + 환불 프로세스 README 반영).

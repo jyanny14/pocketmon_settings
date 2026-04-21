@@ -78,10 +78,14 @@ function extractSlot(slot) {
   const ability = state.abilityMap.get(slot.abilitySlug) || null;
   const item = slot.itemSlug ? state.itemMap.get(slot.itemSlug) || null : null;
 
-  const learnableMoves = (p.moves || [])
-    .map((slug) => state.moveMap.get(slug))
-    .filter(Boolean)
-    .map((m) => {
+  // Only the 4 configured moves are expanded inline. The full learnable pool
+  // is intentionally omitted — any template that needs it tells the AI to
+  // fetch pokemon.json + moves.json instead. Without this change the inline
+  // JSON ballooned to ~60KB for a 6-slot party.
+  const configuredMoves = (Array.isArray(slot.moves) ? slot.moves : [])
+    .map((s) => {
+      const m = state.moveMap.get(s);
+      if (!m) return { slug: s };
       const out = {
         slug: m.slug,
         nameKo: m.nameKo,
@@ -125,13 +129,9 @@ function extractSlot(slot) {
           effect: item.effect,
         }
       : null,
-    // Configured battle setup (T22a/b/c): what the trainer actually plans to
-    // run. AI should treat these as the active config; learnableMoves is only
-    // the pool the Pokémon can pull from.
-    moves: Array.isArray(slot.moves) ? slot.moves : [],
+    moves: configuredMoves,
     sps: Array.isArray(slot.sps) ? slot.sps : [0, 0, 0, 0, 0, 0],
     nature: slot.nature || null,
-    learnableMoves,
   };
 }
 
@@ -149,6 +149,7 @@ function currentUrls() {
     partyUrl: new URL(`./party.html${pq}`, location.href).href,
     llmsUrl: new URL("./llms.txt", location.href).href,
     pokemonJsonUrl: new URL("./data/pokemon.json", location.href).href,
+    movesJsonUrl: new URL("./data/moves.json", location.href).href,
   };
 }
 
@@ -161,6 +162,7 @@ function substitute(body, { includeData }) {
     .replaceAll("{{PARTY_URL}}", u.partyUrl)
     .replaceAll("{{LLMS_TXT_URL}}", u.llmsUrl)
     .replaceAll("{{POKEMON_JSON_URL}}", u.pokemonJsonUrl)
+    .replaceAll("{{MOVES_JSON_URL}}", u.movesJsonUrl)
     .replaceAll("{{PARTY_INLINE_JSON}}", inline)
     .replaceAll("{{FILLED_COUNT}}", String(filled))
     .replaceAll("{{EMPTY_COUNT}}", String(empty));

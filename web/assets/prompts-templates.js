@@ -81,14 +81,16 @@ ${STRICT_POOL_RULES}
 
 - 파티 URL: {{PARTY_URL}}
 - 사이트 가이드: {{LLMS_TXT_URL}}
+- **반드시 fetch**: {{POKEMON_JSON_URL}} (각 포켓몬의 learnable \`moves\` 배열), {{MOVES_JSON_URL}} (기술별 type / category / power / accuracy / pp / \`updatedInChampions\`).
 
 규칙:
-- 인라인 데이터의 \`learnableMoves\` 에 있는 기술만 쓸 수 있습니다(해당 폼이 배우지 못하는 기술은 제안 불가).
+- 각 포켓몬의 추천 기술은 **pokemon.json 에서 해당 포켓몬의 \`moves\` 배열에 있는 slug** 만 쓸 수 있습니다. 없는 기술은 제안 불가.
+- 각 기술의 수치는 **moves.json 에서 조회한 실제 값** 으로 표기 (사전 지식으로 지어내지 말 것).
 - STAB(자속) 1–2 + 커버리지 + 보조/회복/상태이상 균형을 고려.
 - 각 기술 옆에 타입·분류·위력·명중 을 괄호로 적어주세요 (예: \`Flamethrower (Fire / Special / 90 / 100)\`).
 - Champions 에서 수치가 바뀐 기술(\`updatedInChampions: true\`)은 **그 수정된 수치** 기준으로 평가해주세요.
 
-파티 인라인 데이터:
+파티 인라인 데이터 (선택된 기술·특성·도구 포함. learnable 풀은 pokemon.json 참조):
 \`\`\`json
 {{PARTY_INLINE_JSON}}
 \`\`\`
@@ -116,6 +118,7 @@ ${STRICT_POOL_RULES}
 - 파티 URL: {{PARTY_URL}}
 - 사이트 가이드: {{LLMS_TXT_URL}}
 - 후보 풀: {{POKEMON_JSON_URL}} (위 제약 1~5 참고)
+- 기술 상세(type / power / accuracy / pp): {{MOVES_JSON_URL}} — 추천할 4기술의 수치는 여기서 조회한 실제 값으로 표기하세요.
 
 분석 요청:
 1. 현재 파티({{FILLED_COUNT}}마리)의 약점·역할 공백을 한 줄로 진단.
