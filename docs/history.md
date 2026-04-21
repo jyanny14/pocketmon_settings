@@ -13,6 +13,13 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- **Champions 데이터 파일 다운로드 기능** 신규. URL fetch 가 제한되는 AI(기본 모드 ChatGPT·일부 Gemini 구성 등)에서 "fetch 실패로 답변 불가" 또는 사전 지식 기반 hallucination 이 자주 발생하던 문제 대응. 해결 방식: 사용자가 Champions 전체 데이터 파일을 받아 AI 채팅에 **첨부**하고, 카드 "프롬프트+데이터 복사" 로 프롬프트는 **따로 복사**. AI 는 첨부된 JSON 을 진실의 소스로 사용.
+  - `web/prompts.html` — 요약 칩 아래 `prompts-data-bundle` 박스 신규. 4단계 안내 리스트 + 다운로드 버튼.
+  - `web/assets/prompts.js` — `downloadDataBundle()` 신규. `/data/corpus.json` fetch 후 최상위에 `_readme` + `_generatedAt` + `_source` 필드를 prepend 한 래퍼를 Blob 으로 내보냄. 파일명 `champions-data-YYYYMMDD.json`. 실패 시 버튼 라벨에 에러 피드백. `isoDate()` 헬퍼 추가.
+  - `web/assets/i18n.js` — `prompts.dataBundleTitle` / `Step1..4` / `Button` / `Ready` / `Error` ko/en 8키.
+  - `web/assets/prompts-templates.js` — `STRICT_POOL_RULES` rule 1 최상단에 "첨부 파일 우선 (a-0)" 규칙 prepend. 나머지 우선순위(fetched JSON > HTML > 인라인) 유지. 검증 결과 6개 카드 모두 새 rule 주입 확인.
+  - 기존 자산 재사용: `web/data/corpus.json` (T9, 1,017,381 bytes) 그대로 활용, 별도 빌드 단계 불필요.
+
 - **정적 HTML 레퍼런스 페이지 신규**. Gemini 를 비롯한 일부 AI 가 Champions 미등록 포켓몬을 지어내는 증상 + 검색 엔진이 JS 로 렌더되는 기존 목록 페이지의 데이터를 못 읽는 문제 동시 대응. `web/reference/{index,pokemon,moves,abilities,items}.html` 생성 — 모든 데이터가 정적 HTML 로 baked in 되어 있어 JS 실행 없이도 Googlebot, ChatGPT/Claude/Gemini/Perplexity 의 "search the web" 결과 snippet, 일반 AI fetch 전부 데이터 접근 가능.
   - `scripts/build_reference_html.py` 신규 — `web/data/*.json` → HTML. 크기: pokemon 361KB (186 section × 폼테이블 + learnable moves details), moves 137KB (481-row table), abilities 72KB, items 34KB, index 4KB.
   - 각 섹션에 `id="slug"` anchor 박아 `/reference/pokemon.html#charizard` 같은 딥링크 가능.

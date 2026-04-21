@@ -30,6 +30,10 @@
     .prompt-card__preview-wrap[open] > .prompt-card__preview { margin-top: .5rem; }
     .prompts-intro { color: var(--text-muted); margin-bottom: 1.25rem; }
     .prompts-intro code { background: var(--bg); padding: 0 .3rem; border-radius: 4px; }
+    .prompts-data-bundle { margin: 0 0 1.25rem; padding: 1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-elevated); }
+    .prompts-data-bundle__title { margin: 0 0 .5rem; font-size: 1rem; }
+    .prompts-data-bundle__steps { margin: 0 0 .75rem; padding-left: 1.1rem; color: var(--text-muted); font-size: .9rem; line-height: 1.6; list-style: none; }
+    .prompts-data-bundle__steps li { margin: .15rem 0; }
   </style>
 </head>
 <body>
@@ -69,6 +73,17 @@
     </p>
 
     <section id="party-summary" class="prompts-summary" data-i18n-aria="prompts.summaryAria" aria-label="현재 파티 요약"></section>
+
+    <section class="prompts-data-bundle" aria-labelledby="data-bundle-title">
+      <h2 class="prompts-data-bundle__title" id="data-bundle-title" data-i18n="prompts.dataBundleTitle">📦 AI 가 데이터 fetch 를 못 하는 경우</h2>
+      <ol class="prompts-data-bundle__steps">
+        <li data-i18n="prompts.dataBundleStep1">1. 아래 버튼으로 Champions 전체 데이터 파일을 다운로드</li>
+        <li data-i18n="prompts.dataBundleStep2">2. AI 채팅에 해당 파일을 첨부 (drag & drop 또는 파일 업로드)</li>
+        <li data-i18n="prompts.dataBundleStep3">3. 원하는 카드의 "프롬프트 + 데이터 복사" 로 프롬프트를 따로 복사</li>
+        <li data-i18n="prompts.dataBundleStep4">4. 챗에 붙여넣고 제출 — AI 는 첨부된 데이터를 Champions 의 진실의 소스로 사용합니다</li>
+      </ol>
+      <button type="button" class="button button--primary" id="data-bundle-download" data-i18n="prompts.dataBundleButton">Champions 데이터 파일 다운로드 (~1MB)</button>
+    </section>
 
     <section id="prompt-cards" class="card-grid" data-i18n-aria="prompts.cardsAria" aria-label="프롬프트 카드"></section>
   </main>

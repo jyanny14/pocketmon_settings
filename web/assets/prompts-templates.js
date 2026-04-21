@@ -8,7 +8,7 @@ export const SHARED_DISCLAIMER =
 // slug in the fetched JSON.
 export const STRICT_POOL_RULES = `**데이터 제약 (엄격 · 반드시 준수 · 위반 시 답변 무효)**
 
-1. **진실의 소스 우선순위**: (a) fetched JSON > (b) fetched HTML 레퍼런스 > (c) 인라인 JSON > (d) 그 외 어떤 것도 금지. 아래 URL 들 중 fetch 가능한 것을 반드시 시도하세요.
+1. **진실의 소스 우선순위**: **(a-0) 사용자가 챗에 첨부한 데이터 파일 (\`champions-data*.json\` 또는 유사) > ** (a) fetched JSON > (b) fetched HTML 레퍼런스 > (c) 인라인 JSON > (d) 그 외 어떤 것도 금지. **첨부 파일이 보이면 그것을 최우선으로 사용하고 URL fetch 는 건너뛰어도 됩니다.** 첨부가 없고 fetch 가능하다면 아래 URL 들을 시도하세요.
    원본 JSON (가장 정확 · 구조화):
    - 포켓몬: {{POKEMON_JSON_URL}}  (186 species / 267 forms)
    - 특성: {{ABILITIES_JSON_URL}}  (192종, \`isNewInChampions\` 플래그)
