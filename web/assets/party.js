@@ -621,12 +621,15 @@ function makeSpInputs(index, form, slot) {
     }
     cell.appendChild(lab);
 
-    // Layout:
-    //   row 1: [label]  [   input   ]  — input gets most of the cell width
-    //   row 2: [«] [‹] [›] [»]         — 4 equal-width stepper buttons
-    // Pulling the input out of the stepper lets it use the full remaining
-    // row-1 width so 2-digit SP values (up to 32) stay clearly legible on
-    // narrow cards. Button order: « = 0, ‹ = -1, › = +1, » = budget-aware max.
+    // Layout (per cell, 3 rows, each full-width):
+    //   row 1: [label]                  — e.g. "스피드 ↑"
+    //   row 2: [      input      ]      — big centred number
+    //   row 3: [«] [‹] [›] [»]          — 4 equal-width stepper buttons
+    // Stacking vertically guarantees the label never competes with the
+    // input for horizontal space (earlier inline variants clipped longer
+    // KO labels like "스피드" on narrow cards). Button order:
+    //   « = 0, ‹ = -1, › = +1, » = budget-aware max (respects 66-point
+    //   party total, not just per-stat 32).
     const headroom = maxFor(i);
 
     const input = document.createElement("input");

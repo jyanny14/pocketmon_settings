@@ -2032,11 +2032,9 @@ select.field__input {
 }
 .slot-card__sp-cell {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  grid-template-rows: auto auto;
-  column-gap: .5rem;
-  row-gap: .3rem;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  row-gap: .2rem;
   padding: .3rem .4rem;
   border-radius: 4px;
   min-width: 0;
@@ -2049,7 +2047,7 @@ select.field__input {
   background: color-mix(in oklab, #ef4444 14%, transparent);
 }
 .slot-card__sp-label {
-  font-size: .78rem;
+  font-size: .72rem;
   color: var(--text-muted);
   font-weight: 600;
   grid-column: 1;
@@ -2058,6 +2056,8 @@ select.field__input {
   align-items: center;
   gap: .25rem;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .slot-card__sp-label-arrow {
   font-size: .85rem;
@@ -2066,12 +2066,13 @@ select.field__input {
 .slot-card__sp-label-arrow--up { color: #16a34a; }
 .slot-card__sp-label-arrow--down { color: #dc2626; }
 
-/* Row 1 (in cell grid): the numeric input, pulled out of the stepper
-   so it can use the full remaining row width. Large font + tabular-nums
-   keeps 2-digit values (up to 32) clearly legible on narrow cards. */
+/* 3-row cell layout — label, input, stepper each on their own row so
+   every element takes the full cell width regardless of label length.
+   (Some KO labels like "스피드" were getting clipped when they shared a
+   row with the input.) */
 .slot-card__sp-input {
-  grid-column: 2;
-  grid-row: 1;
+  grid-column: 1;
+  grid-row: 2;
   width: 100%;
   padding: .3rem .5rem;
   font-variant-numeric: tabular-nums;
@@ -2081,12 +2082,12 @@ select.field__input {
   min-width: 0;
 }
 
-/* Row 2 (in cell grid): the 4-button stepper. Spans both cell columns.
+/* Row 3: the 4-button stepper.
    ‹ / › step by 1, « / » jump to 0 / budget-aware max (respects the
    66-point party budget, not just the per-stat 32). */
 .slot-card__sp-stepper {
-  grid-column: 1 / -1;
-  grid-row: 2;
+  grid-column: 1;
+  grid-row: 3;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 3px;
