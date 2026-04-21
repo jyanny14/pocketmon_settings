@@ -14,6 +14,8 @@ const STRINGS = {
     "footer.source": "데이터 출처:",
     "footer.reference": "데이터 레퍼런스 (AI · 검색용)",
     "footer.disclosure": "비영리 팬 프로젝트 안내: 이 사이트는 Pokémon Champions 플레이어를 위한 비영리 팬 프로젝트입니다. Nintendo, Creatures Inc., GAME FREAK, The Pokémon Company 와 제휴·후원·공식 승인을 받은 서비스가 아닙니다.",
+    "footer.sponsor": "후원하기",
+    "footer.sponsorHint": "서버·도메인 비용 보전용 · 수익 목적 아님 · GitHub Sponsors 승인 대기 중이라 현재는 프로필로 연결됩니다",
     "footer.copyright": "Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc.",
     "reset": "초기화",
     "search": "검색",
@@ -298,6 +300,8 @@ const STRINGS = {
     "footer.source": "Data sources:",
     "footer.reference": "Data reference (AI · search)",
     "footer.disclosure": "Non-commercial fan project: this site is a non-commercial fan project for Pokémon Champions players. It is not affiliated with, sponsored by, or officially endorsed by Nintendo, Creatures Inc., GAME FREAK, or The Pokémon Company.",
+    "footer.sponsor": "Sponsor",
+    "footer.sponsorHint": "Supports server/domain costs · not for profit · GitHub Sponsors pending approval, so this temporarily links to the maintainer's GitHub profile",
     "footer.copyright": "Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc.",
     "reset": "Reset",
     "search": "Search",
@@ -593,6 +597,9 @@ export function applyTranslations() {
   }
   for (const el of document.querySelectorAll("[data-i18n-aria]")) {
     el.setAttribute("aria-label", t(el.dataset.i18nAria));
+  }
+  for (const el of document.querySelectorAll("[data-i18n-title]")) {
+    el.setAttribute("title", t(el.dataset.i18nTitle));
   }
 }
 

@@ -8,6 +8,11 @@
 
 ## 2026-04-21
 
+- T33 임시 착지 (GitHub Sponsors 승인 대기 중 · 옵션 B). 랜딩 개편 때 `.btn-sponsor` CSS 만 배치하고 HTML 은 빼뒀지만, 사용자가 "일단 GitHub 프로필로 임시 연결" 선택 → Sponsors 승인 시 URL 만 한 줄 교체하면 끝.
+  - `web/assets/i18n.js` — `footer.sponsor` ("후원하기" / "Sponsor"), `footer.sponsorHint` (긴 툴팁 문구, ko/en) 2키 추가. `applyTranslations` 에 `data-i18n-title` 지원 추가.
+  - `web/index.html`, `web/pokemon.html`, `web/items.html`, `web/abilities.html`, `web/moves.html`, `web/party.html`, `web/prompts.html`, `web/pokemon-detail.html` — footer 출처 `<p>` 다음에 `<a class="btn-sponsor">` (Octicons heart-fill SVG + 후원하기 라벨 + 임시 연결 설명 title 속성) 삽입. 현재 연결 URL: `https://github.com/jyanny14` (임시).
+  - Sponsors 승인 나면 href 만 8곳 교체 (또는 컴포넌트화 검토).
+
 - 프롬프트 규칙 3 오답 예시 교정 — 직전 커밋에서 `leftovers` 를 부재 예시로 넣었지만 실제로는 items.json 에 존재. 삭제하고 `assault-vest` · `life-orb` · `choice-band` · `choice-specs` · `rocky-helmet` · `heavy-duty-boots` · `eviolite` 로 부재 예시 교체 (전부 `grep "slug" items.json` 으로 실제 부재 확인). 반대로 존재하는 `leftovers` · `focus-sash` · `choice-scarf` 는 "확인 후 사용 가능" 예시로 추가 — AI 가 기계적으로 전부 배제하지 않도록.
 
 - AI 프롬프트 환각(hallucination) 추가 방어 — "불확실하면 사전지식 대신 데이터 파일 다운로드 요청". Gemini 가 Champions 에 없는 `assault-vest`(돌격조끼) 를 추천한 사례에 대한 대응.
