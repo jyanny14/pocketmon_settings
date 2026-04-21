@@ -168,6 +168,29 @@ type ObtainSource = "recruit" | "transfer" | "gift" | "default";
   - Hisuian → `["legends-arceus"]`
   - Paldean → `["scarlet","violet"]`
 
+#### 전투 중 자동 전환 폼은 `forms[]` 에서 제외한다
+
+`parse_pokemon_detail`(`scripts/parser.py`) 은 serebii 폼 테이블을 그대로 가져온 뒤, **특성으로 전투 중 자동 전환되는 폼은 명시적으로 필터링**한다. 이 폼들은 유저가 "이 폼을 파티에 넣겠다" 라고 선택하는 대상이 아니라 게임이 상태에 따라 자동으로 토글하는 것이므로, 파티 빌더 드롭다운·공유 URL·AI 프롬프트에 노출되면 오히려 혼동을 유발한다.
+
+적용 기준:
+- 등장 → 자동 변환이 **특성에 의해** 일어나고
+- 유저가 폼 선택·전환 UI 에서 능동적으로 결정할 수 없으며
+- 이 특성이 해당 포켓몬의 시그니처 기능인 경우
+
+현재 제외된 폼:
+
+| 포켓몬 | 폼 | 트리거 특성 |
+|---|---|---|
+| 킬가르도 (Aegislash) | Blade Forme | Stance Change (배틀스위치) |
+
+필터 위치: `parse_pokemon_detail()` 에서 Rotom 폼 확장 직후. 동일 패턴으로 신규 추가 가능.
+
+> **추후 같은 처리가 필요할 가능성이 있는 후보 (현재 `forms[]` 포함 여부는 데이터 실측 필요):**
+> 미믹큐(페이크페이스 → Busted Form), 누리공(무리 → School Form), 메테노(리미트실드 → Core Form), 웅비크(지렁이구슬 → Gulping/Gorging), 모르페코(허기스위치 → Hangry Mode), 빙큐보(아이스페이스 → Noice Face), 돌핀맨(마이티체인지 → Hero Form).
+> 사용자 피드백 또는 데이터 검증 시 위 표에 `slug` 단위로 추가하면 된다.
+
+공유 URL 호환성: 제외 이전에 인코딩된 URL (`rand(slug):Blade Forme:...`) 은 `findForm` 가 undefined 를 반환하며 `forms[0]` (base) 으로 자동 폴백된다.
+
 ---
 
 ## `items.json`
