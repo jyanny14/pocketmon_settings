@@ -201,8 +201,11 @@ function renderCards() {
         <button type="button" class="button button--primary" data-action="copy-full">${t("prompts.copyWithData")}</button>
         <button type="button" class="button" data-action="copy-url">${t("prompts.copyUrlOnly")}</button>
       </div>
-      <p class="prompt-card__hint">${t("prompts.previewHint")}</p>
-      <pre class="prompt-card__preview" aria-label="${t("prompts.previewAria")}"></pre>
+      <details class="prompt-card__preview-wrap">
+        <summary class="prompt-card__toggle">${t("prompts.previewToggle")}</summary>
+        <p class="prompt-card__hint">${t("prompts.previewHint")}</p>
+        <pre class="prompt-card__preview" aria-label="${t("prompts.previewAria")}"></pre>
+      </details>
     `;
     const pre = card.querySelector(".prompt-card__preview");
     const btnUrl = card.querySelector('[data-action="copy-url"]');

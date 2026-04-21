@@ -13,6 +13,11 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- prompts.html 5개 카드의 미리보기 영역을 `<details>` 로 감싸 **기본 접힌 상태** 로 전환. 카드 하나당 프롬프트 본문이 길어(> 1500자) 스크롤이 너무 길어진다는 피드백 반영. 복사 버튼 2개는 항상 노출, summary "미리보기 펼치기 / Show preview" 를 누르면 기존 preview + hint 가 펼쳐짐.
+  - `web/assets/prompts.js:renderCards` — preview 와 hint 를 `<details class="prompt-card__preview-wrap">` 로 묶고 `<summary class="prompt-card__toggle">` 추가.
+  - `web/assets/i18n.js` — `prompts.previewToggle` 키 ko/en 신규.
+  - `web/prompts.html <style>` — 커스텀 disclosure 스타일(▸ 마커 회전, details[open] 시 hint/preview 상단 여백).
+
 - `web/assets/prompts-templates.js:73` **moveset 템플릿 body 에 이스케이프 안 된 백틱** 이 섞여 있어(`\`Flamethrower (...)\``) 전체 모듈이 `Uncaught SyntaxError: Unexpected identifier 'Flamethrower'` 로 파싱 실패 → `prompts.js` 가 `TEMPLATES` 를 import 하지 못해 **prompts.html 에 카드 5개가 전부 렌더되지 않는 버그**. 해당 백틱을 `\`` 로 이스케이프. Chrome headless + `--enable-logging=stderr` 로 배포본 console 에러 수집해서 특정.
 
 ## 2026-04-20
