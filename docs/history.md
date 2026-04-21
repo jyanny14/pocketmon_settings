@@ -8,6 +8,19 @@
 
 ## 2026-04-21
 
+- 랜딩 페이지 대대적 개편 (T32a 통합 구현 — 외부 AI 콘텐츠·UI 리서치 결과 반영). 기능 나열 중심에서 "언제·왜 쓰는가" 중심 메시지로 전환하고, 시각 위계를 추가해 훑어보기 편한 구조로 재구성.
+  - `web/assets/style.css` — (1) `:root` 에 랜딩 전용 토큰 추가 (`--hero-start/end`, `--hero-text`, `--bg-alt`, `--bg-tint`) + 다크 모드 override. (2) Hero 를 그라디언트 배경 + SVG fractalNoise 오버레이 (`::before`, `mix-blend-mode: overlay`) 로 재작성. (3) `.when-to-use` 섹션 신규 — 카드 그리드와 구분되는 낮은 톤의 배경 + 3열 grid. (4) `.how-to` 재작성 — 원형 번호 배지 `.how-to__step-badge`, 혜택 한 줄 `.how-to__step-benefit`, 마이크로카피 `.how-to__step-meta`, 데스크톱(≥52rem) 에서 스텝 사이 CSS 화살표 커넥터(`::before`/`::after`). (5) `.card--highlight` 신규 — 파티 빌더 카드만 accent 보더 + 미세 그라디언트로 차별화. (6) `.site-footer__disclosure` 신규 — muted 배경 + accent 좌측 보더로 비영리/비공식 고지 강조. (7) `.btn-sponsor` 기반 CSS 미리 추가 (T33 승인 후 HTML 삽입만 하면 됨). (8) 전역 `@media (prefers-reduced-motion: reduce)` — 모든 transition/transform hover 모션 차단.
+  - `web/index.html` — Hero 부제를 "랭크전 들어가기 전, 내 파티의 약점·커버리지·기술 선택을 한 번에 점검하고 AI에게 바로 물어볼 질문까지 만들어보세요" 로 교체. CTA 버튼 순서 뒤집어 "파티 빌더 시작" 을 primary 로. `<section class="when-to-use">` 신규 — 3줄 시나리오 (랭크전 점검/규정 변화/공유 피드백) + 이모지 아이콘. 파티 빌더 카드에 `card--highlight` 클래스 부여하고 첫 번째로 이동. how-to 4단계 전면 재작성 — 제목을 행동 중심으로 바꾸고("후보를 빠르게 좁혀보기" 등), 혜택 한 줄 + 보조 설명 + 마이크로카피 3단 구조. Footer 에 `site-footer__disclosure` 삽입.
+  - `web/assets/i18n.js` — (ko/en 양쪽) `index.lead` 재작성, `index.when.{title,rank,meta,share}` 4키 신규, `index.howTo.step{1~4}.{title,benefit,body,meta}` 16키 재작성 (기존 8키 → 16키), `index.card.party.desc` 를 "AI에게 물어보기" 강조로 수정, `party.aiPrompts` / `party.aiPromptsDisabledHint` 리네임 ("AI 분석" → "AI에게 물어보기" / "AI analysis" → "Ask AI"), `prompts.title` / `prompts.lead` 리네임 ("AI 분석 프롬프트" → "AI에게 물어볼 질문 만들기" / "AI Analysis Prompts" → "Questions to ask an AI"), `footer.disclosure` 신규, `footer.copyright` 간략화.
+  - `web/party.html`, `web/prompts.html` — "AI 분석" fallback 텍스트 및 `<title>` / meta description 리네임.
+  - `web/pokemon.html`, `web/items.html`, `web/abilities.html`, `web/moves.html`, `web/pokemon-detail.html`, `web/party.html`, `web/prompts.html` — footer 에 `<p class="site-footer__disclosure">` 추가 (전 7개 페이지).
+  - **제외 (후속)**: FAQ 섹션, Before/After 비교 카피, AI 차별점 독립 배너, 모바일 카드 가로 스크롤 스냅 — 현 개편 반영 후 체감 효과 보고 착수.
+
+- `docs/TODO.md` — T32a 항목을 "리서치 수집 → 통합 구현 완료" 로 갱신. **T35 (더블배틀 VGC 파티 빌더)** 신규 추가 — 큰 작업(17~25시간 추정)으로 T35a~T35e 세부 분해. Champions 가 VGC 2026 공식 채택이라 수요 크고, moves.json target 필드 수집 / 배틀 모드 토글 / 파트너 시너지 heuristic / 더블 전용 AI 프롬프트 / i18n 확장 순으로 진행 예상.
+
+- `docs/TODO.md` — T32a (랜딩 페이지 외부 AI 컨설팅) 신규 항목 추가. T32 결과물이 기능 나열 위주라 설명이 sparse 하다는 피드백에 따라, 콘텐츠·구조 + UI 개선안을 외부 AI 에 의뢰할 질문안 2건을 세션에서 준비하고 TODO 에 진행 중 상태로 기록.
+- `docs/TODO.md` — T33 후원 링크 항목 업데이트. 플랫폼은 GitHub Sponsors 로 결정, 배치는 footer 한 줄, 문구 톤은 "서버 비용 보전·수익 목적 아님" 으로 Nintendo IP 리스크 회피. 현재 Sponsors 계정 승인 대기 중이라 ⏸️ 보류 상태로 전환, 승인 시점에 재개.
+
 - 파티 빌더의 "AI 분석" 버튼을 파티 슬롯이 1개 이상 채워졌을 때만 활성화되도록 변경. 빈 파티로 `prompts.html` 에 진입해도 이미 empty-state 안내가 있었지만, 애초에 진입을 막는 편이 UX가 명확하다는 판단.
   - `web/assets/party.js:writePartyToUrl` — `hasAny = state.party.some(...)` 조건으로 `href` 지정/제거 + `aria-disabled` 토글 + tooltip 갱신. `bindGlobalEvents` 에 `aria-disabled="true"` 일 때 기본 네비게이션을 막는 클릭 가드 추가.
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).

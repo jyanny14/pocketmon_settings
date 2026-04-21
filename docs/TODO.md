@@ -253,6 +253,43 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - `web/assets/i18n.js` 에 `index.howTo.{title,step1~4.{title,body}}` 총 9키 ko/en.
 - 스크린샷은 추후 별도 이슈로 분리.
 
+### T32a. 랜딩 페이지 외부 AI 컨설팅 (2026-04-21 리서치 수집 완료, 구현은 별도 작업으로 통합)
+- T32 결과물이 기능 나열 위주라 설명이 sparse 함. 외부 AI 에 콘텐츠·구조 + UI 두 가지 질문안을 보내 리서치 수집 완료.
+- 콘텐츠 방향: "무엇이 있나" → "언제 왜 쓰나" / "AI 분석" 은 "AI에게 물어보기" 로 리네임 / 4단계 카피는 "혜택 한 줄 + 보조 2문장" 구조 / Hero 아래 "이럴 때 유용합니다" 시나리오 섹션 추가.
+- UI 방향: Hero 그라디언트 + SVG 노이즈 / 4단계 번호 배지 + 커넥터 / 카드 그리드와 how-to 섹션 시각 차별화 / 모바일 375px 세로 전환 / prefers-reduced-motion 존중.
+- 통합 구현은 같은 세션에 반영 (CSS 토큰 확장 · Hero · when-to-use · how-to 재작성 · AI 리네임 · 카드 차별화 · 푸터 고지).
+- 후속: FAQ 섹션 / Before-After 카피 / AI 차별점 독립 배너 / 모바일 카드 가로 스크롤 — 현재 개편 반영 후 체감 효과 보고 착수.
+
+### T35. 더블배틀 (VGC) 파티 빌더 — **큰 작업 (17~25시간 추정)**
+- 현 파티 빌더는 싱글배틀(1대1) 기준. VGC 공식 포맷인 더블배틀(2대2) 지원 추가.
+- 배경: Champions 는 VGC 2026 공식 채택 → 싱글보다 더블 수요가 더 클 수 있음. 인접 툴(ChampTeams/VGC.tools/Pikalytics) 전부 더블 중심.
+- **달라지는 것**:
+  - 동시 출전 2마리 (리드) + 백 4마리 구조 표시
+  - 기술 타겟팅: 아군/적 구분 (Fake Out, Helping Hand, Follow Me 등 아군 지원 기술 개념)
+  - 스프레드 공격 (Earthquake, Heat Wave, Surf, Rock Slide 등) 0.75배 보정을 타입 커버리지 계산에 반영
+  - 파트너 시너지 체크 — redirect (Follow Me / Rage Powder), 날씨 setter+abuser, Trick Room setter+sweeper, Tailwind + speed attackers, Intimidate + physical attackers 등 핵심 조합
+  - 자속 커버리지 분석도 2마리 묶음 단위(리드 조합)로
+- **UI 변경**:
+  - 파티 빌더 상단에 배틀 모드 토글 (싱글/더블). 기본 싱글 유지(기존 파티 공유 URL 호환)
+  - 모드에 따라 슬롯 라벨 변화: 더블은 1~2번이 "리드", 3~6번이 "백"
+  - 더블 모드 전용 분석 패널 섹션: "리드 조합 평가", "스프레드 기술 커버리지", "시너지 경고"
+- **데이터 변경**:
+  - `moves.json` 에 target 필드 필요 (PokeAPI `target.name`: `selected-pokemon` / `all-opponents` / `all-other-pokemon` / `user-and-allies` / `ally` 등 14종)
+  - `scripts/fetch_moves.py` 확장 — target 수집 (PokeAPI 이미 보유, 재수집 가능)
+  - `party-encode.js` 스키마 확장 — `mode: "single"|"double"` 추가 (optional, 기본 single)
+- **AI 프롬프트**:
+  - 더블 모드일 때 별도 템플릿: "리드 조합 추천", "스프레드 커버리지 점검", "파트너 시너지 평가"
+  - 기존 6개 템플릿도 더블/싱글 문맥 구분 (STRICT_POOL_RULES 에 모드 정보 주입)
+- **작업 분해 (후속 세션 단위)**:
+  - T35a. `moves.json` 에 target 필드 수집 (4~6시간)
+  - T35b. 배틀 모드 토글 + UI 구조 (6~8시간)
+  - T35c. 파트너 시너지 heuristic 엔진 (4~6시간)
+  - T35d. AI 프롬프트 더블 전용 템플릿 + 기존 템플릿 모드 분기 (2~3시간)
+  - T35e. i18n ko/en 확장 (1~2시간)
+- **선행 조건**: 없음 (현 싱글 빌더 위에 모드 추가)
+- **후속 영향**: AI 프롬프트 품질 크게 향상 예상 — Champions 의 주 포맷을 정확히 다룸.
+- **주의**: 인접 툴들과 기능이 겹치게 되므로, "우리 사이트만의 차별점 (AI 질문 생성, 비영리, 한국어 지원)" 은 계속 유지.
+
 ### T34. 검색 노출 강화 (SEO · 2026-04-21 검색 인덱싱 허용 후속)
 - **Google Search Console 등록** — 소유권 검증 방식은 HTML 파일 배치(`web/google*.html`) 가 가장 단순. 등록 후 sitemap 제출하면 크롤링 속도 ↑.
 - **`web/sitemap.xml` 생성** — index / pokemon / items / abilities / moves / party 6개 URL 정적 파일로 충분. `prompts.html` 은 noindex 이므로 제외. `robots.txt` 맨 아래에 `Sitemap: https://.../sitemap.xml` 한 줄 추가.
@@ -260,12 +297,20 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - **`<title>` 태그 i18n 화** — 현재 하드코딩. 검색결과 스니펫 에서 노출되는 가장 중요한 텍스트.
 - 공수: Search Console 등록 10분 + sitemap 20분 + meta/title 수정 1시간.
 
-### T33. 후원 링크 (Buy Me a Coffee 류)
-- Nintendo IP 리스크 고려: "서버 비용 · 커피값 후원(개발자 수익 아님)" 문구로 순화.
-- 플랫폼 후보: Buy Me a Coffee / Ko-fi / **GitHub Sponsors** (상업 인상 가장 약함 — 권장) / 토스·카카오페이 송금.
-- 배치 후보: footer 한 줄 (덜 공격적) / hero 버튼 그룹 (가장 눈에 띔) / header 우상단 작은 아이콘.
-- 구현: 링크 하나만 삽입하면 되는 단순 작업. 링크 결정 + 문구 톤 조율이 본질.
-- 리스크 재점검: 권리자 문의 시 **즉시 삭제 + 수령 금액 환불** 프로세스 사전 결정 필요 (README 에 한 줄 추가).
+### T33. 후원 링크 (GitHub Sponsors) — ⏸️ 보류 (Sponsors 승인 대기)
+- 플랫폼 결정: **GitHub Sponsors**. 이유: 상업 인상 가장 약함(Nintendo IP 리스크 최소), 플랫폼 수수료 0, 프로필 연동. Buy Me a Coffee / Ko-fi 는 "커피" 메타포가 상업 플랫폼 인상을 더함. 토스·카카오페이는 글로벌 유저가 못 씀.
+- **현재 상태 (2026-04-21)**: 사용자 GitHub Sponsors 계정 신청 완료, **승인 대기 중**. 승인 나면 재개.
+- 배치 결정: footer 한 줄 (`site-footer` 내). hero/header 배치는 "돈 내라" 인상이 강해서 비권장.
+- 문구 톤 (Nintendo IP 리스크 회피):
+  - ko: "후원 (선택) — 서버·도메인 비용 보전용. 수익 목적 아님."
+  - en: "Support (optional) — covers server/domain costs. Not-for-profit."
+  - ❌ 금지어: "개발자 후원", "커피 한 잔", "donate to developer" (개인 수익 인상).
+- 구현 범위 (대략 30분, 승인 후):
+  - `web/index.html` + 전 페이지 footer 에 `<a class="footer-support">` 한 줄.
+  - `web/assets/style.css` `.footer-support` — muted 색, 작은 폰트.
+  - `web/assets/i18n.js` `footer.support` ko/en 2키.
+  - `README.md` 에 권리자 문의 시 **즉시 링크 삭제 + 수령 금액 전액 환불** 프로세스 한 문단 명시 (사전 방어).
+- 재개 트리거: GitHub Sponsors 승인 알림 수신 시.
 
 ### T31. 일본어(日) · 중국어(中) 다국어 지원
 번역팀이 없으므로 **전부 PokeAPI 에서 자동 수집**. 현재 ko/en 2언어 → ja + zh-Hans + zh-Hant 까지 확장.

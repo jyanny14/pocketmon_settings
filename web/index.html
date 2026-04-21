@@ -41,16 +41,40 @@
     <section class="hero">
       <h1 class="hero__title" data-i18n="index.title">Pokemon Champions 파티 빌더</h1>
       <p class="hero__lead" data-i18n="index.lead">
-        등장 포켓몬·도구·특성을 한곳에서 검색하고, 나만의 파티를 직접 구성해보세요.
+        랭크전 들어가기 전, 내 파티의 약점·커버리지·기술 선택을 한 번에 점검하고 AI에게 바로 물어볼 질문까지 만들어보세요.
       </p>
       <div class="hero__actions">
-        <a class="button button--primary" href="./pokemon.html" data-i18n="index.browsePokemon">포켓몬 둘러보기</a>
-        <a class="button" href="./party.html" data-i18n="index.startParty">파티 빌더 시작</a>
+        <a class="button button--primary" href="./party.html" data-i18n="index.startParty">파티 빌더 시작</a>
+        <a class="button" href="./pokemon.html" data-i18n="index.browsePokemon">포켓몬 둘러보기</a>
       </div>
+    </section>
+
+    <section class="when-to-use" aria-labelledby="when-to-use-heading">
+      <h2 class="when-to-use__title" id="when-to-use-heading" data-i18n="index.when.title">이럴 때 유용합니다</h2>
+      <ul class="when-to-use__list">
+        <li class="when-to-use__item">
+          <span class="when-to-use__icon" aria-hidden="true">⚔️</span>
+          <span data-i18n="index.when.rank">랭크전 전 마지막 점검 — 약점과 커버리지를 한눈에</span>
+        </li>
+        <li class="when-to-use__item">
+          <span class="when-to-use__icon" aria-hidden="true">🔄</span>
+          <span data-i18n="index.when.meta">규정이 바뀌어 새 후보를 찾아야 할 때</span>
+        </li>
+        <li class="when-to-use__item">
+          <span class="when-to-use__icon" aria-hidden="true">💬</span>
+          <span data-i18n="index.when.share">친구·커뮤니티와 파티를 공유하고 피드백 받을 때</span>
+        </li>
+      </ul>
     </section>
 
     <section class="card-grid" aria-labelledby="nav-heading">
       <h2 id="nav-heading" class="sr-only" data-i18n="index.sections">섹션</h2>
+
+      <a class="card card--highlight" href="./party.html">
+        <h3 class="card__title" data-i18n="index.card.party.title">파티 빌더</h3>
+        <p class="card__desc" data-i18n="index.card.party.desc">최대 6마리 파티 구성 · 종족값 합계 · 타입 커버리지</p>
+        <p class="card__meta" data-i18n="index.card.party.meta">6슬롯 · URL 공유</p>
+      </a>
 
       <a class="card" href="./pokemon.html">
         <h3 class="card__title" data-i18n="index.card.pokemon.title">포켓몬 목록</h3>
@@ -75,12 +99,6 @@
         <p class="card__desc" data-i18n="index.card.moves.desc">타입·분류·위력 필터 · Champions 재밸런스 표시</p>
         <p class="card__meta" data-stat="move-count">— 개</p>
       </a>
-
-      <a class="card" href="./party.html">
-        <h3 class="card__title" data-i18n="index.card.party.title">파티 빌더</h3>
-        <p class="card__desc" data-i18n="index.card.party.desc">최대 6마리 파티 구성 · 종족값 합계 · 타입 커버리지</p>
-        <p class="card__meta" data-i18n="index.card.party.meta">6슬롯 · URL 공유</p>
-      </a>
     </section>
 
     <section class="how-to" aria-labelledby="how-to-heading">
@@ -88,20 +106,32 @@
 
       <ol class="how-to__list">
         <li class="how-to__step">
-          <h3 class="how-to__step-title" data-i18n="index.howTo.step1.title">1. 데이터 둘러보기</h3>
-          <p data-i18n="index.howTo.step1.body">포켓몬 · 도구 · 특성 · 기술 네 탭에서 한/영 이름으로 검색. 타입 · 분류 · 종족값 · Champions 재밸런스 플래그로 필터링·정렬 가능.</p>
+          <span class="how-to__step-badge" aria-hidden="true">1</span>
+          <h3 class="how-to__step-title" data-i18n="index.howTo.step1.title">후보를 빠르게 좁혀보기</h3>
+          <p class="how-to__step-benefit" data-i18n="index.howTo.step1.benefit">지금 메타에서 쓸 만한 후보를, 막연함 없이 바로 찾으세요.</p>
+          <p class="how-to__step-body" data-i18n="index.howTo.step1.body">포켓몬·도구·특성·기술을 한/영 이름으로 검색하고, 타입·폼·분류·재밸런스 여부까지 한 번에 걸러봅니다. 넓은 후보군을 실전용 선택지로 빠르게 압축하는 시작점입니다.</p>
+          <p class="how-to__step-meta" data-i18n="index.howTo.step1.meta">한·영 이름 검색 · 타입/폼/분류 필터 · Champions 재밸런스 확인</p>
         </li>
         <li class="how-to__step">
-          <h3 class="how-to__step-title" data-i18n="index.howTo.step2.title">2. 파티 구성</h3>
-          <p data-i18n="index.howTo.step2.body">파티 빌더에서 슬롯을 클릭해 포켓몬·폼·특성·도구 선택. "상세 설정" 을 열면 4기술 · Stat Points 6스탯 · 성격까지 지정. 분석 패널에 종족값/실효 스탯 합계 · 타입 커버리지 · HOME 연동 게임 노출.</p>
+          <span class="how-to__step-badge" aria-hidden="true">2</span>
+          <h3 class="how-to__step-title" data-i18n="index.howTo.step2.title">아이디어를 실전 파티로 바꾸기</h3>
+          <p class="how-to__step-benefit" data-i18n="index.howTo.step2.benefit">생각만 하던 조합을, 바로 테스트할 수 있는 6슬롯 파티로 완성해보세요.</p>
+          <p class="how-to__step-body" data-i18n="index.howTo.step2.body">슬롯을 채우며 포켓몬·폼·특성·도구를 고르고, 상세 설정에서 4기술·Stat Points·성격까지 맞춥니다. 분석 패널이 종족값/실효 스탯 합계와 타입 커버리지를 한눈에 보여줍니다.</p>
+          <p class="how-to__step-meta" data-i18n="index.howTo.step2.meta">6슬롯 빌드 · 4기술 설정 · Stat Points · 실효 스탯/커버리지 확인</p>
         </li>
         <li class="how-to__step">
-          <h3 class="how-to__step-title" data-i18n="index.howTo.step3.title">3. 공유 · 저장</h3>
-          <p data-i18n="index.howTo.step3.body">"URL 복사" 로 어디서든 같은 구성 재현. "로컬 저장" 으로 브라우저에 여러 파티 보관. 헤더 좌상단 토글로 한/영 즉시 전환.</p>
+          <span class="how-to__step-badge" aria-hidden="true">3</span>
+          <h3 class="how-to__step-title" data-i18n="index.howTo.step3.title">버전별로 저장하고 바로 공유하기</h3>
+          <p class="how-to__step-benefit" data-i18n="index.howTo.step3.benefit">좋은 파티는 한 번 만들고 끝나지 않습니다.</p>
+          <p class="how-to__step-body" data-i18n="index.howTo.step3.body">URL 복사로 친구·디스코드·커뮤니티에 같은 구성을 그대로 공유하고, 로컬 저장으로 메타별 실험 버전을 여러 개 남겨두세요. 같은 파티를 언제든 이어서 수정하고 비교할 수 있습니다.</p>
+          <p class="how-to__step-meta" data-i18n="index.howTo.step3.meta">URL 재현 · 브라우저 로컬 저장 · 메타별 버전 관리</p>
         </li>
         <li class="how-to__step">
-          <h3 class="how-to__step-title" data-i18n="index.howTo.step4.title">4. AI 분석</h3>
-          <p data-i18n="index.howTo.step4.body">"AI 분석" 버튼 → 6개 템플릿 (약점 · 교체 · 기술 조합 · 남은 슬롯 · 상대 파티 · 자유 질문) 중 선택해 복사. URL fetch 를 못 하는 AI 는 Champions 데이터 파일을 함께 다운로드해 채팅에 첨부하고 프롬프트는 별도 복사.</p>
+          <span class="how-to__step-badge" aria-hidden="true">4</span>
+          <h3 class="how-to__step-title" data-i18n="index.howTo.step4.title">AI에게 바로 물어볼 질문 만들기</h3>
+          <p class="how-to__step-benefit" data-i18n="index.howTo.step4.benefit">"무슨 질문부터 해야 하지?" 라는 막힘을 없애줍니다.</p>
+          <p class="how-to__step-body" data-i18n="index.howTo.step4.body">약점·교체·기술 조합·남은 슬롯·상대 대응·자유 질문 중 원하는 분석 방향을 고르면, 내 파티에 맞는 프롬프트를 바로 복사할 수 있습니다. URL을 못 읽는 AI 는 데이터 파일을 함께 내려받아 첨부하면 됩니다.</p>
+          <p class="how-to__step-meta" data-i18n="index.howTo.step4.meta">6개 질문 템플릿 · 프롬프트 즉시 복사 · 데이터 파일 다운로드</p>
         </li>
       </ol>
     </section>
@@ -117,8 +147,11 @@
       <p>
         <a href="./reference/index.html" data-i18n="footer.reference">데이터 레퍼런스 (AI · 검색용)</a>
       </p>
+      <p class="site-footer__disclosure" data-i18n="footer.disclosure">
+        <strong>비영리 팬 프로젝트 안내:</strong> 이 사이트는 Pokémon Champions 플레이어를 위한 비영리 팬 프로젝트입니다. Nintendo, Creatures Inc., GAME FREAK, The Pokémon Company 와 제휴·후원·공식 승인을 받은 서비스가 아닙니다.
+      </p>
       <p class="muted" data-i18n="footer.copyright">
-        Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc. 본 사이트는 비영리 팬 프로젝트입니다.
+        Pokémon ©Nintendo · Creatures Inc. · GAME FREAK inc.
       </p>
     </div>
   </footer>
