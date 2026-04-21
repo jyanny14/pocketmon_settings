@@ -296,9 +296,59 @@ function renderSlot(index, slot) {
   stats.appendChild(totalLabel);
 
   const extras = makeExtendedSection(index, pokemon, form, slot);
+  const obtainBlock = makeObtainBlock(form, pokemon.obtain);
 
-  card.append(header, types, controls, stats, extras);
+  card.append(header, types, controls, stats, extras, obtainBlock);
   return card;
+}
+
+/**
+ * Where-to-find summary printed under the extras panel.
+ * Row 1: obtain method badges (recruit / transfer / gift / default).
+ * Row 2: HOME-connected games the current *form* can be transferred from
+ *        (e.g. Hisuian Typhlosion → only Legends: Arceus).
+ * Returns an empty wrapper if neither list has content so the card layout
+ * stays stable for placeholder slots.
+ */
+function makeObtainBlock(form, obtainList) {
+  const wrap = document.createElement("div");
+  wrap.className = "slot-card__obtain";
+
+  const methods = (obtainList || []).filter(Boolean);
+  if (methods.length) {
+    const row = document.createElement("div");
+    row.className = "slot-card__obtain-row";
+    const label = document.createElement("span");
+    label.className = "slot-card__obtain-label";
+    label.textContent = t("party.obtain.methods");
+    row.appendChild(label);
+    for (const o of methods) {
+      const badge = document.createElement("span");
+      badge.className = `obtain obtain--${o}`;
+      badge.textContent = obtainLabel(o);
+      row.appendChild(badge);
+    }
+    wrap.appendChild(row);
+  }
+
+  const games = Array.isArray(form?.sourceGames) ? form.sourceGames : [];
+  if (games.length) {
+    const row = document.createElement("div");
+    row.className = "slot-card__obtain-row";
+    const label = document.createElement("span");
+    label.className = "slot-card__obtain-label";
+    label.textContent = t("party.obtain.homeGames");
+    row.appendChild(label);
+    for (const g of [...games].sort()) {
+      const chip = document.createElement("span");
+      chip.className = "chip chip--game";
+      chip.textContent = gameLabel(g);
+      row.appendChild(chip);
+    }
+    wrap.appendChild(row);
+  }
+
+  return wrap;
 }
 
 function makeExtendedSection(index, pokemon, form, slot) {

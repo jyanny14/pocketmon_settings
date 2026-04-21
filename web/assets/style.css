@@ -1883,6 +1883,35 @@ select.field__input {
   border-top: 1px dashed var(--border);
   padding-top: var(--space-3);
 }
+
+/* Obtain summary appended under the extras panel. Each row is
+   [label] [ badge | chip ...] and wraps on narrow cards. */
+.slot-card__obtain {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.slot-card__obtain-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem;
+}
+.slot-card__obtain-label {
+  font-size: .75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-right: .1rem;
+}
+/* Slot-card obtain badges are a touch smaller than detail-page ones so
+   they don't dwarf the HOME-game chips that sit on the next row. */
+.slot-card__obtain .obtain {
+  font-size: .72rem;
+  padding: .1rem .4rem;
+}
 /* Tab strip inside the details — splits moves vs training so only one pane
    is visible at a time. Cuts expanded slot-card height roughly in half. */
 .slot-card__tabs {

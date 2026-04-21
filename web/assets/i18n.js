@@ -124,6 +124,8 @@ const STRINGS = {
     // Obtain
     "obtain.recruit": "리크루트", "obtain.transfer": "전송 전용",
     "obtain.gift": "선물", "obtain.default": "기본 보유",
+    "party.obtain.methods": "입수",
+    "party.obtain.homeGames": "HOME 연동",
 
     // Detail page
     "detail.loading": "불러오는 중…",
@@ -429,6 +431,8 @@ const STRINGS = {
 
     "obtain.recruit": "Recruit", "obtain.transfer": "Transfer Only",
     "obtain.gift": "Gift", "obtain.default": "Default",
+    "party.obtain.methods": "Obtain",
+    "party.obtain.homeGames": "HOME games",
 
     // Detail page
     "detail.loading": "Loading…",
