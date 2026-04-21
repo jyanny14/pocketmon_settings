@@ -70,7 +70,7 @@ export const TEMPLATES = [
 규칙:
 - 인라인 데이터의 \`learnableMoves\` 에 있는 기술만 쓸 수 있습니다(해당 폼이 배우지 못하는 기술은 제안 불가).
 - STAB(자속) 1–2 + 커버리지 + 보조/회복/상태이상 균형을 고려.
-- 각 기술 옆에 타입·분류·위력·명중 을 괄호로 적어주세요 (예: `Flamethrower (Fire / Special / 90 / 100)`).
+- 각 기술 옆에 타입·분류·위력·명중 을 괄호로 적어주세요 (예: \`Flamethrower (Fire / Special / 90 / 100)\`).
 - Champions 에서 수치가 바뀐 기술(\`updatedInChampions: true\`)은 **그 수정된 수치** 기준으로 평가해주세요.
 
 파티 인라인 데이터:

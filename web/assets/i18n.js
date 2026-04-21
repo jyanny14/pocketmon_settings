@@ -175,6 +175,7 @@ const STRINGS = {
     "party.analysis.noSingleGame": "단일 게임으로 전원 수집 불가 — 게임 조합 필요",
     "party.analysis.noDirectHome": "파티에 HOME 직접 연동 불가(예: Alolan 폼) 포켓몬이 있습니다.",
     "party.aiPrompts": "AI 분석",
+    "party.aiPromptsDisabledHint": "파티에 포켓몬을 1마리 이상 추가하면 사용할 수 있어요.",
     "empty": "결과가 없습니다.",
 
     // Prompts page (AI analysis)
@@ -418,6 +419,7 @@ const STRINGS = {
     "party.analysis.noSingleGame": "No single game covers the whole party — multiple games required",
     "party.analysis.noDirectHome": "Party contains Pokémon that cannot be HOME-transferred directly (e.g. Alolan forms).",
     "party.aiPrompts": "AI analysis",
+    "party.aiPromptsDisabledHint": "Add at least one Pokémon to the party to enable AI analysis.",
     "empty": "No results.",
 
     // Prompts page (AI analysis)

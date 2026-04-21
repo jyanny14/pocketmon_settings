@@ -6,6 +6,15 @@
 
 ---
 
+## 2026-04-21
+
+- 파티 빌더의 "AI 분석" 버튼을 파티 슬롯이 1개 이상 채워졌을 때만 활성화되도록 변경. 빈 파티로 `prompts.html` 에 진입해도 이미 empty-state 안내가 있었지만, 애초에 진입을 막는 편이 UX가 명확하다는 판단.
+  - `web/assets/party.js:writePartyToUrl` — `hasAny = state.party.some(...)` 조건으로 `href` 지정/제거 + `aria-disabled` 토글 + tooltip 갱신. `bindGlobalEvents` 에 `aria-disabled="true"` 일 때 기본 네비게이션을 막는 클릭 가드 추가.
+  - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
+  - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
+
+- `web/assets/prompts-templates.js:73` **moveset 템플릿 body 에 이스케이프 안 된 백틱** 이 섞여 있어(`\`Flamethrower (...)\``) 전체 모듈이 `Uncaught SyntaxError: Unexpected identifier 'Flamethrower'` 로 파싱 실패 → `prompts.js` 가 `TEMPLATES` 를 import 하지 못해 **prompts.html 에 카드 5개가 전부 렌더되지 않는 버그**. 해당 백틱을 `\`` 로 이스케이프. Chrome headless + `--enable-logging=stderr` 로 배포본 console 에러 수집해서 특정.
+
 ## 2026-04-20
 
 - `web/` 디렉토리에서 `python -m http.server 8000` 백그라운드 실행 (로컬 테스트용). http://localhost:8000/ 응답 200 확인.

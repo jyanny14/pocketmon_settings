@@ -113,6 +113,13 @@ function bindGlobalEvents() {
     state.pickerQuery = els.pickerSearch.value;
     renderPickerList();
   });
+  if (els.aiPrompts) {
+    els.aiPrompts.addEventListener("click", (e) => {
+      if (els.aiPrompts.getAttribute("aria-disabled") === "true") {
+        e.preventDefault();
+      }
+    });
+  }
 }
 
 // ── party slot rendering ──────────────────────────────────────
@@ -1028,11 +1035,20 @@ function decodeCtx() {
 function writePartyToUrl() {
   const encoded = encodeParty(state.party);
   const params = new URLSearchParams();
-  if (state.party.some((x) => x)) params.set("p", encoded);
+  const hasAny = state.party.some((x) => x);
+  if (hasAny) params.set("p", encoded);
   const qs = params.toString();
   history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
   if (els.aiPrompts) {
-    els.aiPrompts.href = `./prompts.html${qs ? `?${qs}` : ""}`;
+    if (hasAny) {
+      els.aiPrompts.href = `./prompts.html${qs ? `?${qs}` : ""}`;
+      els.aiPrompts.removeAttribute("aria-disabled");
+      els.aiPrompts.removeAttribute("title");
+    } else {
+      els.aiPrompts.removeAttribute("href");
+      els.aiPrompts.setAttribute("aria-disabled", "true");
+      els.aiPrompts.setAttribute("title", t("party.aiPromptsDisabledHint"));
+    }
   }
 }
 
