@@ -8,6 +8,8 @@
 
 ## 2026-04-21
 
+- 프롬프트 규칙 3 오답 예시 교정 — 직전 커밋에서 `leftovers` 를 부재 예시로 넣었지만 실제로는 items.json 에 존재. 삭제하고 `assault-vest` · `life-orb` · `choice-band` · `choice-specs` · `rocky-helmet` · `heavy-duty-boots` · `eviolite` 로 부재 예시 교체 (전부 `grep "slug" items.json` 으로 실제 부재 확인). 반대로 존재하는 `leftovers` · `focus-sash` · `choice-scarf` 는 "확인 후 사용 가능" 예시로 추가 — AI 가 기계적으로 전부 배제하지 않도록.
+
 - AI 프롬프트 환각(hallucination) 추가 방어 — "불확실하면 사전지식 대신 데이터 파일 다운로드 요청". Gemini 가 Champions 에 없는 `assault-vest`(돌격조끼) 를 추천한 사례에 대한 대응.
   - `web/assets/prompts-templates.js` — `STRICT_POOL_RULES_KO/EN` 규칙 2·3·6·7 재작성. (1) 규칙 2: fetch 불가 시 단순 "파일 붙여주세요" 가 아니라 "{{DATA_BUNDLE_PAGE_URL}} 에서 버튼으로 다운로드 → 첨부" 로 구체화. (2) 규칙 3: `assault-vest`·`leftovers` 를 구체 오답 예시로 명시. (3) 규칙 6: "불확실하면 제안 금지" 를 "불확실하면 유저에게 데이터 파일 다운로드 요청" 으로 확장, (a) 제공된 소스 내 유사 대체 찾기 / (b) 대체 불가 시 데이터 파일 요청 2단계 분기, "본편에 있으니 Champions 에도 있을 것" 추측을 명시 금지. (4) 규칙 7: 자기 검증 단계에서 "잘 모르겠다" 항목을 규칙 6 에 따라 데이터 파일 요청으로 교체하도록.
   - `web/assets/prompts.js` — `{{DATA_BUNDLE_PAGE_URL}}` 플레이스홀더 신규 (`./prompts.html` 로 치환). 모든 템플릿에서 이제 "데이터 파일 다운로드 페이지 URL" 을 AI 가 직접 유저에게 안내할 수 있음.
