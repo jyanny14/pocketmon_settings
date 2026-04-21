@@ -13,6 +13,14 @@
   - **SP 입력 UI 재구성 (3차 수정으로 3-행 구조 확정)**: 처음엔 `[−][input][+]` 사이에 input 이 끼어서 값이 안 보였고, 버튼을 양옆으로 모은 `[«][‹][input][›][»]` 도 좁은 카드에서는 2자리(최대 32) 가 여전히 눌렸음. 2행 (`[label] [input] / [« ‹ › »]`) 으로 바꿨더니 이번엔 **"스피드" 같은 긴 KO 라벨이 input 과 가로폭을 다퉈 잘리는** 현상 발견. 최종: **셀을 3-행 세로 스택** 으로 변경 → row 1 label (font .72rem, 이모지·방향 화살표 포함 한 줄), row 2 input (1.05rem / 700, 전체 폭), row 3 stepper 4-등분 버튼. 모든 요소가 가로 충돌 없이 각자 full-width 확보. `.slot-card__sp-cell` `grid-template-columns: minmax(0,1fr); grid-template-rows: auto auto auto; row-gap: .2rem`. CSS `grid-template-columns: 1.4rem 1.4rem minmax(0,1fr) 1.4rem 1.4rem` 로 input 가운데 배치, `.slot-card__sp-step--jump` 모디파이어로 `«`·`»` 는 `−/+` 보다 살짝 덜 강조(border/font-weight 차). 입력값 자체는 `font-size: .95rem; font-weight: 600` 로 키워 가독성 확보. `.slot-card__sp-quick` 스타일은 삭제.
   - 관련 파일: `web/assets/party.js`, `web/assets/style.css`.
 
+- AI 프롬프트 포켓몬 환각 방지 강화 — 사용자 피드백: Gemini 가 Champions 에 없는 포켓몬(우라오스·고릴타·무쇠유령 등 본편 VGC 강자 위주)을 환각으로 계속 만들어 냄. `web/assets/prompts-templates.js` `STRICT_POOL_RULES_KO` / `STRICT_POOL_RULES_EN` 양쪽 강화.
+  - 최상단에 **CORE RULE 배너** 신규 ("포켓몬은 pokemon.json 안에서만 언급 · 매칭 불가 = 언급 금지 · 대체/상상 금지"). ⚠️ 이모지 + bold 로 시각 강조.
+  - rule 3 에 **실제 부재 포켓몬 예시 11건** 추가 (urshifu·rillaboom·salamence·metagross·iron-hands·iron-valiant·flutter-mane·roaring-moon·chi-yu·great-tusk·ferrothorn). 반례로 Champions 에 **있는** 포켓몬(garchomp·dragapult·hydreigon·tyranitar·kingambit·tinkaton) 도 같이 제시해 "이건 되는데 저건 안 됨" 경계선 제공.
+  - rule 4 에 "slug 을 지어내지 마세요 — 실제 소스에서 찾아본 뒤에만 적으세요" 한 줄 추가.
+  - rule 6 금지 프레임에 "VGC 에서 강력하니 당연히 있을 것" 케이스 추가.
+  - rule 7 (자기 검증) 을 **2-단계 체크리스트** 로 재구성: (a) 포켓몬 검증 우선, (b) 특성·도구·기술. 포켓몬 매칭 실패 시 "해당 문단 전체 삭제" 를 명시. 끝에 "확신 없는 이름을 하나라도 내보내면 전체 답변이 무효" 최종 경고.
+  - TEMPLATES 전 본문은 모두 `${STRICT_POOL_RULES_*}` 참조라 변경 없음 (39개 템플릿 전부 자동 반영).
+
 - 파티 슬롯 카드에 "입수 + HOME 연동 게임" 섹션 추가 — 파티를 짤 때 "이 포켓몬 어디서 얻지?" 를 카드를 떠나지 않고 즉시 확인할 수 있게. `web/assets/party.js` `makeObtainBlock(form, obtainList)` 신규: row 1 = obtain 뱃지(리크루트/전송/선물/기본), row 2 = 해당 **폼의** `sourceGames` 칩(히스이 타입로스 → Legends: Arceus 만 뜨는 식). 카드 조립 순서 `header → types → controls → stats → extras(상세 설정) → obtainBlock` 로 상세 설정 바로 밑에 배치. `.slot-card__obtain` · `.slot-card__obtain-row` · `.slot-card__obtain-label` 스타일 + `party.obtain.methods` · `party.obtain.homeGames` i18n ko/en 2키. 슬롯 카드용 `.obtain` 뱃지는 detail 페이지보다 살짝 작게 (`font-size: .72rem`).
 
 - `docs/schema.md` 에 "전투 중 자동 전환 폼은 `forms[]` 에서 제외한다" 섹션 신규 — `parse_pokemon_detail` 의 필터 정책(적용 기준, 현재 제외 목록, 향후 후보, 공유 URL 폴백 동작) 을 표와 함께 문서화. 비슷한 처리가 필요한 포켓몬(미믹큐·누리공·메테노·웅비크·모르페코·빙큐보·돌핀맨) 을 "추후 후보" 로 명시해 다음 번에 규칙을 잊지 않도록 고정.
