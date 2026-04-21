@@ -13,6 +13,8 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- `STRICT_POOL_RULES` 를 **6개 템플릿 모두**에 prepend 적용. 이전엔 swap / fill 2개에만 붙어 있어서 weakness("도구/특성 조정" 제안), counter("스위치 담당자" 추천), moveset(기술 세팅), free(자유 질문 중 뭐든 추천) 에서 AI 가 Champions 외 항목을 들고 올 여지가 있었음. 쉐어드 rules 에 `{{ITEMS_JSON_URL}}` / `{{ABILITIES_JSON_URL}}` 까지 추가해 "포켓몬/특성/도구/기술 모두 fetched 데이터 안에서만" 을 한 번에 강제. 규칙 본문도 포켓몬 한정에서 4종 항목 전부로 일반화, slug 병기 예시도 4개 카테고리별로 수록. 검증 결과: 6개 카드 각각 제약 1회 주입, 모든 placeholder 해결, pokemon/items/abilities/moves URL 정상 삽입.
+
 - `web/assets/prompts.js:extractSlot` — 인라인 JSON 의 `learnableMoves` 필드 **제거**. 슬롯당 50~70개 × 6슬롯 × 7필드 = 6마리 파티 기준 ~60KB 낭비. 어차피 다른 포켓몬 추천하려면 pokemon.json 을 fetch 해야 하므로 현 파티의 learnable 만 따로 인라인할 이유 없다는 판단. **선택된 4기술** 은 slug 만 두면 모델이 이름/타입 모르니 상세 객체(type/category/power/accuracy/pp) 형태로 유지 (4×6=24개로 바이트 미미). 의존 템플릿 갱신:
   - `moveset` — 기존 "인라인 learnableMoves 에서 고르세요" → "pokemon.json 의 moves 배열에서 고르고, moves.json 에서 수치 조회" 로 재작성.
   - `fill` — moves.json URL 추가. "4기술 수치는 moves.json 에서 조회한 실제 값으로 표기" 명시.

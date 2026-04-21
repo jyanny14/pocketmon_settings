@@ -150,6 +150,8 @@ function currentUrls() {
     llmsUrl: new URL("./llms.txt", location.href).href,
     pokemonJsonUrl: new URL("./data/pokemon.json", location.href).href,
     movesJsonUrl: new URL("./data/moves.json", location.href).href,
+    itemsJsonUrl: new URL("./data/items.json", location.href).href,
+    abilitiesJsonUrl: new URL("./data/abilities.json", location.href).href,
   };
 }
 
@@ -163,6 +165,8 @@ function substitute(body, { includeData }) {
     .replaceAll("{{LLMS_TXT_URL}}", u.llmsUrl)
     .replaceAll("{{POKEMON_JSON_URL}}", u.pokemonJsonUrl)
     .replaceAll("{{MOVES_JSON_URL}}", u.movesJsonUrl)
+    .replaceAll("{{ITEMS_JSON_URL}}", u.itemsJsonUrl)
+    .replaceAll("{{ABILITIES_JSON_URL}}", u.abilitiesJsonUrl)
     .replaceAll("{{PARTY_INLINE_JSON}}", inline)
     .replaceAll("{{FILLED_COUNT}}", String(filled))
     .replaceAll("{{EMPTY_COUNT}}", String(empty));

@@ -1,17 +1,23 @@
 export const SHARED_DISCLAIMER =
   "이 데이터는 **Pokémon Champions** 기준입니다. 본편 시리즈(Scarlet/Violet 등)와 일부 밸런스·특성·아이템이 다릅니다. 제공된 JSON/URL 을 진실의 소스로 삼고, 사전지식과 충돌하면 제공된 데이터를 따라주세요. Champions 고유 변경점 플래그: `abilities.json[].isNewInChampions`, `moves.json[].updatedInChampions`.";
 
-// Strict pool constraint — prepended to templates that ask AI to recommend
-// Pokémon (swap/fill). The wording is intentionally blunt and redundant
-// because models keep hallucinating SV/Z-A species that Champions does not
-// contain.
+// Strict pool constraint — prepended to every template. The wording is
+// intentionally blunt and redundant because models keep hallucinating SV/Z-A
+// species, fake abilities, and non-existent items. This applies broadly:
+// any recommendation (Pokémon / ability / item / move) must trace back to a
+// slug in the fetched JSON.
 export const STRICT_POOL_RULES = `**데이터 제약 (엄격 · 반드시 준수)**
 
-1. 답변 전에 먼저 {{POKEMON_JSON_URL}} 을 fetch 하세요. fetch 에 실패하면 답변하지 말고 "pokemon.json fetch 실패로 답변 불가" 라고만 응답하세요. **사전 지식으로 답을 만들지 마세요.**
-2. Pokémon Champions 에 존재하는 포켓몬은 **pokemon.json 배열의 186 species / 267 forms 가 전부입니다.** SV 후반부 미추가 종, Legends: Z-A 신규 종 일부, 그 외 어떤 포켓몬도 이 목록에 없으면 Champions 에 존재하지 않습니다. 제안 금지.
-3. 추천하는 모든 포켓몬은 \`종족명 (slug: {pokemon.json 의 정확한 slug})\` 형식으로 표기하세요. 예: \`아머까오 (slug: corviknight)\`. 이 형식이 없거나 slug 가 틀리면 규칙 위반입니다.
-4. 특성·도구·기술도 동일: 추천 특성은 해당 포켓몬 폼의 \`abilities\` 배열, 추천 도구는 items.json, 추천 기술은 해당 포켓몬의 \`moves\` 배열에 **실제로 존재해야** 합니다. 존재하지 않으면 제안 불가.
-5. **자기 검증**: 최종 답변 직전, 본인이 제안한 모든 slug(포켓몬·특성·도구·기술)가 fetch 한 데이터에 실제로 있는지 한 번 더 확인하세요. 없는 항목은 조용히 대체하지 말고 **"해당 조건을 만족하는 Champions 포켓몬을 찾지 못했다"** 라고 명시하세요.`;
+1. 답변 전에 필요한 데이터를 **반드시 fetch** 하세요. 사전 지식으로 Champions 에 없는 걸 지어내지 마세요.
+   - 포켓몬 후보: {{POKEMON_JSON_URL}}  (186 species / 267 forms)
+   - 특성 상세: {{ABILITIES_JSON_URL}}  (192종, \`isNewInChampions\` 플래그 포함)
+   - 도구 상세: {{ITEMS_JSON_URL}}  (117종)
+   - 기술 상세: {{MOVES_JSON_URL}}  (481종, \`updatedInChampions\` 수치 포함)
+   fetch 실패 시 답변하지 말고 "데이터 fetch 실패로 답변 불가" 라고만 응답하세요.
+2. Pokémon Champions 에 존재하는 전부는 위 JSON 배열 안의 항목입니다. SV 후반부 미추가 종, Legends: Z-A 신규 종 일부, 그 외 어떤 포켓몬/특성/도구/기술도 이 목록에 없으면 Champions 에 존재하지 않습니다. 제안 금지.
+3. 추천하는 모든 항목에 **정확한 slug 를 병기** 하세요. 예: \`아머까오 (slug: corviknight)\` · \`옹골참 (slug: sturdy)\` · \`생명의 구슬 (slug: life-orb)\` · \`지진 (slug: earthquake)\`. 형식이 없거나 slug 가 틀리면 규칙 위반입니다.
+4. 특성·기술을 특정 포켓몬에 붙일 때는 해당 폼의 \`abilities\` / \`moves\` 배열에 **실제로 존재해야** 합니다. (예: 폼 외 특성·비배움 기술 제안 금지.)
+5. **자기 검증**: 최종 답변 직전, 본인이 제안한 모든 slug 가 fetched 데이터에 실제로 있는지 한 번 더 확인하세요. 없는 항목은 조용히 대체하지 말고 "해당 조건을 만족하는 항목을 Champions 데이터에서 찾지 못했다" 라고 명시하세요.`;
 
 export const TEMPLATES = [
   {
@@ -20,6 +26,10 @@ export const TEMPLATES = [
     descKey: "prompts.tmpl.weakness.desc",
     requiresPokemonPool: false,
     body: `${SHARED_DISCLAIMER}
+
+${STRICT_POOL_RULES}
+
+---
 
 아래 파티의 **방어적 약점**을 분석해주세요.
 
@@ -30,7 +40,7 @@ export const TEMPLATES = [
 1. 6마리 전부에게 2배 이상 대미지를 주는 공격 타입이 있는지 (있다면 그 타입과 몇 마리가 약한지).
 2. 파티 전체가 내성(0.5배 이하)을 공유하는 타입 / 그 반대로 누구도 내성이 없는 타입.
 3. 위험한 약점을 가장 잘 메울 수 있는 **현 파티 내의 스위칭 전략** 제안.
-4. 교체가 아니라 **도구/특성 조정**으로 완화할 수 있는 부분이 있다면 함께.
+4. 교체가 아니라 **도구/특성 조정**으로 완화할 수 있는 부분이 있다면 함께 (제안하는 도구·특성은 items.json / abilities.json 에 실존 + 해당 폼이 쓸 수 있는 것만).
 
 파티 구성 (참고용 인라인 데이터):
 \`\`\`json
@@ -77,13 +87,16 @@ ${STRICT_POOL_RULES}
     requiresPokemonPool: false,
     body: `${SHARED_DISCLAIMER}
 
+${STRICT_POOL_RULES}
+
+---
+
 아래 파티 **각 포켓몬의 4기술 세팅**을 제안해주세요.
 
 - 파티 URL: {{PARTY_URL}}
 - 사이트 가이드: {{LLMS_TXT_URL}}
-- **반드시 fetch**: {{POKEMON_JSON_URL}} (각 포켓몬의 learnable \`moves\` 배열), {{MOVES_JSON_URL}} (기술별 type / category / power / accuracy / pp / \`updatedInChampions\`).
 
-규칙:
+규칙 (위 제약 1~5 와 중복되지만 재강조):
 - 각 포켓몬의 추천 기술은 **pokemon.json 에서 해당 포켓몬의 \`moves\` 배열에 있는 slug** 만 쓸 수 있습니다. 없는 기술은 제안 불가.
 - 각 기술의 수치는 **moves.json 에서 조회한 실제 값** 으로 표기 (사전 지식으로 지어내지 말 것).
 - STAB(자속) 1–2 + 커버리지 + 보조/회복/상태이상 균형을 고려.
@@ -148,6 +161,10 @@ ${STRICT_POOL_RULES}
     requiresPokemonPool: false,
     body: `${SHARED_DISCLAIMER}
 
+${STRICT_POOL_RULES}
+
+---
+
 상대 파티에 맞춘 **대응 전략**을 짜주세요.
 
 - 내 파티 URL: {{PARTY_URL}}
@@ -157,7 +174,7 @@ ${STRICT_POOL_RULES}
 
 분석 요청:
 1. 상대 6마리 중 내 파티에 **가장 위험한 2마리**를 꼽고 이유.
-2. 각 위험 대상을 상대할 내 **1순위·2순위 담당자**와 기술.
+2. 각 위험 대상을 상대할 내 **1순위·2순위 담당자**와 기술 (내 파티 인라인 데이터 안에서만, moves 배열에 있는 기술만).
 3. 내 파티가 **먼저 내밀면 안 되는 포켓몬** 과 그 이유.
 4. 선봉으로 추천하는 포켓몬 한 마리 + 첫 턴 플랜.
 
@@ -166,7 +183,7 @@ ${STRICT_POOL_RULES}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 
-(상대 파티 데이터가 필요하면 위 OPPONENT_URL 을 fetch 하거나, 내가 JSON 으로 같이 붙여드릴게요.)
+(상대 파티 데이터가 필요하면 위 OPPONENT_URL 을 fetch 하거나, 내가 JSON 으로 같이 붙여드릴게요. 상대 포켓몬도 pokemon.json 에 존재하는 종만 언급하세요.)
 `,
   },
 
@@ -176,6 +193,10 @@ ${STRICT_POOL_RULES}
     descKey: "prompts.tmpl.free.desc",
     requiresPokemonPool: false,
     body: `${SHARED_DISCLAIMER}
+
+${STRICT_POOL_RULES}
+
+---
 
 아래는 제 Pokémon Champions 파티입니다. 이 컨텍스트 위에서 질문드릴게요.
 
