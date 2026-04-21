@@ -317,7 +317,12 @@ function buildExtraSummary(slot) {
   const movesN = (slot.moves || []).length;
   const spTotal = (slot.sps || []).reduce((a, b) => a + b, 0);
   const natureSlug = slot.nature;
-  const natureLabel = natureSlug ? t(`nature.${natureSlug}`) : "—";
+  let natureLabel = "—";
+  if (natureSlug) {
+    natureLabel = isNeutralNatureSlug(natureSlug)
+      ? t("party.nature.neutral")
+      : t(`nature.${natureSlug}`);
+  }
   return `${t("party.extras.title")} · ${t("party.moves.title")} ${movesN}/4 · SP ${spTotal}/${SP_TOTAL_MAX} · ${t("party.nature.title")} ${natureLabel}`;
 }
 
@@ -364,6 +369,20 @@ function buildTrainingBlock(index, form, slot) {
   return block;
 }
 
+// The game has 5 "neutral" natures (Hardy / Docile / Serious / Bashful /
+// Quirky) that all produce identical 1.0× modifiers. Showing 5 separate
+// options in the dropdown confused users, so we collapse them into one
+// "neutral" entry and store Hardy as the canonical value. Shared-URL back
+// compat is preserved — decoding any of the 5 slugs still works; they just
+// display as "neutral" in the UI.
+const CANONICAL_NEUTRAL_NATURE = "hardy";
+
+function isNeutralNatureSlug(slug) {
+  if (!slug) return false;
+  const n = state.natures.find((x) => x.slug === slug);
+  return !!n && !n.increased && !n.decreased;
+}
+
 function makeNatureSelect(index, slot) {
   const wrap = document.createElement("label");
   wrap.className = "slot-card__field";
@@ -378,25 +397,35 @@ function makeNatureSelect(index, slot) {
   const none = document.createElement("option");
   none.value = "";
   none.textContent = t("party.nature.none");
-  if (!slot.nature) none.selected = true;
   sel.appendChild(none);
 
-  const natures = [...state.natures].sort((a, b) =>
+  const currentIsNeutral = isNeutralNatureSlug(slot.nature);
+
+  // Single collapsed "neutral" entry — represents all 5 neutrals.
+  const neutralOpt = document.createElement("option");
+  neutralOpt.value = CANONICAL_NEUTRAL_NATURE;
+  neutralOpt.textContent = t("party.nature.neutral");
+  neutralOpt.title = t("party.nature.neutralHint");
+  if (currentIsNeutral) neutralOpt.selected = true;
+  sel.appendChild(neutralOpt);
+
+  // 20 non-neutral natures, sorted by display name.
+  const nonNeutral = state.natures.filter((n) => n.increased && n.decreased);
+  nonNeutral.sort((a, b) =>
     (a.nameKo || a.nameEn).localeCompare(b.nameKo || b.nameEn, getLang() === "ko" ? "ko" : "en"),
   );
-  for (const n of natures) {
+  for (const n of nonNeutral) {
     const opt = document.createElement("option");
     opt.value = n.slug;
     const displayName = getLang() === "ko" ? (n.nameKo || n.nameEn) : n.nameEn;
-    const modTag =
-      n.increased && n.decreased
-        ? ` (+${statShortLabel(n.increased)} / −${statShortLabel(n.decreased)})`
-        : ` (${t("party.nature.neutral")})`;
+    const modTag = ` (+${statShortLabel(n.increased)} / −${statShortLabel(n.decreased)})`;
     opt.textContent = `${displayName}${modTag}`;
     opt.title = modTag.trim();
     if (n.slug === slot.nature) opt.selected = true;
     sel.appendChild(opt);
   }
+
+  if (!slot.nature) none.selected = true;
 
   sel.addEventListener("change", () => {
     const current = state.party[index];

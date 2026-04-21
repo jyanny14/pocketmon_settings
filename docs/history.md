@@ -21,6 +21,11 @@
   - 생략: T35a (`moves.json` target 필드 수집 via PokeAPI). AI 가 "Earthquake 는 전체" 같은 상식을 갖고 있어서 첫 패스에 불필요. 정확도 향상 필요 시 후속 작업.
   - 스모크: `TEMPLATES.length === 9`, 6개 both(4 키 전부), 3개 double(2 키), HTML/CSS 정상 serve. 실사용 테스트는 사용자 브라우저에서.
 
+- 파티 빌더 — 성격 드롭다운의 중립 5종을 **"중립" 한 항목**으로 통합. 유저 혼란 해결 ("왜 중립이 5개나?"). 게임 규칙상 Hardy/Docile/Serious/Bashful/Quirky 5종은 전 스탯 1.0× 로 기계적 효과가 모두 동일한데, 드롭다운에서 5개 따로 노출되던 상태였음.
+  - `web/assets/party.js` — `CANONICAL_NEUTRAL_NATURE = "hardy"` 상수 + `isNeutralNatureSlug(slug)` 헬퍼 신규. `makeNatureSelect` 재작성: 중립 5종 제외 20종을 알파벳 정렬 + 앞에 단일 "중립" 엔트리 추가. 유저가 중립 선택하면 `hardy` 로 저장. 기존 URL 에 `bashful/docile/serious/quirky` 가 있어도 디코드는 수용 (back-compat), 렌더에서만 "중립" 으로 합쳐 표시. `buildExtraSummary` 도 중립 slug 감지해 "중립" 레이블.
+  - `web/assets/i18n.js` — `party.nature.neutralHint` ko/en 신규 (옵션 `title` 툴팁용, 5종 동일 효과 설명).
+  - 효과: 성격 드롭다운 항목 25 → 21 (+ "지정 없음", "중립", 20 non-neutral). 스크롤 감소, 유저 의사결정 부담 감소.
+
 - 파티 빌더 Phase 2 — 기술 피커를 `<select>` 에서 **모달 방식** 으로 교체. 포켓몬 피커와 동일한 `<dialog>` 패턴·CSS 재활용. 기술 80+ 개를 검색 + 타입 + 분류 필터로 좁힐 수 있음.
   - `web/party.html` — `<dialog id="move-picker-modal">` 신규. 포켓몬 피커와 동일 구조 (`picker-modal__head` 에 검색·타입·분류 chips·닫기 버튼, `picker-modal__list` 에 스크롤 리스트). 24슬롯 공용 1개 인스턴스.
   - `web/assets/party.js` — `state.movePickerTarget` (`{slotIndex, slotPos}`) · `movePickerQuery` · `movePickerTypes` · `movePickerCats` 필드 신규. `makeMoveSelect` 를 `<button class="slot-card__move-btn">` 반환으로 재작성 — 선택된 기술명 + 타입 + 분류 표시, empty 시 placeholder. 클릭 시 `openMovePicker(slotIndex, slotPos)`. 신규 함수: `openMovePicker` · `closeMovePicker` · `renderMovePickerChips` (타입 18종 + 분류 3종 chips 1회 빌드·재사용) · `renderMovePickerList` (검색/타입/분류/다른 슬롯 선택된 기술 제외 필터 + `picker-row--move` 4열 그리드: 이름/타입/분류 뱃지/위력·명중) · `pickMove` (모달 닫고 state 반영). 필터는 모달 연닫기를 가로질러 유지 (여러 슬롯에 같은 필터 반복 적용 편의).
