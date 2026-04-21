@@ -12017,7 +12017,24 @@
       "uproar",
       "voltswitch",
       "will-o-wisp"
-    ]
+    ],
+    "formMoves": {
+      "Heat Rotom": [
+        "overheat"
+      ],
+      "Wash Rotom": [
+        "hydropump"
+      ],
+      "Frost Rotom": [
+        "blizzard"
+      ],
+      "Fan Rotom": [
+        "airslash"
+      ],
+      "Mow Rotom": [
+        "leafstorm"
+      ]
+    }
   },
   {
     "number": "0497",

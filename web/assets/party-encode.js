@@ -1,4 +1,4 @@
-import { findForm } from "./app.js";
+import { findForm, learnableMoveSlugsForForm } from "./app.js";
 
 export const SLOT_COUNT = 6;
 export const SP_TOTAL_MAX = 66;
@@ -69,7 +69,7 @@ export function stringToSlot(str, ctx) {
 
   const form = findForm(p, formName) || p.forms[0];
 
-  const learnable = new Set(p.moves || []);
+  const learnable = new Set(learnableMoveSlugsForForm(p, form?.name));
   const moves = movesStr
     ? movesStr
         .split(",")

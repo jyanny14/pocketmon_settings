@@ -11,6 +11,7 @@ import {
   abilityGameText,
   moveDisplayName,
   moveCategoryLabel,
+  allLearnableMoveSlugs,
   getLang,
   t,
 } from "./app.js";
@@ -127,8 +128,9 @@ function renderDetail(p, allAbilities, allMoves) {
   wrap.append(back, hero, statsSection, abilitiesSection);
   if (formsSection) wrap.appendChild(formsSection);
 
-  if (p.moves?.length) {
-    wrap.appendChild(renderMovesSection(p.moves, allMoves));
+  const moveSlugs = allLearnableMoveSlugs(p);
+  if (moveSlugs.length) {
+    wrap.appendChild(renderMovesSection(moveSlugs, allMoves, p));
   }
 
   return wrap;
@@ -136,7 +138,18 @@ function renderDetail(p, allAbilities, allMoves) {
 
 // ── moves ────────────────────────────────────────────────────
 
-function renderMovesSection(moveSlugs, allMoves) {
+function renderMovesSection(moveSlugs, allMoves, species) {
+  // Map form-exclusive move slug → form display name, for the badge below.
+  const exclusiveBy = new Map();
+  const formMoves = species?.formMoves || null;
+  if (formMoves) {
+    for (const [formName, slugs] of Object.entries(formMoves)) {
+      if (!Array.isArray(slugs)) continue;
+      const form = species.forms?.find((f) => f.name === formName);
+      const label = form ? formDisplayName(form) : formName;
+      for (const slug of slugs) exclusiveBy.set(slug, label);
+    }
+  }
   const section = document.createElement("section");
   section.className = "poke-detail__section";
 
@@ -180,6 +193,13 @@ function renderMovesSection(moveSlugs, allMoves) {
     const nameCell = document.createElement("td");
     nameCell.textContent = m ? moveDisplayName(m) : slug;
     nameCell.title = m?.flavorTextKo || m?.flavorTextEn || "";
+    const exclusiveForm = exclusiveBy.get(slug);
+    if (exclusiveForm) {
+      const badge = document.createElement("span");
+      badge.className = "move-form-badge";
+      badge.textContent = ` · ${exclusiveForm} ${t("detail.move.exclusive")}`;
+      nameCell.appendChild(badge);
+    }
 
     const typeCell = document.createElement("td");
     if (m?.type) {

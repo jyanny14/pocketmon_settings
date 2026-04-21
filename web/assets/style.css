@@ -1815,6 +1815,11 @@ select.field__input {
 }
 .moves-table tbody tr:hover { background: var(--bg-muted); }
 .moves-num { text-align: right; font-variant-numeric: tabular-nums; }
+.move-form-badge {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  font-weight: normal;
+}
 
 @media (max-width: 640px) {
   .moves-table th:nth-child(5),

@@ -237,6 +237,10 @@ def build_pokemon(obtain_index: dict[str, list[str]]) -> list[dict]:
             "obtain": sorted(obtain_index.get(d.slug, [])) or ["recruit"],
             "spritePath": sprite_rel if sprite_exists else "",
             "moves": list(d.moves),
+            **(
+                {"formMoves": {k: list(v) for k, v in d.form_moves.items()}}
+                if d.form_moves else {}
+            ),
         })
     results.sort(key=lambda p: (p["number"], p["slug"]))
     return results

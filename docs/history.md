@@ -6,7 +6,28 @@
 
 ---
 
+## 2026-04-22
+
+- 로토무 폼별 시그니처 기술 데이터 반영 — 기존 파서가 "Standard Moves" 테이블만 긁어서, `Special Moves` 테이블에 들어 있는 **Heat=Overheat / Wash=Hydro Pump / Frost=Blizzard / Fan=Air Slash / Mow=Leaf Storm** 이 전부 누락돼 있던 문제 수정. Rotom 외 185마리는 Special Moves 테이블이 없어 영향 없음.
+  - `scripts/parser.py` — `PokemonDetail.form_moves: dict[str, list[str]]` 필드 추가. `_parse_special_move_slugs(soup)` 신규: 테이블 헤더가 `<thead>` 로 감싸져 있어 `recursive=False` 탐색이 안 먹는 점을 반영해 `t.find(..., class_="fooevo")` 로 descendant 검색. "Form" 컬럼 아이콘의 `alt` 텍스트(`"Heat Rotom"` 등)에서 폼명 추출, 타입/카테고리 아이콘(` - `, `:` 포함)은 제외. 로토무에 한해 호출.
+  - `scripts/build.py` — non-empty 일 때만 `formMoves` 키를 pokemon.json 에 삽입. 재빌드 결과: Rotom 엔트리에 `formMoves: {Heat Rotom: [overheat], ...}` 5개 폼 전부 1기술씩 추가됨. `python scripts/build.py` + `python scripts/build_corpus.py` 재실행 (996 KB).
+  - `web/assets/app.js` — `learnableMoveSlugsForForm(species, formName)` (base + formMoves[formName] 합집합, 중복 제거) 와 `allLearnableMoveSlugs(species)` (모든 폼 union) 공용 헬퍼 export.
+  - `web/assets/party.js` — `buildMovesBlock` (슬롯 카드 4기술 select) 와 `filterPickerList` (기술 피커 모달) 둘 다 `learnableMoveSlugsForForm(pokemon, slot.formName)` 로 전환. 현재 선택된 폼에 맞는 기술만 후보로 뜸.
+  - `web/assets/party-encode.js` — 공유 URL decode 시 moves 필드 검증을 폼 단위로 바꿔, `?p=rotom:Heat+Rotom::...:overheat,...` 같은 URL 이 정상 디코드됨.
+  - `web/assets/pokemon-detail.js` — 로토무 상세 페이지 기술 테이블이 `allLearnableMoveSlugs(p)` 결과 기준으로 기존 목록 + 5개 시그니처까지 모두 노출. 폼-전용 기술 이름 셀에 `· 히트 로토무 전용` 형태의 작은 배지 표시 (CSS `.move-form-badge`, i18n `detail.move.exclusive` ko=전용 / en=only).
+  - `web/assets/i18n.js` · `web/assets/style.css` — 배지 라벨 ko/en + 스타일 추가.
+  - `docs/schema.md` — pokemon 섹션에 `formMoves?` 필드 문서화.
+  - 영원의 꽃 플라엣테 동시 점검 완료 — serebii 페이지의 이동 테이블이 `Standard Moves - Eternal Floette` 하나뿐이라 기존 `startswith("Standard Moves")` 매칭으로 이미 정확히 수집됨. `lightofruin` 시그니처 포함 확인. 메가 플라엣테는 스탯·특성만 바뀌는 상태 전환이라 species-wide moves 공유가 맞음. 수정 불필요.
+
 ## 2026-04-21
+
+- serebii 아웃바운드 링크 제거 — 광고 수익 사이트로의 referral/트래픽 유입을 차단하되 데이터 출처 attribution 은 유지. 8 메인 페이지 footer (`index`·`pokemon`·`pokemon-detail`·`items`·`abilities`·`moves`·`party`·`prompts`) + 5 레퍼런스 페이지 (`reference/{index,abilities,items,moves,pokemon}.html`) 의 `<a href="...serebii.net/pokemonchampions/">serebii.net</a>` → 평문 `serebii.net` 로 교체. `scripts/build_reference_html.py` 템플릿도 동일하게 수정해 다음 빌드에서 링크가 재삽입되지 않도록 고정. 텍스트 언급 자체는 남겨 저작권·윤리적 attribution 요구를 충족. 도구 아이콘(`web/assets/items/*.png`) 은 여전히 serebii 사본이라 이미지 의존성은 별도 과제로 남음.
+
+- Ko-fi 후원 링크 연결 — T33 체크리스트 완료. `https://ko-fi.com/jyanny14` 가 확정됨에 따라 임시 `github.com/jyanny14` 링크를 일괄 교체.
+  - `web/index.html` · `pokemon.html` · `pokemon-detail.html` · `items.html` · `abilities.html` · `moves.html` · `party.html` · `prompts.html` (8개) — footer `.btn-sponsor` href 교체 + 하드코딩 `title` 속성 재작성.
+  - `web/assets/i18n.js` — `footer.sponsorHint` ko/en 2키 재작성. 기존 "서버·도메인 비용 보전" 프레임 제거 (GitHub Pages + 커스텀 도메인 없음 = 실제 운영비 $0 이라 사실과 불일치). 새 프레임: KO `프로젝트 운영에 대한 작은 감사 · 수익 목적 아님 · 비영리 팬 프로젝트` / EN `A small thank-you for maintaining this project · not for profit · non-commercial fan project`.
+  - `docs/TODO.md` — T33 상태 `⏸️ 대기` → `✅ 완료 (2026-04-21)` 로 갱신. 새 프레임 기록 + Ko-fi 설정 가이드 (계정 타입 Developer/Open Source, 기본 팁 $1, auto thank-you 문안, Gold 구독 불필요) 본문에 통합. T33c(Sponsors 승인 대기 체크리스트) 는 경로 폐기되어 통합.
+  - Ko-fi Gold/Contributor 구독은 **선택하지 않음** — Memberships/Shop/티어 혜택 등 T33b #1 의 금지 기능군만 풀어주고, one-time tip 수수료 0% 는 무료 티어에도 이미 적용되므로 이득 없음.
 
 - 인라인 JSON 언어 필터링 — 한국어 모드에서 AI 가 영어 기술명을 추천 텍스트에 섞어 쓰던 문제 수정. 기존에는 `extractSlot` 이 `nameKo` · `nameEn` 둘 다 내보내서 AI 편향으로 영어 쪽을 집어가는 경향이 있었음. 데이터 번들 다운로드는 이미 `LANG_DROP_FIELDS` 로 한쪽만 내보내는데 **인라인 JSON 만 이 규칙을 따르지 않던 상태**.
   - `web/assets/prompts.js` — `extractSlot` 에 `isKo = getLang() === "ko"` 분기 + `pickName(ko, en)` 헬퍼. 포켓몬 이름 · 기술 이름 · 특성 이름·설명(gameText) · 도구 이름·효과 모두 현재 UI 언어에 해당하는 필드만 emit. `form.name` 은 폼 구별용 영어 식별자라 보존, `form.nameKo` 는 ko 모드에서만 추가. `item.effectKo` / `ability.gameTextKo` 도 ko 모드에서 우선 사용 (T16·T18 번역 커버리지 100% 전제).

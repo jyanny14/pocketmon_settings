@@ -105,6 +105,11 @@ class PokemonDetail:
     national_dex: str
     forms: list[PokemonForm] = field(default_factory=list)
     moves: list[str] = field(default_factory=list)  # serebii move slugs, species-wide
+    # Form-exclusive moves: {form.name -> [move_slug, ...]}.
+    # Currently populated only for Rotom, whose appliance forms each learn one
+    # signature move (Overheat/Hydro Pump/Blizzard/Air Slash/Leaf Storm) listed
+    # in a separate "Special Moves" dextable that `moves` above does not cover.
+    form_moves: dict[str, list[str]] = field(default_factory=dict)
 
     # ── backwards-compatible accessors (base form) ──
     @property
@@ -609,6 +614,7 @@ def parse_pokemon_detail(html: str, slug: str) -> PokemonDetail:
         forms = _expand_rotom_forms(forms)
 
     moves = _parse_move_slugs(soup)
+    form_moves = _parse_special_move_slugs(soup) if slug == "rotom" else {}
 
     return PokemonDetail(
         slug=slug,
@@ -617,6 +623,7 @@ def parse_pokemon_detail(html: str, slug: str) -> PokemonDetail:
         national_dex=national_dex,
         forms=forms,
         moves=moves,
+        form_moves=form_moves,
     )
 
 
@@ -688,6 +695,52 @@ def _parse_move_slugs(soup: BeautifulSoup) -> list[str]:
             seen.add(slug)
             ordered.append(slug)
     return ordered
+
+
+def _parse_special_move_slugs(soup: BeautifulSoup) -> dict[str, list[str]]:
+    """Extract form-exclusive moves from the 'Special Moves' dextable.
+
+    Only Rotom currently has this table: each row pairs a move link
+    (/attackdex-champions/{slug}.shtml) with a form icon whose alt text
+    names the owning form (e.g. "Heat Rotom"). Returns {form_name: [slug, ...]}
+    preserving row order and suppressing duplicates per form.
+    """
+    # Note: the Special Moves table wraps its header rows in <thead>, unlike
+    # Standard Moves. Use a descendant-level search for the title cell rather
+    # than the recursive=False pattern used for Standard Moves.
+    special: Tag | None = None
+    for t in soup.find_all("table", class_="dextable"):
+        title_cell = t.find(["td", "th"], class_="fooevo")
+        if title_cell and title_cell.get_text(" ", strip=True) == "Special Moves":
+            special = t
+            break
+    if special is None:
+        return {}
+
+    result: dict[str, list[str]] = {}
+    # Iterate the rows that carry a move link. Each such row also contains the
+    # form icon <img alt="{Form Name}"> in the last cell (rowspan=2).
+    for tr in special.find_all("tr"):
+        link = tr.find("a", href=True)
+        if not link or "/attackdex-champions/" not in link["href"]:
+            continue
+        slug = link["href"].rsplit("/", 1)[-1].removesuffix(".shtml").strip()
+        if not slug:
+            continue
+        form_name = ""
+        for img in tr.find_all("img"):
+            alt = (img.get("alt") or "").strip()
+            # Skip type/category icons ("Overheat - Fire-type", "...: Special Move").
+            # Form icons carry a clean "{Form} Rotom"-style alt.
+            if alt and " - " not in alt and ":" not in alt:
+                form_name = alt
+                break
+        if not form_name:
+            continue
+        bucket = result.setdefault(form_name, [])
+        if slug not in bucket:
+            bucket.append(slug)
+    return result
 
 
 @dataclass

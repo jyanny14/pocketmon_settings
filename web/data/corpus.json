@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "generatedAt": "2026-04-21T09:34:48Z",
+    "generatedAt": "2026-04-21T15:02:37Z",
     "schemaVersion": "1.0.0",
     "sources": {
       "serebii_champions": "https://www.serebii.net/pokemonchampions/",
@@ -12,7 +12,7 @@
         "name": "pokemon",
         "path": "pokemon.json",
         "count": 186,
-        "sha256": "f506696a86ec4620729a0d22f9926809ad7de2ee395892df09629e1d9298a6aa"
+        "sha256": "ee7e87a0a1d75c24474bc144a86e0c31cff420807ae8db8bdbe3f93e0ab56ce6"
       },
       {
         "name": "items",
@@ -12065,7 +12065,24 @@
         "uproar",
         "voltswitch",
         "will-o-wisp"
-      ]
+      ],
+      "formMoves": {
+        "Heat Rotom": [
+          "overheat"
+        ],
+        "Wash Rotom": [
+          "hydropump"
+        ],
+        "Frost Rotom": [
+          "blizzard"
+        ],
+        "Fan Rotom": [
+          "airslash"
+        ],
+        "Mow Rotom": [
+          "leafstorm"
+        ]
+      }
     },
     {
       "number": "0497",

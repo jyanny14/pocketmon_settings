@@ -67,6 +67,46 @@ export function findForm(pokemon, formNameEn) {
   return pokemon?.forms?.find((f) => f.name === formNameEn);
 }
 
+/**
+ * Learnable move slugs for a given form: species-wide `moves` plus any
+ * form-exclusive slugs in `species.formMoves[formName]`. Order preserves the
+ * species list with form-exclusives appended. Currently only Rotom carries
+ * `formMoves`; for everything else this returns `species.moves` unchanged.
+ */
+export function learnableMoveSlugsForForm(species, formName) {
+  const base = Array.isArray(species?.moves) ? species.moves : [];
+  const extra = species?.formMoves?.[formName];
+  if (!Array.isArray(extra) || extra.length === 0) return base.slice();
+  const seen = new Set(base);
+  const out = base.slice();
+  for (const slug of extra) {
+    if (!seen.has(slug)) {
+      seen.add(slug);
+      out.push(slug);
+    }
+  }
+  return out;
+}
+
+/** Union of species moves with every form-exclusive pool (used on species detail page). */
+export function allLearnableMoveSlugs(species) {
+  const base = Array.isArray(species?.moves) ? species.moves : [];
+  const formMoves = species?.formMoves;
+  if (!formMoves) return base.slice();
+  const seen = new Set(base);
+  const out = base.slice();
+  for (const slugs of Object.values(formMoves)) {
+    if (!Array.isArray(slugs)) continue;
+    for (const slug of slugs) {
+      if (!seen.has(slug)) {
+        seen.add(slug);
+        out.push(slug);
+      }
+    }
+  }
+  return out;
+}
+
 /** Ability display name: prefer nameKo in KO mode (fallback nameEn). */
 export function abilityDisplayName(ability) {
   if (!ability) return "";

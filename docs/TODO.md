@@ -299,17 +299,18 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - **`<title>` 태그 i18n 화** — 현재 하드코딩. 검색결과 스니펫 에서 노출되는 가장 중요한 텍스트.
 - 공수: Search Console 등록 10분 + sitemap 20분 + meta/title 수정 1시간.
 
-### T33. 후원 링크 — ⏸️ Ko-fi 계정 생성 대기 (2026-04-21 방향 확정)
-- **현재 상태 (임시)**: footer 에 `.btn-sponsor` (커피 아이콘 + "후원하기") 삽입 완료. href 는 임시로 `https://github.com/jyanny14` (GitHub 프로필). 8 페이지 전부 반영.
-- **확정 방향**: Ko-fi (one-time). GitHub Sponsors 대기 포기 — 승인 일정 불확실 + 한국 유저 접근성 이슈. T33a 비교표 대로 Ko-fi 가 수수료 0% + 상업 인상 약함 + 글로벌 유저 접근성 다 만족.
-- **다음 단계 (사용자 작업)**:
-  1. ko-fi.com 에서 계정 생성. 타입 선택 시 **"Developer" 또는 "Open Source"** 로 설정 (Gaming/Fan 카테고리는 Nintendo IP 리스크 관점에서 피함).
-  2. 프로필 페이지 URL (예: `https://ko-fi.com/jyanny14`) 확보 후 공유.
-- **받으면 5분 내 완료할 작업** (T33c):
-  - `git grep "github.com/jyanny14"` 으로 8개 HTML footer href 일괄 교체
-  - `i18n.js` 의 `footer.sponsorHint` 툴팁에서 "Sponsors 승인 대기 중이라 현재는 프로필로 연결" 부분 제거 → "서버·도메인 비용 보전용 · 수익 목적 아님" 만 남김 (ko/en 2키)
-  - 스프라이트 출처 고지는 현 수준 유지 결정 (2026-04-21)
-  - 커밋 · 푸시 · 실사용 테스트 (Ko-fi 페이지 정상 랜딩 확인)
+### T33. 후원 링크 — ✅ Ko-fi 연결 완료 (2026-04-21)
+- footer `.btn-sponsor` href 를 `https://ko-fi.com/jyanny14` 로 최종 확정. 8 페이지(`index` · `pokemon` · `pokemon-detail` · `items` · `abilities` · `moves` · `party` · `prompts`) 전부 반영.
+- 툴팁 프레임 변경: 기존 "서버·도메인 비용 보전" 은 **사실과 불일치** (GitHub Pages 호스팅 + 커스텀 도메인 없음 → 실제 운영비 $0). "개발 시간 기여" 프레임으로 재작성.
+  - KO: `프로젝트 운영에 대한 작은 감사 · 수익 목적 아님 · 비영리 팬 프로젝트`
+  - EN: `A small thank-you for maintaining this project · not for profit · non-commercial fan project`
+  - i18n `footer.sponsorHint` ko/en 2키 + HTML 8개 파일 `title` 속성 하드코딩 모두 동기화.
+- Ko-fi 설정 가이드 (계정 페이지에서):
+  - **계정 타입**: Developer / Open Source (Gaming/Fan 은 Nintendo IP 관점에서 회피)
+  - **기본 팁 금액**: $1 (T33b #1 프레이밍 유지용 — "큰돈 수령" 인상 최소화)
+  - **Auto thank-you**: `후원해주셔서 감사합니다. 서버·도메인 비용... ` 류는 사실과 다르므로 아래 문안 권장:
+    - `후원해주셔서 감사합니다. 이 프로젝트를 이어가는 데 힘이 됩니다. 비영리 팬 프로젝트이며 개인 수익 목적이 아닙니다.`
+  - **Contributor/Gold 구독**: **불필요** — Gold 가 풀어주는 Memberships/Shop/티어 혜택은 T33b #1 에서 명시적으로 금지한 상업 기능들. 무료 티어로 one-time tip 수령은 이미 수수료 0%.
 - 배치: footer 상단 출처 바로 아래 (현 상태 유지). hero/header 배치는 "돈 내라" 인상이 강해 피함.
 - 문구 라벨: "후원하기" / "Sponsor" (그대로 유지).
 - 금지어: "개발자 후원", "커피 한 잔 사주세요" 같은 개인 수익 문구 (Nintendo IP 리스크).
@@ -357,12 +358,7 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - 팬 프로젝트 성격상 "기부 받으려고 만든 것" 인상 피하기 — 후원 버튼이 hero·header 상단에 크게 붙어있으면 그런 인상. 현재 footer 배치는 이 문제 회피.
 - 완화: footer 유지, 버튼 크기·색 현 수준 유지 (accent 색이지만 작고 절제된 상태).
 
-### T33c. Sponsors 승인 시 즉시 진행 체크리스트
-- [ ] `git grep "github.com/jyanny14"` 로 href 위치 8곳 확인
-- [ ] href 를 `https://github.com/sponsors/jyanny14` 로 일괄 교체
-- [ ] 툴팁 문구에서 "Sponsors 승인 대기 중" 부분 제거 → "서버·도메인 비용 보전용 · 수익 목적 아님" 만 남김 (i18n `footer.sponsorHint` ko/en 2키)
-- [ ] `README.md` 에 "권리자 문의 시 즉시 링크 삭제 + 수령액 전액 환불" 한 문단 추가 (아직 없음)
-- [ ] 커밋 · 푸시 · 실사용 테스트 (Sponsors 페이지 정상 랜딩 확인)
+### T33c. (삭제됨) — Sponsors 대기 포기 및 Ko-fi 로 전환하며 T33 본문에 통합
 
 ### T31. 일본어(日) · 중국어(中) 다국어 지원
 번역팀이 없으므로 **전부 PokeAPI 에서 자동 수집**. 현재 ko/en 2언어 → ja + zh-Hans + zh-Hant 까지 확장.

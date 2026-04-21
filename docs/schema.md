@@ -106,6 +106,12 @@ type Form = {
 // Pokemon 최상위에는 `moves: string[]` 도 포함 (serebii Standard Moves 기준,
 // 종 단위로 모든 폼이 공유). 각 원소는 moves.json 의 slug.
 
+// 선택 필드: `formMoves?: { [formName: string]: string[] }` — 폼-전용 기술 맵.
+// serebii "Special Moves" 테이블이 있는 경우에만 채워진다. 현재 Rotom 만 해당.
+// 예: {"Heat Rotom": ["overheat"], "Wash Rotom": ["hydropump"], ...}
+// UI 쪽 `learnableMoveSlugsForForm(species, formName)` 헬퍼가 species.moves 와
+// formMoves[formName] 을 합쳐 노출한다.
+
 type ObtainSource = "recruit" | "transfer" | "gift" | "default";
 ```
 

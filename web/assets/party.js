@@ -13,6 +13,7 @@ import {
   moveDisplayName,
   moveCategoryLabel,
   findForm,
+  learnableMoveSlugsForForm,
   t,
   getLang,
 } from "./app.js";
@@ -411,7 +412,7 @@ function buildMovesBlock(index, pokemon, slot) {
   block.className = "slot-card__extra-block";
   // heading removed: the tab label above already announces this section
 
-  const learnable = (pokemon.moves || [])
+  const learnable = learnableMoveSlugsForForm(pokemon, slot.formName)
     .map((s) => state.moveMap.get(s))
     .filter(Boolean);
   learnable.sort((a, b) =>
@@ -820,7 +821,7 @@ function renderMovePickerList() {
   const pokemon = state.pokemonMap.get(slot.slug);
   if (!pokemon) return;
 
-  const learnable = (pokemon.moves || [])
+  const learnable = learnableMoveSlugsForForm(pokemon, slot.formName)
     .map((s) => state.moveMap.get(s))
     .filter(Boolean);
   learnable.sort((a, b) =>
