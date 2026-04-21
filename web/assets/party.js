@@ -306,10 +306,90 @@ function makeExtendedSection(index, pokemon, form, slot) {
   summary.textContent = buildExtraSummary(slot);
   details.appendChild(summary);
 
-  // moves block
-  details.appendChild(buildMovesBlock(index, pokemon, slot));
-  // nature + SP block
-  details.appendChild(buildTrainingBlock(index, form, slot));
+  // Tabs: [Moves] [Training]. Default to Moves each time the details opens —
+  // both panels always render but only the active one is visible, so tab
+  // switching is instant and no re-render is needed.
+  const tabPanelMovesId = `slot-${index}-tab-moves`;
+  const tabPanelTrainingId = `slot-${index}-tab-training`;
+  const tabMovesId = `slot-${index}-tab-btn-moves`;
+  const tabTrainingId = `slot-${index}-tab-btn-training`;
+
+  const tablist = document.createElement("div");
+  tablist.className = "slot-card__tabs";
+  tablist.setAttribute("role", "tablist");
+  tablist.setAttribute("aria-label", t("party.extras.title"));
+
+  const tabMoves = document.createElement("button");
+  tabMoves.type = "button";
+  tabMoves.className = "slot-card__tab slot-card__tab--active";
+  tabMoves.id = tabMovesId;
+  tabMoves.setAttribute("role", "tab");
+  tabMoves.setAttribute("aria-selected", "true");
+  tabMoves.setAttribute("aria-controls", tabPanelMovesId);
+  tabMoves.textContent = t("party.tab.moves");
+
+  const tabTraining = document.createElement("button");
+  tabTraining.type = "button";
+  tabTraining.className = "slot-card__tab";
+  tabTraining.id = tabTrainingId;
+  tabTraining.setAttribute("role", "tab");
+  tabTraining.setAttribute("aria-selected", "false");
+  tabTraining.setAttribute("aria-controls", tabPanelTrainingId);
+  tabTraining.setAttribute("tabindex", "-1");
+  tabTraining.textContent = t("party.tab.training");
+
+  tablist.append(tabMoves, tabTraining);
+  details.appendChild(tablist);
+
+  // Panels
+  const panelMoves = document.createElement("div");
+  panelMoves.className = "slot-card__tabpanel";
+  panelMoves.id = tabPanelMovesId;
+  panelMoves.setAttribute("role", "tabpanel");
+  panelMoves.setAttribute("aria-labelledby", tabMovesId);
+  panelMoves.appendChild(buildMovesBlock(index, pokemon, slot));
+
+  const panelTraining = document.createElement("div");
+  panelTraining.className = "slot-card__tabpanel";
+  panelTraining.id = tabPanelTrainingId;
+  panelTraining.setAttribute("role", "tabpanel");
+  panelTraining.setAttribute("aria-labelledby", tabTrainingId);
+  panelTraining.hidden = true;
+  panelTraining.appendChild(buildTrainingBlock(index, form, slot));
+
+  details.append(panelMoves, panelTraining);
+
+  // Tab wiring: click + arrow-key navigation. Activating a tab toggles the
+  // selected state, focus, and panel visibility in one place.
+  const activate = (which) => {
+    const movesActive = which === "moves";
+    tabMoves.classList.toggle("slot-card__tab--active", movesActive);
+    tabTraining.classList.toggle("slot-card__tab--active", !movesActive);
+    tabMoves.setAttribute("aria-selected", movesActive ? "true" : "false");
+    tabTraining.setAttribute("aria-selected", movesActive ? "false" : "true");
+    tabMoves.setAttribute("tabindex", movesActive ? "0" : "-1");
+    tabTraining.setAttribute("tabindex", movesActive ? "-1" : "0");
+    panelMoves.hidden = !movesActive;
+    panelTraining.hidden = movesActive;
+    (movesActive ? tabMoves : tabTraining).focus({ preventScroll: true });
+  };
+  tabMoves.addEventListener("click", () => activate("moves"));
+  tabTraining.addEventListener("click", () => activate("training"));
+  const onKey = (e) => {
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      e.preventDefault();
+      activate(tabMoves.getAttribute("aria-selected") === "true" ? "training" : "moves");
+    } else if (e.key === "Home") {
+      e.preventDefault();
+      activate("moves");
+    } else if (e.key === "End") {
+      e.preventDefault();
+      activate("training");
+    }
+  };
+  tabMoves.addEventListener("keydown", onKey);
+  tabTraining.addEventListener("keydown", onKey);
+
   return details;
 }
 
@@ -329,11 +409,7 @@ function buildExtraSummary(slot) {
 function buildMovesBlock(index, pokemon, slot) {
   const block = document.createElement("div");
   block.className = "slot-card__extra-block";
-
-  const heading = document.createElement("div");
-  heading.className = "slot-card__extra-heading";
-  heading.textContent = t("party.moves.title");
-  block.appendChild(heading);
+  // heading removed: the tab label above already announces this section
 
   const learnable = (pokemon.moves || [])
     .map((s) => state.moveMap.get(s))
@@ -354,11 +430,7 @@ function buildMovesBlock(index, pokemon, slot) {
 function buildTrainingBlock(index, form, slot) {
   const block = document.createElement("div");
   block.className = "slot-card__extra-block";
-
-  const heading = document.createElement("div");
-  heading.className = "slot-card__extra-heading";
-  heading.textContent = t("party.training.title");
-  block.appendChild(heading);
+  // heading removed: the tab label above already announces this section
 
   // Nature dropdown
   block.appendChild(makeNatureSelect(index, slot));
@@ -787,9 +859,20 @@ function renderMovePickerList() {
     row.setAttribute("aria-selected", isCurrent ? "true" : "false");
     if (isTaken) row.setAttribute("aria-disabled", "true");
 
-    const text = document.createElement("div");
-    text.className = "picker-row__text";
-    text.innerHTML = `<span class="picker-row__name">${moveDisplayName(m)}</span>`;
+    // Line 1: name + type badge + category pill + pwr/acc/pp
+    const main = document.createElement("div");
+    main.className = "picker-row__main";
+
+    const name = document.createElement("span");
+    name.className = "picker-row__name";
+    name.textContent = moveDisplayName(m);
+    if (m.updatedInChampions) {
+      const badge = document.createElement("span");
+      badge.className = "picker-row__champions";
+      badge.textContent = "★";
+      badge.title = t("moves.championsBadgeTitle");
+      name.appendChild(badge);
+    }
 
     const typeBadge = document.createElement("span");
     typeBadge.className = `type type--${m.type}`;
@@ -803,17 +886,35 @@ function renderMovePickerList() {
     nums.className = "picker-row__num";
     const pwr = m.power == null ? "—" : m.power;
     const acc = m.accuracy == null ? "—" : m.accuracy;
-    nums.textContent = `${pwr}/${acc}`;
-    nums.title = `${t("detail.move.power")} / ${t("detail.move.accuracy")}`;
+    const pp = m.pp == null ? "—" : m.pp;
+    nums.textContent = `${pwr} / ${acc} / ${pp}`;
+    nums.title = `${t("detail.move.power")} / ${t("detail.move.accuracy")} / ${t("detail.move.pp")}`;
 
-    row.append(text, typeBadge, catBadge, nums);
+    main.append(name, typeBadge, catBadge, nums);
 
     if (isTaken) {
       const tag = document.createElement("span");
       tag.className = "picker-row__taken";
       tag.textContent = t("party.movePicker.alreadyUsed");
-      row.appendChild(tag);
-    } else {
+      main.appendChild(tag);
+    }
+
+    row.appendChild(main);
+
+    // Line 2: flavor text (Champions/PokeAPI short description) — muted,
+    // 2-line ellipsis. Shown so the user doesn't have to open another page
+    // to know what a move does.
+    const flavorKo = m.flavorTextKo || "";
+    const flavorEn = m.flavorTextEn || "";
+    const flavor = getLang() === "ko" ? (flavorKo || flavorEn) : (flavorEn || flavorKo);
+    if (flavor) {
+      const desc = document.createElement("span");
+      desc.className = "picker-row__flavor";
+      desc.textContent = flavor;
+      row.appendChild(desc);
+    }
+
+    if (!isTaken) {
       row.addEventListener("click", () => pickMove(m.slug));
     }
 

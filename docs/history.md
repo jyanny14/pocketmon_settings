@@ -21,6 +21,17 @@
   - 생략: T35a (`moves.json` target 필드 수집 via PokeAPI). AI 가 "Earthquake 는 전체" 같은 상식을 갖고 있어서 첫 패스에 불필요. 정확도 향상 필요 시 후속 작업.
   - 스모크: `TEMPLATES.length === 9`, 6개 both(4 키 전부), 3개 double(2 키), HTML/CSS 정상 serve. 실사용 테스트는 사용자 브라우저에서.
 
+- 파티 빌더 Phase 3a · 3b — 슬롯 카드 상세 설정 탭 분리 + 기술 피커 행 강화.
+  - **탭 분리 (3a)**: 기존 `<details>` 안에 기술 + 훈련 블록이 세로로 쌓여 펼침 상태에서 슬롯 카드가 매우 길었음. ARIA 탭 패턴 (`role="tablist"/"tab"/"tabpanel"` + `aria-selected` + `aria-controls` + `tabindex` roving) 으로 분리. 기본 활성 탭 = 기술, 매번 열 때 리셋. 키보드 ← → / Home / End 네비게이션. 활성 탭 표시: accent 색 밑줄.
+    - `web/assets/party.js` `makeExtendedSection` 재구조화 — summary 아래 tablist + 2 tabpanel. `activate(which)` 헬퍼로 `aria-selected` / `tabindex` / `.--active` / `panel.hidden` 일괄 토글. `buildMovesBlock` / `buildTrainingBlock` 의 중복 heading 제거 (탭 라벨이 제목 역할).
+    - `web/assets/style.css` — `.slot-card__tabs` / `.slot-card__tab` / `.slot-card__tab--active` / `.slot-card__tabpanel[hidden]` 추가. focus-visible + hover 스타일.
+    - `web/assets/i18n.js` — `party.tab.moves` · `party.tab.training` ko/en 2키 신규.
+    - 효과: 슬롯 카드 펼침 높이 약 40~50% 감소.
+  - **기술 피커 행 강화 (3b)**: 기존 모달 행이 `이름/타입/분류/위력·명중` 만 보여줘서 moves 페이지 수준 정보가 부족. 2줄 구조로 재설계.
+    - `web/assets/party.js` `renderMovePickerList` — 각 행: 1줄(이름 + Champions `★` 뱃지 + 타입 뱃지 + 분류 pill + `위력/명중/PP`) + 2줄(flavor text 2줄 ellipsis). updatedInChampions flag 로 ★ 뱃지 노출 (moves 페이지와 동일 시각 규칙). flavorText 는 현재 UI 언어(ko/en) 우선.
+    - `web/assets/style.css` `.picker-row--move` 를 flex column 으로 재작성. `.picker-row__main` 4열 그리드 유지. `.picker-row__flavor` 에 `-webkit-line-clamp: 2` 로 2줄 ellipsis. `.picker-row__champions` 는 accent 색 작은 별.
+    - 효과: 모달이 moves 페이지 수준의 상세 정보 제공 — 유저가 설명을 보려고 페이지 이동하지 않아도 됨.
+
 - 파티 빌더 — 성격 드롭다운의 중립 5종을 **"중립" 한 항목**으로 통합. 유저 혼란 해결 ("왜 중립이 5개나?"). 게임 규칙상 Hardy/Docile/Serious/Bashful/Quirky 5종은 전 스탯 1.0× 로 기계적 효과가 모두 동일한데, 드롭다운에서 5개 따로 노출되던 상태였음.
   - `web/assets/party.js` — `CANONICAL_NEUTRAL_NATURE = "hardy"` 상수 + `isNeutralNatureSlug(slug)` 헬퍼 신규. `makeNatureSelect` 재작성: 중립 5종 제외 20종을 알파벳 정렬 + 앞에 단일 "중립" 엔트리 추가. 유저가 중립 선택하면 `hardy` 로 저장. 기존 URL 에 `bashful/docile/serious/quirky` 가 있어도 디코드는 수용 (back-compat), 렌더에서만 "중립" 으로 합쳐 표시. `buildExtraSummary` 도 중립 slug 감지해 "중립" 레이블.
   - `web/assets/i18n.js` — `party.nature.neutralHint` ko/en 신규 (옵션 `title` 툴팁용, 5종 동일 효과 설명).
