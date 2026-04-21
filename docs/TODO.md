@@ -247,6 +247,42 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - 1–2시간 분량. `party.html` `.party-actions` 에 버튼 추가, TSV 생성 로직을 party.js 에 한 함수로.
 - 컬럼에 moves / sps / nature 포함시키면 세팅 전체를 시트로 옮길 수 있음.
 
+### T31. 일본어(日) · 중국어(中) 다국어 지원
+번역팀이 없으므로 **전부 PokeAPI 에서 자동 수집**. 현재 ko/en 2언어 → ja + zh-Hans + zh-Hant 까지 확장.
+
+**데이터 레이어 (스크립트)**
+- PokeAPI 언어 코드: `ja` (한자, 게임 공식 표기), `ja-Hrkt` (가타카나, 원한다면 대체), `zh-Hans` (간체), `zh-Hant` (번체).
+- 기존 ko 수집 스크립트를 ja/zh 버전으로 복제하거나 langs 인자로 일반화:
+  - `scripts/fetch_ability_names_ko.py` / `fetch_ability_descriptions_ko.py` → `_multilang.py` 로 통합, 타겟 언어 목록을 인자로.
+  - `scripts/fetch_item_names_ko.py` → 동일.
+  - `scripts/fetch_moves.py` — 이미 `flavor_text_entries` / `names` 둘 다 파싱하니 언어 필터만 확장.
+- 각 JSON 필드에 `nameJa`, `nameZhHans`, `nameZhHant`, `gameTextJa`, `flavorTextJa`, `effectJa` 등 병렬 추가.
+- `docs/schema.md` 업데이트.
+
+**예상 커버리지**
+- JA 는 게임 원본 언어라 PokeAPI 최우선 반영 → Gen 8 까지 100%, Gen 9 / Champions 신규 소수 누락.
+- ZH 는 ko 와 비슷한 후순위로 반영 → Gen 8 까지 ~95%, Gen 9 / Champions 신규는 일부 누락 예상.
+- Champions 전용 콘텐츠(신규 메가스톤 23, 신규 특성 4 등) 는 현재 ko 와 동일하게 **manual override** 필요. 해당 언어 위키 (pixelmon wiki / 52poke.com / 宝可梦百科) 참조.
+
+**UI 레이어**
+- `web/assets/i18n.js` — ko/en 각 ~200 키 → ja/zh-Hans/zh-Hant 추가. **수동 번역 필요 (가장 큰 공수).** 번역팀 없다고 했으니 실용적으로는:
+  - LLM (Claude/GPT) 에 ko 블록 통째로 던져 ja/zh 초안 생성 → 게임 용어 (종족값=種族値=种族值 같은 공식 표기) 만 직접 검수.
+  - 품질 80% → 실사용에 충분. 이후 오타·어색한 표현 발견 시 점진 개선.
+- `web/assets/app.js` 의 `abilityDisplayName` / `moveDisplayName` / `itemDisplayName` / `formDisplayName` 에 ja/zh 분기 추가 (현재 ko 만 있음).
+- 언어 토글 UI — 2-way 토글 (한/EN) → **드롭다운** 으로 전환. `initLangToggle` 재작성.
+
+**작업 순서**
+1. 스크립트 확장 (반나절) — 데이터 먼저 수집해 실제 커버리지 확인.
+2. Display 헬퍼 분기 (1시간).
+3. 언어 토글 드롭다운 (1~2시간).
+4. i18n.js 번역 (LLM 초안 + 검수, 1~2일).
+5. Manual override — JA/ZH 신규 콘텐츠 번역 (JA 10~20건 예상, ZH 30~40건 예상).
+6. 폼 이름 합성 — `form_ja.py` / `form_zh.py` ("메가" → "メガ" / "超级", "알로라" → "アローラ" / "阿罗拉" 등).
+
+**부분 진행 옵션 (권장)**
+- **A. 데이터만** — 1~2 단계만. UI 는 계속 한/영 토글, 검색 필드에 `nameJa` / `nameZhHans` 포함해서 다국어 이름으로 검색 가능. AI 프롬프트 인라인 JSON 에도 포함 → AI 가 공식 표기로 매칭하기 쉬워짐. 공수 1일, 체감 이득 큼.
+- **B. 풀 트리플/쿼드링구얼** — 전체 진행. 공수 2~3일.
+
 ---
 
 ## 파티 빌더 확장 — Champions 전투 상세 (2026-04-20 완료 · 보존용)
