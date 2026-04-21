@@ -16577,31 +16577,6 @@
           "sword"
         ],
         "spritePath": "assets/sprites/681.png"
-      },
-      {
-        "name": "Blade Forme",
-        "nameKo": "킬가르도 블레이드폼",
-        "types": [
-          "steel",
-          "ghost"
-        ],
-        "abilities": [
-          "stancechange"
-        ],
-        "baseStats": {
-          "hp": 60,
-          "atk": 140,
-          "def": 50,
-          "spAtk": 140,
-          "spDef": 50,
-          "speed": 60
-        },
-        "sourceGames": [
-          "legends-z-a",
-          "shield",
-          "sword"
-        ],
-        "spritePath": "assets/sprites/forms/aegislash-blade.png"
       }
     ],
     "obtain": [

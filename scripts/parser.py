@@ -613,6 +613,12 @@ def parse_pokemon_detail(html: str, slug: str) -> PokemonDetail:
     if slug == "rotom":
         forms = _expand_rotom_forms(forms)
 
+    # Aegislash Blade Forme is an in-battle auto-transform via Stance Change —
+    # the player never explicitly sends it out. Drop it from the selectable
+    # forms so the party builder only offers Shield Forme ("Aegislash").
+    if slug == "aegislash":
+        forms = [f for f in forms if f.name != "Blade Forme"]
+
     moves = _parse_move_slugs(soup)
     form_moves = _parse_special_move_slugs(soup) if slug == "rotom" else {}
 
