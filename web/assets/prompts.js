@@ -84,6 +84,14 @@ function extractSlot(slot) {
   const ability = state.abilityMap.get(slot.abilitySlug) || null;
   const item = slot.itemSlug ? state.itemMap.get(slot.itemSlug) || null : null;
 
+  // Emit only the current UI language's display fields so the inline JSON
+  // matches the language-filtered data bundle. Without this the AI tends to
+  // anchor on English names even in Korean prompts. `form.name` stays — it's
+  // an English functional identifier, not a display name.
+  const isKo = getLang() === "ko";
+  const pickName = (koVal, enVal) =>
+    isKo ? { nameKo: koVal || enVal } : { nameEn: enVal || koVal };
+
   // Only the 4 configured moves are expanded inline. The full learnable pool
   // is intentionally omitted — any template that needs it tells the AI to
   // fetch pokemon.json + moves.json instead. Without this change the inline
@@ -94,8 +102,7 @@ function extractSlot(slot) {
       if (!m) return { slug: s };
       const out = {
         slug: m.slug,
-        nameKo: m.nameKo,
-        nameEn: m.nameEn,
+        ...pickName(m.nameKo, m.nameEn),
         type: m.type,
         category: m.category,
         power: m.power,
@@ -109,11 +116,10 @@ function extractSlot(slot) {
   return {
     slug: slot.slug,
     dex: p.number,
-    nameKo: p.nameKo,
-    nameEn: p.nameEn,
+    ...pickName(p.nameKo, p.nameEn),
     form: {
-      name: form.name,
-      nameKo: form.nameKo,
+      name: form.name, // English functional id — required to distinguish forms
+      ...(isKo && form.nameKo ? { nameKo: form.nameKo } : {}),
       types: form.types,
       baseStats: form.baseStats,
       abilities: form.abilities,
@@ -121,18 +127,20 @@ function extractSlot(slot) {
     ability: ability
       ? {
           slug: ability.slug,
-          nameKo: ability.nameKo,
-          nameEn: ability.nameEn,
-          description: ability.gameTextKo || ability.gameText || ability.description || "",
+          ...pickName(ability.nameKo, ability.nameEn),
+          ...(isKo
+            ? { gameTextKo: ability.gameTextKo || ability.gameText || ability.description || "" }
+            : { gameText: ability.gameText || ability.description || "" }),
           ...(ability.isNewInChampions ? { isNewInChampions: true } : {}),
         }
       : null,
     item: item
       ? {
           slug: item.slug,
-          nameKo: item.nameKo,
-          nameEn: item.nameEn,
-          effect: item.effect,
+          ...pickName(item.nameKo, item.nameEn),
+          ...(isKo
+            ? { effectKo: item.effectKo || item.effect || "" }
+            : { effect: item.effect || "" }),
         }
       : null,
     moves: configuredMoves,

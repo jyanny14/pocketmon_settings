@@ -8,6 +8,11 @@
 
 ## 2026-04-21
 
+- 인라인 JSON 언어 필터링 — 한국어 모드에서 AI 가 영어 기술명을 추천 텍스트에 섞어 쓰던 문제 수정. 기존에는 `extractSlot` 이 `nameKo` · `nameEn` 둘 다 내보내서 AI 편향으로 영어 쪽을 집어가는 경향이 있었음. 데이터 번들 다운로드는 이미 `LANG_DROP_FIELDS` 로 한쪽만 내보내는데 **인라인 JSON 만 이 규칙을 따르지 않던 상태**.
+  - `web/assets/prompts.js` — `extractSlot` 에 `isKo = getLang() === "ko"` 분기 + `pickName(ko, en)` 헬퍼. 포켓몬 이름 · 기술 이름 · 특성 이름·설명(gameText) · 도구 이름·효과 모두 현재 UI 언어에 해당하는 필드만 emit. `form.name` 은 폼 구별용 영어 식별자라 보존, `form.nameKo` 는 ko 모드에서만 추가. `item.effectKo` / `ability.gameTextKo` 도 ko 모드에서 우선 사용 (T16·T18 번역 커버리지 100% 전제).
+  - 결과: KO 모드 인라인 JSON 크기 ~40% 감소 + AI 가 한국어 이름으로 일관되게 답변 예상.
+  - EN 모드도 동일하게 `nameEn` · `gameText` · `effect` 만 emit.
+
 - T35 MVP (더블배틀 지원) — 프롬프트 레이어에만 모드 개념 추가. 파티 빌더는 손 대지 않음. 총 9개 템플릿 (6 both + 3 double-only), 싱글 6개 / 더블 9개 카드 렌더.
   - `web/prompts.html` — `<section class="mode-toggle-wrap">` 신규 (`.mode-toggle` radiogroup, lang-toggle 스타일 재활용). 인라인 `<style>` 에 모드 토글 CSS (`.mode-toggle-wrap`, `.mode-toggle__opt`, 모바일 1열 전환).
   - `web/assets/prompts.js` — `state.mode` 추가 (localStorage `battleMode`). `resolveBody` 가 `${lang}Double` 키 조회 (없으면 싱글 fallback). `renderCards` 가 `mode === "double"` 템플릿을 싱글 모드에서 숨김. `wireModeToggle` / `syncModeToggleUI` 신규 — 클릭 시 state + localStorage 갱신 + renderCards 재호출 (페이지 리로드 없음).
