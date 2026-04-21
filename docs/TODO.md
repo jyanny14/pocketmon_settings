@@ -260,35 +260,37 @@ KO 모드에서 영문으로 노출되는 것들을 해소. 실측 기준(`data/
 - 통합 구현은 같은 세션에 반영 (CSS 토큰 확장 · Hero · when-to-use · how-to 재작성 · AI 리네임 · 카드 차별화 · 푸터 고지).
 - 후속: FAQ 섹션 / Before-After 카피 / AI 차별점 독립 배너 / 모바일 카드 가로 스크롤 — 현재 개편 반영 후 체감 효과 보고 착수.
 
-### T35. 더블배틀 (VGC) 파티 빌더 — **큰 작업 (17~25시간 추정)**
-- 현 파티 빌더는 싱글배틀(1대1) 기준. VGC 공식 포맷인 더블배틀(2대2) 지원 추가.
-- 배경: Champions 는 VGC 2026 공식 채택 → 싱글보다 더블 수요가 더 클 수 있음. 인접 툴(ChampTeams/VGC.tools/Pikalytics) 전부 더블 중심.
-- **달라지는 것**:
-  - 동시 출전 2마리 (리드) + 백 4마리 구조 표시
-  - 기술 타겟팅: 아군/적 구분 (Fake Out, Helping Hand, Follow Me 등 아군 지원 기술 개념)
-  - 스프레드 공격 (Earthquake, Heat Wave, Surf, Rock Slide 등) 0.75배 보정을 타입 커버리지 계산에 반영
-  - 파트너 시너지 체크 — redirect (Follow Me / Rage Powder), 날씨 setter+abuser, Trick Room setter+sweeper, Tailwind + speed attackers, Intimidate + physical attackers 등 핵심 조합
-  - 자속 커버리지 분석도 2마리 묶음 단위(리드 조합)로
-- **UI 변경**:
-  - 파티 빌더 상단에 배틀 모드 토글 (싱글/더블). 기본 싱글 유지(기존 파티 공유 URL 호환)
-  - 모드에 따라 슬롯 라벨 변화: 더블은 1~2번이 "리드", 3~6번이 "백"
-  - 더블 모드 전용 분석 패널 섹션: "리드 조합 평가", "스프레드 기술 커버리지", "시너지 경고"
+### T35. 더블배틀 (VGC) 지원 — **프롬프트 레이어에만 국한, 축소 스코프 (6~9시간 추정)**
+- **핵심 설계 통찰 (2026-04-21 사용자 논의 결과)**: 파티 구성 자체(6마리, 기술·특성·도구·성격·SP)는 싱글/더블이 완전히 동일. 차이는 전적으로 **"AI 에게 무엇을 어떻게 물어보는가"** 에 있음 → 파티 빌더 UI 는 건드리지 않고 **프롬프트 레이어에만** 모드 개념을 얹는다.
+- 배경: Champions 는 VGC 2026 공식 채택 → 싱글보다 더블 수요가 큼. AI 가 더블 특유의 판단(리드 조합, 스프레드, 시너지)을 하려면 프롬프트에 모드 정보 필요.
+- **달라지는 것 (AI 관점)**:
+  - 리드 2마리 + 백 4마리 조합 판단
+  - 스프레드 공격 0.75배 보정 (Earthquake/Heat Wave/Surf/Rock Slide 등)
+  - 파트너 시너지 패턴 (redirect / 날씨 / TR / Tailwind / Intimidate)
+  - **파트너 시너지 heuristic 엔진은 구현 안 함** — AI 판단이 훨씬 유연하고 정확. 우리는 프롬프트로 "이런 걸 고려하라" 만 지시.
+- **UI 변경 (최소)**:
+  - `prompts.html` 상단에 배틀 모드 토글 한 줄 (싱글/더블). 기본 싱글. localStorage 저장.
+  - 파티 빌더 (`party.html`) 는 **손 대지 않음** — 6슬롯 파티는 모드 독립.
 - **데이터 변경**:
-  - `moves.json` 에 target 필드 필요 (PokeAPI `target.name`: `selected-pokemon` / `all-opponents` / `all-other-pokemon` / `user-and-allies` / `ally` 등 14종)
-  - `scripts/fetch_moves.py` 확장 — target 수집 (PokeAPI 이미 보유, 재수집 가능)
-  - `party-encode.js` 스키마 확장 — `mode: "single"|"double"` 추가 (optional, 기본 single)
-- **AI 프롬프트**:
-  - 더블 모드일 때 별도 템플릿: "리드 조합 추천", "스프레드 커버리지 점검", "파트너 시너지 평가"
-  - 기존 6개 템플릿도 더블/싱글 문맥 구분 (STRICT_POOL_RULES 에 모드 정보 주입)
-- **작업 분해 (후속 세션 단위)**:
-  - T35a. `moves.json` 에 target 필드 수집 (4~6시간)
-  - T35b. 배틀 모드 토글 + UI 구조 (6~8시간)
-  - T35c. 파트너 시너지 heuristic 엔진 (4~6시간)
-  - T35d. AI 프롬프트 더블 전용 템플릿 + 기존 템플릿 모드 분기 (2~3시간)
-  - T35e. i18n ko/en 확장 (1~2시간)
-- **선행 조건**: 없음 (현 싱글 빌더 위에 모드 추가)
-- **후속 영향**: AI 프롬프트 품질 크게 향상 예상 — Champions 의 주 포맷을 정확히 다룸.
-- **주의**: 인접 툴들과 기능이 겹치게 되므로, "우리 사이트만의 차별점 (AI 질문 생성, 비영리, 한국어 지원)" 은 계속 유지.
+  - `moves.json` 에 \`target\` 필드 수집 — PokeAPI \`target.name\` (14종). 스프레드 판단용. \`scripts/fetch_moves.py\` 확장.
+  - \`party-encode.js\` 스키마는 **건드리지 않음** (공유 URL 호환 유지).
+- **AI 프롬프트 변경**:
+  - 기존 6개 템플릿의 \`body\` 를 \`{ko, en, koDouble, enDouble}\` 로 확장 — resolveBody 에서 현재 모드 읽어 분기.
+  - 더블 모드 전용 신규 템플릿 2~3개: **리드 조합 추천** / **스프레드 커버리지 점검** / **파트너 시너지 평가**.
+  - STRICT_POOL_RULES 에 모드 정보 주입 (싱글/더블 분기 문구).
+- **작업 분해**:
+  - T35a. \`moves.json\` 에 target 필드 수집 + build 파이프라인 반영 (2~3시간)
+  - T35b. \`prompts.html\` 모드 토글 + \`prompts.js\` resolveBody 모드 분기 (1~2시간)
+  - T35c. 기존 6개 템플릿 더블 버전 (koDouble/enDouble) + 신규 2~3개 (2~3시간)
+  - T35d. i18n ko/en 모드 라벨 추가 (30분)
+- **선행 조건**: 없음.
+- **제외 (안 함)**:
+  - 파티 빌더 UI 분기 (모드 토글, 슬롯 라벨 변화)
+  - 파트너 시너지 규칙 엔진
+  - 더블 전용 분석 패널 섹션
+  - \`party-encode.js\` 스키마 확장
+  - 이유: AI 판단에 맡기는 편이 유연하고, 우리 차별점(AI 프롬프트 생성기)과도 결이 맞음.
+- **후속 영향**: AI 프롬프트 품질 크게 향상 예상 (Champions 주 포맷 정확히 다룸). 인접 툴(ChampTeams/VGC.tools)과 기능 중복 없이 우리만의 강점(AI 질문 생성) 유지.
 
 ### T34. 검색 노출 강화 (SEO · 2026-04-21 검색 인덱싱 허용 후속)
 - **Google Search Console 등록** — 소유권 검증 방식은 HTML 파일 배치(`web/google*.html`) 가 가장 단순. 등록 후 sitemap 제출하면 크롤링 속도 ↑.

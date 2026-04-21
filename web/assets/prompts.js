@@ -159,6 +159,7 @@ function currentUrls() {
     movesRefUrl: new URL("./reference/moves.html", location.href).href,
     abilitiesRefUrl: new URL("./reference/abilities.html", location.href).href,
     itemsRefUrl: new URL("./reference/items.html", location.href).href,
+    dataBundlePageUrl: new URL("./prompts.html", location.href).href,
   };
 }
 
@@ -187,6 +188,7 @@ function substitute(bodySpec, { includeData }) {
     .replaceAll("{{MOVES_REF_URL}}", u.movesRefUrl)
     .replaceAll("{{ABILITIES_REF_URL}}", u.abilitiesRefUrl)
     .replaceAll("{{ITEMS_REF_URL}}", u.itemsRefUrl)
+    .replaceAll("{{DATA_BUNDLE_PAGE_URL}}", u.dataBundlePageUrl)
     .replaceAll("{{PARTY_INLINE_JSON}}", inline)
     .replaceAll("{{FILLED_COUNT}}", String(filled))
     .replaceAll("{{EMPTY_COUNT}}", String(empty));

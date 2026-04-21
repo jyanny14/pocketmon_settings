@@ -8,6 +8,12 @@
 
 ## 2026-04-21
 
+- AI 프롬프트 환각(hallucination) 추가 방어 — "불확실하면 사전지식 대신 데이터 파일 다운로드 요청". Gemini 가 Champions 에 없는 `assault-vest`(돌격조끼) 를 추천한 사례에 대한 대응.
+  - `web/assets/prompts-templates.js` — `STRICT_POOL_RULES_KO/EN` 규칙 2·3·6·7 재작성. (1) 규칙 2: fetch 불가 시 단순 "파일 붙여주세요" 가 아니라 "{{DATA_BUNDLE_PAGE_URL}} 에서 버튼으로 다운로드 → 첨부" 로 구체화. (2) 규칙 3: `assault-vest`·`leftovers` 를 구체 오답 예시로 명시. (3) 규칙 6: "불확실하면 제안 금지" 를 "불확실하면 유저에게 데이터 파일 다운로드 요청" 으로 확장, (a) 제공된 소스 내 유사 대체 찾기 / (b) 대체 불가 시 데이터 파일 요청 2단계 분기, "본편에 있으니 Champions 에도 있을 것" 추측을 명시 금지. (4) 규칙 7: 자기 검증 단계에서 "잘 모르겠다" 항목을 규칙 6 에 따라 데이터 파일 요청으로 교체하도록.
+  - `web/assets/prompts.js` — `{{DATA_BUNDLE_PAGE_URL}}` 플레이스홀더 신규 (`./prompts.html` 로 치환). 모든 템플릿에서 이제 "데이터 파일 다운로드 페이지 URL" 을 AI 가 직접 유저에게 안내할 수 있음.
+
+- `docs/TODO.md` — T35 (더블배틀 지원) 스코프 **대폭 축소** (17~25시간 → 6~9시간). 사용자 설계 통찰 반영: 파티 구성 자체는 싱글/더블 완전 동일하니 파티 빌더 UI 는 손 대지 않고, **프롬프트 레이어에만 모드 개념을 얹는다**. 파트너 시너지 heuristic 엔진도 제거(AI 판단이 더 유연). 작업 분해: moves.json target 필드 수집 / prompts.html 모드 토글 / 6개 템플릿 더블 버전 + 신규 2~3개 / i18n. 인접 툴(ChampTeams/VGC.tools)과 기능 중복 피하고 우리만의 차별점(AI 질문 생성) 유지.
+
 - 랜딩 페이지 대대적 개편 (T32a 통합 구현 — 외부 AI 콘텐츠·UI 리서치 결과 반영). 기능 나열 중심에서 "언제·왜 쓰는가" 중심 메시지로 전환하고, 시각 위계를 추가해 훑어보기 편한 구조로 재구성.
   - `web/assets/style.css` — (1) `:root` 에 랜딩 전용 토큰 추가 (`--hero-start/end`, `--hero-text`, `--bg-alt`, `--bg-tint`) + 다크 모드 override. (2) Hero 를 그라디언트 배경 + SVG fractalNoise 오버레이 (`::before`, `mix-blend-mode: overlay`) 로 재작성. (3) `.when-to-use` 섹션 신규 — 카드 그리드와 구분되는 낮은 톤의 배경 + 3열 grid. (4) `.how-to` 재작성 — 원형 번호 배지 `.how-to__step-badge`, 혜택 한 줄 `.how-to__step-benefit`, 마이크로카피 `.how-to__step-meta`, 데스크톱(≥52rem) 에서 스텝 사이 CSS 화살표 커넥터(`::before`/`::after`). (5) `.card--highlight` 신규 — 파티 빌더 카드만 accent 보더 + 미세 그라디언트로 차별화. (6) `.site-footer__disclosure` 신규 — muted 배경 + accent 좌측 보더로 비영리/비공식 고지 강조. (7) `.btn-sponsor` 기반 CSS 미리 추가 (T33 승인 후 HTML 삽입만 하면 됨). (8) 전역 `@media (prefers-reduced-motion: reduce)` — 모든 transition/transform hover 모션 차단.
   - `web/index.html` — Hero 부제를 "랭크전 들어가기 전, 내 파티의 약점·커버리지·기술 선택을 한 번에 점검하고 AI에게 바로 물어볼 질문까지 만들어보세요" 로 교체. CTA 버튼 순서 뒤집어 "파티 빌더 시작" 을 primary 로. `<section class="when-to-use">` 신규 — 3줄 시나리오 (랭크전 점검/규정 변화/공유 피드백) + 이모지 아이콘. 파티 빌더 카드에 `card--highlight` 클래스 부여하고 첫 번째로 이동. how-to 4단계 전면 재작성 — 제목을 행동 중심으로 바꾸고("후보를 빠르게 좁혀보기" 등), 혜택 한 줄 + 보조 설명 + 마이크로카피 3단 구조. Footer 에 `site-footer__disclosure` 삽입.
