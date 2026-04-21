@@ -621,14 +621,34 @@ function makeSpInputs(index, form, slot) {
     }
     cell.appendChild(lab);
 
-    // Stepper row: [«] [‹] [input] [›] [»]
-    // ‹ / › step by 1, « / » jump to 0 / budget-aware MAX respectively.
-    // Keeping the numeric input in the middle lets it use the full remaining
-    // width of the cell, so the current value is always legible.
+    // Layout:
+    //   row 1: [label]  [   input   ]  — input gets most of the cell width
+    //   row 2: [«] [‹] [›] [»]         — 4 equal-width stepper buttons
+    // Pulling the input out of the stepper lets it use the full remaining
+    // row-1 width so 2-digit SP values (up to 32) stay clearly legible on
+    // narrow cards. Button order: « = 0, ‹ = -1, › = +1, » = budget-aware max.
+    const headroom = maxFor(i);
+
+    const input = document.createElement("input");
+    input.type = "number";
+    input.className = "slot-card__sp-input field__control";
+    input.min = "0";
+    input.max = String(SP_PER_STAT_MAX);
+    input.step = "1";
+    input.inputMode = "numeric";
+    input.value = String(sps[i] || 0);
+    input.setAttribute("aria-label", statShortLabel(key));
+    input.addEventListener("change", () => {
+      const v = parseInt(input.value, 10);
+      if (!commit(i, v)) {
+        // revert on rejected change (budget exceeded)
+        input.value = String(sps[i] || 0);
+      }
+    });
+    cell.appendChild(input);
+
     const stepper = document.createElement("div");
     stepper.className = "slot-card__sp-stepper";
-
-    const headroom = maxFor(i);
 
     const zeroBtn = document.createElement("button");
     zeroBtn.type = "button";
@@ -647,23 +667,6 @@ function makeSpInputs(index, form, slot) {
     dec.disabled = sps[i] <= 0;
     dec.addEventListener("click", () => commit(i, sps[i] - 1));
 
-    const input = document.createElement("input");
-    input.type = "number";
-    input.className = "slot-card__sp-input field__control";
-    input.min = "0";
-    input.max = String(SP_PER_STAT_MAX);
-    input.step = "1";
-    input.inputMode = "numeric";
-    input.value = String(sps[i] || 0);
-    input.setAttribute("aria-label", statShortLabel(key));
-    input.addEventListener("change", () => {
-      const v = parseInt(input.value, 10);
-      if (!commit(i, v)) {
-        // revert on rejected change (budget exceeded)
-        input.value = String(sps[i] || 0);
-      }
-    });
-
     const inc = document.createElement("button");
     inc.type = "button";
     inc.className = "slot-card__sp-step";
@@ -681,7 +684,7 @@ function makeSpInputs(index, form, slot) {
     maxBtn.disabled = sps[i] >= headroom;
     maxBtn.addEventListener("click", () => commit(i, headroom));
 
-    stepper.append(zeroBtn, dec, input, inc, maxBtn);
+    stepper.append(zeroBtn, dec, inc, maxBtn);
     cell.appendChild(stepper);
 
     grid.appendChild(cell);
