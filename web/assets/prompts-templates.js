@@ -8,16 +8,16 @@ export const SHARED_DISCLAIMER =
 // slug in the fetched JSON.
 export const STRICT_POOL_RULES = `**데이터 제약 (엄격 · 반드시 준수)**
 
-1. 답변 전에 필요한 데이터를 **반드시 fetch** 하세요. 사전 지식으로 Champions 에 없는 걸 지어내지 마세요.
-   - 포켓몬 후보: {{POKEMON_JSON_URL}}  (186 species / 267 forms)
-   - 특성 상세: {{ABILITIES_JSON_URL}}  (192종, \`isNewInChampions\` 플래그 포함)
-   - 도구 상세: {{ITEMS_JSON_URL}}  (117종)
-   - 기술 상세: {{MOVES_JSON_URL}}  (481종, \`updatedInChampions\` 수치 포함)
-   fetch 실패 시 답변하지 말고 "데이터 fetch 실패로 답변 불가" 라고만 응답하세요.
-2. Pokémon Champions 에 존재하는 전부는 위 JSON 배열 안의 항목입니다. SV 후반부 미추가 종, Legends: Z-A 신규 종 일부, 그 외 어떤 포켓몬/특성/도구/기술도 이 목록에 없으면 Champions 에 존재하지 않습니다. 제안 금지.
-3. 추천하는 모든 항목에 **정확한 slug 를 병기** 하세요. 예: \`아머까오 (slug: corviknight)\` · \`옹골참 (slug: sturdy)\` · \`생명의 구슬 (slug: life-orb)\` · \`지진 (slug: earthquake)\`. 형식이 없거나 slug 가 틀리면 규칙 위반입니다.
-4. 특성·기술을 특정 포켓몬에 붙일 때는 해당 폼의 \`abilities\` / \`moves\` 배열에 **실제로 존재해야** 합니다. (예: 폼 외 특성·비배움 기술 제안 금지.)
-5. **자기 검증**: 최종 답변 직전, 본인이 제안한 모든 slug 가 fetched 데이터에 실제로 있는지 한 번 더 확인하세요. 없는 항목은 조용히 대체하지 말고 "해당 조건을 만족하는 항목을 Champions 데이터에서 찾지 못했다" 라고 명시하세요.`;
+1. **진실의 소스 우선순위**: fetched JSON > 인라인 JSON > (그 외 어떤 것도 금지). 아래 URL 을 먼저 fetch 시도 하세요:
+   - 포켓몬: {{POKEMON_JSON_URL}}  (186 species / 267 forms)
+   - 특성: {{ABILITIES_JSON_URL}}  (192종, \`isNewInChampions\` 플래그)
+   - 도구: {{ITEMS_JSON_URL}}  (117종)
+   - 기술: {{MOVES_JSON_URL}}  (481종, \`updatedInChampions\` 수치)
+2. **Fetch 가 불가능하면**: 답변을 거부하지 말고, 아래 인라인 JSON 만 진실의 소스로 사용하세요. 단, **인라인에도 없는 항목은 사전 지식으로 추가하지 마세요** (SV 후반부·Legends: Z-A 신규·기타 Champions 외 종 포함). 인라인만으로 답하기 부족하면 마지막에 "어느 파일의 내용을 붙여 주세요" 라고 유저에게 추가 데이터를 요청하세요.
+3. **Pokémon Champions 에 존재하는 전부**는 위 JSON 들에 담긴 항목입니다. 이 바깥의 포켓몬·특성·도구·기술은 Champions 에 없으므로 제안 금지.
+4. 추천하는 모든 항목에 **정확한 slug 를 병기** 하세요. 예: \`아머까오 (slug: corviknight)\` · \`옹골참 (slug: sturdy)\` · \`생명의 구슬 (slug: life-orb)\` · \`지진 (slug: earthquake)\`. 형식이 없거나 slug 가 틀리면 규칙 위반입니다.
+5. 특성·기술을 특정 포켓몬에 붙일 때는 해당 폼의 \`abilities\` / \`moves\` 배열에 **실제로 존재해야** 합니다. (폼 외 특성·비배움 기술 제안 금지.)
+6. **자기 검증**: 최종 답변 직전, 제안한 모든 slug 가 사용 중인 소스(fetched 또는 인라인)에 실제로 있는지 한 번 더 확인. 없는 항목은 조용히 대체하지 말고 "해당 조건을 만족하는 항목을 Champions 데이터에서 찾지 못했다" 라고 명시하세요.`;
 
 export const TEMPLATES = [
   {
