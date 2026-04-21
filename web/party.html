@@ -66,6 +66,18 @@
     <p class="empty-state" id="picker-empty" hidden data-i18n="empty">결과가 없습니다.</p>
   </dialog>
 
+  <!-- Move picker modal (shared across all 4 move slots × 6 party slots) -->
+  <dialog class="picker-modal" id="move-picker-modal" data-i18n-aria="party.movePicker.title" aria-label="기술 선택">
+    <form method="dialog" class="picker-modal__head">
+      <input class="picker-modal__search" id="move-picker-search" type="search" placeholder="기술 이름(한/영) 검색…" data-i18n-ph="party.movePicker.searchPlaceholder" />
+      <div class="picker-modal__types" id="move-picker-type-filters" role="group" data-i18n-aria="party.movePicker.typeFilter" aria-label="타입 필터"></div>
+      <div class="picker-modal__types" id="move-picker-cat-filters" role="group" data-i18n-aria="party.movePicker.catFilter" aria-label="분류 필터"></div>
+      <button class="button" type="submit" value="cancel" data-i18n="party.close">닫기</button>
+    </form>
+    <div class="picker-modal__list" id="move-picker-list" role="listbox"></div>
+    <p class="empty-state" id="move-picker-empty" hidden data-i18n="empty">결과가 없습니다.</p>
+  </dialog>
+
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <p>

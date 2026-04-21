@@ -85,10 +85,15 @@ const state = {
   typeChart: null,
   // Party: Array of Slot|null, fixed length SLOT_COUNT
   party: /** @type {(Slot|null)[]} */ (Array(SLOT_COUNT).fill(null)),
-  // Modal
+  // Modal (pokemon picker)
   pickerTarget: -1,
   pickerQuery: "",
   pickerTypes: /** @type {Set<string>} */ (new Set()),
+  // Modal (move picker) — target identifies (partySlotIndex, moveSlotPos 0..3)
+  movePickerTarget: /** @type {{slotIndex: number, slotPos: number}} */ ({ slotIndex: -1, slotPos: -1 }),
+  movePickerQuery: "",
+  movePickerTypes: /** @type {Set<string>} */ (new Set()),
+  movePickerCats: /** @type {Set<string>} */ (new Set()),
 };
 
 const els = {
@@ -104,6 +109,12 @@ const els = {
   pickerTypeFilters: document.getElementById("picker-type-filters"),
   pickerList: document.getElementById("picker-list"),
   pickerEmpty: document.getElementById("picker-empty"),
+  moveModal: /** @type {HTMLDialogElement} */ (document.getElementById("move-picker-modal")),
+  movePickerSearch: document.getElementById("move-picker-search"),
+  movePickerTypeFilters: document.getElementById("move-picker-type-filters"),
+  movePickerCatFilters: document.getElementById("move-picker-cat-filters"),
+  movePickerList: document.getElementById("move-picker-list"),
+  movePickerEmpty: document.getElementById("move-picker-empty"),
 };
 
 // ── init ───────────────────────────────────────────────────────
@@ -152,6 +163,19 @@ function bindGlobalEvents() {
     state.pickerQuery = els.pickerSearch.value;
     renderPickerList();
   });
+  if (els.movePickerSearch) {
+    els.movePickerSearch.addEventListener("input", () => {
+      state.movePickerQuery = els.movePickerSearch.value;
+      renderMovePickerList();
+    });
+  }
+  if (els.moveModal) {
+    // <dialog>'s native "cancel" (Esc) / submit("cancel") fire "close".
+    // Reset the modal target so re-opening starts clean.
+    els.moveModal.addEventListener("close", () => {
+      state.movePickerTarget = { slotIndex: -1, slotPos: -1 };
+    });
+  }
   if (els.aiPrompts) {
     els.aiPrompts.addEventListener("click", (e) => {
       if (els.aiPrompts.getAttribute("aria-disabled") === "true") {
@@ -563,53 +587,242 @@ function makeSpInputs(index, form, slot) {
 }
 
 function makeMoveSelect(index, pokemon, slot, learnable, slotPos) {
-  const wrap = document.createElement("label");
+  // Render a button that opens the shared move-picker modal. The old native
+  // <select> with 80+ options was slow to skim; the modal has search + type
+  // / category filters and reuses the existing pokemon-picker <dialog>
+  // pattern so users only learn one interaction.
+  const wrap = document.createElement("div");
   wrap.className = "slot-card__field";
 
   const label = document.createElement("span");
   label.className = "slot-card__field-label";
   label.textContent = `${t("party.moves.slot")} ${slotPos + 1}`;
 
-  const sel = document.createElement("select");
-  sel.className = "field__control";
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "slot-card__move-btn";
 
-  const none = document.createElement("option");
-  none.value = "";
-  none.textContent = t("party.moves.none");
-  sel.appendChild(none);
+  const selectedSlug = slot.moves?.[slotPos] || "";
+  const selectedMove = selectedSlug ? state.moveMap.get(selectedSlug) : null;
 
-  const selected = slot.moves?.[slotPos] || "";
-  const excluded = new Set((slot.moves || []).filter((m, j) => m && j !== slotPos));
-
-  for (const m of learnable) {
-    if (excluded.has(m.slug)) continue;
-    const opt = document.createElement("option");
-    opt.value = m.slug;
-    const typeL = typeLabel(m.type);
-    const catL = moveCategoryLabel(m.category || "");
-    opt.textContent = `${moveDisplayName(m)} · ${typeL}${catL ? " · " + catL : ""}`;
-    if (m.slug === selected) opt.selected = true;
-    sel.appendChild(opt);
+  if (selectedMove) {
+    const typeL = typeLabel(selectedMove.type);
+    const catL = moveCategoryLabel(selectedMove.category || "");
+    btn.innerHTML = `${moveDisplayName(selectedMove)}<span class="slot-card__move-btn-meta">· ${typeL}${catL ? " · " + catL : ""}</span>`;
+  } else {
+    btn.classList.add("slot-card__move-btn--empty");
+    btn.textContent = t("party.moves.placeholder");
   }
 
-  sel.addEventListener("change", () => {
-    const current = state.party[index];
-    if (!current) return;
-    const moves = [...(current.moves || [])];
-    const newValue = sel.value;
-    if (newValue) {
-      if (slotPos < moves.length) moves[slotPos] = newValue;
-      else moves.push(newValue);
-    } else if (slotPos < moves.length) {
-      moves.splice(slotPos, 1);
-    }
-    state.party[index] = { ...current, moves };
-    writePartyToUrl();
-    renderAll();
+  btn.addEventListener("click", () => {
+    openMovePicker(index, slotPos);
   });
 
-  wrap.append(label, sel);
+  wrap.append(label, btn);
   return wrap;
+}
+
+// ── move picker modal ───────────────────────────────────────
+// Shared across all 6 × 4 = 24 move slots. Target is tracked on state.
+
+function openMovePicker(slotIndex, slotPos) {
+  state.movePickerTarget = { slotIndex, slotPos };
+  state.movePickerQuery = "";
+  // Filters persist across opens — users often apply the same filter to
+  // multiple slots in a row. Click a chip again to deactivate.
+  if (els.movePickerSearch) els.movePickerSearch.value = "";
+  renderMovePickerChips();
+  renderMovePickerList();
+  if (typeof els.moveModal.showModal === "function") {
+    els.moveModal.showModal();
+  } else {
+    els.moveModal.setAttribute("open", "");
+  }
+  if (els.movePickerSearch) els.movePickerSearch.focus();
+}
+
+function closeMovePicker() {
+  if (typeof els.moveModal.close === "function") els.moveModal.close();
+  else els.moveModal.removeAttribute("open");
+  state.movePickerTarget = { slotIndex: -1, slotPos: -1 };
+}
+
+function renderMovePickerChips() {
+  // Type chips
+  const typeHost = els.movePickerTypeFilters;
+  if (typeHost && !typeHost.dataset.built) {
+    typeHost.replaceChildren();
+    for (const tp of TYPE_ORDER) {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = `chip chip--type chip--type-${tp}`;
+      chip.textContent = typeLabel(tp);
+      chip.setAttribute("aria-pressed", "false");
+      chip.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (state.movePickerTypes.has(tp)) state.movePickerTypes.delete(tp);
+        else state.movePickerTypes.add(tp);
+        chip.setAttribute("aria-pressed", state.movePickerTypes.has(tp) ? "true" : "false");
+        renderMovePickerList();
+      });
+      typeHost.appendChild(chip);
+    }
+    typeHost.dataset.built = "1";
+  }
+  // Sync pressed state (filters persist across opens)
+  if (typeHost) {
+    for (const chip of typeHost.querySelectorAll("[aria-pressed]")) {
+      const tp = chip.textContent;
+      // find by comparing label
+      const active = [...state.movePickerTypes].some((k) => typeLabel(k) === tp);
+      chip.setAttribute("aria-pressed", active ? "true" : "false");
+    }
+  }
+
+  // Category chips (physical / special / status)
+  const catHost = els.movePickerCatFilters;
+  if (catHost && !catHost.dataset.built) {
+    catHost.replaceChildren();
+    for (const cat of ["physical", "special", "status"]) {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "chip chip--cat";
+      chip.textContent = moveCategoryLabel(cat);
+      chip.setAttribute("aria-pressed", "false");
+      chip.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (state.movePickerCats.has(cat)) state.movePickerCats.delete(cat);
+        else state.movePickerCats.add(cat);
+        chip.setAttribute("aria-pressed", state.movePickerCats.has(cat) ? "true" : "false");
+        renderMovePickerList();
+      });
+      catHost.appendChild(chip);
+    }
+    catHost.dataset.built = "1";
+  }
+  if (catHost) {
+    const chips = catHost.querySelectorAll("[aria-pressed]");
+    const cats = ["physical", "special", "status"];
+    chips.forEach((chip, i) => {
+      chip.setAttribute(
+        "aria-pressed",
+        state.movePickerCats.has(cats[i]) ? "true" : "false",
+      );
+    });
+  }
+}
+
+function renderMovePickerList() {
+  const { slotIndex, slotPos } = state.movePickerTarget;
+  const slot = state.party[slotIndex];
+  if (!slot) return;
+  const pokemon = state.pokemonMap.get(slot.slug);
+  if (!pokemon) return;
+
+  const learnable = (pokemon.moves || [])
+    .map((s) => state.moveMap.get(s))
+    .filter(Boolean);
+  learnable.sort((a, b) =>
+    moveDisplayName(a).localeCompare(moveDisplayName(b), getLang() === "ko" ? "ko" : "en"),
+  );
+
+  const q = (state.movePickerQuery || "").trim().toLowerCase();
+  // moves selected in OTHER positions in the same slot — mark as taken
+  const takenInOther = new Set(
+    (slot.moves || []).filter((m, j) => m && j !== slotPos),
+  );
+  const currentPick = slot.moves?.[slotPos] || "";
+
+  const frag = document.createDocumentFragment();
+  let shown = 0;
+  for (const m of learnable) {
+    if (state.movePickerTypes.size && !state.movePickerTypes.has(m.type)) continue;
+    if (state.movePickerCats.size && !state.movePickerCats.has(m.category)) continue;
+    if (q) {
+      const hay = [
+        m.slug,
+        m.nameKo || "",
+        m.nameEn || "",
+      ].join(" ").toLowerCase();
+      if (!hay.includes(q)) continue;
+    }
+    shown++;
+    const isTaken = takenInOther.has(m.slug);
+    const isCurrent = m.slug === currentPick;
+
+    const row = document.createElement("button");
+    row.type = "button";
+    row.className = "picker-row picker-row--move";
+    if (isTaken) row.classList.add("picker-row--taken");
+    row.setAttribute("role", "option");
+    row.setAttribute("aria-selected", isCurrent ? "true" : "false");
+    if (isTaken) row.setAttribute("aria-disabled", "true");
+
+    const text = document.createElement("div");
+    text.className = "picker-row__text";
+    text.innerHTML = `<span class="picker-row__name">${moveDisplayName(m)}</span>`;
+
+    const typeBadge = document.createElement("span");
+    typeBadge.className = `type type--${m.type}`;
+    typeBadge.textContent = typeLabel(m.type);
+
+    const catBadge = document.createElement("span");
+    catBadge.className = `picker-row__cat picker-row__cat--${m.category || "status"}`;
+    catBadge.textContent = moveCategoryLabel(m.category || "status");
+
+    const nums = document.createElement("span");
+    nums.className = "picker-row__num";
+    const pwr = m.power == null ? "—" : m.power;
+    const acc = m.accuracy == null ? "—" : m.accuracy;
+    nums.textContent = `${pwr}/${acc}`;
+    nums.title = `${t("detail.move.power")} / ${t("detail.move.accuracy")}`;
+
+    row.append(text, typeBadge, catBadge, nums);
+
+    if (isTaken) {
+      const tag = document.createElement("span");
+      tag.className = "picker-row__taken";
+      tag.textContent = t("party.movePicker.alreadyUsed");
+      row.appendChild(tag);
+    } else {
+      row.addEventListener("click", () => pickMove(m.slug));
+    }
+
+    frag.appendChild(row);
+  }
+  els.movePickerList.replaceChildren(frag);
+  els.movePickerEmpty.hidden = shown > 0;
+}
+
+function pickMove(moveSlug) {
+  const { slotIndex, slotPos } = state.movePickerTarget;
+  const current = state.party[slotIndex];
+  if (!current) return;
+  const moves = [...(current.moves || [])];
+  // Ensure array has slotPos entries
+  while (moves.length < slotPos) moves.push("");
+  moves[slotPos] = moveSlug;
+  // Trim trailing empties
+  while (moves.length && !moves[moves.length - 1]) moves.pop();
+  state.party[slotIndex] = { ...current, moves };
+  closeMovePicker();
+  writePartyToUrl();
+  renderAll();
+}
+
+// Clear a single move slot (invoked from the "None" quick action row in the
+// modal — added as the first row when the current slot has a pick).
+function clearMoveSlot() {
+  const { slotIndex, slotPos } = state.movePickerTarget;
+  const current = state.party[slotIndex];
+  if (!current) return;
+  const moves = [...(current.moves || [])];
+  if (slotPos < moves.length) moves[slotPos] = "";
+  while (moves.length && !moves[moves.length - 1]) moves.pop();
+  state.party[slotIndex] = { ...current, moves };
+  closeMovePicker();
+  writePartyToUrl();
+  renderAll();
 }
 
 function makeFormSelect(index, pokemon, slot) {

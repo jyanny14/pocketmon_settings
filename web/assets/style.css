@@ -1700,6 +1700,47 @@ select.field__input {
   white-space: nowrap;
 }
 
+/* Move-picker row variant — no sprite column, more compact type/cat/power */
+.picker-row--move {
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: var(--space-2);
+}
+.picker-row--move .picker-row__text {
+  min-width: 0;
+}
+.picker-row__cat {
+  font-size: .7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--bg-muted);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.picker-row__cat--physical { background: #fde68a; color: #78350f; }
+.picker-row__cat--special { background: #bfdbfe; color: #1e3a8a; }
+.picker-row__cat--status { background: #e9d5ff; color: #5b21b6; }
+@media (prefers-color-scheme: dark) {
+  .picker-row__cat--physical { background: #451a03; color: #fcd34d; }
+  .picker-row__cat--special  { background: #172554; color: #93c5fd; }
+  .picker-row__cat--status   { background: #3b0764; color: #c4b5fd; }
+}
+.picker-row__num {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--text-muted);
+  min-width: 3.5rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.picker-modal__cats {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 640px) {
   .analysis-stats-grid { grid-template-columns: repeat(3, 1fr); }
   .party-grid { grid-template-columns: 1fr; }
@@ -1842,6 +1883,41 @@ select.field__input {
      "지옥 찌르기 · 고스트 · 물리" doesn't push the select out of the card. */
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+/* Move slot trigger button — replaces the native <select> and opens the
+   shared move-picker modal. Keeps width contained inside the 2-column grid. */
+.slot-card__move-btn {
+  all: unset;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: .3rem .45rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font-size: .82rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+.slot-card__move-btn:hover,
+.slot-card__move-btn:focus-visible {
+  background: var(--bg-muted);
+  border-color: var(--accent);
+}
+.slot-card__move-btn--empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+.slot-card__move-btn-meta {
+  color: var(--text-muted);
+  font-size: .72rem;
+  margin-left: .25rem;
 }
 .slot-card__sp {
   margin-top: .5rem;
