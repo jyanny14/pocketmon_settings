@@ -406,22 +406,92 @@ function makeSpInputs(index, form, slot) {
   const total = sps.reduce((a, b) => a + b, 0);
   const over = total > SP_TOTAL_MAX;
 
+  // Look up the selected nature so we can tint stats it boosts / cuts.
+  const nature = slot.nature
+    ? state.natures.find((n) => n.slug === slot.nature) || null
+    : null;
+
   const header = document.createElement("div");
   header.className = "slot-card__sp-header";
   header.innerHTML = `<span>${t("party.sp.title")}</span><span class="slot-card__sp-total${over ? " slot-card__sp-total--over" : ""}">${total}/${SP_TOTAL_MAX}</span>`;
   wrap.appendChild(header);
 
+  // 66-point budget bar — width = total / cap, clamped to 100%.
+  const budget = document.createElement("div");
+  budget.className = "slot-card__sp-budget";
+  budget.setAttribute("role", "progressbar");
+  budget.setAttribute("aria-valuemin", "0");
+  budget.setAttribute("aria-valuemax", String(SP_TOTAL_MAX));
+  budget.setAttribute("aria-valuenow", String(Math.min(total, SP_TOTAL_MAX)));
+  const pct = Math.min(100, Math.round((total / SP_TOTAL_MAX) * 100));
+  const fill = document.createElement("div");
+  fill.className = "slot-card__sp-budget-fill" + (over ? " slot-card__sp-budget-fill--over" : "");
+  fill.style.width = `${pct}%`;
+  budget.appendChild(fill);
+  wrap.appendChild(budget);
+
   const grid = document.createElement("div");
   grid.className = "slot-card__sp-grid";
 
+  /** Apply a proposed value to sps[i] — clamps the stat to 0..32, rejects if
+   *  the new total would exceed 66. Re-renders on accept. */
+  const commit = (i, rawValue) => {
+    const current = state.party[index];
+    if (!current) return false;
+    let v = Math.max(0, Math.min(SP_PER_STAT_MAX, Math.floor(rawValue || 0)));
+    const base = (current.sps && current.sps.length === 6) ? current.sps : emptySps();
+    const nextSps = [...base];
+    nextSps[i] = v;
+    const newTotal = nextSps.reduce((a, b) => a + b, 0);
+    if (newTotal > SP_TOTAL_MAX) return false;
+    state.party[index] = { ...current, sps: nextSps };
+    writePartyToUrl();
+    renderAll();
+    return true;
+  };
+
+  /** Budget headroom for a stat = min(32, 66 − other_stats). */
+  const maxFor = (i) => {
+    const others = sps.reduce((acc, v, j) => acc + (j === i ? 0 : v), 0);
+    return Math.max(0, Math.min(SP_PER_STAT_MAX, SP_TOTAL_MAX - others));
+  };
+
   SP_STAT_KEYS.forEach((key, i) => {
-    const cell = document.createElement("label");
+    const cell = document.createElement("div");
     cell.className = "slot-card__sp-cell";
+    cell.dataset.stat = key;
+    if (nature?.increased === key) cell.dataset.natureEffect = "up";
+    else if (nature?.decreased === key) cell.dataset.natureEffect = "down";
 
     const lab = document.createElement("span");
     lab.className = "slot-card__sp-label";
     lab.textContent = statShortLabel(key);
+    if (nature?.increased === key) {
+      const arrow = document.createElement("span");
+      arrow.className = "slot-card__sp-label-arrow slot-card__sp-label-arrow--up";
+      arrow.textContent = "↑";
+      arrow.title = t("party.nature.title") + ": +10%";
+      lab.appendChild(arrow);
+    } else if (nature?.decreased === key) {
+      const arrow = document.createElement("span");
+      arrow.className = "slot-card__sp-label-arrow slot-card__sp-label-arrow--down";
+      arrow.textContent = "↓";
+      arrow.title = t("party.nature.title") + ": -10%";
+      lab.appendChild(arrow);
+    }
     cell.appendChild(lab);
+
+    // Stepper row: [−] [input] [+]
+    const stepper = document.createElement("div");
+    stepper.className = "slot-card__sp-stepper";
+
+    const dec = document.createElement("button");
+    dec.type = "button";
+    dec.className = "slot-card__sp-step";
+    dec.textContent = "−";
+    dec.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.dec")}`);
+    dec.disabled = sps[i] <= 0;
+    dec.addEventListener("click", () => commit(i, sps[i] - 1));
 
     const input = document.createElement("input");
     input.type = "number";
@@ -431,27 +501,48 @@ function makeSpInputs(index, form, slot) {
     input.step = "1";
     input.inputMode = "numeric";
     input.value = String(sps[i] || 0);
-
+    input.setAttribute("aria-label", statShortLabel(key));
     input.addEventListener("change", () => {
-      const current = state.party[index];
-      if (!current) return;
-      let v = parseInt(input.value, 10);
-      if (!Number.isFinite(v) || v < 0) v = 0;
-      if (v > SP_PER_STAT_MAX) v = SP_PER_STAT_MAX;
-      const nextSps = [...(current.sps && current.sps.length === 6 ? current.sps : emptySps())];
-      nextSps[i] = v;
-      // clamp total — if over 66, reject change (revert)
-      const newTotal = nextSps.reduce((a, b) => a + b, 0);
-      if (newTotal > SP_TOTAL_MAX) {
-        input.value = String((current.sps || emptySps())[i] || 0);
-        return;
+      const v = parseInt(input.value, 10);
+      if (!commit(i, v)) {
+        // revert on rejected change (budget exceeded)
+        input.value = String(sps[i] || 0);
       }
-      state.party[index] = { ...current, sps: nextSps };
-      writePartyToUrl();
-      renderAll();
     });
 
-    cell.appendChild(input);
+    const inc = document.createElement("button");
+    inc.type = "button";
+    inc.className = "slot-card__sp-step";
+    inc.textContent = "+";
+    inc.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.inc")}`);
+    const headroom = maxFor(i);
+    inc.disabled = sps[i] >= headroom;
+    inc.addEventListener("click", () => commit(i, sps[i] + 1));
+
+    stepper.append(dec, input, inc);
+    cell.appendChild(stepper);
+
+    // Quick MAX / 0 row
+    const quick = document.createElement("div");
+    quick.className = "slot-card__sp-quick";
+
+    const maxBtn = document.createElement("button");
+    maxBtn.type = "button";
+    maxBtn.className = "slot-card__sp-quick-btn";
+    maxBtn.textContent = "MAX";
+    maxBtn.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.max")}`);
+    maxBtn.addEventListener("click", () => commit(i, maxFor(i)));
+
+    const zeroBtn = document.createElement("button");
+    zeroBtn.type = "button";
+    zeroBtn.className = "slot-card__sp-quick-btn";
+    zeroBtn.textContent = "0";
+    zeroBtn.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.zero")}`);
+    zeroBtn.addEventListener("click", () => commit(i, 0));
+
+    quick.append(maxBtn, zeroBtn);
+    cell.appendChild(quick);
+
     grid.appendChild(cell);
   });
 

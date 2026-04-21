@@ -21,6 +21,13 @@
   - 생략: T35a (`moves.json` target 필드 수집 via PokeAPI). AI 가 "Earthquake 는 전체" 같은 상식을 갖고 있어서 첫 패스에 불필요. 정확도 향상 필요 시 후속 작업.
   - 스모크: `TEMPLATES.length === 9`, 6개 both(4 키 전부), 3개 double(2 키), HTML/CSS 정상 serve. 실사용 테스트는 사용자 브라우저에서.
 
+- 파티 빌더 Phase 1 UI 개선 — 외부 AI 컨설팅 결과 기반 (T32a 연장). 기술 select 오버플로우 수정 + 노력치 입력 UX 개편 + 성격/스탯 시각 연동.
+  - `web/assets/style.css` — (1) `.slot-card { min-width: 0 }` 로 그리드 아이템 확장 차단. (2) `.slot-card__moves-row` 를 `minmax(0, 1fr)` 로 변경, select 에 `width: 100% + min-width: 0 + text-overflow: ellipsis` 로 2번째 열 기술 select 가 카드 밖으로 넘어가던 문제 해결. (3) `.slot-card__sp-budget` / `.slot-card__sp-budget-fill` (+over variant) — 66포인트 예산 진행 바 신규. (4) `.slot-card__sp-cell` 재설계: 그리드 2열·3행, 라벨+스테퍼+quick 액션. nature-effect data attribute 로 `color-mix` 기반 연한 녹색/빨강 tint. (5) `.slot-card__sp-stepper` (`[−] input [+]` 3칸 그리드) + `.slot-card__sp-step` (원형 작은 버튼). (6) `.slot-card__sp-quick` / `.slot-card__sp-quick-btn` — MAX / 0 미니 버튼. (7) `.slot-card__sp-label-arrow--up/down` — 성격 증가/감소 ↑↓ 아이콘 색.
+  - `web/assets/party.js` `makeSpInputs` 전면 재작성 — `commit(i, v)` 헬퍼로 클램프·예산 검사·state 갱신 일원화, `maxFor(i)` 헬퍼로 "내 스탯 올려도 총합 66 안 넘는 최대값" 계산. 각 스탯 셀에 `data-stat` / `data-nature-effect` 자동 부착. stepper `[−][+]` 는 0 일 때 / headroom 도달 시 disabled. `MAX` 버튼은 `maxFor(i)` 까지, `0` 버튼은 0 으로 즉시. 예산 초과 시 input 타이핑은 이전 값 복원. 상단 progressbar role 에 `aria-valuenow/min/max` 설정.
+  - `web/assets/i18n.js` — `party.sp.{dec,inc,max,zero}` ko/en 4키 신규 (스테퍼·quick 버튼 aria-label 용).
+  - UX 결정 기록: 프리셋(물리풀/특수풀 등) 방식은 거부됨 — 대신 A+B 조합(빠른 액션 + 예산 바 + 스테퍼) 채택. "세밀 조작(타이핑)과 빠른 조작(버튼) 공존" 원칙.
+  - Phase 2 (다음 세션): 기술 피커 모달 재구조 + 남은 예산 자동 할당 버튼. Phase 3 (추후): 탭 분리 · 메타 추천 기본값.
+
 - Rotom 가전 5폼 전부 데이터에 추가 — 파티 빌더에서 Heat/Wash/Frost/Fan/Mow Rotom 각각 선택 가능.
   - 원인: serebii 의 Rotom 상세 페이지가 5종 가전 폼을 단일 "Stats - Alternate Forms" 테이블에 묶어 넣어서 (스탯·특성 동일, 타입만 다름) 파서가 "Alternate Forms" 한 개만 만들어내던 상태.
   - `scripts/parser.py` — `parse_pokemon_detail` 말미에 `slug == "rotom"` 체크 후 `_expand_rotom_forms` 호출. "Alternate Forms" 엔트리를 5개 PokemonForm 으로 전개 (Heat=Electric/Fire, Wash=Electric/Water, Frost=Electric/Ice, Fan=Electric/Flying, Mow=Electric/Grass). 스탯·특성(Levitate) 은 lumped 엔트리에서 상속.

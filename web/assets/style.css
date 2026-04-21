@@ -1409,6 +1409,7 @@ select.field__input {
   flex-direction: column;
   gap: var(--space-2);
   min-height: 200px;
+  min-width: 0; /* prevent children (selects with long options) from pushing card width */
 }
 .slot-card--empty {
   align-items: stretch;
@@ -1825,11 +1826,22 @@ select.field__input {
 }
 .slot-card__moves-row {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: .4rem;
 }
 @media (min-width: 640px) {
-  .slot-card__moves-row { grid-template-columns: 1fr 1fr; }
+  .slot-card__moves-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+.slot-card__moves-row .field__control,
+.slot-card__moves-row select.field__control {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* Keep option text to one line in the closed state so a long name like
+     "지옥 찌르기 · 고스트 · 물리" doesn't push the select out of the card. */
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .slot-card__sp {
   margin-top: .5rem;
@@ -1849,27 +1861,123 @@ select.field__input {
   color: #e11d48;
   font-weight: 700;
 }
+
+/* Visual 66-point budget bar — always shows how much of the 66 cap is used
+   and goes red when the total spills over. */
+.slot-card__sp-budget {
+  height: 6px;
+  background: var(--bg-muted);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: .5rem;
+}
+.slot-card__sp-budget-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s;
+}
+.slot-card__sp-budget-fill--over { background: #e11d48; }
+
 .slot-card__sp-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .4rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .5rem;
 }
-@media (min-width: 640px) {
-  .slot-card__sp-grid { grid-template-columns: repeat(6, 1fr); }
+@media (min-width: 520px) {
+  .slot-card__sp-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 }
 .slot-card__sp-cell {
-  display: flex;
-  flex-direction: column;
-  gap: .15rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: .5rem;
+  row-gap: .25rem;
+  align-items: center;
+  padding: .3rem .4rem;
+  border-radius: 4px;
+  min-width: 0;
+}
+/* Nature-aware tint — applied only when the slot has a non-neutral nature. */
+.slot-card__sp-cell[data-nature-effect="up"] {
+  background: color-mix(in oklab, #22c55e 14%, transparent);
+}
+.slot-card__sp-cell[data-nature-effect="down"] {
+  background: color-mix(in oklab, #ef4444 14%, transparent);
 }
 .slot-card__sp-label {
-  font-size: .75rem;
+  font-size: .78rem;
   color: var(--text-muted);
+  font-weight: 600;
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+.slot-card__sp-label-arrow {
+  font-size: .85rem;
+  line-height: 1;
+}
+.slot-card__sp-label-arrow--up { color: #16a34a; }
+.slot-card__sp-label-arrow--down { color: #dc2626; }
+
+/* Stepper row: [−] [input] [+] */
+.slot-card__sp-stepper {
+  display: grid;
+  grid-template-columns: 1.4rem minmax(0, 1fr) 1.4rem;
+  gap: 2px;
+  min-width: 0;
+}
+.slot-card__sp-step {
+  all: unset;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  padding: 4px 0;
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 3px;
+  min-width: 0;
+  user-select: none;
+}
+.slot-card__sp-step:hover,
+.slot-card__sp-step:focus-visible { background: var(--bg-muted); }
+.slot-card__sp-step:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 .slot-card__sp-input {
   width: 100%;
   padding: .25rem .35rem;
   font-variant-numeric: tabular-nums;
+  text-align: center;
+  min-width: 0;
+}
+
+/* Quick MAX / 0 actions */
+.slot-card__sp-quick {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.slot-card__sp-quick-btn {
+  all: unset;
+  cursor: pointer;
+  font-size: .68rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 0;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 3px;
+  user-select: none;
+}
+.slot-card__sp-quick-btn:hover,
+.slot-card__sp-quick-btn:focus-visible {
+  background: var(--bg-muted);
+  color: var(--text);
 }
 .slot-card__sp-effective {
   margin-top: .5rem;
