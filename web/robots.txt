@@ -2,11 +2,13 @@
 #
 # 1. AI training crawlers — block everything. Our dataset derives from
 #    serebii / PokeAPI; we don't want Nintendo IP baked into model weights.
-# 2. User-triggered AI browsing — allow. When a user pastes a URL into
-#    ChatGPT / Claude.ai / Perplexity, the fetch should succeed.
-# 3. Unknown crawlers — deny HTML pages (also noindex via <meta>), but
-#    allow the data JSON + llms.txt so AI tools with non-standard UAs
-#    can still get the data when a user pastes the link.
+# 2. User-triggered AI browsing (ChatGPT-User, ClaudeBot, etc.) — allow.
+#    When a user pastes a URL into an AI tool the fetch should succeed.
+# 3. Everything else (search engines, generic crawlers) — allow. Search
+#    indexing is how real users discover the site; other Pokémon fan
+#    references (Serebii, Bulbapedia, Smogon, PokemonDB) all index openly.
+#    The share-only prompts.html stays out of indexes via its own
+#    <meta name="robots" content="noindex"> tag.
 
 # ── AI training crawlers — disallow ─────────────────────────────
 User-agent: GPTBot
@@ -49,9 +51,6 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-# ── Default: block HTML indexing, allow data files ──────────────
+# ── Default (search engines, unknown crawlers) — allow ──────────
 User-agent: *
-Disallow: /
-Allow: /data/
-Allow: /llms.txt
-Allow: /robots.txt
+Allow: /

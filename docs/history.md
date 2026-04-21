@@ -13,6 +13,8 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- `web/robots.txt` 검색 엔진 인덱싱 **허용으로 전환**. 직전 버전은 search engine 까지 기본 차단(IP 리스크 회피 보수적 선택) 이었는데, 유저 유입 통로를 완전히 막아버리면 사이트의 의의가 약함. serebii / Bulbapedia / Smogon / PokemonDB 등 동종 팬 레퍼런스 사이트가 전부 풀 인덱싱 + 10~20년 문제없이 운영되는 관례, 그리고 README 의 "권리자 문의 시 즉시 삭제" 조항을 감안한 트레이드오프 재평가 결과. 유지한 건 (1) AI 학습 크롤러 차단, (2) `prompts.html` 의 `<meta name="robots" content="noindex">` — 파티 공유 URL 이라 인덱싱 의미 없음. 최종 로직: 학습 봇 block, user-triggered AI 봇 allow, 그 외 all allow.
+
 - `web/robots.txt` 전면 재작성. 직전 버전 `User-agent: * / Disallow: /` 가 **ChatGPT/Claude.ai 의 user-triggered browsing 에이전트까지 모두 차단**하고 있었음. 유저가 AI 에 프롬프트 붙여넣어도 봇이 robots.txt 존중해서 fetch 포기 → "fetch 실패로 답변 불가" 루프. 새 정책 3단계:
   1. AI 학습 크롤러 차단 (Nintendo IP 리스크 유지): GPTBot, anthropic-ai, Google-Extended, CCBot, Bytespider, Meta-ExternalAgent, Applebot-Extended.
   2. User-triggered AI browsing 허용: ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-Web, PerplexityBot, Perplexity-User.
