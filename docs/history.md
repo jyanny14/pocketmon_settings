@@ -13,6 +13,11 @@
   - `web/assets/i18n.js` — `party.aiPromptsDisabledHint` ko/en 신규 (`title` 속성용 힌트).
   - `web/assets/style.css` — `.button[aria-disabled="true"]` 에 opacity 0.5 / not-allowed 커서 / hover 무효화 스타일 추가.
 
+- `web/robots.txt` 전면 재작성. 직전 버전 `User-agent: * / Disallow: /` 가 **ChatGPT/Claude.ai 의 user-triggered browsing 에이전트까지 모두 차단**하고 있었음. 유저가 AI 에 프롬프트 붙여넣어도 봇이 robots.txt 존중해서 fetch 포기 → "fetch 실패로 답변 불가" 루프. 새 정책 3단계:
+  1. AI 학습 크롤러 차단 (Nintendo IP 리스크 유지): GPTBot, anthropic-ai, Google-Extended, CCBot, Bytespider, Meta-ExternalAgent, Applebot-Extended.
+  2. User-triggered AI browsing 허용: ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-Web, PerplexityBot, Perplexity-User.
+  3. 그 외 (검색 엔진 포함) — HTML 은 차단 유지(`<meta name="robots" content="noindex">` 이중 장치), 다만 `/data/` `/llms.txt` `/robots.txt` 는 Allow. 이유: UA 목록에 없는 AI 도구가 generic UA 로 요청할 때도 JSON 데이터만큼은 받을 수 있게 함. HTML 페이지는 JS 렌더라 봇이 fetch 해도 의미 없음.
+
 - `STRICT_POOL_RULES` rule1 소프트닝. 직전 버전은 "fetch 실패 시 '데이터 fetch 실패로 답변 불가' 라고만 응답" 으로 강경 거부 → ChatGPT 기본·Claude.ai 기본 등 **fetch 기능이 없는/제한된 AI 도구에서 프롬프트 전체가 무효화** 되는 문제 발생. 유저 피드백("jyanny14.github.io 에서 데이터 불러오지 못함 → 답변 불가") 확인 후 즉시 수정.
   - 신규 규칙 구조: (1) fetch > 인라인 > 기타 금지 우선순위, (2) fetch 실패 시 답변 거부 대신 **인라인 JSON 만 진실의 소스로 사용** + **사전 지식 외부 항목 추가 금지** + 부족하면 "파일 내용 붙여주세요" 로 유저에게 되묻기, (3~6) 기존 no-out-of-pool / slug 병기 / abilities·moves 배열 강제 / 자기 검증 유지.
   - 6개 카드 전수 검증: 새 rule1 phrasing 6회, 구 강경 거부 문구 0회, 폴백 phrasing 6회 주입.
