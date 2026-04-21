@@ -21,6 +21,13 @@
   - 생략: T35a (`moves.json` target 필드 수집 via PokeAPI). AI 가 "Earthquake 는 전체" 같은 상식을 갖고 있어서 첫 패스에 불필요. 정확도 향상 필요 시 후속 작업.
   - 스모크: `TEMPLATES.length === 9`, 6개 both(4 키 전부), 3개 double(2 키), HTML/CSS 정상 serve. 실사용 테스트는 사용자 브라우저에서.
 
+- 파티 빌더 — 메가폼 선택 시 해당 **메가스톤 자동 장착 + 도구 고정**. 사용자가 메가 폼을 선택하면 실제 배틀에서 그 메가스톤이 반드시 필요하므로 다른 도구를 쥐어주는 건 잘못된 구성 → UI 에서 자동 처리.
+  - `web/assets/party.js` — (1) `MEGA_STONE_BY_FORM` 맵 + `buildMegaStoneMap(items)` — items.json 의 mega-stone 카테고리 59개에서 effect text (`"... X holding this stone"` 패턴) 로 pokemon 이름 추출 후 form slug 과 매칭. 메가 폼 59개 전부 100% 커버리지 확인. (2) `applyMegaStoneLock(slot)` 헬퍼 — 메가 폼이면 itemSlug 를 해당 stone 으로 강제 교체 (non-mutating). (3) 적용 지점 3곳: `pickForm` (신규 슬롯 생성), `makeFormSelect` change 핸들러 (폼 변경), `readPartyFromUrl` (URL 디코드 — 옛 공유 URL 의 "메가 차리자드 + 먹다남은음식" 같은 부정합 자동 교정). (4) `makeItemSelect` — 현재 폼이 메가면 `sel.disabled=true` + `title` 툴팁 + `.slot-card__field--locked` 클래스.
+  - `web/assets/i18n.js` — `party.megaStoneLocked` ko/en 2키 추가.
+  - `web/assets/style.css` — `.slot-card__field--locked` 스타일 (opacity 0.7, not-allowed 커서, muted 배경) + 🔒 자물쇠 아이콘 pseudo-element.
+  - 엣지 케이스: Mega Rayquaza 는 스톤 없음(`Dragon Ascent` 기술로 메가진화) → 맵에 없음 → 자물쇠 미작동. 의도한 동작.
+  - 검증: Charizard X/Y 분리 매칭 (`charizardite-x/-y`), `A special Floette holding` 같은 수식어 포함 문장 정규식에서 올바르게 처리 (`[A-Z][a-z]+\s+holding this stone` 으로 명사 직전 매칭).
+
 - `docs/TODO.md` — 후원 플랫폼 **Ko-fi 로 확정** (2026-04-21). GitHub Sponsors 승인 대기 포기 (일정 불확실). T33 을 "Ko-fi 계정 생성 대기" 상태로 갱신. T33a 를 "결정 이력" 으로 압축 (비교표 유지, Ko-fi 선정 표시). T33c 체크리스트는 T33 본문에 병합. 스프라이트 출처 고지는 현 수준 유지 결정 — 팬 사이트 관례·실질 리스크 낮음 판단 (Serebii/Smogon/Bulbapedia 전부 동일 수준 사용 중). 사용자 계정 생성 후 Ko-fi URL 제공 시 5분 내 href·툴팁 교체 완료.
 - `docs/TODO.md` — "권리자 문의 시 즉시 링크 삭제 + 수령액 전액 환불" 프로세스 항목 **삭제** (T33 체크리스트 · T33b 리스크 완화 (1)d 에서 각각). 사용자 결정: 아직 한 번도 그런 문의가 없었으니 선제적으로 문서화할 필요 없음.
 

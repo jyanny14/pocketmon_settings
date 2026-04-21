@@ -37,6 +37,44 @@ const STORAGE_KEY = "pc.savedParties.v1";
 
 /** @typedef {{slug:string, formName:string, abilitySlug:string, itemSlug:string|null, moves:string[], sps:number[], nature:string|null}} Slot */
 
+// Populated in init() once items.json is loaded. Keys are form.name ("Mega
+// Charizard X"), values are the mega-stone item slug ("charizardite-x"). Forms
+// without a corresponding stone (Mega Rayquaza) are absent — callers must
+// treat "missing" as "no lock needed".
+const MEGA_STONE_BY_FORM = /** @type {Map<string, string>} */ (new Map());
+
+function buildMegaStoneMap(items) {
+  MEGA_STONE_BY_FORM.clear();
+  for (const item of items) {
+    if (item.category !== "mega-stone") continue;
+    // Effect text shape: "...A/An [optional adjective] {Pokemon} holding this
+    // stone will be able to Mega Evolve..." The pokemon name is always the
+    // capitalized word directly before "holding this stone".
+    const m = item.effect?.match(/([A-Z][a-z]+)\s+holding this stone/);
+    if (!m) continue;
+    const pokeName = m[1];
+    let suffix = "";
+    if (item.slug.endsWith("-x")) suffix = " X";
+    else if (item.slug.endsWith("-y")) suffix = " Y";
+    MEGA_STONE_BY_FORM.set(`Mega ${pokeName}${suffix}`, item.slug);
+  }
+}
+
+function megaStoneForForm(formName) {
+  return MEGA_STONE_BY_FORM.get(formName) || null;
+}
+
+/** If this slot's form requires a mega stone, force the itemSlug to that
+ *  stone. Otherwise return the slot unchanged. Non-mutating. */
+function applyMegaStoneLock(slot) {
+  if (!slot) return slot;
+  const stone = megaStoneForForm(slot.formName);
+  if (stone && slot.itemSlug !== stone) {
+    return { ...slot, itemSlug: stone };
+  }
+  return slot;
+}
+
 const state = {
   pokemon: [],
   pokemonMap: /** @type {Map<string, any>} */ (new Map()),
@@ -87,6 +125,7 @@ async function init() {
     state.items = items;
     state.typeChart = typeChart;
     state.natures = natures;
+    buildMegaStoneMap(items);
   } catch (err) {
     els.grid.innerHTML = `<p class="empty-state">${t("error.loadFailed")}: ${err.message}</p>`;
     return;
@@ -499,14 +538,14 @@ function makeFormSelect(index, pokemon, slot) {
   }
   sel.addEventListener("change", () => {
     const newForm = findForm(pokemon, sel.value) || pokemon.forms[0];
-    state.party[index] = {
+    state.party[index] = applyMegaStoneLock({
       ...slot,
       formName: newForm.name,
       // Reset ability to first of new form if current is not valid
       abilitySlug: newForm.abilities.includes(slot.abilitySlug)
         ? slot.abilitySlug
         : newForm.abilities[0],
-    };
+    });
     writePartyToUrl();
     renderAll();
   });
@@ -568,6 +607,15 @@ function makeItemSelect(index, slot) {
       group.appendChild(opt);
     }
     sel.appendChild(group);
+  }
+  // Mega forms lock the item to their corresponding stone. applyMegaStoneLock
+  // already forces the value; here we just disable the control so the user
+  // can't change it.
+  const lockedStone = megaStoneForForm(slot.formName);
+  if (lockedStone) {
+    sel.disabled = true;
+    sel.title = t("party.megaStoneLocked");
+    wrap.classList.add("slot-card__field--locked");
   }
   sel.addEventListener("change", () => {
     state.party[index] = { ...slot, itemSlug: sel.value || null };
@@ -708,7 +756,7 @@ function renderPickerList() {
 
 function pickForm(p, form) {
   /** @type {Slot} */
-  const newSlot = {
+  const newSlot = applyMegaStoneLock({
     slug: p.slug,
     formName: form.name,
     abilitySlug: form.abilities[0] || "",
@@ -716,7 +764,7 @@ function pickForm(p, form) {
     moves: [],
     sps: emptySps(),
     nature: null,
-  };
+  });
   if (state.pickerTarget >= 0) {
     state.party[state.pickerTarget] = newSlot;
   }
@@ -1056,7 +1104,11 @@ function readPartyFromUrl() {
   const params = new URLSearchParams(location.search);
   const encoded = params.get("p");
   if (!encoded) return;
-  state.party = decodeParty(encoded, decodeCtx());
+  const decoded = decodeParty(encoded, decodeCtx());
+  // Auto-correct older URLs where a mega form slot held something other than
+  // its required mega stone. Avoids the "Mega Charizard X with leftovers"
+  // inconsistency showing up in the UI.
+  state.party = decoded.map((s) => (s ? applyMegaStoneLock(s) : s));
 }
 
 async function copyShareUrl() {
