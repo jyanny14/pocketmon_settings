@@ -11865,11 +11865,11 @@
         "spritePath": "assets/sprites/479.png"
       },
       {
-        "name": "Alternate Forms",
-        "nameKo": "로토무 다른 폼",
+        "name": "Heat Rotom",
+        "nameKo": "히트 로토무",
         "types": [
           "electric",
-          "ghost"
+          "fire"
         ],
         "abilities": [
           "levitate"
@@ -11882,17 +11882,92 @@
           "spDef": 107,
           "speed": 86
         },
-        "sourceGames": [
-          "brilliant-diamond",
-          "legends-arceus",
-          "legends-z-a",
-          "scarlet",
-          "shield",
-          "shining-pearl",
-          "sword",
-          "violet"
-        ],
+        "sourceGames": [],
         "spritePath": "assets/sprites/forms/rotom-heat.png"
+      },
+      {
+        "name": "Wash Rotom",
+        "nameKo": "워시 로토무",
+        "types": [
+          "electric",
+          "water"
+        ],
+        "abilities": [
+          "levitate"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spAtk": 105,
+          "spDef": 107,
+          "speed": 86
+        },
+        "sourceGames": [],
+        "spritePath": "assets/sprites/forms/rotom-wash.png"
+      },
+      {
+        "name": "Frost Rotom",
+        "nameKo": "프로스트 로토무",
+        "types": [
+          "electric",
+          "ice"
+        ],
+        "abilities": [
+          "levitate"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spAtk": 105,
+          "spDef": 107,
+          "speed": 86
+        },
+        "sourceGames": [],
+        "spritePath": "assets/sprites/forms/rotom-frost.png"
+      },
+      {
+        "name": "Fan Rotom",
+        "nameKo": "스핀 로토무",
+        "types": [
+          "electric",
+          "flying"
+        ],
+        "abilities": [
+          "levitate"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spAtk": 105,
+          "spDef": 107,
+          "speed": 86
+        },
+        "sourceGames": [],
+        "spritePath": "assets/sprites/forms/rotom-fan.png"
+      },
+      {
+        "name": "Mow Rotom",
+        "nameKo": "커트 로토무",
+        "types": [
+          "electric",
+          "grass"
+        ],
+        "abilities": [
+          "levitate"
+        ],
+        "baseStats": {
+          "hp": 50,
+          "atk": 65,
+          "def": 107,
+          "spAtk": 105,
+          "spDef": 107,
+          "speed": 86
+        },
+        "sourceGames": [],
+        "spritePath": "assets/sprites/forms/rotom-mow.png"
       }
     ],
     "obtain": [

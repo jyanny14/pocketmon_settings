@@ -44,10 +44,15 @@ _PREFIX_TO_SUFFIX = {
 # 자동 규칙으로 풀리지 않는 케이스를 여기서 직접 지정. 최우선.
 # - Paldean Tauros: PokeAPI 는 combat/blaze/aqua 세 breed 로 쪼개져 있으나
 #   HOME 게임 소스는 동일하므로 combat-breed 를 대표로 사용.
-# - Rotom Alternate Forms: heat/wash/frost/fan/mow 모두 동일 → heat 대표.
+# - Rotom 가전 5종: parser.py 에서 "Alternate Forms" 를 5개로 분해하므로
+#   각각 별도 매핑. PokeAPI slug 가 정확히 이렇게 존재함.
 _OVERRIDES: dict[tuple[str, str], str] = {
     ("tauros", "Paldean Tauros"): "tauros-paldea-combat-breed",
-    ("rotom", "Alternate Forms"): "rotom-heat",
+    ("rotom", "Heat Rotom"): "rotom-heat",
+    ("rotom", "Wash Rotom"): "rotom-wash",
+    ("rotom", "Frost Rotom"): "rotom-frost",
+    ("rotom", "Fan Rotom"): "rotom-fan",
+    ("rotom", "Mow Rotom"): "rotom-mow",
 }
 
 # PokeAPI 가 base form 자체도 variant slug 로만 제공하는 포켓몬.

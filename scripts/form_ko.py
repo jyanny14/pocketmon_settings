@@ -42,6 +42,19 @@ _SUFFIX_KO = {
     "Alternate Forms": "다른 폼",
 }
 
+# Full-replacement Korean names for forms whose English name doesn't follow
+# the prefix/suffix patterns. Checked before any other rule.
+# Rotom appliance form Korean localization follows the Japanese naming
+# (ヒート/ウォッシュ/フロスト/スピン/カットロトム), rendered here with a
+# space separator matching the project's other spaced conventions.
+_FULL_NAME_KO = {
+    "Heat Rotom": "히트 로토무",
+    "Wash Rotom": "워시 로토무",
+    "Frost Rotom": "프로스트 로토무",
+    "Fan Rotom": "스핀 로토무",
+    "Mow Rotom": "커트 로토무",
+}
+
 
 def form_name_to_ko(form_name_en: str, base_name_ko: str, base_name_en: str = "") -> str:
     """Synthesize Korean form name from English form name + base Korean name.
@@ -56,6 +69,11 @@ def form_name_to_ko(form_name_en: str, base_name_ko: str, base_name_en: str = ""
     form = (form_name_en or "").strip()
     if not form:
         return base_name_ko
+
+    # Full-name replacement (e.g. Rotom appliance forms — name is not derived
+    # from the base English name)
+    if form in _FULL_NAME_KO:
+        return _FULL_NAME_KO[form]
 
     # Base form
     if base_name_en and form == base_name_en:

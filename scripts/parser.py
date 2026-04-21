@@ -601,6 +601,13 @@ def parse_pokemon_detail(html: str, slug: str) -> PokemonDetail:
     if not forms or not base_form or not base_form.base_stats:
         raise ValueError(f"detail page {slug}: base form missing stats")
 
+    # Rotom-specific: serebii lumps all five appliance forms into a single
+    # "Stats - Alternate Forms" table (same stats, same ability, only type
+    # differs). Expand into the five real forms so the party builder can
+    # actually pick e.g. "Heat Rotom".
+    if slug == "rotom":
+        forms = _expand_rotom_forms(forms)
+
     moves = _parse_move_slugs(soup)
 
     return PokemonDetail(
@@ -611,6 +618,38 @@ def parse_pokemon_detail(html: str, slug: str) -> PokemonDetail:
         forms=forms,
         moves=moves,
     )
+
+
+# Type assignments are canonical — stats/abilities are identical to the lumped
+# serebii entry, only the secondary type varies across appliance forms.
+_ROTOM_APPLIANCE_FORMS: list[tuple[str, list[str]]] = [
+    ("Heat Rotom", ["electric", "fire"]),
+    ("Wash Rotom", ["electric", "water"]),
+    ("Frost Rotom", ["electric", "ice"]),
+    ("Fan Rotom", ["electric", "flying"]),
+    ("Mow Rotom", ["electric", "grass"]),
+]
+
+
+def _expand_rotom_forms(forms: list[PokemonForm]) -> list[PokemonForm]:
+    """Replace Rotom's single 'Alternate Forms' entry with five distinct forms."""
+    alt: PokemonForm | None = None
+    kept: list[PokemonForm] = []
+    for f in forms:
+        if f.name == "Alternate Forms":
+            alt = f
+        else:
+            kept.append(f)
+    if alt is None:
+        return forms
+    for name, types in _ROTOM_APPLIANCE_FORMS:
+        kept.append(PokemonForm(
+            name=name,
+            types=types,
+            abilities=list(alt.abilities),
+            base_stats=dict(alt.base_stats),
+        ))
+    return kept
 
 
 def _parse_move_slugs(soup: BeautifulSoup) -> list[str]:

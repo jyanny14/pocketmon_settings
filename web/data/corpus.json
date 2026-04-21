@@ -1,6 +1,6 @@
 {
   "manifest": {
-    "generatedAt": "2026-04-20T13:45:11Z",
+    "generatedAt": "2026-04-21T09:34:48Z",
     "schemaVersion": "1.0.0",
     "sources": {
       "serebii_champions": "https://www.serebii.net/pokemonchampions/",
@@ -12,7 +12,7 @@
         "name": "pokemon",
         "path": "pokemon.json",
         "count": 186,
-        "sha256": "1e947580f2094f030c335e9329486cdcf91371840cf5b51d6523444753b9f781"
+        "sha256": "f506696a86ec4620729a0d22f9926809ad7de2ee395892df09629e1d9298a6aa"
       },
       {
         "name": "items",
@@ -24,7 +24,7 @@
         "name": "abilities",
         "path": "abilities.json",
         "count": 192,
-        "sha256": "7df76199656f6cc1452d92ca074a1e6a6902aa556e99b8b6ca3fd3054afcee72"
+        "sha256": "7f5c26fd3fc184867d7b2ffe34cf61266f3c8ad9adb6e52c7327bf48e335e35e"
       },
       {
         "name": "type_chart",
@@ -11913,11 +11913,11 @@
           "spritePath": "assets/sprites/479.png"
         },
         {
-          "name": "Alternate Forms",
-          "nameKo": "로토무 다른 폼",
+          "name": "Heat Rotom",
+          "nameKo": "히트 로토무",
           "types": [
             "electric",
-            "ghost"
+            "fire"
           ],
           "abilities": [
             "levitate"
@@ -11930,17 +11930,92 @@
             "spDef": 107,
             "speed": 86
           },
-          "sourceGames": [
-            "brilliant-diamond",
-            "legends-arceus",
-            "legends-z-a",
-            "scarlet",
-            "shield",
-            "shining-pearl",
-            "sword",
-            "violet"
-          ],
+          "sourceGames": [],
           "spritePath": "assets/sprites/forms/rotom-heat.png"
+        },
+        {
+          "name": "Wash Rotom",
+          "nameKo": "워시 로토무",
+          "types": [
+            "electric",
+            "water"
+          ],
+          "abilities": [
+            "levitate"
+          ],
+          "baseStats": {
+            "hp": 50,
+            "atk": 65,
+            "def": 107,
+            "spAtk": 105,
+            "spDef": 107,
+            "speed": 86
+          },
+          "sourceGames": [],
+          "spritePath": "assets/sprites/forms/rotom-wash.png"
+        },
+        {
+          "name": "Frost Rotom",
+          "nameKo": "프로스트 로토무",
+          "types": [
+            "electric",
+            "ice"
+          ],
+          "abilities": [
+            "levitate"
+          ],
+          "baseStats": {
+            "hp": 50,
+            "atk": 65,
+            "def": 107,
+            "spAtk": 105,
+            "spDef": 107,
+            "speed": 86
+          },
+          "sourceGames": [],
+          "spritePath": "assets/sprites/forms/rotom-frost.png"
+        },
+        {
+          "name": "Fan Rotom",
+          "nameKo": "스핀 로토무",
+          "types": [
+            "electric",
+            "flying"
+          ],
+          "abilities": [
+            "levitate"
+          ],
+          "baseStats": {
+            "hp": 50,
+            "atk": 65,
+            "def": 107,
+            "spAtk": 105,
+            "spDef": 107,
+            "speed": 86
+          },
+          "sourceGames": [],
+          "spritePath": "assets/sprites/forms/rotom-fan.png"
+        },
+        {
+          "name": "Mow Rotom",
+          "nameKo": "커트 로토무",
+          "types": [
+            "electric",
+            "grass"
+          ],
+          "abilities": [
+            "levitate"
+          ],
+          "baseStats": {
+            "hp": 50,
+            "atk": 65,
+            "def": 107,
+            "spAtk": 105,
+            "spDef": 107,
+            "speed": 86
+          },
+          "sourceGames": [],
+          "spritePath": "assets/sprites/forms/rotom-mow.png"
         }
       ],
       "obtain": [
@@ -27438,11 +27513,27 @@
         },
         {
           "slug": "rotom",
-          "form": "Alternate Forms"
+          "form": "Fan Rotom"
+        },
+        {
+          "slug": "rotom",
+          "form": "Frost Rotom"
+        },
+        {
+          "slug": "rotom",
+          "form": "Heat Rotom"
+        },
+        {
+          "slug": "rotom",
+          "form": "Mow Rotom"
         },
         {
           "slug": "rotom",
           "form": "Rotom"
+        },
+        {
+          "slug": "rotom",
+          "form": "Wash Rotom"
         }
       ]
     },

@@ -1811,11 +1811,27 @@
       },
       {
         "slug": "rotom",
-        "form": "Alternate Forms"
+        "form": "Fan Rotom"
+      },
+      {
+        "slug": "rotom",
+        "form": "Frost Rotom"
+      },
+      {
+        "slug": "rotom",
+        "form": "Heat Rotom"
+      },
+      {
+        "slug": "rotom",
+        "form": "Mow Rotom"
       },
       {
         "slug": "rotom",
         "form": "Rotom"
+      },
+      {
+        "slug": "rotom",
+        "form": "Wash Rotom"
       }
     ]
   },

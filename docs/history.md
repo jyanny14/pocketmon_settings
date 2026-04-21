@@ -21,6 +21,15 @@
   - 생략: T35a (`moves.json` target 필드 수집 via PokeAPI). AI 가 "Earthquake 는 전체" 같은 상식을 갖고 있어서 첫 패스에 불필요. 정확도 향상 필요 시 후속 작업.
   - 스모크: `TEMPLATES.length === 9`, 6개 both(4 키 전부), 3개 double(2 키), HTML/CSS 정상 serve. 실사용 테스트는 사용자 브라우저에서.
 
+- Rotom 가전 5폼 전부 데이터에 추가 — 파티 빌더에서 Heat/Wash/Frost/Fan/Mow Rotom 각각 선택 가능.
+  - 원인: serebii 의 Rotom 상세 페이지가 5종 가전 폼을 단일 "Stats - Alternate Forms" 테이블에 묶어 넣어서 (스탯·특성 동일, 타입만 다름) 파서가 "Alternate Forms" 한 개만 만들어내던 상태.
+  - `scripts/parser.py` — `parse_pokemon_detail` 말미에 `slug == "rotom"` 체크 후 `_expand_rotom_forms` 호출. "Alternate Forms" 엔트리를 5개 PokemonForm 으로 전개 (Heat=Electric/Fire, Wash=Electric/Water, Frost=Electric/Ice, Fan=Electric/Flying, Mow=Electric/Grass). 스탯·특성(Levitate) 은 lumped 엔트리에서 상속.
+  - `scripts/form_ko.py` — `_FULL_NAME_KO` 딕트 신규 (완전 대체 이름용). Rotom 5폼 한국어 이름 하드코딩 (Pokémon 공식 localization 이 일본어 표기 그대로 차용: 히트/워시/프로스트/스핀/커트 로토무). `form_name_to_ko` 첫 단계에서 체크.
+  - `scripts/pokeapi_form_map.py` — `_OVERRIDES` 에서 `("rotom", "Alternate Forms")` → `"rotom-heat"` 단일 매핑 제거하고 5개 개별 매핑(`Heat Rotom` → `rotom-heat`, `Wash Rotom` → `rotom-wash`, ...) 추가. PokeAPI 스프라이트 변형 URL 이 정확히 이 slug 로 존재.
+  - 스프라이트: `python scripts/fetch_form_sprites.py` 로 `rotom-wash/frost/fan/mow.png` 4개 신규 다운로드 (heat 는 이전부터 존재).
+  - 빌드 파이프라인: `build.py` → `fetch_form_sprites.py` → `build.py` (스프라이트 반영) → `build_corpus.py` 순. 최종 `pokemon.json` 의 Rotom 엔트리가 6개 폼 (base + 5 가전) 각각 자기 sprite·types·nameKo 완비.
+  - 부수 변경: `abilities.json` 의 Levitate 보유자 리스트에 Rotom 5폼이 각각 분리 노출되도록 자동 갱신.
+
 - 파티 빌더 — 메가폼 선택 시 해당 **메가스톤 자동 장착 + 도구 고정**. 사용자가 메가 폼을 선택하면 실제 배틀에서 그 메가스톤이 반드시 필요하므로 다른 도구를 쥐어주는 건 잘못된 구성 → UI 에서 자동 처리.
   - `web/assets/party.js` — (1) `MEGA_STONE_BY_FORM` 맵 + `buildMegaStoneMap(items)` — items.json 의 mega-stone 카테고리 59개에서 effect text (`"... X holding this stone"` 패턴) 로 pokemon 이름 추출 후 form slug 과 매칭. 메가 폼 59개 전부 100% 커버리지 확인. (2) `applyMegaStoneLock(slot)` 헬퍼 — 메가 폼이면 itemSlug 를 해당 stone 으로 강제 교체 (non-mutating). (3) 적용 지점 3곳: `pickForm` (신규 슬롯 생성), `makeFormSelect` change 핸들러 (폼 변경), `readPartyFromUrl` (URL 디코드 — 옛 공유 URL 의 "메가 차리자드 + 먹다남은음식" 같은 부정합 자동 교정). (4) `makeItemSelect` — 현재 폼이 메가면 `sel.disabled=true` + `title` 툴팁 + `.slot-card__field--locked` 클래스.
   - `web/assets/i18n.js` — `party.megaStoneLocked` ko/en 2키 추가.
