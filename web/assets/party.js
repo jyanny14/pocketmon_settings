@@ -95,6 +95,11 @@ const state = {
   movePickerQuery: "",
   movePickerTypes: /** @type {Set<string>} */ (new Set()),
   movePickerCats: /** @type {Set<string>} */ (new Set()),
+  // Which tab inside the slot card's extras panel is currently open, per
+  // slot index. Persisted across renderAll() so that editing nature / SP
+  // (which live in the Training tab and call renderAll via writePartyToUrl)
+  // does not bounce the user back to the default Moves tab.
+  activeTabByIndex: /** @type {Map<number, "moves"|"training">} */ (new Map()),
 };
 
 const els = {
@@ -157,6 +162,7 @@ function bindGlobalEvents() {
   els.loadSaved.addEventListener("change", onLoadSavedChange);
   els.reset.addEventListener("click", () => {
     state.party = Array(SLOT_COUNT).fill(null);
+    state.activeTabByIndex.clear();
     writePartyToUrl();
     renderAll();
   });
@@ -253,6 +259,7 @@ function renderSlot(index, slot) {
   remove.textContent = "×";
   remove.addEventListener("click", () => {
     state.party[index] = null;
+    state.activeTabByIndex.delete(index);
     writePartyToUrl();
     renderAll();
   });
@@ -307,13 +314,17 @@ function makeExtendedSection(index, pokemon, form, slot) {
   summary.textContent = buildExtraSummary(slot);
   details.appendChild(summary);
 
-  // Tabs: [Moves] [Training]. Default to Moves each time the details opens —
-  // both panels always render but only the active one is visible, so tab
-  // switching is instant and no re-render is needed.
+  // Tabs: [Moves] [Training]. Both panels always render; only the active
+  // one is visible so tab switching itself is instant. The active tab is
+  // remembered per slot in state.activeTabByIndex across renderAll() calls
+  // so that editing nature or SP (both in Training) doesn't bounce back.
   const tabPanelMovesId = `slot-${index}-tab-moves`;
   const tabPanelTrainingId = `slot-${index}-tab-training`;
   const tabMovesId = `slot-${index}-tab-btn-moves`;
   const tabTrainingId = `slot-${index}-tab-btn-training`;
+
+  const activeInit = state.activeTabByIndex.get(index) || "moves";
+  const movesInit = activeInit === "moves";
 
   const tablist = document.createElement("div");
   tablist.className = "slot-card__tabs";
@@ -322,21 +333,22 @@ function makeExtendedSection(index, pokemon, form, slot) {
 
   const tabMoves = document.createElement("button");
   tabMoves.type = "button";
-  tabMoves.className = "slot-card__tab slot-card__tab--active";
+  tabMoves.className = "slot-card__tab" + (movesInit ? " slot-card__tab--active" : "");
   tabMoves.id = tabMovesId;
   tabMoves.setAttribute("role", "tab");
-  tabMoves.setAttribute("aria-selected", "true");
+  tabMoves.setAttribute("aria-selected", movesInit ? "true" : "false");
   tabMoves.setAttribute("aria-controls", tabPanelMovesId);
+  tabMoves.setAttribute("tabindex", movesInit ? "0" : "-1");
   tabMoves.textContent = t("party.tab.moves");
 
   const tabTraining = document.createElement("button");
   tabTraining.type = "button";
-  tabTraining.className = "slot-card__tab";
+  tabTraining.className = "slot-card__tab" + (movesInit ? "" : " slot-card__tab--active");
   tabTraining.id = tabTrainingId;
   tabTraining.setAttribute("role", "tab");
-  tabTraining.setAttribute("aria-selected", "false");
+  tabTraining.setAttribute("aria-selected", movesInit ? "false" : "true");
   tabTraining.setAttribute("aria-controls", tabPanelTrainingId);
-  tabTraining.setAttribute("tabindex", "-1");
+  tabTraining.setAttribute("tabindex", movesInit ? "-1" : "0");
   tabTraining.textContent = t("party.tab.training");
 
   tablist.append(tabMoves, tabTraining);
@@ -348,6 +360,7 @@ function makeExtendedSection(index, pokemon, form, slot) {
   panelMoves.id = tabPanelMovesId;
   panelMoves.setAttribute("role", "tabpanel");
   panelMoves.setAttribute("aria-labelledby", tabMovesId);
+  panelMoves.hidden = !movesInit;
   panelMoves.appendChild(buildMovesBlock(index, pokemon, slot));
 
   const panelTraining = document.createElement("div");
@@ -355,7 +368,7 @@ function makeExtendedSection(index, pokemon, form, slot) {
   panelTraining.id = tabPanelTrainingId;
   panelTraining.setAttribute("role", "tabpanel");
   panelTraining.setAttribute("aria-labelledby", tabTrainingId);
-  panelTraining.hidden = true;
+  panelTraining.hidden = movesInit;
   panelTraining.appendChild(buildTrainingBlock(index, form, slot));
 
   details.append(panelMoves, panelTraining);
@@ -364,6 +377,7 @@ function makeExtendedSection(index, pokemon, form, slot) {
   // selected state, focus, and panel visibility in one place.
   const activate = (which) => {
     const movesActive = which === "moves";
+    state.activeTabByIndex.set(index, movesActive ? "moves" : "training");
     tabMoves.classList.toggle("slot-card__tab--active", movesActive);
     tabTraining.classList.toggle("slot-card__tab--active", !movesActive);
     tabMoves.setAttribute("aria-selected", movesActive ? "true" : "false");
@@ -607,9 +621,23 @@ function makeSpInputs(index, form, slot) {
     }
     cell.appendChild(lab);
 
-    // Stepper row: [−] [input] [+]
+    // Stepper row: [«] [−] [input] [+] [»]
+    // « jumps to 0, » jumps to this stat's budget-aware MAX. Having them
+    // inline with − / + lets the numeric input take the full remaining width
+    // of the cell, so the current value is always legible.
     const stepper = document.createElement("div");
     stepper.className = "slot-card__sp-stepper";
+
+    const headroom = maxFor(i);
+
+    const zeroBtn = document.createElement("button");
+    zeroBtn.type = "button";
+    zeroBtn.className = "slot-card__sp-step slot-card__sp-step--jump";
+    zeroBtn.textContent = "«";
+    zeroBtn.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.zero")}`);
+    zeroBtn.title = t("party.sp.zero");
+    zeroBtn.disabled = sps[i] <= 0;
+    zeroBtn.addEventListener("click", () => commit(i, 0));
 
     const dec = document.createElement("button");
     dec.type = "button";
@@ -641,33 +669,20 @@ function makeSpInputs(index, form, slot) {
     inc.className = "slot-card__sp-step";
     inc.textContent = "+";
     inc.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.inc")}`);
-    const headroom = maxFor(i);
     inc.disabled = sps[i] >= headroom;
     inc.addEventListener("click", () => commit(i, sps[i] + 1));
 
-    stepper.append(dec, input, inc);
-    cell.appendChild(stepper);
-
-    // Quick MAX / 0 row
-    const quick = document.createElement("div");
-    quick.className = "slot-card__sp-quick";
-
     const maxBtn = document.createElement("button");
     maxBtn.type = "button";
-    maxBtn.className = "slot-card__sp-quick-btn";
-    maxBtn.textContent = "MAX";
+    maxBtn.className = "slot-card__sp-step slot-card__sp-step--jump";
+    maxBtn.textContent = "»";
     maxBtn.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.max")}`);
-    maxBtn.addEventListener("click", () => commit(i, maxFor(i)));
+    maxBtn.title = t("party.sp.max");
+    maxBtn.disabled = sps[i] >= headroom;
+    maxBtn.addEventListener("click", () => commit(i, headroom));
 
-    const zeroBtn = document.createElement("button");
-    zeroBtn.type = "button";
-    zeroBtn.className = "slot-card__sp-quick-btn";
-    zeroBtn.textContent = "0";
-    zeroBtn.setAttribute("aria-label", `${statShortLabel(key)} ${t("party.sp.zero")}`);
-    zeroBtn.addEventListener("click", () => commit(i, 0));
-
-    quick.append(maxBtn, zeroBtn);
-    cell.appendChild(quick);
+    stepper.append(zeroBtn, dec, input, inc, maxBtn);
+    cell.appendChild(stepper);
 
     grid.appendChild(cell);
   });

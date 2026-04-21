@@ -8,6 +8,11 @@
 
 ## 2026-04-22
 
+- 파티 슬롯 훈련 탭 UX 개선 — 두 가지 체감 이슈 수정.
+  - **탭 유지**: 훈련 탭에서 성격 드롭다운·SP 버튼을 건드릴 때마다 기술 탭으로 튕겨 나가던 문제. `makeExtendedSection` 이 매 `renderAll` 마다 새 DOM 을 만들면서 초기 활성 탭을 항상 "moves" 로 세팅해서 그랬음. `state.activeTabByIndex: Map<number, "moves"|"training">` 신규 — 사용자가 탭을 바꾸면 저장하고, 다음 렌더에서 읽어와 그대로 복원. 슬롯 제거/파티 리셋 시에는 각각 `delete(index)` / `clear()` 로 정리.
+  - **SP 입력 UI 확장**: 기존에 SP 셀이 `[label][stepper][quick]` 3-컬럼 구조라 `−/+` 사이 `input` 이 매우 좁아서 현재 값이 안 보였음. 또 `MAX`·`0` 이 별도 2버튼 행을 차지해 스크롤 부담도 큼. 레이아웃을 한 줄로 통합: `[«] [−] [input] [+] [»]` — `«` 은 0 으로 초기화, `»` 는 예산 한도까지(66점 부담·32점 상한 반영) 즉시 채움. CSS `grid-template-columns: 1.4rem 1.4rem minmax(0,1fr) 1.4rem 1.4rem` 로 input 가운데 배치, `.slot-card__sp-step--jump` 모디파이어로 `«`·`»` 는 `−/+` 보다 살짝 덜 강조(border/font-weight 차). 입력값 자체는 `font-size: .95rem; font-weight: 600` 로 키워 가독성 확보. `.slot-card__sp-quick` 스타일은 삭제.
+  - 관련 파일: `web/assets/party.js`, `web/assets/style.css`.
+
 - 로토무 폼별 시그니처 기술 데이터 반영 — 기존 파서가 "Standard Moves" 테이블만 긁어서, `Special Moves` 테이블에 들어 있는 **Heat=Overheat / Wash=Hydro Pump / Frost=Blizzard / Fan=Air Slash / Mow=Leaf Storm** 이 전부 누락돼 있던 문제 수정. Rotom 외 185마리는 Special Moves 테이블이 없어 영향 없음.
   - `scripts/parser.py` — `PokemonDetail.form_moves: dict[str, list[str]]` 필드 추가. `_parse_special_move_slugs(soup)` 신규: 테이블 헤더가 `<thead>` 로 감싸져 있어 `recursive=False` 탐색이 안 먹는 점을 반영해 `t.find(..., class_="fooevo")` 로 descendant 검색. "Form" 컬럼 아이콘의 `alt` 텍스트(`"Heat Rotom"` 등)에서 폼명 추출, 타입/카테고리 아이콘(` - `, `:` 포함)은 제외. 로토무에 한해 호출.
   - `scripts/build.py` — non-empty 일 때만 `formMoves` 키를 pokemon.json 에 삽입. 재빌드 결과: Rotom 엔트리에 `formMoves: {Heat Rotom: [overheat], ...}` 5개 폼 전부 1기술씩 추가됨. `python scripts/build.py` + `python scripts/build_corpus.py` 재실행 (996 KB).
