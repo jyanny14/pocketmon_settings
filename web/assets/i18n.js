@@ -207,6 +207,8 @@ const STRINGS = {
     "prompts.tmpl.moveset.desc": "각 포켓몬의 4기술 세팅 제안.",
     "prompts.tmpl.counter.title": "상대 파티 카운터",
     "prompts.tmpl.counter.desc": "상대 파티 URL 을 붙여 맞춤 대응 전략.",
+    "prompts.tmpl.fill.title": "남은 슬롯 채우기",
+    "prompts.tmpl.fill.desc": "빈 자리에 어떤 포켓몬·특성·도구·기술·성격·SP 배분으로 넣을지 세팅 단위로 추천.",
     "prompts.tmpl.free.title": "자유 질문",
     "prompts.tmpl.free.desc": "파티 컨텍스트만 주입하고 원하는 질문을 이어서.",
 
@@ -452,6 +454,8 @@ const STRINGS = {
     "prompts.tmpl.moveset.desc": "Proposed 4-move loadouts for each Pokémon.",
     "prompts.tmpl.counter.title": "Opposing-party counters",
     "prompts.tmpl.counter.desc": "Paste an opposing URL and get a targeted response plan.",
+    "prompts.tmpl.fill.title": "Fill remaining slots",
+    "prompts.tmpl.fill.desc": "Recommend Pokémon + ability + item + moves + nature + SP allocation for each empty slot.",
     "prompts.tmpl.free.title": "Free-form question",
     "prompts.tmpl.free.desc": "Inject the party context and ask anything you want.",
 

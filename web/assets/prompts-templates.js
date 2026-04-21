@@ -86,6 +86,43 @@ export const TEMPLATES = [
   },
 
   {
+    id: "fill",
+    titleKey: "prompts.tmpl.fill.title",
+    descKey: "prompts.tmpl.fill.desc",
+    requiresPokemonPool: true,
+    body: `${SHARED_DISCLAIMER}
+
+현재 파티의 **남은 {{EMPTY_COUNT}}칸**을 채울 포켓몬을 추천해주세요.
+
+- 파티 URL: {{PARTY_URL}}
+- 사이트 가이드: {{LLMS_TXT_URL}}
+- **반드시 다음 JSON 을 fetch 해서 후보 풀로 쓰세요**: {{POKEMON_JSON_URL}}
+  (Pokémon Champions 에 등장하는 전체 포켓몬 186종. 이 파일에 없는 포켓몬은 제안 불가.)
+
+분석 요청:
+1. 현재 파티({{FILLED_COUNT}}마리)의 약점·역할 공백을 한 줄로 진단.
+2. 남은 {{EMPTY_COUNT}}칸 각각에 대해 아래 포맷으로 제안:
+   - **슬롯 N**: 포켓몬 (폼) — 역할 태그 (선봉 / 피봇 / 물리 어태커 / 특수 어태커 / 내구 벽 / 스위퍼 / 서포터 등 중 택1)
+   - 추천 특성 · 도구 · 성격
+   - 4기술 — 이름 옆에 (타입 / 분류 / 위력 / 명중) 괄호 표기. 해당 폼이 배울 수 있는 기술만.
+   - Stat Points 배분 — \`hp/atk/def/spAtk/spDef/speed\` 형식. 각 스탯 0~32, 총합 ≤66.
+   - 선택 이유 1~2문장 (현 파티 관점에서 어떤 구멍을 메우는지).
+3. 마지막에 6마리 완성 시 **팀 컨셉 한 줄** 요약.
+
+제약:
+- 사이트 데이터에 실제로 존재하는 포켓몬·특성·도구만 제안.
+- 기술은 해당 폼의 learnable 범위 안에서만.
+- Champions 에서 수치가 바뀐 기술(\`updatedInChampions: true\`)은 수정된 수치 기준.
+- 성격은 25종 표준 성격 중 하나.
+
+현 파티 인라인 데이터 ({{FILLED_COUNT}}마리, 빈 슬롯 제외):
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+  },
+
+  {
     id: "counter",
     titleKey: "prompts.tmpl.counter.title",
     descKey: "prompts.tmpl.counter.desc",

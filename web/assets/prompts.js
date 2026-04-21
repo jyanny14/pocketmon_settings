@@ -155,11 +155,15 @@ function currentUrls() {
 function substitute(body, { includeData }) {
   const u = currentUrls();
   const inline = includeData ? buildInlineJson() : t("prompts.urlOnlyHint");
+  const filled = state.party.filter(Boolean).length;
+  const empty = state.party.length - filled;
   return body
     .replaceAll("{{PARTY_URL}}", u.partyUrl)
     .replaceAll("{{LLMS_TXT_URL}}", u.llmsUrl)
     .replaceAll("{{POKEMON_JSON_URL}}", u.pokemonJsonUrl)
-    .replaceAll("{{PARTY_INLINE_JSON}}", inline);
+    .replaceAll("{{PARTY_INLINE_JSON}}", inline)
+    .replaceAll("{{FILLED_COUNT}}", String(filled))
+    .replaceAll("{{EMPTY_COUNT}}", String(empty));
 }
 
 // ── render ───────────────────────────────────────────────────
