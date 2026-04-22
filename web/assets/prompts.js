@@ -88,9 +88,18 @@ function extractSlot(slot) {
   // matches the language-filtered data bundle. Without this the AI tends to
   // anchor on English names even in Korean prompts. `form.name` stays — it's
   // an English functional identifier, not a display name.
-  const isKo = getLang() === "ko";
-  const pickName = (koVal, enVal) =>
-    isKo ? { nameKo: koVal || enVal } : { nameEn: enVal || koVal };
+  // Phase 1 M2: 4-way 언어 분기 (ko/en/ja/zh).
+  const lang = getLang();
+  const pickName = (obj) => {
+    // obj 는 { nameKo, nameEn, nameJa, nameZh } 를 가진 엔트리.
+    // 현재 언어 값이 없으면 영어로 폴백 (이름은 PokeAPI 공식 지역화만 담김).
+    switch (lang) {
+      case "ja": return { nameJa: obj.nameJa || obj.nameEn };
+      case "zh": return { nameZh: obj.nameZh || obj.nameEn };
+      case "en": return { nameEn: obj.nameEn };
+      default:   return { nameKo: obj.nameKo || obj.nameEn };
+    }
+  };
 
   // Only the 4 configured moves are expanded inline. The full learnable pool
   // is intentionally omitted — any template that needs it tells the AI to
@@ -102,7 +111,7 @@ function extractSlot(slot) {
       if (!m) return { slug: s };
       const out = {
         slug: m.slug,
-        ...pickName(m.nameKo, m.nameEn),
+        ...pickName(m),
         type: m.type,
         category: m.category,
         power: m.power,
@@ -113,13 +122,29 @@ function extractSlot(slot) {
       return out;
     });
 
+  const formNameLoc =
+    lang === "ja" ? form.nameJa :
+    lang === "zh" ? form.nameZh :
+    lang === "ko" ? form.nameKo : "";
+
+  // gameText / effect 필드는 Phase 1 에서 ja/zh 미번역 — ko/en 만 소스.
+  // ja/zh 모드에서는 영어 원문을 실어 AI 가 읽게 한다.
+  const abilityText = lang === "ko"
+    ? ability?.gameTextKo || ability?.gameText || ability?.description || ""
+    : ability?.gameText || ability?.description || "";
+  const abilityTextKey = lang === "ko" ? "gameTextKo" : "gameText";
+  const itemEffect = lang === "ko"
+    ? item?.effectKo || item?.effect || ""
+    : item?.effect || "";
+  const itemEffectKey = lang === "ko" ? "effectKo" : "effect";
+
   return {
     slug: slot.slug,
     dex: p.number,
-    ...pickName(p.nameKo, p.nameEn),
+    ...pickName(p),
     form: {
       name: form.name, // English functional id — required to distinguish forms
-      ...(isKo && form.nameKo ? { nameKo: form.nameKo } : {}),
+      ...(formNameLoc ? { [`name${lang[0].toUpperCase() + lang.slice(1)}`]: formNameLoc } : {}),
       types: form.types,
       baseStats: form.baseStats,
       abilities: form.abilities,
@@ -127,20 +152,16 @@ function extractSlot(slot) {
     ability: ability
       ? {
           slug: ability.slug,
-          ...pickName(ability.nameKo, ability.nameEn),
-          ...(isKo
-            ? { gameTextKo: ability.gameTextKo || ability.gameText || ability.description || "" }
-            : { gameText: ability.gameText || ability.description || "" }),
+          ...pickName(ability),
+          [abilityTextKey]: abilityText,
           ...(ability.isNewInChampions ? { isNewInChampions: true } : {}),
         }
       : null,
     item: item
       ? {
           slug: item.slug,
-          ...pickName(item.nameKo, item.nameEn),
-          ...(isKo
-            ? { effectKo: item.effectKo || item.effect || "" }
-            : { effect: item.effect || "" }),
+          ...pickName(item),
+          [itemEffectKey]: itemEffect,
         }
       : null,
     moves: configuredMoves,
@@ -178,12 +199,23 @@ function currentUrls() {
 // current UI toggle so AI conversations happen in the user's language.
 // Battle mode adds a "Double" suffix — falls back to the single-mode body
 // if a template doesn't define a double-mode variant.
+//
+// Phase 1 M2: ja/zh 바디는 아직 없음 (Phase 3 에서 추가). 그 모드에서는
+// en 바디로 폴백 — AI 가 영어로 답하지만 데이터는 ja/zh 필드로 실려 있어
+// Champions 정확성은 유지. 향후 ja/zh 본문 추가 시 이 함수 자동 매칭.
 function resolveBody(bodySpec) {
   if (typeof bodySpec === "string") return bodySpec; // legacy single-string fallback
   const lang = getLang();
   const suffix = state.mode === "double" ? "Double" : "";
   const modeKey = `${lang}${suffix}`;
-  return bodySpec[modeKey] || bodySpec[lang] || bodySpec.ko || bodySpec.en || "";
+  return (
+    bodySpec[modeKey]
+    || bodySpec[lang]
+    || bodySpec[`en${suffix}`]
+    || bodySpec.en
+    || bodySpec.ko
+    || ""
+  );
 }
 
 function substitute(bodySpec, { includeData }) {
@@ -324,13 +356,20 @@ function syncModeToggleUI() {
 // identifiers (e.g. form.name, which the URL encoder relies on) are
 // never dropped — only the "human-readable name/text" fields for the
 // language the user didn't pick.
+// Phase 1 M2: 4-way 확장. ja/zh 는 ja/zh 이름만 남기고 나머지 name 필드 드롭.
+// 설명/효과 필드(gameText* / description* / effect* / flavorText*) 는
+// ja/zh 번역이 아직 없어 영어 원문을 남겨둔다 (Phase 2 에서 번역).
 const LANG_DROP_FIELDS = {
-  ko: ["nameEn", "gameText", "description", "flavorText", "effect"],
-  en: ["nameKo", "gameTextKo", "descriptionKo", "flavorTextKo", "effectKo"],
+  ko: ["nameEn", "nameJa", "nameZh", "gameText", "description", "flavorText", "effect"],
+  en: ["nameKo", "nameJa", "nameZh", "gameTextKo", "descriptionKo", "flavorTextKo", "effectKo"],
+  ja: ["nameKo", "nameEn", "nameZh", "gameTextKo", "descriptionKo", "flavorTextKo", "effectKo"],
+  zh: ["nameKo", "nameEn", "nameJa", "gameTextKo", "descriptionKo", "flavorTextKo", "effectKo"],
 };
 const FORM_DROP_FIELDS = {
-  ko: [], // keep form.name (English functional id) + form.nameKo (Korean)
-  en: ["nameKo"], // drop Korean form name
+  ko: ["nameJa", "nameZh"],
+  en: ["nameKo", "nameJa", "nameZh"],
+  ja: ["nameKo", "nameZh"],
+  zh: ["nameKo", "nameJa"],
 };
 
 function stripFields(obj, fields) {
@@ -371,6 +410,24 @@ function bundleReadme(lang) {
       "AI agents: use this JSON as the source of truth instead of prior knowledge.",
       "Keys: pokemon(186), moves(481), abilities(192), items(117), natures(25), type_chart(18x18).",
       "Language: English fields only (name/gameText/description/flavorText/effect). slugs remain English identifiers.",
+    ].join(" ");
+  }
+  if (lang === "ja") {
+    return [
+      "Pokémon Champions 完全データセット (ground truth).",
+      "このファイルの slug に無いポケモン/とくせい/どうぐ/わざは Champions に存在しません.",
+      "AI エージェント: 事前知識の代わりにこの JSON を真実のソースとして使用してください.",
+      "キー: pokemon(186), moves(481), abilities(192), items(117), natures(25), type_chart(18x18).",
+      "言語: 日本語の名前フィールド (nameJa) のみ含む. 説明・効果フィールドは英語のまま (Phase 2 で翻訳予定). slug は英語識別子.",
+    ].join(" ");
+  }
+  if (lang === "zh") {
+    return [
+      "Pokémon Champions 完整数据集 (ground truth).",
+      "此文件 slug 中不存在的宝可梦/特性/道具/招式在 Champions 中不存在.",
+      "AI 代理: 请使用此 JSON 作为真实来源, 而非先验知识.",
+      "键: pokemon(186), moves(481), abilities(192), items(117), natures(25), type_chart(18x18).",
+      "语言: 仅含中文简体名称字段 (nameZh). 说明和效果字段仍为英语 (Phase 2 计划翻译). slug 保持英语标识.",
     ].join(" ");
   }
   return [

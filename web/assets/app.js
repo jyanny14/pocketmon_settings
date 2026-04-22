@@ -37,16 +37,23 @@ export const loadMoves = () => loadJson("moves");
 
 // ── small helpers ──────────────────────────────────────────────
 
-/** Case-insensitive match against Korean or English name (or slug). */
+/** Case-insensitive match against any localized name (ko/en/ja/zh) or slug.
+ *
+ * Phase 1 M2: 일본어·중국어 사용자도 자기 언어 이름으로 검색 가능.
+ * ja/zh 에서는 lowercase 가 대부분 무해 (한자·가나는 대소문자 개념 없음).
+ */
 export function matchesQuery(pokemon, query) {
   if (!query) return true;
   const q = query.trim().toLowerCase();
   if (!q) return true;
-  return (
-    pokemon.nameKo.toLowerCase().includes(q) ||
-    pokemon.nameEn.toLowerCase().includes(q) ||
-    pokemon.slug.toLowerCase().includes(q)
-  );
+  const names = [
+    pokemon.nameKo,
+    pokemon.nameEn,
+    pokemon.nameJa,
+    pokemon.nameZh,
+    pokemon.slug,
+  ];
+  return names.some((n) => n && n.toLowerCase().includes(q));
 }
 
 /** Format a national dex number: '0006' → '#006'. */
@@ -56,10 +63,20 @@ export function formatDex(num) {
   return `#${trimmed.padStart(3, "0")}`;
 }
 
-/** Form display name, switched by current language. Falls back gracefully. */
+/** Form display name, switched by current language. Falls back gracefully.
+ *
+ * Note: form.name is the English functional identifier (e.g. "Mega Venusaur")
+ * used in URL encoding and sprite paths. Display names live in `nameKo/Ja/Zh`
+ * and are synthesized by scripts/form_i18n.py at build time.
+ */
 export function formDisplayName(form) {
   if (!form) return "";
-  return getLang() === "ko" ? (form.nameKo || form.name) : form.name;
+  switch (getLang()) {
+    case "ja": return form.nameJa || form.name;
+    case "zh": return form.nameZh || form.name;
+    case "en": return form.name;
+    default:   return form.nameKo || form.name;
+  }
 }
 
 /** Look up a form on a pokemon by its English `name` key. */
@@ -107,52 +124,58 @@ export function allLearnableMoveSlugs(species) {
   return out;
 }
 
-/** Ability display name: prefer nameKo in KO mode (fallback nameEn). */
-export function abilityDisplayName(ability) {
-  if (!ability) return "";
-  return getLang() === "ko" ? (ability.nameKo || ability.nameEn) : ability.nameEn;
+/**
+ * Pick display name from an object with nameKo/nameEn/nameJa/nameZh fields.
+ * Phase 1 M2: 4-way 언어 분기. 해당 언어값 없으면 영어로 폴백.
+ * 이름 필드는 PokeAPI 공식 지역화만 담겨 있어 안전 (LLM 번역 아님).
+ */
+function pickNameByLang(obj) {
+  if (!obj) return "";
+  switch (getLang()) {
+    case "ja": return obj.nameJa || obj.nameEn || "";
+    case "zh": return obj.nameZh || obj.nameEn || "";
+    case "en": return obj.nameEn || "";
+    default:   return obj.nameKo || obj.nameEn || "";
+  }
 }
 
-/** Ability game text: prefer gameTextKo in KO mode (fallback gameText). */
+/** Ability display name — 4-way by current language. */
+export function abilityDisplayName(ability) {
+  return pickNameByLang(ability);
+}
+
+/** Ability game text. Phase 1: ko 제외한 언어는 영어 폴백 (Phase 2 에서 LLM 번역). */
 export function abilityGameText(ability) {
   if (!ability) return "";
-  return getLang() === "ko"
-    ? (ability.gameTextKo || ability.gameText || "")
-    : (ability.gameText || "");
+  if (getLang() === "ko") return ability.gameTextKo || ability.gameText || "";
+  return ability.gameText || "";
 }
 
 /**
  * Ability description paragraph.
- *
- * KO mode: descriptionKo only — returns "" when no Korean translation exists
- *   (all 192 entries currently, per T11). Callers should hide the element
- *   when this returns empty so Korean cards don't sprout a dangling English
- *   paragraph under the already-localized gameText.
- * EN mode: falls through to the English `description` from serebii.
+ * Phase 1: ko 는 기존 descriptionKo, 그 외는 영어 description.
  */
 export function abilityDescription(ability) {
   if (!ability) return "";
-  return getLang() === "ko"
-    ? (ability.descriptionKo || "")
-    : (ability.description || "");
+  if (getLang() === "ko") return ability.descriptionKo || "";
+  return ability.description || "";
 }
 
-/** Item display name: prefer nameKo in KO mode (fallback nameEn). */
+/** Item display name — 4-way by current language. */
 export function itemDisplayName(item) {
-  if (!item) return "";
-  return getLang() === "ko" ? (item.nameKo || item.nameEn) : item.nameEn;
+  return pickNameByLang(item);
 }
 
-/** Item effect text: prefer effectKo in KO mode (fallback to English effect). */
+/** Item effect text. Phase 1: ko 외는 영어 폴백. */
 export function itemEffect(item) {
   if (!item) return "";
-  return getLang() === "ko" ? (item.effectKo || item.effect || "") : (item.effect || "");
+  if (getLang() === "ko") return item.effectKo || item.effect || "";
+  return item.effect || "";
 }
 
-/** Move display name: prefer nameKo in KO mode (fallback nameEn). */
+/** Move display name — 4-way by current language. */
 export function moveDisplayName(move) {
-  if (!move) return "";
-  return getLang() === "ko" ? (move.nameKo || move.nameEn) : move.nameEn;
+  return pickNameByLang(move);
 }
 
 /** Move damage class label (physical/special/status). */

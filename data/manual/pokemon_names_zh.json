@@ -1,0 +1,4 @@
+{
+  "_comment": "PokeAPI 에 없는 Champions 신규 포켓몬의 중국어 간체 공식명만 여기 기입. 공식 출처(공식 사이트 중국판 · Bulbapedia zh · 공식 트레일러) 크로스체크 후에만 추가. LLM 번역 금지. 수정 시 _verified_sources 에 출처·일자 기록. 구조: {serebii_slug: '简体汉字表记'}",
+  "_verified_sources": []
+}

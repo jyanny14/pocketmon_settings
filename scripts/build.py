@@ -36,6 +36,7 @@ SOURCE_URLS = {
 }
 
 from config import PROJECT_ROOT, RAW_DIR
+from form_i18n import form_name_to_ja, form_name_to_zh
 from form_ko import form_name_to_ko
 from normalize import normalize_text as N
 from parser import (
@@ -63,9 +64,33 @@ ABILITY_NAMES_KO_PATH = PROJECT_ROOT / "data" / "processed" / "ability_names_ko.
 # Optional manual overrides (same shape). Wins over the fetched mapping.
 ABILITY_NAMES_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_names_ko.json"
 
+# ja/zh — produced by scripts/fetch_names_i18n.py --target ability --lang {ja|zh}
+ABILITY_NAMES_JA_PATH = PROJECT_ROOT / "data" / "processed" / "ability_names_ja.json"
+ABILITY_NAMES_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_names_ja.json"
+ABILITY_NAMES_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "ability_names_zh.json"
+ABILITY_NAMES_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_names_zh.json"
+
 # {slug: nameKo} produced by scripts/fetch_item_names_ko.py + manual override
 ITEM_NAMES_KO_PATH = PROJECT_ROOT / "data" / "processed" / "item_names_ko.json"
 ITEM_NAMES_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_names_ko.json"
+
+# ja/zh — produced by scripts/fetch_names_i18n.py --target item --lang {ja|zh}
+ITEM_NAMES_JA_PATH = PROJECT_ROOT / "data" / "processed" / "item_names_ja.json"
+ITEM_NAMES_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_names_ja.json"
+ITEM_NAMES_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "item_names_zh.json"
+ITEM_NAMES_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_names_zh.json"
+
+# Pokémon / Move i18n names — ja/zh only (ko is fetched via different paths:
+# pokemon ko lives in the serebii detail pages; move ko lives in moves.json via fetch_moves.py).
+POKEMON_NAMES_JA_PATH = PROJECT_ROOT / "data" / "processed" / "pokemon_names_ja.json"
+POKEMON_NAMES_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "pokemon_names_ja.json"
+POKEMON_NAMES_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "pokemon_names_zh.json"
+POKEMON_NAMES_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "pokemon_names_zh.json"
+
+MOVE_NAMES_JA_PATH = PROJECT_ROOT / "data" / "processed" / "move_names_ja.json"
+MOVE_NAMES_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_ja.json"
+MOVE_NAMES_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "move_names_zh.json"
+MOVE_NAMES_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_zh.json"
 
 # {slug: effectKo} — manual Korean translations of item effect text. No automated
 # source: PokeAPI has per-item flavor text but not complete Korean item "effect".
@@ -108,8 +133,40 @@ def _load_ability_names_ko() -> dict[str, str]:
     return _load_string_map(ABILITY_NAMES_KO_PATH, ABILITY_NAMES_KO_OVERRIDE_PATH)
 
 
+def _load_ability_names_ja() -> dict[str, str]:
+    return _load_string_map(ABILITY_NAMES_JA_PATH, ABILITY_NAMES_JA_OVERRIDE_PATH)
+
+
+def _load_ability_names_zh() -> dict[str, str]:
+    return _load_string_map(ABILITY_NAMES_ZH_PATH, ABILITY_NAMES_ZH_OVERRIDE_PATH)
+
+
 def _load_item_names_ko() -> dict[str, str]:
     return _load_string_map(ITEM_NAMES_KO_PATH, ITEM_NAMES_KO_OVERRIDE_PATH)
+
+
+def _load_item_names_ja() -> dict[str, str]:
+    return _load_string_map(ITEM_NAMES_JA_PATH, ITEM_NAMES_JA_OVERRIDE_PATH)
+
+
+def _load_item_names_zh() -> dict[str, str]:
+    return _load_string_map(ITEM_NAMES_ZH_PATH, ITEM_NAMES_ZH_OVERRIDE_PATH)
+
+
+def _load_pokemon_names_ja() -> dict[str, str]:
+    return _load_string_map(POKEMON_NAMES_JA_PATH, POKEMON_NAMES_JA_OVERRIDE_PATH)
+
+
+def _load_pokemon_names_zh() -> dict[str, str]:
+    return _load_string_map(POKEMON_NAMES_ZH_PATH, POKEMON_NAMES_ZH_OVERRIDE_PATH)
+
+
+def _load_move_names_ja() -> dict[str, str]:
+    return _load_string_map(MOVE_NAMES_JA_PATH, MOVE_NAMES_JA_OVERRIDE_PATH)
+
+
+def _load_move_names_zh() -> dict[str, str]:
+    return _load_string_map(MOVE_NAMES_ZH_PATH, MOVE_NAMES_ZH_OVERRIDE_PATH)
 
 
 def _load_item_effects_ko() -> dict[str, str]:
@@ -177,6 +234,8 @@ def _slug_from_detail_file(stem: str) -> str:
 def build_pokemon(obtain_index: dict[str, list[str]]) -> list[dict]:
     """Merge detail pages into a single list."""
     game_sources = _load_game_sources()
+    names_ja = _load_pokemon_names_ja()
+    names_zh = _load_pokemon_names_zh()
     results: list[dict] = []
     for html_file in sorted(SEREBII_DIR.glob("pokedex-champions_*.html")):
         slug = _slug_from_detail_file(html_file.stem)
@@ -195,6 +254,8 @@ def build_pokemon(obtain_index: dict[str, list[str]]) -> list[dict]:
         sources_for_slug = game_sources.get(d.slug, {})
         base_name_ko = N(d.name_ko)
         base_name_en = N(d.name_en)
+        base_name_ja = N(names_ja.get(d.slug, ""))
+        base_name_zh = N(names_zh.get(d.slug, ""))
         form_payload = []
         for fm in d.forms:
             # Pick a sprite file:
@@ -218,6 +279,8 @@ def build_pokemon(obtain_index: dict[str, list[str]]) -> list[dict]:
             form_payload.append({
                 "name": N(fm.name),
                 "nameKo": N(form_name_to_ko(fm.name, base_name_ko, base_name_en)),
+                "nameJa": N(form_name_to_ja(fm.name, base_name_ja, base_name_en)) if base_name_ja else "",
+                "nameZh": N(form_name_to_zh(fm.name, base_name_zh, base_name_en)) if base_name_zh else "",
                 "types": fm.types,
                 "abilities": [a.slug for a in fm.abilities],
                 "baseStats": fm.base_stats,
@@ -230,6 +293,8 @@ def build_pokemon(obtain_index: dict[str, list[str]]) -> list[dict]:
             "slug": d.slug,
             "nameEn": base_name_en,
             "nameKo": base_name_ko,
+            "nameJa": base_name_ja,
+            "nameZh": base_name_zh,
             "types": d.types,
             "abilities": [a.slug for a in d.abilities],
             "baseStats": d.base_stats,
@@ -284,6 +349,8 @@ def build_items() -> list[dict]:
         return []
     items = parse_items_listing(html)
     names_ko = _load_item_names_ko()
+    names_ja = _load_item_names_ja()
+    names_zh = _load_item_names_zh()
     effects_ko = _load_item_effects_ko()
     results: list[dict] = []
     for it in items:
@@ -294,6 +361,8 @@ def build_items() -> list[dict]:
             "slug": slug,
             "nameEn": N(it.name),
             "nameKo": N(names_ko.get(slug, "")),
+            "nameJa": N(names_ja.get(slug, "")),
+            "nameZh": N(names_zh.get(slug, "")),
             "effect": N(it.effect),
             "effectKo": N(effects_ko.get(slug, "")),
             "location": N(it.location),
@@ -326,6 +395,8 @@ def build_abilities(pokemon: list[dict]) -> list[dict]:
         lst.sort(key=lambda h: (h["slug"], h["form"]))
 
     names_ko = _load_ability_names_ko()
+    names_ja = _load_ability_names_ja()
+    names_zh = _load_ability_names_zh()
     desc_ko = _load_ability_descriptions_ko()
     new_ability_slugs: set[str] = set()
     if NEW_ABILITIES_PATH.exists():
@@ -352,6 +423,8 @@ def build_abilities(pokemon: list[dict]) -> list[dict]:
             "slug": d.slug,
             "nameEn": N(d.name_en),
             "nameKo": N(names_ko.get(d.slug, "")),
+            "nameJa": N(names_ja.get(d.slug, "")),
+            "nameZh": N(names_zh.get(d.slug, "")),
             "description": N(d.in_depth),
             "descriptionKo": N(ko_fields.get("descriptionKo", "")),
             "gameText": N(d.game_text),

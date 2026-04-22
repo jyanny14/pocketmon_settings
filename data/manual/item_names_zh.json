@@ -1,0 +1,30 @@
+{
+  "_comment": "PokeAPI 에 없는 Champions 신규 도구의 중국어 간체 공식명만 기입. 공식 출처 크로스체크 후에만 추가. LLM 번역 금지. 구조: {slug: '简体汉字'}",
+  "_verified_sources": [
+    "Bulbapedia 'In other languages' 섹션 + 첫 문단 Japanese (2026-04-22) — 24건 추가"
+  ],
+  "chandelurite": "水晶灯火灵进化石",
+  "chesnaughtite": "布里卡隆进化石",
+  "chimechite": "风铃铃进化石",
+  "clefablite": "皮可西进化石",
+  "crabominite": "好胜毛蟹进化石",
+  "delphoxite": "妖火红狐进化石",
+  "dragoninite": "快龙进化石",
+  "drampanite": "老翁龙进化石",
+  "emboarite": "炎武王进化石",
+  "excadrite": "龙头地鼠进化石",
+  "fairy-feather": "妖精之羽",
+  "feraligite": "大力鳄进化石",
+  "floettite": "花叶蒂进化石",
+  "froslassite": "雪妖女进化石",
+  "glimmoranite": "晶光花进化石",
+  "golurkite": "泥偶巨人进化石",
+  "greninjite": "甲贺忍蛙进化石",
+  "hawluchanite": "摔角鹰人进化石",
+  "meganiumite": "大竺葵进化石",
+  "meowsticite": "超能妙喵进化石",
+  "scovillainite": "狠辣椒进化石",
+  "skarmorite": "盔甲鸟进化石",
+  "starminite": "宝石海星进化石",
+  "victreebelite": "大食花进化石"
+}

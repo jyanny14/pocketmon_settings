@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-21T15:27:41Z",
+  "generatedAt": "2026-04-22T06:44:09Z",
   "schemaVersion": "1.0.0",
   "sources": {
     "serebii_champions": "https://www.serebii.net/pokemonchampions/",
@@ -11,19 +11,19 @@
       "name": "pokemon",
       "path": "pokemon.json",
       "count": 186,
-      "sha256": "e886cd7a16ca7f0efe4840b3de3a584b7f4677b3e06390b10b4b560ee0d6ee7d"
+      "sha256": "c40b04c13c72a2ef996f3d28361259763d9f3f3ff371600a14d93489951e2c57"
     },
     {
       "name": "items",
       "path": "items.json",
       "count": 117,
-      "sha256": "d20743bc42c47b43e1212739655ab9014af3902007c1a54fd0845f3a50d5ff11"
+      "sha256": "a2348b70182e313e548e8a0b5df0fe953203caa6a0ada86b0ae7ae5374964753"
     },
     {
       "name": "abilities",
       "path": "abilities.json",
       "count": 192,
-      "sha256": "d59116ed55321d17cdc6c835b43397596c8b6c840b4c860e938a91bba78ed54e"
+      "sha256": "42955f869423d3bc0a44571fcd7e0b1cbe35264b9d6c842df4c8dca5f3590f5f"
     },
     {
       "name": "type_chart",
@@ -35,7 +35,7 @@
       "name": "moves",
       "path": "moves.json",
       "count": 481,
-      "sha256": "ef357156a93e93a63d55263e9ec5ea2e3f2e554f8269844256cdf3112f394bc8"
+      "sha256": "919d2b450261cef4b67e7b76f5b81b3bb54dcf72b8238d58afa7e3211bfabb6d"
     },
     {
       "name": "natures",

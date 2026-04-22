@@ -620,22 +620,128 @@ const STRINGS = {
     "error.loadFailed": "Failed to load data",
     "error.noData": "No data",
   },
+
+  // ── 日本語 (ja) ──
+  // Phase 1 M2: ナビゲーション + 共通 UI ラベルのみ LLM 初訳.
+  // 未翻訳のキーは英語 (STRINGS.en) にフォールバックされる.
+  ja: {
+    "skip": "本文へスキップ",
+    "brand": "ポケモンチャンピオンズ",
+    "nav.pokemon": "ポケモン",
+    "nav.items": "どうぐ",
+    "nav.abilities": "とくせい",
+    "nav.moves": "わざ",
+    "nav.party": "パーティビルダー",
+    "footer.source": "データ出典:",
+    "footer.reference": "データリファレンス (AI · 検索用)",
+    "footer.sponsor": "支援する",
+    "reset": "リセット",
+    "search": "検索",
+
+    "index.title": "Pokemon Champions パーティビルダー",
+    "index.lead": "ランクマッチに行く前に、自分のパーティの弱点・カバレッジ・技選択をまとめてチェックし、AI にそのまま質問する文面まで作れます。",
+    "index.browsePokemon": "ポケモンを見る",
+    "index.startParty": "パーティビルダーを開く",
+    "index.card.pokemon.title": "ポケモン一覧",
+    "index.card.items.title": "どうぐ",
+    "index.card.abilities.title": "とくせい",
+    "index.card.moves.title": "わざ",
+    "index.card.party.title": "パーティビルダー",
+
+    "pokemon.title": "ポケモン一覧",
+    "items.title": "どうぐ一覧",
+    "abilities.title": "とくせい一覧",
+    "moves.title": "わざ一覧",
+    "party.title": "パーティビルダー",
+
+    "common.back": "戻る",
+    "common.copy": "コピー",
+    "common.copied": "コピー済み",
+    "common.loading": "読み込み中…",
+    "common.filter": "フィルタ",
+    "common.all": "すべて",
+    "common.none": "なし",
+    "common.type": "タイプ",
+    "common.category": "分類",
+
+    "error.loadFailed": "データの読み込みに失敗しました",
+    "error.noData": "データなし",
+  },
+
+  // ── 简体中文 (zh) ──
+  // Phase 1 M2: 导航 + 通用 UI 标签仅 LLM 初译.
+  // 未翻译的键会回退到英语 (STRINGS.en).
+  zh: {
+    "skip": "跳至正文",
+    "brand": "宝可梦冠军赛",
+    "nav.pokemon": "宝可梦",
+    "nav.items": "道具",
+    "nav.abilities": "特性",
+    "nav.moves": "招式",
+    "nav.party": "队伍构建器",
+    "footer.source": "数据来源:",
+    "footer.reference": "数据参考 (AI · 搜索用)",
+    "footer.sponsor": "赞助",
+    "reset": "重置",
+    "search": "搜索",
+
+    "index.title": "Pokemon Champions 队伍构建器",
+    "index.lead": "在打对战之前,统一检查自己队伍的弱点、覆盖面、招式选择,甚至可以直接生成向 AI 提问的内容。",
+    "index.browsePokemon": "浏览宝可梦",
+    "index.startParty": "打开队伍构建器",
+    "index.card.pokemon.title": "宝可梦列表",
+    "index.card.items.title": "道具",
+    "index.card.abilities.title": "特性",
+    "index.card.moves.title": "招式",
+    "index.card.party.title": "队伍构建器",
+
+    "pokemon.title": "宝可梦列表",
+    "items.title": "道具列表",
+    "abilities.title": "特性列表",
+    "moves.title": "招式列表",
+    "party.title": "队伍构建器",
+
+    "common.back": "返回",
+    "common.copy": "复制",
+    "common.copied": "已复制",
+    "common.loading": "加载中…",
+    "common.filter": "筛选",
+    "common.all": "全部",
+    "common.none": "无",
+    "common.type": "属性",
+    "common.category": "分类",
+
+    "error.loadFailed": "数据加载失败",
+    "error.noData": "无数据",
+  },
 };
 
+const SUPPORTED_LANGS = ["ko", "en", "ja", "zh"];
+const LANG_LABELS = { ko: "한", en: "EN", ja: "日", zh: "中" };
+
 let _lang = localStorage.getItem("lang") || "ko";
+if (!SUPPORTED_LANGS.includes(_lang)) _lang = "ko";
 
 export function getLang() {
   return _lang;
 }
 
 export function setLang(lang) {
+  if (!SUPPORTED_LANGS.includes(lang)) return;
   _lang = lang;
   localStorage.setItem("lang", lang);
   location.reload();
 }
 
 export function t(key) {
-  return STRINGS[_lang]?.[key] ?? STRINGS.ko[key] ?? key;
+  // Fallback chain: current lang → en → ko → key.
+  // en 이 ko 보다 우선인 이유: ja/zh 누락 시 전 세계 공통 읽히는 영어가 더 자연스러움.
+  return (
+    STRINGS[_lang]?.[key]
+    ?? STRINGS.en?.[key]
+    ?? STRINGS.ko?.[key]
+    ?? key
+  );
 }
 
 /** Scan DOM for [data-i18n] / [data-i18n-ph] / [data-i18n-aria] and apply. */
@@ -657,14 +763,29 @@ export function applyTranslations() {
   }
 }
 
-/** Wire up the #lang-toggle button. */
+/** Wire up the #lang-toggle button.
+ *
+ * Phase 1 M2: 기존 2-way 토글(ko↔en)을 4-way 순환(ko→en→ja→zh→ko)으로 확장.
+ * HTML 쪽 `[data-lang]` 옵션 마크업은 기존 2개(ko/en) 그대로 두고, 버튼 자체가
+ * 현재 언어를 단일 라벨(`한 / EN / 日 / 中`)로 보여준다 — 8개 HTML 에 추가
+ * 옵션을 새로 박지 않아도 되는 최소 변경 방식.
+ */
 export function initLangToggle() {
   const btn = document.getElementById("lang-toggle");
   if (!btn) return;
-  for (const opt of btn.querySelectorAll("[data-lang]")) {
-    opt.classList.toggle("lang-toggle__opt--active", opt.dataset.lang === _lang);
-  }
+
+  const label = LANG_LABELS[_lang] ?? "?";
+  // 기존 2-way 마크업이 있으면 제거하고 단일 라벨로 대체.
+  btn.textContent = label;
+  btn.setAttribute(
+    "aria-label",
+    `현재 언어: ${label} (클릭하여 다음 언어로 전환)`,
+  );
+  btn.setAttribute("title", `Language: ${label}`);
+
   btn.addEventListener("click", () => {
-    setLang(_lang === "ko" ? "en" : "ko");
+    const i = SUPPORTED_LANGS.indexOf(_lang);
+    const next = SUPPORTED_LANGS[(i + 1) % SUPPORTED_LANGS.length];
+    setLang(next);
   });
 }

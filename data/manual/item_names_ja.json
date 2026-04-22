@@ -1,0 +1,29 @@
+{
+  "_comment": "PokeAPI 에 없는 Champions 신규 도구(메가스톤 대부분)의 일본어 공식명만 기입. 공식 출처 크로스체크 후에만 추가. LLM 번역 금지. 구조: {slug: 'カタカナ표기'}",
+  "_verified_sources": [
+    "Bulbapedia 'In other languages' 섹션 + 첫 문단 Japanese (2026-04-22) — 23건 추가"
+  ],
+  "chandelurite": "シャンデラナイト",
+  "chesnaughtite": "ブリガロナイト",
+  "chimechite": "チリーンナイト",
+  "clefablite": "ピクシナイト",
+  "crabominite": "ケケンカニナイト",
+  "delphoxite": "マフォクシナイト",
+  "dragoninite": "カイリュナイト",
+  "drampanite": "ジジーロナイト",
+  "emboarite": "エンブオナイト",
+  "excadrite": "ドリュウズナイト",
+  "feraligite": "オーダイルナイト",
+  "floettite": "フラエッテナイト",
+  "froslassite": "ユキメノコナイト",
+  "glimmoranite": "キラフロルナイト",
+  "golurkite": "ゴルーグナイト",
+  "greninjite": "ゲッコウガナイト",
+  "hawluchanite": "ルチャブルナイト",
+  "meganiumite": "メガニウムナイト",
+  "meowsticite": "ニャオニクスナイト",
+  "scovillainite": "スコヴィラナイト",
+  "skarmorite": "エアームドナイト",
+  "starminite": "スターミナイト",
+  "victreebelite": "ウツボットナイト"
+}

@@ -1,0 +1,4 @@
+{
+  "_comment": "PokeAPI 에 없는 Champions 신규 포켓몬의 일본어 공식명만 여기 기입. 공식 출처(공식 사이트 일본판 · Bulbapedia ja · 공식 트레일러) 크로스체크 후에만 추가. LLM 번역 금지. 수정 시 _verified_sources 에 출처·일자 기록. 구조: {serebii_slug: 'カタカナ표기'}",
+  "_verified_sources": []
+}

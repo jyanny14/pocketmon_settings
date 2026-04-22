@@ -4,6 +4,8 @@
     "slug": "venusaur",
     "nameEn": "Venusaur",
     "nameKo": "이상해꽃",
+    "nameJa": "フシギバナ",
+    "nameZh": "妙蛙花",
     "types": [
       "grass",
       "poison"
@@ -24,6 +26,8 @@
       {
         "name": "Venusaur",
         "nameKo": "이상해꽃",
+        "nameJa": "フシギバナ",
+        "nameZh": "妙蛙花",
         "types": [
           "grass",
           "poison"
@@ -54,6 +58,8 @@
       {
         "name": "Mega Venusaur",
         "nameKo": "메가 이상해꽃",
+        "nameJa": "メガフシギバナ",
+        "nameZh": "超级妙蛙花",
         "types": [
           "grass",
           "poison"
@@ -151,6 +157,8 @@
     "slug": "charizard",
     "nameEn": "Charizard",
     "nameKo": "리자몽",
+    "nameJa": "リザードン",
+    "nameZh": "喷火龙",
     "types": [
       "fire",
       "flying"
@@ -171,6 +179,8 @@
       {
         "name": "Charizard",
         "nameKo": "리자몽",
+        "nameJa": "リザードン",
+        "nameZh": "喷火龙",
         "types": [
           "fire",
           "flying"
@@ -201,6 +211,8 @@
       {
         "name": "Mega Charizard X",
         "nameKo": "메가 리자몽 X",
+        "nameJa": "メガリザードンX",
+        "nameZh": "超级喷火龙X",
         "types": [
           "fire",
           "dragon"
@@ -230,6 +242,8 @@
       {
         "name": "Mega Charizard Y",
         "nameKo": "메가 리자몽 Y",
+        "nameJa": "メガリザードンY",
+        "nameZh": "超级喷火龙Y",
         "types": [
           "fire",
           "flying"
@@ -341,6 +355,8 @@
     "slug": "blastoise",
     "nameEn": "Blastoise",
     "nameKo": "거북왕",
+    "nameJa": "カメックス",
+    "nameZh": "水箭龟",
     "types": [
       "water"
     ],
@@ -360,6 +376,8 @@
       {
         "name": "Blastoise",
         "nameKo": "거북왕",
+        "nameJa": "カメックス",
+        "nameZh": "水箭龟",
         "types": [
           "water"
         ],
@@ -389,6 +407,8 @@
       {
         "name": "Mega Blastoise",
         "nameKo": "메가 거북왕",
+        "nameJa": "メガカメックス",
+        "nameZh": "超级水箭龟",
         "types": [
           "water"
         ],
@@ -500,6 +520,8 @@
     "slug": "beedrill",
     "nameEn": "Beedrill",
     "nameKo": "독침붕",
+    "nameJa": "スピアー",
+    "nameZh": "大针蜂",
     "types": [
       "bug",
       "poison"
@@ -520,6 +542,8 @@
       {
         "name": "Beedrill",
         "nameKo": "독침붕",
+        "nameJa": "スピアー",
+        "nameZh": "大针蜂",
         "types": [
           "bug",
           "poison"
@@ -546,6 +570,8 @@
       {
         "name": "Mega Beedrill",
         "nameKo": "메가 독침붕",
+        "nameJa": "メガスピアー",
+        "nameZh": "超级大针蜂",
         "types": [
           "bug",
           "poison"
@@ -634,6 +660,8 @@
     "slug": "pidgeot",
     "nameEn": "Pidgeot",
     "nameKo": "피죤투",
+    "nameJa": "ピジョット",
+    "nameZh": "大比鸟",
     "types": [
       "normal",
       "flying"
@@ -655,6 +683,8 @@
       {
         "name": "Pidgeot",
         "nameKo": "피죤투",
+        "nameJa": "ピジョット",
+        "nameZh": "大比鸟",
         "types": [
           "normal",
           "flying"
@@ -682,6 +712,8 @@
       {
         "name": "Mega Pidgeot",
         "nameKo": "메가 피죤투",
+        "nameJa": "メガピジョット",
+        "nameZh": "超级大比鸟",
         "types": [
           "normal",
           "flying"
@@ -748,6 +780,8 @@
     "slug": "arbok",
     "nameEn": "Arbok",
     "nameKo": "아보크",
+    "nameJa": "アーボック",
+    "nameZh": "阿柏怪",
     "types": [
       "poison"
     ],
@@ -768,6 +802,8 @@
       {
         "name": "Arbok",
         "nameKo": "아보크",
+        "nameJa": "アーボック",
+        "nameZh": "阿柏怪",
         "types": [
           "poison"
         ],
@@ -876,6 +912,8 @@
     "slug": "pikachu",
     "nameEn": "Pikachu",
     "nameKo": "피카츄",
+    "nameJa": "ピカチュウ",
+    "nameZh": "皮卡丘",
     "types": [
       "electric"
     ],
@@ -895,6 +933,8 @@
       {
         "name": "Pikachu",
         "nameKo": "피카츄",
+        "nameJa": "ピカチュウ",
+        "nameZh": "皮卡丘",
         "types": [
           "electric"
         ],
@@ -997,6 +1037,8 @@
     "slug": "raichu",
     "nameEn": "Raichu",
     "nameKo": "라이츄",
+    "nameJa": "ライチュウ",
+    "nameZh": "雷丘",
     "types": [
       "electric"
     ],
@@ -1017,6 +1059,8 @@
       {
         "name": "Raichu",
         "nameKo": "라이츄",
+        "nameJa": "ライチュウ",
+        "nameZh": "雷丘",
         "types": [
           "electric"
         ],
@@ -1050,6 +1094,8 @@
       {
         "name": "Alolan Raichu",
         "nameKo": "알로라 라이츄",
+        "nameJa": "アローラライチュウ",
+        "nameZh": "阿罗拉雷丘",
         "types": [
           "electric",
           "psychic"
@@ -1151,6 +1197,8 @@
     "slug": "clefable",
     "nameEn": "Clefable",
     "nameKo": "픽시",
+    "nameJa": "ピクシー",
+    "nameZh": "皮可西",
     "types": [
       "fairy"
     ],
@@ -1171,6 +1219,8 @@
       {
         "name": "Clefable",
         "nameKo": "픽시",
+        "nameJa": "ピクシー",
+        "nameZh": "皮可西",
         "types": [
           "fairy"
         ],
@@ -1204,6 +1254,8 @@
       {
         "name": "Mega Clefable",
         "nameKo": "메가 픽시",
+        "nameJa": "メガピクシー",
+        "nameZh": "超级皮可西",
         "types": [
           "fairy",
           "flying"
@@ -1337,6 +1389,8 @@
     "slug": "ninetales",
     "nameEn": "Ninetales",
     "nameKo": "나인테일",
+    "nameJa": "キュウコン",
+    "nameZh": "九尾",
     "types": [
       "fire"
     ],
@@ -1358,6 +1412,8 @@
       {
         "name": "Ninetales",
         "nameKo": "나인테일",
+        "nameJa": "キュウコン",
+        "nameZh": "九尾",
         "types": [
           "fire"
         ],
@@ -1389,6 +1445,8 @@
       {
         "name": "Alolan Ninetales",
         "nameKo": "알로라 나인테일",
+        "nameJa": "アローラキュウコン",
+        "nameZh": "阿罗拉九尾",
         "types": [
           "ice",
           "fairy"
@@ -1490,6 +1548,8 @@
     "slug": "arcanine",
     "nameEn": "Arcanine",
     "nameKo": "윈디",
+    "nameJa": "ウインディ",
+    "nameZh": "风速狗",
     "types": [
       "fire"
     ],
@@ -1511,6 +1571,8 @@
       {
         "name": "Arcanine",
         "nameKo": "윈디",
+        "nameJa": "ウインディ",
+        "nameZh": "风速狗",
         "types": [
           "fire"
         ],
@@ -1542,6 +1604,8 @@
       {
         "name": "Hisuian Arcanine",
         "nameKo": "히스이 윈디",
+        "nameJa": "ヒスイウインディ",
+        "nameZh": "洗翠风速狗",
         "types": [
           "fire",
           "rock"
@@ -1635,6 +1699,8 @@
     "slug": "alakazam",
     "nameEn": "Alakazam",
     "nameKo": "후딘",
+    "nameJa": "フーディン",
+    "nameZh": "胡地",
     "types": [
       "psychic"
     ],
@@ -1655,6 +1721,8 @@
       {
         "name": "Alakazam",
         "nameKo": "후딘",
+        "nameJa": "フーディン",
+        "nameZh": "胡地",
         "types": [
           "psychic"
         ],
@@ -1686,6 +1754,8 @@
       {
         "name": "Mega Alakazam",
         "nameKo": "메가 후딘",
+        "nameJa": "メガフーディン",
+        "nameZh": "超级胡地",
         "types": [
           "psychic"
         ],
@@ -1785,6 +1855,8 @@
     "slug": "machamp",
     "nameEn": "Machamp",
     "nameKo": "괴력몬",
+    "nameJa": "カイリキー",
+    "nameZh": "怪力",
     "types": [
       "fighting"
     ],
@@ -1805,6 +1877,8 @@
       {
         "name": "Machamp",
         "nameKo": "괴력몬",
+        "nameJa": "カイリキー",
+        "nameZh": "怪力",
         "types": [
           "fighting"
         ],
@@ -1913,6 +1987,8 @@
     "slug": "victreebel",
     "nameEn": "Victreebel",
     "nameKo": "우츠보트",
+    "nameJa": "ウツボット",
+    "nameZh": "大食花",
     "types": [
       "grass",
       "poison"
@@ -1933,6 +2009,8 @@
       {
         "name": "Victreebel",
         "nameKo": "우츠보트",
+        "nameJa": "ウツボット",
+        "nameZh": "大食花",
         "types": [
           "grass",
           "poison"
@@ -1961,6 +2039,8 @@
       {
         "name": "Mega Victreebel",
         "nameKo": "메가 우츠보트",
+        "nameJa": "メガウツボット",
+        "nameZh": "超级大食花",
         "types": [
           "grass",
           "poison"
@@ -2056,6 +2136,8 @@
     "slug": "slowbro",
     "nameEn": "Slowbro",
     "nameKo": "야도란",
+    "nameJa": "ヤドラン",
+    "nameZh": "呆壳兽",
     "types": [
       "water",
       "psychic"
@@ -2078,6 +2160,8 @@
       {
         "name": "Slowbro",
         "nameKo": "야도란",
+        "nameJa": "ヤドラン",
+        "nameZh": "呆壳兽",
         "types": [
           "water",
           "psychic"
@@ -2110,6 +2194,8 @@
       {
         "name": "Galarian Slowbro",
         "nameKo": "가라르 야도란",
+        "nameJa": "ガラルヤドラン",
+        "nameZh": "伽勒尔呆壳兽",
         "types": [
           "poison",
           "psychic"
@@ -2138,6 +2224,8 @@
       {
         "name": "Mega Slowbro",
         "nameKo": "메가 야도란",
+        "nameJa": "メガヤドラン",
+        "nameZh": "超级呆壳兽",
         "types": [
           "water",
           "psychic"
@@ -2255,6 +2343,8 @@
     "slug": "gengar",
     "nameEn": "Gengar",
     "nameKo": "팬텀",
+    "nameJa": "ゲンガー",
+    "nameZh": "耿鬼",
     "types": [
       "ghost",
       "poison"
@@ -2274,6 +2364,8 @@
       {
         "name": "Gengar",
         "nameKo": "팬텀",
+        "nameJa": "ゲンガー",
+        "nameZh": "耿鬼",
         "types": [
           "ghost",
           "poison"
@@ -2306,6 +2398,8 @@
       {
         "name": "Mega Gengar",
         "nameKo": "메가 팬텀",
+        "nameJa": "メガゲンガー",
+        "nameZh": "超级耿鬼",
         "types": [
           "ghost",
           "poison"
@@ -2424,6 +2518,8 @@
     "slug": "kangaskhan",
     "nameEn": "Kangaskhan",
     "nameKo": "캥카",
+    "nameJa": "ガルーラ",
+    "nameZh": "袋兽",
     "types": [
       "normal"
     ],
@@ -2444,6 +2540,8 @@
       {
         "name": "Kangaskhan",
         "nameKo": "캥카",
+        "nameJa": "ガルーラ",
+        "nameZh": "袋兽",
         "types": [
           "normal"
         ],
@@ -2472,6 +2570,8 @@
       {
         "name": "Mega Kangaskhan",
         "nameKo": "메가 캥카",
+        "nameJa": "メガガルーラ",
+        "nameZh": "超级袋兽",
         "types": [
           "normal"
         ],
@@ -2575,6 +2675,8 @@
     "slug": "starmie",
     "nameEn": "Starmie",
     "nameKo": "아쿠스타",
+    "nameJa": "スターミー",
+    "nameZh": "宝石海星",
     "types": [
       "water",
       "psychic"
@@ -2596,6 +2698,8 @@
       {
         "name": "Starmie",
         "nameKo": "아쿠스타",
+        "nameJa": "スターミー",
+        "nameZh": "宝石海星",
         "types": [
           "water",
           "psychic"
@@ -2625,6 +2729,8 @@
       {
         "name": "Mega Starmie",
         "nameKo": "메가 아쿠스타",
+        "nameJa": "メガスターミー",
+        "nameZh": "超级宝石海星",
         "types": [
           "water",
           "psychic"
@@ -2724,6 +2830,8 @@
     "slug": "pinsir",
     "nameEn": "Pinsir",
     "nameKo": "쁘사이저",
+    "nameJa": "カイロス",
+    "nameZh": "凯罗斯",
     "types": [
       "bug"
     ],
@@ -2744,6 +2852,8 @@
       {
         "name": "Pinsir",
         "nameKo": "쁘사이저",
+        "nameJa": "カイロス",
+        "nameZh": "凯罗斯",
         "types": [
           "bug"
         ],
@@ -2772,6 +2882,8 @@
       {
         "name": "Mega Pinsir",
         "nameKo": "메가 쁘사이저",
+        "nameJa": "メガカイロス",
+        "nameZh": "超级凯罗斯",
         "types": [
           "bug",
           "flying"
@@ -2862,6 +2974,8 @@
     "slug": "tauros",
     "nameEn": "Tauros",
     "nameKo": "켄타로스",
+    "nameJa": "ケンタロス",
+    "nameZh": "肯泰罗",
     "types": [
       "normal"
     ],
@@ -2883,6 +2997,8 @@
       {
         "name": "Tauros",
         "nameKo": "켄타로스",
+        "nameJa": "ケンタロス",
+        "nameZh": "肯泰罗",
         "types": [
           "normal"
         ],
@@ -2913,6 +3029,8 @@
       {
         "name": "Paldean Tauros",
         "nameKo": "팔데아 켄타로스",
+        "nameJa": "パルデアケンタロス",
+        "nameZh": "帕底亚肯泰罗",
         "types": [
           "fighting"
         ],
@@ -3021,6 +3139,8 @@
     "slug": "gyarados",
     "nameEn": "Gyarados",
     "nameKo": "갸라도스",
+    "nameJa": "ギャラドス",
+    "nameZh": "暴鲤龙",
     "types": [
       "water",
       "flying"
@@ -3041,6 +3161,8 @@
       {
         "name": "Gyarados",
         "nameKo": "갸라도스",
+        "nameJa": "ギャラドス",
+        "nameZh": "暴鲤龙",
         "types": [
           "water",
           "flying"
@@ -3074,6 +3196,8 @@
       {
         "name": "Mega Gyarados",
         "nameKo": "메가 갸라도스",
+        "nameJa": "メガギャラドス",
+        "nameZh": "超级暴鲤龙",
         "types": [
           "water",
           "dark"
@@ -3183,6 +3307,8 @@
     "slug": "ditto",
     "nameEn": "Ditto",
     "nameKo": "메타몽",
+    "nameJa": "メタモン",
+    "nameZh": "百变怪",
     "types": [
       "normal"
     ],
@@ -3202,6 +3328,8 @@
       {
         "name": "Ditto",
         "nameKo": "메타몽",
+        "nameJa": "メタモン",
+        "nameZh": "百变怪",
         "types": [
           "normal"
         ],
@@ -3241,6 +3369,8 @@
     "slug": "vaporeon",
     "nameEn": "Vaporeon",
     "nameKo": "샤미드",
+    "nameJa": "シャワーズ",
+    "nameZh": "水伊布",
     "types": [
       "water"
     ],
@@ -3260,6 +3390,8 @@
       {
         "name": "Vaporeon",
         "nameKo": "샤미드",
+        "nameJa": "シャワーズ",
+        "nameZh": "水伊布",
         "types": [
           "water"
         ],
@@ -3361,6 +3493,8 @@
     "slug": "jolteon",
     "nameEn": "Jolteon",
     "nameKo": "쥬피썬더",
+    "nameJa": "サンダース",
+    "nameZh": "雷伊布",
     "types": [
       "electric"
     ],
@@ -3380,6 +3514,8 @@
       {
         "name": "Jolteon",
         "nameKo": "쥬피썬더",
+        "nameJa": "サンダース",
+        "nameZh": "雷伊布",
         "types": [
           "electric"
         ],
@@ -3481,6 +3617,8 @@
     "slug": "flareon",
     "nameEn": "Flareon",
     "nameKo": "부스터",
+    "nameJa": "ブースター",
+    "nameZh": "火伊布",
     "types": [
       "fire"
     ],
@@ -3500,6 +3638,8 @@
       {
         "name": "Flareon",
         "nameKo": "부스터",
+        "nameJa": "ブースター",
+        "nameZh": "火伊布",
         "types": [
           "fire"
         ],
@@ -3599,6 +3739,8 @@
     "slug": "aerodactyl",
     "nameEn": "Aerodactyl",
     "nameKo": "프테라",
+    "nameJa": "プテラ",
+    "nameZh": "化石翼龙",
     "types": [
       "rock",
       "flying"
@@ -3620,6 +3762,8 @@
       {
         "name": "Aerodactyl",
         "nameKo": "프테라",
+        "nameJa": "プテラ",
+        "nameZh": "化石翼龙",
         "types": [
           "rock",
           "flying"
@@ -3649,6 +3793,8 @@
       {
         "name": "Mega Aerodactyl",
         "nameKo": "메가 프테라",
+        "nameJa": "メガプテラ",
+        "nameZh": "超级化石翼龙",
         "types": [
           "rock",
           "flying"
@@ -3744,6 +3890,8 @@
     "slug": "snorlax",
     "nameEn": "Snorlax",
     "nameKo": "잠만보",
+    "nameJa": "カビゴン",
+    "nameZh": "卡比兽",
     "types": [
       "normal"
     ],
@@ -3764,6 +3912,8 @@
       {
         "name": "Snorlax",
         "nameKo": "잠만보",
+        "nameJa": "カビゴン",
+        "nameZh": "卡比兽",
         "types": [
           "normal"
         ],
@@ -3889,6 +4039,8 @@
     "slug": "dragonite",
     "nameEn": "Dragonite",
     "nameKo": "망나뇽",
+    "nameJa": "カイリュー",
+    "nameZh": "快龙",
     "types": [
       "dragon",
       "flying"
@@ -3909,6 +4061,8 @@
       {
         "name": "Dragonite",
         "nameKo": "망나뇽",
+        "nameJa": "カイリュー",
+        "nameZh": "快龙",
         "types": [
           "dragon",
           "flying"
@@ -3939,6 +4093,8 @@
       {
         "name": "Mega Dragonite",
         "nameKo": "메가 망나뇽",
+        "nameJa": "メガカイリュー",
+        "nameZh": "超级快龙",
         "types": [
           "dragon",
           "flying"
@@ -4062,6 +4218,8 @@
     "slug": "meganium",
     "nameEn": "Meganium",
     "nameKo": "메가니움",
+    "nameJa": "メガニウム",
+    "nameZh": "大竺葵",
     "types": [
       "grass"
     ],
@@ -4081,6 +4239,8 @@
       {
         "name": "Meganium",
         "nameKo": "메가니움",
+        "nameJa": "メガニウム",
+        "nameZh": "大竺葵",
         "types": [
           "grass"
         ],
@@ -4106,6 +4266,8 @@
       {
         "name": "Mega Meganium",
         "nameKo": "메가 메가니움",
+        "nameJa": "メガメガニウム",
+        "nameZh": "超级大竺葵",
         "types": [
           "grass",
           "fairy"
@@ -4203,6 +4365,8 @@
     "slug": "typhlosion",
     "nameEn": "Typhlosion",
     "nameKo": "블레이범",
+    "nameJa": "バクフーン",
+    "nameZh": "火暴兽",
     "types": [
       "fire"
     ],
@@ -4223,6 +4387,8 @@
       {
         "name": "Typhlosion",
         "nameKo": "블레이범",
+        "nameJa": "バクフーン",
+        "nameZh": "火暴兽",
         "types": [
           "fire"
         ],
@@ -4249,6 +4415,8 @@
       {
         "name": "Hisuian Typhlosion",
         "nameKo": "히스이 블레이범",
+        "nameJa": "ヒスイバクフーン",
+        "nameZh": "洗翠火暴兽",
         "types": [
           "fire",
           "ghost"
@@ -4347,6 +4515,8 @@
     "slug": "feraligatr",
     "nameEn": "Feraligatr",
     "nameKo": "장크로다일",
+    "nameJa": "オーダイル",
+    "nameZh": "大力鳄",
     "types": [
       "water"
     ],
@@ -4366,6 +4536,8 @@
       {
         "name": "Feraligatr",
         "nameKo": "장크로다일",
+        "nameJa": "オーダイル",
+        "nameZh": "大力鳄",
         "types": [
           "water"
         ],
@@ -4391,6 +4563,8 @@
       {
         "name": "Mega Feraligatr",
         "nameKo": "메가 장크로다일",
+        "nameJa": "メガオーダイル",
+        "nameZh": "超级大力鳄",
         "types": [
           "water",
           "dragon"
@@ -4509,6 +4683,8 @@
     "slug": "ariados",
     "nameEn": "Ariados",
     "nameKo": "아리아도스",
+    "nameJa": "アリアドス",
+    "nameZh": "阿利多斯",
     "types": [
       "bug",
       "poison"
@@ -4530,6 +4706,8 @@
       {
         "name": "Ariados",
         "nameKo": "아리아도스",
+        "nameJa": "アリアドス",
+        "nameZh": "阿利多斯",
         "types": [
           "bug",
           "poison"
@@ -4631,6 +4809,8 @@
     "slug": "ampharos",
     "nameEn": "Ampharos",
     "nameKo": "전룡",
+    "nameJa": "デンリュウ",
+    "nameZh": "电龙",
     "types": [
       "electric"
     ],
@@ -4650,6 +4830,8 @@
       {
         "name": "Ampharos",
         "nameKo": "전룡",
+        "nameJa": "デンリュウ",
+        "nameZh": "电龙",
         "types": [
           "electric"
         ],
@@ -4675,6 +4857,8 @@
       {
         "name": "Mega Ampharos",
         "nameKo": "메가 전룡",
+        "nameJa": "メガデンリュウ",
+        "nameZh": "超级电龙",
         "types": [
           "electric",
           "dragon"
@@ -4777,6 +4961,8 @@
     "slug": "azumarill",
     "nameEn": "Azumarill",
     "nameKo": "마릴리",
+    "nameJa": "マリルリ",
+    "nameZh": "玛力露丽",
     "types": [
       "water",
       "fairy"
@@ -4798,6 +4984,8 @@
       {
         "name": "Azumarill",
         "nameKo": "마릴리",
+        "nameJa": "マリルリ",
+        "nameZh": "玛力露丽",
         "types": [
           "water",
           "fairy"
@@ -4904,6 +5092,8 @@
     "slug": "politoed",
     "nameEn": "Politoed",
     "nameKo": "왕구리",
+    "nameJa": "ニョロトノ",
+    "nameZh": "蚊香蛙皇",
     "types": [
       "water"
     ],
@@ -4924,6 +5114,8 @@
       {
         "name": "Politoed",
         "nameKo": "왕구리",
+        "nameJa": "ニョロトノ",
+        "nameZh": "蚊香蛙皇",
         "types": [
           "water"
         ],
@@ -5018,6 +5210,8 @@
     "slug": "espeon",
     "nameEn": "Espeon",
     "nameKo": "에브이",
+    "nameJa": "エーフィ",
+    "nameZh": "太阳伊布",
     "types": [
       "psychic"
     ],
@@ -5037,6 +5231,8 @@
       {
         "name": "Espeon",
         "nameKo": "에브이",
+        "nameJa": "エーフィ",
+        "nameZh": "太阳伊布",
         "types": [
           "psychic"
         ],
@@ -5144,6 +5340,8 @@
     "slug": "umbreon",
     "nameEn": "Umbreon",
     "nameKo": "블래키",
+    "nameJa": "ブラッキー",
+    "nameZh": "月亮伊布",
     "types": [
       "dark"
     ],
@@ -5163,6 +5361,8 @@
       {
         "name": "Umbreon",
         "nameKo": "블래키",
+        "nameJa": "ブラッキー",
+        "nameZh": "月亮伊布",
         "types": [
           "dark"
         ],
@@ -5270,6 +5470,8 @@
     "slug": "slowking",
     "nameEn": "Slowking",
     "nameKo": "야도킹",
+    "nameJa": "ヤドキング",
+    "nameZh": "呆呆王",
     "types": [
       "water",
       "psychic"
@@ -5292,6 +5494,8 @@
       {
         "name": "Slowking",
         "nameKo": "야도킹",
+        "nameJa": "ヤドキング",
+        "nameZh": "呆呆王",
         "types": [
           "water",
           "psychic"
@@ -5322,6 +5526,8 @@
       {
         "name": "Galarian Slowking",
         "nameKo": "가라르 야도킹",
+        "nameJa": "ガラルヤドキング",
+        "nameZh": "伽勒尔呆呆王",
         "types": [
           "poison",
           "psychic"
@@ -5445,6 +5651,8 @@
     "slug": "forretress",
     "nameEn": "Forretress",
     "nameKo": "쏘콘",
+    "nameJa": "フォレトス",
+    "nameZh": "佛烈托斯",
     "types": [
       "bug",
       "steel"
@@ -5465,6 +5673,8 @@
       {
         "name": "Forretress",
         "nameKo": "쏘콘",
+        "nameJa": "フォレトス",
+        "nameZh": "佛烈托斯",
         "types": [
           "bug",
           "steel"
@@ -5569,6 +5779,8 @@
     "slug": "steelix",
     "nameEn": "Steelix",
     "nameKo": "강철톤",
+    "nameJa": "ハガネール",
+    "nameZh": "大钢蛇",
     "types": [
       "steel",
       "ground"
@@ -5590,6 +5802,8 @@
       {
         "name": "Steelix",
         "nameKo": "강철톤",
+        "nameJa": "ハガネール",
+        "nameZh": "大钢蛇",
         "types": [
           "steel",
           "ground"
@@ -5620,6 +5834,8 @@
       {
         "name": "Mega Steelix",
         "nameKo": "메가 강철톤",
+        "nameJa": "メガハガネール",
+        "nameZh": "超级大钢蛇",
         "types": [
           "steel",
           "ground"
@@ -5724,6 +5940,8 @@
     "slug": "scizor",
     "nameEn": "Scizor",
     "nameKo": "핫삼",
+    "nameJa": "ハッサム",
+    "nameZh": "巨钳螳螂",
     "types": [
       "bug",
       "steel"
@@ -5745,6 +5963,8 @@
       {
         "name": "Scizor",
         "nameKo": "핫삼",
+        "nameJa": "ハッサム",
+        "nameZh": "巨钳螳螂",
         "types": [
           "bug",
           "steel"
@@ -5777,6 +5997,8 @@
       {
         "name": "Mega Scizor",
         "nameKo": "메가 핫삼",
+        "nameJa": "メガハッサム",
+        "nameZh": "超级巨钳螳螂",
         "types": [
           "bug",
           "steel"
@@ -5881,6 +6103,8 @@
     "slug": "heracross",
     "nameEn": "Heracross",
     "nameKo": "헤라크로스",
+    "nameJa": "ヘラクロス",
+    "nameZh": "赫拉克罗斯",
     "types": [
       "bug",
       "fighting"
@@ -5902,6 +6126,8 @@
       {
         "name": "Heracross",
         "nameKo": "헤라크로스",
+        "nameJa": "ヘラクロス",
+        "nameZh": "赫拉克罗斯",
         "types": [
           "bug",
           "fighting"
@@ -5934,6 +6160,8 @@
       {
         "name": "Mega Heracross",
         "nameKo": "메가 헤라크로스",
+        "nameJa": "メガヘラクロス",
+        "nameZh": "超级赫拉克罗斯",
         "types": [
           "bug",
           "fighting"
@@ -6040,6 +6268,8 @@
     "slug": "skarmory",
     "nameEn": "Skarmory",
     "nameKo": "무장조",
+    "nameJa": "エアームド",
+    "nameZh": "盔甲鸟",
     "types": [
       "steel",
       "flying"
@@ -6061,6 +6291,8 @@
       {
         "name": "Skarmory",
         "nameKo": "무장조",
+        "nameJa": "エアームド",
+        "nameZh": "盔甲鸟",
         "types": [
           "steel",
           "flying"
@@ -6090,6 +6322,8 @@
       {
         "name": "Mega Skarmory",
         "nameKo": "메가 무장조",
+        "nameJa": "メガエアームド",
+        "nameZh": "超级盔甲鸟",
         "types": [
           "steel",
           "flying"
@@ -6178,6 +6412,8 @@
     "slug": "houndoom",
     "nameEn": "Houndoom",
     "nameKo": "헬가",
+    "nameJa": "ヘルガー",
+    "nameZh": "黑鲁加",
     "types": [
       "dark",
       "fire"
@@ -6199,6 +6435,8 @@
       {
         "name": "Houndoom",
         "nameKo": "헬가",
+        "nameJa": "ヘルガー",
+        "nameZh": "黑鲁加",
         "types": [
           "dark",
           "fire"
@@ -6228,6 +6466,8 @@
       {
         "name": "Mega Houndoom",
         "nameKo": "메가 헬가",
+        "nameJa": "メガヘルガー",
+        "nameZh": "超级黑鲁加",
         "types": [
           "dark",
           "fire"
@@ -6332,6 +6572,8 @@
     "slug": "tyranitar",
     "nameEn": "Tyranitar",
     "nameKo": "마기라스",
+    "nameJa": "バンギラス",
+    "nameZh": "班基拉斯",
     "types": [
       "rock",
       "dark"
@@ -6352,6 +6594,8 @@
       {
         "name": "Tyranitar",
         "nameKo": "마기라스",
+        "nameJa": "バンギラス",
+        "nameZh": "班基拉斯",
         "types": [
           "rock",
           "dark"
@@ -6380,6 +6624,8 @@
       {
         "name": "Mega Tyranitar",
         "nameKo": "메가 마기라스",
+        "nameJa": "メガバンギラス",
+        "nameZh": "超级班基拉斯",
         "types": [
           "rock",
           "dark"
@@ -6509,6 +6755,8 @@
     "slug": "pelipper",
     "nameEn": "Pelipper",
     "nameKo": "패리퍼",
+    "nameJa": "ペリッパー",
+    "nameZh": "大嘴鸥",
     "types": [
       "water",
       "flying"
@@ -6530,6 +6778,8 @@
       {
         "name": "Pelipper",
         "nameKo": "패리퍼",
+        "nameJa": "ペリッパー",
+        "nameZh": "大嘴鸥",
         "types": [
           "water",
           "flying"
@@ -6623,6 +6873,8 @@
     "slug": "gardevoir",
     "nameEn": "Gardevoir",
     "nameKo": "가디안",
+    "nameJa": "サーナイト",
+    "nameZh": "沙奈朵",
     "types": [
       "psychic",
       "fairy"
@@ -6644,6 +6896,8 @@
       {
         "name": "Gardevoir",
         "nameKo": "가디안",
+        "nameJa": "サーナイト",
+        "nameZh": "沙奈朵",
         "types": [
           "psychic",
           "fairy"
@@ -6676,6 +6930,8 @@
       {
         "name": "Mega Gardevoir",
         "nameKo": "메가 가디안",
+        "nameJa": "メガサーナイト",
+        "nameZh": "超级沙奈朵",
         "types": [
           "psychic",
           "fairy"
@@ -6797,6 +7053,8 @@
     "slug": "sableye",
     "nameEn": "Sableye",
     "nameKo": "깜까미",
+    "nameJa": "ヤミラミ",
+    "nameZh": "勾魂眼",
     "types": [
       "dark",
       "ghost"
@@ -6818,6 +7076,8 @@
       {
         "name": "Sableye",
         "nameKo": "깜까미",
+        "nameJa": "ヤミラミ",
+        "nameZh": "勾魂眼",
         "types": [
           "dark",
           "ghost"
@@ -6847,6 +7107,8 @@
       {
         "name": "Mega Sableye",
         "nameKo": "메가 깜까미",
+        "nameJa": "メガヤミラミ",
+        "nameZh": "超级勾魂眼",
         "types": [
           "dark",
           "ghost"
@@ -6972,6 +7234,8 @@
     "slug": "aggron",
     "nameEn": "Aggron",
     "nameKo": "보스로라",
+    "nameJa": "ボスゴドラ",
+    "nameZh": "波士可多拉",
     "types": [
       "steel",
       "rock"
@@ -6993,6 +7257,8 @@
       {
         "name": "Aggron",
         "nameKo": "보스로라",
+        "nameJa": "ボスゴドラ",
+        "nameZh": "波士可多拉",
         "types": [
           "steel",
           "rock"
@@ -7020,6 +7286,8 @@
       {
         "name": "Mega Aggron",
         "nameKo": "메가 보스로라",
+        "nameJa": "メガボスゴドラ",
+        "nameZh": "超级波士可多拉",
         "types": [
           "steel"
         ],
@@ -7137,6 +7405,8 @@
     "slug": "medicham",
     "nameEn": "Medicham",
     "nameKo": "요가램",
+    "nameJa": "チャーレム",
+    "nameZh": "恰雷姆",
     "types": [
       "fighting",
       "psychic"
@@ -7157,6 +7427,8 @@
       {
         "name": "Medicham",
         "nameKo": "요가램",
+        "nameJa": "チャーレム",
+        "nameZh": "恰雷姆",
         "types": [
           "fighting",
           "psychic"
@@ -7185,6 +7457,8 @@
       {
         "name": "Mega Medicham",
         "nameKo": "메가 요가램",
+        "nameJa": "メガチャーレム",
+        "nameZh": "超级恰雷姆",
         "types": [
           "fighting",
           "psychic"
@@ -7299,6 +7573,8 @@
     "slug": "manectric",
     "nameEn": "Manectric",
     "nameKo": "썬더볼트",
+    "nameJa": "ライボルト",
+    "nameZh": "雷电兽",
     "types": [
       "electric"
     ],
@@ -7319,6 +7595,8 @@
       {
         "name": "Manectric",
         "nameKo": "썬더볼트",
+        "nameJa": "ライボルト",
+        "nameZh": "雷电兽",
         "types": [
           "electric"
         ],
@@ -7345,6 +7623,8 @@
       {
         "name": "Mega Manectric",
         "nameKo": "메가 썬더볼트",
+        "nameJa": "メガライボルト",
+        "nameZh": "超级雷电兽",
         "types": [
           "electric"
         ],
@@ -7428,6 +7708,8 @@
     "slug": "sharpedo",
     "nameEn": "Sharpedo",
     "nameKo": "샤크니아",
+    "nameJa": "サメハダー",
+    "nameZh": "巨牙鲨",
     "types": [
       "water",
       "dark"
@@ -7448,6 +7730,8 @@
       {
         "name": "Sharpedo",
         "nameKo": "샤크니아",
+        "nameJa": "サメハダー",
+        "nameZh": "巨牙鲨",
         "types": [
           "water",
           "dark"
@@ -7474,6 +7758,8 @@
       {
         "name": "Mega Sharpedo",
         "nameKo": "메가 샤크니아",
+        "nameJa": "メガサメハダー",
+        "nameZh": "超级巨牙鲨",
         "types": [
           "water",
           "dark"
@@ -7566,6 +7852,8 @@
     "slug": "camerupt",
     "nameEn": "Camerupt",
     "nameKo": "폭타",
+    "nameJa": "バクーダ",
+    "nameZh": "喷火驼",
     "types": [
       "fire",
       "ground"
@@ -7587,6 +7875,8 @@
       {
         "name": "Camerupt",
         "nameKo": "폭타",
+        "nameJa": "バクーダ",
+        "nameZh": "喷火驼",
         "types": [
           "fire",
           "ground"
@@ -7614,6 +7904,8 @@
       {
         "name": "Mega Camerupt",
         "nameKo": "메가 폭타",
+        "nameJa": "メガバクーダ",
+        "nameZh": "超级喷火驼",
         "types": [
           "fire",
           "ground"
@@ -7716,6 +8008,8 @@
     "slug": "torkoal",
     "nameEn": "Torkoal",
     "nameKo": "코터스",
+    "nameJa": "コータス",
+    "nameZh": "煤炭龟",
     "types": [
       "fire"
     ],
@@ -7736,6 +8030,8 @@
       {
         "name": "Torkoal",
         "nameKo": "코터스",
+        "nameJa": "コータス",
+        "nameZh": "煤炭龟",
         "types": [
           "fire"
         ],
@@ -7830,6 +8126,8 @@
     "slug": "altaria",
     "nameEn": "Altaria",
     "nameKo": "파비코리",
+    "nameJa": "チルタリス",
+    "nameZh": "七夕青鸟",
     "types": [
       "dragon",
       "flying"
@@ -7850,6 +8148,8 @@
       {
         "name": "Altaria",
         "nameKo": "파비코리",
+        "nameJa": "チルタリス",
+        "nameZh": "七夕青鸟",
         "types": [
           "dragon",
           "flying"
@@ -7880,6 +8180,8 @@
       {
         "name": "Mega Altaria",
         "nameKo": "메가 파비코리",
+        "nameJa": "メガチルタリス",
+        "nameZh": "超级七夕青鸟",
         "types": [
           "dragon",
           "fairy"
@@ -7984,6 +8286,8 @@
     "slug": "milotic",
     "nameEn": "Milotic",
     "nameKo": "밀로틱",
+    "nameJa": "ミロカロス",
+    "nameZh": "美纳斯",
     "types": [
       "water"
     ],
@@ -8004,6 +8308,8 @@
       {
         "name": "Milotic",
         "nameKo": "밀로틱",
+        "nameJa": "ミロカロス",
+        "nameZh": "美纳斯",
         "types": [
           "water"
         ],
@@ -8105,6 +8411,8 @@
     "slug": "castform",
     "nameEn": "Castform",
     "nameKo": "캐스퐁",
+    "nameJa": "ポワルン",
+    "nameZh": "飘浮泡泡",
     "types": [
       "normal"
     ],
@@ -8123,6 +8431,8 @@
       {
         "name": "Castform",
         "nameKo": "캐스퐁",
+        "nameJa": "ポワルン",
+        "nameZh": "飘浮泡泡",
         "types": [
           "normal"
         ],
@@ -8190,6 +8500,8 @@
     "slug": "banette",
     "nameEn": "Banette",
     "nameKo": "다크펫",
+    "nameJa": "ジュペッタ",
+    "nameZh": "诅咒娃娃",
     "types": [
       "ghost"
     ],
@@ -8210,6 +8522,8 @@
       {
         "name": "Banette",
         "nameKo": "다크펫",
+        "nameJa": "ジュペッタ",
+        "nameZh": "诅咒娃娃",
         "types": [
           "ghost"
         ],
@@ -8236,6 +8550,8 @@
       {
         "name": "Mega Banette",
         "nameKo": "메가 다크펫",
+        "nameJa": "メガジュペッタ",
+        "nameZh": "超级诅咒娃娃",
         "types": [
           "ghost"
         ],
@@ -8336,6 +8652,8 @@
     "slug": "chimecho",
     "nameEn": "Chimecho",
     "nameKo": "치렁",
+    "nameJa": "チリーン",
+    "nameZh": "风铃铃",
     "types": [
       "psychic"
     ],
@@ -8354,6 +8672,8 @@
       {
         "name": "Chimecho",
         "nameKo": "치렁",
+        "nameJa": "チリーン",
+        "nameZh": "风铃铃",
         "types": [
           "psychic"
         ],
@@ -8381,6 +8701,8 @@
       {
         "name": "Mega Chimecho",
         "nameKo": "메가 치렁",
+        "nameJa": "メガチリーン",
+        "nameZh": "超级风铃铃",
         "types": [
           "psychic",
           "steel"
@@ -8484,6 +8806,8 @@
     "slug": "absol",
     "nameEn": "Absol",
     "nameKo": "앱솔",
+    "nameJa": "アブソル",
+    "nameZh": "阿勃梭鲁",
     "types": [
       "dark"
     ],
@@ -8504,6 +8828,8 @@
       {
         "name": "Absol",
         "nameKo": "앱솔",
+        "nameJa": "アブソル",
+        "nameZh": "阿勃梭鲁",
         "types": [
           "dark"
         ],
@@ -8532,6 +8858,8 @@
       {
         "name": "Mega Absol",
         "nameKo": "메가 앱솔",
+        "nameJa": "メガアブソル",
+        "nameZh": "超级阿勃梭鲁",
         "types": [
           "dark"
         ],
@@ -8639,6 +8967,8 @@
     "slug": "glalie",
     "nameEn": "Glalie",
     "nameKo": "얼음귀신",
+    "nameJa": "オニゴーリ",
+    "nameZh": "冰鬼护",
     "types": [
       "ice"
     ],
@@ -8659,6 +8989,8 @@
       {
         "name": "Glalie",
         "nameKo": "얼음귀신",
+        "nameJa": "オニゴーリ",
+        "nameZh": "冰鬼护",
         "types": [
           "ice"
         ],
@@ -8690,6 +9022,8 @@
       {
         "name": "Mega Glalie",
         "nameKo": "메가 얼음귀신",
+        "nameJa": "メガオニゴーリ",
+        "nameZh": "超级冰鬼护",
         "types": [
           "ice"
         ],
@@ -8783,6 +9117,8 @@
     "slug": "torterra",
     "nameEn": "Torterra",
     "nameKo": "토대부기",
+    "nameJa": "ドダイトス",
+    "nameZh": "土台龟",
     "types": [
       "grass",
       "ground"
@@ -8803,6 +9139,8 @@
       {
         "name": "Torterra",
         "nameKo": "토대부기",
+        "nameJa": "ドダイトス",
+        "nameZh": "土台龟",
         "types": [
           "grass",
           "ground"
@@ -8913,6 +9251,8 @@
     "slug": "infernape",
     "nameEn": "Infernape",
     "nameKo": "초염몽",
+    "nameJa": "ゴウカザル",
+    "nameZh": "烈焰猴",
     "types": [
       "fire",
       "fighting"
@@ -8933,6 +9273,8 @@
       {
         "name": "Infernape",
         "nameKo": "초염몽",
+        "nameJa": "ゴウカザル",
+        "nameZh": "烈焰猴",
         "types": [
           "fire",
           "fighting"
@@ -9059,6 +9401,8 @@
     "slug": "empoleon",
     "nameEn": "Empoleon",
     "nameKo": "엠페르트",
+    "nameJa": "エンペルト",
+    "nameZh": "帝王拿波",
     "types": [
       "water",
       "steel"
@@ -9079,6 +9423,8 @@
       {
         "name": "Empoleon",
         "nameKo": "엠페르트",
+        "nameJa": "エンペルト",
+        "nameZh": "帝王拿波",
         "types": [
           "water",
           "steel"
@@ -9191,6 +9537,8 @@
     "slug": "luxray",
     "nameEn": "Luxray",
     "nameKo": "렌트라",
+    "nameJa": "レントラー",
+    "nameZh": "伦琴猫",
     "types": [
       "electric"
     ],
@@ -9211,6 +9559,8 @@
       {
         "name": "Luxray",
         "nameKo": "렌트라",
+        "nameJa": "レントラー",
+        "nameZh": "伦琴猫",
         "types": [
           "electric"
         ],
@@ -9304,6 +9654,8 @@
     "slug": "roserade",
     "nameEn": "Roserade",
     "nameKo": "로즈레이드",
+    "nameJa": "ロズレイド",
+    "nameZh": "罗丝雷朵",
     "types": [
       "grass",
       "poison"
@@ -9325,6 +9677,8 @@
       {
         "name": "Roserade",
         "nameKo": "로즈레이드",
+        "nameJa": "ロズレイド",
+        "nameZh": "罗丝雷朵",
         "types": [
           "grass",
           "poison"
@@ -9416,6 +9770,8 @@
     "slug": "rampardos",
     "nameEn": "Rampardos",
     "nameKo": "램펄드",
+    "nameJa": "ラムパルド",
+    "nameZh": "战槌龙",
     "types": [
       "rock"
     ],
@@ -9435,6 +9791,8 @@
       {
         "name": "Rampardos",
         "nameKo": "램펄드",
+        "nameJa": "ラムパルド",
+        "nameZh": "战槌龙",
         "types": [
           "rock"
         ],
@@ -9546,6 +9904,8 @@
     "slug": "bastiodon",
     "nameEn": "Bastiodon",
     "nameKo": "바리톱스",
+    "nameJa": "トリデプス",
+    "nameZh": "护城龙",
     "types": [
       "rock",
       "steel"
@@ -9566,6 +9926,8 @@
       {
         "name": "Bastiodon",
         "nameKo": "바리톱스",
+        "nameJa": "トリデプス",
+        "nameZh": "护城龙",
         "types": [
           "rock",
           "steel"
@@ -9672,6 +10034,8 @@
     "slug": "lopunny",
     "nameEn": "Lopunny",
     "nameKo": "이어롭",
+    "nameJa": "ミミロップ",
+    "nameZh": "长耳兔",
     "types": [
       "normal"
     ],
@@ -9692,6 +10056,8 @@
       {
         "name": "Lopunny",
         "nameKo": "이어롭",
+        "nameJa": "ミミロップ",
+        "nameZh": "长耳兔",
         "types": [
           "normal"
         ],
@@ -9721,6 +10087,8 @@
       {
         "name": "Mega Lopunny",
         "nameKo": "메가 이어롭",
+        "nameJa": "メガミミロップ",
+        "nameZh": "超级长耳兔",
         "types": [
           "normal",
           "fighting"
@@ -9835,6 +10203,8 @@
     "slug": "spiritomb",
     "nameEn": "Spiritomb",
     "nameKo": "화강돌",
+    "nameJa": "ミカルゲ",
+    "nameZh": "花岩怪",
     "types": [
       "ghost",
       "dark"
@@ -9855,6 +10225,8 @@
       {
         "name": "Spiritomb",
         "nameKo": "화강돌",
+        "nameJa": "ミカルゲ",
+        "nameZh": "花岩怪",
         "types": [
           "ghost",
           "dark"
@@ -9949,6 +10321,8 @@
     "slug": "garchomp",
     "nameEn": "Garchomp",
     "nameKo": "한카리아스",
+    "nameJa": "ガブリアス",
+    "nameZh": "烈咬陆鲨",
     "types": [
       "dragon",
       "ground"
@@ -9969,6 +10343,8 @@
       {
         "name": "Garchomp",
         "nameKo": "한카리아스",
+        "nameJa": "ガブリアス",
+        "nameZh": "烈咬陆鲨",
         "types": [
           "dragon",
           "ground"
@@ -10000,6 +10376,8 @@
       {
         "name": "Mega Garchomp",
         "nameKo": "메가 한카리아스",
+        "nameJa": "メガガブリアス",
+        "nameZh": "超级烈咬陆鲨",
         "types": [
           "dragon",
           "ground"
@@ -10098,6 +10476,8 @@
     "slug": "lucario",
     "nameEn": "Lucario",
     "nameKo": "루카리오",
+    "nameJa": "ルカリオ",
+    "nameZh": "路卡利欧",
     "types": [
       "fighting",
       "steel"
@@ -10119,6 +10499,8 @@
       {
         "name": "Lucario",
         "nameKo": "루카리오",
+        "nameJa": "ルカリオ",
+        "nameZh": "路卡利欧",
         "types": [
           "fighting",
           "steel"
@@ -10151,6 +10533,8 @@
       {
         "name": "Mega Lucario",
         "nameKo": "메가 루카리오",
+        "nameJa": "メガルカリオ",
+        "nameZh": "超级路卡利欧",
         "types": [
           "fighting",
           "steel"
@@ -10274,6 +10658,8 @@
     "slug": "hippowdon",
     "nameEn": "Hippowdon",
     "nameKo": "하마돈",
+    "nameJa": "カバルドン",
+    "nameZh": "河马兽",
     "types": [
       "ground"
     ],
@@ -10293,6 +10679,8 @@
       {
         "name": "Hippowdon",
         "nameKo": "하마돈",
+        "nameJa": "カバルドン",
+        "nameZh": "河马兽",
         "types": [
           "ground"
         ],
@@ -10384,6 +10772,8 @@
     "slug": "toxicroak",
     "nameEn": "Toxicroak",
     "nameKo": "독개굴",
+    "nameJa": "ドクロッグ",
+    "nameZh": "毒骷蛙",
     "types": [
       "poison",
       "fighting"
@@ -10405,6 +10795,8 @@
       {
         "name": "Toxicroak",
         "nameKo": "독개굴",
+        "nameJa": "ドクロッグ",
+        "nameZh": "毒骷蛙",
         "types": [
           "poison",
           "fighting"
@@ -10527,6 +10919,8 @@
     "slug": "abomasnow",
     "nameEn": "Abomasnow",
     "nameKo": "눈설왕",
+    "nameJa": "ユキノオー",
+    "nameZh": "暴雪王",
     "types": [
       "grass",
       "ice"
@@ -10547,6 +10941,8 @@
       {
         "name": "Abomasnow",
         "nameKo": "눈설왕",
+        "nameJa": "ユキノオー",
+        "nameZh": "暴雪王",
         "types": [
           "grass",
           "ice"
@@ -10578,6 +10974,8 @@
       {
         "name": "Mega Abomasnow",
         "nameKo": "메가 눈설왕",
+        "nameJa": "メガユキノオー",
+        "nameZh": "超级暴雪王",
         "types": [
           "grass",
           "ice"
@@ -10683,6 +11081,8 @@
     "slug": "weavile",
     "nameEn": "Weavile",
     "nameKo": "포푸니라",
+    "nameJa": "マニューラ",
+    "nameZh": "玛狃拉",
     "types": [
       "dark",
       "ice"
@@ -10703,6 +11103,8 @@
       {
         "name": "Weavile",
         "nameKo": "포푸니라",
+        "nameJa": "マニューラ",
+        "nameZh": "玛狃拉",
         "types": [
           "dark",
           "ice"
@@ -10815,6 +11217,8 @@
     "slug": "rhyperior",
     "nameEn": "Rhyperior",
     "nameKo": "거대코뿌리",
+    "nameJa": "ドサイドン",
+    "nameZh": "超甲狂犀",
     "types": [
       "ground",
       "rock"
@@ -10836,6 +11240,8 @@
       {
         "name": "Rhyperior",
         "nameKo": "거대코뿌리",
+        "nameJa": "ドサイドン",
+        "nameZh": "超甲狂犀",
         "types": [
           "ground",
           "rock"
@@ -10968,6 +11374,8 @@
     "slug": "leafeon",
     "nameEn": "Leafeon",
     "nameKo": "리피아",
+    "nameJa": "リーフィア",
+    "nameZh": "叶伊布",
     "types": [
       "grass"
     ],
@@ -10987,6 +11395,8 @@
       {
         "name": "Leafeon",
         "nameKo": "리피아",
+        "nameJa": "リーフィア",
+        "nameZh": "叶伊布",
         "types": [
           "grass"
         ],
@@ -11085,6 +11495,8 @@
     "slug": "glaceon",
     "nameEn": "Glaceon",
     "nameKo": "글레이시아",
+    "nameJa": "グレイシア",
+    "nameZh": "冰伊布",
     "types": [
       "ice"
     ],
@@ -11104,6 +11516,8 @@
       {
         "name": "Glaceon",
         "nameKo": "글레이시아",
+        "nameJa": "グレイシア",
+        "nameZh": "冰伊布",
         "types": [
           "ice"
         ],
@@ -11202,6 +11616,8 @@
     "slug": "gliscor",
     "nameEn": "Gliscor",
     "nameKo": "글라이온",
+    "nameJa": "グライオン",
+    "nameZh": "天蝎王",
     "types": [
       "ground",
       "flying"
@@ -11223,6 +11639,8 @@
       {
         "name": "Gliscor",
         "nameKo": "글라이온",
+        "nameJa": "グライオン",
+        "nameZh": "天蝎王",
         "types": [
           "ground",
           "flying"
@@ -11336,6 +11754,8 @@
     "slug": "mamoswine",
     "nameEn": "Mamoswine",
     "nameKo": "맘모꾸리",
+    "nameJa": "マンムー",
+    "nameZh": "象牙猪",
     "types": [
       "ice",
       "ground"
@@ -11357,6 +11777,8 @@
       {
         "name": "Mamoswine",
         "nameKo": "맘모꾸리",
+        "nameJa": "マンムー",
+        "nameZh": "象牙猪",
         "types": [
           "ice",
           "ground"
@@ -11461,6 +11883,8 @@
     "slug": "gallade",
     "nameEn": "Gallade",
     "nameKo": "엘레이드",
+    "nameJa": "エルレイド",
+    "nameZh": "艾路雷朵",
     "types": [
       "psychic",
       "fighting"
@@ -11482,6 +11906,8 @@
       {
         "name": "Gallade",
         "nameKo": "엘레이드",
+        "nameJa": "エルレイド",
+        "nameZh": "艾路雷朵",
         "types": [
           "psychic",
           "fighting"
@@ -11514,6 +11940,8 @@
       {
         "name": "Mega Gallade",
         "nameKo": "메가 엘레이드",
+        "nameJa": "メガエルレイド",
+        "nameZh": "超级艾路雷朵",
         "types": [
           "psychic",
           "fighting"
@@ -11659,6 +12087,8 @@
     "slug": "froslass",
     "nameEn": "Froslass",
     "nameKo": "눈여아",
+    "nameJa": "ユキメノコ",
+    "nameZh": "雪妖女",
     "types": [
       "ice",
       "ghost"
@@ -11679,6 +12109,8 @@
       {
         "name": "Froslass",
         "nameKo": "눈여아",
+        "nameJa": "ユキメノコ",
+        "nameZh": "雪妖女",
         "types": [
           "ice",
           "ghost"
@@ -11710,6 +12142,8 @@
       {
         "name": "Mega Froslass",
         "nameKo": "메가 눈여아",
+        "nameJa": "メガユキメノコ",
+        "nameZh": "超级雪妖女",
         "types": [
           "ice",
           "ghost"
@@ -11818,6 +12252,8 @@
     "slug": "rotom",
     "nameEn": "Rotom",
     "nameKo": "로토무",
+    "nameJa": "ロトム",
+    "nameZh": "洛托姆",
     "types": [
       "electric",
       "ghost"
@@ -11837,6 +12273,8 @@
       {
         "name": "Rotom",
         "nameKo": "로토무",
+        "nameJa": "ロトム",
+        "nameZh": "洛托姆",
         "types": [
           "electric",
           "ghost"
@@ -11867,6 +12305,8 @@
       {
         "name": "Heat Rotom",
         "nameKo": "히트 로토무",
+        "nameJa": "ヒートロトム",
+        "nameZh": "加热洛托姆",
         "types": [
           "electric",
           "fire"
@@ -11888,6 +12328,8 @@
       {
         "name": "Wash Rotom",
         "nameKo": "워시 로토무",
+        "nameJa": "ウォッシュロトム",
+        "nameZh": "清洗洛托姆",
         "types": [
           "electric",
           "water"
@@ -11909,6 +12351,8 @@
       {
         "name": "Frost Rotom",
         "nameKo": "프로스트 로토무",
+        "nameJa": "フロストロトム",
+        "nameZh": "结冰洛托姆",
         "types": [
           "electric",
           "ice"
@@ -11930,6 +12374,8 @@
       {
         "name": "Fan Rotom",
         "nameKo": "스핀 로토무",
+        "nameJa": "スピンロトム",
+        "nameZh": "旋转洛托姆",
         "types": [
           "electric",
           "flying"
@@ -11951,6 +12397,8 @@
       {
         "name": "Mow Rotom",
         "nameKo": "커트 로토무",
+        "nameJa": "カットロトム",
+        "nameZh": "切割洛托姆",
         "types": [
           "electric",
           "grass"
@@ -12041,6 +12489,8 @@
     "slug": "serperior",
     "nameEn": "Serperior",
     "nameKo": "샤로다",
+    "nameJa": "ジャローダ",
+    "nameZh": "君主蛇",
     "types": [
       "grass"
     ],
@@ -12060,6 +12510,8 @@
       {
         "name": "Serperior",
         "nameKo": "샤로다",
+        "nameJa": "ジャローダ",
+        "nameZh": "君主蛇",
         "types": [
           "grass"
         ],
@@ -12147,6 +12599,8 @@
     "slug": "emboar",
     "nameEn": "Emboar",
     "nameKo": "염무왕",
+    "nameJa": "エンブオー",
+    "nameZh": "炎武王",
     "types": [
       "fire",
       "fighting"
@@ -12167,6 +12621,8 @@
       {
         "name": "Emboar",
         "nameKo": "염무왕",
+        "nameJa": "エンブオー",
+        "nameZh": "炎武王",
         "types": [
           "fire",
           "fighting"
@@ -12193,6 +12649,8 @@
       {
         "name": "Mega Emboar",
         "nameKo": "메가 염무왕",
+        "nameJa": "メガエンブオー",
+        "nameZh": "超级炎武王",
         "types": [
           "fire",
           "fighting"
@@ -12308,6 +12766,8 @@
     "slug": "samurott",
     "nameEn": "Samurott",
     "nameKo": "대검귀",
+    "nameJa": "ダイケンキ",
+    "nameZh": "大剑鬼",
     "types": [
       "water"
     ],
@@ -12328,6 +12788,8 @@
       {
         "name": "Samurott",
         "nameKo": "대검귀",
+        "nameJa": "ダイケンキ",
+        "nameZh": "大剑鬼",
         "types": [
           "water"
         ],
@@ -12354,6 +12816,8 @@
       {
         "name": "Hisuian Samurott",
         "nameKo": "히스이 대검귀",
+        "nameJa": "ヒスイダイケンキ",
+        "nameZh": "洗翠大剑鬼",
         "types": [
           "water",
           "dark"
@@ -12450,6 +12914,8 @@
     "slug": "watchog",
     "nameEn": "Watchog",
     "nameKo": "보르그",
+    "nameJa": "ミルホッグ",
+    "nameZh": "步哨鼠",
     "types": [
       "normal"
     ],
@@ -12470,6 +12936,8 @@
       {
         "name": "Watchog",
         "nameKo": "보르그",
+        "nameJa": "ミルホッグ",
+        "nameZh": "步哨鼠",
         "types": [
           "normal"
         ],
@@ -12556,6 +13024,8 @@
     "slug": "liepard",
     "nameEn": "Liepard",
     "nameKo": "레파르다스",
+    "nameJa": "レパルダス",
+    "nameZh": "酷豹",
     "types": [
       "dark"
     ],
@@ -12576,6 +13046,8 @@
       {
         "name": "Liepard",
         "nameKo": "레파르다스",
+        "nameJa": "レパルダス",
+        "nameZh": "酷豹",
         "types": [
           "dark"
         ],
@@ -12672,6 +13144,8 @@
     "slug": "simisage",
     "nameEn": "Simisage",
     "nameKo": "야나키",
+    "nameJa": "ヤナッキー",
+    "nameZh": "花椰猿",
     "types": [
       "grass"
     ],
@@ -12691,6 +13165,8 @@
       {
         "name": "Simisage",
         "nameKo": "야나키",
+        "nameJa": "ヤナッキー",
+        "nameZh": "花椰猿",
         "types": [
           "grass"
         ],
@@ -12774,6 +13250,8 @@
     "slug": "simisear",
     "nameEn": "Simisear",
     "nameKo": "바오키",
+    "nameJa": "バオッキー",
+    "nameZh": "爆香猿",
     "types": [
       "fire"
     ],
@@ -12793,6 +13271,8 @@
       {
         "name": "Simisear",
         "nameKo": "바오키",
+        "nameJa": "バオッキー",
+        "nameZh": "爆香猿",
         "types": [
           "fire"
         ],
@@ -12881,6 +13361,8 @@
     "slug": "simipour",
     "nameEn": "Simipour",
     "nameKo": "앗차키",
+    "nameJa": "ヒヤッキー",
+    "nameZh": "冷水猿",
     "types": [
       "water"
     ],
@@ -12900,6 +13382,8 @@
       {
         "name": "Simipour",
         "nameKo": "앗차키",
+        "nameJa": "ヒヤッキー",
+        "nameZh": "冷水猿",
         "types": [
           "water"
         ],
@@ -12985,6 +13469,8 @@
     "slug": "excadrill",
     "nameEn": "Excadrill",
     "nameKo": "몰드류",
+    "nameJa": "ドリュウズ",
+    "nameZh": "龙头地鼠",
     "types": [
       "ground",
       "steel"
@@ -13006,6 +13492,8 @@
       {
         "name": "Excadrill",
         "nameKo": "몰드류",
+        "nameJa": "ドリュウズ",
+        "nameZh": "龙头地鼠",
         "types": [
           "ground",
           "steel"
@@ -13035,6 +13523,8 @@
       {
         "name": "Mega Excadrill",
         "nameKo": "메가 몰드류",
+        "nameJa": "メガドリュウズ",
+        "nameZh": "超级龙头地鼠",
         "types": [
           "ground",
           "steel"
@@ -13125,6 +13615,8 @@
     "slug": "audino",
     "nameEn": "Audino",
     "nameKo": "다부니",
+    "nameJa": "タブンネ",
+    "nameZh": "差不多娃娃",
     "types": [
       "normal"
     ],
@@ -13145,6 +13637,8 @@
       {
         "name": "Audino",
         "nameKo": "다부니",
+        "nameJa": "タブンネ",
+        "nameZh": "差不多娃娃",
         "types": [
           "normal"
         ],
@@ -13171,6 +13665,8 @@
       {
         "name": "Mega Audino",
         "nameKo": "메가 다부니",
+        "nameJa": "メガタブンネ",
+        "nameZh": "超级差不多娃娃",
         "types": [
           "normal",
           "fairy"
@@ -13275,6 +13771,8 @@
     "slug": "conkeldurr",
     "nameEn": "Conkeldurr",
     "nameKo": "노보청",
+    "nameJa": "ローブシン",
+    "nameZh": "修建老匠",
     "types": [
       "fighting"
     ],
@@ -13295,6 +13793,8 @@
       {
         "name": "Conkeldurr",
         "nameKo": "노보청",
+        "nameJa": "ローブシン",
+        "nameZh": "修建老匠",
         "types": [
           "fighting"
         ],
@@ -13393,6 +13893,8 @@
     "slug": "whimsicott",
     "nameEn": "Whimsicott",
     "nameKo": "엘풍",
+    "nameJa": "エルフーン",
+    "nameZh": "风妖精",
     "types": [
       "grass",
       "fairy"
@@ -13414,6 +13916,8 @@
       {
         "name": "Whimsicott",
         "nameKo": "엘풍",
+        "nameJa": "エルフーン",
+        "nameZh": "风妖精",
         "types": [
           "grass",
           "fairy"
@@ -13502,6 +14006,8 @@
     "slug": "krookodile",
     "nameEn": "Krookodile",
     "nameKo": "악비아르",
+    "nameJa": "ワルビアル",
+    "nameZh": "流氓鳄",
     "types": [
       "ground",
       "dark"
@@ -13523,6 +14029,8 @@
       {
         "name": "Krookodile",
         "nameKo": "악비아르",
+        "nameJa": "ワルビアル",
+        "nameZh": "流氓鳄",
         "types": [
           "ground",
           "dark"
@@ -13645,6 +14153,8 @@
     "slug": "cofagrigus",
     "nameEn": "Cofagrigus",
     "nameKo": "데스니칸",
+    "nameJa": "デスカーン",
+    "nameZh": "迭失棺",
     "types": [
       "ghost"
     ],
@@ -13663,6 +14173,8 @@
       {
         "name": "Cofagrigus",
         "nameKo": "데스니칸",
+        "nameJa": "デスカーン",
+        "nameZh": "迭失棺",
         "types": [
           "ghost"
         ],
@@ -13751,6 +14263,8 @@
     "slug": "garbodor",
     "nameEn": "Garbodor",
     "nameKo": "더스트나",
+    "nameJa": "ダストダス",
+    "nameZh": "灰尘山",
     "types": [
       "poison"
     ],
@@ -13771,6 +14285,8 @@
       {
         "name": "Garbodor",
         "nameKo": "더스트나",
+        "nameJa": "ダストダス",
+        "nameZh": "灰尘山",
         "types": [
           "poison"
         ],
@@ -13860,6 +14376,8 @@
     "slug": "zoroark",
     "nameEn": "Zoroark",
     "nameKo": "조로아크",
+    "nameJa": "ゾロアーク",
+    "nameZh": "索罗亚克",
     "types": [
       "dark"
     ],
@@ -13878,6 +14396,8 @@
       {
         "name": "Zoroark",
         "nameKo": "조로아크",
+        "nameJa": "ゾロアーク",
+        "nameZh": "索罗亚克",
         "types": [
           "dark"
         ],
@@ -13904,6 +14424,8 @@
       {
         "name": "Hisuian Zoroark",
         "nameKo": "히스이 조로아크",
+        "nameJa": "ヒスイゾロアーク",
+        "nameZh": "洗翠索罗亚克",
         "types": [
           "normal",
           "ghost"
@@ -14007,6 +14529,8 @@
     "slug": "reuniclus",
     "nameEn": "Reuniclus",
     "nameKo": "란쿨루스",
+    "nameJa": "ランクルス",
+    "nameZh": "人造细胞卵",
     "types": [
       "psychic"
     ],
@@ -14027,6 +14551,8 @@
       {
         "name": "Reuniclus",
         "nameKo": "란쿨루스",
+        "nameJa": "ランクルス",
+        "nameZh": "人造细胞卵",
         "types": [
           "psychic"
         ],
@@ -14130,6 +14656,8 @@
     "slug": "vanilluxe",
     "nameEn": "Vanilluxe",
     "nameKo": "배바닐라",
+    "nameJa": "バイバニラ",
+    "nameZh": "双倍多多冰",
     "types": [
       "ice"
     ],
@@ -14150,6 +14678,8 @@
       {
         "name": "Vanilluxe",
         "nameKo": "배바닐라",
+        "nameJa": "バイバニラ",
+        "nameZh": "双倍多多冰",
         "types": [
           "ice"
         ],
@@ -14227,6 +14757,8 @@
     "slug": "emolga",
     "nameEn": "Emolga",
     "nameKo": "에몽가",
+    "nameJa": "エモンガ",
+    "nameZh": "电飞鼠",
     "types": [
       "electric",
       "flying"
@@ -14247,6 +14779,8 @@
       {
         "name": "Emolga",
         "nameKo": "에몽가",
+        "nameJa": "エモンガ",
+        "nameZh": "电飞鼠",
         "types": [
           "electric",
           "flying"
@@ -14329,6 +14863,8 @@
     "slug": "chandelure",
     "nameEn": "Chandelure",
     "nameKo": "샹델라",
+    "nameJa": "シャンデラ",
+    "nameZh": "水晶灯火灵",
     "types": [
       "ghost",
       "fire"
@@ -14350,6 +14886,8 @@
       {
         "name": "Chandelure",
         "nameKo": "샹델라",
+        "nameJa": "シャンデラ",
+        "nameZh": "水晶灯火灵",
         "types": [
           "ghost",
           "fire"
@@ -14379,6 +14917,8 @@
       {
         "name": "Mega Chandelure",
         "nameKo": "메가 샹델라",
+        "nameJa": "メガシャンデラ",
+        "nameZh": "超级水晶灯火灵",
         "types": [
           "ghost",
           "fire"
@@ -14470,6 +15010,8 @@
     "slug": "beartic",
     "nameEn": "Beartic",
     "nameKo": "툰베어",
+    "nameJa": "ツンベアー",
+    "nameZh": "冻原熊",
     "types": [
       "ice"
     ],
@@ -14490,6 +15032,8 @@
       {
         "name": "Beartic",
         "nameKo": "툰베어",
+        "nameJa": "ツンベアー",
+        "nameZh": "冻原熊",
         "types": [
           "ice"
         ],
@@ -14602,6 +15146,8 @@
     "slug": "stunfisk",
     "nameEn": "Stunfisk",
     "nameKo": "메더",
+    "nameJa": "マッギョ",
+    "nameZh": "泥巴鱼",
     "types": [
       "ground",
       "electric"
@@ -14624,6 +15170,8 @@
       {
         "name": "Stunfisk",
         "nameKo": "메더",
+        "nameJa": "マッギョ",
+        "nameZh": "泥巴鱼",
         "types": [
           "ground",
           "electric"
@@ -14652,6 +15200,8 @@
       {
         "name": "Galarian Stunfisk",
         "nameKo": "가라르 메더",
+        "nameJa": "ガラルマッギョ",
+        "nameZh": "伽勒尔泥巴鱼",
         "types": [
           "ground",
           "steel"
@@ -14738,6 +15288,8 @@
     "slug": "golurk",
     "nameEn": "Golurk",
     "nameKo": "골루그",
+    "nameJa": "ゴルーグ",
+    "nameZh": "泥偶巨人",
     "types": [
       "ground",
       "ghost"
@@ -14759,6 +15311,8 @@
       {
         "name": "Golurk",
         "nameKo": "골루그",
+        "nameJa": "ゴルーグ",
+        "nameZh": "泥偶巨人",
         "types": [
           "ground",
           "ghost"
@@ -14788,6 +15342,8 @@
       {
         "name": "Mega Golurk",
         "nameKo": "메가 골루그",
+        "nameJa": "メガゴルーグ",
+        "nameZh": "超级泥偶巨人",
         "types": [
           "ground",
           "ghost"
@@ -14903,6 +15459,8 @@
     "slug": "hydreigon",
     "nameEn": "Hydreigon",
     "nameKo": "삼삼드래",
+    "nameJa": "サザンドラ",
+    "nameZh": "三首恶龙",
     "types": [
       "dark",
       "dragon"
@@ -14922,6 +15480,8 @@
       {
         "name": "Hydreigon",
         "nameKo": "삼삼드래",
+        "nameJa": "サザンドラ",
+        "nameZh": "三首恶龙",
         "types": [
           "dark",
           "dragon"
@@ -15036,6 +15596,8 @@
     "slug": "volcarona",
     "nameEn": "Volcarona",
     "nameKo": "불카모스",
+    "nameJa": "ウルガモス",
+    "nameZh": "火神蛾",
     "types": [
       "bug",
       "fire"
@@ -15056,6 +15618,8 @@
       {
         "name": "Volcarona",
         "nameKo": "불카모스",
+        "nameJa": "ウルガモス",
+        "nameZh": "火神蛾",
         "types": [
           "bug",
           "fire"
@@ -15150,6 +15714,8 @@
     "slug": "chesnaught",
     "nameEn": "Chesnaught",
     "nameKo": "브리가론",
+    "nameJa": "ブリガロン",
+    "nameZh": "布里卡隆",
     "types": [
       "grass",
       "fighting"
@@ -15170,6 +15736,8 @@
       {
         "name": "Chesnaught",
         "nameKo": "브리가론",
+        "nameJa": "ブリガロン",
+        "nameZh": "布里卡隆",
         "types": [
           "grass",
           "fighting"
@@ -15196,6 +15764,8 @@
       {
         "name": "Mega Chesnaught",
         "nameKo": "메가 브리가론",
+        "nameJa": "メガブリガロン",
+        "nameZh": "超级布里卡隆",
         "types": [
           "grass",
           "fighting"
@@ -15212,9 +15782,7 @@
           "speed": 44
         },
         "sourceGames": [
-          "legends-z-a",
-          "scarlet",
-          "violet"
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/652.png"
       }
@@ -15318,6 +15886,8 @@
     "slug": "delphox",
     "nameEn": "Delphox",
     "nameKo": "마폭시",
+    "nameJa": "マフォクシー",
+    "nameZh": "妖火红狐",
     "types": [
       "fire",
       "psychic"
@@ -15338,6 +15908,8 @@
       {
         "name": "Delphox",
         "nameKo": "마폭시",
+        "nameJa": "マフォクシー",
+        "nameZh": "妖火红狐",
         "types": [
           "fire",
           "psychic"
@@ -15364,6 +15936,8 @@
       {
         "name": "Mega Delphox",
         "nameKo": "메가 마폭시",
+        "nameJa": "メガマフォクシー",
+        "nameZh": "超级妖火红狐",
         "types": [
           "fire",
           "psychic"
@@ -15380,9 +15954,7 @@
           "speed": 134
         },
         "sourceGames": [
-          "legends-z-a",
-          "scarlet",
-          "violet"
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/655.png"
       }
@@ -15471,6 +16043,8 @@
     "slug": "greninja",
     "nameEn": "Greninja",
     "nameKo": "개굴닌자",
+    "nameJa": "ゲッコウガ",
+    "nameZh": "甲贺忍蛙",
     "types": [
       "water",
       "dark"
@@ -15492,6 +16066,8 @@
       {
         "name": "Greninja",
         "nameKo": "개굴닌자",
+        "nameJa": "ゲッコウガ",
+        "nameZh": "甲贺忍蛙",
         "types": [
           "water",
           "dark"
@@ -15519,6 +16095,8 @@
       {
         "name": "Mega Greninja",
         "nameKo": "메가 개굴닌자",
+        "nameJa": "メガゲッコウガ",
+        "nameZh": "超级甲贺忍蛙",
         "types": [
           "water",
           "dark"
@@ -15535,9 +16113,7 @@
           "speed": 142
         },
         "sourceGames": [
-          "legends-z-a",
-          "scarlet",
-          "violet"
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/658.png"
       }
@@ -15618,6 +16194,8 @@
     "slug": "diggersby",
     "nameEn": "Diggersby",
     "nameKo": "파르토",
+    "nameJa": "ホルード",
+    "nameZh": "掘地兔",
     "types": [
       "normal",
       "ground"
@@ -15639,6 +16217,8 @@
       {
         "name": "Diggersby",
         "nameKo": "파르토",
+        "nameJa": "ホルード",
+        "nameZh": "掘地兔",
         "types": [
           "normal",
           "ground"
@@ -15734,6 +16314,8 @@
     "slug": "talonflame",
     "nameEn": "Talonflame",
     "nameKo": "파이어로",
+    "nameJa": "ファイアロー",
+    "nameZh": "烈箭鹰",
     "types": [
       "fire",
       "flying"
@@ -15754,6 +16336,8 @@
       {
         "name": "Talonflame",
         "nameKo": "파이어로",
+        "nameJa": "ファイアロー",
+        "nameZh": "烈箭鹰",
         "types": [
           "fire",
           "flying"
@@ -15842,6 +16426,8 @@
     "slug": "vivillon",
     "nameEn": "Vivillon",
     "nameKo": "비비용",
+    "nameJa": "ビビヨン",
+    "nameZh": "彩粉蝶",
     "types": [
       "bug",
       "flying"
@@ -15863,6 +16449,8 @@
       {
         "name": "Vivillon",
         "nameKo": "비비용",
+        "nameJa": "ビビヨン",
+        "nameZh": "彩粉蝶",
         "types": [
           "bug",
           "flying"
@@ -15943,6 +16531,8 @@
     "slug": "floette",
     "nameEn": "Floette",
     "nameKo": "플라엣테",
+    "nameJa": "フラエッテ",
+    "nameZh": "花叶蒂",
     "types": [
       "fairy"
     ],
@@ -15962,6 +16552,8 @@
       {
         "name": "Eternal Floette",
         "nameKo": "영원의 꽃 플라엣테",
+        "nameJa": "永遠の花フラエッテ",
+        "nameZh": "永恒之花花叶蒂",
         "types": [
           "fairy"
         ],
@@ -15978,15 +16570,15 @@
           "speed": 92
         },
         "sourceGames": [
-          "legends-z-a",
-          "scarlet",
-          "violet"
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/670.png"
       },
       {
         "name": "Mega Floette",
         "nameKo": "메가 플라엣테",
+        "nameJa": "メガフラエッテ",
+        "nameZh": "超级花叶蒂",
         "types": [
           "fairy"
         ],
@@ -16002,9 +16594,7 @@
           "speed": 102
         },
         "sourceGames": [
-          "legends-z-a",
-          "scarlet",
-          "violet"
+          "legends-z-a"
         ],
         "spritePath": "assets/sprites/670.png"
       }
@@ -16062,6 +16652,8 @@
     "slug": "florges",
     "nameEn": "Florges",
     "nameKo": "플라제스",
+    "nameJa": "フラージェス",
+    "nameZh": "花洁夫人",
     "types": [
       "fairy"
     ],
@@ -16081,6 +16673,8 @@
       {
         "name": "Florges",
         "nameKo": "플라제스",
+        "nameJa": "フラージェス",
+        "nameZh": "花洁夫人",
         "types": [
           "fairy"
         ],
@@ -16162,6 +16756,8 @@
     "slug": "pangoro",
     "nameEn": "Pangoro",
     "nameKo": "부란다",
+    "nameJa": "ゴロンダ",
+    "nameZh": "霸道熊猫",
     "types": [
       "fighting",
       "dark"
@@ -16183,6 +16779,8 @@
       {
         "name": "Pangoro",
         "nameKo": "부란다",
+        "nameJa": "ゴロンダ",
+        "nameZh": "霸道熊猫",
         "types": [
           "fighting",
           "dark"
@@ -16300,6 +16898,8 @@
     "slug": "furfrou",
     "nameEn": "Furfrou",
     "nameKo": "트리미앙",
+    "nameJa": "トリミアン",
+    "nameZh": "多丽米亚",
     "types": [
       "normal"
     ],
@@ -16318,6 +16918,8 @@
       {
         "name": "Furfrou",
         "nameKo": "트리미앙",
+        "nameJa": "トリミアン",
+        "nameZh": "多丽米亚",
         "types": [
           "normal"
         ],
@@ -16390,6 +16992,8 @@
     "slug": "meowstic",
     "nameEn": "Meowstic",
     "nameKo": "냐오닉스",
+    "nameJa": "ニャオニクス",
+    "nameZh": "超能妙喵",
     "types": [
       "psychic"
     ],
@@ -16411,6 +17015,8 @@
       {
         "name": "Meowstic",
         "nameKo": "냐오닉스",
+        "nameJa": "ニャオニクス",
+        "nameZh": "超能妙喵",
         "types": [
           "psychic"
         ],
@@ -16440,6 +17046,8 @@
       {
         "name": "Mega Meowstic",
         "nameKo": "메가 냐오닉스",
+        "nameJa": "メガニャオニクス",
+        "nameZh": "超级超能妙喵",
         "types": [
           "psychic"
         ],
@@ -16537,6 +17145,8 @@
     "slug": "aegislash",
     "nameEn": "Aegislash",
     "nameKo": "킬가르도",
+    "nameJa": "ギルガルド",
+    "nameZh": "坚盾剑怪",
     "types": [
       "steel",
       "ghost"
@@ -16556,6 +17166,8 @@
       {
         "name": "Aegislash",
         "nameKo": "킬가르도",
+        "nameJa": "ギルガルド",
+        "nameZh": "坚盾剑怪",
         "types": [
           "steel",
           "ghost"
@@ -16636,6 +17248,8 @@
     "slug": "aromatisse",
     "nameEn": "Aromatisse",
     "nameKo": "프레프티르",
+    "nameJa": "フレフワン",
+    "nameZh": "芳香精",
     "types": [
       "fairy"
     ],
@@ -16655,6 +17269,8 @@
       {
         "name": "Aromatisse",
         "nameKo": "프레프티르",
+        "nameJa": "フレフワン",
+        "nameZh": "芳香精",
         "types": [
           "fairy"
         ],
@@ -16738,6 +17354,8 @@
     "slug": "slurpuff",
     "nameEn": "Slurpuff",
     "nameKo": "나루림",
+    "nameJa": "ペロリーム",
+    "nameZh": "胖甜妮",
     "types": [
       "fairy"
     ],
@@ -16757,6 +17375,8 @@
       {
         "name": "Slurpuff",
         "nameKo": "나루림",
+        "nameJa": "ペロリーム",
+        "nameZh": "胖甜妮",
         "types": [
           "fairy"
         ],
@@ -16834,6 +17454,8 @@
     "slug": "clawitzer",
     "nameEn": "Clawitzer",
     "nameKo": "블로스터",
+    "nameJa": "ブロスター",
+    "nameZh": "钢炮臂虾",
     "types": [
       "water"
     ],
@@ -16852,6 +17474,8 @@
       {
         "name": "Clawitzer",
         "nameKo": "블로스터",
+        "nameJa": "ブロスター",
+        "nameZh": "钢炮臂虾",
         "types": [
           "water"
         ],
@@ -16940,6 +17564,8 @@
     "slug": "heliolisk",
     "nameEn": "Heliolisk",
     "nameKo": "일레도리자드",
+    "nameJa": "エレザード",
+    "nameZh": "光电伞蜥",
     "types": [
       "electric",
       "normal"
@@ -16961,6 +17587,8 @@
       {
         "name": "Heliolisk",
         "nameKo": "일레도리자드",
+        "nameJa": "エレザード",
+        "nameZh": "光电伞蜥",
         "types": [
           "electric",
           "normal"
@@ -17061,6 +17689,8 @@
     "slug": "tyrantrum",
     "nameEn": "Tyrantrum",
     "nameKo": "견고라스",
+    "nameJa": "ガチゴラス",
+    "nameZh": "怪颚龙",
     "types": [
       "rock",
       "dragon"
@@ -17081,6 +17711,8 @@
       {
         "name": "Tyrantrum",
         "nameKo": "견고라스",
+        "nameJa": "ガチゴラス",
+        "nameZh": "怪颚龙",
         "types": [
           "rock",
           "dragon"
@@ -17181,6 +17813,8 @@
     "slug": "aurorus",
     "nameEn": "Aurorus",
     "nameKo": "아마루르가",
+    "nameJa": "アマルルガ",
+    "nameZh": "冰雪巨龙",
     "types": [
       "rock",
       "ice"
@@ -17201,6 +17835,8 @@
       {
         "name": "Aurorus",
         "nameKo": "아마루르가",
+        "nameJa": "アマルルガ",
+        "nameZh": "冰雪巨龙",
         "types": [
           "rock",
           "ice"
@@ -17293,6 +17929,8 @@
     "slug": "sylveon",
     "nameEn": "Sylveon",
     "nameKo": "님피아",
+    "nameJa": "ニンフィア",
+    "nameZh": "仙子伊布",
     "types": [
       "fairy"
     ],
@@ -17312,6 +17950,8 @@
       {
         "name": "Sylveon",
         "nameKo": "님피아",
+        "nameJa": "ニンフィア",
+        "nameZh": "仙子伊布",
         "types": [
           "fairy"
         ],
@@ -17405,6 +18045,8 @@
     "slug": "hawlucha",
     "nameEn": "Hawlucha",
     "nameKo": "루차불",
+    "nameJa": "ルチャブル",
+    "nameZh": "摔角鹰人",
     "types": [
       "fighting",
       "flying"
@@ -17426,6 +18068,8 @@
       {
         "name": "Hawlucha",
         "nameKo": "루차불",
+        "nameJa": "ルチャブル",
+        "nameZh": "摔角鹰人",
         "types": [
           "fighting",
           "flying"
@@ -17455,6 +18099,8 @@
       {
         "name": "Mega Hawlucha",
         "nameKo": "메가 루차불",
+        "nameJa": "メガルチャブル",
+        "nameZh": "超级摔角鹰人",
         "types": [
           "fighting",
           "flying"
@@ -17566,6 +18212,8 @@
     "slug": "dedenne",
     "nameEn": "Dedenne",
     "nameKo": "데덴네",
+    "nameJa": "デデンネ",
+    "nameZh": "咚咚鼠",
     "types": [
       "electric",
       "fairy"
@@ -17587,6 +18235,8 @@
       {
         "name": "Dedenne",
         "nameKo": "데덴네",
+        "nameJa": "デデンネ",
+        "nameZh": "咚咚鼠",
         "types": [
           "electric",
           "fairy"
@@ -17676,6 +18326,8 @@
     "slug": "goodra",
     "nameEn": "Goodra",
     "nameKo": "미끄래곤",
+    "nameJa": "ヌメルゴン",
+    "nameZh": "黏美龙",
     "types": [
       "dragon"
     ],
@@ -17697,6 +18349,8 @@
       {
         "name": "Goodra",
         "nameKo": "미끄래곤",
+        "nameJa": "ヌメルゴン",
+        "nameZh": "黏美龙",
         "types": [
           "dragon"
         ],
@@ -17727,6 +18381,8 @@
       {
         "name": "Hisuian Goodra",
         "nameKo": "히스이 미끄래곤",
+        "nameJa": "ヒスイヌメルゴン",
+        "nameZh": "洗翠黏美龙",
         "types": [
           "steel",
           "dragon"
@@ -17829,6 +18485,8 @@
     "slug": "klefki",
     "nameEn": "Klefki",
     "nameKo": "클레피",
+    "nameJa": "クレッフィ",
+    "nameZh": "钥圈儿",
     "types": [
       "steel",
       "fairy"
@@ -17849,6 +18507,8 @@
       {
         "name": "Klefki",
         "nameKo": "클레피",
+        "nameJa": "クレッフィ",
+        "nameZh": "钥圈儿",
         "types": [
           "steel",
           "fairy"
@@ -17931,6 +18591,8 @@
     "slug": "trevenant",
     "nameEn": "Trevenant",
     "nameKo": "대로트",
+    "nameJa": "オーロット",
+    "nameZh": "朽木妖",
     "types": [
       "ghost",
       "grass"
@@ -17952,6 +18614,8 @@
       {
         "name": "Trevenant",
         "nameKo": "대로트",
+        "nameJa": "オーロット",
+        "nameZh": "朽木妖",
         "types": [
           "ghost",
           "grass"
@@ -18064,6 +18728,8 @@
     "slug": "gourgeist",
     "nameEn": "Gourgeist",
     "nameKo": "펌킨인",
+    "nameJa": "パンプジン",
+    "nameZh": "南瓜怪人",
     "types": [
       "ghost",
       "grass"
@@ -18085,6 +18751,8 @@
       {
         "name": "Gourgeist",
         "nameKo": "펌킨인",
+        "nameJa": "パンプジン",
+        "nameZh": "南瓜怪人",
         "types": [
           "ghost",
           "grass"
@@ -18112,6 +18780,8 @@
       {
         "name": "Small Variety",
         "nameKo": "펌킨인 (S 사이즈)",
+        "nameJa": "パンプジン(Sサイズ)",
+        "nameZh": "南瓜怪人(小)",
         "types": [
           "ghost",
           "grass"
@@ -18139,6 +18809,8 @@
       {
         "name": "Large Variety",
         "nameKo": "펌킨인 (L 사이즈)",
+        "nameJa": "パンプジン(Lサイズ)",
+        "nameZh": "南瓜怪人(大)",
         "types": [
           "ghost",
           "grass"
@@ -18166,6 +18838,8 @@
       {
         "name": "Jumbo Variety",
         "nameKo": "펌킨인 (특대 사이즈)",
+        "nameJa": "パンプジン(とくだいサイズ)",
+        "nameZh": "南瓜怪人(特大)",
         "types": [
           "ghost",
           "grass"
@@ -18263,6 +18937,8 @@
     "slug": "avalugg",
     "nameEn": "Avalugg",
     "nameKo": "크레베이스",
+    "nameJa": "クレベース",
+    "nameZh": "冰岩怪",
     "types": [
       "ice"
     ],
@@ -18284,6 +18960,8 @@
       {
         "name": "Avalugg",
         "nameKo": "크레베이스",
+        "nameJa": "クレベース",
+        "nameZh": "冰岩怪",
         "types": [
           "ice"
         ],
@@ -18314,6 +18992,8 @@
       {
         "name": "Hisuian Avalugg",
         "nameKo": "히스이 크레베이스",
+        "nameJa": "ヒスイクレベース",
+        "nameZh": "洗翠冰岩怪",
         "types": [
           "ice",
           "rock"
@@ -18400,6 +19080,8 @@
     "slug": "noivern",
     "nameEn": "Noivern",
     "nameKo": "음번",
+    "nameJa": "オンバーン",
+    "nameZh": "音波龙",
     "types": [
       "flying",
       "dragon"
@@ -18421,6 +19103,8 @@
       {
         "name": "Noivern",
         "nameKo": "음번",
+        "nameJa": "オンバーン",
+        "nameZh": "音波龙",
         "types": [
           "flying",
           "dragon"
@@ -18524,6 +19208,8 @@
     "slug": "decidueye",
     "nameEn": "Decidueye",
     "nameKo": "모크나이퍼",
+    "nameJa": "ジュナイパー",
+    "nameZh": "狙射树枭",
     "types": [
       "grass",
       "ghost"
@@ -18545,6 +19231,8 @@
       {
         "name": "Decidueye",
         "nameKo": "모크나이퍼",
+        "nameJa": "ジュナイパー",
+        "nameZh": "狙射树枭",
         "types": [
           "grass",
           "ghost"
@@ -18572,6 +19260,8 @@
       {
         "name": "Hisuian Decidueye",
         "nameKo": "히스이 모크나이퍼",
+        "nameJa": "ヒスイジュナイパー",
+        "nameZh": "洗翠狙射树枭",
         "types": [
           "grass",
           "fighting"
@@ -18673,6 +19363,8 @@
     "slug": "incineroar",
     "nameEn": "Incineroar",
     "nameKo": "어흥염",
+    "nameJa": "ガオガエン",
+    "nameZh": "炽焰咆哮虎",
     "types": [
       "fire",
       "dark"
@@ -18693,6 +19385,8 @@
       {
         "name": "Incineroar",
         "nameKo": "어흥염",
+        "nameJa": "ガオガエン",
+        "nameZh": "炽焰咆哮虎",
         "types": [
           "fire",
           "dark"
@@ -18805,6 +19499,8 @@
     "slug": "primarina",
     "nameEn": "Primarina",
     "nameKo": "누리레느",
+    "nameJa": "アシレーヌ",
+    "nameZh": "西狮海壬",
     "types": [
       "water",
       "fairy"
@@ -18825,6 +19521,8 @@
       {
         "name": "Primarina",
         "nameKo": "누리레느",
+        "nameJa": "アシレーヌ",
+        "nameZh": "西狮海壬",
         "types": [
           "water",
           "fairy"
@@ -18923,6 +19621,8 @@
     "slug": "toucannon",
     "nameEn": "Toucannon",
     "nameKo": "왕큰부리",
+    "nameJa": "ドデカバシ",
+    "nameZh": "铳嘴大鸟",
     "types": [
       "normal",
       "flying"
@@ -18944,6 +19644,8 @@
       {
         "name": "Toucannon",
         "nameKo": "왕큰부리",
+        "nameJa": "ドデカバシ",
+        "nameZh": "铳嘴大鸟",
         "types": [
           "normal",
           "flying"
@@ -19033,6 +19735,8 @@
     "slug": "crabominable",
     "nameEn": "Crabominable",
     "nameKo": "모단단게",
+    "nameJa": "ケケンカニ",
+    "nameZh": "好胜毛蟹",
     "types": [
       "fighting",
       "ice"
@@ -19054,6 +19758,8 @@
       {
         "name": "Crabominable",
         "nameKo": "모단단게",
+        "nameJa": "ケケンカニ",
+        "nameZh": "好胜毛蟹",
         "types": [
           "fighting",
           "ice"
@@ -19081,6 +19787,8 @@
       {
         "name": "Mega Crabominable",
         "nameKo": "메가 모단단게",
+        "nameJa": "メガケケンカニ",
+        "nameZh": "超级好胜毛蟹",
         "types": [
           "fighting",
           "ice"
@@ -19179,6 +19887,8 @@
     "slug": "lycanroc",
     "nameEn": "Lycanroc",
     "nameKo": "루가루암",
+    "nameJa": "ルガルガン",
+    "nameZh": "鬃岩狼人",
     "types": [
       "rock"
     ],
@@ -19202,6 +19912,8 @@
       {
         "name": "Lycanroc",
         "nameKo": "루가루암",
+        "nameJa": "ルガルガン",
+        "nameZh": "鬃岩狼人",
         "types": [
           "rock"
         ],
@@ -19233,6 +19945,8 @@
       {
         "name": "Midnight Form",
         "nameKo": "루가루암 한밤중의 모습",
+        "nameJa": "ルガルガンまよなかのすがた",
+        "nameZh": "鬃岩狼人黄昏之姿",
         "types": [
           "rock"
         ],
@@ -19264,6 +19978,8 @@
       {
         "name": "Dusk Form",
         "nameKo": "루가루암 황혼의 모습",
+        "nameJa": "ルガルガンたそがれのすがた",
+        "nameZh": "鬃岩狼人黎明之姿",
         "types": [
           "rock"
         ],
@@ -19382,6 +20098,8 @@
     "slug": "toxapex",
     "nameEn": "Toxapex",
     "nameKo": "더시마사리",
+    "nameJa": "ドヒドイデ",
+    "nameZh": "超坏星",
     "types": [
       "poison",
       "water"
@@ -19403,6 +20121,8 @@
       {
         "name": "Toxapex",
         "nameKo": "더시마사리",
+        "nameJa": "ドヒドイデ",
+        "nameZh": "超坏星",
         "types": [
           "poison",
           "water"
@@ -19493,6 +20213,8 @@
     "slug": "mudsdale",
     "nameEn": "Mudsdale",
     "nameKo": "만마드",
+    "nameJa": "バンバドロ",
+    "nameZh": "重泥挽马",
     "types": [
       "ground"
     ],
@@ -19513,6 +20235,8 @@
       {
         "name": "Mudsdale",
         "nameKo": "만마드",
+        "nameJa": "バンバドロ",
+        "nameZh": "重泥挽马",
         "types": [
           "ground"
         ],
@@ -19596,6 +20320,8 @@
     "slug": "araquanid",
     "nameEn": "Araquanid",
     "nameKo": "깨비물거미",
+    "nameJa": "オニシズクモ",
+    "nameZh": "滴蛛霸",
     "types": [
       "water",
       "bug"
@@ -19616,6 +20342,8 @@
       {
         "name": "Araquanid",
         "nameKo": "깨비물거미",
+        "nameJa": "オニシズクモ",
+        "nameZh": "滴蛛霸",
         "types": [
           "water",
           "bug"
@@ -19705,6 +20433,8 @@
     "slug": "salazzle",
     "nameEn": "Salazzle",
     "nameKo": "염뉴트",
+    "nameJa": "エンニュート",
+    "nameZh": "焰后蜥",
     "types": [
       "poison",
       "fire"
@@ -19725,6 +20455,8 @@
       {
         "name": "Salazzle",
         "nameKo": "염뉴트",
+        "nameJa": "エンニュート",
+        "nameZh": "焰后蜥",
         "types": [
           "poison",
           "fire"
@@ -19833,6 +20565,8 @@
     "slug": "tsareena",
     "nameEn": "Tsareena",
     "nameKo": "달코퀸",
+    "nameJa": "アマージョ",
+    "nameZh": "甜冷美后",
     "types": [
       "grass"
     ],
@@ -19853,6 +20587,8 @@
       {
         "name": "Tsareena",
         "nameKo": "달코퀸",
+        "nameJa": "アマージョ",
+        "nameZh": "甜冷美后",
         "types": [
           "grass"
         ],
@@ -19945,6 +20681,8 @@
     "slug": "oranguru",
     "nameEn": "Oranguru",
     "nameKo": "하랑우탄",
+    "nameJa": "ヤレユータン",
+    "nameZh": "智挥猩",
     "types": [
       "normal",
       "psychic"
@@ -19966,6 +20704,8 @@
       {
         "name": "Oranguru",
         "nameKo": "하랑우탄",
+        "nameJa": "ヤレユータン",
+        "nameZh": "智挥猩",
         "types": [
           "normal",
           "psychic"
@@ -20069,6 +20809,8 @@
     "slug": "passimian",
     "nameEn": "Passimian",
     "nameKo": "내던숭이",
+    "nameJa": "ナゲツケサル",
+    "nameZh": "投掷猴",
     "types": [
       "fighting"
     ],
@@ -20088,6 +20830,8 @@
       {
         "name": "Passimian",
         "nameKo": "내던숭이",
+        "nameJa": "ナゲツケサル",
+        "nameZh": "投掷猴",
         "types": [
           "fighting"
         ],
@@ -20191,6 +20935,8 @@
     "slug": "mimikyu",
     "nameEn": "Mimikyu",
     "nameKo": "따라큐",
+    "nameJa": "ミミッキュ",
+    "nameZh": "谜拟丘",
     "types": [
       "ghost",
       "fairy"
@@ -20210,6 +20956,8 @@
       {
         "name": "Mimikyu",
         "nameKo": "따라큐",
+        "nameJa": "ミミッキュ",
+        "nameZh": "谜拟丘",
         "types": [
           "ghost",
           "fairy"
@@ -20307,6 +21055,8 @@
     "slug": "drampa",
     "nameEn": "Drampa",
     "nameKo": "할비롱",
+    "nameJa": "ジジーロン",
+    "nameZh": "老翁龙",
     "types": [
       "normal",
       "dragon"
@@ -20328,6 +21078,8 @@
       {
         "name": "Drampa",
         "nameKo": "할비롱",
+        "nameJa": "ジジーロン",
+        "nameZh": "老翁龙",
         "types": [
           "normal",
           "dragon"
@@ -20355,6 +21107,8 @@
       {
         "name": "Mega Drampa",
         "nameKo": "메가 할비롱",
+        "nameJa": "メガジジーロン",
+        "nameZh": "超级老翁龙",
         "types": [
           "normal",
           "dragon"
@@ -20456,6 +21210,8 @@
     "slug": "kommo-o",
     "nameEn": "Kommo-o",
     "nameKo": "짜랑고우거",
+    "nameJa": "ジャラランガ",
+    "nameZh": "杖尾鳞甲龙",
     "types": [
       "dragon",
       "fighting"
@@ -20477,6 +21233,8 @@
       {
         "name": "Kommo-o",
         "nameKo": "짜랑고우거",
+        "nameJa": "ジャラランガ",
+        "nameZh": "杖尾鳞甲龙",
         "types": [
           "dragon",
           "fighting"
@@ -20594,6 +21352,8 @@
     "slug": "corviknight",
     "nameEn": "Corviknight",
     "nameKo": "아머까오",
+    "nameJa": "アーマーガア",
+    "nameZh": "钢铠鸦",
     "types": [
       "flying",
       "steel"
@@ -20615,6 +21375,8 @@
       {
         "name": "Corviknight",
         "nameKo": "아머까오",
+        "nameJa": "アーマーガア",
+        "nameZh": "钢铠鸦",
         "types": [
           "flying",
           "steel"
@@ -20709,6 +21471,8 @@
     "slug": "flapple",
     "nameEn": "Flapple",
     "nameKo": "애프룡",
+    "nameJa": "アップリュー",
+    "nameZh": "苹裹龙",
     "types": [
       "grass",
       "dragon"
@@ -20730,6 +21494,8 @@
       {
         "name": "Flapple",
         "nameKo": "애프룡",
+        "nameJa": "アップリュー",
+        "nameZh": "苹裹龙",
         "types": [
           "grass",
           "dragon"
@@ -20813,6 +21579,8 @@
     "slug": "appletun",
     "nameEn": "Appletun",
     "nameKo": "단지래플",
+    "nameJa": "タルップル",
+    "nameZh": "丰蜜龙",
     "types": [
       "grass",
       "dragon"
@@ -20834,6 +21602,8 @@
       {
         "name": "Appletun",
         "nameKo": "단지래플",
+        "nameJa": "タルップル",
+        "nameZh": "丰蜜龙",
         "types": [
           "grass",
           "dragon"
@@ -20924,6 +21694,8 @@
     "slug": "sandaconda",
     "nameEn": "Sandaconda",
     "nameKo": "사다이사",
+    "nameJa": "サダイジャ",
+    "nameZh": "沙螺蟒",
     "types": [
       "ground"
     ],
@@ -20944,6 +21716,8 @@
       {
         "name": "Sandaconda",
         "nameKo": "사다이사",
+        "nameJa": "サダイジャ",
+        "nameZh": "沙螺蟒",
         "types": [
           "ground"
         ],
@@ -21030,6 +21804,8 @@
     "slug": "polteageist",
     "nameEn": "Polteageist",
     "nameKo": "포트데스",
+    "nameJa": "ポットデス",
+    "nameZh": "怖思壶",
     "types": [
       "ghost"
     ],
@@ -21049,6 +21825,8 @@
       {
         "name": "Polteageist",
         "nameKo": "포트데스",
+        "nameJa": "ポットデス",
+        "nameZh": "怖思壶",
         "types": [
           "ghost"
         ],
@@ -21131,6 +21909,8 @@
     "slug": "hatterene",
     "nameEn": "Hatterene",
     "nameKo": "브리무음",
+    "nameJa": "ブリムオン",
+    "nameZh": "布莉姆温",
     "types": [
       "psychic",
       "fairy"
@@ -21152,6 +21932,8 @@
       {
         "name": "Hatterene",
         "nameKo": "브리무음",
+        "nameJa": "ブリムオン",
+        "nameZh": "布莉姆温",
         "types": [
           "psychic",
           "fairy"
@@ -21249,6 +22031,8 @@
     "slug": "mr.rime",
     "nameEn": "Mr. Rime",
     "nameKo": "마임꽁꽁",
+    "nameJa": "バリコオル",
+    "nameZh": "踏冰人偶",
     "types": [
       "ice",
       "psychic"
@@ -21270,6 +22054,8 @@
       {
         "name": "Mr. Rime",
         "nameKo": "마임꽁꽁",
+        "nameJa": "バリコオル",
+        "nameZh": "踏冰人偶",
         "types": [
           "ice",
           "psychic"
@@ -21400,6 +22186,8 @@
     "slug": "runerigus",
     "nameEn": "Runerigus",
     "nameKo": "데스판",
+    "nameJa": "デスバーン",
+    "nameZh": "迭失板",
     "types": [
       "ground",
       "ghost"
@@ -21419,6 +22207,8 @@
       {
         "name": "Runerigus",
         "nameKo": "데스판",
+        "nameJa": "デスバーン",
+        "nameZh": "迭失板",
         "types": [
           "ground",
           "ghost"
@@ -21523,6 +22313,8 @@
     "slug": "alcremie",
     "nameEn": "Alcremie",
     "nameKo": "마휘핑",
+    "nameJa": "マホイップ",
+    "nameZh": "霜奶仙",
     "types": [
       "fairy"
     ],
@@ -21542,6 +22334,8 @@
       {
         "name": "Alcremie",
         "nameKo": "마휘핑",
+        "nameJa": "マホイップ",
+        "nameZh": "霜奶仙",
         "types": [
           "fairy"
         ],
@@ -21627,6 +22421,8 @@
     "slug": "morpeko",
     "nameEn": "Morpeko",
     "nameKo": "모르페코",
+    "nameJa": "モルペコ",
+    "nameZh": "莫鲁贝可",
     "types": [
       "electric",
       "dark"
@@ -21646,6 +22442,8 @@
       {
         "name": "Morpeko",
         "nameKo": "모르페코",
+        "nameJa": "モルペコ",
+        "nameZh": "莫鲁贝可",
         "types": [
           "electric",
           "dark"
@@ -21748,6 +22546,8 @@
     "slug": "dragapult",
     "nameEn": "Dragapult",
     "nameKo": "드래펄트",
+    "nameJa": "ドラパルト",
+    "nameZh": "多龙巴鲁托",
     "types": [
       "dragon",
       "ghost"
@@ -21769,6 +22569,8 @@
       {
         "name": "Dragapult",
         "nameKo": "드래펄트",
+        "nameJa": "ドラパルト",
+        "nameZh": "多龙巴鲁托",
         "types": [
           "dragon",
           "ghost"
@@ -21871,6 +22673,8 @@
     "slug": "wyrdeer",
     "nameEn": "Wyrdeer",
     "nameKo": "신비록",
+    "nameJa": "アヤシシ",
+    "nameZh": "诡角鹿",
     "types": [
       "normal",
       "psychic"
@@ -21892,6 +22696,8 @@
       {
         "name": "Wyrdeer",
         "nameKo": "신비록",
+        "nameJa": "アヤシシ",
+        "nameZh": "诡角鹿",
         "types": [
           "normal",
           "psychic"
@@ -21989,6 +22795,8 @@
     "slug": "kleavor",
     "nameEn": "Kleavor",
     "nameKo": "사마자르",
+    "nameJa": "バサギリ",
+    "nameZh": "劈斧螳螂",
     "types": [
       "bug",
       "rock"
@@ -22010,6 +22818,8 @@
       {
         "name": "Kleavor",
         "nameKo": "사마자르",
+        "nameJa": "バサギリ",
+        "nameZh": "劈斧螳螂",
         "types": [
           "bug",
           "rock"
@@ -22104,6 +22914,8 @@
     "slug": "basculegion",
     "nameEn": "Basculegion",
     "nameKo": "대쓰여너",
+    "nameJa": "イダイトウ",
+    "nameZh": "幽尾玄鱼",
     "types": [
       "water",
       "ghost"
@@ -22125,6 +22937,8 @@
       {
         "name": "Basculegion",
         "nameKo": "대쓰여너",
+        "nameJa": "イダイトウ",
+        "nameZh": "幽尾玄鱼",
         "types": [
           "water",
           "ghost"
@@ -22153,6 +22967,8 @@
       {
         "name": "Female",
         "nameKo": "대쓰여너 (암컷)",
+        "nameJa": "イダイトウ(メス)",
+        "nameZh": "幽尾玄鱼(母)",
         "types": [
           "water",
           "ghost"
@@ -22240,6 +23056,8 @@
     "slug": "sneasler",
     "nameEn": "Sneasler",
     "nameKo": "포푸니크",
+    "nameJa": "オオニューラ",
+    "nameZh": "大狃拉",
     "types": [
       "fighting",
       "poison"
@@ -22261,6 +23079,8 @@
       {
         "name": "Sneasler",
         "nameKo": "포푸니크",
+        "nameJa": "オオニューラ",
+        "nameZh": "大狃拉",
         "types": [
           "fighting",
           "poison"
@@ -22358,6 +23178,8 @@
     "slug": "meowscarada",
     "nameEn": "Meowscarada",
     "nameKo": "마스카나",
+    "nameJa": "マスカーニャ",
+    "nameZh": "魔幻假面喵",
     "types": [
       "grass",
       "dark"
@@ -22378,6 +23200,8 @@
       {
         "name": "Meowscarada",
         "nameKo": "마스카나",
+        "nameJa": "マスカーニャ",
+        "nameZh": "魔幻假面喵",
         "types": [
           "grass",
           "dark"
@@ -22478,6 +23302,8 @@
     "slug": "skeledirge",
     "nameEn": "Skeledirge",
     "nameKo": "라우드본",
+    "nameJa": "ラウドボーン",
+    "nameZh": "骨纹巨声鳄",
     "types": [
       "fire",
       "ghost"
@@ -22498,6 +23324,8 @@
       {
         "name": "Skeledirge",
         "nameKo": "라우드본",
+        "nameJa": "ラウドボーン",
+        "nameZh": "骨纹巨声鳄",
         "types": [
           "fire",
           "ghost"
@@ -22589,6 +23417,8 @@
     "slug": "quaquaval",
     "nameEn": "Quaquaval",
     "nameKo": "웨이니발",
+    "nameJa": "ウェーニバル",
+    "nameZh": "狂欢浪舞鸭",
     "types": [
       "water",
       "fighting"
@@ -22609,6 +23439,8 @@
       {
         "name": "Quaquaval",
         "nameKo": "웨이니발",
+        "nameJa": "ウェーニバル",
+        "nameZh": "狂欢浪舞鸭",
         "types": [
           "water",
           "fighting"
@@ -22703,6 +23535,8 @@
     "slug": "maushold",
     "nameEn": "Maushold",
     "nameKo": "파밀리쥐",
+    "nameJa": "イッカネズミ",
+    "nameZh": "一家鼠",
     "types": [
       "normal"
     ],
@@ -22723,6 +23557,8 @@
       {
         "name": "Maushold",
         "nameKo": "파밀리쥐",
+        "nameJa": "イッカネズミ",
+        "nameZh": "一家鼠",
         "types": [
           "normal"
         ],
@@ -22808,6 +23644,8 @@
     "slug": "garganacl",
     "nameEn": "Garganacl",
     "nameKo": "콜로솔트",
+    "nameJa": "キョジオーン",
+    "nameZh": "盐石巨灵",
     "types": [
       "rock"
     ],
@@ -22828,6 +23666,8 @@
       {
         "name": "Garganacl",
         "nameKo": "콜로솔트",
+        "nameJa": "キョジオーン",
+        "nameZh": "盐石巨灵",
         "types": [
           "rock"
         ],
@@ -22918,6 +23758,8 @@
     "slug": "armarouge",
     "nameEn": "Armarouge",
     "nameKo": "카디나르마",
+    "nameJa": "グレンアルマ",
+    "nameZh": "红莲铠骑",
     "types": [
       "fire",
       "psychic"
@@ -22938,6 +23780,8 @@
       {
         "name": "Armarouge",
         "nameKo": "카디나르마",
+        "nameJa": "グレンアルマ",
+        "nameZh": "红莲铠骑",
         "types": [
           "fire",
           "psychic"
@@ -23029,6 +23873,8 @@
     "slug": "ceruledge",
     "nameEn": "Ceruledge",
     "nameKo": "파라블레이즈",
+    "nameJa": "ソウブレイズ",
+    "nameZh": "苍炎刃鬼",
     "types": [
       "fire",
       "ghost"
@@ -23049,6 +23895,8 @@
       {
         "name": "Ceruledge",
         "nameKo": "파라블레이즈",
+        "nameJa": "ソウブレイズ",
+        "nameZh": "苍炎刃鬼",
         "types": [
           "fire",
           "ghost"
@@ -23140,6 +23988,8 @@
     "slug": "bellibolt",
     "nameEn": "Bellibolt",
     "nameKo": "찌리배리",
+    "nameJa": "ハラバリー",
+    "nameZh": "电肚蛙",
     "types": [
       "electric"
     ],
@@ -23160,6 +24010,8 @@
       {
         "name": "Bellibolt",
         "nameKo": "찌리배리",
+        "nameJa": "ハラバリー",
+        "nameZh": "电肚蛙",
         "types": [
           "electric"
         ],
@@ -23234,6 +24086,8 @@
     "slug": "scovillain",
     "nameEn": "Scovillain",
     "nameKo": "스코빌런",
+    "nameJa": "スコヴィラン",
+    "nameZh": "狠辣椒",
     "types": [
       "grass",
       "fire"
@@ -23255,6 +24109,8 @@
       {
         "name": "Scovillain",
         "nameKo": "스코빌런",
+        "nameJa": "スコヴィラン",
+        "nameZh": "狠辣椒",
         "types": [
           "grass",
           "fire"
@@ -23282,6 +24138,8 @@
       {
         "name": "Mega Scovillain",
         "nameKo": "메가 스코빌런",
+        "nameJa": "メガスコヴィラン",
+        "nameZh": "超级狠辣椒",
         "types": [
           "grass",
           "fire"
@@ -23365,6 +24223,8 @@
     "slug": "espathra",
     "nameEn": "Espathra",
     "nameKo": "클레스퍼트라",
+    "nameJa": "クエスパトラ",
+    "nameZh": "超能艳鸵",
     "types": [
       "psychic"
     ],
@@ -23385,6 +24245,8 @@
       {
         "name": "Espathra",
         "nameKo": "클레스퍼트라",
+        "nameJa": "クエスパトラ",
+        "nameZh": "超能艳鸵",
         "types": [
           "psychic"
         ],
@@ -23477,6 +24339,8 @@
     "slug": "tinkaton",
     "nameEn": "Tinkaton",
     "nameKo": "두드리짱",
+    "nameJa": "デカヌチャン",
+    "nameZh": "巨锻匠",
     "types": [
       "fairy",
       "steel"
@@ -23498,6 +24362,8 @@
       {
         "name": "Tinkaton",
         "nameKo": "두드리짱",
+        "nameJa": "デカヌチャン",
+        "nameZh": "巨锻匠",
         "types": [
           "fairy",
           "steel"
@@ -23582,6 +24448,8 @@
     "slug": "palafin",
     "nameEn": "Palafin",
     "nameKo": "돌핀맨",
+    "nameJa": "イルカマン",
+    "nameZh": "海豚侠",
     "types": [
       "water"
     ],
@@ -23600,6 +24468,8 @@
       {
         "name": "Palafin",
         "nameKo": "돌핀맨",
+        "nameJa": "イルカマン",
+        "nameZh": "海豚侠",
         "types": [
           "water"
         ],
@@ -23623,6 +24493,8 @@
       {
         "name": "Hero Form",
         "nameKo": "돌핀맨 영웅의 모습",
+        "nameJa": "イルカマンえいゆうのすがた",
+        "nameZh": "海豚侠英雄之姿",
         "types": [
           "water"
         ],
@@ -23714,6 +24586,8 @@
     "slug": "orthworm",
     "nameEn": "Orthworm",
     "nameKo": "꿈트렁",
+    "nameJa": "ミミズズ",
+    "nameZh": "拖拖蚓",
     "types": [
       "steel"
     ],
@@ -23733,6 +24607,8 @@
       {
         "name": "Orthworm",
         "nameKo": "꿈트렁",
+        "nameJa": "ミミズズ",
+        "nameZh": "拖拖蚓",
         "types": [
           "steel"
         ],
@@ -23807,6 +24683,8 @@
     "slug": "glimmora",
     "nameEn": "Glimmora",
     "nameKo": "킬라플로르",
+    "nameJa": "キラフロル",
+    "nameZh": "晶光花",
     "types": [
       "rock",
       "poison"
@@ -23827,6 +24705,8 @@
       {
         "name": "Glimmora",
         "nameKo": "킬라플로르",
+        "nameJa": "キラフロル",
+        "nameZh": "晶光花",
         "types": [
           "rock",
           "poison"
@@ -23853,6 +24733,8 @@
       {
         "name": "Mega Glimmora",
         "nameKo": "메가 킬라플로르",
+        "nameJa": "メガキラフロル",
+        "nameZh": "超级晶光花",
         "types": [
           "rock",
           "poison"
@@ -23934,6 +24816,8 @@
     "slug": "farigiraf",
     "nameEn": "Farigiraf",
     "nameKo": "키키링",
+    "nameJa": "リキキリン",
+    "nameZh": "奇麒麟",
     "types": [
       "normal",
       "psychic"
@@ -23955,6 +24839,8 @@
       {
         "name": "Farigiraf",
         "nameKo": "키키링",
+        "nameJa": "リキキリン",
+        "nameZh": "奇麒麟",
         "types": [
           "normal",
           "psychic"
@@ -24061,6 +24947,8 @@
     "slug": "kingambit",
     "nameEn": "Kingambit",
     "nameKo": "대도각참",
+    "nameJa": "ドドゲザン",
+    "nameZh": "仆刀将军",
     "types": [
       "dark",
       "steel"
@@ -24082,6 +24970,8 @@
       {
         "name": "Kingambit",
         "nameKo": "대도각참",
+        "nameJa": "ドドゲザン",
+        "nameZh": "仆刀将军",
         "types": [
           "dark",
           "steel"
@@ -24170,6 +25060,8 @@
     "slug": "sinistcha",
     "nameEn": "Sinistcha",
     "nameKo": "그우린차",
+    "nameJa": "ヤバソチャ",
+    "nameZh": "来悲粗茶",
     "types": [
       "grass",
       "ghost"
@@ -24190,6 +25082,8 @@
       {
         "name": "Sinistcha",
         "nameKo": "그우린차",
+        "nameJa": "ヤバソチャ",
+        "nameZh": "来悲粗茶",
         "types": [
           "grass",
           "ghost"
@@ -24260,6 +25154,8 @@
     "slug": "archaludon",
     "nameEn": "Archaludon",
     "nameKo": "브리두라스",
+    "nameJa": "ブリジュラス",
+    "nameZh": "铝钢桥龙",
     "types": [
       "steel",
       "dragon"
@@ -24281,6 +25177,8 @@
       {
         "name": "Archaludon",
         "nameKo": "브리두라스",
+        "nameJa": "ブリジュラス",
+        "nameZh": "铝钢桥龙",
         "types": [
           "steel",
           "dragon"
@@ -24368,6 +25266,8 @@
     "slug": "hydrapple",
     "nameEn": "Hydrapple",
     "nameKo": "과미드라",
+    "nameJa": "カミツオロチ",
+    "nameZh": "蜜集大蛇",
     "types": [
       "grass",
       "dragon"
@@ -24389,6 +25289,8 @@
       {
         "name": "Hydrapple",
         "nameKo": "과미드라",
+        "nameJa": "カミツオロチ",
+        "nameZh": "蜜集大蛇",
         "types": [
           "grass",
           "dragon"

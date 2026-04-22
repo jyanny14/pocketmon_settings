@@ -539,6 +539,46 @@ Serebii (`pokemonchampions/training.shtml`) + Bulbapedia (`Pokémon Champions`) 
 **11. T12 Bank 경유 레거시 (후속 개선)**
 - 사용자 피드백 기반
 
+## i18n Phase 1 후속 과제 (2026-04-22)
+
+Phase 1 데이터 레이어 + UI 스캐폴딩은 완료. 남은 번역·검증·수동 채움 항목.
+
+### T-i18n-1. ~~PokeAPI 업스트림 공백 보완~~ ✅ 완료 (2026-04-22)
+
+`scripts/fetch_names_from_bulbapedia.py` 로 Bulbapedia 'In other languages' 섹션
++ 첫 문단 Japanese 를 파싱해 자동 수집. 총 101건 채움 (ja 28건 + zh 73건).
+번체/간체 슬래시 분리 포맷(`反芻 / 反刍`) 대응 — 간체만 추출.
+`scripts/validate_names_i18n.py --strict` ja/zh 양쪽 통과.
+
+### T-i18n-2. ~~Champions 신규 아이템 ja/zh 공식명 수동 채움~~ ✅ 완료 (2026-04-22)
+
+T-i18n-1 과 함께 Bulbapedia 파서로 일괄 처리. 메가스톤 23~24건 포함.
+
+### T-i18n-3. UI 문자열 ja/zh 전면 번역
+
+현재 `web/assets/i18n.js` `STRINGS.ja` / `STRINGS.zh` 는 **핵심 네비 + 공통
+버튼 30~40 키만** LLM 초벌 번역 상태. 나머지 ~240 키는 영어로 폴백 중.
+Phase 1 실사용 반응 보며 세부 문자열까지 번역 예정. (이름 아닌 일반 UI 문구라
+LLM 번역 허용.)
+
+### T-i18n-4. 언어 토글 UX 개선
+
+현재 단일 버튼 순환 방식(한 → EN → 日 → 中 → 한). 4 언어 넘어서거나
+사용자 피드백 있으면 `<select>` 드롭다운으로 교체 (계획서 원안).
+
+### T-i18n-5. Phase 2 — 설명 / 효과 / 플레이버 LLM 번역
+
+`gameText* / description* / effect* / flavorText*` 의 ja/zh 번역. PokeAPI
+우선 → LLM 번역 → 수동 검수. 자세한 내용은 `docs/plan_i18n.md` Phase 2 절과
+`.claude/plans/compiled-swimming-lampson.md` M3-M5 참고.
+
+### T-i18n-6. Phase 3 — AI 프롬프트 템플릿 ja/zh 바디
+
+`web/assets/prompts-templates.js` 39 템플릿 × ja/zh 바디 추가. 현재 ja/zh
+모드에서도 `resolveBody()` 가 en 바디를 폴백 반환하므로 기능은 동작하나,
+사용자가 모국어로 AI 에게 물을 수 있게 하려면 번역 필요. 자세한 내용은
+`docs/plan_i18n.md` Phase 3.
+
 ## 참고 자료
 
 - PokeAPI 한국어 locale: `language.name === "ko"` 필터

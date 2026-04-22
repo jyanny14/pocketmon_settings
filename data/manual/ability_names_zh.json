@@ -1,0 +1,21 @@
+{
+  "_comment": "PokeAPI 에 없는 Champions 신규 특성의 중국어 간체 공식명만 기입. 공식 출처 크로스체크 후에만 추가. LLM 번역 금지. 구조: {serebii_slug: '简体汉字'}",
+  "_verified_sources": [
+    "Bulbapedia 'In other languages' 섹션 + 첫 문단 Japanese (2026-04-22) — 5건 추가",
+    "Bulbapedia 'In other languages' 섹션 + 첫 문단 Japanese (2026-04-22) — 14건 추가"
+  ],
+  "armortail": "尾甲",
+  "cudchew": "反刍",
+  "dragonize": "龙皮肤",
+  "eartheater": "食土",
+  "electromorphosis": "电力转换",
+  "megasol": "超级日光",
+  "opportunist": "跟风",
+  "piercingdrill": "贯穿钻",
+  "purifyingsalt": "洁净之盐",
+  "sharpness": "锋锐",
+  "spicyspray": "辣椒喷发",
+  "supremeoverlord": "大将",
+  "toxicdebris": "毒满地",
+  "zerotohero": "全能变身"
+}

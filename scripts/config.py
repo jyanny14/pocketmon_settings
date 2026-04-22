@@ -26,11 +26,23 @@ POKEAPI_SPRITE_URL = (
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{id}.png"
 )
 
+# 프로젝트 내부 언어 코드 → PokeAPI 의 `names[].language.name` 매핑.
+# 실측(2026-04-22): pokemon-species / ability / item / move 4 엔드포인트 모두 동일.
+# `ja` 와 `ja-hrkt` 는 이름(name) 필드에서 값이 같음 — 더 표준인 `ja` 사용.
+# 번체(`zh-hant`) 는 Phase 1 범위 밖.
+POKEAPI_LANG_CODES: dict[str, str] = {
+    "ko": "ko",
+    "ja": "ja",
+    "zh": "zh-hans",
+}
+
 # 도메인별 요청 간격(초). 없으면 DEFAULT 사용.
 REQUEST_DELAY_BY_HOST: dict[str, float] = {
     "www.serebii.net": 1.5,
     "pokeapi.co": 0.2,
     "raw.githubusercontent.com": 0.1,
+    # Bulbapedia robots.txt 는 Crawl-delay: 5 지정. 준수.
+    "bulbapedia.bulbagarden.net": 5.0,
 }
 DEFAULT_REQUEST_DELAY_SECONDS = 1.0
 REQUEST_TIMEOUT_SECONDS = 20

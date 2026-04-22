@@ -29,6 +29,13 @@ UPDATED_ATTACKS_PATH = PROJECT_ROOT / "data" / "processed" / "updated_attacks.js
 MOVE_NAMES_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_ko.json"
 # Manual Korean flavor-text override. Shape: {slug: flavorTextKo}.
 MOVE_FLAVORS_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_flavors_ko.json"
+
+# ja/zh — produced by scripts/fetch_names_i18n.py --target move --lang {ja|zh}
+MOVE_NAMES_JA_PATH = PROJECT_ROOT / "data" / "processed" / "move_names_ja.json"
+MOVE_NAMES_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_ja.json"
+MOVE_NAMES_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "move_names_zh.json"
+MOVE_NAMES_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_zh.json"
+
 OUT = PROJECT_ROOT / "web" / "data" / "moves.json"
 
 
@@ -65,6 +72,22 @@ def _load_move_flavors_ko() -> dict[str, str]:
     return _load_slug_map(MOVE_FLAVORS_KO_OVERRIDE_PATH)
 
 
+def _load_merged(*paths) -> dict[str, str]:
+    """여러 파일에서 슬러그 맵을 읽어 뒤에 올수록 우선순위 높게 병합."""
+    merged: dict[str, str] = {}
+    for p in paths:
+        merged.update(_load_slug_map(p))
+    return merged
+
+
+def _load_move_names_ja() -> dict[str, str]:
+    return _load_merged(MOVE_NAMES_JA_PATH, MOVE_NAMES_JA_OVERRIDE_PATH)
+
+
+def _load_move_names_zh() -> dict[str, str]:
+    return _load_merged(MOVE_NAMES_ZH_PATH, MOVE_NAMES_ZH_OVERRIDE_PATH)
+
+
 def main() -> int:
     logging.basicConfig(
         level=logging.INFO,
@@ -78,6 +101,8 @@ def main() -> int:
     overlay = _load_updated_attacks()
     names_ko_override = _load_move_names_ko()
     flavors_ko_override = _load_move_flavors_ko()
+    names_ja = _load_move_names_ja()
+    names_zh = _load_move_names_zh()
     manual_name_applied = 0
     manual_flavor_applied = 0
     updated = 0
@@ -99,6 +124,8 @@ def main() -> int:
             "pokeapiSlug": e.get("pokeapiSlug", ""),
             "nameEn": N(e.get("nameEn", "")),
             "nameKo": name_ko,
+            "nameJa": N(names_ja.get(slug, "")),
+            "nameZh": N(names_zh.get(slug, "")),
             "type": e.get("type", ""),
             "category": e.get("category", ""),
             "power": e.get("power"),
