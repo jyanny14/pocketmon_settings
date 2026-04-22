@@ -7,6 +7,8 @@
     "nameZh": "黑带",
     "effect": "An item to be held by a Pokémon. This belt helps with focus and boosts the power of the holder's Fighting-type moves.",
     "effectKo": "마음을 긴장시키는 띠. 지니게 하면 격투타입 기술의 위력이 올라간다.",
+    "effectJa": "気が ひきしまる 帯。 持たせると かくとうタイプの 技の 威力が あがる。",
+    "effectZh": "能振作精神的带子。 携带后，格斗属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/black-belt.png",
     "category": "held"
@@ -19,6 +21,8 @@
     "nameZh": "黑色眼镜",
     "effect": "An item to be held by a Pokémon. It's a pair of shady- looking glasses that boost the power of the holder's Dark-type moves.",
     "effectKo": "수상하게 보이는 선글라스. 지니게 하면 악타입 기술의 위력이 올라간다.",
+    "effectJa": "怪しく みえる メガネ。 持たせると あくタイプの 技の 威力が あがる。",
+    "effectZh": "看上去很奇怪的眼镜。 携带后，恶属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/black-glasses.png",
     "category": "held"
@@ -31,6 +35,8 @@
     "nameZh": "光粉",
     "effect": "An item to be held by a Pokémon. This glittery powder casts a tricky glare that lowers the accuracy of opposing Pokémon's moves.",
     "effectKo": "반짝반짝 빛나는 가루. 지니게 하면 빛이 상대를 혼란시켜 기술이 명중되기 어려워진다.",
+    "effectJa": "キラキラ 光る粉。 持たせると 光が 相手を 惑わして 技が 命中しにくくなる。",
+    "effectZh": "闪闪发光的粉末。 携带后，光芒会迷惑对手， 从而使其招式变得不容易命中。",
     "location": "Beginning",
     "iconPath": "assets/items/bright-powder.png",
     "category": "held"
@@ -43,6 +49,8 @@
     "nameZh": "木炭",
     "effect": "An item to be held by a Pokémon. It's a combustible fuel that boosts the power of the holder's Fire-type moves.",
     "effectKo": "물건을 태우는 연료. 지니게 하면 불꽃타입 기술의 위력이 올라간다.",
+    "effectJa": "ものを 燃やす 燃料。 持たせると ほのおタイプの 技の 威力が あがる。",
+    "effectZh": "焚烧用的燃料。 携带后，火属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/charcoal.png",
     "category": "held"
@@ -55,6 +63,8 @@
     "nameZh": "讲究围巾",
     "effect": "An item to be held by a Pokémon. This curious scarf boosts the holder's Speed stat but only allows the use of a single move.",
     "effectKo": "기술을 구애받는 스카프. 지니게 하면 스피드는 올라가지만 같은 기술밖에 쓸 수 없다.",
+    "effectJa": "ちょっと こだわった スカーフ。 持たせると 素早さは あがるが 同じ 技しか だせなくなる。",
+    "effectZh": "有点讲究的围巾。 虽然携带后速度会提高， 但只能使出相同的招式。",
     "location": "Beginning",
     "iconPath": "assets/items/choice-scarf.png",
     "category": "held"
@@ -67,6 +77,8 @@
     "nameZh": "龙之牙",
     "effect": "An item to be held by a Pokémon. This hard, sharp fang boosts the power of the holder's Dragon-type moves.",
     "effectKo": "단단하고 날카로운 이빨. 지니게 하면 드래곤타입 기술의 위력이 올라간다.",
+    "effectJa": "硬くて 鋭い キバ。 持たせると ドラゴンタイプの 技の 威力が あがる。",
+    "effectZh": "坚硬锐利的牙齿。 携带后，龙属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/dragon-fang.png",
     "category": "held"
@@ -79,6 +91,8 @@
     "nameZh": "妖精之羽",
     "effect": "An item to be held by a Pokémon. This feather, which gleams faintly when hit by light, boosts the power of the holder's Fairy-type moves.",
     "effectKo": "빛에 비추면 희미하게 빛나는 깃털. 지니게 하면 페어리타입 기술의 위력이 쭉 올라간다.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/fairy-feather.png",
     "category": "held"
@@ -91,6 +105,8 @@
     "nameZh": "气势头带",
     "effect": "An item to be held by a Pokémon. When the holder is hit with a move that should knock it out, it may be able to endure with 1 HP.",
     "effectKo": "지니게 하면 기절할 듯한 기술을 받아도 HP 를 1 남겨서 견디기도 한다.",
+    "effectJa": "持たせると ひんしに なりそうな 技を 受けても ＨＰを １だけ 残して 耐えることが ある。",
+    "effectZh": "携带后，即便受到 可能会导致濒死的招式， 有时也能仅以１ＨＰ撑过去。",
     "location": "Beginning",
     "iconPath": "assets/items/focus-band.png",
     "category": "held"
@@ -103,6 +119,8 @@
     "nameZh": "气势披带",
     "effect": "An item to be held by a Pokémon. If the holder has full HP and it is hit with a move that should knock it out, it will endure with 1 HP—but only once.",
     "effectKo": "지니게 하면 HP 가 꽉 찼을 때 기절할 듯한 기술을 받아도 HP 1 로 한 번은 버틴다.",
+    "effectJa": "持たせると ＨＰが 満タンのとき ひんしになりそうな 技を 受けても ＨＰ１で １度だけ 耐える。",
+    "effectZh": "携带后，在ＨＰ全满时， 即便受到可能会导致濒死的招式， 也能仅以１ＨＰ撑过去１次。",
     "location": "Beginning",
     "iconPath": "assets/items/focus-sash.png",
     "category": "held"
@@ -115,6 +133,8 @@
     "nameZh": "硬石头",
     "effect": "An item to be held by a Pokémon. It's a durable stone that boosts the power of the holder's Rock-type moves.",
     "effectKo": "저절로 깨지지 않는 돌. 지니게 하면 바위타입 기술의 위력이 올라간다.",
+    "effectJa": "絶対に 割れない 石。 持たせると いわタイプの 技の 威力が あがる。",
+    "effectZh": "绝对不会裂开的石头。 携带后，岩石属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/hard-stone.png",
     "category": "held"
@@ -127,6 +147,8 @@
     "nameZh": "王者之证",
     "effect": "An item to be held by a Pokémon. It may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack.",
     "effectKo": "지니게 하면 기술로 상대에게 대미지를 줄 때 상대를 풀죽음 상태로 만들 때가 있다.",
+    "effectJa": "持たせると 攻撃して ダメージを 与えたときに 相手を ひるませることが ある。",
+    "effectZh": "携带后进行攻击， 在造成伤害时， 有时会让对手畏缩。",
     "location": "Beginning",
     "iconPath": "assets/items/kings-rock.png",
     "category": "held"
@@ -139,6 +161,8 @@
     "nameZh": "吃剩的东西",
     "effect": "An item to be held by a Pokémon. It slowly but steadily restores the holder's HP.",
     "effectKo": "지니게 하면 포켓몬의 HP 가 조금씩 회복된다.",
+    "effectJa": "持たせると ポケモンの ＨＰが 戦闘の あいだ 少しずつ 回復する。",
+    "effectZh": "携带后，宝可梦的ＨＰ 会在战斗期间缓缓回复。",
     "location": "Beginning",
     "iconPath": "assets/items/leftovers.png",
     "category": "held"
@@ -151,6 +175,8 @@
     "nameZh": "电气球",
     "effect": "An item to be held by Pikachu. It's a mysterious orb that boosts Pikachu's Attack and Sp. Atk stats.",
     "effectKo": "피카츄에게 지니게 하면 공격과 특수공격의 위력이 올라가는 이상한 구슬.",
+    "effectJa": "ピカチュウに 持たせると 攻撃と 特攻の 威力が あがる 不思議な 玉。",
+    "effectZh": "让皮卡丘携带后， 攻击和特攻的威力 就会提高的神奇之球。",
     "location": "Shop 1000 VP",
     "iconPath": "assets/items/light-ball.png",
     "category": "held"
@@ -163,6 +189,8 @@
     "nameZh": "磁铁",
     "effect": "An item to be held by a Pokémon. It's a powerful magnet that boosts the power of the holder's Electric-type moves.",
     "effectKo": "강력한 자석. 지니게 하면 전기타입 기술의 위력이 올라간다.",
+    "effectJa": "強力な 磁石。 持たせると でんきタイプの 技の 威力が あがる。",
+    "effectZh": "强力的磁铁。 携带后，电属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/magnet.png",
     "category": "held"
@@ -175,6 +203,8 @@
     "nameZh": "心灵香草",
     "effect": "An item to be held by a Pokémon. The holder will be able to shake off move-binding effects to move freely— but only once.",
     "effectKo": "지니게 한 포켓몬은 헤롱헤롱 상태가 되었을 때 한 번만 회복한다.",
+    "effectJa": "持たせた ポケモンが 自由に 技を だせなくなったときに １度だけ 回復する。",
+    "effectZh": "当携带它的宝可梦 无法自由使出招式时， 仅会回复１次。",
     "location": "Shop 1000 VP",
     "iconPath": "assets/items/mental-herb.png",
     "category": "held"
@@ -187,6 +217,8 @@
     "nameZh": "金属膜",
     "effect": "An item to be held by a Pokémon. It's a special metallic coating that boosts the power of the holder's Steel-type moves.",
     "effectKo": "특수한 금속 장막. 지니게 하면 강철타입 기술의 위력이 올라간다.",
+    "effectJa": "特殊な 金属の 膜。 持たせると はがねタイプの 技の 威力が あがる。",
+    "effectZh": "特殊的金属膜。 携带后，钢属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/metal-coat.png",
     "category": "held"
@@ -199,6 +231,8 @@
     "nameZh": "奇迹种子",
     "effect": "An item to be held by a Pokémon. It's a seed imbued with life force that boosts the power of the holder's Grass-type moves.",
     "effectKo": "생명이 뿌듯한 씨앗. 지니게 하면 풀타입 기술의 위력이 올라간다.",
+    "effectJa": "生命が 宿る タネ。 持たせると くさタイプの 技の 威力が あがる。",
+    "effectZh": "孕育生命的种子。 携带后，草属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/miracle-seed.png",
     "category": "held"
@@ -211,6 +245,8 @@
     "nameZh": "神秘水滴",
     "effect": "An item to be held by a Pokémon. This teardrop-shaped gem boosts the power of the holder's Water-type moves.",
     "effectKo": "물방울 모양의 보석. 지니게 하면 물타입 기술의 위력이 올라간다.",
+    "effectJa": "しずくの 形の 宝石。 持たせると みずタイプの 技の 威力が あがる。",
+    "effectZh": "水滴形状的宝石。 携带后，水属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/mystic-water.png",
     "category": "held"
@@ -223,6 +259,8 @@
     "nameZh": "不融冰",
     "effect": "An item to be held by a Pokémon. It's a heat-repelling piece of ice that boosts the power of the holder's Ice- type moves.",
     "effectKo": "열을 가까이하지 않게 하는 얼음. 지니게 하면 얼음타입 기술의 위력이 올라간다.",
+    "effectJa": "熱を よせつけない 氷。 持たせると こおりタイプの 技の 威力が あがる。",
+    "effectZh": "能隔绝热量的冰。 携带后，冰属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/never-melt-ice.png",
     "category": "held"
@@ -235,6 +273,8 @@
     "nameZh": "毒针",
     "effect": "An item to be held by a Pokémon. This small poisonous barb boosts the power of the holder's Poison-type moves.",
     "effectKo": "독이 있는 작은 침. 지니게 하면 독타입 기술의 위력이 올라간다.",
+    "effectJa": "どくのある ちいさな ハリ。 持たせると どくタイプの 技の 威力が あがる。",
+    "effectZh": "有毒的小针。 携带后，毒属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/poison-barb.png",
     "category": "held"
@@ -247,6 +287,8 @@
     "nameZh": "先制之爪",
     "effect": "An item to be held by a Pokémon. This light, sharp claw lets the holder occasionally unleash a move faster than it usually would.",
     "effectKo": "가볍고 날카로운 손톱. 지니게 하면 상대보다 먼저 행동할 수도 있다.",
+    "effectJa": "軽くて 鋭い ツメ。 持たせると 相手より 先に 行動できることが ある。",
+    "effectZh": "又轻又尖锐的爪子。 携带后，有时能比对手 先一步行动。",
     "location": "Beginning",
     "iconPath": "assets/items/quick-claw.png",
     "category": "held"
@@ -259,6 +301,8 @@
     "nameZh": "焦点镜",
     "effect": "An item to be held by a Pokémon. It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio.",
     "effectKo": "약점이 보이는 렌즈. 지니게 한 포켓몬의 기술이 급소에 맞기 쉬워진다.",
+    "effectJa": "弱点が みえる レンズ。 持たせた ポケモンの 技が 急所に 当たりやすくなる。",
+    "effectZh": "能看见弱点的镜片。 携带它的宝可梦的招式 会变得容易击中要害。",
     "location": "Shop 1000 VP",
     "iconPath": "assets/items/scope-lens.png",
     "category": "held"
@@ -271,6 +315,8 @@
     "nameZh": "锐利鸟嘴",
     "effect": "An item to be held by a Pokémon. It's a long, sharp beak that boosts the power of the holder's Flying-type moves.",
     "effectKo": "길고 뾰족한 부리. 지니게 하면 비행타입 기술의 위력이 올라간다.",
+    "effectJa": "長く とがった くちばし。 持たせると ひこうタイプの 技の 威力が あがる。",
+    "effectZh": "又长又尖的鸟嘴。 携带后，飞行属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/sharp-beak.png",
     "category": "held"
@@ -283,6 +329,8 @@
     "nameZh": "贝壳之铃",
     "effect": "An item to be held by a Pokémon. The holder restores a little HP to itself every time it inflicts damage with an attack.",
     "effectKo": "지니게 한 포켓몬이 공격하여 상대에게 데미지를 줬을 때 HP 를 조금 회복할 수 있다.",
+    "effectJa": "持たせた ポケモンが 攻撃して 相手に ダメージを あたえたとき ＨＰを 少し 回復できる。",
+    "effectZh": "当携带它的宝可梦 攻击对手并造成伤害时， 能回复少量ＨＰ。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/shell-bell.png",
     "category": "held"
@@ -295,6 +343,8 @@
     "nameZh": "丝绸围巾",
     "effect": "An item to be held by a Pokémon. It's a sumptuous scarf that boosts the power of the holder's Normal-type moves.",
     "effectKo": "감촉이 좋은 스카프. 지니게 하면 노말타입 기술의 위력이 쭉 올라간다.",
+    "effectJa": "はだざわりの よい スカーフ。 持たせると ノーマルタイプの 技の 威力が あがる。",
+    "effectZh": "手感不错的围巾。 携带后，一般属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/silk-scarf.png",
     "category": "held"
@@ -307,6 +357,8 @@
     "nameZh": "银粉",
     "effect": "An item to be held by a Pokémon. It's a shiny silver powder that boosts the power of the holder's Bug-type moves.",
     "effectKo": "은색으로 반짝이는 가루. 지니게 하면 벌레타입 기술의 위력이 올라간다.",
+    "effectJa": "銀色に 輝く 粉。 持たせると むしタイプの 技の 威力が あがる。",
+    "effectZh": "散发着银色光辉的粉末。 携带后，虫属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/silver-powder.png",
     "category": "held"
@@ -319,6 +371,8 @@
     "nameZh": "柔软沙子",
     "effect": "An item to be held by a Pokémon. This loose, silky sand boosts the power of the holder's Ground-type moves.",
     "effectKo": "만지면 보슬보슬한 모래. 지니게 하면 땅타입 기술의 위력이 올라간다.",
+    "effectJa": "さわると サラサラする 砂。 持たせると じめんタイプの 技の 威力が あがる。",
+    "effectZh": "手感细腻的沙子。 携带后，地面属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/soft-sand.png",
     "category": "held"
@@ -331,6 +385,8 @@
     "nameZh": "诅咒之符",
     "effect": "An item to be held by a Pokémon. It's a sinister, eerie tag that boosts the power of the holder's Ghost-type moves.",
     "effectKo": "괴상하고 으스스한 부적. 지니게 하면 고스트타입 기술의 위력이 올라간다.",
+    "effectJa": "怪しくて 不気味な お札。 持たせると ゴーストタイプの 技の 威力が あがる。",
+    "effectZh": "古怪可怕的咒符。 携带后，幽灵属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/spell-tag.png",
     "category": "held"
@@ -343,6 +399,8 @@
     "nameZh": "弯曲的汤匙",
     "effect": "An item to be held by a Pokémon. This spoon is imbued with telekinetic energy and boosts the power of the holder's Psychic-type moves.",
     "effectKo": "염동력을 담은 숟가락. 지니게 하면 에스퍼타입 기술의 위력이 올라간다.",
+    "effectJa": "念力を こめた スプーン。 持たせると エスパータイプの 技の 威力が あがる。",
+    "effectZh": "注入了念力的汤匙。 携带后，超能力属性的 招式威力就会提高。",
     "location": "Shop 700 VP",
     "iconPath": "assets/items/twisted-spoon.png",
     "category": "held"
@@ -355,6 +413,8 @@
     "nameZh": "白色香草",
     "effect": "An item to be held by a Pokémon. It will restore any lowered stat in battle—but only once.",
     "effectKo": "지니게 한 포켓몬의 능력이 떨어졌을 때 한 번만 원래 상태로 돌아온다.",
+    "effectJa": "持たせた ポケモンの 能力が さがったとき １度だけ もとの 状態に 戻す。",
+    "effectZh": "当携带它的宝可梦能力降低时， 仅能回到之前的状态１次。",
     "location": "Beginning",
     "iconPath": "assets/items/white-herb.png",
     "category": "held"
@@ -367,6 +427,8 @@
     "nameZh": "暴雪王进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Abomasnow holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "눈설왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ユキノオーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让暴雪王携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Mega Evolution Tutorial",
     "iconPath": "assets/items/abomasite.png",
     "category": "mega-stone"
@@ -379,6 +441,8 @@
     "nameZh": "阿勃梭鲁进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Absol holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "앱솔에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "アブソルに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让阿勃梭鲁携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/absolite.png",
     "category": "mega-stone"
@@ -391,6 +455,8 @@
     "nameZh": "化石翼龙进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Aerodactyl holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "프테라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "プテラに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让化石翼龙携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/aerodactylite.png",
     "category": "mega-stone"
@@ -403,6 +469,8 @@
     "nameZh": "波士可多拉进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Aggron holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "보스로라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ボスゴドラに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让波士可多拉携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Mega Evolution Tutorial",
     "iconPath": "assets/items/aggronite.png",
     "category": "mega-stone"
@@ -415,6 +483,8 @@
     "nameZh": "胡地进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Alakazam holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "후딘에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "フーディンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让胡地携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/alakazite.png",
     "category": "mega-stone"
@@ -427,6 +497,8 @@
     "nameZh": "七夕青鸟进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Altaria holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "파비코리에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "チルタリスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让七夕青鸟携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/altarianite.png",
     "category": "mega-stone"
@@ -439,6 +511,8 @@
     "nameZh": "电龙进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Ampharos holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "전룡에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "デンリュウに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让电龙携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/ampharosite.png",
     "category": "mega-stone"
@@ -451,6 +525,8 @@
     "nameZh": "差不多娃娃进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Audino holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "다부니에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "タブンネに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让差不多娃娃携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/audinite.png",
     "category": "mega-stone"
@@ -463,6 +539,8 @@
     "nameZh": "诅咒娃娃进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Banette holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "다크펫에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ジュペッタに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让诅咒娃娃携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/banettite.png",
     "category": "mega-stone"
@@ -475,6 +553,8 @@
     "nameZh": "大针蜂进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Beedrill holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "독침붕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "スピアーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "大针蜂携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Mega Evolution Tutorial",
     "iconPath": "assets/items/beedrillite.png",
     "category": "mega-stone"
@@ -487,6 +567,8 @@
     "nameZh": "水箭龟进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Blastoise holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "거북왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "カメックスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让水箭龟携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/blastoisinite.png",
     "category": "mega-stone"
@@ -499,6 +581,8 @@
     "nameZh": "喷火驼进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Camerupt holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "폭타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "バクーダに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "喷火驼携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/cameruptite.png",
     "category": "mega-stone"
@@ -511,6 +595,8 @@
     "nameZh": "水晶灯火灵进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Chandelure holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "샹델라에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/chandelurite.png",
     "category": "mega-stone"
@@ -523,6 +609,8 @@
     "nameZh": "喷火龙进化石Ｘ",
     "effect": "One of a variety of mysterious Mega Stones. A Charizard holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "리자몽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "リザードンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让喷火龙携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/charizardite-x.png",
     "category": "mega-stone"
@@ -535,6 +623,8 @@
     "nameZh": "喷火龙进化石Ｙ",
     "effect": "One of a variety of mysterious Mega Stones. A Charizard holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "리자몽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "リザードンに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让喷火龙携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/charizardite-y.png",
     "category": "mega-stone"
@@ -547,6 +637,8 @@
     "nameZh": "布里卡隆进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Chesnaught holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "브리가론에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Deposit a Chesnaught from Pokémon Legends: Z-A",
     "iconPath": "assets/items/chesnaughtite.png",
     "category": "mega-stone"
@@ -559,6 +651,8 @@
     "nameZh": "风铃铃进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Chimecho holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "치렁에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/chimechite.png",
     "category": "mega-stone"
@@ -571,6 +665,8 @@
     "nameZh": "皮可西进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Clefable holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "픽시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/clefablite.png",
     "category": "mega-stone"
@@ -583,6 +679,8 @@
     "nameZh": "好胜毛蟹进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Crabominable holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "모단단게에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/crabominite.png",
     "category": "mega-stone"
@@ -595,6 +693,8 @@
     "nameZh": "妖火红狐进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Delphox holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "마폭시에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Deposit a Delphox from Pokémon Legends: Z-A",
     "iconPath": "assets/items/delphoxite.png",
     "category": "mega-stone"
@@ -607,6 +707,8 @@
     "nameZh": "快龙进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Dragonite holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "망나뇽에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/dragoninite.png",
     "category": "mega-stone"
@@ -619,6 +721,8 @@
     "nameZh": "老翁龙进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Drampa holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "할비롱에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/drampanite.png",
     "category": "mega-stone"
@@ -631,6 +735,8 @@
     "nameZh": "炎武王进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Emboar holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "염무왕에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/emboarite.png",
     "category": "mega-stone"
@@ -643,6 +749,8 @@
     "nameZh": "龙头地鼠进化石",
     "effect": "One of a variety of mysterious Mega Stones. An Excadrill holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "몰드류에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/excadrite.png",
     "category": "mega-stone"
@@ -655,6 +763,8 @@
     "nameZh": "大力鳄进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Feraligatr holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "장크로다일에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/feraligite.png",
     "category": "mega-stone"
@@ -667,6 +777,8 @@
     "nameZh": "花叶蒂进化石",
     "effect": "One of a variety of mysterious Mega Stones. A special Floette holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "플라엣테에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Deposit a Floette Eternal Flower from Pokémon Legends: Z-A",
     "iconPath": "assets/items/floettite.png",
     "category": "mega-stone"
@@ -679,6 +791,8 @@
     "nameZh": "雪妖女进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Froslass holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "눈여아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/froslassite.png",
     "category": "mega-stone"
@@ -691,6 +805,8 @@
     "nameZh": "艾路雷朵进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Gallade holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "엘레이드에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "エルレイドに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让艾路雷朵携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/galladite.png",
     "category": "mega-stone"
@@ -703,6 +819,8 @@
     "nameZh": "烈咬陆鲨进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Garchomp holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "한카리아스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ガブリアスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让烈咬陆鲨携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Mega Evolution Tutorial",
     "iconPath": "assets/items/garchompite.png",
     "category": "mega-stone"
@@ -715,6 +833,8 @@
     "nameZh": "沙奈朵进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Gardevoir holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "가디안에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "サーナイトに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让沙奈朵携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/gardevoirite.png",
     "category": "mega-stone"
@@ -727,6 +847,8 @@
     "nameZh": "耿鬼进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Gengar holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "팬텀에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ゲンガーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让耿鬼携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/gengarite.png",
     "category": "mega-stone"
@@ -739,6 +861,8 @@
     "nameZh": "冰鬼护进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Glalie holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "얼음귀신에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "オニゴーリに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让冰鬼护携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/glalitite.png",
     "category": "mega-stone"
@@ -751,6 +875,8 @@
     "nameZh": "晶光花进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Glimmora holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "킬라플로르에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/glimmoranite.png",
     "category": "mega-stone"
@@ -763,6 +889,8 @@
     "nameZh": "泥偶巨人进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Golurk holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "골루그에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/golurkite.png",
     "category": "mega-stone"
@@ -775,6 +903,8 @@
     "nameZh": "甲贺忍蛙进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Greninja holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "개굴닌자에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Deposit a Greninja from Pokémon Legends: Z-A",
     "iconPath": "assets/items/greninjite.png",
     "category": "mega-stone"
@@ -787,6 +917,8 @@
     "nameZh": "暴鲤龙进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Gyarados holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "갸라도스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ギャラドスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让暴鲤龙携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Mega Evolution Tutorial",
     "iconPath": "assets/items/gyaradosite.png",
     "category": "mega-stone"
@@ -799,6 +931,8 @@
     "nameZh": "摔角鹰人进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Hawlucha holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "루차불에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/hawluchanite.png",
     "category": "mega-stone"
@@ -811,6 +945,8 @@
     "nameZh": "赫拉克罗斯进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Heracross holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "헤라크로스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ヘラクロスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让赫拉克罗斯携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Mega Evolution Tutorial",
     "iconPath": "assets/items/heracronite.png",
     "category": "mega-stone"
@@ -823,6 +959,8 @@
     "nameZh": "黑鲁加进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Houndoom holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "헬가에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ヘルガーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让黑鲁加携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/houndoominite.png",
     "category": "mega-stone"
@@ -835,6 +973,8 @@
     "nameZh": "袋兽进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Kangaskhan holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "캥카에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ガルーラに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让袋兽携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/kangaskhanite.png",
     "category": "mega-stone"
@@ -847,6 +987,8 @@
     "nameZh": "长耳兔进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Lopunny holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "이어롭에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ミミロップに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "长耳兔携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/lopunnite.png",
     "category": "mega-stone"
@@ -859,6 +1001,8 @@
     "nameZh": "路卡利欧进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Lucario holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "루카리오에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ルカリオに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让路卡利欧携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/lucarionite.png",
     "category": "mega-stone"
@@ -871,6 +1015,8 @@
     "nameZh": "雷电兽进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Manectric holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "썬더볼트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ライボルトに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让雷电兽携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Mega Evolution Tutorial",
     "iconPath": "assets/items/manectite.png",
     "category": "mega-stone"
@@ -883,6 +1029,8 @@
     "nameZh": "恰雷姆进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Medicham holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "요가램에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "チャーレムに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让恰雷姆携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/medichamite.png",
     "category": "mega-stone"
@@ -895,6 +1043,8 @@
     "nameZh": "大竺葵进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Meganium holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "메가니움에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/meganiumite.png",
     "category": "mega-stone"
@@ -907,6 +1057,8 @@
     "nameZh": "超能妙喵进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Meowstic holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "냐오닉스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/meowsticite.png",
     "category": "mega-stone"
@@ -919,6 +1071,8 @@
     "nameZh": "大比鸟进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Pidgeot holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "피죤투에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ピジョットに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让大比鸟携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/pidgeotite.png",
     "category": "mega-stone"
@@ -931,6 +1085,8 @@
     "nameZh": "凯罗斯进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Pinsir holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "쁘사이저에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "カイロスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让凯罗斯携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/pinsirite.png",
     "category": "mega-stone"
@@ -943,6 +1099,8 @@
     "nameZh": "勾魂眼进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Sableye holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "깜까미에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ヤミラミに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让勾魂眼携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/sablenite.png",
     "category": "mega-stone"
@@ -955,6 +1113,8 @@
     "nameZh": "巨钳螳螂进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Scizor holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "핫삼에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ハッサムに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让巨钳螳螂携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/scizorite.png",
     "category": "mega-stone"
@@ -967,6 +1127,8 @@
     "nameZh": "狠辣椒进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Scovillain holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "스코빌런에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/scovillainite.png",
     "category": "mega-stone"
@@ -979,6 +1141,8 @@
     "nameZh": "巨牙鲨进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Sharpedo holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "샤크니아에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "サメハダーに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让巨牙鲨携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/sharpedonite.png",
     "category": "mega-stone"
@@ -991,6 +1155,8 @@
     "nameZh": "盔甲鸟进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Skarmory holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "무장조에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/skarmorite.png",
     "category": "mega-stone"
@@ -1003,6 +1169,8 @@
     "nameZh": "呆壳兽进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Slowbro holding this stone will be able to Mega Evolve during battle. It won't work for a Galarian Slowbro, however.",
     "effectKo": "야도란에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ヤドランに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让呆壳兽携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/slowbronite.png",
     "category": "mega-stone"
@@ -1015,6 +1183,8 @@
     "nameZh": "宝石海星进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Starmie holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "아쿠스타에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/starminite.png",
     "category": "mega-stone"
@@ -1027,6 +1197,8 @@
     "nameZh": "大钢蛇进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Steelix holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "강철톤에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "ハガネールに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让大钢蛇携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Mega Evolution Tutorial",
     "iconPath": "assets/items/steelixite.png",
     "category": "mega-stone"
@@ -1039,6 +1211,8 @@
     "nameZh": "班基拉斯进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Tyranitar holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "마기라스에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "バンギラスに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让班基拉斯携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/tyranitarite.png",
     "category": "mega-stone"
@@ -1051,6 +1225,8 @@
     "nameZh": "妙蛙花进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Venusaur holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "이상해꽃에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "フシギバナに 持たせておくと 戦いのとき メガシンカが できる 不思議な メガストーンの 一種。",
+    "effectZh": "让妙蛙花携带后， 在战斗时就能进行超级进化的 一种神奇超级石。",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/venusaurite.png",
     "category": "mega-stone"
@@ -1063,6 +1239,8 @@
     "nameZh": "大食花进化石",
     "effect": "One of a variety of mysterious Mega Stones. A Victreebel holding this stone will be able to Mega Evolve during battle.",
     "effectKo": "우츠보트에게 지니게 하면 배틀할 때 메가진화할 수 있는 신비한 메가스톤의 일종.",
+    "effectJa": "",
+    "effectZh": "",
     "location": "Shop 2000 VP",
     "iconPath": "assets/items/victreebelite.png",
     "category": "mega-stone"
@@ -1075,6 +1253,8 @@
     "nameZh": "利木果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to thaw itself after being frozen.",
     "effectKo": "얼음 상태를 낫게 한다.",
+    "effectJa": "ポケモンに 持たせると こおりを 回復する。",
+    "effectZh": "让宝可梦携带后， 可以治愈冰冻。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/aspear-berry.png",
     "category": "berry"
@@ -1087,6 +1267,8 @@
     "nameZh": "霹霹果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Steel-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 강철타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの はがね技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的钢属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/babiri-berry.png",
     "category": "berry"
@@ -1099,6 +1281,8 @@
     "nameZh": "草蚕果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Rock-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 바위타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの いわ技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的岩石属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/charti-berry.png",
     "category": "berry"
@@ -1111,6 +1295,8 @@
     "nameZh": "樱子果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to free itself from paralysis.",
     "effectKo": "마비 상태를 낫게 한다.",
+    "effectJa": "ポケモンに 持たせると まひを 回復する。",
+    "effectZh": "让宝可梦携带后， 可以治愈麻痹。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/cheri-berry.png",
     "category": "berry"
@@ -1123,6 +1309,8 @@
     "nameZh": "零余果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to shake off its drowsiness.",
     "effectKo": "잠듦 상태를 낫게 한다.",
+    "effectJa": "ポケモンに 持たせると 眠りを 回復する。",
+    "effectZh": "让宝可梦携带后， 可以治愈睡眠。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/chesto-berry.png",
     "category": "berry"
@@ -1135,6 +1323,8 @@
     "nameZh": "灯浆果",
     "effect": "If a Pokémon holding this Berry is hit with a Normal-type move, the power of that move will be weakened.",
     "effectKo": "노말타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると ノーマル技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到一般属性招式攻击时， 能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/chilan-berry.png",
     "category": "berry"
@@ -1147,6 +1337,8 @@
     "nameZh": "莲蒲果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Fighting-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 격투타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの かくとう技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的格斗属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/chople-berry.png",
     "category": "berry"
@@ -1159,6 +1351,8 @@
     "nameZh": "棱瓜果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Flying-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 비행타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの ひこう技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的飞行属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/coba-berry.png",
     "category": "berry"
@@ -1171,6 +1365,8 @@
     "nameZh": "刺耳果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Dark-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 악타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの あく技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的恶属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/colbur-berry.png",
     "category": "berry"
@@ -1183,6 +1379,8 @@
     "nameZh": "莓榴果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Dragon-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 드래곤타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの ドラゴン技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的龙属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/haban-berry.png",
     "category": "berry"
@@ -1195,6 +1393,8 @@
     "nameZh": "佛柑果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Ghost-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 고스트타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの ゴースト技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的幽灵属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/kasib-berry.png",
     "category": "berry"
@@ -1207,6 +1407,8 @@
     "nameZh": "通通果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Poison-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 독타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの どく技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的毒属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/kebia-berry.png",
     "category": "berry"
@@ -1219,6 +1421,8 @@
     "nameZh": "苹野果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to restore 10 PP to a move.",
     "effectKo": "지닌 포켓몬의 기술 PP 가 10 회복된다.",
+    "effectJa": "ポケモンに 持たせると ＰＰを １０だけ 回復する。",
+    "effectZh": "让宝可梦携带后， 可以回复１０ＰＰ。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/leppa-berry.png",
     "category": "berry"
@@ -1231,6 +1435,8 @@
     "nameZh": "木子果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to cure itself of any status condition it may have.",
     "effectKo": "모든 상태이상을 회복한다.",
+    "effectJa": "ポケモンに 持たせると すべての 状態異常を 回復する。",
+    "effectZh": "让宝可梦携带后， 可以治愈所有异常状态。",
     "location": "Beginning",
     "iconPath": "assets/items/lum-berry.png",
     "category": "berry"
@@ -1243,6 +1449,8 @@
     "nameZh": "巧可果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Fire-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 불꽃타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの ほのお技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的火属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/occa-berry.png",
     "category": "berry"
@@ -1255,6 +1463,8 @@
     "nameZh": "橙橙果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to restore 10 HP to itself.",
     "effectKo": "지닌 포켓몬의 HP 가 10 회복된다.",
+    "effectJa": "ポケモンに 持たせると ＨＰを １０だけ 回復する。",
+    "effectZh": "让宝可梦携带后， 可以回复１０ＨＰ。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/oran-berry.png",
     "category": "berry"
@@ -1267,6 +1477,8 @@
     "nameZh": "千香果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Water-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 물타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの みず技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的水属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/passho-berry.png",
     "category": "berry"
@@ -1279,6 +1491,8 @@
     "nameZh": "福禄果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Psychic-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 에스퍼타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの エスパー技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的超能力属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/payapa-berry.png",
     "category": "berry"
@@ -1291,6 +1505,8 @@
     "nameZh": "桃桃果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to lift the effects of being poisoned from itself.",
     "effectKo": "독 상태를 낫게 한다.",
+    "effectJa": "ポケモンに 持たせると 毒を 回復する。",
+    "effectZh": "让宝可梦携带后， 可以治愈中毒。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/pecha-berry.png",
     "category": "berry"
@@ -1303,6 +1519,8 @@
     "nameZh": "柿仔果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to cure itself of confusion.",
     "effectKo": "혼란 상태를 낫게 한다.",
+    "effectJa": "ポケモンに 持たせると 混乱を 回復する。",
+    "effectZh": "让宝可梦携带后， 可以治愈混乱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/persim-berry.png",
     "category": "berry"
@@ -1315,6 +1533,8 @@
     "nameZh": "莓莓果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to cure itself of a burn.",
     "effectKo": "화상 상태를 낫게 한다.",
+    "effectJa": "ポケモンに 持たせると やけどを 回復する。",
+    "effectZh": "让宝可梦携带后， 可以治愈灼伤。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/rawst-berry.png",
     "category": "berry"
@@ -1327,6 +1547,8 @@
     "nameZh": "罗子果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Grass-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 풀타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの くさ技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的草属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/rindo-berry.png",
     "category": "berry"
@@ -1339,6 +1561,8 @@
     "nameZh": "洛玫果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Fairy-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 페어리타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの フェアリー技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的妖精属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/roseli-berry.png",
     "category": "berry"
@@ -1351,6 +1575,8 @@
     "nameZh": "腰木果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Ground-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 땅타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの じめん技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的地面属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/shuca-berry.png",
     "category": "berry"
@@ -1363,6 +1589,8 @@
     "nameZh": "文柚果",
     "effect": "If a Pokémon holds one of these Berries, it will be able to restore a small amount of HP to itself.",
     "effectKo": "지닌 포켓몬의 HP 가 전체의 1/4 회복된다.",
+    "effectJa": "ポケモンに 持たせると ＨＰを 少しだけ 回復する。",
+    "effectZh": "让宝可梦携带后， 可以回复少量ＨＰ。",
     "location": "Beginning",
     "iconPath": "assets/items/sitrus-berry.png",
     "category": "berry"
@@ -1375,6 +1603,8 @@
     "nameZh": "扁樱果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Bug-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 벌레타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの むし技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的虫属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/tanga-berry.png",
     "category": "berry"
@@ -1387,6 +1617,8 @@
     "nameZh": "烛木果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Electric-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 전기타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの でんき技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的电属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/wacan-berry.png",
     "category": "berry"
@@ -1399,6 +1631,8 @@
     "nameZh": "番荔果",
     "effect": "If a Pokémon holding this Berry is hit with a supereffective Ice-type move, the power of that move will be weakened.",
     "effectKo": "자신에게 효과있는 얼음타입 기술의 위력을 약화시킨다.",
+    "effectJa": "ポケモンに 持たせると 効果バツグンの こおり技を 受けたとき 威力が 弱まる。",
+    "effectZh": "让宝可梦携带后， 在受到效果绝佳的冰属性招式 攻击时，能令其威力减弱。",
     "location": "Shop 400 VP",
     "iconPath": "assets/items/yache-berry.png",
     "category": "berry"

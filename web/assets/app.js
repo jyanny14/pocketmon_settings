@@ -144,21 +144,30 @@ export function abilityDisplayName(ability) {
   return pickNameByLang(ability);
 }
 
-/** Ability game text. Phase 1: ko 제외한 언어는 영어 폴백 (Phase 2 에서 LLM 번역). */
+/** Ability game text — 4-way. PokeAPI flavor_text 기반 ja/zh 수집(Phase 2).
+ *  descriptionKo / descriptionJa / descriptionZh 는 긴 상세 설명으로 별도 헬퍼. */
 export function abilityGameText(ability) {
   if (!ability) return "";
-  if (getLang() === "ko") return ability.gameTextKo || ability.gameText || "";
-  return ability.gameText || "";
+  switch (getLang()) {
+    case "ja": return ability.gameTextJa || ability.gameText || "";
+    case "zh": return ability.gameTextZh || ability.gameText || "";
+    case "en": return ability.gameText || "";
+    default:   return ability.gameTextKo || ability.gameText || "";
+  }
 }
 
 /**
- * Ability description paragraph.
- * Phase 1: ko 는 기존 descriptionKo, 그 외는 영어 description.
+ * Ability description paragraph (상세 설명).
+ * Phase 2: ko 는 descriptionKo, ja/zh 는 아직 미수집(LLM 번역 예정) 이라 영어 폴백.
  */
 export function abilityDescription(ability) {
   if (!ability) return "";
-  if (getLang() === "ko") return ability.descriptionKo || "";
-  return ability.description || "";
+  switch (getLang()) {
+    case "ja": return ability.descriptionJa || ability.description || "";
+    case "zh": return ability.descriptionZh || ability.description || "";
+    case "en": return ability.description || "";
+    default:   return ability.descriptionKo || "";
+  }
 }
 
 /** Item display name — 4-way by current language. */
@@ -166,11 +175,15 @@ export function itemDisplayName(item) {
   return pickNameByLang(item);
 }
 
-/** Item effect text. Phase 1: ko 외는 영어 폴백. */
+/** Item effect text — 4-way. ja/zh 는 PokeAPI 도구 flavor_text 공식 게임 내 설명 사용. */
 export function itemEffect(item) {
   if (!item) return "";
-  if (getLang() === "ko") return item.effectKo || item.effect || "";
-  return item.effect || "";
+  switch (getLang()) {
+    case "ja": return item.effectJa || item.effect || "";
+    case "zh": return item.effectZh || item.effect || "";
+    case "en": return item.effect || "";
+    default:   return item.effectKo || item.effect || "";
+  }
 }
 
 /** Move display name — 4-way by current language. */

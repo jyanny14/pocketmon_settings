@@ -156,9 +156,13 @@ function matches(move, q) {
   return (
     move.nameEn.toLowerCase().includes(lq) ||
     (move.nameKo ?? "").toLowerCase().includes(lq) ||
+    (move.nameJa ?? "").toLowerCase().includes(lq) ||
+    (move.nameZh ?? "").toLowerCase().includes(lq) ||
     move.slug.toLowerCase().includes(lq) ||
     (move.flavorTextEn ?? "").toLowerCase().includes(lq) ||
-    (move.flavorTextKo ?? "").toLowerCase().includes(lq)
+    (move.flavorTextKo ?? "").toLowerCase().includes(lq) ||
+    (move.flavorTextJa ?? "").toLowerCase().includes(lq) ||
+    (move.flavorTextZh ?? "").toLowerCase().includes(lq)
   );
 }
 
@@ -262,9 +266,12 @@ function renderRow(m) {
 
   const flavorCell = document.createElement("td");
   flavorCell.className = "moves-col-flavor";
-  flavorCell.textContent = getLang() === "ko"
-    ? (m.flavorTextKo || m.flavorTextEn || "")
-    : (m.flavorTextEn || "");
+  const lang = getLang();
+  flavorCell.textContent =
+    lang === "ja" ? (m.flavorTextJa || m.flavorTextEn || "")
+    : lang === "zh" ? (m.flavorTextZh || m.flavorTextEn || "")
+    : lang === "en" ? (m.flavorTextEn || "")
+    : (m.flavorTextKo || m.flavorTextEn || "");
 
   tr.append(nameCell, typeCell, catCell, powerCell, accCell, ppCell, flavorCell);
   return tr;

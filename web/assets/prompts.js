@@ -127,16 +127,33 @@ function extractSlot(slot) {
     lang === "zh" ? form.nameZh :
     lang === "ko" ? form.nameKo : "";
 
-  // gameText / effect 필드는 Phase 1 에서 ja/zh 미번역 — ko/en 만 소스.
-  // ja/zh 모드에서는 영어 원문을 실어 AI 가 읽게 한다.
-  const abilityText = lang === "ko"
-    ? ability?.gameTextKo || ability?.gameText || ability?.description || ""
-    : ability?.gameText || ability?.description || "";
-  const abilityTextKey = lang === "ko" ? "gameTextKo" : "gameText";
-  const itemEffect = lang === "ko"
-    ? item?.effectKo || item?.effect || ""
-    : item?.effect || "";
-  const itemEffectKey = lang === "ko" ? "effectKo" : "effect";
+  // gameText / effect 필드 4-way 분기. ja/zh 는 Phase 2 에서 PokeAPI flavor 수집됨.
+  // 해당 언어 값이 없으면 영어 원문으로 폴백 (AI 가 최소한 읽을 수 있게).
+  const pickLocalized = (obj, koKey, jaKey, zhKey, enKey, descFallback) => {
+    if (!obj) return "";
+    switch (lang) {
+      case "ja": return obj[jaKey] || obj[enKey] || obj[descFallback] || "";
+      case "zh": return obj[zhKey] || obj[enKey] || obj[descFallback] || "";
+      case "en": return obj[enKey] || obj[descFallback] || "";
+      default:   return obj[koKey] || obj[enKey] || obj[descFallback] || "";
+    }
+  };
+  const abilityText = pickLocalized(
+    ability, "gameTextKo", "gameTextJa", "gameTextZh", "gameText", "description",
+  );
+  const abilityTextKey =
+    lang === "ja" ? "gameTextJa"
+    : lang === "zh" ? "gameTextZh"
+    : lang === "en" ? "gameText"
+    : "gameTextKo";
+  const itemEffect = pickLocalized(
+    item, "effectKo", "effectJa", "effectZh", "effect", "",
+  );
+  const itemEffectKey =
+    lang === "ja" ? "effectJa"
+    : lang === "zh" ? "effectZh"
+    : lang === "en" ? "effect"
+    : "effectKo";
 
   return {
     slug: slot.slug,
@@ -357,13 +374,37 @@ function syncModeToggleUI() {
 // never dropped — only the "human-readable name/text" fields for the
 // language the user didn't pick.
 // Phase 1 M2: 4-way 확장. ja/zh 는 ja/zh 이름만 남기고 나머지 name 필드 드롭.
-// 설명/효과 필드(gameText* / description* / effect* / flavorText*) 는
-// ja/zh 번역이 아직 없어 영어 원문을 남겨둔다 (Phase 2 에서 번역).
+// Phase 2: gameText / effect / flavorText 에 ja/zh 버전이 추가됨.
+// description 은 여전히 ja/zh 미수집 — 영어 원문만 유지.
 const LANG_DROP_FIELDS = {
-  ko: ["nameEn", "nameJa", "nameZh", "gameText", "description", "flavorText", "effect"],
-  en: ["nameKo", "nameJa", "nameZh", "gameTextKo", "descriptionKo", "flavorTextKo", "effectKo"],
-  ja: ["nameKo", "nameEn", "nameZh", "gameTextKo", "descriptionKo", "flavorTextKo", "effectKo"],
-  zh: ["nameKo", "nameEn", "nameJa", "gameTextKo", "descriptionKo", "flavorTextKo", "effectKo"],
+  ko: [
+    "nameEn", "nameJa", "nameZh",
+    "gameText", "gameTextJa", "gameTextZh",
+    "description", "descriptionJa", "descriptionZh",
+    "flavorText", "flavorTextEn", "flavorTextJa", "flavorTextZh",
+    "effect", "effectJa", "effectZh",
+  ],
+  en: [
+    "nameKo", "nameJa", "nameZh",
+    "gameTextKo", "gameTextJa", "gameTextZh",
+    "descriptionKo", "descriptionJa", "descriptionZh",
+    "flavorTextKo", "flavorTextJa", "flavorTextZh",
+    "effectKo", "effectJa", "effectZh",
+  ],
+  ja: [
+    "nameKo", "nameEn", "nameZh",
+    "gameText", "gameTextKo", "gameTextZh",
+    "descriptionKo", "descriptionZh",  // description 자체(영어)는 유지 — 폴백용
+    "flavorTextKo", "flavorTextZh",     // flavorTextEn 은 유지 (ja 누락 대비)
+    "effectKo", "effectZh",
+  ],
+  zh: [
+    "nameKo", "nameEn", "nameJa",
+    "gameText", "gameTextKo", "gameTextJa",
+    "descriptionKo", "descriptionJa",
+    "flavorTextKo", "flavorTextJa",
+    "effectKo", "effectJa",
+  ],
 };
 const FORM_DROP_FIELDS = {
   ko: ["nameJa", "nameZh"],

@@ -13,6 +13,8 @@
     "pp": 20,
     "flavorTextEn": "The user smashes into the target at high speed. This move always goes first.",
     "flavorTextKo": "재빠른 스피드로 상대에게 부딪쳐서 공격한다. 반드시 선제공격할 수 있다.",
+    "flavorTextJa": "素早い スピードで 相手に ぶつかって 攻撃する。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "迅速撞向对手进行攻击。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -29,6 +31,8 @@
     "pp": 20,
     "flavorTextEn": "The user alters its cellular structure to liquefy itself, sharply boosting its Defense stat.",
     "flavorTextKo": "세포의 변화로 액체가 되어 자신의 방어를 크게 올린다.",
+    "flavorTextJa": "細胞の 変化で 液状に なり 自分の 防御を ぐーんと あげる。",
+    "flavorTextZh": "通过细胞的变化进行液化， 从而大幅提高自己的防御。",
     "updatedInChampions": false
   },
   {
@@ -45,6 +49,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks by spitting fluid that works to melt the target. This also harshly lowers the target's Sp. Def stat.",
     "flavorTextKo": "상대를 녹이는 액체를 토해내서 공격한다. 상대의 특수방어를 크게 떨어뜨린다.",
+    "flavorTextJa": "相手を とかす 液体を 吐きだして 攻撃する。 相手の 特防を がくっと さげる。",
+    "flavorTextZh": "喷出能溶化对手的液体进行攻击。 大幅降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -61,6 +67,8 @@
     "pp": 15,
     "flavorTextEn": "The user nimbly strikes the target. This attack does massive damage if the user isn't holding an item.",
     "flavorTextKo": "경쾌하게 상대를 공격한다. 자신이 도구를 지니고 있지 않을 때 큰 데미지를 준다.",
+    "flavorTextJa": "軽やかに 相手を 攻撃する。 自分が 道具を 持っていないとき 大きな ダメージを 与える。",
+    "flavorTextZh": "轻巧地攻击对手。 自己没有携带道具时， 会给予较大的伤害。",
     "updatedInChampions": false
   },
   {
@@ -77,6 +85,8 @@
     "pp": 30,
     "flavorTextEn": "The user applies pressure to stress points, sharply boosting one of its or its allies' stats.",
     "flavorTextKo": "경혈을 눌러 몸을 활성화시킨다. 능력 중 하나를 크게 올린다.",
+    "flavorTextJa": "つぼおしで 体を 活性化させる。 能力の どれか １つを ぐーんと あげる。",
+    "flavorTextZh": "通过点穴 让身体舒筋活络。 大幅提高某１项能力。",
     "updatedInChampions": false
   },
   {
@@ -93,6 +103,8 @@
     "pp": 20,
     "flavorTextEn": "The user confounds the target with speed, then slashes. This attack never misses.",
     "flavorTextKo": "재빠른 움직임으로 상대를 농락해 벤다. 공격은 반드시 명중한다.",
+    "flavorTextJa": "素早い 動きで 相手を ほんろうして 切りつける。 攻撃は 必ず 命中する。",
+    "flavorTextZh": "以敏捷的动作 戏弄对手后进行切斩。 攻击必定会命中。",
     "updatedInChampions": false
   },
   {
@@ -109,6 +121,8 @@
     "pp": 15,
     "flavorTextEn": "The user helps the target and makes it use its move right after the user.",
     "flavorTextKo": "상대의 행동을 도와서 자신이 행동한 뒤에 바로 움직일 수 있도록 한다.",
+    "flavorTextJa": "相手の 行動を サポートして 自分の 行動の あとに 続けて 動けるように する。",
+    "flavorTextZh": "支援我方或对手的行动， 使其紧接着此招式之后行动。",
     "updatedInChampions": false
   },
   {
@@ -125,6 +139,8 @@
     "pp": 30,
     "flavorTextEn": "The user relaxes and lightens its body to move faster. This sharply boosts its Speed stat.",
     "flavorTextKo": "힘을 빼고 몸을 가볍게 해서 고속으로 움직인다. 자신의 스피드를 크게 올린다.",
+    "flavorTextJa": "力を ぬいて 体を 軽くして 高速で 動く。 自分の 素早さを ぐーんと あげる。",
+    "flavorTextZh": "让身体放松变得轻盈， 以便高速移动。 大幅提高自己的速度。",
     "updatedInChampions": false
   },
   {
@@ -141,6 +157,8 @@
     "pp": 25,
     "flavorTextEn": "The user launches razor-like wind to slash opposing Pokémon. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "날카로운 바람으로 상대를 베어 공격한다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "鋭い 風で 相手を 切りつけて 攻撃する。 急所に 当たりやすい。",
+    "flavorTextZh": "用锐利的风 切斩对手进行攻击。 容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -157,6 +175,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks with a blade of air that slices even the sky. This may also make the target flinch.",
     "flavorTextKo": "하늘까지 베어 가르는 공기의 칼날로 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "空をも 切り裂く 空気の 刃で 攻撃する。 相手を ひるませることが ある。",
+    "flavorTextZh": "用连天空也能劈开的 空气之刃进行攻击。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -173,6 +193,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks the target using its angelic voice. This also confuses the target if its stats have been boosted during the turn.",
     "flavorTextKo": "천사와도 같은 노랫소리로 상대를 공격한다. 그 턴에 능력이 올라간 포켓몬을 혼란 상태로 만든다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -189,6 +211,8 @@
     "pp": 15,
     "flavorTextEn": "The user teleports using a strange power and switches places with one of its allies. This move's chance of failing rises if it is used in succession.",
     "flavorTextKo": "이상한 힘으로 순간이동하여 자신과 같은 편의 위치를 바꾼다.",
+    "flavorTextJa": "不思議な 力で テレポートして 自分と 味方の 居場所を 入れ替える。",
+    "flavorTextZh": "用神奇的力量瞬间移动， 互换自己和同伴所在的位置。",
     "updatedInChampions": false
   },
   {
@@ -205,6 +229,8 @@
     "pp": 20,
     "flavorTextEn": "The user temporarily empties its mind to forget its concerns. This sharply boosts the user's Sp. Def stat.",
     "flavorTextKo": "머리를 비워서 순간적으로 무언가를 잊어버림으로써 자신의 특수방어를 크게 올린다.",
+    "flavorTextJa": "頭を からにして 一瞬 なにかを 忘れることで 自分の 特防を ぐーんと あげる。",
+    "flavorTextZh": "将头脑清空， 瞬间忘记某事， 从而大幅提高自己的特防。",
     "updatedInChampions": false
   },
   {
@@ -221,6 +247,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks with a prehistoric power. This may also boost all the user's stats at once.",
     "flavorTextKo": "원시의 힘으로 공격한다. 자신의 모든 능력이 오를 때가 있다.",
+    "flavorTextJa": "原始の 力で 攻撃する。 自分の すべての 能力が あがることが ある。",
+    "flavorTextZh": "用原始之力进行攻击。 有时会提高 自己所有的能力。",
     "updatedInChampions": false
   },
   {
@@ -237,6 +265,8 @@
     "pp": 12,
     "flavorTextEn": "The user attacks the target with an acidic liquid created from tart apples. This also lowers the target's Sp. Def stat.",
     "flavorTextKo": "새콤한 사과에서 만들어 낸 산성 액체로 공격한다. 상대의 특수방어를 떨어뜨린다.",
+    "flavorTextJa": "すっぱい りんごから つくりだした 酸性の 液体で 攻撃。 相手の 特防を 下げる。",
+    "flavorTextZh": "使用从酸苹果中提取出来的 酸性液体进行攻击。 降低对手的特防。",
     "updatedInChampions": true,
     "championsEffectEn": "Lowers the target's Sp. Def stat by 1 stage."
   },
@@ -254,6 +284,8 @@
     "pp": 20,
     "flavorTextEn": "The user expels pressurized water to cut at the target like a blade. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "압력을 가한 물을 칼날처럼 분사해서 상대를 베어낸다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -270,6 +302,8 @@
     "pp": 20,
     "flavorTextEn": "The user lunges at the target to inflict damage, moving at blinding speed. This move always goes first.",
     "flavorTextKo": "눈에 보이지 않는 굉장한 속도로 상대에게 돌진한다. 반드시 선제공격할 수 있다.",
+    "flavorTextJa": "目にも 留まらぬ ものすごい 速さで 相手に つっこむ。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "以迅雷不及掩耳之势 扑向对手。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -286,6 +320,8 @@
     "pp": 20,
     "flavorTextEn": "The user envelops itself in a veil made of water. It regains some HP every turn.",
     "flavorTextKo": "자신의 몸 주변을 물로 만든 베일로 덮는다. 매 턴 HP를 회복한다.",
+    "flavorTextJa": "自分の 体の 周りを 水で つくった ベールで おおう。 毎ターン ＨＰを 回復する。",
+    "flavorTextZh": "在自己身体的周围 覆盖用水制造的幕。 每回合回复ＨＰ。",
     "updatedInChampions": false
   },
   {
@@ -302,6 +338,8 @@
     "pp": 10,
     "flavorTextEn": "The user toys with the target and attacks it using light and fluid dance steps. This also boosts the user's Speed stat.",
     "flavorTextKo": "물 흐르듯 민첩하고 경쾌한 발재간으로 상대를 농락하며 데미지를 준다. 자신의 스피드를 올린다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -318,6 +356,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by swinging its tail as if it were a vicious wave in a raging storm.",
     "flavorTextKo": "세차게 날뛰는 거친 파도와 같이 큰 꼬리를 흔들어서 상대를 공격한다.",
+    "flavorTextJa": "激しく あれくるう 荒波の ように 大きな しっぽを ふって 相手を 攻撃する。",
+    "flavorTextZh": "如惊涛骇浪般挥动 大尾巴攻击对手。",
     "updatedInChampions": false
   },
   {
@@ -334,6 +374,8 @@
     "pp": 5,
     "flavorTextEn": "The user shoots its own armor out as blazing projectiles. This also lowers the user’s Defense and Sp. Def stats.",
     "flavorTextKo": "자신의 갑옷을 활활 타오르는 탄환으로 발사해서 공격한다. 자신의 방어와 특수방어가 떨어진다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -350,6 +392,8 @@
     "pp": 20,
     "flavorTextEn": "The user boosts the Sp. Def stat of an ally Pokémon by using a mysterious aroma.",
     "flavorTextKo": "신비한 아로마 향으로 같은 편의 특수방어를 올린다.",
+    "flavorTextJa": "不思議な アロマの 香りによって 味方の 特防を あげる。",
+    "flavorTextZh": "通过神奇的芳香， 提高我方宝可梦的特防。",
     "updatedInChampions": false
   },
   {
@@ -366,6 +410,8 @@
     "pp": 10,
     "flavorTextEn": "This move's power is doubled if the target has already taken some damage in the same turn.",
     "flavorTextKo": "그 턴에 상대가 이미 데미지를 입었다면 기술의 위력은 2배가 된다.",
+    "flavorTextJa": "そのターンに 相手が すでに ダメージを 受けていたら 技の 威力は ２倍に なる。",
+    "flavorTextZh": "如果此回合内对手 已经受到伤害的话， 招式威力会变成２倍。",
     "updatedInChampions": false
   },
   {
@@ -382,6 +428,8 @@
     "pp": 15,
     "flavorTextEn": "If the target is of the opposite gender to the user, it becomes infatuated with the user and will sometimes be unable to use its moves.",
     "flavorTextKo": "수컷은 암컷을 암컷은 수컷을 유혹하여 헤롱헤롱하게 만든다. 상대가 기술을 쓰기 어려워진다.",
+    "flavorTextJa": "♂なら♀を ♀なら♂を 誘惑して メロメロに する。 相手は 技が だしにくくなる。",
+    "flavorTextZh": "♂诱惑♀或♀诱惑♂， 让对手着迷。 对手将很难使出招式。",
     "updatedInChampions": false
   },
   {
@@ -398,6 +446,8 @@
     "pp": 20,
     "flavorTextEn": "The user lets loose a pulse of aura power from deep within its body at the target. This attack never misses.",
     "flavorTextKo": "몸속에서 파동의 힘을 끌어내 상대에게 쏜다. 공격은 반드시 명중한다.",
+    "flavorTextJa": "体の 奥から 波導の 力を 相手に うち放つ。 攻撃は 必ず 命中する。",
+    "flavorTextZh": "从体内产生出波导之力， 然后向对手发出。 攻击必定会命中。",
     "updatedInChampions": false
   },
   {
@@ -414,6 +464,8 @@
     "pp": 10,
     "flavorTextEn": "Morpeko attacks and boosts its Speed stat with the energy stored in its cheeks. This move's type changes depending on the user's form.",
     "flavorTextKo": "볼주머니에 저장해둔 에너지로 공격하고 자신의 스피드를 올린다. 모르페코의 모습에 따라 타입이 바뀐다.",
+    "flavorTextJa": "ほほぶくろに 溜めた エネルギーで 攻撃し 自分の 素早さを あげる。 モルペコの 姿で タイプが 変わる。",
+    "flavorTextZh": "用储存在颊囊里的能量 进行攻击，并提高自己的速度。 其属性会随着莫鲁贝可的样子而改变。",
     "updatedInChampions": false
   },
   {
@@ -430,6 +482,8 @@
     "pp": 20,
     "flavorTextEn": "This move reduces damage from physical and special moves for five turns. This can be used only when it is snowing.",
     "flavorTextKo": "5턴 동안 물리와 특수 기술의 데미지를 약하게 한다. 싸라기눈일 때만 쓸 수 있다.",
+    "flavorTextJa": "５ターンの 間 物理と 特殊の ダメージを 弱める。 あられの 時しか 出すことが できない。",
+    "flavorTextZh": "在５回合内减弱 物理和特殊的伤害。 只有冰雹时才能使出。",
     "updatedInChampions": false
   },
   {
@@ -446,6 +500,8 @@
     "pp": 10,
     "flavorTextEn": "This move's power is doubled if the target has inflicted damage on the user in the same turn.",
     "flavorTextKo": "상대로부터 기술을 받으면 그 상대에 대해서 기술의 위력이 2배가 된다.",
+    "flavorTextJa": "相手から 技を 受けていると その 相手に 対して 技の 威力が ２倍に なる。",
+    "flavorTextZh": "如果受到对手的招式攻击， 就能给予该对手 ２倍威力的攻击。",
     "updatedInChampions": false
   },
   {
@@ -462,6 +518,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by kicking up into the air and slamming its heel down upon the target. This may also confuse the target. If it misses, the user takes damage instead.",
     "flavorTextKo": "발꿈치를 들어 올린 뒤 내리쳐 공격한다. 상대를 혼란시킬 때가 있다. 빗나가면 자신이 데미지를 입는다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -478,6 +536,8 @@
     "pp": 30,
     "flavorTextEn": "The user stares at the target with its baby-doll eyes, which lowers the target's Attack stat. This move always goes first.",
     "flavorTextKo": "초롱초롱한 눈동자로 상대를 바라보며 공격을 떨어뜨린다. 반드시 선제공격할 수 있다.",
+    "flavorTextJa": "つぶらなひとみで 相手を みつめて 攻撃を さげる。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "用圆瞳凝视对手， 从而降低其攻击。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -494,6 +554,8 @@
     "pp": 10,
     "flavorTextEn": "In addition to protecting the user from attacks, this move also poisons any attacker that makes direct contact.",
     "flavorTextKo": "상대의 공격을 막음과 동시에 접촉한 상대에게 독을 퍼뜨린다.",
+    "flavorTextJa": "相手の 攻撃を 防ぐと 同時に 触れた 相手に 毒を 与えてしまう。",
+    "flavorTextZh": "防住对手攻击的同时， 让接触到自己的对手中毒。",
     "updatedInChampions": false
   },
   {
@@ -510,6 +572,8 @@
     "pp": 40,
     "flavorTextEn": "The user switches places with a party Pokémon in waiting and passes along any stat changes.",
     "flavorTextKo": "교대 포켓몬과 바뀐다. 능력 변화는 바뀐 포켓몬이 그대로 이어받는다.",
+    "flavorTextJa": "控えの ポケモンと 入れ替わる。 能力変化は 替わった ポケモンが そのまま 受けつぐ。",
+    "flavorTextZh": "和后备宝可梦进行替换。 换上的宝可梦能直接继承 其能力的变化。",
     "updatedInChampions": false
   },
   {
@@ -526,6 +590,8 @@
     "pp": 8,
     "flavorTextEn": "The user first heats up its beak, and then it attacks the target. Making direct contact with the user while it's heating up its beak results in a burn.",
     "flavorTextKo": "먼저 부리를 가열시킨 다음 공격을 날린다. 가열 중에 만지면 화상을 입는다.",
+    "flavorTextJa": "最初に クチバシを 加熱してから 攻撃を くりだす。 加熱中に さわると やけどする。",
+    "flavorTextZh": "先加热鸟嘴后再进行攻击。 鸟嘴在加热时对手触碰的话， 就会使其灼伤。",
     "updatedInChampions": true,
     "championsEffectEn": "If the user is hit by a contact move before it uses this move the attacker will be burned."
   },
@@ -543,6 +609,8 @@
     "pp": 10,
     "flavorTextEn": "The user gets all party Pokémon to attack the target. The more party Pokémon, the greater the number of attacks.",
     "flavorTextKo": "같은 편 전원이 공격한다. 동료 포켓몬이 많을수록 기술의 공격 횟수가 증가한다.",
+    "flavorTextJa": "味方 全員で 攻撃する。 仲間の ポケモンが 多いほど 技の 攻撃回数が 増える。",
+    "flavorTextZh": "我方全员进行攻击。 同行的宝可梦越多， 招式的攻击次数越多。",
     "updatedInChampions": false
   },
   {
@@ -559,6 +627,8 @@
     "pp": 10,
     "flavorTextEn": "The user lets out a damaging belch at the target. The user must eat a held Berry to use this move.",
     "flavorTextKo": "상대를 향해 트림을 하여 데미지를 준다. 나무열매를 먹지 않으면 쓸 수 없다.",
+    "flavorTextJa": "相手に 向かって ゲップを 浴びせて ダメージを 与える。 きのみを 食べないと だせない。",
+    "flavorTextZh": "朝着对手打嗝， 并给予伤害。 如果不吃树果则无法使出。",
     "updatedInChampions": false
   },
   {
@@ -575,6 +645,8 @@
     "pp": 10,
     "flavorTextEn": "The user maximizes its Attack stat but loses HP equal to half its max HP.",
     "flavorTextKo": "자신의 HP를 최대 HP의 절반만큼 감소시켜 자신의 공격을 최대로 올린다.",
+    "flavorTextJa": "自分の ＨＰを 最大ＨＰの 半分 減らして 自分の 攻撃を 最大に あげる。",
+    "flavorTextZh": "将自己的ＨＰ减少到 最大ＨＰ的一半， 从而最大限度提高自己的攻击。",
     "updatedInChampions": false
   },
   {
@@ -591,6 +663,8 @@
     "pp": 20,
     "flavorTextEn": "A long body, tentacles, or the like are used to bind and squeeze the target for four to five turns.",
     "flavorTextKo": "긴 몸이나 덩굴 등을 써서 4-5턴 동안 상대를 조여 공격한다.",
+    "flavorTextJa": "長い 体や つるなどを 使い ４ー５ターンの 間 相手を 締めつけて 攻撃する。",
+    "flavorTextZh": "使用长长的身体或藤蔓等， 在４～５回合内 绑紧对手进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -607,6 +681,8 @@
     "pp": 25,
     "flavorTextEn": "The target is bitten with viciously sharp fangs. This may also make the target flinch.",
     "flavorTextKo": "날카롭고 뾰족한 이빨로 물어서 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "鋭く とがった 歯で かみついて 攻撃する。 相手を ひるませることが ある。",
+    "flavorTextZh": "用尖锐的牙 咬住对手进行攻击。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -623,6 +699,8 @@
     "pp": 10,
     "flavorTextEn": "The user focuses its bitter feelings toward the world of the living into a slashing attack. The user's HP is restored by up to half the damage taken by the target.",
     "flavorTextKo": "현세의 미련을 칼끝에 담아 베어 버린다. 입힌 데미지의 절반에 해당하는 HP 를 회복할 수 있다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -639,6 +717,8 @@
     "pp": 5,
     "flavorTextEn": "The target is razed by a fiery explosion. The user can't move on the next turn.",
     "flavorTextKo": "폭발하는 불꽃으로 상대를 태워서 공격한다. 다음 턴은 움직일 수 없다.",
+    "flavorTextJa": "爆発の 炎で 相手を 焼きつくして 攻撃する。 次の ターンは 動けなくなる。",
+    "flavorTextZh": "用爆炸的火焰 烧尽对手进行攻击。 下一回合自己将无法动弹。",
     "updatedInChampions": false
   },
   {
@@ -655,6 +735,8 @@
     "pp": 10,
     "flavorTextEn": "The user launches a kick that has a heightened chance of landing a critical hit. This may also leave the target with a burn.",
     "flavorTextKo": "공격한 상대를 화상 상태로 만들 때가 있다. 급소에도 맞기 쉽다.",
+    "flavorTextJa": "攻撃した 相手を やけど状態に することが ある。 急所にも 当たりやすい。",
+    "flavorTextZh": "攻击对手后， 有时会使其陷入灼伤状态。 也容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -671,6 +753,8 @@
     "pp": 5,
     "flavorTextEn": "A howling blizzard is summoned to strike opposing Pokémon. This may also leave the opposing Pokémon frozen.",
     "flavorTextKo": "세찬 눈보라를 상대에게 내뿜어 공격한다. 얼음 상태로 만들 때가 있다.",
+    "flavorTextJa": "激しい 吹雪を 相手に 吹きつけて 攻撃する。 こおり状態に することが ある。",
+    "flavorTextZh": "将猛烈的暴风雪 刮向对手进行攻击。 有时会让对手陷入冰冻状态。",
     "updatedInChampions": false
   },
   {
@@ -687,6 +771,8 @@
     "pp": 5,
     "flavorTextEn": "The user blocks the target's way with arms spread wide to prevent the target from fleeing.",
     "flavorTextKo": "양팔을 벌려 막아서서 상대의 도주로를 가로막아 도망칠 수 없게 한다.",
+    "flavorTextJa": "両手を ひろげて たちはだかり 相手の 逃げ道を ふさいで 逃げられなくする。",
+    "flavorTextZh": "张开双手进行阻挡， 封住对手的退路， 使其不能逃走。",
     "updatedInChampions": false
   },
   {
@@ -703,6 +789,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by slamming its body into the target. The higher the user's Defense stat, the greater the damage this move deals.",
     "flavorTextKo": "몸을 부딪쳐서 공격한다. 방어가 높을수록 주는 데미지가 올라간다.",
+    "flavorTextJa": "体を ぶつけて 攻撃。 防御が 高いほど 与える ダメージが 増える。",
+    "flavorTextZh": "用身体撞向对手进行攻击。 防御越高， 给予的伤害就越高。",
     "updatedInChampions": false
   },
   {
@@ -719,6 +807,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks by dropping onto the target with its full body weight. This may also leave the target with paralysis.",
     "flavorTextKo": "몸 전체로 상대를 덮쳐눌러 공격한다. 마비 상태로 만들 때가 있다.",
+    "flavorTextJa": "全身で 相手に のしかかり 攻撃する。 まひ状態に することが ある。",
+    "flavorTextZh": "用整个身体 压住对手进行攻击。 有时会让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -735,6 +825,8 @@
     "pp": 12,
     "flavorTextEn": "The user attacks by striking the target with a hard bone. This move hits two to five times in a row.",
     "flavorTextKo": "단단한 뼈로 상대를 세게 때려서 공격한다. 2-5회 동안 연속으로 쓴다.",
+    "flavorTextJa": "硬い ホネで 相手を なぐりつけて 攻撃する。 ２ー５回の 間 連続で だす。",
+    "flavorTextZh": "用坚硬的骨头 殴打对手进行攻击。 连续攻击２～５次。",
     "updatedInChampions": true,
     "championsEffectEn": "The user attacks 2 to 5 times in a row."
   },
@@ -752,6 +844,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks everything around it with the destructive power of a terrible explosive sound.",
     "flavorTextKo": "무시무시한 폭음의 파괴력으로 주위에 있는 포켓몬을 공격한다.",
+    "flavorTextJa": "すさまじい 爆音の 破壊力に よって 周りに いるものを 攻撃する。",
+    "flavorTextZh": "通过震耳欲聋的爆炸声 产生的破坏力， 攻击自己周围所有的宝可梦。",
     "updatedInChampions": false
   },
   {
@@ -768,6 +862,8 @@
     "pp": 5,
     "flavorTextEn": "The user bounces up high on the first turn, then drops onto the target on the next turn. This may also leave the target with paralysis.",
     "flavorTextKo": "하늘 높이 뛰어올라 2턴째에 상대를 공격한다. 마비 상태로 만들 때가 있다.",
+    "flavorTextJa": "空高く 飛び跳ねて ２ターン目に 相手を 攻撃する。 まひ状態に することが ある。",
+    "flavorTextZh": "弹跳到高高的空中， 第２回合攻击对手。 有时会让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -784,6 +880,8 @@
     "pp": 15,
     "flavorTextEn": "The user tucks in its wings and charges at a low altitude. This also damages the user quite a lot.",
     "flavorTextKo": "날개를 접어 저공비행으로 돌격한다. 자신도 상당한 데미지를 입는다.",
+    "flavorTextJa": "はねを おりたたみ 低空飛行で 突撃する。 自分も かなり ダメージを 受ける。",
+    "flavorTextZh": "收拢翅膀， 通过低空飞行突击对手。 自己也会受到不小的伤害。",
     "updatedInChampions": false
   },
   {
@@ -800,6 +898,8 @@
     "pp": 15,
     "flavorTextEn": "The user swings its tough tail wildly and attacks opposing Pokémon. This also lowers their Attack stats.",
     "flavorTextKo": "강인한 꼬리를 세차게 휘둘러서 상대를 공격한다. 상대의 공격을 떨어뜨린다.",
+    "flavorTextJa": "きょうじんな しっぽを 激しく ふりはらって 相手を 攻撃する。 相手の 攻撃を 下げる。",
+    "flavorTextZh": "用坚韧的尾巴 猛扫对手进行攻击， 从而降低对手的攻击。",
     "updatedInChampions": false
   },
   {
@@ -816,6 +916,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks with a swift chop. This move can also break barriers, such as Light Screen and Reflect.",
     "flavorTextKo": "수도로 기세 좋게 내려쳐서 상대를 공격한다. 빛의장막이나 리플렉터 등도 파괴할 수 있다.",
+    "flavorTextJa": "手刀を 勢いよく 振りおろして 相手を 攻撃する。 ひかりのかべや リフレクター なども 破壊できる。",
+    "flavorTextZh": "将手刀猛烈地挥下攻击对手。 还可以破坏光墙和反射壁等。",
     "updatedInChampions": false
   },
   {
@@ -832,6 +934,8 @@
     "pp": 20,
     "flavorTextEn": "The user swings its body around violently to inflict damage on everything in its vicinity.",
     "flavorTextKo": "자신의 몸을 세차게 휘둘러서 상대에게 데미지를 준다.",
+    "flavorTextJa": "自分の 体を ぶんまわして 相手に ダメージを 与える。",
+    "flavorTextZh": "用自己的身体狂舞挥打， 给予对手伤害。",
     "updatedInChampions": false
   },
   {
@@ -848,6 +952,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks by biting the target. If the target is holding a Berry, the user eats it and gains its effect.",
     "flavorTextKo": "물어서 공격한다. 상대가 나무열매를 지니고 있을 때 먹어서 나무열매의 효과를 받을 수 있다.",
+    "flavorTextJa": "かみついて 攻撃する。 相手が きのみを 持っているとき 食べて きのみの 効果を 受けられる。",
+    "flavorTextZh": "咬住进行攻击。 当对手携带树果时， 可以食用并获得其效果。",
     "updatedInChampions": false
   },
   {
@@ -864,6 +970,8 @@
     "pp": 10,
     "flavorTextEn": "The user vibrates to generate a damaging sound wave. This may also lower the target's Sp. Def stat.",
     "flavorTextKo": "진동으로 음파를 일으켜서 공격한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "振動で 音波を おこして 攻撃する。相手の 特防を さげることが ある。",
+    "flavorTextZh": "利用振动发出音波进行攻击。 有时会降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -880,6 +988,8 @@
     "pp": 20,
     "flavorTextEn": "The user tenses its muscles to bulk up its body, boosting its Attack and Defense stats.",
     "flavorTextKo": "몸에 힘을 담아 근육을 두껍게 해서 자신의 공격과 방어를 올린다.",
+    "flavorTextJa": "体に 力を こめて 筋肉を ぶあつく することで 自分の 攻撃と 防御を あげる。",
+    "flavorTextZh": "使出全身力气绷紧肌肉， 从而提高自己的攻击和防御。",
     "updatedInChampions": false
   },
   {
@@ -896,6 +1006,8 @@
     "pp": 20,
     "flavorTextEn": "The user strikes everything around it by stomping down on the ground. This lowers the Speed stats of those hit.",
     "flavorTextKo": "땅을 힘껏 밟아 자신의 주위에 있는 포켓몬을 공격한다. 상대의 스피드를 떨어뜨린다.",
+    "flavorTextJa": "地面を 踏みならして 自分の 周りに いるものを 攻撃する。 相手の 素早さを さげる。",
+    "flavorTextZh": "用力踩踏地面并攻击 自己周围所有的宝可梦。 降低对方的速度。",
     "updatedInChampions": false
   },
   {
@@ -912,6 +1024,8 @@
     "pp": 30,
     "flavorTextEn": "The user strikes the target with tough punches as fast as bullets. This move always goes first.",
     "flavorTextKo": "탄환처럼 빠르고 단단한 펀치를 상대에게 날린다. 반드시 선제공격을 할 수 있다.",
+    "flavorTextJa": "弾丸の ような 速くて 硬い パンチを 相手に くりだす。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "向对手使出如子弹般 快速而坚硬的拳头。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -928,6 +1042,8 @@
     "pp": 30,
     "flavorTextEn": "The user attacks by forcefully shooting seeds at the target. This move hits two to five times in a row.",
     "flavorTextKo": "씨앗을 기세 좋게 상대에게 발사하여 공격한다. 2-5회 동안 연속으로 쓴다.",
+    "flavorTextJa": "タネを 勢いよく 相手に 発射して 攻撃する。 ２ー５回の 間 連続で だす。",
+    "flavorTextZh": "向对手猛烈地 发射种子进行攻击。 连续攻击２～５次。",
     "updatedInChampions": false
   },
   {
@@ -944,6 +1060,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks with energy from jealousy. This leaves all opposing Pokémon that have had their stats boosted during the turn with a burn.",
     "flavorTextKo": "질투의 에너지로 상대를 공격한다. 그 턴에 능력이 올라간 포켓몬을 화상 상태로 만든다.",
+    "flavorTextJa": "しっとの エネルギーで 相手を 攻撃。 そのターン 能力が あがった ポケモンを やけどの 状態に する。",
+    "flavorTextZh": "用嫉妒的能量攻击对手。 会让在该回合内能力有所提高的 宝可梦陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -960,6 +1078,8 @@
     "pp": 5,
     "flavorTextEn": "To inflict massive damage, the user burns itself out. After using this move, the user will no longer be Fire type.",
     "flavorTextKo": "전신의 불꽃을 모두 태워서 큰 데미지를 준다. 자신의 불꽃타입이 없어진다.",
+    "flavorTextJa": "全身の ほのおを すべて 燃やして 大ダメージを 与える。 自分の ほのおタイプが なくなる。",
+    "flavorTextZh": "将自己全身燃烧起火焰来， 给予对手大大的伤害。 自己的火属性将会消失。",
     "updatedInChampions": false
   },
   {
@@ -976,6 +1096,8 @@
     "pp": 20,
     "flavorTextEn": "The user quietly focuses its mind and calms its spirit to boost its Sp. Atk and Sp. Def stats.",
     "flavorTextKo": "조용히 정신을 통일하고 마음을 가라앉혀서 자신의 특수공격과 특수방어를 올린다.",
+    "flavorTextJa": "静かに 精神を 統一し 心を 鎮めることで 自分の 特攻と 特防を あげる。",
+    "flavorTextZh": "静心凝神， 从而提高自己的特攻和特防。",
     "updatedInChampions": false
   },
   {
@@ -992,6 +1114,8 @@
     "pp": 20,
     "flavorTextEn": "The user becomes charged, boosting the power of the next Electric-type move it uses. This also boosts the user's Sp. Def stat.",
     "flavorTextKo": "다음 턴에 쓸 전기타입 기술의 위력을 올린다. 자신의 특수방어도 올라간다.",
+    "flavorTextJa": "次の ターンに だす でんきタイプの 技の 威力を あげる。 自分の 特防も あがる。",
+    "flavorTextZh": "提高下一回合使出的 电属性的招式威力。 自己的特防也会提高。",
     "updatedInChampions": false
   },
   {
@@ -1008,6 +1132,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks the target with an electric charge. The residual electricity may also boost the user's Sp. Atk stat.",
     "flavorTextKo": "전격의 다발을 상대에게 발사한다. 전기를 모아서 자신의 특수공격을 올릴 때가 있다.",
+    "flavorTextJa": "電撃の 束を 相手に 発射する。電気を ためて 自分の 特攻を あげることが ある。",
+    "flavorTextZh": "向对手发射电击光束。 由于蓄满电流， 有时会提高自己的特攻。",
     "updatedInChampions": false
   },
   {
@@ -1024,6 +1150,8 @@
     "pp": 20,
     "flavorTextEn": "The user gazes at the target rather charmingly, making it less wary. This harshly lowers the target's Attack stat.",
     "flavorTextKo": "귀엽게 바라보고 방심을 유도하여 상대의 공격을 크게 떨어뜨린다.",
+    "flavorTextJa": "かわいく みつめて 油断を 誘い 相手の 攻撃を がくっと さげる。",
+    "flavorTextZh": "可爱地凝视， 诱使对手疏忽大意， 从而大幅降低对手的攻击。",
     "updatedInChampions": false
   },
   {
@@ -1040,6 +1168,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks the target by showering it with water that's so cold it saps the target's power. This also lowers the target's Attack stat.",
     "flavorTextKo": "상대의 기운이 빠질 정도로 차가운 물을 끼얹어서 공격한다. 상대의 공격을 떨어뜨린다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -1056,6 +1186,8 @@
     "pp": 10,
     "flavorTextEn": "The user tells a chillingly bad joke before switching places with a party Pokémon in waiting. This summons a snowstorm lasting five turns.",
     "flavorTextKo": "자리를 얼어붙게 만드는 개그를 하고 교대 포켓몬과 교체한다. 5턴 동안 눈을 내리게 한다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -1072,6 +1204,8 @@
     "pp": 10,
     "flavorTextEn": "The target is thrown, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.",
     "flavorTextKo": "상대를 내던져서 교대할 포켓몬을 끌어낸다. 야생의 경우에는 배틀이 끝난다.",
+    "flavorTextJa": "相手を 投げとばして 控えの ポケモンを ひきずりだす。 野生の 場合は 戦闘が 終わる。",
+    "flavorTextZh": "扔飞对手，强制拉后备宝可梦上场。 如果对手为野生宝可梦， 战斗将直接结束。",
     "updatedInChampions": false
   },
   {
@@ -1088,6 +1222,8 @@
     "pp": 5,
     "flavorTextEn": "The user rubs the scales on its entire body and makes a huge noise to attack opposing Pokémon. The user's Defense stat is lowered after the attack.",
     "flavorTextKo": "전신의 비늘을 비벼서 큰 소리를 내 공격한다. 공격 후 자신의 방어가 떨어진다.",
+    "flavorTextJa": "全身の うろこを こすり 大きな 音を 出して 攻撃する。 攻撃後 自分の 防御が さがる。",
+    "flavorTextZh": "摩擦全身鳞片， 发出响亮的声音进行攻击。 攻击后自己的防御会降低。",
     "updatedInChampions": false
   },
   {
@@ -1104,6 +1240,8 @@
     "pp": 5,
     "flavorTextEn": "The user boosts all its stats by using some of its own HP.",
     "flavorTextKo": "자신의 HP를 조금 깎아서 모든 능력을 올린다.",
+    "flavorTextJa": "自分の ＨＰを 少し 削って すべての 能力を 上げる。",
+    "flavorTextZh": "削减少许自己的ＨＰ， 使所有能力都提高。",
     "updatedInChampions": false
   },
   {
@@ -1120,6 +1258,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks the target by throwing a clump of special mud. All stat changes are eliminated.",
     "flavorTextKo": "특수한 진흙 덩어리를 상대에게 내던져서 공격한다. 능력 변화를 원래대로 돌린다.",
+    "flavorTextJa": "特殊な 泥の 塊を 相手に 投げつけて 攻撃する。 能力変化を もとに もどす。",
+    "flavorTextZh": "向对手投掷 特殊的泥块进行攻击。 使其能力变回原点。",
     "updatedInChampions": false
   },
   {
@@ -1136,6 +1276,8 @@
     "pp": 5,
     "flavorTextEn": "The user fights the target up close, inflicting damage without guarding itself. This also lowers the user's Defense and Sp. Def stats.",
     "flavorTextKo": "방어를 포기하고 상대 쪽으로 깊숙이 돌격한다. 자신의 방어와 특수방어가 떨어진다.",
+    "flavorTextJa": "守りを 捨てて 相手の ふところに 突撃する。 自分の 防御と 特防が さがる。",
+    "flavorTextZh": "放弃守护， 向对手的怀里突击。 自己的防御和特防会降低。",
     "updatedInChampions": false
   },
   {
@@ -1152,6 +1294,8 @@
     "pp": 10,
     "flavorTextEn": "The user properly coaches its ally Pokémon, boosting their Attack and Defense stats.",
     "flavorTextKo": "적절한 지도를 통해서 같은 편 전원의 공격과 방어를 올린다.",
+    "flavorTextJa": "的確な 指導を おこなうことで 味方 全員の 攻撃と 防御を 上げる。",
+    "flavorTextZh": "通过进行正确合理的指导， 提高我方全员的攻击和防御。",
     "updatedInChampions": false
   },
   {
@@ -1168,6 +1312,8 @@
     "pp": 20,
     "flavorTextEn": "The user coils up and concentrates. This boosts its Attack and Defense stats as well as its accuracy.",
     "flavorTextKo": "똬리를 틀어서 집중한다. 자신의 공격과 방어와 명중률을 올린다.",
+    "flavorTextJa": "とぐろを まいて 集中する。 自分の 攻撃と 防御と 命中率を あげる。",
+    "flavorTextZh": "盘蜷着集中精神。 提高自己的攻击、防御和命中率。",
     "updatedInChampions": false
   },
   {
@@ -1184,6 +1330,8 @@
     "pp": 10,
     "flavorTextEn": "The user retaliates with much greater force against the opponent that last inflicted damage on it.",
     "flavorTextKo": "기술을 쓰기 전에 마지막으로 받은 기술의 데미지를 늘려서 기술을 쓸 상대에게 돌려준다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -1200,6 +1348,8 @@
     "pp": 10,
     "flavorTextEn": "The target is exposed to a sinister ray that causes confusion.",
     "flavorTextKo": "이상한 빛을 상대에게 비춰 당황하게 한다. 상대를 혼란시킨다.",
+    "flavorTextJa": "怪しい 光を 相手に みせて まどわせる。 相手を 混乱させる。",
+    "flavorTextZh": "显示奇怪的光， 扰乱对手。 使对手混乱。",
     "updatedInChampions": false
   },
   {
@@ -1216,6 +1366,8 @@
     "pp": 20,
     "flavorTextEn": "The user mimics the move used immediately before it. The move fails if no other move has been used yet.",
     "flavorTextKo": "직전에 나온 기술을 흉내 내어 같은 기술을 쓴다. 기술이 나오지 않았으면 실패한다.",
+    "flavorTextJa": "直前に でた 技を まねして 同じ 技を だす。 技が でていないと 失敗する。",
+    "flavorTextZh": "模仿对手刚才使出的招式， 并使出相同招式。 如果对手还没出招则会失败。",
     "updatedInChampions": false
   },
   {
@@ -1232,6 +1384,8 @@
     "pp": 40,
     "flavorTextEn": "The user surrounds everything around it with highly acidic gas and melts away items they hold.",
     "flavorTextKo": "주위에 있는 모든 것을 강력한 산성 가스로 뒤덮어서 지니고 있는 도구를 녹여버린다.",
+    "flavorTextJa": "強い 酸性の ガスで 周りに いるものを 包みこみ 持っている 道具を 溶かしてしまう。",
+    "flavorTextZh": "用具有强酸性的气体 包裹住自己周围所有的宝可梦， 并融化其所携带的道具。",
     "updatedInChampions": false
   },
   {
@@ -1248,6 +1402,8 @@
     "pp": 20,
     "flavorTextEn": "The user absorbs a mystical power from space to boost its Defense and Sp. Def stats.",
     "flavorTextKo": "우주로부터 신비한 힘을 손에 넣음으로써 자신의 방어와 특수방어를 올린다.",
+    "flavorTextJa": "宇宙から 神秘の 力を とりこむ ことで 自分の 防御と 特防を あげる。",
+    "flavorTextZh": "汲取宇宙中神秘的力量， 从而提高自己的防御和特防。",
     "updatedInChampions": false
   },
   {
@@ -1264,6 +1420,8 @@
     "pp": 10,
     "flavorTextEn": "The user protects itself by wrapping its body in soft cotton, drastically boosting its Defense stat.",
     "flavorTextKo": "푹신푹신한 솜털로 자신의 몸을 둘러싸서 지킨다. 방어를 매우 크게 올린다.",
+    "flavorTextJa": "フワフワの 綿毛で 自分の 体を 包みこんで 守る。 防御を ぐぐーんと あげる。",
+    "flavorTextZh": "用软绵绵的绒毛包裹住 自己的身体进行守护。 巨幅提高自己的防御。",
     "updatedInChampions": false
   },
   {
@@ -1280,6 +1438,8 @@
     "pp": 40,
     "flavorTextEn": "The user releases cotton-like spores that cling to opposing Pokémon. This harshly lowers their Speed stats.",
     "flavorTextKo": "솜처럼 폭신폭신한 포자를 착 달라붙게 해서 상대의 스피드를 크게 떨어뜨린다.",
+    "flavorTextJa": "綿のような フワフワの 胞子を まとわり つかせて 相手の 素早さを がくっと さげる。",
+    "flavorTextZh": "将棉花般柔软的孢子 紧贴对手， 从而大幅降低对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -1296,6 +1456,8 @@
     "pp": 20,
     "flavorTextEn": "A retaliatory attack that counters any physical move, inflicting double the damage taken.",
     "flavorTextKo": "상대로부터 받은 물리공격의 데미지를 2배로 만들어 같은 상대에게 돌려준다.",
+    "flavorTextJa": "相手から 受けた 物理攻撃の ダメージを ２倍に して 同じ 相手に 返す。",
+    "flavorTextZh": "从对手那里受到 物理攻击的伤害将以 ２倍返还给同一个对手。",
     "updatedInChampions": false
   },
   {
@@ -1312,6 +1474,8 @@
     "pp": 25,
     "flavorTextEn": "The user endearingly approaches the target, then steals the target's held item.",
     "flavorTextKo": "귀엽게 애교 부리며 상대에게 다가가 지니고 있는 도구를 뺏는다.",
+    "flavorTextJa": "かわいく あまえながら 相手に ちかづき 持っている 道具を うばう。",
+    "flavorTextZh": "一边可爱地撒娇， 一边靠近对手进行攻击， 还能夺取对手携带的道具。",
     "updatedInChampions": false
   },
   {
@@ -1328,6 +1492,8 @@
     "pp": 12,
     "flavorTextEn": "The target is hammered with a large pincer. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "큰 집게를 상대에게 내리쳐서 공격한다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "大きな ハサミを 相手に たたきつけて 攻撃する。 急所に 当たりやすい。",
+    "flavorTextZh": "用大钳子 敲打对手进行攻击。 容易击中要害。",
     "updatedInChampions": true,
     "championsEffectEn": "This move has a 1-stage Critical-Hit Ratio Boost."
   },
@@ -1345,6 +1511,8 @@
     "pp": 5,
     "flavorTextEn": "The user delivers a double chop with its forearms crossed. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "양손으로 당수를 상대에게 힘껏 쳐서 공격한다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "両手チョップを 相手に たたきつけて 攻撃する。 急所に 当たりやすい。",
+    "flavorTextZh": "用两手呈十字 劈打对手进行攻击。 容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -1361,6 +1529,8 @@
     "pp": 20,
     "flavorTextEn": "A slashing attack with a poisonous blade that may also poison the target. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "독 칼날로 상대를 베어 가른다. 독 상태로 만들 때가 있고 급소에도 맞기 쉽다.",
+    "flavorTextJa": "毒の 刃で 相手を 切り裂く。 毒状態に することが あり 急所にも 当たりやすい。",
+    "flavorTextZh": "用毒刃劈开对手。 有时会让对手陷入中毒状态， 也容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -1377,6 +1547,8 @@
     "pp": 15,
     "flavorTextEn": "The user crunches up the target with sharp fangs. This may also lower the target's Defense stat.",
     "flavorTextKo": "날카로운 이빨로 상대를 깨물어 부숴서 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "鋭い 歯で 相手を かみくだいて 攻撃する。 相手の 防御を さげることが ある。",
+    "flavorTextZh": "用利牙咬碎对手进行攻击。 有时会降低对手的防御。",
     "updatedInChampions": false
   },
   {
@@ -1393,6 +1565,8 @@
     "pp": 10,
     "flavorTextEn": "The user slashes the target with hard and sharp claws. This may also lower the target's Defense stat.",
     "flavorTextKo": "단단하고 날카로운 손톱으로 베어 갈라서 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "硬く 鋭い ツメで 切り裂いて 攻撃する。 相手の 防御を さげることが ある。",
+    "flavorTextZh": "用坚硬的锐爪 劈开对手进行攻击。 有时会降低对手的防御。",
     "updatedInChampions": false
   },
   {
@@ -1409,6 +1583,8 @@
     "pp": 10,
     "flavorTextEn": "A move that has different effects depending on whether the user is a Ghost type or not.",
     "flavorTextKo": "기술을 쓰는 포켓몬이 고스트타입일 때와 그 이외의 타입일 때는 효과가 다르다.",
+    "flavorTextJa": "使う ポケモンが ゴーストタイプと それ以外 とでは 効果が 変わる。",
+    "flavorTextZh": "使用该招式的宝可梦， 其属性是幽灵属性或其他属性时， 效果会不一样。",
     "updatedInChampions": false
   },
   {
@@ -1425,6 +1601,8 @@
     "pp": 10,
     "flavorTextEn": "The user swings both arms and hits the target. The target's stat changes don't affect the damage inflicted by this move.",
     "flavorTextKo": "양팔을 돌려 상대에게 부딪친다. 상대의 능력 변화에 상관없이 데미지를 준다.",
+    "flavorTextJa": "両腕を 回し 相手に 当てる。 相手の 能力変化に 関係なく ダメージを 与える。",
+    "flavorTextZh": "旋转双臂打向对手。 无视对手的能力变化， 直接给予伤害。",
     "updatedInChampions": false
   },
   {
@@ -1441,6 +1619,8 @@
     "pp": 15,
     "flavorTextEn": "The user releases a horrible aura imbued with ill intent. This may also make the target flinch.",
     "flavorTextKo": "몸에서 악의로 가득한 무서운 오라를 발한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "体から 悪意に みちた 恐ろしい オーラを 発する。 相手を ひるませることが ある。",
+    "flavorTextZh": "从体内发出 充满恶意的恐怖气场。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -1457,6 +1637,8 @@
     "pp": 10,
     "flavorTextEn": "The user damages opposing Pokémon by emitting a powerful flash.",
     "flavorTextKo": "강력한 빛을 내어 상대에게 데미지를 준다.",
+    "flavorTextJa": "強力な 光を 放ち 相手に ダメージを 与える。",
+    "flavorTextZh": "向对手发射强光， 并给予伤害。",
     "updatedInChampions": false
   },
   {
@@ -1473,6 +1655,8 @@
     "pp": 15,
     "flavorTextEn": "The user sharply boosts the target's Attack and Sp. Atk stats by decorating the target.",
     "flavorTextKo": "데코레이션을 해서 상대의 공격과 특수공격을 크게 올린다.",
+    "flavorTextJa": "かざりつけを することで 相手の 攻撃と 特攻を ぐーんと 上げる。",
+    "flavorTextZh": "通过装饰， 大幅提高对方的 攻击和特攻。",
     "updatedInChampions": false
   },
   {
@@ -1489,6 +1673,8 @@
     "pp": 15,
     "flavorTextEn": "A strong wind blows away the target's barriers such as Reflect or Light Screen. This also lowers the target's evasiveness.",
     "flavorTextKo": "강한 바람으로 상대의 리플렉터나 빛의장막 등을 제거한다. 회피율도 떨어뜨린다.",
+    "flavorTextJa": "強い風で 相手の リフレクターや ひかりのかべ などを はらいのける。 回避率も さげる。",
+    "flavorTextZh": "用强风吹开对手的 反射壁或光墙等。 也会降低对手的闪避率。",
     "updatedInChampions": false
   },
   {
@@ -1505,6 +1691,8 @@
     "pp": 5,
     "flavorTextEn": "If the user is knocked out after using this move, the Pokémon that knocked it out will also faint. This move's chance of failing rises if it is used in succession.",
     "flavorTextKo": "기술을 쓴 뒤 상대의 공격으로 기절했을 때 공격 상대도 기절하게 한다. 연속으로 쓰면 실패한다.",
+    "flavorTextJa": "技のあと 相手の 攻撃で ひんしに なると 攻撃 相手も ひんしにする。 連続して 出すと 失敗する。",
+    "flavorTextZh": "使出招式后，当受到对手攻击 陷入濒死时，对手也会一同濒死。 连续使出则会失败。",
     "updatedInChampions": false
   },
   {
@@ -1521,6 +1709,8 @@
     "pp": 5,
     "flavorTextEn": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession.",
     "flavorTextKo": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다.",
+    "flavorTextJa": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。",
+    "flavorTextZh": "完全抵挡 对手的攻击。 连续使出则容易失败。",
     "updatedInChampions": false
   },
   {
@@ -1537,6 +1727,8 @@
     "pp": 10,
     "flavorTextEn": "The user burrows into the ground on the first turn, then attacks on the next turn.",
     "flavorTextKo": "1턴째에 파고들어 2턴째에 상대를 공격한다.",
+    "flavorTextJa": "１ターン目に 潜り ２ターン目で 相手を 攻撃する。",
+    "flavorTextZh": "第１回合钻入， 第２回合攻击对手。",
     "updatedInChampions": false
   },
   {
@@ -1553,6 +1745,8 @@
     "pp": 16,
     "flavorTextEn": "The user lashes out at the target with ruinous claws. This may also leave the target poisoned, paralyzed, or asleep.",
     "flavorTextKo": "치명적인 손발톱으로 급소를 노려 공격한다. 상대를 독, 마비, 졸음 중 하나의 상태로 만들 때가 있다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": true,
     "championsEffectEn": "Has a 30% chance of leaving the target poisoned paralyzed or asleep."
   },
@@ -1570,6 +1764,8 @@
     "pp": 20,
     "flavorTextEn": "For four turns, the target will be unable to use whichever move it last used.",
     "flavorTextKo": "상대의 움직임을 막아 바로 전에 쓴 기술을 4턴 동안 사용할 수 없게 만든다.",
+    "flavorTextJa": "相手の 動きを とめて 直前に だしていた 技を ４ターンの 間 使えなくする。",
+    "flavorTextZh": "阻碍对手行动， 之前使出的招式 将在４回合内无法使用。",
     "updatedInChampions": false
   },
   {
@@ -1586,6 +1782,8 @@
     "pp": 15,
     "flavorTextEn": "The user strikes everything around it by letting loose a flare of electricity. This may also leave those hit by the attack with paralysis.",
     "flavorTextKo": "눈부신 전격으로 자신의 주위에 있는 포켓몬을 공격한다. 마비 상태로 만들 때가 있다.",
+    "flavorTextJa": "まばゆい 電撃で 自分の 周りに いるものを 攻撃する。 まひ状態に することが ある。",
+    "flavorTextZh": "用耀眼的电击 攻击自己周围所有的宝可梦。 有时会陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -1602,6 +1800,8 @@
     "pp": 10,
     "flavorTextEn": "The user dives on the first turn, then floats up and attacks on the next turn.",
     "flavorTextKo": "1턴째에 잠수했다가 2턴째에 떠올라 공격한다.",
+    "flavorTextJa": "１ターン目で 潜り ２ターン目に 浮きあがって 攻撃する。",
+    "flavorTextZh": "第１回合潜入， 第２回合浮上来进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -1618,6 +1818,8 @@
     "pp": 15,
     "flavorTextEn": "A reckless life-risking tackle in which the user rushes the target. This also damages the user quite a lot.",
     "flavorTextKo": "목숨을 걸고 상대에게 돌진하여 공격을 한다. 자신도 상당한 데미지를 입는다.",
+    "flavorTextJa": "命を 懸けて 相手に 突進して 攻撃する。 自分も かなり ダメージを 受ける。",
+    "flavorTextZh": "拼命地猛撞向对手进行攻击。 自己也会受到不小的伤害。",
     "updatedInChampions": false
   },
   {
@@ -1634,6 +1836,8 @@
     "pp": 10,
     "flavorTextEn": "The user slams the target with a tail or the like. The target is hit twice in a row.",
     "flavorTextKo": "꼬리 등을 써서 상대를 때려 공격한다. 2회 연속으로 데미지를 준다.",
+    "flavorTextJa": "しっぽなどを 使い 相手を たたいて 攻撃する。 ２回連続で ダメージを 与える。",
+    "flavorTextZh": "使用尾巴等 拍打对手进行攻击。 连续２次给予伤害。",
     "updatedInChampions": false
   },
   {
@@ -1650,6 +1854,8 @@
     "pp": 15,
     "flavorTextEn": "By moving rapidly, the user makes illusory copies of itself to boost its evasiveness.",
     "flavorTextKo": "재빠른 움직임으로 분신을 만들어 상대를 혼란시켜 회피율을 올린다.",
+    "flavorTextJa": "素早い 動きで 分身を つくり 相手を まどわせて 回避率を あげる。",
+    "flavorTextZh": "通过快速移动来制造分身， 扰乱对手，从而提高闪避率。",
     "updatedInChampions": false
   },
   {
@@ -1666,6 +1872,8 @@
     "pp": 5,
     "flavorTextEn": "Comets are summoned down from the sky onto the target. The recoil from this move harshly lowers the user’s Sp. Atk stat.",
     "flavorTextKo": "천공에서 운석을 상대에게 떨어뜨린다. 사용하면 반동으로 자신의 특수공격이 크게 떨어진다.",
+    "flavorTextJa": "天空から 隕石を 相手に 落とす。使うと 反動で 自分の 特攻が がくっと さがる。",
+    "flavorTextZh": "从天空中向对手落下陨石。 使用之后因为反作用力， 自己的特攻会大幅降低。",
     "updatedInChampions": false
   },
   {
@@ -1682,6 +1890,8 @@
     "pp": 15,
     "flavorTextEn": "The user raises its allies’ morale with a draconic cry so that their future attacks have a heightened chance of landing critical hits. This rouses Dragon types more.",
     "flavorTextKo": "용의 북돋움으로 사기를 높여서 같은 편의 기술이 급소에 맞기 쉬워진다. 드래곤타입이면 더욱더 사기가 북돋는다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -1698,6 +1908,8 @@
     "pp": 15,
     "flavorTextEn": "The user slashes the target with huge, sharp claws to inflict damage.",
     "flavorTextKo": "날카롭고 뾰족한 거대한 발톱으로 상대를 베어 갈라서 공격한다.",
+    "flavorTextJa": "鋭く とがった 巨大な ツメで 相手を 切り裂いて 攻撃する。",
+    "flavorTextZh": "用尖锐的巨爪 劈开对手进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -1714,6 +1926,8 @@
     "pp": 20,
     "flavorTextEn": "The user vigorously performs a mystic, powerful dance that boosts its Attack and Speed stats.",
     "flavorTextKo": "신비롭고 힘센 춤을 격렬하게 춘다. 자신의 공격과 스피드를 올린다.",
+    "flavorTextJa": "神秘的で 力強い 舞を 激しく おどる。 自分の 攻撃と 素早さを あげる。",
+    "flavorTextZh": "激烈地跳起神秘 且强有力的舞蹈。 从而提高自己的攻击和速度。",
     "updatedInChampions": false
   },
   {
@@ -1730,6 +1944,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks twice using Dreepy. If there are two opposing Pokémon, this move hits each of them once.",
     "flavorTextKo": "드라꼰으로 2번 공격한다. 상대가 2마리일 때는 각각 1번씩 공격한다.",
+    "flavorTextJa": "ドラメシヤで ２回 攻撃。 相手が ２匹 いるときは それぞれに １回ずつ 攻撃する。",
+    "flavorTextZh": "让多龙梅西亚进行２次攻击。 如果对手有２只宝可梦， 则对它们各进行１次攻击。",
     "updatedInChampions": false
   },
   {
@@ -1746,6 +1962,8 @@
     "pp": 10,
     "flavorTextEn": "The target is attacked with a shock wave generated by the user's gaping mouth.",
     "flavorTextKo": "큰 입으로 충격파를 일으켜서 상대를 공격한다.",
+    "flavorTextJa": "大きな 口から 衝撃波を まきおこして 相手を 攻撃する。",
+    "flavorTextZh": "从大大的口中 掀起冲击波攻击对手。",
     "updatedInChampions": false
   },
   {
@@ -1762,6 +1980,8 @@
     "pp": 10,
     "flavorTextEn": "The user tackles the target while exhibiting overwhelming menace. This may also make the target flinch.",
     "flavorTextKo": "굉장한 살기로 위압하면서 몸통박치기한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "すさまじい 殺気で 威圧しながら 体当たりする。 相手を ひるませることが ある。",
+    "flavorTextZh": "释放出骇人的杀气， 一边威慑一边撞击对手。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -1778,6 +1998,8 @@
     "pp": 10,
     "flavorTextEn": "The target is knocked away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.",
     "flavorTextKo": "상대를 튕겨내서 교대할 포켓몬을 끌어낸다. 야생의 경우에는 배틀이 끝난다.",
+    "flavorTextJa": "相手を はじきとばして 控えの ポケモンを ひきずりだす。 野生の 場合は 戦闘が 終わる。",
+    "flavorTextZh": "弹飞对手，强制拉后备宝可梦上场。 如果对手为野生宝可梦， 战斗将直接结束。",
     "updatedInChampions": false
   },
   {
@@ -1794,6 +2016,8 @@
     "pp": 10,
     "flavorTextEn": "The user steals the target's HP with a kiss. The user's HP is restored by over half the damage taken by the target.",
     "flavorTextKo": "키스로 상대의 HP를 흡수한다. 준 데미지의 반 이상 HP를 회복한다.",
+    "flavorTextJa": "キッスによって 相手から ＨＰを 吸い取る。 与えた ダメージの 半分以上 ＨＰを 回復する。",
+    "flavorTextZh": "用一个吻吸取对手的ＨＰ。 回复给予对手 伤害的一半以上的ＨＰ。",
     "updatedInChampions": false
   },
   {
@@ -1810,6 +2034,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks with an energy-draining punch. The user's HP is restored by up to half the damage taken by the target.",
     "flavorTextKo": "주먹으로 상대의 힘을 흡수한다. 입힌 데미지의 절반에 해당하는 HP를 회복할 수 있다.",
+    "flavorTextJa": "こぶしから 相手の 力を 吸い取る。 与えた ダメージの 半分の ＨＰを 回復できる。",
+    "flavorTextZh": "用拳头吸取对手的力量。 可以回复给予对手 伤害的一半HP。",
     "updatedInChampions": false
   },
   {
@@ -1826,6 +2052,8 @@
     "pp": 20,
     "flavorTextEn": "A corkscrewing attack that strikes the target with a sharp beak acting as a drill.",
     "flavorTextKo": "회전하면서 뾰족한 부리를 상대에게 꿰찔러 공격한다.",
+    "flavorTextJa": "回転しながら とがった くちばしを 相手に 突き刺して 攻撃する。",
+    "flavorTextZh": "一边旋转，一边将尖喙 刺入对手进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -1842,6 +2070,8 @@
     "pp": 10,
     "flavorTextEn": "The user crashes into the target while rotating its body like a drill. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "드릴처럼 몸을 회전시켜서 상대에게 몸통박치기한다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "ドリルのように 体を 回転しながら 相手に 体当たりする。 急所に 当たりやすい。",
+    "flavorTextZh": "像钢钻一样，一边旋转身体 一边撞击对手。 容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -1858,6 +2088,8 @@
     "pp": 10,
     "flavorTextEn": "The user slams the target with its wings to inflict damage. The target is hit twice in a row.",
     "flavorTextKo": "날개를 상대에게 부딪쳐서 공격한다. 2회 연속으로 데미지를 준다.",
+    "flavorTextJa": "翼を 相手に ぶつけて 攻撃する。 ２回連続で ダメージを 与える。",
+    "flavorTextZh": "将翅膀撞向对手进行攻击。 连续２次给予伤害。",
     "updatedInChampions": false
   },
   {
@@ -1874,6 +2106,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks by punching the target with full concentrated power. This also confuses the target.",
     "flavorTextKo": "혼신의 힘으로 펀치를 날려서 공격한다. 상대를 반드시 혼란시킨다.",
+    "flavorTextJa": "こん身の 力で パンチを くりだして 攻撃する。 相手を 必ず 混乱させる。",
+    "flavorTextZh": "使出浑身力气出拳进行攻击。 必定会使对手混乱。",
     "updatedInChampions": false
   },
   {
@@ -1890,6 +2124,8 @@
     "pp": 10,
     "flavorTextEn": "The user makes the ground under the target erupt with power. This may also lower the target's Sp. Def stat.",
     "flavorTextKo": "상대의 발밑에 대지의 힘을 방출한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "相手の 足下へ 大地の力を 放出する。相手の 特防を さげることが ある。",
+    "flavorTextZh": "向对手脚下 释放出大地之力。 有时会降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -1906,6 +2142,8 @@
     "pp": 10,
     "flavorTextEn": "The user sets off an earthquake that strikes every Pokémon around it.",
     "flavorTextKo": "지진의 충격으로 자신의 주위에 있는 포켓몬을 공격한다.",
+    "flavorTextJa": "地震の 衝撃で 自分の 周りに いるものを 攻撃する。",
+    "flavorTextZh": "利用地震的冲击， 攻击自己周围所有的宝可梦。",
     "updatedInChampions": false
   },
   {
@@ -1922,6 +2160,8 @@
     "pp": 15,
     "flavorTextEn": "The user's body generates an eerie impulse. Exposing the target to it harshly lowers the target's Sp. Atk stat.",
     "flavorTextKo": "몸에서 발생시킨 괴전파를 상대에게 쏘아 특수공격을 크게 떨어뜨린다.",
+    "flavorTextJa": "体から かいでんぱを 放ち 相手に 浴びせる ことによって 特攻を がくっと さげる。",
+    "flavorTextZh": "从身体放射出怪异电波， 让对手沐浴其中， 从而大幅降低其特攻。",
     "updatedInChampions": false
   },
   {
@@ -1938,6 +2178,8 @@
     "pp": 10,
     "flavorTextEn": "The user turns the ground into Electric Terrain for five turns, powering up Electric-type moves. Pokémon on the ground can no longer fall asleep.",
     "flavorTextKo": "5턴 동안 일렉트릭필드로 만든다. 땅에 있는 포켓몬은 잠들지 않는다. 전기타입의 위력이 올라간다.",
+    "flavorTextJa": "５ターンの 間 エレキフィールドにする。 地面にいる ポケモンは 眠らない。 でんきタイプの 威力が あがる。",
+    "flavorTextZh": "在５回合内变成电气场地。 地面上的宝可梦将无法入眠。 电属性的招式威力还会提高。",
     "updatedInChampions": false
   },
   {
@@ -1954,6 +2196,8 @@
     "pp": 20,
     "flavorTextEn": "If the target is electrified before it uses a move during that turn, the target’s move becomes Electric type.",
     "flavorTextKo": "상대가 기술을 쓰기 전에 송전하면 그 턴에 상대가 사용하는 기술은 전기타입이 된다.",
+    "flavorTextJa": "相手が 技を だす前に そうでん すると そのターン 相手の 技は でんきタイプになる。",
+    "flavorTextZh": "对手使出招式前， 如果输电，则该回合 对手的招式变成电属性。",
     "updatedInChampions": false
   },
   {
@@ -1970,6 +2214,8 @@
     "pp": 10,
     "flavorTextEn": "The user hurls an electric orb at the target. The faster the user is than the target, the greater the move's power.",
     "flavorTextKo": "전기 덩어리를 상대에게 부딪쳐서 공격한다. 상대보다 스피드가 빠를수록 위력이 올라간다.",
+    "flavorTextJa": "電気の 塊を 相手に ぶつける。相手より 素早さが 速いほど 威力が あがる。",
+    "flavorTextZh": "用电气团撞向对手。 自己比对手速度越快， 威力越大。",
     "updatedInChampions": false
   },
   {
@@ -1986,6 +2232,8 @@
     "pp": 10,
     "flavorTextEn": "The user gathers electricity on the first turn, boosting its Sp. Atk stat, then fires a high-voltage shot on the next turn. The shot will be fired immediately in rain.",
     "flavorTextKo": "1턴째에 전기를 모아서 특수공격을 올리고 2턴째에 고압의 전기를 발사한다. 비가 오는 날씨일 때는 바로 발사할 수 있다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -2002,6 +2250,8 @@
     "pp": 15,
     "flavorTextEn": "The user captures opposing Pokémon in an electric net to inflict damage. This also lowers their Speed stats.",
     "flavorTextKo": "전기 네트로 상대를 붙잡아서 공격한다. 상대의 스피드를 떨어뜨린다.",
+    "flavorTextJa": "電気の ネットで 相手を 捕まえて 攻撃する。 相手の 素早さを さげる。",
+    "flavorTextZh": "用电网捉住对手进行攻击。 降低对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -2018,6 +2268,8 @@
     "pp": 5,
     "flavorTextEn": "The user compels the target to keep using the move it encored for three turns.",
     "flavorTextKo": "상대에게 앵콜시킨 기술을 3번 연속으로 쓰게 한다.",
+    "flavorTextJa": "相手に アンコールした 技を ３回 続けて 出させる。",
+    "flavorTextZh": "让对手接受再来一次， 连续３次使出最后使用的招式。",
     "updatedInChampions": false
   },
   {
@@ -2034,6 +2286,8 @@
     "pp": 5,
     "flavorTextEn": "The user inflicts damage by cutting down the target's HP to roughly equal the user's HP.",
     "flavorTextKo": "상대의 HP가 자신의 HP와 같아지도록 데미지를 준다.",
+    "flavorTextJa": "相手の ＨＰが 自分の ＨＰと 同じくらいに なるように ダメージを 与える。",
+    "flavorTextZh": "给予伤害， 使对手的ＨＰ变得 和自己的ＨＰ一样。",
     "updatedInChampions": false
   },
   {
@@ -2050,6 +2304,8 @@
     "pp": 10,
     "flavorTextEn": "The user endures any attack with at least 1 HP. This move's chance of failing rises if used in succession.",
     "flavorTextKo": "공격을 받아도 HP를 반드시 1만큼은 남긴다. 연속으로 쓰면 실패하기 쉽다.",
+    "flavorTextJa": "攻撃を 受けても ＨＰを 必ず １だけ 残せる。 連続で だすと 失敗しやすい。",
+    "flavorTextZh": "即使受到攻击， 也至少会留下１ＨＰ。 连续使出则容易失败。",
     "updatedInChampions": false
   },
   {
@@ -2066,6 +2322,8 @@
     "pp": 10,
     "flavorTextEn": "The user draws power from nature and fires it at the target. This may also lower the target's Sp. Def stat.",
     "flavorTextKo": "자연으로부터 모은 생명의 힘을 발사한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "自然から 集めた 命の力を 発射する。 相手の 特防を さげることがある。",
+    "flavorTextZh": "发射从自然收集的生命力量。 有时会降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -2082,6 +2340,8 @@
     "pp": 15,
     "flavorTextEn": "The user dances with an odd rhythm that compels the target to mimic it, making the target's Ability the same as the user's.",
     "flavorTextKo": "이상한 리듬으로 춤춘다. 움직임을 흉내 내게 해서 자신과 상대의 특성을 똑같게 만든다.",
+    "flavorTextJa": "不思議な リズムで おどる。 動きを まねさせて 自分と 相手の 特性を 同じに する。",
+    "flavorTextZh": "用神奇的节奏跳舞。 使对手模仿自己的动作， 从而将特性变成一样。",
     "updatedInChampions": false
   },
   {
@@ -2098,6 +2358,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks opposing Pokémon with explosive fury. The lower the user's HP, the lower the move's power.",
     "flavorTextKo": "분노를 폭발시켜 상대를 공격한다. 자신의 HP가 적을수록 기술의 위력이 떨어진다.",
+    "flavorTextJa": "怒りを 爆発させて 相手を 攻撃する。 自分の ＨＰが 少ないほど 技の 威力は さがる。",
+    "flavorTextZh": "爆发怒火攻击对手。 自己的ＨＰ越少， 招式的威力越小。",
     "updatedInChampions": false
   },
   {
@@ -2114,6 +2376,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks the target with its psychic power. When the ground is Psychic Terrain, this move's power is boosted and it damages all opposing Pokémon.",
     "flavorTextKo": "사이코 파워로 상대를 공격한다. 사이코필드일 때는 위력이 오르며 모든 상대에게 데미지를 준다.",
+    "flavorTextJa": "サイコパワーで 相手を 攻撃する。 サイコフィールドの時 威力が あがり すべての 相手に ダメージを 与える。",
+    "flavorTextZh": "利用精神力量攻击对手。 在精神场地上威力会有所提高， 能对所有对手造成伤害。",
     "updatedInChampions": false
   },
   {
@@ -2130,6 +2394,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks everything around it by causing a tremendous explosion. The user faints upon using this move.",
     "flavorTextKo": "큰 폭발로 자신의 주위에 있는 포켓몬을 공격한다. 쓰고 나서는 기절한다.",
+    "flavorTextJa": "大きな 爆発で 自分の 周りに いるものを 攻撃する。 使ったあとに ひんしに なる。",
+    "flavorTextZh": "引发大爆炸， 攻击自己周围所有的宝可梦。 使用后自己会陷入濒死。",
     "updatedInChampions": false
   },
   {
@@ -2146,6 +2412,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks with an odd, unseeable power. This may also make the target flinch.",
     "flavorTextKo": "보이지 않는 이상한 힘을 보내어 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "みえない 不思議な 力を 送って 攻撃する。 相手を ひるませることが ある。",
+    "flavorTextZh": "发出看不见的 神奇力量进行攻击。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -2162,6 +2430,8 @@
     "pp": 5,
     "flavorTextEn": "The user charges the target at blinding speed. This move always goes first.",
     "flavorTextKo": "눈에 보이지 않는 굉장한 속도로 상대에게 돌진하여 공격한다. 반드시 선제공격을 할 수 있다.",
+    "flavorTextJa": "目にも 留まらぬ ものすごい 速さで 相手に 突進して 攻撃する。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "以迅雷不及掩耳之势 猛撞向对手进行攻击。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -2178,6 +2448,8 @@
     "pp": 20,
     "flavorTextEn": "This move's power is doubled if the user is poisoned, burned, or paralyzed.",
     "flavorTextKo": "자신이 독, 마비, 화상 상태일 때 날리면 기술의 위력이 2배가 된다.",
+    "flavorTextJa": "自分が 毒 まひ やけど 状態のとき 相手に くりだすと 技の 威力が ２倍に なる。",
+    "flavorTextZh": "当自己处于中毒、麻痹、灼伤状态时， 向对手使出此招式的话， 威力会变成２倍。",
     "updatedInChampions": false
   },
   {
@@ -2194,6 +2466,8 @@
     "pp": 10,
     "flavorTextEn": "By locking down the battlefield, the user keeps all Pokémon from fleeing during the next turn.",
     "flavorTextKo": "록을 걸어 다음 턴의 모든 포켓몬을 도망가지 못하게 한다.",
+    "flavorTextJa": "ロックを かけることによって 次のターン すべての ポケモンを 逃げられなくする。",
+    "flavorTextZh": "通过封锁， 下一回合所有的 宝可梦都无法逃走。",
     "updatedInChampions": false
   },
   {
@@ -2210,6 +2484,8 @@
     "pp": 10,
     "flavorTextEn": "This attack hits first and makes the target flinch. It works only on the first turn each time the user enters battle.",
     "flavorTextKo": "선제공격으로 상대를 풀죽게 한다. 배틀에 나가서 바로 쓰지 않으면 성공할 수 없다.",
+    "flavorTextJa": "先制攻撃で 相手を ひるませる。 戦闘に でたら すぐに ださないと 成功しない。",
+    "flavorTextZh": "进行先制攻击，使对手畏缩。 要在出场后立刻使出才能成功。",
     "updatedInChampions": false
   },
   {
@@ -2226,6 +2502,8 @@
     "pp": 20,
     "flavorTextEn": "The user feigns crying to fluster the target. This harshly lowers the target's Sp. Def stat.",
     "flavorTextKo": "우는 척을 하며 눈물을 흘린다. 난처하게 만들어 상대의 특수방어를 크게 떨어뜨린다.",
+    "flavorTextJa": "ないた ふりをして 涙を 流す。 こまらせる ことで 相手の 特防を がくっと さげる。",
+    "flavorTextZh": "装哭流泪。 使对手不知所措， 从而大幅降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -2242,6 +2520,8 @@
     "pp": 15,
     "flavorTextEn": "The user covers the target's body with a mass of down that harshly lowers its Attack stat.",
     "flavorTextKo": "깃털을 흩뿌려 상대의 몸에 휘감는다. 상대의 공격을 크게 떨어뜨린다.",
+    "flavorTextJa": "羽毛を ふりまいて 相手の 体に からませる。 相手の 攻撃を がくっと さげる。",
+    "flavorTextZh": "撒出羽毛， 笼罩在对手的周围。 大幅降低对手的攻击。",
     "updatedInChampions": false
   },
   {
@@ -2258,6 +2538,8 @@
     "pp": 10,
     "flavorTextEn": "This attack can hit a target using a move such as Protect or Detect. This also lifts the effects of those moves.",
     "flavorTextKo": "방어나 판별 등을 하고 있는 상대에게 공격할 수 있다. 방어 효과를 해제시킨다.",
+    "flavorTextJa": "まもるや みきり などを している 相手に 攻撃が できる。 守りの 効果を 解除させる。",
+    "flavorTextZh": "能够攻击正在使用 守住或看穿等招式的对手。 解除其守护效果。",
     "updatedInChampions": false
   },
   {
@@ -2274,6 +2556,8 @@
     "pp": 25,
     "flavorTextEn": "When the user knocks out a target with this move, the user's Attack stat is boosted drastically.",
     "flavorTextKo": "이 기술을 사용하여 상대를 쓰러뜨리면 공격이 매우 크게 오른다.",
+    "flavorTextJa": "この 技を 使って 相手を 倒すと 攻撃が ぐぐーんと あがる。",
+    "flavorTextZh": "如果使用此招式打倒对手， 攻击会巨幅提高。",
     "updatedInChampions": false
   },
   {
@@ -2290,6 +2574,8 @@
     "pp": 5,
     "flavorTextEn": "The user shoots a beam of light to inflict damage. Sometimes all the user's heads shoot beams in unison, doubling the move's power.",
     "flavorTextKo": "광선을 발사해서 공격한다. 가끔 다른 머리도 함께 레이저를 발사하여 위력이 2배가 된다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -2306,6 +2592,8 @@
     "pp": 10,
     "flavorTextEn": "Cloaked in flames, the user attacks the target by dancing and flapping its wings. This may also boost the user's Sp. Atk stat.",
     "flavorTextKo": "불꽃을 두른 날개를 쳐서 공격한다. 자신의 특수공격이 오를 때가 있다.",
+    "flavorTextJa": "炎を まとい はばたいて 相手を 攻撃する。自分の 特攻が あがることが ある。",
+    "flavorTextZh": "让火焰覆盖全身， 振翅攻击对手。 有时会提高自己的特攻。",
     "updatedInChampions": false
   },
   {
@@ -2322,6 +2610,8 @@
     "pp": 5,
     "flavorTextEn": "The user risks everything to attack the target. The user faints but inflicts damage equal to its own HP.",
     "flavorTextKo": "목숨을 걸고 상대를 공격한다. 자신은 기절하게 되지만 상대에게 HP만큼의 데미지를 준다.",
+    "flavorTextJa": "命懸けで 相手を 攻撃する。 自分は ひんしに なるが 相手に ＨＰ分の ダメージを 与える。",
+    "flavorTextZh": "拼命攻击对手。 虽然自己陷入濒死，但会给予对手 和自己目前ＨＰ等量的伤害。",
     "updatedInChampions": false
   },
   {
@@ -2338,6 +2628,8 @@
     "pp": 5,
     "flavorTextEn": "The target is attacked with an intense blast of all-consuming fire. This may also leave the target with a burn.",
     "flavorTextKo": "큰 대자의 불꽃으로 상대를 불태운다. 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "大の字の 炎で 相手を 焼きつくす。 やけど状態に することが ある。",
+    "flavorTextZh": "用大字形状的火焰烧尽对手。 有时会让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -2354,6 +2646,8 @@
     "pp": 15,
     "flavorTextEn": "The user bites with flame-cloaked fangs. This may also make the target flinch or leave it with a burn.",
     "flavorTextKo": "불꽃을 두른 이빨로 문다. 상대를 풀죽게 하거나 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "炎を まとった キバで かみつく。 相手を ひるませたり やけど状態に することが ある。",
+    "flavorTextZh": "用覆盖着火焰的牙齿咬住对手。 有时会使对手畏缩 或陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -2370,6 +2664,8 @@
     "pp": 16,
     "flavorTextEn": "The user strikes the target with a burning lash. This also lowers the target's Defense stat.",
     "flavorTextKo": "불타는 채찍으로 상대를 친다. 공격을 받은 상대는 방어가 떨어진다.",
+    "flavorTextJa": "焼けたムチで 相手を 打ちつける。 攻撃を 受けた 相手は 防御が さがる。",
+    "flavorTextZh": "用燃烧的鞭子抽打对手。 受到攻击的对手防御会降低。",
     "updatedInChampions": true,
     "championsEffectEn": "Lowers the target's Defense stat by 1 stage."
   },
@@ -2387,6 +2683,8 @@
     "pp": 15,
     "flavorTextEn": "The target is attacked with a fiery punch. This may also leave the target with a burn.",
     "flavorTextKo": "불꽃을 담은 펀치로 상대를 공격한다. 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "炎を こめた パンチで 相手を 攻撃する。 やけど状態に することが ある。",
+    "flavorTextZh": "用充满火焰的拳头攻击对手。 有时会让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -2403,6 +2701,8 @@
     "pp": 15,
     "flavorTextEn": "The user traps the target inside a fierce vortex of fire that inflicts damage for four to five turns.",
     "flavorTextKo": "세차게 소용돌이치는 불꽃 속에 4-5턴 동안 상대를 가두어 공격한다.",
+    "flavorTextJa": "激しく 渦をまく 炎の中に ４ー５ターンの 間 相手を 閉じこめて 攻撃する。",
+    "flavorTextZh": "将对手困在 激烈的火焰旋涡中， 在４～５回合内进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -2419,6 +2719,8 @@
     "pp": 12,
     "flavorTextEn": "Although this move has great power, it works only on the first turn each time the user enters battle.",
     "flavorTextKo": "위력이 높은 기술이지만 배틀에 나가서 바로 쓰지 않으면 성공할 수 없다.",
+    "flavorTextJa": "威力が 高い 技 だが 戦闘に 出たら すぐに 出さないと 成功 しない。",
+    "flavorTextZh": "威力很高的招式， 但只有在出场战斗时， 立刻使出才能成功。",
     "updatedInChampions": true,
     "championsEffectEn": "This move fails unless it is the first move used by the user after it enters a battle."
   },
@@ -2436,6 +2738,8 @@
     "pp": 5,
     "flavorTextEn": "The user opens up a fissure in the ground and drops the target in. The target faints instantly if this attack hits.",
     "flavorTextKo": "땅이 갈라진 곳에 상대를 떨어뜨려 공격한다. 맞으면 일격에 기절한다.",
+    "flavorTextJa": "地割れの 裂け目に 相手を 落として 攻撃する。 当たれば 一撃で ひんしに する。",
+    "flavorTextZh": "让对手掉落于地裂的 裂缝中进行攻击。 只要命中就会一击濒死。",
     "updatedInChampions": false
   },
   {
@@ -2452,6 +2756,8 @@
     "pp": 15,
     "flavorTextEn": "The user flails about aimlessly to attack. The less HP the user has, the greater the move's power.",
     "flavorTextKo": "바둥바둥 난동 부려서 공격한다. 자신의 HP가 적을수록 기술의 위력이 올라간다.",
+    "flavorTextJa": "じたばた 暴れて 攻撃する。 自分の ＨＰが 少ないほど 技の 威力は あがる。",
+    "flavorTextZh": "抓狂般乱打进行攻击。 自己的ＨＰ越少， 招式的威力越大。",
     "updatedInChampions": false
   },
   {
@@ -2468,6 +2774,8 @@
     "pp": 20,
     "flavorTextEn": "Cloaking itself in flame, the user attacks the target. Then, building up momentum, the user boosts its Speed stat.",
     "flavorTextKo": "불꽃을 둘러 상대를 공격한다. 힘을 모아서 자신의 스피드를 올린다.",
+    "flavorTextJa": "炎を まとい 相手を 攻撃する。 力を ためて 自分の 素早さを あげる。",
+    "flavorTextZh": "让火焰覆盖全身，攻击对手。 积蓄力量并提高自己的速度。",
     "updatedInChampions": false
   },
   {
@@ -2484,6 +2792,8 @@
     "pp": 15,
     "flavorTextEn": "The target is scorched with an intense blast of fire. This may also leave the target with a burn.",
     "flavorTextKo": "세찬 불꽃을 상대에게 발사하여 공격한다. 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "激しい 炎を 相手に 発射して 攻撃する。 やけど状態に することが ある。",
+    "flavorTextZh": "向对手发射 烈焰进行攻击。 有时会让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -2500,6 +2810,8 @@
     "pp": 15,
     "flavorTextEn": "The user cloaks itself in fire and charges the target to inflict damage. This also damages the user quite a lot and may leave the target with a burn.",
     "flavorTextKo": "불꽃을 두르고 돌진한다. 자신도 상당한 데미지를 입는다. 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "炎を まとって 突進する。 自分も かなり ダメージを 受ける。 やけど状態に することが ある。",
+    "flavorTextZh": "让火焰覆盖全身猛撞向对手。 自己也会受到不小的伤害。 有时会让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -2516,6 +2828,8 @@
     "pp": 10,
     "flavorTextEn": "The user gathers all its light energy and releases it at once. This may also lower the target's Sp. Def stat.",
     "flavorTextKo": "몸의 빛을 한곳에 모아서 힘을 방출한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "体の 光を 一点に 集めて 力を 放つ。 相手の 特防を さげることが ある。",
+    "flavorTextZh": "将身体的光芒 聚集在一点释放出去。 有时会降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -2532,6 +2846,8 @@
     "pp": 15,
     "flavorTextEn": "Flattery is used to confuse the target. However, this also boosts the target's Sp. Atk stat.",
     "flavorTextKo": "상대를 부추겨서 혼란시킨다. 동시에 상대의 특수공격도 올라가 버린다.",
+    "flavorTextJa": "相手を おだてて 混乱させる。 同時に 相手の 特攻も あげてしまう。",
+    "flavorTextZh": "吹捧对手，使其混乱。 同时还会提高对手的特攻。",
     "updatedInChampions": false
   },
   {
@@ -2548,6 +2864,8 @@
     "pp": 10,
     "flavorTextEn": "The user flings its held item at the target to attack. This move's power and effects depend on the item.",
     "flavorTextKo": "지니게 한 도구를 재빠르게 내던져서 공격한다. 도구에 따라 위력과 효과가 바뀐다.",
+    "flavorTextJa": "持たせた 道具を 素早く 投げつけて 攻撃する。 道具で 威力と 効果が 変わる。",
+    "flavorTextZh": "快速投掷携带的道具进行攻击。 根据道具不同， 威力和效果会改变。",
     "updatedInChampions": false
   },
   {
@@ -2564,6 +2882,8 @@
     "pp": 20,
     "flavorTextEn": "After making its attack, the user rushes back to switch places with a party Pokémon in waiting.",
     "flavorTextKo": "공격한 뒤 굉장한 스피드로 돌아와서 교대 포켓몬과 교체한다.",
+    "flavorTextJa": "攻撃した あと ものすごい スピードで 戻ってきて 控えの ポケモンと 入れ替わる。",
+    "flavorTextZh": "在攻击之后急速返回， 和后备宝可梦进行替换。",
     "updatedInChampions": false
   },
   {
@@ -2580,6 +2900,8 @@
     "pp": 10,
     "flavorTextEn": "The user throws a rigged bouquet of flowers at the target. This attack never misses and always lands a critical hit.",
     "flavorTextKo": "숨겨진 장치가 있는 꽃다발을 상대에게 던져서 공격한다. 반드시 명중하며 급소에 맞는다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -2596,6 +2918,8 @@
     "pp": 15,
     "flavorTextEn": "The user flies up into the sky on the first turn, then attacks on the next turn.",
     "flavorTextKo": "1턴째에 하늘을 날아 2턴째에 상대를 공격한다.",
+    "flavorTextJa": "１ターン目で 空へ 飛び ２ターン目に 相手を 攻撃する。",
+    "flavorTextZh": "第１回合飞上天空， 第２回合攻击对手。",
     "updatedInChampions": false
   },
   {
@@ -2612,6 +2936,8 @@
     "pp": 10,
     "flavorTextEn": "The user dives down onto the target from the sky. This move is Fighting and Flying type simultaneously.",
     "flavorTextKo": "공중에서 상대에게 다이브한다. 이 기술은 격투타입임과 동시에 비행타입이기도 하다.",
+    "flavorTextJa": "空中から 相手に ダイブする。 この技は かくとうタイプと 同時に ひこうタイプでも ある。",
+    "flavorTextZh": "从空中俯冲向对手。 此招式同时带有 格斗属性和飞行属性。",
     "updatedInChampions": false
   },
   {
@@ -2628,6 +2954,8 @@
     "pp": 5,
     "flavorTextEn": "The user heightens its mental focus and unleashes its power. This may also lower the target's Sp. Def stat.",
     "flavorTextKo": "기합을 높여서 혼신의 힘을 방출한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "気合を 高めて ありったけの 力を 放出する。 相手の 特防を さげることが ある。",
+    "flavorTextZh": "提高气势， 释放出全部力量。 有时会降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -2644,6 +2972,8 @@
     "pp": 30,
     "flavorTextEn": "The user takes a deep breath and focuses so that its future attacks have a heightened chance of landing critical hits.",
     "flavorTextKo": "깊게 숨을 들이마셔 기합을 넣는다. 자신의 공격이 급소에 맞기 쉬워진다.",
+    "flavorTextJa": "深く 息を 吸い 気合を こめる。 自分の 攻撃が 急所に 当たりやすくなる。",
+    "flavorTextZh": "深深地吸口气，集中精神。 自己的攻击 会变得容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -2660,6 +2990,8 @@
     "pp": 20,
     "flavorTextEn": "The user focuses its mind before launching a punch. This move fails if the user is hit before using the move.",
     "flavorTextKo": "정신력을 높여 펀치를 날린다. 기술을 쓰기 전에 공격을 받으면 실패한다.",
+    "flavorTextJa": "精神を 高めて パンチを くりだす。 技を だすまでに 攻撃を 受けると 失敗する。",
+    "flavorTextZh": "集中精神出拳。 在招式使出前 若受到攻击则会失败。",
     "updatedInChampions": false
   },
   {
@@ -2676,6 +3008,8 @@
     "pp": 20,
     "flavorTextEn": "The user draws attention to itself, making all opposing Pokémon take aim only at the user.",
     "flavorTextKo": "자신에게 주목시켜 상대로부터의 공격을 모두 자신에게 향하게 한다.",
+    "flavorTextJa": "自分に 注目させて 相手からの 攻撃を すべて 自分に むけさせる。",
+    "flavorTextZh": "引起对手的注意， 将对手的攻击 全部转移到自己身上。",
     "updatedInChampions": false
   },
   {
@@ -2692,6 +3026,8 @@
     "pp": 20,
     "flavorTextEn": "The user puts a forest curse on the target. This adds Grass type to the target's type.",
     "flavorTextKo": "상대에게 숲의 저주를 건다. 저주에 걸린 상대는 타입에 풀타입이 추가된다.",
+    "flavorTextJa": "相手に 森ののろいを かける。 のろいを かけられた 相手は タイプに くさタイプが 追加される。",
+    "flavorTextZh": "向对手施加森林诅咒。 中了诅咒的对手 会被追加草属性。",
     "updatedInChampions": false
   },
   {
@@ -2708,6 +3044,8 @@
     "pp": 15,
     "flavorTextEn": "The user turns the target's strength against it. The higher the target's Attack stat, the greater the damage this move inflicts.",
     "flavorTextKo": "상대의 힘을 이용한다. 싸우고 있는 상대의 공격이 높을수록 데미지가 올라간다.",
+    "flavorTextJa": "相手の 力を 利用する。 戦っている 相手の 攻撃が 高いほど ダメージが あがる。",
+    "flavorTextZh": "利用对手的力量进行攻击。 正和自己战斗的对手， 其攻击越高，伤害越大。",
     "updatedInChampions": false
   },
   {
@@ -2724,6 +3062,8 @@
     "pp": 20,
     "flavorTextEn": "The user rapidly cools the target. This may also leave the target frozen. This move is super effective on Water types.",
     "flavorTextKo": "상대를 급격히 차갑게 하여 얼음 상태로 만들 때가 있다. 물타입 포켓몬에게도 효과가 굉장해진다.",
+    "flavorTextJa": "相手を 急激に 冷やして こおり 状態に することが ある。 みずタイプにも 効果バツグンになる。",
+    "flavorTextZh": "急剧冷冻对手， 有时会让对手陷入冰冻状态。 对于水属性宝可梦也是效果绝佳。",
     "updatedInChampions": false
   },
   {
@@ -2740,6 +3080,8 @@
     "pp": 5,
     "flavorTextEn": "The user slams the target with the roots of an enormous tree. The user can't move on the next turn.",
     "flavorTextKo": "큰 나무로 상대를 힘껏 쳐서 공격한다. 다음 턴은 움직일 수 없게 된다.",
+    "flavorTextJa": "大きな 樹木で 相手を たたきつけて 攻撃する。 次の ターンは 動けなくなる。",
+    "flavorTextZh": "用大树摔打对手进行攻击。 下一回合自己将无法动弹。",
     "updatedInChampions": false
   },
   {
@@ -2756,6 +3098,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by blowing its cold breath on the target. This move always lands a critical hit.",
     "flavorTextKo": "차가운 숨결을 상대에게 내뿜어 공격한다. 반드시 급소에 맞는다.",
+    "flavorTextJa": "冷たい 息を 相手に 吹きつけて 攻撃する。 必ず 急所に 当たる。",
+    "flavorTextZh": "将冰冷的气息 吹向对手进行攻击。 必定会击中要害。",
     "updatedInChampions": false
   },
   {
@@ -2772,6 +3116,8 @@
     "pp": 10,
     "flavorTextEn": "Two turns after this move is used, a hunk of psychic energy attacks the target.",
     "flavorTextKo": "기술을 사용한 2턴 뒤에 상대에게 염동력의 덩어리를 보내어 공격한다.",
+    "flavorTextJa": "技を 使った ２ターン後に 相手に 念力の 塊を 送って 攻撃する。",
+    "flavorTextZh": "在使用招式２回合后， 向对手发送一团念力进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -2788,6 +3134,8 @@
     "pp": 10,
     "flavorTextEn": "The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability.",
     "flavorTextKo": "상대의 몸에 위액을 내뱉는다. 달라붙은 위액은 상대의 특성 효과를 지운다.",
+    "flavorTextJa": "胃液を 相手の 体に 吐きつける。 ついた 胃液は 相手の 特性の 効果を 消す。",
+    "flavorTextZh": "将胃液吐向对手的身体。 沾上的胃液会消除 对手的特性效果。",
     "updatedInChampions": false
   },
   {
@@ -2804,6 +3152,8 @@
     "pp": 10,
     "flavorTextEn": "A nutrient-draining attack. The user's HP is restored by up to half the damage taken by the target.",
     "flavorTextKo": "양분을 흡수하여 공격한다. 입힌 데미지의 절반에 해당하는 HP를 회복할 수 있다.",
+    "flavorTextJa": "養分を 吸い取り 攻撃する。 与えた ダメージの 半分の ＨＰを 回復できる。",
+    "flavorTextZh": "吸取对手的养分进行攻击。 可以回复给予对手 伤害的一半ＨＰ。",
     "updatedInChampions": false
   },
   {
@@ -2820,6 +3170,8 @@
     "pp": 5,
     "flavorTextEn": "The user charges at the target using every bit of its power. The user can't move on the next turn.",
     "flavorTextKo": "가진 힘을 모두 사용해서 상대에게 돌격한다. 다음 턴은 움직일 수 없다.",
+    "flavorTextJa": "持てる 力を すべて 使って 相手に 突撃する。 次の ターンは 動けなくなる。",
+    "flavorTextZh": "使出自己浑身力量突击对手。 下一回合自己将无法动弹。",
     "updatedInChampions": false
   },
   {
@@ -2836,6 +3188,8 @@
     "pp": 5,
     "flavorTextEn": "The user swings its whole body around to attack with its huge hammer. This move can't be used twice in a row.",
     "flavorTextKo": "거대한 해머를 온몸으로 휘둘러서 공격한다. 이 기술은 2회 연속으로 쓸 수 없다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -2852,6 +3206,8 @@
     "pp": 30,
     "flavorTextEn": "The user intimidates the target with the pattern on its belly to cause paralysis.",
     "flavorTextKo": "배의 무늬로 겁을 주어 상대를 마비 상태로 만든다.",
+    "flavorTextJa": "おなかの 模様で おびえさせて 相手を まひの 状態に する。",
+    "flavorTextZh": "用腹部的花纹使对手害怕， 从而让其陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -2868,6 +3224,8 @@
     "pp": 20,
     "flavorTextEn": "The user snares the target with grass and trips it. The heavier the target, the greater the move's power.",
     "flavorTextKo": "풀을 휘감아서 상대를 쓰러뜨린다. 상대가 무거울수록 위력이 올라간다.",
+    "flavorTextJa": "草を からませて 相手を 転ばせる。相手が 重いほど 威力が あがる。",
+    "flavorTextZh": "用草缠住并绊倒对手。 对手越重，威力越大。",
     "updatedInChampions": false
   },
   {
@@ -2884,6 +3242,8 @@
     "pp": 20,
     "flavorTextEn": "Gliding on the ground, the user attacks the target. This move always goes first on Grassy Terrain.",
     "flavorTextKo": "지면에 미끄러지듯 상대를 공격한다. 그래스필드일 때 반드시 선제공격할 수 있다.",
+    "flavorTextJa": "地面を 滑るように 相手を 攻撃。 グラスフィールドの時 必ず 先制攻撃 できる。",
+    "flavorTextZh": "仿佛在地面上滑行般地攻击对手。 在青草场地上， 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -2900,6 +3260,8 @@
     "pp": 10,
     "flavorTextEn": "The user turns the ground into Grassy Terrain for five turns. This restores the HP of Pokémon on the ground a little every turn and powers up Grass-type moves.",
     "flavorTextKo": "5턴 동안 그래스필드로 만든다. 땅에 있으면 매 턴 회복한다. 풀타입의 위력이 올라간다.",
+    "flavorTextJa": "５ターンの 間 グラスフィールドにする。 地面にいると 毎ターン 回復する。 くさタイプの 威力が あがる。",
+    "flavorTextZh": "在５回合内变成青草场地。 地面上的宝可梦每回合都能回复。 草属性的招式威力还会提高。",
     "updatedInChampions": false
   },
   {
@@ -2916,6 +3278,8 @@
     "pp": 12,
     "flavorTextEn": "The user inflicts damage by dropping an apple from high above. This also lowers the target's Defense stat.",
     "flavorTextKo": "높은 곳에서 사과를 떨어뜨려서 데미지를 준다. 상대의 방어를 떨어뜨린다.",
+    "flavorTextJa": "高いところから りんごを 落として ダメージを 与える。 相手の 防御を 下げる。",
+    "flavorTextZh": "从高处落下苹果， 给予对手伤害。 可降低对手的防御。",
     "updatedInChampions": true,
     "championsEffectEn": "Lowers the target's Defense stat by 1 stage. This move's power is boosted by 50% when the Gravity status is active."
   },
@@ -2933,6 +3297,8 @@
     "pp": 5,
     "flavorTextEn": "Enables Flying types or Pokémon with the Levitate Ability to be hit by Ground-type moves for five turns. Moves that involve flying can't be used.",
     "flavorTextKo": "5턴 동안 부유나 비행타입에 땅타입의 기술이 맞게 된다. 공중으로 나는 기술도 사용할 수 없다.",
+    "flavorTextJa": "５ターンの間 ふゆうや ひこうタイプに じめんタイプの 技が 当たるようになる。 空中に 飛ぶ 技も 使えない。",
+    "flavorTextZh": "在５回合内，飘浮特性和飞行属性的 宝可梦会被地面属性的招式击中。 飞向空中的招式也将无法使用。",
     "updatedInChampions": false
   },
   {
@@ -2949,6 +3315,8 @@
     "pp": 20,
     "flavorTextEn": "The user's body grows all at once, boosting the Attack and Sp. Atk stats.",
     "flavorTextKo": "몸을 일시에 크게 성장시켜 공격과 특수공격을 올린다.",
+    "flavorTextJa": "体を 一気に 大きく 生長させて 攻撃と 特攻を あげる。",
+    "flavorTextZh": "让身体一下子长大， 从而提高攻击和特攻。",
     "updatedInChampions": true,
     "championsEffectEn": "Boosts the user's Attack and Sp. Atk stats by 1 stage. In harsh sunlight these stats will be boosted by 2 stages instead."
   },
@@ -2966,6 +3334,8 @@
     "pp": 10,
     "flavorTextEn": "The user employs its psychic power to average its Defense and Sp. Def stats with those of the target.",
     "flavorTextKo": "초능력으로 자신과 상대의 방어와 특수방어를 더해서 반으로 나눈다.",
+    "flavorTextJa": "超能力で 自分と 相手の 防御と 特防を たして 半分に わける。",
+    "flavorTextZh": "利用超能力将自己和对手的 防御和特防相加， 再进行平分。",
     "updatedInChampions": false
   },
   {
@@ -2982,6 +3352,8 @@
     "pp": 10,
     "flavorTextEn": "The user employs its psychic power to switch changes to its Defense and Sp. Def stats with the target.",
     "flavorTextKo": "초능력으로 자신과 상대의 방어와 특수방어의 능력 변화를 교체한다.",
+    "flavorTextJa": "超能力で 自分と 相手の 防御と 特防の 能力変化を 入れ替える。",
+    "flavorTextZh": "利用超能力互换 自己和对手的防御 以及特防的能力变化。",
     "updatedInChampions": false
   },
   {
@@ -2998,6 +3370,8 @@
     "pp": 5,
     "flavorTextEn": "A vicious tearing attack with big pincers. The target faints instantly if this attack hits.",
     "flavorTextKo": "큰 집게로 상대를 베어 갈라 공격한다. 맞으면 일격에 기절한다.",
+    "flavorTextJa": "大きな ハサミで 相手を 切り裂いて 攻撃する。 当たれば 一撃で ひんしに する。",
+    "flavorTextZh": "用大钳子或剪刀等 夹断对手进行攻击。 只要命中就会一击濒死。",
     "updatedInChampions": false
   },
   {
@@ -3014,6 +3388,8 @@
     "pp": 5,
     "flavorTextEn": "The user shoots filthy garbage at the target to attack. This may also poison the target.",
     "flavorTextKo": "더러운 쓰레기를 상대에게 부딪쳐서 공격한다. 독 상태로 만들 때가 있다.",
+    "flavorTextJa": "汚い ゴミを 相手に ぶつけて 攻撃する。 毒状態に することが ある。",
+    "flavorTextZh": "用肮脏的垃圾 撞向对手进行攻击。 有时会让对手陷入中毒状态。",
     "updatedInChampions": false
   },
   {
@@ -3030,6 +3406,8 @@
     "pp": 5,
     "flavorTextEn": "The user tackles the target with a high-speed spin. The slower the user is than the target, the greater the move's power.",
     "flavorTextKo": "몸을 고속으로 회전시켜 몸통박치기한다. 상대보다 스피드가 낮을수록 위력은 올라간다.",
+    "flavorTextJa": "体を 高速に 回転させて 体当たりする。相手より 素早さが 低いほど 強い。",
+    "flavorTextZh": "让身体高速旋转并撞击对手。 速度比对手越慢，威力越大。",
     "updatedInChampions": false
   },
   {
@@ -3046,6 +3424,8 @@
     "pp": 10,
     "flavorTextEn": "The user swings its strong, heavy fist at the target to inflict damage. This also lowers the user's Speed stat.",
     "flavorTextKo": "강하고 무거운 주먹을 휘둘러 데미지를 준다. 자신의 스피드가 떨어진다.",
+    "flavorTextJa": "強くて 重い こぶしを ふるって ダメージを 与える。 自分の 素早さが さがる。",
+    "flavorTextZh": "挥舞强力而沉重的拳头， 给予对手伤害。 自己的速度会降低。",
     "updatedInChampions": false
   },
   {
@@ -3062,6 +3442,8 @@
     "pp": 10,
     "flavorTextEn": "The target is crushed with an arm, a claw, or the like to inflict damage. The more HP the target has left, the greater the move's power.",
     "flavorTextKo": "팔이나 집게로 상대를 압박한다. 상대의 HP 가 남아 있을수록 위력이 올라간다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -3078,6 +3460,8 @@
     "pp": 30,
     "flavorTextEn": "The user creates a haze that eliminates every stat change among all the Pokémon engaged in battle.",
     "flavorTextKo": "흑안개를 뿜어 배틀에 참가 중인 포켓몬 전원의 능력 변화를 원래대로 돌린다.",
+    "flavorTextJa": "黒い霧を だして 戦闘に でている ポケモン 全員の 能力変化を もとに もどす。",
+    "flavorTextZh": "升起黑雾，将正在场上战斗的 全体宝可梦的能力变回原点。",
     "updatedInChampions": false
   },
   {
@@ -3094,6 +3478,8 @@
     "pp": 5,
     "flavorTextEn": "The user smashes into the target in a full-body tackle. This also lowers the user’s Defense and Sp. Def stats.",
     "flavorTextKo": "온 힘을 다한 몸통박치기를 날린다. 자신의 방어력이 떨어진다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -3110,6 +3496,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks the target with a hazardous full-power headbutt. This also damages the user terribly.",
     "flavorTextKo": "목숨을 걸고 혼신의 힘으로 상대에게 박치기를 한다. 자신도 굉장한 데미지를 입는다.",
+    "flavorTextJa": "命を 懸けて こん身の 力で 相手に ずつきを する。 自分も ものすごい ダメージを 受ける。",
+    "flavorTextZh": "拼命使出浑身力气， 向对手进行头锤攻击。 自己也会受到非常大的伤害。",
     "updatedInChampions": false
   },
   {
@@ -3126,6 +3514,8 @@
     "pp": 5,
     "flavorTextEn": "The user makes a soothing bell chime to cure the status conditions of all its fellow party Pokémon and allies.",
     "flavorTextKo": "기분 좋은 방울소리를 들려주어 같은 편 전원의 상태 이상을 회복한다.",
+    "flavorTextJa": "心地好い 鈴の 音色を 聞かせて 味方 全員の 状態異常を 回復 する。",
+    "flavorTextZh": "让同伴听舒适的铃音， 从而治愈我方全员的异常状态。",
     "updatedInChampions": false
   },
   {
@@ -3142,6 +3532,8 @@
     "pp": 10,
     "flavorTextEn": "The user faints. In return, the Pokémon taking its place will have its HP restored and status conditions cured.",
     "flavorTextKo": "자신은 기절하지만 교대하여 나오는 포켓몬의 상태 이상과 HP를 회복한다.",
+    "flavorTextJa": "自分は ひんしに なるが 控えから でてくる ポケモンの 状態異常と ＨＰを 回復する。",
+    "flavorTextZh": "虽然自己陷入濒死， 但可以治愈后备上场的 宝可梦的异常状态以及回复ＨＰ。",
     "updatedInChampions": false
   },
   {
@@ -3158,6 +3550,8 @@
     "pp": 10,
     "flavorTextEn": "The user emits a healing pulse that restores the target's HP by up to half its max HP.",
     "flavorTextKo": "치유파동을 날려서 최대 HP의 절반만큼 상대의 HP를 회복한다.",
+    "flavorTextJa": "いやしのはどうを とばして 最大ＨＰの 半分 相手の ＨＰを 回復する。",
+    "flavorTextZh": "放出治愈波动， 从而回复对手 最大ＨＰ的一半。",
     "updatedInChampions": false
   },
   {
@@ -3174,6 +3568,8 @@
     "pp": 10,
     "flavorTextEn": "The user slams into the target with its flame-covered body. The more the user outweighs the target, the greater the move's power.",
     "flavorTextKo": "불타는 몸으로 상대에게 부딪쳐서 공격한다. 자신이 상대보다 무거울수록 위력이 올라간다.",
+    "flavorTextJa": "燃える 体で 相手に ぶつかって 攻撃する。 自分が 相手より 重いほど 威力が あがる。",
+    "flavorTextZh": "用燃烧的身体撞向对手进行攻击。 自己比对手越重，威力越大。",
     "updatedInChampions": false
   },
   {
@@ -3190,6 +3586,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by exhaling hot breath on opposing Pokémon. This may also leave them with a burn.",
     "flavorTextKo": "뜨거운 숨결을 상대에게 내뿜어 공격한다. 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "熱い 息を 相手に 吹きつけて 攻撃する。 やけど状態に することが ある。",
+    "flavorTextZh": "将炎热的气息 吹向对手进行攻击。 有时会让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -3206,6 +3604,8 @@
     "pp": 10,
     "flavorTextEn": "The user slams into the target with its heavy body. The more the user outweighs the target, the greater the move's power.",
     "flavorTextKo": "무거운 몸으로 상대에게 부딪쳐 공격한다. 자신이 상대보다 무거울수록 위력이 올라간다.",
+    "flavorTextJa": "重たい 体で 相手に ぶつかって 攻撃する。 自分が 相手より 重いほど 威力が あがる。",
+    "flavorTextZh": "用沉重的身体撞向对手进行攻击。 自己比对手越重，威力越大。",
     "updatedInChampions": false
   },
   {
@@ -3222,6 +3622,8 @@
     "pp": 20,
     "flavorTextEn": "The user assists an ally by boosting the power of that ally's attack.",
     "flavorTextKo": "동료를 돕는다. 도움받은 포켓몬이 쓰는 기술의 위력은 여느 때보다 커진다.",
+    "flavorTextJa": "仲間を 助ける。 てだすけ された ポケモンの 技の 威力は いつもより 大きくなる。",
+    "flavorTextZh": "帮助伙伴。 被帮助的宝可梦， 其招式威力变得比平时大。",
     "updatedInChampions": false
   },
   {
@@ -3238,6 +3640,8 @@
     "pp": 10,
     "flavorTextEn": "This relentless attack does massive damage to a target affected by status conditions.",
     "flavorTextKo": "엎친 데 덮친 격으로 공격한다. 상태 이상인 상대에게 큰 데미지를 준다.",
+    "flavorTextJa": "たたみかける ように 攻撃する。 状態異常の 相手に 大きな ダメージを 与える。",
+    "flavorTextZh": "接二连三地进行攻击。 对处于异常状态的对手 给予较大的伤害。",
     "updatedInChampions": false
   },
   {
@@ -3254,6 +3658,8 @@
     "pp": 10,
     "flavorTextEn": "The user fiercely attacks the target using its entire body.",
     "flavorTextKo": "온몸을 써서 상대에게 맹렬히 어택한다.",
+    "flavorTextJa": "全身を 使って 相手に 猛アタックする。",
+    "flavorTextZh": "使出全身力量， 猛攻对手。",
     "updatedInChampions": false
   },
   {
@@ -3270,6 +3676,8 @@
     "pp": 10,
     "flavorTextEn": "The target is attacked with a knee kick from a jump. If this move misses, the user takes damage instead.",
     "flavorTextKo": "점프해서 무릎차기로 상대를 공격한다. 빗나가면 자신이 데미지를 입는다.",
+    "flavorTextJa": "ジャンプからの ひざげりで 相手を 攻撃する。 はずすと 自分が ダメージを 受ける。",
+    "flavorTextZh": "跳起后用膝盖撞对手进行攻击。 如果撞偏则自己会受到伤害。",
     "updatedInChampions": false
   },
   {
@@ -3286,6 +3694,8 @@
     "pp": 5,
     "flavorTextEn": "The user stabs the target with a horn that rotates like a drill. The target faints instantly if this attack hits.",
     "flavorTextKo": "회전하는 뿔을 상대에게 꿰찔러서 공격한다. 맞으면 일격에 기절한다.",
+    "flavorTextJa": "回転する つのを 相手に 突き刺して 攻撃する。 当たれば 一撃で ひんしに する。",
+    "flavorTextZh": "用旋转的角 刺入对手进行攻击。 只要命中就会一击濒死。",
     "updatedInChampions": false
   },
   {
@@ -3302,6 +3712,8 @@
     "pp": 10,
     "flavorTextEn": "The user drains the target's energy with its horns. The user's HP is restored by up to half the damage taken by the target.",
     "flavorTextKo": "뿔을 꿰찔러서 상대의 양분을 흡수한다. 입힌 데미지의 절반에 해당하는 HP를 회복할 수 있다.",
+    "flavorTextJa": "つのを 突き刺して 相手の 養分を 吸い取る。 与えた ダメージの 半分の ＨＰを 回復できる。",
+    "flavorTextZh": "将角刺入，吸取对手的养分。 可以回复给予对手 伤害的一半ＨＰ。",
     "updatedInChampions": false
   },
   {
@@ -3318,6 +3730,8 @@
     "pp": 40,
     "flavorTextEn": "The user howls loudly to rouse itself and its allies. This boosts their Attack stats.",
     "flavorTextKo": "큰 소리로 짖고 기합을 높여 자신과 같은 편의 공격을 올린다.",
+    "flavorTextJa": "大声で ほえて 気合を 高め 自分と 味方の 攻撃を あげる。",
+    "flavorTextZh": "大声吼叫提高气势， 从而提高自己和同伴的攻击。",
     "updatedInChampions": false
   },
   {
@@ -3334,6 +3748,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by wrapping its opponent in a fierce wind. This may also confuse the target.",
     "flavorTextKo": "강렬한 바람으로 상대를 둘러싸서 공격한다. 상대를 혼란시킬 때가 있다.",
+    "flavorTextJa": "強烈な 風で 相手を 包みこんで 攻撃する。 相手を 混乱させることが ある。",
+    "flavorTextZh": "用强烈的风席卷 对手进行攻击。 有时会使对手混乱。",
     "updatedInChampions": false
   },
   {
@@ -3350,6 +3766,8 @@
     "pp": 5,
     "flavorTextEn": "The target is hit with a watery blast. The user can't move on the next turn.",
     "flavorTextKo": "물의 대포를 상대에게 발사해서 공격한다. 다음 턴은 움직일 수 없다.",
+    "flavorTextJa": "水の 大砲を 相手に 発射して 攻撃する。 次の ターンは 動けなくなる。",
+    "flavorTextZh": "向对手喷射水炮进行攻击。 下一回合自己将无法动弹。",
     "updatedInChampions": false
   },
   {
@@ -3366,6 +3784,8 @@
     "pp": 5,
     "flavorTextEn": "The target is blasted by a huge volume of water launched under great pressure.",
     "flavorTextKo": "대량의 물을 세찬 기세로 상대에게 발사하여 공격한다.",
+    "flavorTextJa": "大量の 水を 激しい 勢いで 相手に 発射して 攻撃する。",
+    "flavorTextZh": "向对手猛烈地喷射 大量水流进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -3382,6 +3802,8 @@
     "pp": 5,
     "flavorTextEn": "The target is attacked with a powerful beam. The user can't move on the next turn.",
     "flavorTextKo": "강한 광선을 상대에게 발사하여 공격한다. 다음 턴은 움직일 수 없다.",
+    "flavorTextJa": "強い 光線を 相手に 発射して 攻撃する。 次の ターンは 動けなくなる。",
+    "flavorTextZh": "向对手发射 强烈的光线进行攻击。 下一回合自己将无法动弹。",
     "updatedInChampions": false
   },
   {
@@ -3398,6 +3820,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by letting loose a horribly loud, resounding cry.",
     "flavorTextKo": "시끄럽게 울리는 큰 진동을 상대에게 전달하여 공격한다.",
+    "flavorTextJa": "うるさく 響く 大きな 振動を 相手に 与えて 攻撃する。",
+    "flavorTextZh": "给予对手又吵又响的 巨大震动进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -3414,6 +3838,8 @@
     "pp": 20,
     "flavorTextEn": "The user employs hypnotic suggestion to make the target fall asleep.",
     "flavorTextKo": "졸음을 유도하는 암시를 걸어서 상대를 잠듦 상태로 만든다.",
+    "flavorTextJa": "眠気を 誘う 暗示を かけて 相手を 眠り状態に する。",
+    "flavorTextZh": "施以诱导睡意的暗示， 让对手陷入睡眠状态。",
     "updatedInChampions": false
   },
   {
@@ -3430,6 +3856,8 @@
     "pp": 10,
     "flavorTextEn": "The target is struck with an icy-cold beam of energy. This may also leave the target frozen.",
     "flavorTextKo": "냉동빔을 상대에게 발사하여 공격한다. 얼음 상태로 만들 때가 있다.",
+    "flavorTextJa": "凍える ビームを 相手に 発射して 攻撃する。 こおり状態に することが ある。",
+    "flavorTextZh": "向对手发射 冰冻光束进行攻击。 有时会让对手陷入冰冻状态。",
     "updatedInChampions": false
   },
   {
@@ -3446,6 +3874,8 @@
     "pp": 15,
     "flavorTextEn": "The user bites with cold-infused fangs. This may also make the target flinch or leave it frozen.",
     "flavorTextKo": "냉기를 품은 이빨로 문다. 상대를 풀죽게 하거나 얼음 상태로 만들 때가 있다.",
+    "flavorTextJa": "冷気を ひめた キバで かみつく。 相手を ひるませたり こおり状態に することが ある。",
+    "flavorTextZh": "用藏有冷气的牙齿咬住对手。 有时会使对手畏缩 或陷入冰冻状态。",
     "updatedInChampions": false
   },
   {
@@ -3462,6 +3892,8 @@
     "pp": 10,
     "flavorTextEn": "The user swings its strong, heavy fist at the target to inflict damage. This also lowers the user's Speed stat.",
     "flavorTextKo": "강하고 무거운 주먹을 휘둘러 데미지를 준다. 자신의 스피드가 떨어진다.",
+    "flavorTextJa": "強くて 重い こぶしを ふるって ダメージを 与える。 自分の 素早さが さがる。",
+    "flavorTextZh": "挥舞强力而沉重的拳头， 给予对手伤害。 自己的速度会降低。",
     "updatedInChampions": false
   },
   {
@@ -3478,6 +3910,8 @@
     "pp": 15,
     "flavorTextEn": "The target is attacked with an icy punch. This may also leave the target frozen.",
     "flavorTextKo": "냉기를 담은 펀치로 상대를 공격한다. 얼음 상태로 만들 때가 있다.",
+    "flavorTextJa": "冷気を こめた パンチで 相手を 攻撃する。 こおり状態に することが ある。",
+    "flavorTextZh": "用充满寒气的拳头攻击对手。 有时会让对手陷入冰冻状态。",
     "updatedInChampions": false
   },
   {
@@ -3494,6 +3928,8 @@
     "pp": 30,
     "flavorTextEn": "The user flash-freezes chunks of ice and hurls them at the target. This move always goes first.",
     "flavorTextKo": "얼음덩어리를 순식간에 만들어 상대에게 빠르게 쏜다. 반드시 선제공격을 할 수 있다.",
+    "flavorTextJa": "氷の塊を 一瞬で つくり 相手に 素早く 放つ。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "瞬间制作冰块， 快速地扔向对手。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -3510,6 +3946,8 @@
     "pp": 15,
     "flavorTextEn": "The user covers its feet in thin ice and twirls around, slamming into the target. This move's spinning motion also destroys the terrain.",
     "flavorTextKo": "발에 낀 얼음을 두르고 빙글빙글 회전하며 부딪친다. 회전 운동에 의해 필드가 파괴된다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -3526,6 +3964,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by crashing large icicles onto the target. This may also make the target flinch.",
     "flavorTextKo": "큰 고드름을 격렬하게 부딪쳐서 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "大きな 氷柱を 激しく ぶつけて 攻撃する。 相手を ひるませることが ある。",
+    "flavorTextZh": "用大冰柱激烈地 撞向对手进行攻击。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -3542,6 +3982,8 @@
     "pp": 30,
     "flavorTextEn": "The user attacks by launching sharp icicles at the target. This move hits two to five times in a row.",
     "flavorTextKo": "날카로운 고드름을 상대에게 발사하여 공격한다. 2-5회 동안 연속으로 쓴다.",
+    "flavorTextJa": "鋭い 氷柱を 相手に 発射して 攻撃する。 ２ー５回の 間 連続で だす。",
+    "flavorTextZh": "向对手发射 锋利的冰柱进行攻击。 连续攻击２～５次。",
     "updatedInChampions": false
   },
   {
@@ -3558,6 +4000,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks with a gust of chilled air. This also lowers opposing Pokémon's Speed stats.",
     "flavorTextKo": "차가운 냉기를 상대에게 내뿜어 공격한다. 상대의 스피드를 떨어뜨린다.",
+    "flavorTextJa": "凍てつく 冷気を 相手に 吹きつけて 攻撃する。 相手の 素早さを さげる。",
+    "flavorTextZh": "将结冰的冷气 吹向对手进行攻击。 会降低对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -3574,6 +4018,8 @@
     "pp": 10,
     "flavorTextEn": "If opposing Pokémon know any move also known by the user, they are prevented from using it.",
     "flavorTextKo": "상대가 자신과 같은 기술을 배웠다면 상대만 그 기술을 사용할 수 없게 한다.",
+    "flavorTextJa": "相手が 自分と 同じ 技を おぼえていたら 相手だけ その技を 使えなくする。",
+    "flavorTextZh": "如果对手有和自己相同的招式， 那么只有对手无法使用该招式。",
     "updatedInChampions": false
   },
   {
@@ -3590,6 +4036,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks by engulfing the target in an intense fire. This leaves the target with a burn.",
     "flavorTextKo": "격렬한 불꽃으로 상대를 둘러싸 공격한다. 화상 상태로 만든다.",
+    "flavorTextJa": "激しい 炎で 相手を 包みこみ 攻撃する。 やけど状態に する。",
+    "flavorTextZh": "用烈焰包裹住对手进行攻击。 让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -3606,6 +4054,8 @@
     "pp": 20,
     "flavorTextEn": "The target is infested and attacked for four to five turns. The target can't flee during this time.",
     "flavorTextKo": "4-5턴 동안 상대에게 엉겨 붙어서 공격한다. 그동안 상대는 도망갈 수 없다.",
+    "flavorTextJa": "４ー５ターンの 間 相手に まとわりついて 攻撃する。 そのあいだ 相手は 逃げられない。",
+    "flavorTextZh": "在４～５回合内 死缠烂打地进行攻击。 在此期间对手将无法逃走。",
     "updatedInChampions": false
   },
   {
@@ -3622,6 +4072,8 @@
     "pp": 20,
     "flavorTextEn": "The user lays roots that restore its own HP every turn. Because the user is now rooted, it can't switch out.",
     "flavorTextKo": "대지에 뿌리를 박아 매 턴마다 자신의 HP를 회복한다. 뿌리 박고 있으므로 교체할 수 없다.",
+    "flavorTextJa": "大地に 根を 張り 毎ターン 自分の ＨＰを 回復する。 根を 張っているので 入れ替えられない。",
+    "flavorTextZh": "在大地上扎根， 每回合回复自己的ＨＰ。 因为扎根了，所以不能替换宝可梦。",
     "updatedInChampions": false
   },
   {
@@ -3638,6 +4090,8 @@
     "pp": 15,
     "flavorTextEn": "The user instructs the target to reuse the move last used by the target.",
     "flavorTextKo": "상대에게 지시하여 상대가 쓴 기술을 다시 한번 쓰게 할 수 있다.",
+    "flavorTextJa": "相手が 出した 技を 指示して もう一度 出させることが できる。",
+    "flavorTextZh": "向对手下达指示， 让其再次使出刚才的招式。",
     "updatedInChampions": false
   },
   {
@@ -3654,6 +4108,8 @@
     "pp": 15,
     "flavorTextEn": "The user hardens its body's surface like iron, sharply boosting its Defense stat.",
     "flavorTextKo": "피부를 쇠처럼 단단하게 만듦으로써 자신의 방어를 크게 올린다.",
+    "flavorTextJa": "皮膚を 鉄のように 硬くする ことで 自分の 防御を ぐーんと あげる。",
+    "flavorTextZh": "将皮肤变得坚硬如铁， 从而大幅提高自己的防御。",
     "updatedInChampions": false
   },
   {
@@ -3670,6 +4126,8 @@
     "pp": 16,
     "flavorTextEn": "The user slams the target with its steel-hard head. This may also make the target flinch.",
     "flavorTextKo": "강철과 같은 단단한 머리로 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "鋼の ような 硬い 頭で 攻撃する。 相手を ひるませることが ある。",
+    "flavorTextZh": "用钢铁般 坚硬的头部进行攻击。 有时会使对手畏缩。",
     "updatedInChampions": true,
     "championsEffectEn": "Has a 20% chance of making the target flinch."
   },
@@ -3687,6 +4145,8 @@
     "pp": 15,
     "flavorTextEn": "The target is slammed with a steel-hard tail. This may also lower the target's Defense stat.",
     "flavorTextKo": "단단한 꼬리로 상대를 힘껏 쳐서 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "硬い しっぽで 相手を たたきつけて 攻撃する。 相手の 防御を さげることが ある。",
+    "flavorTextZh": "使用坚硬的尾巴 摔打对手进行攻击。 有时会降低对手的防御。",
     "updatedInChampions": false
   },
   {
@@ -3703,6 +4163,8 @@
     "pp": 15,
     "flavorTextEn": "The user summons a torrent around its fist and punches at blinding speed. This move always goes first.",
     "flavorTextKo": "거센 물살을 주먹에 둘러 눈에 보이지 않는 속도로 펀치를 날린다. 반드시 선제공격할 수 있다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -3719,6 +4181,8 @@
     "pp": 10,
     "flavorTextEn": "The user takes a defensive stance while it protects itself from damage. It also lowers the Attack stat of any attacker that makes direct contact.",
     "flavorTextKo": "상대의 공격을 막음과 동시에 방어 태세를 갖춘다. 접촉한 상대의 공격을 떨어뜨린다.",
+    "flavorTextJa": "相手の 攻撃を 防ぐと 同時に 防御態勢になる。 触れた 相手の 攻撃を さげる。",
+    "flavorTextZh": "防住对手攻击的同时， 自己变为防御姿态。 能够降低所接触到的对手的攻击。",
     "updatedInChampions": false
   },
   {
@@ -3735,6 +4199,8 @@
     "pp": 20,
     "flavorTextEn": "The user slaps down the target's held item, making it unusable for that battle. This move does more damage if the target has a held item.",
     "flavorTextKo": "상대의 지닌 물건을 탁 쳐서 떨어뜨려 배틀이 끝날 때까지 사용할 수 없게 한다. 물건을 가진 상대에게는 데미지를 더 준다.",
+    "flavorTextJa": "相手の 持ち物を はたき 落として 戦闘が 終わるまで 使えなくする。 物を持つ 相手には ダメージが増す。",
+    "flavorTextZh": "拍落对手的持有物， 直到战斗结束都不能使用。 对手携带道具时会增加伤害。",
     "updatedInChampions": false
   },
   {
@@ -3751,6 +4217,8 @@
     "pp": 10,
     "flavorTextEn": "The user slashes at the target after kowtowing to make the target let down its guard. This attack never misses.",
     "flavorTextKo": "머리를 조아려 상대를 방심하게 만든 뒤에 베어 버린다. 공격은 반드시 명중한다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -3767,6 +4235,8 @@
     "pp": 5,
     "flavorTextEn": "The user lashes out to vent its frustration toward the target. This move's power is doubled if the user's stats were lowered during this turn.",
     "flavorTextKo": "상대에 대한 울분이 담긴 공격을 한다. 그 턴에 능력이 떨어져 있으면 기술의 위력이 2배가 된다.",
+    "flavorTextJa": "相手への いらだちを ぶつけて 攻撃。 そのターンに 能力を さげられていると 技の 威力が ２倍に なる。",
+    "flavorTextZh": "攻击对手以发泄对其感到的恼怒情绪。 如果在该回合内自身能力遭到降低， 招式的威力会变成２倍。",
     "updatedInChampions": false
   },
   {
@@ -3783,6 +4253,8 @@
     "pp": 5,
     "flavorTextEn": "This move can be used only after the user has used all the other moves it knows in the battle.",
     "flavorTextKo": "배틀 중에 기억하고 있는 기술을 모두 사용하면 그때부터 쓸 수 있는 필살기이다.",
+    "flavorTextJa": "戦闘中に おぼえている 技を すべて 使うと はじめて だせる とっておきの 技。",
+    "flavorTextZh": "当战斗中已学会的招式 全部使用过后， 才能开始使出珍藏的招式。",
     "updatedInChampions": false
   },
   {
@@ -3799,6 +4271,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks to avenge its allies. The more defeated allies there are in the user's party, the greater the move's power.",
     "flavorTextKo": "동료의 한을 풀어 주기 위해 공격한다. 쓰러진 같은 편 포켓몬이 많을수록 기술의 위력이 올라간다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -3815,6 +4289,8 @@
     "pp": 15,
     "flavorTextEn": "The user torches everything around it in an inferno of scarlet flames. This may also leave those it hits with a burn.",
     "flavorTextKo": "새빨간 불꽃으로 자신의 주위에 있는 포켓몬을 공격한다. 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "真っ赤な 炎で 自分の 周りに いるものを 攻撃する。 やけど状態に することが ある。",
+    "flavorTextZh": "用熊熊烈火 攻击自己周围所有的宝可梦。 有时会陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -3831,6 +4307,8 @@
     "pp": 15,
     "flavorTextEn": "The user handles a sharp leaf like a sword and cuts the target to inflict damage. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "잎사귀를 칼처럼 이용해 상대를 베어 공격한다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "はっぱを 剣のように あやつり 相手を 切りつけて 攻撃する。 急所に 当たりやすい。",
+    "flavorTextZh": "像用剑一般操纵叶片 切斩对手进行攻击。 容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -3847,6 +4325,8 @@
     "pp": 5,
     "flavorTextEn": "The user whips up a storm of leaves around the target. The recoil from this move harshly lowers the user's Sp. Atk stat.",
     "flavorTextKo": "뾰족한 잎사귀로 상대에게 돌풍을 일으킨다. 사용하면 반동으로 자신의 특수공격이 크게 떨어진다.",
+    "flavorTextJa": "とがった はっぱで 相手に あらしを おこす。使うと 反動で 自分の 特攻が がくっと さがる。",
+    "flavorTextZh": "用尖尖的叶片向对手卷起风暴。 使用之后因为反作用力 自己的特攻会大幅降低。",
     "updatedInChampions": false
   },
   {
@@ -3863,6 +4343,8 @@
     "pp": 10,
     "flavorTextEn": "The user drains the target's blood. The user's HP is restored by up to half the damage taken by the target.",
     "flavorTextKo": "피를 빨아서 상대를 공격한다. 준 데미지의 절반을 HP로 회복한다.",
+    "flavorTextJa": "血を 吸い取って 相手を 攻撃する。 与えた ダメージの 半分の ＨＰを 回復できる。",
+    "flavorTextZh": "吸取血液攻击对手。 可以回复给予对手 伤害的一半ＨＰ。",
     "updatedInChampions": false
   },
   {
@@ -3879,6 +4361,8 @@
     "pp": 10,
     "flavorTextEn": "A seed is planted on the target. It steals some HP from the target every turn.",
     "flavorTextKo": "씨가 뿌려진 상대의 HP를 매 턴 조금씩 흡수하여 자신의 HP를 회복한다.",
+    "flavorTextJa": "植えつけた 相手の ＨＰを 毎ターン 少しだけ 吸い取り 自分の ＨＰを 回復する。",
+    "flavorTextZh": "植入寄生种子后，将在每回合 一点一点吸取对手的ＨＰ， 从而用来回复自己的ＨＰ。",
     "updatedInChampions": false
   },
   {
@@ -3895,6 +4379,8 @@
     "pp": 10,
     "flavorTextEn": "The user scatters mysterious water around and restores the HP of itself and its ally Pokémon currently in the battle.",
     "flavorTextKo": "신비한 물을 흩뿌려서 자신과 배틀에 나와 있는 같은 편의 HP를 회복한다.",
+    "flavorTextJa": "不思議な 水を ふりまいて 自分と 場にいる 味方の ＨＰを 回復する。",
+    "flavorTextZh": "喷洒出神奇的水， 回复自己和场上同伴的ＨＰ。",
     "updatedInChampions": false
   },
   {
@@ -3911,6 +4397,8 @@
     "pp": 5,
     "flavorTextEn": "Drawing power from the Eternal Flower, the user fires a powerful beam of light. This also damages the user quite a lot.",
     "flavorTextKo": "영원의 꽃의 파워를 빌려서 강력한 광선을 쏜다. 자신도 상당한 데미지를 입는다.",
+    "flavorTextJa": "永遠の花 の パワーを かりて 強力な 光線を 撃ちだす。 自分も かなりの ダメージを 受ける。",
+    "flavorTextZh": "借用永恒之花的力量， 发射出强力光线。 自己也会受到不小的伤害。",
     "updatedInChampions": false
   },
   {
@@ -3927,6 +4415,8 @@
     "pp": 30,
     "flavorTextEn": "A wondrous wall of light is put up to reduce damage from special moves for five turns.",
     "flavorTextKo": "5턴 동안 이상한 장막을 쳐서 상대로부터 받는 특수공격의 데미지를 약하게 한다.",
+    "flavorTextJa": "５ターンの 間 不思議な かべで 相手から 受ける 特殊攻撃の ダメージを 弱める。",
+    "flavorTextZh": "利用神奇的墙壁， 在５回合内减弱从对手那里 受到的特殊攻击的伤害。",
     "updatedInChampions": false
   },
   {
@@ -3943,6 +4433,8 @@
     "pp": 10,
     "flavorTextEn": "The user slams into the target using a full-force blast of water. This may also lower the target's Defense stat.",
     "flavorTextKo": "물의 힘으로 상대에게 부딪쳐서 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "水の 力で 相手に ぶつかって 攻撃する。 相手の 防御を さげる ことがある。",
+    "flavorTextZh": "用水之力量撞向对手进行攻击。 有时会降低对手的防御。",
     "updatedInChampions": false
   },
   {
@@ -3959,6 +4451,8 @@
     "pp": 5,
     "flavorTextEn": "The user takes sure aim at the target. This ensures the user's next move does not miss that target.",
     "flavorTextKo": "조준을 잘 맞춰 다음 공격이 반드시 상대에게 명중하도록 한다.",
+    "flavorTextJa": "照準を しっかり あわせて 次の 攻撃が 必ず 相手に 当たるように する。",
+    "flavorTextZh": "紧紧瞄准对手， 下次攻击必定会打中。",
     "updatedInChampions": false
   },
   {
@@ -3975,6 +4469,8 @@
     "pp": 20,
     "flavorTextEn": "A powerful low kick that makes the target fall over. The heavier the target, the greater the move's power.",
     "flavorTextKo": "발을 강하게 걸고 상대를 넘어뜨려 공격한다. 상대가 무거울수록 위력이 올라간다.",
+    "flavorTextJa": "足を 強く けり 相手を 転ばせて 攻撃する。 相手が 重いほど 威力が あがる。",
+    "flavorTextZh": "用力踢对手的脚， 使其摔倒进行攻击。 对手越重，威力越大。",
     "updatedInChampions": false
   },
   {
@@ -3991,6 +4487,8 @@
     "pp": 20,
     "flavorTextEn": "The user makes a swift attack on the target's legs, which lowers the target's Speed stat.",
     "flavorTextKo": "재빠른 움직임으로 상대의 다리를 노려 공격한다. 상대의 스피드를 떨어뜨린다.",
+    "flavorTextJa": "素早い 動きで 相手の 足を ねらって 攻撃する。 相手の 素早さを さげる。",
+    "flavorTextZh": "以敏捷的动作瞄准 对手的脚进行攻击。 降低对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -4007,6 +4505,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by unleashing a peculiar light that even affects the mind. This also harshly lowers the target's Sp. Def stat.",
     "flavorTextKo": "정신에도 작용하는 기묘한 빛을 발산해서 공격한다. 상대의 특수방어를 크게 떨어뜨린다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -4023,6 +4523,8 @@
     "pp": 15,
     "flavorTextEn": "The user makes a lunge at the target, attacking with full force. This also lowers the target's Attack stat.",
     "flavorTextKo": "전력으로 상대에게 덤벼들며 공격한다. 상대의 공격을 떨어뜨린다.",
+    "flavorTextJa": "全力で 相手に 飛びかかって 攻撃。 相手の 攻撃を さげる。",
+    "flavorTextZh": "全力猛扑对手进行攻击。 从而降低对手的攻击。",
     "updatedInChampions": false
   },
   {
@@ -4039,6 +4541,8 @@
     "pp": 30,
     "flavorTextEn": "The user throws a punch at blinding speed. This move always goes first.",
     "flavorTextKo": "눈에 보이지 않는 굉장한 속도로 펀치를 날린다. 반드시 선제공격을 할 수 있다.",
+    "flavorTextJa": "目にも 留まらぬ ものすごい 速さで パンチを くりだす。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "以迅雷不及掩耳之势出拳。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -4055,6 +4559,8 @@
     "pp": 20,
     "flavorTextEn": "The user scatters a cloud of magic powder that changes the target's type to Psychic.",
     "flavorTextKo": "마법가루를 날려서 상대를 에스퍼타입으로 바꾼다.",
+    "flavorTextJa": "まほうのこなを 浴びせて 相手を エスパータイプに 変化させる。",
+    "flavorTextZh": "向对手喷洒魔法粉， 使对手变为超能力属性。",
     "updatedInChampions": false
   },
   {
@@ -4071,6 +4577,8 @@
     "pp": 10,
     "flavorTextEn": "The user creates a bizarre area in which Pokémon's held items lose their effects for five turns.",
     "flavorTextKo": "이상한 공간을 만든다. 5턴 동안 모든 포켓몬의 도구의 효과가 사라진다.",
+    "flavorTextJa": "まか不思議な 空間を つくる。 ５ターンの間 すべてのポケモンの 道具の 効果が なくなる。",
+    "flavorTextZh": "制造出离奇的空间。 在５回合内所有宝可梦 携带道具的效果都会消失。",
     "updatedInChampions": false
   },
   {
@@ -4087,6 +4595,8 @@
     "pp": 20,
     "flavorTextEn": "The user manipulates magnetic fields, which boosts the Defense and Sp. Def stats of ally Pokémon with the Plus Ability or the Minus Ability.",
     "flavorTextKo": "자기장 조작으로 인해 특성 플러스와 마이너스의 방어, 특수방어가 오른다.",
+    "flavorTextJa": "磁場を 操作 することによって 特性 プラスと マイナスの 防御 特防が あがる。",
+    "flavorTextZh": "通过操控磁场， 会提高特性为正电和负电的 宝可梦的防御和特防。",
     "updatedInChampions": false
   },
   {
@@ -4103,6 +4613,8 @@
     "pp": 10,
     "flavorTextEn": "The user levitates using electrically generated magnetism for five turns.",
     "flavorTextKo": "전기로 만든 자력의 힘으로 허공에 뜬다. 5턴 동안 부유할 수 있다.",
+    "flavorTextJa": "電気で つくった 磁力の 力で 宙に 浮かぶ。 ５ターンの 間 浮遊できる。",
+    "flavorTextZh": "利用电气产生的磁力浮在空中。 在５回合内可以飘浮。",
     "updatedInChampions": false
   },
   {
@@ -4119,6 +4631,8 @@
     "pp": 15,
     "flavorTextEn": "The user fires a blast of tea that it mixed. The user's HP is restored by up to half the damage taken by the target. This may also leave the target with a burn.",
     "flavorTextKo": "휘저은 차를 대포처럼 발사해 준 데미지의 절반을 HP 로 회복한다. 화상 상태로 만들 때도 있다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -4135,6 +4649,8 @@
     "pp": 5,
     "flavorTextEn": "The user pins the target with a dark, arresting look. The target becomes unable to flee.",
     "flavorTextKo": "빨려 들어갈 것 같은 까만 눈빛으로 가만히 응시하여 상대를 배틀에서 도망갈 수 없게 한다.",
+    "flavorTextJa": "吸いこまれるような 黒い まなざしで じっと みつめて 相手を 戦闘から 逃げられなくする。",
+    "flavorTextZh": "用好似要勾人心魂的黑色目光 一动不动地凝视对手， 使其不能从战斗中逃走。",
     "updatedInChampions": false
   },
   {
@@ -4151,6 +4667,8 @@
     "pp": 10,
     "flavorTextEn": "Using its tough and impressive horn, the user rams into the target with no letup.",
     "flavorTextKo": "단단하고 훌륭한 뿔로 마음껏 상대를 꿰찔러서 공격한다.",
+    "flavorTextJa": "硬くて りっぱな つので おもいっきり 相手を 突き刺して 攻撃する。",
+    "flavorTextZh": "用坚硬且华丽的角狠狠地 刺入对手进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -4167,6 +4685,8 @@
     "pp": 5,
     "flavorTextEn": "The target is attacked by a kick launched with muscle-packed power.",
     "flavorTextKo": "굉장한 힘을 담은 킥으로 상대를 걷어차서 공격한다.",
+    "flavorTextJa": "ものすごい 力を こめた キックで 相手を けとばして 攻撃する。",
+    "flavorTextZh": "使出力大无穷的重踢 踢飞对手进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -4183,6 +4703,8 @@
     "pp": 10,
     "flavorTextEn": "The user faints. In return, the target's Attack and Sp. Atk stats are harshly lowered.",
     "flavorTextKo": "자신은 기절하게 되지만 그 대신 상대의 공격과 특수공격을 크게 떨어뜨린다.",
+    "flavorTextJa": "自分は ひんしに なるが そのかわりに 相手の 攻撃と 特攻を がくっと さげる。",
+    "flavorTextZh": "虽然会使自己陷入濒死， 但是能够大幅降低 对手的攻击和特攻。",
     "updatedInChampions": false
   },
   {
@@ -4199,6 +4721,8 @@
     "pp": 10,
     "flavorTextEn": "The user retaliates with much greater force against the opponent that last inflicted damage on it.",
     "flavorTextKo": "기술을 쓰기 전에 마지막으로 받은 기술의 데미지를 늘려서 기술을 쓴 상대에게 돌려준다.",
+    "flavorTextJa": "技を だす前に 最後に 受けた 技の ダメージを 大きくして だした 相手に 返す。",
+    "flavorTextZh": "使出招式前， 将最后受到的招式的伤害 大力返还给对手。",
     "updatedInChampions": false
   },
   {
@@ -4215,6 +4739,8 @@
     "pp": 40,
     "flavorTextEn": "A horrible sound like scraping metal harshly lowers the target's Sp. Def stat.",
     "flavorTextKo": "금속을 긁을 때 나는 듯한 싫은 소리를 들려준다. 상대의 특수방어를 크게 떨어뜨린다.",
+    "flavorTextJa": "金属を こすって でるような いやな 音を 聞かせる。 相手の 特防を がくっと さげる。",
+    "flavorTextZh": "让对手听摩擦金属般 讨厌的声音。 大幅降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -4231,6 +4757,8 @@
     "pp": 10,
     "flavorTextEn": "The user gathers energy from space and boosts its Sp. Atk stat on the first turn, then attacks on the next turn.",
     "flavorTextKo": "1턴째에 우주의 힘을 모아서 특수공격을 올리고 2턴째에 상대를 공격한다.",
+    "flavorTextJa": "１ターン目に 宇宙の 力を 集めることで 特攻が あがり ２ターン目に 相手を 攻撃する。",
+    "flavorTextZh": "第１回合聚集宇宙之力提高特攻， 第２回合攻击对手。",
     "updatedInChampions": false
   },
   {
@@ -4247,6 +4775,8 @@
     "pp": 10,
     "flavorTextEn": "The target is hit with a hard punch fired like a meteor. This may also boost the user’s Attack stat.",
     "flavorTextKo": "혜성과 같은 펀치를 날려서 상대를 공격한다. 자신의 공격이 올라갈 때가 있다.",
+    "flavorTextJa": "すい星の ごとく パンチを くりだして 相手を 攻撃する。 自分の 攻撃が あがることが ある。",
+    "flavorTextZh": "使出彗星般的拳头攻击对手。 有时会提高自己的攻击。",
     "updatedInChampions": false
   },
   {
@@ -4263,6 +4793,8 @@
     "pp": 10,
     "flavorTextEn": "The user compresses its body to make itself look smaller, which sharply boosts its evasiveness.",
     "flavorTextKo": "몸을 축소하여 작게 보임으로써 자신의 회피율을 크게 올린다.",
+    "flavorTextJa": "体を ちぢめて 小さく みせて 自分の 回避率を ぐーんと あげる。",
+    "flavorTextZh": "蜷缩身体显得很小， 从而大幅提高 自己的闪避率。",
     "updatedInChampions": false
   },
   {
@@ -4279,6 +4811,8 @@
     "pp": 20,
     "flavorTextEn": "A retaliatory attack that counters any special move, inflicting double the damage taken.",
     "flavorTextKo": "상대에게 받은 특수공격의 데미지를 2배로 만들어 그 상대에게 돌려준다.",
+    "flavorTextJa": "相手から 受けた 特殊攻撃の ダメージを ２倍に して その相手に 返す。",
+    "flavorTextZh": "从对手那里受到 特殊攻击的伤害将以 ２倍返还给同一个对手。",
     "updatedInChampions": false
   },
   {
@@ -4295,6 +4829,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks everything around it and faints upon using this move. This move's power is boosted on Misty Terrain.",
     "flavorTextKo": "자신의 주위에 있는 모두를 공격하지만 사용하면 기절한다. 미스트필드일 때 위력이 올라간다.",
+    "flavorTextJa": "自分の 周りに いる すべてを 攻撃するが 使うと 瀕死になる。 ミストフィールドで 威力が あがる。",
+    "flavorTextZh": "对自己周围的所有宝可梦进行攻击， 但使出后，自己会陷入濒死。 在薄雾场地上，招式威力会提高。",
     "updatedInChampions": false
   },
   {
@@ -4311,6 +4847,8 @@
     "pp": 10,
     "flavorTextEn": "This protects Pokémon on the ground from status conditions and halves damage from Dragon-type moves for five turns.",
     "flavorTextKo": "5턴 동안 땅에 있으면 상태 이상이 되지 않고 드래곤타입 기술의 데미지도 절반이 된다.",
+    "flavorTextJa": "５ターンの 間 地面にいると 状態異常に ならず ドラゴン技の ダメージも 半分になる。",
+    "flavorTextZh": "在５回合内， 地面上的宝可梦不会陷入异常状态。 龙属性招式的伤害也会减半。",
     "updatedInChampions": false
   },
   {
@@ -4327,6 +4865,8 @@
     "pp": 16,
     "flavorTextEn": "Borrowing the power of the moon, the user attacks the target. This may also lower the target's Sp. Atk stat.",
     "flavorTextKo": "달의 파워를 빌려서 상대를 공격한다. 상대의 특수공격을 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "月の パワーを かりて 相手を 攻撃する。 相手の 特攻を さげる ことがある。",
+    "flavorTextZh": "借用月亮的力量攻击对手。 有时会降低对手的特攻。",
     "updatedInChampions": true,
     "championsEffectEn": "Has a 10% chance of lowering the target's Sp. Atk stat by 1 stage."
   },
@@ -4344,6 +4884,8 @@
     "pp": 5,
     "flavorTextEn": "The user restores its own HP. The amount of HP regained varies with the weather.",
     "flavorTextKo": "자신의 HP를 회복한다. 날씨에 따라 회복량이 변한다.",
+    "flavorTextJa": "自分の ＨＰを 回復する。 天気に よって 回復の 量が 変化する。",
+    "flavorTextZh": "回复自己的ＨＰ。 根据天气的不同， 回复量也会有所变化。",
     "updatedInChampions": false
   },
   {
@@ -4360,6 +4902,8 @@
     "pp": 5,
     "flavorTextEn": "The user restores its own HP. The amount of HP regained varies with the weather.",
     "flavorTextKo": "자신의 HP를 회복한다. 날씨에 따라 회복량이 변한다.",
+    "flavorTextJa": "自分の ＨＰを 回復する。 天気に よって 回復の 量が 変化する。",
+    "flavorTextZh": "回复自己的ＨＰ。 根据天气的不同， 回复量也会有所变化。",
     "updatedInChampions": false
   },
   {
@@ -4376,6 +4920,8 @@
     "pp": 15,
     "flavorTextEn": "The user performs a spin attack that can also eliminate the effects of such moves as Bind, Wrap, and Leech Seed. This also poisons opposing Pokémon.",
     "flavorTextKo": "회전해서 상대를 공격한다. 조이기, 김빨말이, 씨뿌리기 등의 효과를 날려 버린다. 상대를 독 상태로 만든다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -4392,6 +4938,8 @@
     "pp": 10,
     "flavorTextEn": "The user hurls mud in the target's face to inflict damage and lower its accuracy.",
     "flavorTextKo": "상대의 얼굴 등에 진흙을 내던져서 공격한다. 명중률을 떨어뜨린다.",
+    "flavorTextJa": "相手の 顔などに 泥を 投げつけて 攻撃する。 命中率を さげる。",
+    "flavorTextZh": "向对手的脸等 投掷泥块进行攻击。 会降低对手的命中率。",
     "updatedInChampions": false
   },
   {
@@ -4408,6 +4956,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by shooting muddy water at opposing Pokémon. This may also lower their accuracy.",
     "flavorTextKo": "탁해진 물을 상대에게 발사하여 공격한다. 명중률을 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "濁った 水を 相手に 発射して 攻撃する。 命中率を さげることが ある。",
+    "flavorTextZh": "向对手喷射 浑浊的水进行攻击。 有时会降低对手的命中率。",
     "updatedInChampions": false
   },
   {
@@ -4424,6 +4974,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks by hurling a blob of mud at the target. This also lowers the target's Speed stat.",
     "flavorTextKo": "진흙 덩어리를 상대에게 내던져서 공격한다. 동시에 상대의 스피드를 떨어뜨린다.",
+    "flavorTextJa": "泥の 塊を 相手に 投げつけて 攻撃する。 同時に 相手の 素早さを さげる。",
+    "flavorTextZh": "向对手投掷 泥块进行攻击。 同时降低对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -4440,6 +4992,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by breathing a special, hot fire. This also lowers the target's Sp. Atk stat.",
     "flavorTextKo": "입에서 내뱉는 아주 뜨거운 불꽃으로 공격한다. 상대의 특수공격을 떨어뜨린다.",
+    "flavorTextJa": "口から 吐きだす 特別 熱い 炎で 攻撃する。 相手の 特攻を さげる。",
+    "flavorTextZh": "从口中喷出特别灼热的 火焰进行攻击。 降低对手的特攻。",
     "updatedInChampions": false
   },
   {
@@ -4456,6 +5010,8 @@
     "pp": 20,
     "flavorTextEn": "The user stimulates its brain by thinking bad thoughts. This sharply boosts the user's Sp. Atk stat.",
     "flavorTextKo": "나쁜 일을 생각해서 머리를 활성화시킨다. 자신의 특수공격을 크게 올린다.",
+    "flavorTextJa": "悪いことを 考えて 頭を 活性化させる。 自分の 特攻を ぐーんと あげる。",
+    "flavorTextZh": "谋划诡计，激活头脑。 大幅提高自己的特攻。",
     "updatedInChampions": false
   },
   {
@@ -4472,6 +5028,8 @@
     "pp": 12,
     "flavorTextEn": "The user looses a pitch-black shock wave at the target to inflict damage. This may also lower the target's accuracy.",
     "flavorTextKo": "암흑의 충격파를 날려서 상대를 공격한다. 명중률을 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "暗黒の 衝撃波を とばして 相手を 攻撃する。 命中率を さげることが ある。",
+    "flavorTextZh": "放出黑暗的冲击波攻击对手。 有时会降低对手的命中率。",
     "updatedInChampions": true,
     "championsEffectEn": "Has a 40% chance of lowering the target's accuracy by 1 stage."
   },
@@ -4489,6 +5047,8 @@
     "pp": 15,
     "flavorTextEn": "The user makes the target see a frightening mirage. It inflicts damage equal to the user's level.",
     "flavorTextKo": "무시무시한 환상을 보게 해서 자신의 레벨과 똑같은 만큼의 데미지를 상대에게 준다.",
+    "flavorTextJa": "恐ろしい 幻を みせて 自分の レベルと 同じだけの ダメージを 相手に 与える。",
+    "flavorTextZh": "显示恐怖幻影， 只给予对手 和自己等级相同的伤害。",
     "updatedInChampions": false
   },
   {
@@ -4505,6 +5065,8 @@
     "pp": 15,
     "flavorTextEn": "The user slashes the target the instant an opportunity arises. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "순간적으로 틈을 노려 상대를 베어 버린다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "一瞬の すきを ついて 相手を 切りはらう。 急所に 当たりやすい。",
+    "flavorTextZh": "抓住瞬间的空隙 切斩对手。 容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -4521,6 +5083,8 @@
     "pp": 30,
     "flavorTextEn": "Letting out a noble roar, the user intimidates the target and lowers the target's Attack and Sp. Atk stats.",
     "flavorTextKo": "우렁차게 부르짖어서 상대를 위협하여 상대의 공격과 특수공격을 떨어뜨린다.",
+    "flavorTextJa": "おたけびを あげて 相手を 威嚇し 相手の 攻撃と 特攻を さげる。",
+    "flavorTextZh": "发出战吼威吓对手， 从而降低对手的攻击和特攻。",
     "updatedInChampions": false
   },
   {
@@ -4537,6 +5101,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks by nuzzling its electrified cheeks against the target. This also leaves the target with paralysis.",
     "flavorTextKo": "전기가 흐르는 볼을 비벼서 공격한다. 상대를 마비 상태로 만든다.",
+    "flavorTextJa": "電気を 帯びた ほっぺを すりつけて 攻撃。 相手を まひ状態に する。",
+    "flavorTextZh": "将带电的脸颊 蹭蹭对手进行攻击。 让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -4553,6 +5119,8 @@
     "pp": 10,
     "flavorTextEn": "The user rampages and attacks for two to three turns. The user then becomes confused.",
     "flavorTextKo": "2-3턴 동안 마구 난동 부려서 공격한다. 난동 부린 뒤에는 혼란에 빠진다.",
+    "flavorTextJa": "２ー３ターンの 間 暴れまくって 攻撃する。 暴れたあとは 混乱する。",
+    "flavorTextZh": "在２～３回合内， 乱打一气地进行攻击。 大闹一番后自己会陷入混乱。",
     "updatedInChampions": false
   },
   {
@@ -4569,6 +5137,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks the target with all its might. The recoil from this move harshly lowers the user's Sp. Atk stat.",
     "flavorTextKo": "풀 파워로 상대를 공격한다. 쓰면 반동으로 자신의 특수공격이 크게 떨어진다.",
+    "flavorTextJa": "フルパワーで 相手を 攻撃する。 使うと 反動で 自分の 特攻が がくっと さがる。",
+    "flavorTextZh": "使出全部力量攻击对手。 使用之后会因为反作用力， 自己的特攻大幅降低。",
     "updatedInChampions": false
   },
   {
@@ -4585,6 +5155,8 @@
     "pp": 20,
     "flavorTextEn": "The user adds its HP to the target's HP, then equally splits the combined HP between the target and itself.",
     "flavorTextKo": "자신의 HP와 상대의 HP를 합친 것을 자신과 상대가 사이좋게 나눈다.",
+    "flavorTextJa": "自分の ＨＰと 相手の ＨＰを あわせて それを 自分と 相手で なかよく わける。",
+    "flavorTextZh": "将自己的ＨＰ和 对手的ＨＰ相加， 然后自己和对手友好地平分。",
     "updatedInChampions": false
   },
   {
@@ -4601,6 +5173,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks everything around it. The user's HP is restored by half the damage taken by those hit.",
     "flavorTextKo": "주위에 있는 모든 포켓몬에게 데미지를 준다. 준 데미지의 절반을 자신이 회복한다.",
+    "flavorTextJa": "周りにいる ポケモン 全員に ダメージ。 与えた ダメージの 半分を 自分が 回復する。",
+    "flavorTextZh": "给周围全体宝可梦造成伤害。 可以回复给予伤害的一半HP。",
     "updatedInChampions": false
   },
   {
@@ -4617,6 +5191,8 @@
     "pp": 20,
     "flavorTextEn": "With a parting threat, the user lowers the target's Attack and Sp. Atk stats. Then it switches places with a party Pokémon in waiting.",
     "flavorTextKo": "막말을 내뱉어 상대를 위협하여 공격과 특수공격을 떨어뜨린 후 교대 포켓몬과 교체한다.",
+    "flavorTextJa": "すてゼリフで 相手を いかくし 攻撃と 特攻を さげたのち 控えの ポケモンと 入れ替わる。",
+    "flavorTextZh": "抛下狠话威吓对手， 降低攻击和特攻后， 和后备宝可梦进行替换。",
     "updatedInChampions": false
   },
   {
@@ -4633,6 +5209,8 @@
     "pp": 10,
     "flavorTextEn": "The user stores power, then attacks. This move's power is doubled if the user moves after the target.",
     "flavorTextKo": "모아서 공격한다. 상대보다 나중에 공격할 수 있으면 기술의 위력은 2배가 된다.",
+    "flavorTextJa": "ためこんで 攻撃する。 相手より あとに 攻撃できると 技の 威力は ２倍に なる。",
+    "flavorTextZh": "蓄力攻击。 如果能在对手之后攻击， 招式的威力会变成２倍。",
     "updatedInChampions": false
   },
   {
@@ -4649,6 +5227,8 @@
     "pp": 5,
     "flavorTextEn": "Any Pokémon that hears this song faints in three turns, unless it switches out of battle.",
     "flavorTextKo": "노래를 들은 포켓몬은 3턴이 지나면 기절한다. 교체되면 효과가 없어진다.",
+    "flavorTextJa": "歌を 聴いた ポケモンは ３ターン たつと ひんしに なる。 交代すると 効果は なくなる。",
+    "flavorTextZh": "倾听歌声的宝可梦 经过３回合陷入濒死。 替换后效果消失。",
     "updatedInChampions": false
   },
   {
@@ -4665,6 +5245,8 @@
     "pp": 15,
     "flavorTextEn": "The user stirs up a violent petal blizzard and damages everything around it.",
     "flavorTextKo": "세찬 꽃보라를 일으켜서 주위에 있는 포켓몬을 공격하여 데미지를 준다.",
+    "flavorTextJa": "激しい 花吹雪を 起こし 周りに いるものに 攻撃して ダメージを 与える。",
+    "flavorTextZh": "猛烈地刮起飞雪般的落花， 攻击周围所有的宝可梦， 并给予伤害。",
     "updatedInChampions": false
   },
   {
@@ -4681,6 +5263,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks the target by scattering petals for two to three turns. The user then becomes confused.",
     "flavorTextKo": "2-3턴 동안 꽃을 흩뿌려서 상대를 공격한다. 흩뿌린 뒤에는 혼란에 빠진다.",
+    "flavorTextJa": "２ー３ターンの 間 花を まきちらして 相手を 攻撃する。 まきちらした あとは 混乱する。",
+    "flavorTextZh": "在２～３回合内， 散落花瓣攻击对手。 之后自己会陷入混乱。",
     "updatedInChampions": false
   },
   {
@@ -4697,6 +5281,8 @@
     "pp": 10,
     "flavorTextEn": "The user vanishes somewhere, then strikes the target on the next turn. This move hits even if the target protects itself.",
     "flavorTextKo": "1턴째에 어디론가 사라져서 2턴째에 상대를 공격한다. 기술 방어를 무시하고 공격할 수 있다.",
+    "flavorTextJa": "１ターンめで どこかに 消えて ２ターンめに 相手を 攻撃する。 守りを 無視して 攻撃できる。",
+    "flavorTextZh": "第１回合消失在某处， 第２回合攻击对手。 可以无视守护进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -4713,6 +5299,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks by shooting sharp spikes at the target. This move hits two to five times in a row.",
     "flavorTextKo": "날카로운 침을 상대에게 발사해서 공격한다. 2-5회 동안 연속으로 쓴다.",
+    "flavorTextJa": "鋭い ハリを 相手に 発射して 攻撃する。 ２ー５回の 間 連続で だす。",
+    "flavorTextZh": "向对手发射 锐针进行攻击。 连续攻击２～５次。",
     "updatedInChampions": false
   },
   {
@@ -4729,6 +5317,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by playing rough with the target. This may also lower the target's Attack stat.",
     "flavorTextKo": "상대에게 치근거리며 공격한다. 상대의 공격을 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "相手に じゃれついて 攻撃する。 相手の 攻撃を さげる ことがある。",
+    "flavorTextZh": "与对手嬉闹并攻击。 有时会降低对手的攻击。",
     "updatedInChampions": false
   },
   {
@@ -4745,6 +5335,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks by pecking the target. If the target is holding a Berry, the user eats it and gains its effect.",
     "flavorTextKo": "부리로 공격한다. 상대가 나무열매를 지니고 있을 때 먹어서 나무열매의 효과를 받을 수 있다.",
+    "flavorTextJa": "くちばしで 攻撃。 相手が きのみを 持っているとき 食べて きのみの 効果を 受けられる。",
+    "flavorTextZh": "用喙进行攻击。 当对手携带树果时， 可以食用并获得其效果。",
     "updatedInChampions": false
   },
   {
@@ -4761,6 +5353,8 @@
     "pp": 15,
     "flavorTextEn": "The user bites the target with toxic fangs. This may also leave the target badly poisoned.",
     "flavorTextKo": "독이 있는 이빨로 상대를 물어서 공격한다. 맹독을 주입할 때가 있다.",
+    "flavorTextJa": "毒の ある キバで 相手に かみついて 攻撃する。 猛毒を おわせる ことが ある。",
+    "flavorTextZh": "用有毒的牙齿 咬住对手进行攻击。 有时会使对手中剧毒。",
     "updatedInChampions": false
   },
   {
@@ -4777,6 +5371,8 @@
     "pp": 20,
     "flavorTextEn": "The target is stabbed with a tentacle, an arm, or the like steeped in poison. This may also poison the target.",
     "flavorTextKo": "독에 물든 촉수나 팔로 상대를 꿰찌른다. 독 상태로 만들 때가 있다.",
+    "flavorTextJa": "毒に そまった 触手や 腕で 相手を 突き刺す。 毒状態に することが ある。",
+    "flavorTextZh": "用带毒的触手或手臂刺入对手。 有时会让对手陷入中毒状态。",
     "updatedInChampions": false
   },
   {
@@ -4793,6 +5389,8 @@
     "pp": 35,
     "flavorTextEn": "The user scatters a cloud of poisonous dust that poisons the target.",
     "flavorTextKo": "독이 있는 가루를 많이 흩뿌려서 상대를 독 상태로 만든다.",
+    "flavorTextJa": "毒の ある 粉を たくさん ふりまいて 相手を 毒状態に する。",
+    "flavorTextZh": "撒出毒粉， 从而让对手陷入中毒状态。",
     "updatedInChampions": false
   },
   {
@@ -4809,6 +5407,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks the enemy with a pollen puff that explodes. If the target is an ally, it gives the ally a pollen puff that restores its HP instead.",
     "flavorTextKo": "상대에게는 폭발하는 경단을 사용하여 공격한다. 같은 편에게는 회복하는 경단을 준다.",
+    "flavorTextJa": "敵には 爆発する だんごを 使って 攻撃。 味方には 回復する だんごを 与える。",
+    "flavorTextZh": "对敌人使用是会爆炸的团子。 对我方使用则是给予回复的团子。",
     "updatedInChampions": false
   },
   {
@@ -4825,6 +5425,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks by controlling the target's item. This move fails if the target isn't holding an item.",
     "flavorTextKo": "상대의 지닌 물건을 조종해서 공격한다. 상대가 도구를 지니고 있지 않으면 실패한다.",
+    "flavorTextJa": "相手の 持ち物を あやつって 攻撃。 相手が 道具を 持っていない 場合は 失敗する。",
+    "flavorTextZh": "操纵对手的持有物进行攻击。 当对手没有携带道具时， 使出此招式时便会失败。",
     "updatedInChampions": false
   },
   {
@@ -4841,6 +5443,8 @@
     "pp": 10,
     "flavorTextEn": "The user’s fellows gather in droves to perform a combo attack that hits the target one to ten times in a row.",
     "flavorTextKo": "여기저기서 동료들을 모아서 화려한 콤비네이션으로 공격한다. 1~10회 연속으로 공격한다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -4857,6 +5461,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks by pouncing on the target. This also lowers the target's Speed stat.",
     "flavorTextKo": "상대에게 달려들어 공격한다. 상대의 스피드를 떨어뜨린다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -4873,6 +5479,8 @@
     "pp": 35,
     "flavorTextEn": "The target is physically pounded with a long tail, a foreleg, or the like.",
     "flavorTextKo": "긴 꼬리나 손 등을 사용하여 상대를 때려서 공격한다.",
+    "flavorTextJa": "長い しっぽや 手などを 使って 相手を はたいて 攻撃する。",
+    "flavorTextZh": "使用长长的尾巴或手等 拍打对手进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -4889,6 +5497,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks with a ray of light that sparkles as if it were made of gemstones.",
     "flavorTextKo": "보석처럼 반짝이는 빛을 발사하여 상대를 공격한다.",
+    "flavorTextJa": "宝石のように きらめく 光を 発射して 相手を 攻撃する。",
+    "flavorTextZh": "发射如宝石般 闪耀的光芒攻击对手。",
     "updatedInChampions": false
   },
   {
@@ -4905,6 +5515,8 @@
     "pp": 10,
     "flavorTextEn": "The user employs its psychic power to average its Attack and Sp. Atk stats with those of the target.",
     "flavorTextKo": "초능력으로 자신과 상대의 공격과 특수공격을 더해서 반으로 나눈다.",
+    "flavorTextJa": "超能力で 自分と 相手の 攻撃と 特攻を たして 半分に わける。",
+    "flavorTextZh": "利用超能力将自己和对手的 攻击和特攻相加， 再进行平分。",
     "updatedInChampions": false
   },
   {
@@ -4921,6 +5533,8 @@
     "pp": 10,
     "flavorTextEn": "The user employs its psychic power to switch changes to its Attack and Sp. Atk stats with the target.",
     "flavorTextKo": "초능력으로 자신과 상대의 공격과 특수공격의 능력 변화를 교체한다.",
+    "flavorTextJa": "超能力で 自分と 相手の 攻撃と 特攻の 能力変化を 入れ替える。",
+    "flavorTextZh": "利用超能力互换 自己和对手的攻击 以及特攻的能力变化。",
     "updatedInChampions": false
   },
   {
@@ -4937,6 +5551,8 @@
     "pp": 10,
     "flavorTextEn": "The user employs its psychic power to switch its Attack stat with its Defense stat.",
     "flavorTextKo": "초능력으로 자신의 공격과 방어의 힘을 교환한다.",
+    "flavorTextJa": "超能力で 自分の 攻撃と 防御の 力を 交換する。",
+    "flavorTextZh": "利用超能力交换 自己的攻击和 防御的力量。",
     "updatedInChampions": false
   },
   {
@@ -4953,6 +5569,8 @@
     "pp": 10,
     "flavorTextEn": "The user boasts its strength and attacks the target. The more the user's stats are boosted, the greater the move's power.",
     "flavorTextKo": "자신의 강함을 뻐기고 공격한다. 자신의 능력이 올라가 있는 만큼 위력이 오른다.",
+    "flavorTextJa": "自分の 強さを 鼻高々に 攻撃する。自分の 能力が あがって いるほど 威力が あがる。",
+    "flavorTextZh": "耀武扬威地攻击对手， 自己的能力提高得越多， 威力就越大。",
     "updatedInChampions": false
   },
   {
@@ -4969,6 +5587,8 @@
     "pp": 10,
     "flavorTextEn": "The user violently whirls its vines, tentacles, or the like to lash the target.",
     "flavorTextKo": "덩굴이나 촉수를 세차게 흔들어 상대를 힘껏 쳐서 공격한다.",
+    "flavorTextJa": "ツタや 触手を 激しく ふるって 相手を たたきつけ 攻撃する。",
+    "flavorTextZh": "激烈地挥舞青藤或触手 摔打对手进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -4985,6 +5605,8 @@
     "pp": 10,
     "flavorTextEn": "This move enables the user to protect itself from all attacks. Its chance of failing rises if it is used in succession.",
     "flavorTextKo": "상대의 공격을 전혀 받지 않는다. 연속으로 쓰면 실패하기 쉽다.",
+    "flavorTextJa": "相手の 攻撃を まったく 受けない。 連続で だすと 失敗しやすい。",
+    "flavorTextZh": "完全抵挡 对手的攻击。 连续使出则容易失败。",
     "updatedInChampions": false
   },
   {
@@ -5001,6 +5623,8 @@
     "pp": 10,
     "flavorTextEn": "The target is hit with a strong telekinetic force to inflict damage. This may also lower the target’s Sp. Def stat.",
     "flavorTextKo": "강한 염동력을 상대에게 보내어 공격한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "強い 念力を 相手に 送って 攻撃する。 相手の 特防を さげることが ある。",
+    "flavorTextZh": "向对手发送 强大的念力进行攻击。 有时会降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -5017,6 +5641,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by biting the target with its psychic capabilities. This move can also break barriers, such as Light Screen and Reflect.",
     "flavorTextKo": "사이코 파워로 물어서 상대를 공격한다. 빛의장막이나 리플렉터도 파괴할 수 있다.",
+    "flavorTextJa": "サイコパワーで かみついて 相手を 攻撃する。 ひかりのかべや リフレクター なども 破壊できる。",
+    "flavorTextZh": "利用精神力量咬住对手进行攻击。 还可以破坏光墙和反射壁等。",
     "updatedInChampions": false
   },
   {
@@ -5033,6 +5659,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks the target with unpleasant sound waves. For two turns, the target is prevented from recovering HP through moves, Abilities, or held items.",
     "flavorTextKo": "불쾌한 음파를 상대에게 날려서 공격한다. 2턴 동안 상대는 기술이나 특성 또는 지니고 있는 도구로 HP 를 회복할 수 없게 된다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -5049,6 +5677,8 @@
     "pp": 10,
     "flavorTextEn": "This protects Pokémon on the ground from priority moves and powers up Psychic-type moves for five turns.",
     "flavorTextKo": "5턴 동안 땅에 있으면 선제공격을 받지 않는다. 에스퍼타입의 위력이 올라간다.",
+    "flavorTextJa": "５ターンの間 地面にいると 先制技を 受けない。 エスパータイプの 威力が あがる。",
+    "flavorTextZh": "在５回合内，地面上的宝可梦 不会受到先制招式的攻击。 超能力属性的招式威力会提高。",
     "updatedInChampions": false
   },
   {
@@ -5065,6 +5695,8 @@
     "pp": 20,
     "flavorTextEn": "The user tears at the target with blades formed by psychic power. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "실체화시킨 마음의 칼날로 상대를 베어 가른다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "実体化させた 心の 刃で 相手を 切り裂く。 急所に 当たりやすい。",
+    "flavorTextZh": "用实体化的 心之利刃劈开对手。 容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -5081,6 +5713,8 @@
     "pp": 10,
     "flavorTextEn": "The user hypnotizes itself into copying any stat change made by the target.",
     "flavorTextKo": "자신에게 암시를 걸어서 능력 변화 상태를 상대와 똑같은 상태로 만든다.",
+    "flavorTextJa": "自分に 暗示を かけることで 能力変化の 状態を 相手と 同じにする。",
+    "flavorTextZh": "向自己施以自我暗示， 将能力变化的状态 变得和对手一样。",
     "updatedInChampions": false
   },
   {
@@ -5097,6 +5731,8 @@
     "pp": 12,
     "flavorTextEn": "Cloaking itself in psychic energy, the user slams into the target. This also boosts the user’s Defense stat.",
     "flavorTextKo": "사념의 에너지를 두른 채로 상대에 부딪힌다. 자신의 방어력이 오를 때가 있다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": true,
     "championsEffectEn": "Boosts the user's Defense stat by 1 stage."
   },
@@ -5114,6 +5750,8 @@
     "pp": 10,
     "flavorTextEn": "The user materializes an odd psychic wave to attack the target. This move deals physical damage.",
     "flavorTextKo": "이상한 염력파를 실체화하여 상대를 공격한다. 물리적인 데미지를 준다.",
+    "flavorTextJa": "不思議な 念波を 実体化して 相手を 攻撃する。 物理的な ダメージを 与える。",
+    "flavorTextZh": "将神奇的念波实体化攻击对手。 给予物理伤害。",
     "updatedInChampions": false
   },
   {
@@ -5130,6 +5768,8 @@
     "pp": 15,
     "flavorTextEn": "The user suppresses the target and makes its move go last.",
     "flavorTextKo": "상대를 억눌러서 행동의 순서를 마지막으로 만든다.",
+    "flavorTextJa": "相手を おさえつけて 行動の 順番を 最後に する。",
+    "flavorTextZh": "压制对手， 从而将其行动顺序放到最后。",
     "updatedInChampions": false
   },
   {
@@ -5146,6 +5786,8 @@
     "pp": 30,
     "flavorTextEn": "The user lunges at the target to inflict damage, moving at blinding speed. This move always goes first.",
     "flavorTextKo": "눈에 보이지 않는 굉장한 속도로 상대에게 돌진한다. 반드시 선제공격할 수 있다.",
+    "flavorTextJa": "目にも 留まらぬ ものすごい 速さで 相手に つっこむ。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "以迅雷不及掩耳之势扑向对手。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -5162,6 +5804,8 @@
     "pp": 15,
     "flavorTextEn": "The user protects itself and its allies from priority moves.",
     "flavorTextKo": "자신과 같은 편을 상대의 선제공격으로부터 지킨다.",
+    "flavorTextJa": "自分と 味方を 相手の 先制攻撃から 守る。",
+    "flavorTextZh": "守护自己和同伴， 以防对手的先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -5178,6 +5822,8 @@
     "pp": 20,
     "flavorTextEn": "The user lightly performs a beautiful, mystic dance. This boosts the user's Sp. Atk, Sp. Def, and Speed stats.",
     "flavorTextKo": "신비롭고 아름다운 춤을 경쾌하게 춘다. 자신의 특수공격과 특수방어와 스피드를 올린다.",
+    "flavorTextJa": "神秘的で 美しい 舞を 軽やかに おどる。 自分の 特攻と 特防と 素早さを あげる。",
+    "flavorTextZh": "轻巧地跳起神秘而又美丽的舞蹈。 提高自己的特攻、特防和速度。",
     "updatedInChampions": false
   },
   {
@@ -5194,6 +5840,8 @@
     "pp": 20,
     "flavorTextEn": "The user scatters a cloud of irritating powder to draw attention to itself. Opposing Pokémon aim only at the user.",
     "flavorTextKo": "안절부절못하게 하는 가루를 자신에게 뿌려서 주의를 끈다. 상대의 공격은 모두 자신에게 향한다.",
+    "flavorTextJa": "イライラさせる 粉を 自分に ふりかけて 注意を ひく。 相手の 攻撃を すべて 自分に むける。",
+    "flavorTextZh": "将令人烦躁的粉末撒在自己身上， 用以吸引对手的注意。 使对手的攻击全部指向自己。",
     "updatedInChampions": false
   },
   {
@@ -5210,6 +5858,8 @@
     "pp": 10,
     "flavorTextEn": "The user performs a tackle like a raging bull. This move's type depends on the user's form. It can also break barriers, such as Light Screen and Reflect.",
     "flavorTextKo": "분노하며 날뛰는 성난 소의 맹렬한 태클. 폼에 따라 기술의 타입이 달라지고 빛의장막이나 리플렉터 등도 파괴할 수 있다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -5226,6 +5876,8 @@
     "pp": 10,
     "flavorTextEn": "The user rampages around spewing flames for two to three turns. The user then becomes confused.",
     "flavorTextKo": "격렬한 불꽃을 방출하면서 마구 날뛰어 공격한다. 기술을 사용한 다음 혼란 상태가 된다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -5242,6 +5894,8 @@
     "pp": 5,
     "flavorTextEn": "The user summons a heavy rain that falls for five turns, powering up Water-type attacks. The rain also lowers the power of Fire-type attacks.",
     "flavorTextKo": "5턴 동안 비를 내리게 해서 물타입 기술의 위력을 올린다. 불꽃타입의 위력은 떨어진다.",
+    "flavorTextJa": "５ターンの 間 雨を 降らせて みずタイプの 威力を あげる。 ほのおタイプの 威力は さがる。",
+    "flavorTextZh": "在５回合内一直降雨， 从而提高水属性的招式威力。 火属性的招式威力则降低。",
     "updatedInChampions": false
   },
   {
@@ -5258,6 +5912,8 @@
     "pp": 40,
     "flavorTextEn": "The user performs a spin attack that can also eliminate the effects of such moves as Bind, Wrap, and Leech Seed. This also boosts the user's Speed stat.",
     "flavorTextKo": "회전해서 상대를 공격한다. 조이기, 김밥말이, 씨뿌리기 등을 날려버린다. 자신의 스피드도 오른다.",
+    "flavorTextJa": "回転して 相手を 攻撃する。 しめつける まきつく やどりぎのタネ など 吹きとばす。自分の 素早さも あがる。",
+    "flavorTextZh": "通过旋转来攻击对手。 可以摆脱绑紧、紧束、寄生种子 等招式。还能提高自己的速度。",
     "updatedInChampions": false
   },
   {
@@ -5274,6 +5930,8 @@
     "pp": 10,
     "flavorTextEn": "The user cuts the target with sharp shells to inflict damage. This may also lower the target's Defense stat.",
     "flavorTextKo": "날카로운 조개껍질로 베어 공격한다. 상대의 방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "鋭い 貝殻で 切りつけて 攻撃する。 相手の 防御を さげることが ある。",
+    "flavorTextZh": "用锋利的贝壳切斩 对手进行攻击。 有时会降低对手的防御。",
     "updatedInChampions": false
   },
   {
@@ -5290,6 +5948,8 @@
     "pp": 5,
     "flavorTextEn": "The user regenerates its cells, restoring its own HP by up to half its max HP.",
     "flavorTextKo": "세포를 재생시켜 자신의 최대 HP의 절반만큼 HP를 회복한다.",
+    "flavorTextJa": "細胞を 再生させて 自分の 最大ＨＰの 半分の ＨＰを 回復する。",
+    "flavorTextZh": "让细胞再生， 从而回复自己 最大ＨＰ的一半。",
     "updatedInChampions": false
   },
   {
@@ -5306,6 +5966,8 @@
     "pp": 10,
     "flavorTextEn": "The user recycles a held item that has been used in battle so it can be used again.",
     "flavorTextKo": "배틀 중에 사용하여 없어진 자신의 지닌 물건을 재생시켜 사용할 수 있게 한다.",
+    "flavorTextJa": "戦闘中に 使って なくなった 自分の 持ち物を 再生させて 使えるように する。",
+    "flavorTextZh": "使战斗中已经消耗掉的 自己的持有物再生， 并可以再次使用。",
     "updatedInChampions": false
   },
   {
@@ -5322,6 +5984,8 @@
     "pp": 20,
     "flavorTextEn": "A wondrous wall of light is put up to reduce damage from physical moves for five turns.",
     "flavorTextKo": "5턴 동안 이상한 장막을 쳐서 상대로부터 받는 물리공격의 데미지를 약하게 한다.",
+    "flavorTextJa": "５ターンの 間 不思議な かべで 相手から 受ける 物理攻撃の ダメージを 弱める。",
+    "flavorTextZh": "利用神奇的墙壁， 在５回合内减弱从对手那里 受到的物理攻击的伤害。",
     "updatedInChampions": false
   },
   {
@@ -5338,6 +6002,8 @@
     "pp": 15,
     "flavorTextEn": "The user reflects the target's type to become the same type as the target.",
     "flavorTextKo": "상대의 타입을 반사해서 자신도 똑같은 타입이 된다.",
+    "flavorTextJa": "相手の タイプを 反射して 自分も 同じ タイプに なる。",
+    "flavorTextZh": "反射对手的属性， 让自己也变成一样的属性。",
     "updatedInChampions": false
   },
   {
@@ -5354,6 +6020,8 @@
     "pp": 5,
     "flavorTextEn": "The user goes to sleep for two turns. This fully restores the user's HP and cures any status conditions.",
     "flavorTextKo": "2턴 동안 계속 잠잔다. 자신의 HP와 상태 이상을 모두 회복한다.",
+    "flavorTextJa": "２ターンの 間 眠り続ける。 自分の ＨＰと 状態異常を すべて 回復する。",
+    "flavorTextZh": "连续睡上２回合。 回复自己的全部ＨＰ 以及治愈所有异常状态。",
     "updatedInChampions": false
   },
   {
@@ -5370,6 +6038,8 @@
     "pp": 15,
     "flavorTextEn": "An all-out attack that becomes more powerful the less HP the user has.",
     "flavorTextKo": "힘을 쥐어짜서 공격한다. 자신의 HP가 적을수록 기술의 위력이 올라간다.",
+    "flavorTextJa": "力を ふりしぼり 攻撃する。 自分の ＨＰが 少ないほど 技の 威力は あがる。",
+    "flavorTextZh": "竭尽全力进行攻击。 自己的ＨＰ越少， 招式的威力越大。",
     "updatedInChampions": false
   },
   {
@@ -5386,6 +6056,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks with electricity rising from the ground. This move's power is doubled if the target is on Electric Terrain.",
     "flavorTextKo": "지면에서 올라오는 전격으로 공격한다. 상대가 일렉트릭필드 위에 있을 때 기술의 위력이 2배가 된다.",
+    "flavorTextJa": "地面から 立ちのぼる 電撃で 攻撃。 相手が エレキフィールドに いる時 技の 威力が ２倍に なる。",
+    "flavorTextZh": "用从地面升腾而起的电击进行攻击。 当对手处于电气场地上时， 招式威力会变成２倍。",
     "updatedInChampions": false
   },
   {
@@ -5402,6 +6074,8 @@
     "pp": 20,
     "flavorTextEn": "The target is scared off, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.",
     "flavorTextKo": "상대를 도망가게 해서 교대할 포켓몬을 끌어낸다. 야생의 경우에는 배틀이 끝난다.",
+    "flavorTextJa": "相手を 逃がして 控えの ポケモンを ひきずりだす。 野生の 場合は 戦闘が 終わる。",
+    "flavorTextZh": "放走对手，强制拉后备宝可梦上场。 如果对手为野生宝可梦， 战斗将直接结束。",
     "updatedInChampions": false
   },
   {
@@ -5418,6 +6092,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by hurling hard rocks at the target. This move hits two to five times in a row.",
     "flavorTextKo": "단단한 암석을 상대에게 발사하여 공격한다. 2-5회 동안 연속으로 쓴다.",
+    "flavorTextJa": "硬い 岩石を 相手に 発射して 攻撃する。 ２ー５回の 間 連続で だす。",
+    "flavorTextZh": "向对手发射 坚硬的岩石进行攻击。 连续攻击２～５次。",
     "updatedInChampions": false
   },
   {
@@ -5434,6 +6110,8 @@
     "pp": 20,
     "flavorTextEn": "The user polishes its body to reduce drag. This sharply boosts the user's Speed stat.",
     "flavorTextKo": "자신의 몸을 갈아 공기의 저항을 적게 한다. 스피드를 크게 올릴 수 있다.",
+    "flavorTextJa": "自分の 体を 磨いて 空気の 抵抗を 少なくする。素早さを ぐーんと あげることが できる。",
+    "flavorTextZh": "打磨自己的身体， 减少空气阻力。 可以大幅提高自己的速度。",
     "updatedInChampions": false
   },
   {
@@ -5450,6 +6128,8 @@
     "pp": 10,
     "flavorTextEn": "Large boulders are hurled at opposing Pokémon to inflict damage. This may also make the opposing Pokémon flinch.",
     "flavorTextKo": "큰 바위를 세차게 부딪쳐서 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "大きな 岩を 激しく ぶつけて 攻撃する。 相手を ひるませることが ある。",
+    "flavorTextZh": "将大岩石 猛烈地撞向对手进行攻击。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -5466,6 +6146,8 @@
     "pp": 15,
     "flavorTextEn": "The user hurls boulders at the target to inflict damage. This also lowers the target's Speed stat by cutting off its movement.",
     "flavorTextKo": "암석을 내던져서 공격한다. 상대의 움직임을 봉인함으로써 스피드를 떨어뜨린다.",
+    "flavorTextJa": "岩石を 投げつけて 攻撃する。 相手の 動きを 封じることで 素早さを さげる。",
+    "flavorTextZh": "投掷岩石进行攻击。 封住对手的行动， 从而降低速度。",
     "updatedInChampions": false
   },
   {
@@ -5482,6 +6164,8 @@
     "pp": 5,
     "flavorTextEn": "The user launches a huge boulder at the target to attack. The user can't move on the next turn.",
     "flavorTextKo": "거대한 바위를 상대에게 발사하여 공격한다. 다음 턴은 움직일 수 없게 된다.",
+    "flavorTextJa": "巨大な 岩を 相手に 発射して 攻撃する。 次の ターンは 動けなくなる。",
+    "flavorTextZh": "向对手发射 巨大的岩石进行攻击。 下一回合自己将无法动弹。",
     "updatedInChampions": false
   },
   {
@@ -5498,6 +6182,8 @@
     "pp": 10,
     "flavorTextEn": "The user mimics the target completely, copying the target's Ability.",
     "flavorTextKo": "상대의 역할을 하여 자신도 상대와 같은 특성으로 변화한다.",
+    "flavorTextJa": "相手に なりきって 自分も 相手と 同じ 特性に 変化する。",
+    "flavorTextZh": "扮演对手， 让自己的特性 变得和对手相同。",
     "updatedInChampions": false
   },
   {
@@ -5514,6 +6200,8 @@
     "pp": 5,
     "flavorTextEn": "The user lands and rests its body. This move restores the user's HP by up to half its max HP.",
     "flavorTextKo": "땅에 내려와 몸을 쉬게 한다. 최대 HP의 절반만큼 HP를 회복한다.",
+    "flavorTextJa": "地面に 降りて 体を やすめる。 最大ＨＰの 半分の ＨＰを 回復する。",
+    "flavorTextZh": "降到地面，使身体休息。 回复自己最大ＨＰ的一半。",
     "updatedInChampions": false
   },
   {
@@ -5530,6 +6218,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks the target with a song. If others use this move, they will act immediately after the initial user, and the power of their Rounds will be boosted.",
     "flavorTextKo": "노래로 상대를 공격한다. 함께 돌림노래를 하면 계속해서 쓸 수 있고 위력도 올라간다.",
+    "flavorTextJa": "歌で 相手を 攻撃する。 みんなで 輪唱すると 続けて だすことが でき 威力も あがる。",
+    "flavorTextZh": "用歌声攻击对手。 同伴还可以接着使出轮唱招式， 威力也会提高。",
     "updatedInChampions": false
   },
   {
@@ -5546,6 +6236,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks by slicing with a sword. The target's stat changes don't affect the damage inflicted by this move.",
     "flavorTextKo": "긴 뿔로 베어 공격한다. 상대의 능력 변화에 관계없이 데미지를 준다.",
+    "flavorTextJa": "長い つので 切りつけ 攻撃する。 相手の 能力変化に 関係なく ダメージを 与える。",
+    "flavorTextZh": "用长角切斩对手进行攻击。 无视对手的能力变化， 直接给予伤害。",
     "updatedInChampions": false
   },
   {
@@ -5562,6 +6254,8 @@
     "pp": 25,
     "flavorTextEn": "The user creates a protective field that prevents status conditions for five turns.",
     "flavorTextKo": "5턴 동안 이상한 힘의 보호를 받아 상태 이상이 되지 않는다.",
+    "flavorTextJa": "５ターンの 間 不思議な 力に 守られて 状態異常に ならなくなる。",
+    "flavorTextZh": "在５回合内 被神奇的力量守护， 从而不会陷入异常状态。",
     "updatedInChampions": false
   },
   {
@@ -5578,6 +6272,8 @@
     "pp": 15,
     "flavorTextEn": "The user salt cures the target, inflicting damage every turn. Steel and Water types are more strongly affected by this move.",
     "flavorTextKo": "상대를 소금절이 상태로 만들어 매 턴 데미지를 준다. 강철타입이나 물타입에게 더 고통스럽다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -5594,6 +6290,8 @@
     "pp": 10,
     "flavorTextEn": "A five-turn sandstorm is summoned to damage all Pokémon except Rock, Ground, and Steel types. The sandstorm also boosts the Sp. Def stats of Rock types.",
     "flavorTextKo": "5턴 동안 모래바람을 일으켜 바위 땅, 강철타입 이외의 상대에게 데미지를 준다. 바위타입의 특수방어가 올라간다.",
+    "flavorTextJa": "５ターンの 間 砂あらしで いわ じめん はがねタイプ 以外に ダメージ。 いわタイプの 特防が あがる。",
+    "flavorTextZh": "在５回合内扬起沙暴，除岩石、地面和 钢属性以外的宝可梦，都会受到伤害。 岩石属性的特防还会提高。",
     "updatedInChampions": false
   },
   {
@@ -5610,6 +6308,8 @@
     "pp": 15,
     "flavorTextEn": "The user traps the target inside a harshly raging sandstorm that inflicts damage for four to five turns.",
     "flavorTextKo": "세차게 불어대는 모래바람 속에 4-5턴 동안 상대를 가두어 공격한다.",
+    "flavorTextJa": "激しく 吹きあれる 砂あらしの 中に ４ー５ターンの 間 相手を 閉じこめて 攻撃する。",
+    "flavorTextZh": "将对手困在 铺天盖地的沙暴中， 在４～５回合内进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -5626,6 +6326,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks by shooting boiling hot water at the target. This may also leave the target with a burn.",
     "flavorTextKo": "뜨겁게 끓어오르는 물을 상대에게 발사해서 공격한다. 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "熱く 煮えたぎる 水を 相手に 発射して 攻撃する。 やけど状態に することが ある。",
+    "flavorTextZh": "向对手喷射 煮得翻滚的开水进行攻击。 有时会让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -5642,6 +6344,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks by shooting scales two to five times in a row. This move boosts the user's Speed stat but lowers its Defense stat.",
     "flavorTextKo": "비늘을 쏘아서 공격한다. 2-5회 동안 연속으로 쓴다. 스피드가 올라가지만 방어가 떨어진다.",
+    "flavorTextJa": "ウロコを 撃ちだして 攻撃する。 ２ー５回の 間 連続で だす。 素早さが あがるが 防御が さがる。",
+    "flavorTextZh": "发射鳞片进行攻击。 连续攻击２～５次。 速度会提高但防御会降低。",
     "updatedInChampions": false
   },
   {
@@ -5658,6 +6362,8 @@
     "pp": 10,
     "flavorTextEn": "The user frightens the target with a scary face to harshly lower its Speed stat.",
     "flavorTextKo": "무서운 얼굴로 노려보고 겁주어 상대의 스피드를 크게 떨어뜨린다.",
+    "flavorTextJa": "恐ろしい 顔で にらみ おびえさせて 相手の 素早さを がくっと さげる。",
+    "flavorTextZh": "用恐怖的表情瞪着对手， 使其害怕， 从而大幅降低对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -5674,6 +6380,8 @@
     "pp": 10,
     "flavorTextEn": "The user throws scorching sand at the target to attack. This may also leave the target with a burn.",
     "flavorTextKo": "뜨겁게 달궈진 모래를 상대에게 부딪쳐서 공격한다. 화상 상태로 만들 때가 있다.",
+    "flavorTextJa": "熱く 焼けた 砂を 相手に ぶつけて 攻撃する。 やけど状態に することが ある。",
+    "flavorTextZh": "将滚烫的沙子砸向对手进行攻击。 有时会让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -5690,6 +6398,8 @@
     "pp": 40,
     "flavorTextEn": "An earsplitting screech harshly lowers the target's Defense stat.",
     "flavorTextKo": "그만 귀를 막아버리고 싶은 싫은 소리를 내어 상대의 방어를 크게 떨어뜨린다.",
+    "flavorTextJa": "おもわず 耳を ふさぎたくなる いやなおとを だして 相手の 防御を がくっと さげる。",
+    "flavorTextZh": "发出不由自主想要 捂起耳朵的刺耳声， 从而大幅降低对手的防御。",
     "updatedInChampions": false
   },
   {
@@ -5706,6 +6416,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks by slamming a barrage of hard-shelled seeds down on the target from above.",
     "flavorTextKo": "단단한 껍질을 가지고 있는 큰 씨앗을 위에서 힘껏 내던져 상대를 공격한다.",
+    "flavorTextJa": "硬い 殻を もつ 大きな タネを 上から たたきつけて 相手を 攻撃する。",
+    "flavorTextZh": "将外壳坚硬的大种子， 从上方砸下攻击对手。",
     "updatedInChampions": false
   },
   {
@@ -5722,6 +6434,8 @@
     "pp": 20,
     "flavorTextEn": "The target is thrown using the power of gravity. It inflicts damage equal to the user's level.",
     "flavorTextKo": "인력을 사용해 내던진다. 자신의 레벨과 똑같은 데미지를 상대에게 준다.",
+    "flavorTextJa": "引力を 使い 投げとばす。 自分の レベルと 同じ ダメージを 相手に 与える。",
+    "flavorTextZh": "利用引力将对手甩飞出去。 给予对手和自己等级相同的伤害。",
     "updatedInChampions": false
   },
   {
@@ -5738,6 +6452,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks everything around it by causing an explosion. The user faints upon using this move.",
     "flavorTextKo": "폭발을 일으켜서 자신의 주위에 있는 포켓몬을 공격한다. 쓰고 나서 기절하게 된다.",
+    "flavorTextJa": "爆発を おこして 自分の 周りに いるものを 攻撃する。 使ったあとに ひんしに なる。",
+    "flavorTextZh": "引发爆炸， 攻击自己周围所有的宝可梦。 使用后陷入濒死。",
     "updatedInChampions": false
   },
   {
@@ -5754,6 +6470,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks by hurling a shadowy blob at the target. This may also lower the target’s Sp. Def stat.",
     "flavorTextKo": "까만 그림자의 덩어리를 내던져서 공격한다. 상대의 특수방어를 떨어뜨릴 때가 있다.",
+    "flavorTextJa": "黒い影の 塊を 投げつけて 攻撃する。 相手の 特防を さげることが ある。",
+    "flavorTextZh": "投掷一团黑影进行攻击。 有时会降低对手的特防。",
     "updatedInChampions": false
   },
   {
@@ -5770,6 +6488,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks by slashing the target with a sharp claw made from shadows. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "그림자로 만든 날카로운 발톱으로 상대를 베어 가른다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "影から つくった 鋭い ツメで 相手を 切り裂く。 急所に 当たりやすい。",
+    "flavorTextZh": "以影子做成的锐爪， 劈开对手。 容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -5786,6 +6506,8 @@
     "pp": 20,
     "flavorTextEn": "The user throws a punch from the shadows. This attack never misses.",
     "flavorTextKo": "그림자에 섞여 펀치를 날린다. 공격은 반드시 명중한다.",
+    "flavorTextJa": "影に まぎれて パンチを くりだす。 攻撃は 必ず 命中する。",
+    "flavorTextZh": "使出混影之拳。 攻击必定会命中。",
     "updatedInChampions": false
   },
   {
@@ -5802,6 +6524,8 @@
     "pp": 30,
     "flavorTextEn": "The user extends its shadow and attacks the target from behind. This move always goes first.",
     "flavorTextKo": "그림자를 늘려 상대의 배후에서 공격한다. 반드시 선제공격할 수 있다.",
+    "flavorTextJa": "影を のばして 相手の 背後から 攻撃する。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "伸长影子， 从对手的背后进行攻击。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -5818,6 +6542,8 @@
     "pp": 10,
     "flavorTextEn": "The user creates a substitute for itself using its own HP before switching places with a party Pokémon in waiting.",
     "flavorTextKo": "사용자 HP 의 1/2 를 깎아서 대타가 되는 분신을 만든 다음, 교대 포켓몬과 교체한다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -5834,6 +6560,8 @@
     "pp": 5,
     "flavorTextEn": "The target faints instantly. This move is less likely to hit the target if used by Pokémon other than Ice types.",
     "flavorTextKo": "상대를 일격에 기절시킨다. 얼음타입 이외의 포켓몬이 사용하면 잘 맞지 않는다.",
+    "flavorTextJa": "相手を 一撃で 瀕死に する。 こおりタイプ 以外の ポケモンが 使うと 当たりにくい。",
+    "flavorTextZh": "给对手一击濒死。 如果是冰属性以外的宝可梦使用， 就会难以打中。",
     "updatedInChampions": false
   },
   {
@@ -5850,6 +6578,8 @@
     "pp": 15,
     "flavorTextEn": "The user breaks its shell, which lowers its Defense and Sp. Def stats but sharply boosts its Attack, Sp. Atk, and Speed stats.",
     "flavorTextKo": "껍질을 깨서 자신의 방어와 특수방어를 떨어뜨리지만 공격과 특수공격, 스피드를 크게 올린다.",
+    "flavorTextJa": "殻を やぶって 自分の 防御 特防を さげるが 攻撃 特攻 素早さを ぐーんと あげる。",
+    "flavorTextZh": "打破外壳， 降低自己的防御和特防， 但大幅提高攻击、特攻和速度。",
     "updatedInChampions": false
   },
   {
@@ -5866,6 +6596,8 @@
     "pp": 15,
     "flavorTextEn": "The user emits a mysterious psychic wave that changes the target's Ability to Simple.",
     "flavorTextKo": "수수께끼의 염력파를 상대에게 보낸다. 염력파를 받은 상대는 특성이 단순으로 바뀐다.",
+    "flavorTextJa": "なぞの 念波を 相手に 送る。 念波を 受けとった 相手は 特性が たんじゅんに なる。",
+    "flavorTextZh": "向对手发送谜之念波。 接收到念波的对手， 其特性会变为单纯。",
     "updatedInChampions": false
   },
   {
@@ -5882,6 +6614,8 @@
     "pp": 15,
     "flavorTextEn": "A soothing lullaby is sung in a beautiful voice that puts the target to sleep.",
     "flavorTextKo": "기분 좋은 예쁜 노랫소리를 들려주고 상대를 잠듦 상태로 만든다.",
+    "flavorTextJa": "心地好い きれいな 歌声を 聞かせて 相手を 眠り状態に する。",
+    "flavorTextZh": "让对手听舒适、 美妙的歌声， 从而陷入睡眠状态。",
     "updatedInChampions": false
   },
   {
@@ -5898,6 +6632,8 @@
     "pp": 10,
     "flavorTextEn": "The user employs its psychic power to exchange Abilities with the target.",
     "flavorTextKo": "초능력으로 자신의 특성과 상대의 특성을 바꾼다.",
+    "flavorTextJa": "超能力で 自分の 特性と 相手の 特性を 入れ替える。",
+    "flavorTextZh": "利用超能力互换 自己和对手的特性。",
     "updatedInChampions": false
   },
   {
@@ -5914,6 +6650,8 @@
     "pp": 10,
     "flavorTextEn": "The user skitters behind the target to attack. This also lowers the target's Sp. Atk stat.",
     "flavorTextKo": "배후에서 엄습해서 공격한다. 상대의 특수공격을 떨어뜨린다.",
+    "flavorTextJa": "背後から はいより 攻撃する。 相手の 特攻を さげる。",
+    "flavorTextZh": "从对手背后爬近后进行攻击。 会降低对手的特攻。",
     "updatedInChampions": false
   },
   {
@@ -5930,6 +6668,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks the turn after using this move. This move has a heightened chance of landing a critical hit and may also make the target flinch.",
     "flavorTextKo": "2턴째에 상대를 공격한다. 가끔 풀죽게 만든다. 급소에도 맞기 쉽다.",
+    "flavorTextJa": "２ターン目に 相手を 攻撃する。 たまに ひるませる。 急所にも 当たりやすい。",
+    "flavorTextZh": "第２回合攻击对手。 偶尔使对手畏缩。 也容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -5946,6 +6686,8 @@
     "pp": 5,
     "flavorTextEn": "The user slacks off, restoring its own HP by up to half its max HP.",
     "flavorTextKo": "게으름 피우며 쉰다. 자신의 HP를 최대 HP의 절반만큼 회복한다.",
+    "flavorTextJa": "怠けて やすむ。 自分の ＨＰを 最大ＨＰの 半分 回復する。",
+    "flavorTextZh": "偷懒休息。 回复自己最大ＨＰ的一半。",
     "updatedInChampions": false
   },
   {
@@ -5962,6 +6704,8 @@
     "pp": 15,
     "flavorTextEn": "The user scatters a cloud of soporific dust that puts the target to sleep.",
     "flavorTextKo": "잠이 오는 가루를 많이 흩뿌려서 상대를 잠듦 상태로 만든다.",
+    "flavorTextJa": "眠くなる 粉を たくさん ふりまいて 相手を 眠り状態に する。",
+    "flavorTextZh": "撒出催眠粉， 从而让对手陷入睡眠状态。",
     "updatedInChampions": false
   },
   {
@@ -5978,6 +6722,8 @@
     "pp": 10,
     "flavorTextEn": "The user randomly uses one of the moves it knows. This move can only be used while the user is asleep.",
     "flavorTextKo": "자신이 배운 기술 중 하나를 무작위로 날린다. 자신이 잠들어 있을 때만 쓸 수 있다.",
+    "flavorTextJa": "自分が おぼえている 技の うち どれか １つを くりだす。 自分が 寝ているときだけ 使える。",
+    "flavorTextZh": "从自己已学会的招式中 任意使出１个。 只能在自己睡觉时使用。",
     "updatedInChampions": false
   },
   {
@@ -5994,6 +6740,8 @@
     "pp": 10,
     "flavorTextEn": "The user hurls unsanitary sludge at the target to inflict damage. This may also poison the target.",
     "flavorTextKo": "더러운 오물을 상대에게 내던져서 공격한다. 독 상태로 만들 때가 있다.",
+    "flavorTextJa": "汚い ヘドロを 相手に 投げつけて 攻撃する。 毒状態に することが ある。",
+    "flavorTextZh": "用污泥投掷对手进行攻击。 有时会让对手陷入中毒状态。",
     "updatedInChampions": false
   },
   {
@@ -6010,6 +6758,8 @@
     "pp": 10,
     "flavorTextEn": "The user strikes everything around it by swamping the area with a giant sludge wave. This may also poison those it hits.",
     "flavorTextKo": "오물 파도로 자신의 주위에 있는 포켓몬을 공격한다. 독 상태로 만들 때가 있다.",
+    "flavorTextJa": "ヘドロの 波で 自分の 周りに いるものを 攻撃する。 毒状態に することが ある。",
+    "flavorTextZh": "用污泥波攻击 自己周围所有的宝可梦。 有时会陷入中毒状态。",
     "updatedInChampions": false
   },
   {
@@ -6026,6 +6776,8 @@
     "pp": 15,
     "flavorTextEn": "The user throws a stone or similar projectile to attack the target. If the target is in the air, it will be knocked down to the ground.",
     "flavorTextKo": "돌이나 구슬을 던져서 날고 있는 상대를 공격한다. 맞은 상대는 땅에 떨어진다.",
+    "flavorTextJa": "石や 弾を 投げて 飛んでいる 相手を 攻撃する。 相手は うち落とされて 地面に 落ちる。",
+    "flavorTextZh": "扔石头或炮弹， 攻击飞行的对手。 对手会被击落，掉到地面。",
     "updatedInChampions": false
   },
   {
@@ -6042,6 +6794,8 @@
     "pp": 10,
     "flavorTextEn": "The user stabs the target with a sharp horn. This attack never misses.",
     "flavorTextKo": "뾰족한 뿔로 상대를 꿰찔러서 공격한다. 공격은 반드시 명중한다.",
+    "flavorTextJa": "とがった つので 相手を 突き刺して 攻撃する。 攻撃は 必ず 命中する。",
+    "flavorTextZh": "用尖尖的角刺入对手进行攻击。 攻击必定会命中。",
     "updatedInChampions": false
   },
   {
@@ -6058,6 +6812,8 @@
     "pp": 15,
     "flavorTextEn": "The user yells as if it's ranting about something, which lowers the Sp. Atk stats of opposing Pokémon.",
     "flavorTextKo": "호되게 호통을 쳐서 상대의 특수공격을 떨어뜨린다.",
+    "flavorTextJa": "まくしたてる ように 怒鳴りつけて 相手の 特攻を さげる。",
+    "flavorTextZh": "没完没了地大声斥责， 从而降低对手的特攻。",
     "updatedInChampions": false
   },
   {
@@ -6074,6 +6830,8 @@
     "pp": 15,
     "flavorTextEn": "This attack can be used only if the user is asleep. The harsh noise may also make the target flinch.",
     "flavorTextKo": "자신이 잠들어 있을 때 소음을 내어 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "自分が 寝ているときに 雑音を だして 攻撃する。 相手を ひるませることが ある。",
+    "flavorTextZh": "在自己睡觉时， 发出噪音进行攻击。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -6090,6 +6848,8 @@
     "pp": 10,
     "flavorTextEn": "The user summons a snowstorm lasting five turns. This boosts the Defense stats of Ice types.",
     "flavorTextKo": "5턴 동안 눈을 내리게 한다. 얼음타입의 방어가 1.5배로 올라간다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -6106,6 +6866,8 @@
     "pp": 20,
     "flavorTextEn": "The user shoots a torrent of water that changes the target's type to Water.",
     "flavorTextKo": "많은 물을 끼얹어서 상대를 물타입으로 바꾼다.",
+    "flavorTextJa": "たくさんの 水を 浴びせかけて 相手を みずタイプに する。",
+    "flavorTextZh": "将大量的水泼向对手， 从而使其变成水属性。",
     "updatedInChampions": false
   },
   {
@@ -6122,6 +6884,8 @@
     "pp": 10,
     "flavorTextEn": "The user gathers light on the first turn, then blasts a bundled beam on the next turn.",
     "flavorTextKo": "1턴째에 빛을 가득 모아 2턴째에 빛의 다발을 발사하여 공격한다.",
+    "flavorTextJa": "１ターン目に 光を いっぱいに 集め ２ターン目に 光の 束を 発射して 攻撃する。",
+    "flavorTextZh": "第１回合收集满满的日光， 第２回合发射光束进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -6138,6 +6902,8 @@
     "pp": 10,
     "flavorTextEn": "The user gathers light on the first turn, then fills a blade with the light's energy and attacks on the next turn.",
     "flavorTextKo": "1턴째에 빛을 가득 모아 2턴째에 그 힘을 검에 담아 공격한다.",
+    "flavorTextJa": "１ターン目に 光を いっぱいに 集め ２ターン目に その 力を 剣に 込めて 攻撃する。",
+    "flavorTextZh": "第１回合收集满满的日光， 第２回合将此力量 集中在剑上进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -6154,6 +6920,8 @@
     "pp": 10,
     "flavorTextEn": "The user bursts into song, emitting many bubbles. Any Pokémon suffering from a burn will be cured by the touch of these bubbles.",
     "flavorTextKo": "노래 부르는 것으로 많은 벌룬을 방출한다. 기술에 맞으면 화상이 낫는다.",
+    "flavorTextJa": "歌うことによって たくさんの バルーンを 放出する。 技を 受けると やけどが 治る。",
+    "flavorTextZh": "随着唱歌会放出很多气球。 受到此招式攻击时， 灼伤会被治愈。",
     "updatedInChampions": false
   },
   {
@@ -6170,6 +6938,8 @@
     "pp": 10,
     "flavorTextEn": "The user exchanges Speed stats with the target.",
     "flavorTextKo": "상대의 스피드와 자신의 스피드를 교체한다.",
+    "flavorTextJa": "相手の 素早さと 自分の 素早さを 入れ替えてしまう。",
+    "flavorTextZh": "将对手和自己的速度 进行互换。",
     "updatedInChampions": false
   },
   {
@@ -6186,6 +6956,8 @@
     "pp": 15,
     "flavorTextEn": "The user emits an incredibly spicy extract, sharply boosting the target's Attack stat and harshly lowering the target's Defense stat.",
     "flavorTextKo": "어마어마하게 매운 엑기스를 발사한다. 상대의 공격이 크게 올라가고 방어는 크게 떨어진다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -6202,6 +6974,8 @@
     "pp": 20,
     "flavorTextEn": "The user lays a trap of spikes at the feet of the opposing team. The spikes will damage opposing Pokémon that switch into battle.",
     "flavorTextKo": "상대의 발밑에 압정을 뿌린다. 교체된 상대 포켓몬에게 데미지를 준다.",
+    "flavorTextJa": "相手の 足下に まきびしを しかける。交代で でてきた 相手の ポケモンに ダメージを 与える。",
+    "flavorTextZh": "在对手的脚下扔撒菱。 对替换出场的对手的宝可梦 给予伤害。",
     "updatedInChampions": false
   },
   {
@@ -6218,6 +6992,8 @@
     "pp": 10,
     "flavorTextEn": "In addition to protecting the user from attacks, this move also damages any attacker that makes direct contact.",
     "flavorTextKo": "상대의 공격을 막음과 동시에 접촉한 상대의 체력을 떨어뜨린다.",
+    "flavorTextJa": "相手の 攻撃を 防ぐと 同時に 触れた 相手の 体力を 削って しまう。",
+    "flavorTextZh": "防住对手攻击的同时， 削减接触到自己的对手的体力。",
     "updatedInChampions": false
   },
   {
@@ -6234,6 +7010,8 @@
     "pp": 12,
     "flavorTextEn": "The user attacks while simultaneously stitching the target's shadow to the ground to prevent the target from fleeing.",
     "flavorTextKo": "공격과 동시에 상대의 그림자를 꿰매 도망칠 수 없게 한다.",
+    "flavorTextJa": "攻撃と 同時に 相手の 影を 縫い付けて 逃げられなくする。",
+    "flavorTextZh": "攻击的同时， 缝住对手的影子， 使其无法逃走。",
     "updatedInChampions": true,
     "championsEffectEn": "Gives the target the Can't Escape status."
   },
@@ -6251,6 +7029,8 @@
     "pp": 10,
     "flavorTextEn": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it.",
     "flavorTextKo": "상대가 마지막으로 사용한 기술에 원한을 품어 그 기술의 PP를 4만큼 줄인다.",
+    "flavorTextJa": "相手が 最後に 使った技に 恨みを 抱いて その技の ＰＰを ４だけ 減らす。",
+    "flavorTextZh": "对对手最后使用的招式 怀有怨恨， 减少４ＰＰ该招式。",
     "updatedInChampions": false
   },
   {
@@ -6267,6 +7047,8 @@
     "pp": 10,
     "flavorTextEn": "The power stored using the move Stockpile is released at once in an attack. The more power is stored, the greater the move's power.",
     "flavorTextKo": "비축된 힘을 상대에게 부딪쳐서 공격한다. 비축된 만큼 위력이 올라간다.",
+    "flavorTextJa": "蓄えた 力を 相手に ぶつけて 攻撃する。 蓄えているほど 威力が あがる。",
+    "flavorTextZh": "将积蓄的力量 撞向对手进行攻击。 积蓄得越多，威力越大。",
     "updatedInChampions": false
   },
   {
@@ -6283,6 +7065,8 @@
     "pp": 20,
     "flavorTextEn": "The user lays a trap of levitating stones around the opposing team. The trap damages opposing Pokémon that switch into battle.",
     "flavorTextKo": "상대의 주위에 무수한 바위를 띄워 교체해서 나온 상대 포켓몬에게 데미지를 준다.",
+    "flavorTextJa": "相手の 周りに 無数の 岩を 浮かべて 交代で でてきた 相手の ポケモンに ダメージを 与える。",
+    "flavorTextZh": "将无数岩石悬浮在对手的周围， 从而对替换出场的对手的 宝可梦给予伤害。",
     "updatedInChampions": false
   },
   {
@@ -6299,6 +7083,8 @@
     "pp": 5,
     "flavorTextEn": "The user fires a beam of steel that it collected from its entire body. This also damages the user.",
     "flavorTextKo": "전신에서 끌어모은 강철을 빔으로 바꿔 세차게 발사한다. 자신도 데미지를 받는다.",
+    "flavorTextJa": "全身から 集めた はがねを ビームとして 激しく 撃ちだす。 自分も ダメージを 受けてしまう。",
+    "flavorTextZh": "将从全身聚集的钢铁 化为光束，激烈地发射出去。 自己也会受到伤害。",
     "updatedInChampions": false
   },
   {
@@ -6315,6 +7101,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks while destroying the terrain. This move fails if the ground hasn't turned into a terrain.",
     "flavorTextKo": "필드를 파괴하면서 공격한다. 필드가 어떤 상태로든 변해 있지 않은 경우 기술은 실패한다.",
+    "flavorTextJa": "フィールドを 破壊しながら 攻撃。 なんらかの フィールド状態に 変わっていないと 技は 失敗する。",
+    "flavorTextZh": "在破坏场地的同时攻击对手。 如果脚下没有任何场地状态存在， 使出此招式时便会失败。",
     "updatedInChampions": false
   },
   {
@@ -6331,6 +7119,8 @@
     "pp": 25,
     "flavorTextEn": "The target is hit with wings of steel. This may also boost the user's Defense stat.",
     "flavorTextKo": "단단한 날개를 상대에게 부딪쳐서 공격한다. 자신의 방어가 올라갈 때가 있다.",
+    "flavorTextJa": "硬い 翼を 相手に たたきつけて 攻撃する。 自分の 防御が あがることが ある。",
+    "flavorTextZh": "用坚硬的翅膀敲打 对手进行攻击。 有时会提高自己的防御。",
     "updatedInChampions": false
   },
   {
@@ -6347,6 +7137,8 @@
     "pp": 20,
     "flavorTextEn": "The user weaves a sticky net around the opposing team, which lowers their Speed stats upon switching into battle.",
     "flavorTextKo": "상대의 주위에 끈적끈적한 네트를 둘러 펼쳐 교체되어 나온 상대의 스피드를 떨어뜨린다.",
+    "flavorTextJa": "相手の 周りに ねばねばした ネットを はりめぐらせ 交代で でてきた 相手の 素早さを さげる。",
+    "flavorTextZh": "在对手周围围上黏黏的网， 降低替换出场的对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -6363,6 +7155,8 @@
     "pp": 20,
     "flavorTextEn": "The user stores power and boosts its Defense and Sp. Def stats. This move can be used up to three times.",
     "flavorTextKo": "힘을 비축해서 자신의 방어와 특수방어를 올린다. 최대 3회까지 비축할 수 있다.",
+    "flavorTextJa": "力を 蓄えて 自分の 防御と 特防を あげる。 最大 ３回まで 蓄えられる。",
+    "flavorTextZh": "积蓄力量， 提高自己的防御和特防。 最多积蓄３次。",
     "updatedInChampions": false
   },
   {
@@ -6379,6 +7173,8 @@
     "pp": 10,
     "flavorTextEn": "Driven by frustration, the user attacks the target. This move's power is doubled if the user's previous move failed.",
     "flavorTextKo": "분함을 발판 삼아 공격한다. 앞 턴에서 기술이 빗나갔다면 위력이 배가 된다.",
+    "flavorTextJa": "悔しさを バネにして 攻撃する。 前の ターンに 技を 外していると 威力が 倍に なる。",
+    "flavorTextZh": "化悔恨为力量进行攻击。 如果上一回合招式没有打中， 威力就会翻倍。",
     "updatedInChampions": false
   },
   {
@@ -6395,6 +7191,8 @@
     "pp": 15,
     "flavorTextEn": "The user swings its stone axes at the target. Stone splinters left behind by this attack float around the target.",
     "flavorTextKo": "암석 도끼로 급소를 노려 공격한다. 딱딱한 암석 파편으로 상대에게 여러 번 데미지를 준다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -6411,6 +7209,8 @@
     "pp": 5,
     "flavorTextEn": "The user stabs the target with sharpened stones. This move has a heightened chance of landing a critical hit.",
     "flavorTextKo": "뾰족한 바위를 상대에게 꿰찔러서 공격한다. 급소에 맞기 쉽다.",
+    "flavorTextJa": "とがった 岩を 相手に 突き刺して 攻撃する。 急所に 当たりやすい。",
+    "flavorTextZh": "用尖尖的岩石 刺入对手进行攻击。 容易击中要害。",
     "updatedInChampions": false
   },
   {
@@ -6427,6 +7227,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks the target with stored power. The more the user's stats are boosted, the greater the move's power.",
     "flavorTextKo": "축적된 파워로 상대를 공격한다. 자신의 능력이 올라가 있는 만큼 위력이 오른다.",
+    "flavorTextJa": "蓄積された パワーで 相手を 攻撃する。自分の 能力が あがっているほど 威力が あがる。",
+    "flavorTextZh": "用蓄积起来的力量攻击对手。 自己的能力提高得越多， 威力就越大。",
     "updatedInChampions": false
   },
   {
@@ -6443,6 +7245,8 @@
     "pp": 10,
     "flavorTextEn": "The user strikes the target with a fierce blow. This attack always results in a critical hit.",
     "flavorTextKo": "강렬한 일격을 상대에게 날린다. 공격은 반드시 급소에 맞는다.",
+    "flavorTextJa": "強烈な 一撃を 相手に くりだす。攻撃は 必ず 急所に 当たる。",
+    "flavorTextZh": "向对手使出强烈的一击。 攻击必定会击中要害。",
     "updatedInChampions": false
   },
   {
@@ -6459,6 +7263,8 @@
     "pp": 10,
     "flavorTextEn": "The user restores its own HP by the same amount as the target's Attack stat. It then lowers the target's Attack stat.",
     "flavorTextKo": "상대 공격력과 동일하게 자신의 HP를 회복한다. 그리고 상대의 공격을 떨어뜨린다.",
+    "flavorTextJa": "相手の 攻撃力と 同じだけ 自分の ＨＰを 回復する。 そして 相手の 攻撃を さげる。",
+    "flavorTextZh": "给自己回复和对手攻击力 相同数值的ＨＰ， 然后降低对手的攻击。",
     "updatedInChampions": false
   },
   {
@@ -6475,6 +7281,8 @@
     "pp": 40,
     "flavorTextEn": "The user blows silk from its mouth that binds opposing Pokémon and harshly lowers their Speed stats.",
     "flavorTextKo": "입에서 뿜어낸 실을 휘감아서 상대의 스피드를 크게 떨어뜨린다.",
+    "flavorTextJa": "口から 吹きだした 糸を まきつけて 相手の 素早さを がくっと さげる。",
+    "flavorTextZh": "用口中吐出的丝缠绕对手， 从而大幅降低对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -6491,6 +7299,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks by struggling against opposing Pokémon. This also lowers their Sp. Atk stats.",
     "flavorTextKo": "저항해서 상대를 공격한다. 상대의 특수공격을 떨어뜨린다.",
+    "flavorTextJa": "抵抗して 相手を 攻撃する。 相手の 特攻を さげる。",
+    "flavorTextZh": "抵抗并攻击对手。 降低对手的特攻。",
     "updatedInChampions": false
   },
   {
@@ -6507,6 +7317,8 @@
     "pp": 10,
     "flavorTextEn": "The user eats its held Berry, then sharply boosts its Defense stat.",
     "flavorTextKo": "지니고 있는 나무열매를 먹고 방어를 크게 올린다.",
+    "flavorTextJa": "持っている きのみを 食べて 防御を ぐーんと あげる。",
+    "flavorTextZh": "吃掉携带的树果， 大幅提高防御。",
     "updatedInChampions": false
   },
   {
@@ -6523,6 +7335,8 @@
     "pp": 30,
     "flavorTextEn": "The user scatters a cloud of numbing powder that paralyzes the target.",
     "flavorTextKo": "저리가루를 많이 흩뿌려서 상대를 마비 상태로 만든다.",
+    "flavorTextJa": "しびれる 粉を たくさん ふりまいて 相手を まひ状態に する。",
+    "flavorTextZh": "撒出麻痹粉， 从而让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -6539,6 +7353,8 @@
     "pp": 10,
     "flavorTextEn": "The user creates a substitute for itself using some of its own HP. The substitute serves as the user's decoy.",
     "flavorTextKo": "자신의 HP를 조금 깎아서 분신을 만든다. 분신은 자신의 대타가 된다.",
+    "flavorTextJa": "自分の ＨＰを 少し 削って 分身を だす。 分身は 自分の 身代わりに なる。",
+    "flavorTextZh": "削减少许自己的ＨＰ， 制造分身。 分身将成为自己的替身。",
     "updatedInChampions": false
   },
   {
@@ -6555,6 +7371,8 @@
     "pp": 5,
     "flavorTextEn": "This move enables the user to attack first. This move fails if the target is not readying an attack.",
     "flavorTextKo": "상대보다 먼저 공격할 수 있다. 상대가 쓴 기술이 공격기술이 아니면 실패한다.",
+    "flavorTextJa": "相手より 先に 攻撃 できる。 相手が だす技が 攻撃技でないと 失敗する。",
+    "flavorTextZh": "可以比对手先攻击。 对手使出的招式 如果不是攻击招式则会失败。",
     "updatedInChampions": false
   },
   {
@@ -6571,6 +7389,8 @@
     "pp": 5,
     "flavorTextEn": "The user intensifies the sun for five turns, powering up Fire-type attacks. The sunlight also lowers the power of Water-type attacks.",
     "flavorTextKo": "5턴 동안 햇살을 강하게 해서 불꽃타입 기술의 위력을 올린다. 물타입의 위력은 떨어진다.",
+    "flavorTextJa": "５ターンの 間 日差しを 強くして ほのおタイプの 威力を あげる。 みずタイプの 威力は さがる。",
+    "flavorTextZh": "在５回合内让日照变得强烈， 从而提高火属性的招式威力。 水属性的招式威力则降低。",
     "updatedInChampions": false
   },
   {
@@ -6587,6 +7407,8 @@
     "pp": 15,
     "flavorTextEn": "The user electrifies its body and drops onto the target to inflict damage. If this move misses, the user takes damage instead.",
     "flavorTextKo": "몸에 전기를 두르고 상대를 덮친다. 빗나가면 자신이 데미지를 입는다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -6603,6 +7425,8 @@
     "pp": 10,
     "flavorTextEn": "The user chomps hard on the target with its sharp front fangs. This cuts the target's HP in half.",
     "flavorTextKo": "날카로운 앞니로 강하게 물어서 공격한다. 상대의 HP는 절반이 된다.",
+    "flavorTextJa": "鋭い 前歯で 激しく かみついて 攻撃する。 相手の ＨＰは 半分に なる。",
+    "flavorTextZh": "用锋利的门牙 猛烈地咬住对手进行攻击。 对手的ＨＰ减半。",
     "updatedInChampions": false
   },
   {
@@ -6619,6 +7443,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks the target with great power. This also lowers the user's Attack and Defense stats.",
     "flavorTextKo": "엄청난 힘을 발휘하여 상대를 공격한다. 자신의 공격과 방어가 떨어진다.",
+    "flavorTextJa": "すごい 力を 発揮して 相手を 攻撃する。自分の 攻撃と 防御が さがる。",
+    "flavorTextZh": "发挥惊人的力量攻击对手。 自己的攻击和防御会降低。",
     "updatedInChampions": false
   },
   {
@@ -6635,6 +7461,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks everything around it by swamping its surroundings with a giant wave.",
     "flavorTextKo": "큰 파도로 자신의 주위에 있는 포켓몬을 공격한다.",
+    "flavorTextJa": "大きな 波で 自分の 周りに いるものを 攻撃する。",
+    "flavorTextZh": "利用大浪 攻击自己周围所有的宝可梦。",
     "updatedInChampions": false
   },
   {
@@ -6651,6 +7479,8 @@
     "pp": 15,
     "flavorTextEn": "The user enrages and confuses the target. However, this also sharply boosts the target's Attack stat.",
     "flavorTextKo": "상대를 화내게 해서 혼란시킨다. 분노로 상대의 공격은 크게 올라가 버린다.",
+    "flavorTextJa": "相手を 怒らせて 混乱させる。 怒りで 相手の 攻撃は ぐーんと あがってしまう。",
+    "flavorTextZh": "激怒对手，使其混乱。 因为愤怒，对手的攻击 会大幅提高。",
     "updatedInChampions": false
   },
   {
@@ -6667,6 +7497,8 @@
     "pp": 10,
     "flavorTextEn": "The power stored using the move Stockpile is absorbed by the user to restore its own HP. The more power is stored, the more HP is restored.",
     "flavorTextKo": "비축된 힘을 꿀꺽해서 자신의 HP를 회복한다. 비축된 만큼 회복한다.",
+    "flavorTextJa": "蓄えた 力を のみこんで 自分の ＨＰを 回復する。 蓄えているほど 回復する。",
+    "flavorTextZh": "将积蓄的力量吞下， 从而回复自己的ＨＰ。 积蓄得越多，回复越大。",
     "updatedInChampions": false
   },
   {
@@ -6683,6 +7515,8 @@
     "pp": 10,
     "flavorTextEn": "The user kisses the target with a sweet, angelic cuteness that causes confusion.",
     "flavorTextKo": "천사처럼 귀엽게 키스하여 상대를 혼란시킨다.",
+    "flavorTextJa": "天使のように かわいく キスして 相手を 混乱させる。",
+    "flavorTextZh": "像天使般可爱地亲吻对手， 从而使对手混乱。",
     "updatedInChampions": false
   },
   {
@@ -6699,6 +7533,8 @@
     "pp": 20,
     "flavorTextEn": "The user releases a scent that harshly lowers opposing Pokémon's evasiveness.",
     "flavorTextKo": "향기로 상대의 회피율을 크게 떨어뜨린다.",
+    "flavorTextJa": "香りで 相手の 回避率を がくっと さげる。",
+    "flavorTextZh": "用香气大幅降低对手的闪避率。",
     "updatedInChampions": false
   },
   {
@@ -6715,6 +7551,8 @@
     "pp": 10,
     "flavorTextEn": "The user trades held items with the target faster than the eye can follow.",
     "flavorTextKo": "눈에 보이지 않는 속도로 자신과 상대가 지닌 물건을 교환한다.",
+    "flavorTextJa": "目にも とまらぬ 速さで 自分と 相手の 持ち物を 交換する。",
+    "flavorTextZh": "用一闪而过的速度 交换自己和对手的持有物。",
     "updatedInChampions": false
   },
   {
@@ -6731,6 +7569,8 @@
     "pp": 20,
     "flavorTextEn": "A frenetic dance to uplift the fighting spirit. This sharply boosts the user's Attack stat.",
     "flavorTextKo": "싸움의 춤을 격렬하게 춰서 기세를 높인다. 자신의 공격을 크게 올린다.",
+    "flavorTextJa": "戦いの舞を 激しく おどって 気合を 高める。 自分の 攻撃を ぐーんと あげる。",
+    "flavorTextZh": "激烈地跳起战舞提高气势。 大幅提高自己的攻击。",
     "updatedInChampions": false
   },
   {
@@ -6747,6 +7587,8 @@
     "pp": 5,
     "flavorTextEn": "The user restores its own HP. The amount of HP regained varies with the weather.",
     "flavorTextKo": "자신의 HP를 회복한다. 날씨에 따라 회복량이 변한다.",
+    "flavorTextJa": "自分の ＨＰを 回復する。 天気に よって 回復の 量が 変化する。",
+    "flavorTextZh": "回复自己的ＨＰ。 根据天气的不同， 回复量也会有所变化。",
     "updatedInChampions": false
   },
   {
@@ -6763,6 +7605,8 @@
     "pp": 12,
     "flavorTextEn": "The user sets off an explosion of sticky candy syrup, which coats the target and causes the target's Speed stat to drop each turn for three turns.",
     "flavorTextKo": "끈적끈적한 물엿을 폭발시킨다. 상대를 물엿범벅 상태로 만들어서 3턴 동안 계속 스피드를 떨어뜨린다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": true,
     "championsEffectEn": "Gives the target the Syrupy status for 3 turns."
   },
@@ -6780,6 +7624,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks by striking the target with its hard tail. This move hits two to five times in a row.",
     "flavorTextKo": "단단한 꼬리로 상대를 때려서 공격한다. 2-5회 동안 연속으로 쓴다.",
+    "flavorTextJa": "硬い しっぽで 相手を たたいて 攻撃する。 ２ー５回の 間 連続で だす。",
+    "flavorTextZh": "用坚硬的尾巴 拍打对手进行攻击。 连续攻击２～５次。",
     "updatedInChampions": false
   },
   {
@@ -6796,6 +7642,8 @@
     "pp": 15,
     "flavorTextEn": "The user whips up a turbulent whirlwind that boosts the Speed stats of itself and its allies for four turns.",
     "flavorTextKo": "세차게 불어대는 바람의 소용돌이를 만들어 4턴 동안 같은 편 모두의 스피드를 올린다.",
+    "flavorTextJa": "激しく 吹きあれる 風の渦を つくり ４ターンの 間 味方 全員の 素早さを あげる。",
+    "flavorTextZh": "刮起猛烈的旋风， 在４回合内 提高我方全员的速度。",
     "updatedInChampions": false
   },
   {
@@ -6812,6 +7660,8 @@
     "pp": 20,
     "flavorTextEn": "The target is taunted into a rage that allows it to use only attack moves for three turns.",
     "flavorTextKo": "상대를 화나게 한다. 3턴 동안 상대는 데미지를 주는 기술밖에 쓸 수 없게 된다.",
+    "flavorTextJa": "相手を 怒らせる。 ３ターンの 間 相手は ダメージを 与える 技しか だせなくなる。",
+    "flavorTextZh": "使对手愤怒。 在３回合内让对手 只能使出给予伤害的招式。",
     "updatedInChampions": false
   },
   {
@@ -6828,6 +7678,8 @@
     "pp": 20,
     "flavorTextEn": "The user gets teary-eyed to make the target lose its combative spirit. This lowers the target's Attack and Sp. Atk stats.",
     "flavorTextKo": "눈물을 그렁그렁거려 상대의 전의를 상실하게 한다. 상대의 공격과 특수공격이 떨어진다.",
+    "flavorTextJa": "なみだめに なって 相手の 戦力を 喪失させる。 相手の 攻撃と 特攻が さがる。",
+    "flavorTextZh": "变得泪眼汪汪， 让对手丧失斗志。 从而降低对手的攻击和特攻。",
     "updatedInChampions": false
   },
   {
@@ -6844,6 +7696,8 @@
     "pp": 10,
     "flavorTextEn": "The user has teatime with all the Pokémon currently in the battle. Each Pokémon eats its held Berry.",
     "flavorTextKo": "다과회를 열어서 배틀에 나와 있는 포켓몬이 각각 지니고 있는 나무열매를 먹는다.",
+    "flavorTextJa": "おちゃかいを ひらいて 場にいる ポケモンが それぞれ 持っている きのみを 食べる。",
+    "flavorTextZh": "举办一场茶会， 场上的所有宝可梦都会 吃掉自己携带的树果。",
     "updatedInChampions": false
   },
   {
@@ -6860,6 +7714,8 @@
     "pp": 20,
     "flavorTextEn": "The user performs a wobbly dance that confuses every Pokémon around it.",
     "flavorTextKo": "흔들흔들 댄스를 춰서 주위에 있는 포켓몬을 혼란 상태로 만든다.",
+    "flavorTextJa": "フラフラと ダンスを おどって 自分の 周りに いるものを 混乱状態に させる。",
+    "flavorTextZh": "摇摇晃晃地跳起舞蹈， 让自己周围的宝可梦 陷入混乱状态。",
     "updatedInChampions": false
   },
   {
@@ -6876,6 +7732,8 @@
     "pp": 10,
     "flavorTextEn": "Spurred by desperation, the user attacks the target. This move's power is doubled if the user's previous move failed.",
     "flavorTextKo": "자포자기하는 자세로 공격한다. 앞 턴에서 기술이 빗나갔다면 위력이 배가 된다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -6892,6 +7750,8 @@
     "pp": 10,
     "flavorTextEn": "The user utilizes the energy of the terrain to attack. This move’s type and power change depending on the terrain at the time the move is used.",
     "flavorTextKo": "필드의 힘을 빌려서 공격한다. 사용했을 때의 필드 상태에 따라서 기술 타입과 위력이 바뀐다.",
+    "flavorTextJa": "フィールドの力を 借りて 攻撃。 使った時の フィールドの状態に よって 技の タイプと 威力が 変わる。",
+    "flavorTextZh": "借助场地的力量进行攻击。 视使出招式时场地状态不同， 招式的属性和威力会有所变化。",
     "updatedInChampions": false
   },
   {
@@ -6908,6 +7768,8 @@
     "pp": 25,
     "flavorTextEn": "The user attacks and steals the target's held item simultaneously. The user can't steal anything if it already holds an item.",
     "flavorTextKo": "공격과 동시에 도구를 훔친다. 자신이 도구를 지니고 있을 경우에는 훔칠 수 없다.",
+    "flavorTextJa": "攻撃と 同時に 道具を 盗む。 自分が 道具を 持っている 場合は 盗めない。",
+    "flavorTextZh": "攻击的同时盗取道具。 当自己携带道具时， 不会去盗取。",
     "updatedInChampions": false
   },
   {
@@ -6924,6 +7786,8 @@
     "pp": 10,
     "flavorTextEn": "The user rampages and attacks for two to three turns. The user then becomes confused.",
     "flavorTextKo": "2-3턴 동안 마구 난동 부려서 상대를 공격한다. 난동 부린 뒤에는 혼란에 빠진다.",
+    "flavorTextJa": "２ー３ターンの 間 暴れまくって 相手を 攻撃する。 暴れたあとは 混乱する。",
+    "flavorTextZh": "在２～３回合内， 乱打一气地攻击对手。 大闹一番后自己会陷入混乱。",
     "updatedInChampions": false
   },
   {
@@ -6940,6 +7804,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks the target's throat, and the resultant suffering prevents the target from using sound-based moves for two turns.",
     "flavorTextKo": "이 기술에 맞은 상대는 지옥의 고통 때문에 2턴 동안 소리 기술을 낼 수 없다.",
+    "flavorTextJa": "この 技を 受けた 相手は 地獄の 苦しみから ２ターンの間 音の 技を 出すことが できなくなる。",
+    "flavorTextZh": "受到此招式攻击的对手， 会因为地狱般的痛苦，在２回合内， 变得无法使出声音类招式。",
     "updatedInChampions": false
   },
   {
@@ -6956,6 +7822,8 @@
     "pp": 10,
     "flavorTextEn": "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis.",
     "flavorTextKo": "강한 번개를 상대에게 떨어뜨려 공격한다. 마비 상태로 만들 때가 있다.",
+    "flavorTextJa": "激しい 雷を 相手に 落として 攻撃する。 まひ状態に することが ある。",
+    "flavorTextZh": "向对手劈下暴雷进行攻击。 有时会让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -6972,6 +7840,8 @@
     "pp": 15,
     "flavorTextEn": "The user attacks the target with a strong electric blast. This may also leave the target with paralysis.",
     "flavorTextKo": "강한 전격을 상대에게 날려서 공격한다. 마비 상태로 만들 때가 있다.",
+    "flavorTextJa": "強い 電撃を 相手に 浴びせて 攻撃する。 まひ状態に することが ある。",
+    "flavorTextZh": "向对手发出 强力电击进行攻击。 有时会让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -6988,6 +7858,8 @@
     "pp": 15,
     "flavorTextEn": "The user bites with electrified fangs. This may also make the target flinch or leave it with paralysis.",
     "flavorTextKo": "전기를 모은 이빨로 문다. 상대를 풀죽게 하거나 마비 상태로 만들 때가 있다.",
+    "flavorTextJa": "電気を ためた キバで かみつく。 相手を ひるませたり まひ状態に することが ある。",
+    "flavorTextZh": "用蓄满电流的牙齿咬住对手。 有时会使对手畏缩 或陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -7004,6 +7876,8 @@
     "pp": 15,
     "flavorTextEn": "The target is attacked with an electrified punch. This may also leave the target with paralysis.",
     "flavorTextKo": "전격을 담은 펀치로 상대를 공격한다. 마비 상태로 만들 때가 있다.",
+    "flavorTextJa": "電撃を こめた パンチで 相手を 攻撃する。 まひ状態に することが ある。",
+    "flavorTextZh": "用充满电流的拳头攻击对手。 有时会让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -7020,6 +7894,8 @@
     "pp": 20,
     "flavorTextEn": "The user launches a weak jolt of electricity that paralyzes the target.",
     "flavorTextKo": "약한 전격을 날려서 상대를 마비 상태로 만든다.",
+    "flavorTextJa": "弱い 電撃を 浴びせることで 相手を まひ状態に する。",
+    "flavorTextZh": "向对手发出 微弱的电击， 从而让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -7036,6 +7912,8 @@
     "pp": 20,
     "flavorTextEn": "The user tickles the target into laughing, lowering its Attack and Defense stats.",
     "flavorTextKo": "몸을 간질여 웃게 만들어서 상대의 공격과 방어를 떨어뜨린다.",
+    "flavorTextJa": "体を くすぐり 笑わせる ことで 相手の 攻撃と 防御を さげる。",
+    "flavorTextZh": "给对手挠痒，使其发笑， 从而降低对手的攻击和防御。",
     "updatedInChampions": false
   },
   {
@@ -7052,6 +7930,8 @@
     "pp": 10,
     "flavorTextEn": "The user tidies up and removes the effects of Spikes, Stealth Rock, Sticky Web, Toxic Spikes, and Substitute. This also boosts the user’s Attack and Speed stats.",
     "flavorTextKo": "압정뿌리기, 스텔스록, 끈적끈적네트, 독압정, 분신을 모두 정리한다. 자신의 공격과 스피드가 올라간다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -7068,6 +7948,8 @@
     "pp": 10,
     "flavorTextEn": "The user blows out raging flames as if singing a song, scorching the target. This also boosts the user's Sp. Atk stat.",
     "flavorTextKo": "활활 타오르는 불꽃을 노래하듯 뿜어서 상대를 태워 버린다. 자신의 특수공격을 올린다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -7084,6 +7966,8 @@
     "pp": 15,
     "flavorTextEn": "The user torments and enrages the target, making it incapable of using the same move twice in a row.",
     "flavorTextKo": "상대에게 트집을 잡아서 똑같은 기술을 2회 연속으로 쓸 수 없게 한다.",
+    "flavorTextJa": "相手に いちゃもんを つけて 同じ 技を ２回連続で だせなくする。",
+    "flavorTextZh": "向对手无理取闹， 令其不能连续２次 使出相同招式。",
     "updatedInChampions": false
   },
   {
@@ -7100,6 +7984,8 @@
     "pp": 10,
     "flavorTextEn": "A move that leaves the target badly poisoned. Its poison damage worsens every turn.",
     "flavorTextKo": "상대를 맹독의 상태로 만든다. 턴이 진행될수록 독의 데미지가 증가한다.",
+    "flavorTextJa": "相手を 猛毒の 状態に する。 ターンが すすむほど 毒の ダメージが 増えていく。",
+    "flavorTextZh": "让对手陷入剧毒状态。 随着回合的推进， 中毒伤害会增加。",
     "updatedInChampions": false
   },
   {
@@ -7116,6 +8002,8 @@
     "pp": 20,
     "flavorTextEn": "The user lays a trap of poison spikes at the feet of the opposing team. The spikes will poison opposing Pokémon that switch into battle.",
     "flavorTextKo": "상대의 발밑에 독 압정을 뿌린다. 교체로 나온 상대 포켓몬에게 독을 퍼지게 한다.",
+    "flavorTextJa": "相手の 足下に どくびしを しかける。 交代で でてきた 相手の ポケモンに 毒を おわせる。",
+    "flavorTextZh": "在对手的脚下撒毒菱。 使对手替换出场的宝可梦中毒。",
     "updatedInChampions": false
   },
   {
@@ -7132,6 +8020,8 @@
     "pp": 20,
     "flavorTextEn": "The user shoots poisonous threads to poison the target and lower the target's Speed stat.",
     "flavorTextKo": "독이 섞인 실을 뿜어낸다. 상대를 독 상태로 만들고 스피드를 떨어뜨린다.",
+    "flavorTextJa": "毒の 混じった 糸を 吹き付ける。 相手を 毒にして 素早さを さげる。",
+    "flavorTextZh": "将混有毒的丝吐向对手。 使其中毒， 从而降低对手的速度。",
     "updatedInChampions": false
   },
   {
@@ -7148,6 +8038,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks suddenly as if leaping out from tall grass. The user's nimble footwork boosts its Speed stat.",
     "flavorTextKo": "풀숲에서 뛰어나오듯이 공격한다. 경쾌한 발재간으로 자신의 스피드를 올린다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -7164,6 +8056,8 @@
     "pp": 10,
     "flavorTextEn": "The user transforms into a copy of the target, right down to having the same move set.",
     "flavorTextKo": "상대 포켓몬으로 변신하여 상대와 완전히 똑같은 기술을 사용할 수 있다.",
+    "flavorTextJa": "相手の ポケモンに 変身することで 相手と まったく 同じ 技が 使える。",
+    "flavorTextZh": "变身成对手宝可梦的样子， 能够使用和对手 完全相同的招式。",
     "updatedInChampions": false
   },
   {
@@ -7180,6 +8074,8 @@
     "pp": 10,
     "flavorTextEn": "The user strikes with a simultaneous three-beam attack. This may also burn, freeze, or paralyze the target.",
     "flavorTextKo": "3개의 광선으로 공격한다. 마비, 화상 또는 얼음 상태 중 어느 하나로 만들 때가 있다.",
+    "flavorTextJa": "３つの 光線で 攻撃する。 まひか やけどか こおり状態の どれかに することが ある。",
+    "flavorTextZh": "用３种光线进行攻击。 有时会让对手陷入 麻痹、灼伤或冰冻的状态。",
     "updatedInChampions": false
   },
   {
@@ -7196,6 +8092,8 @@
     "pp": 10,
     "flavorTextEn": "The user catches the target off guard and swaps the target's held item with its own.",
     "flavorTextKo": "상대의 빈틈을 노려 자신과 상대가 지닌 물건을 바꿔치기한다.",
+    "flavorTextJa": "相手の すきを ついて 自分と 相手の 持ち物を 交換する。",
+    "flavorTextZh": "抓住对手的空隙， 交换自己和对手的持有物。",
     "updatedInChampions": false
   },
   {
@@ -7212,6 +8110,8 @@
     "pp": 20,
     "flavorTextEn": "The user takes the target trick-or-treating. This adds Ghost type to the target’s type.",
     "flavorTextKo": "상대를 핼러윈으로 초대한다. 상대 타입에 고스트타입이 추가된다.",
+    "flavorTextJa": "相手を ハロウィンに 誘う。 相手の タイプに ゴーストタイプが 追加される。",
+    "flavorTextZh": "邀请对手参加万圣夜。 使对手被追加幽灵属性。",
     "updatedInChampions": false
   },
   {
@@ -7228,6 +8128,8 @@
     "pp": 5,
     "flavorTextEn": "The user creates a bizarre area in which slower Pokémon get to move first for five turns.",
     "flavorTextKo": "이상한 공간을 만든다. 5턴 동안 느린 포켓몬부터 행동할 수 있다.",
+    "flavorTextJa": "まか不思議な 空間を つくる。 ５ターンの 間 遅い ポケモンから 行動できる。",
+    "flavorTextZh": "制造出离奇的空间。 在５回合内 速度慢的宝可梦可以先行动。",
     "updatedInChampions": false
   },
   {
@@ -7244,6 +8146,8 @@
     "pp": 10,
     "flavorTextEn": "A consecutive three-kick attack that becomes more powerful with each successful hit.",
     "flavorTextKo": "3회 연속으로 킥을 날려 공격한다. 기술이 맞을 때마다 위력이 올라간다.",
+    "flavorTextJa": "３回連続で キックを くりだして 攻撃する。 技が 当たるたびに 威力は あがる。",
+    "flavorTextZh": "连续３次踢对手进行攻击。 每踢中一次，威力就会提高。",
     "updatedInChampions": false
   },
   {
@@ -7260,6 +8164,8 @@
     "pp": 16,
     "flavorTextEn": "The user lands an intense kick of tropical origins on the target. This also lowers the target's Attack stat.",
     "flavorTextKo": "남쪽 나라에서 유래된 뜨거운 킥을 상대에게 날린다. 상대의 공격을 떨어뜨린다.",
+    "flavorTextJa": "南国 由来の 熱い キックを 相手に 浴びせる。 相手の 攻撃を さげる。",
+    "flavorTextZh": "向对手使出来自南国的火热脚踢。 从而降低对手的攻击。",
     "updatedInChampions": true,
     "championsEffectEn": "Lowers the target's Attack stat by 1 stage."
   },
@@ -7277,6 +8183,8 @@
     "pp": 10,
     "flavorTextEn": "The user shoots mystical beams from its eyes to inflict damage. The target is hit twice in a row.",
     "flavorTextKo": "두 눈에서 불가사의한 광선을 발사해서 공격한다. 2회 연속으로 데미지를 준다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -7293,6 +8201,8 @@
     "pp": 20,
     "flavorTextEn": "After making its attack, the user rushes back to switch places with a party Pokémon in waiting.",
     "flavorTextKo": "공격한 뒤 굉장한 스피드로 돌아와서 교대 포켓몬과 교체한다.",
+    "flavorTextJa": "攻撃したあと ものすごい スピードで もどってきて 控えの ポケモンと 入れ替わる。",
+    "flavorTextZh": "在攻击之后急速返回， 和后备宝可梦进行替换。",
     "updatedInChampions": false
   },
   {
@@ -7309,6 +8219,8 @@
     "pp": 15,
     "flavorTextEn": "The user reacts to the target's movement and strikes with the heel of its palm, making the target flinch. This move fails if the target is not readying a priority move.",
     "flavorTextKo": "움직임에 반응하여 손바닥으로 밀쳐서 상대를 풀죽게 한다. 상대가 쓸 기술이 선제공격 기술이 아니면 실패한다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -7325,6 +8237,8 @@
     "pp": 10,
     "flavorTextEn": "The user attacks in an uproar for three turns. During that time, no Pokémon can fall asleep.",
     "flavorTextKo": "3턴 동안 소란 피워 공격한다. 그동안은 아무도 잠들지 않게 된다.",
+    "flavorTextJa": "３ターンの 間 騒いで 相手を 攻撃する。 そのあいだは だれも 眠れなくなる。",
+    "flavorTextZh": "在３回合内 用骚乱攻击对手。 在此期间谁都不能入眠。",
     "updatedInChampions": false
   },
   {
@@ -7341,6 +8255,8 @@
     "pp": 30,
     "flavorTextEn": "The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first.",
     "flavorTextKo": "주먹을 흔들어 진공의 파도를 일으킨다. 반드시 선제공격을 할 수 있다.",
+    "flavorTextJa": "こぶしを ふって 真空の 波を まきおこす。 必ず 先制攻撃できる。",
+    "flavorTextZh": "挥动拳头， 掀起真空波。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -7357,6 +8273,8 @@
     "pp": 10,
     "flavorTextEn": "The user drenches the target in a special poisonous liquid. This move's power is doubled if the target is poisoned.",
     "flavorTextKo": "특수한 독액을 끼얹는다. 독 상태의 상대에게는 위력이 2배가 된다.",
+    "flavorTextJa": "特殊な 毒液を 浴びせかける。 毒状態の 相手には 威力が ２倍に なる。",
+    "flavorTextZh": "将特殊的毒液泼向对手。 对处于中毒状态的对手， 威力会变成２倍。",
     "updatedInChampions": false
   },
   {
@@ -7373,6 +8291,8 @@
     "pp": 20,
     "flavorTextEn": "After making its attack, the user rushes back to switch places with a party Pokémon in waiting.",
     "flavorTextKo": "공격한 뒤 굉장한 스피드로 돌아와서 교대 포켓몬과 교체한다.",
+    "flavorTextJa": "攻撃したあと ものすごい スピードで もどってきて 控えポケモンと 入れ替わる。",
+    "flavorTextZh": "在攻击之后急速返回， 和后备宝可梦进行替换。",
     "updatedInChampions": false
   },
   {
@@ -7389,6 +8309,8 @@
     "pp": 15,
     "flavorTextEn": "The user electrifies itself and charges the target. This also damages the user quite a lot. This attack may leave the target with paralysis.",
     "flavorTextKo": "전기를 한데 모아 돌진한다. 자신도 상당한 데미지를 입는다. 마비 상태로 만들 때가 있다.",
+    "flavorTextJa": "電気を まとって 突進する。 自分も かなり ダメージを 受ける。 まひ状態に することが ある。",
+    "flavorTextZh": "让电流覆盖全身猛撞向对手。 自己也会受到不小的伤害。 有时会让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -7405,6 +8327,8 @@
     "pp": 15,
     "flavorTextEn": "The user charges at the target and may make it flinch.",
     "flavorTextKo": "굉장한 기세로 상대에게 돌진한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "すごい 勢いで 相手に つっこむ。 相手を ひるませることが ある。",
+    "flavorTextZh": "以惊人的气势扑向对手。 有时会使对手畏缩。",
     "updatedInChampions": false
   },
   {
@@ -7421,6 +8345,8 @@
     "pp": 20,
     "flavorTextEn": "The user attacks the target with a pulsing blast of water. This may also confuse the target.",
     "flavorTextKo": "물의 진동을 상대에게 가하여 공격한다. 상대를 혼란시킬 때가 있다.",
+    "flavorTextJa": "水の 振動を 相手に 与えて 攻撃する。 相手を 混乱させることが ある。",
+    "flavorTextZh": "用水的震动攻击对手。 有时会使对手混乱。",
     "updatedInChampions": false
   },
   {
@@ -7437,6 +8363,8 @@
     "pp": 20,
     "flavorTextEn": "The user hits the target with throwing stars two to five times in a row. This move always goes first.",
     "flavorTextKo": "점액으로 만든 수리검을 2-5회 동안 연속으로 던진다. 반드시 선제공격할 수 있다.",
+    "flavorTextJa": "粘液で できた 手裏剣を ２ー５回の 間 連続で だす。 必ず 先制攻撃 できる。",
+    "flavorTextZh": "用粘液制成的手里剑， 连续攻击２～５次。 必定能够先制攻击。",
     "updatedInChampions": false
   },
   {
@@ -7453,6 +8381,8 @@
     "pp": 5,
     "flavorTextEn": "The user spouts water to damage opposing Pokémon. The lower the user's HP, the lower the move's power.",
     "flavorTextKo": "바닷물을 내뿜어 공격한다. 자신의 HP가 적을수록 기술의 위력이 떨어진다.",
+    "flavorTextJa": "潮を 吹きつけて 攻撃する。 自分の ＨＰが 少ないほど 技の 威力は さがる。",
+    "flavorTextZh": "掀起潮水进行攻击。 自己的ＨＰ越少， 招式的威力越小。",
     "updatedInChampions": false
   },
   {
@@ -7469,6 +8399,8 @@
     "pp": 10,
     "flavorTextEn": "The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user quite a lot.",
     "flavorTextKo": "물을 두르고 온몸으로 상대에게 부딪친다. 자신도 상당한 데미지를 입는다.",
+    "flavorTextJa": "",
+    "flavorTextZh": "",
     "updatedInChampions": false
   },
   {
@@ -7485,6 +8417,8 @@
     "pp": 10,
     "flavorTextEn": "This move's type and power change depending on the weather at the time the move is used.",
     "flavorTextKo": "사용했을 때의 날씨에 따라서 기술 타입과 위력이 바뀐다.",
+    "flavorTextJa": "使ったときの 天気に よって 技の タイプと 威力が 変わる。",
+    "flavorTextZh": "根据使用时的天气， 招式属性和威力会改变。",
     "updatedInChampions": false
   },
   {
@@ -7501,6 +8435,8 @@
     "pp": 15,
     "flavorTextEn": "The user traps the target inside a violent, swirling whirlpool that inflicts damage for four to five turns.",
     "flavorTextKo": "세차게 소용돌이치는 물속에 4-5턴 동안 상대를 가두어 공격한다.",
+    "flavorTextJa": "激しく 渦をまく 水の中に ４ー５ターンの 間 相手を 閉じこめて 攻撃する。",
+    "flavorTextZh": "将对手困在激烈的 水流旋涡中， 在４～５回合内进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -7517,6 +8453,8 @@
     "pp": 20,
     "flavorTextEn": "The target is blown away, and a different Pokémon is dragged out. In the wild, this ends a battle against a single Pokémon.",
     "flavorTextKo": "상대를 날려버려서 교대할 포켓몬을 끌어낸다. 야생의 경우에는 배틀이 끝난다.",
+    "flavorTextJa": "相手を 吹きとばして 控えの ポケモンを ひきずりだす。 野生の 場合は 戦闘が 終わる。",
+    "flavorTextZh": "吹飞对手，强制拉后备宝可梦上场。 如果对手为野生宝可梦， 战斗将直接结束。",
     "updatedInChampions": false
   },
   {
@@ -7533,6 +8471,8 @@
     "pp": 10,
     "flavorTextEn": "The user and its allies are protected from wide-ranging attacks for one turn.",
     "flavorTextKo": "같은 편 전원에게 향하는 공격을 1턴 동안 막는다.",
+    "flavorTextJa": "味方全員に 当たる 攻撃を １ターンの 間 防ぐ。",
+    "flavorTextZh": "在１回合内防住 击打我方全员的攻击。",
     "updatedInChampions": false
   },
   {
@@ -7549,6 +8489,8 @@
     "pp": 15,
     "flavorTextEn": "The user shrouds itself in electricity and smashes into its target. This also damages the user a little.",
     "flavorTextKo": "전기를 두르고 상대에게 부딪쳐 공격한다. 자신도 조금 데미지를 입는다.",
+    "flavorTextJa": "電気を まとって 相手に ぶつかって 攻撃する。 自分も 少し ダメージを 受ける。",
+    "flavorTextZh": "让电流覆盖全身， 撞向对手进行攻击。 自己也会受到少许伤害。",
     "updatedInChampions": false
   },
   {
@@ -7565,6 +8507,8 @@
     "pp": 15,
     "flavorTextEn": "The user shoots a sinister flame at the target to inflict a burn.",
     "flavorTextKo": "으스스하고 괴상한 불꽃을 쏘아 상대를 화상 상태로 만든다.",
+    "flavorTextJa": "不気味で 怪しい 炎を 放って 相手を やけどの 状態に する。",
+    "flavorTextZh": "放出怪异的火焰， 从而让对手陷入灼伤状态。",
     "updatedInChampions": false
   },
   {
@@ -7581,6 +8525,8 @@
     "pp": 10,
     "flavorTextEn": "One turn after this move is used, the user's or its replacement's HP is restored by up to half the user's max HP.",
     "flavorTextKo": "다음 턴에 자신 또는 교체한 포켓몬의 HP를 최대 HP의 절반만큼 회복한다.",
+    "flavorTextJa": "次の ターンに 自分 もしくは 入れ替わった ポケモンの ＨＰを 最大ＨＰの 半分 回復する。",
+    "flavorTextZh": "在下一回合回复自己或是 替换出场的宝可梦最大ＨＰ的一半。",
     "updatedInChampions": false
   },
   {
@@ -7597,6 +8543,8 @@
     "pp": 10,
     "flavorTextEn": "The user creates a bizarre area in which Pokémon's Defense and Sp. Def stats are swapped for five turns.",
     "flavorTextKo": "이상한 공간을 만든다. 5턴 동안 모든 포켓몬의 방어와 특수방어가 바뀐다.",
+    "flavorTextJa": "まか不思議な 空間を つくる。 ５ターンのあいだ すべてのポケモンの 防御と 特防が 入れ替わる。",
+    "flavorTextZh": "制造出离奇的空间。 在５回合内互换 所有宝可梦的防御和特防。",
     "updatedInChampions": false
   },
   {
@@ -7613,6 +8561,8 @@
     "pp": 15,
     "flavorTextEn": "The user slams its rugged body into the target to attack. This also damages the user quite a lot.",
     "flavorTextKo": "단단한 몸통을 상대에게 부딪쳐서 공격한다. 자신도 상당한 데미지를 입는다.",
+    "flavorTextJa": "硬い 胴体を 相手に たたきつけて 攻撃する。 自分も かなり ダメージを 受ける。",
+    "flavorTextZh": "用坚硬的躯体 撞击对手进行攻击。 自己也会受到不小的伤害。",
     "updatedInChampions": false
   },
   {
@@ -7629,6 +8579,8 @@
     "pp": 10,
     "flavorTextEn": "A seed that causes worry is planted on the target. It prevents sleep by making the target's Ability Insomnia.",
     "flavorTextKo": "마음을 괴롭히는 씨앗을 심는다. 상대를 잠잘 수 없게 해서 특성을 불면으로 만든다.",
+    "flavorTextJa": "心を なやませる タネを 植えつける。 相手を 眠れなくして 特性を ふみんに する。",
+    "flavorTextZh": "种植心神不宁的种子。 使对手不能入眠， 并将特性变成不眠。",
     "updatedInChampions": false
   },
   {
@@ -7645,6 +8597,8 @@
     "pp": 20,
     "flavorTextEn": "A long body, vines, or the like are used to wrap and squeeze the target for four to five turns.",
     "flavorTextKo": "긴 몸이나 덩굴 등을 사용해 4-5턴 동안 상대를 휘감아 공격한다.",
+    "flavorTextJa": "長い 体や つるなどを 使って ４ー５ターンの 間 相手に まきついて 攻撃する。",
+    "flavorTextZh": "使用长长的身体或藤蔓等， 在４～５回合内 紧束对手进行攻击。",
     "updatedInChampions": false
   },
   {
@@ -7661,6 +8615,8 @@
     "pp": 15,
     "flavorTextEn": "The user slashes at the target by crossing its scythes, claws, or the like as if they were a pair of scissors.",
     "flavorTextKo": "낫이나 발톱을 가위처럼 교차시키면서 상대를 베어 가른다.",
+    "flavorTextJa": "カマや ツメを ハサミのように 交差させながら 相手を 切り裂く。",
+    "flavorTextZh": "将镰刀或爪子像剪刀般地交叉， 顺势劈开对手。",
     "updatedInChampions": false
   },
   {
@@ -7677,6 +8633,8 @@
     "pp": 10,
     "flavorTextEn": "The user lets loose a huge yawn that lulls the target into falling asleep on the next turn.",
     "flavorTextKo": "큰 하품으로 졸음을 유도한다. 다음 턴에 상대를 잠듦 상태로 만든다.",
+    "flavorTextJa": "大きな あくびで 眠気を 誘う。 次の ターンに 相手を 眠り状態に する。",
+    "flavorTextZh": "打个大哈欠引起睡意。 在下一回合让对手陷入睡眠状态。",
     "updatedInChampions": false
   },
   {
@@ -7693,6 +8651,8 @@
     "pp": 5,
     "flavorTextEn": "The user attacks by firing an electric blast like a cannon. This also leaves the target with paralysis.",
     "flavorTextKo": "대포처럼 전기를 발사해서 공격한다. 상대를 마비 상태로 만든다.",
+    "flavorTextJa": "大砲の ような 電気を 発射して 攻撃する。 相手を まひの 状態に する。",
+    "flavorTextZh": "发射大炮一样的 电流进行攻击。 让对手陷入麻痹状态。",
     "updatedInChampions": false
   },
   {
@@ -7709,6 +8669,8 @@
     "pp": 15,
     "flavorTextEn": "The user focuses its willpower to its head and attacks the target. This may also make the target flinch.",
     "flavorTextKo": "사념의 힘을 이마에 모아서 공격한다. 상대를 풀죽게 만들 때가 있다.",
+    "flavorTextJa": "思念の 力を 額に 集めて 攻撃する。 相手を ひるませることが ある。",
+    "flavorTextZh": "将思念的力量集中在 前额进行攻击。 有时会使对手畏缩。",
     "updatedInChampions": false
   }
 ]

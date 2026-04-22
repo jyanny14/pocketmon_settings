@@ -192,7 +192,12 @@ function renderMovesSection(moveSlugs, allMoves, species) {
     const row = document.createElement("tr");
     const nameCell = document.createElement("td");
     nameCell.textContent = m ? moveDisplayName(m) : slug;
-    nameCell.title = m?.flavorTextKo || m?.flavorTextEn || "";
+    const curLang = getLang();
+    nameCell.title =
+      curLang === "ja" ? (m?.flavorTextJa || m?.flavorTextEn || "")
+      : curLang === "zh" ? (m?.flavorTextZh || m?.flavorTextEn || "")
+      : curLang === "en" ? (m?.flavorTextEn || "")
+      : (m?.flavorTextKo || m?.flavorTextEn || "");
     const exclusiveForm = exclusiveBy.get(slug);
     if (exclusiveForm) {
       const badge = document.createElement("span");

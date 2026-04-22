@@ -976,9 +976,13 @@ function renderMovePickerList() {
     // Line 2: flavor text (Champions/PokeAPI short description) — muted,
     // 2-line ellipsis. Shown so the user doesn't have to open another page
     // to know what a move does.
-    const flavorKo = m.flavorTextKo || "";
     const flavorEn = m.flavorTextEn || "";
-    const flavor = getLang() === "ko" ? (flavorKo || flavorEn) : (flavorEn || flavorKo);
+    const flavorLoc =
+      getLang() === "ja" ? (m.flavorTextJa || "")
+      : getLang() === "zh" ? (m.flavorTextZh || "")
+      : getLang() === "en" ? ""
+      : (m.flavorTextKo || "");
+    const flavor = flavorLoc || flavorEn;
     if (flavor) {
       const desc = document.createElement("span");
       desc.className = "picker-row__flavor";

@@ -36,6 +36,12 @@ MOVE_NAMES_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_ja.
 MOVE_NAMES_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "move_names_zh.json"
 MOVE_NAMES_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_zh.json"
 
+# ja/zh flavor text — PokeAPI move flavor_text. scripts/fetch_flavors_i18n.py 산출물.
+MOVE_FLAVORS_JA_PATH = PROJECT_ROOT / "data" / "processed" / "move_flavorText_ja.json"
+MOVE_FLAVORS_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_flavorText_ja.json"
+MOVE_FLAVORS_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "move_flavorText_zh.json"
+MOVE_FLAVORS_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_flavorText_zh.json"
+
 OUT = PROJECT_ROOT / "web" / "data" / "moves.json"
 
 
@@ -88,6 +94,14 @@ def _load_move_names_zh() -> dict[str, str]:
     return _load_merged(MOVE_NAMES_ZH_PATH, MOVE_NAMES_ZH_OVERRIDE_PATH)
 
 
+def _load_move_flavors_ja() -> dict[str, str]:
+    return _load_merged(MOVE_FLAVORS_JA_PATH, MOVE_FLAVORS_JA_OVERRIDE_PATH)
+
+
+def _load_move_flavors_zh() -> dict[str, str]:
+    return _load_merged(MOVE_FLAVORS_ZH_PATH, MOVE_FLAVORS_ZH_OVERRIDE_PATH)
+
+
 def main() -> int:
     logging.basicConfig(
         level=logging.INFO,
@@ -103,6 +117,8 @@ def main() -> int:
     flavors_ko_override = _load_move_flavors_ko()
     names_ja = _load_move_names_ja()
     names_zh = _load_move_names_zh()
+    flavors_ja = _load_move_flavors_ja()
+    flavors_zh = _load_move_flavors_zh()
     manual_name_applied = 0
     manual_flavor_applied = 0
     updated = 0
@@ -133,6 +149,8 @@ def main() -> int:
             "pp": e.get("pp"),
             "flavorTextEn": N(e.get("flavorTextEn", "")),
             "flavorTextKo": flavor_ko,
+            "flavorTextJa": N(flavors_ja.get(slug, "")),
+            "flavorTextZh": N(flavors_zh.get(slug, "")),
             "updatedInChampions": False,
         }
         if slug in overlay:

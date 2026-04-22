@@ -96,10 +96,24 @@ MOVE_NAMES_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "move_names_zh.
 # source: PokeAPI has per-item flavor text but not complete Korean item "effect".
 ITEM_EFFECTS_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_effects_ko.json"
 
+# ja/zh item effect — PokeAPI item flavor_text (공식 게임 내 설명) 를 effect 필드로 적재.
+# scripts/fetch_flavors_i18n.py --target item --lang {ja|zh} 산출물.
+ITEM_EFFECTS_JA_PATH = PROJECT_ROOT / "data" / "processed" / "item_effect_ja.json"
+ITEM_EFFECTS_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_effect_ja.json"
+ITEM_EFFECTS_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "item_effect_zh.json"
+ITEM_EFFECTS_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "item_effect_zh.json"
+
 # {slug: {gameTextKo?, descriptionKo?}} — fetch_ability_descriptions_ko.py
 ABILITY_DESC_KO_PATH = PROJECT_ROOT / "data" / "processed" / "ability_descriptions_ko.json"
 # Optional manual overrides (same shape). Manual values win per-field.
 ABILITY_DESC_KO_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_descriptions_ko.json"
+
+# ja/zh ability gameText — PokeAPI ability flavor_text. description 필드는 PokeAPI 에
+# ja/zh 가 없어 LLM 번역 대상 (Phase 2 후속).
+ABILITY_GAMETEXT_JA_PATH = PROJECT_ROOT / "data" / "processed" / "ability_gameText_ja.json"
+ABILITY_GAMETEXT_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_gameText_ja.json"
+ABILITY_GAMETEXT_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "ability_gameText_zh.json"
+ABILITY_GAMETEXT_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_gameText_zh.json"
 
 # Champions-only new abilities list (from newabilities.shtml)
 NEW_ABILITIES_PATH = PROJECT_ROOT / "data" / "processed" / "new_abilities.json"
@@ -143,6 +157,22 @@ def _load_ability_names_zh() -> dict[str, str]:
 
 def _load_item_names_ko() -> dict[str, str]:
     return _load_string_map(ITEM_NAMES_KO_PATH, ITEM_NAMES_KO_OVERRIDE_PATH)
+
+
+def _load_item_effects_ja() -> dict[str, str]:
+    return _load_string_map(ITEM_EFFECTS_JA_PATH, ITEM_EFFECTS_JA_OVERRIDE_PATH)
+
+
+def _load_item_effects_zh() -> dict[str, str]:
+    return _load_string_map(ITEM_EFFECTS_ZH_PATH, ITEM_EFFECTS_ZH_OVERRIDE_PATH)
+
+
+def _load_ability_gametext_ja() -> dict[str, str]:
+    return _load_string_map(ABILITY_GAMETEXT_JA_PATH, ABILITY_GAMETEXT_JA_OVERRIDE_PATH)
+
+
+def _load_ability_gametext_zh() -> dict[str, str]:
+    return _load_string_map(ABILITY_GAMETEXT_ZH_PATH, ABILITY_GAMETEXT_ZH_OVERRIDE_PATH)
 
 
 def _load_item_names_ja() -> dict[str, str]:
@@ -352,6 +382,8 @@ def build_items() -> list[dict]:
     names_ja = _load_item_names_ja()
     names_zh = _load_item_names_zh()
     effects_ko = _load_item_effects_ko()
+    effects_ja = _load_item_effects_ja()
+    effects_zh = _load_item_effects_zh()
     results: list[dict] = []
     for it in items:
         slug = _item_slug(it.name)
@@ -365,6 +397,8 @@ def build_items() -> list[dict]:
             "nameZh": N(names_zh.get(slug, "")),
             "effect": N(it.effect),
             "effectKo": N(effects_ko.get(slug, "")),
+            "effectJa": N(effects_ja.get(slug, "")),
+            "effectZh": N(effects_zh.get(slug, "")),
             "location": N(it.location),
             "iconPath": icon_rel if icon_exists else "",
             "category": it.category,
@@ -398,6 +432,8 @@ def build_abilities(pokemon: list[dict]) -> list[dict]:
     names_ja = _load_ability_names_ja()
     names_zh = _load_ability_names_zh()
     desc_ko = _load_ability_descriptions_ko()
+    gametext_ja = _load_ability_gametext_ja()
+    gametext_zh = _load_ability_gametext_zh()
     new_ability_slugs: set[str] = set()
     if NEW_ABILITIES_PATH.exists():
         try:
@@ -429,6 +465,8 @@ def build_abilities(pokemon: list[dict]) -> list[dict]:
             "descriptionKo": N(ko_fields.get("descriptionKo", "")),
             "gameText": N(d.game_text),
             "gameTextKo": N(ko_fields.get("gameTextKo", "")),
+            "gameTextJa": N(gametext_ja.get(d.slug, "")),
+            "gameTextZh": N(gametext_zh.get(d.slug, "")),
             "isNewInChampions": d.slug in new_ability_slugs,
             "pokemon": holders.get(d.slug, []),
         })
