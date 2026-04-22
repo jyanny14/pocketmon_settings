@@ -8,6 +8,10 @@ JS 쪽에서 하고 여기는 동기화만 합니다.
 
 모든 템플릿 상단에 붙는 한 블록. 목적: AI가 본편(SV 등) 지식으로 답하지 않도록 Pokémon Champions 기준임을 못 박고, 우리가 주는 JSON/URL 을 진실의 소스로 지정.
 
+## 진실의 소스 — Step 0 / Step 1 구조
+
+`STRICT_POOL_RULES_KO` / `STRICT_POOL_RULES_EN` 규칙 1 은 **두 단계**로 나뉘어 있음. (1) **Step 0**: 챗에 `champions-data*.json` 첨부가 있으면 그것만 써라 — URL fetch 금지, 재-첨부 요청 금지, 이전 턴 요약 재사용 금지. (2) **Step 1**: 첨부가 전혀 없을 때에만 기존 폴백 (fetched JSON → HTML → 인라인 JSON) 시도. 이 구조는 fetch 결과가 긴 대화에서 요약·압축되며 손실되는 반면 첨부 파일은 재조회 가능하다는 전제 위에 설계됨.
+
 ## 플레이스홀더
 
 - `{{PARTY_URL}}` — 현재 브라우저의 파티 URL (절대 URL).
