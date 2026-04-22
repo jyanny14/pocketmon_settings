@@ -135,24 +135,29 @@ PokeAPI 가 아직 한국어를 반영하지 않은 신규 항목에 대해 `dat
 - `data/manual/item_names_ko.json` — 아이템 24 건 stub (Champions 신규 메가스톤 대부분)
 - `data/manual/game_sources_override.json` — Legends: Z-A 같은 PokeAPI 미반영 신작 대응
 
-## 데이터 출처
-
-- **serebii.net Pokémon Champions 섹션** — https://www.serebii.net/pokemonchampions/ — 등장 포켓몬, 종족값, 특성, 기술, 도구
-- **PokeAPI** — https://pokeapi.co/ — 한국어 이름·설명, 기술 메타, HOME 연동 게임 소스
-- **PokeAPI sprites** — https://github.com/PokeAPI/sprites — 포켓몬 스프라이트
-
 ## 기술 스택
 
 - **Python 3** + `requests` + `beautifulsoup4` + `lxml` — 크롤러 / 파서 / 빌더
 - **Vanilla HTML/CSS/ES module** — 빌드 단계 없는 정적 프론트엔드
 - **의도적 미채용**: 프레임워크(React/Vue), 번들러(Vite/webpack), 데이터베이스, 백엔드 API
 
-## 라이선스 / 면책
+## 데이터 출처 / 라이선스
 
-- **Pokémon · Pokémon character names © Nintendo · Creatures Inc. · GAME FREAK inc.**
-- 본 프로젝트는 **비영리 팬 프로젝트**이며 광고·재유통·상업적 이용을 하지 않는다. GitHub Pages 무료 호스팅으로만 공개된다.
-- 스프라이트 이미지는 PokeAPI sprites 저장소의 사본으로, 비상업·팬 프로젝트 용도의 사실상 표준 사용 관행을 따른다.
-- 권리자 요청 시 즉시 해당 자원 삭제.
+### Pokémon 권리
+
+- **Pokémon · 캐릭터 이름 · 게임 내 아트 © Nintendo · Creatures Inc. · GAME FREAK inc.**
+- 본 프로젝트는 **비영리 팬 프로젝트**입니다. 광고·재유통·상업적 이용을 하지 않으며, GitHub Pages 무료 호스팅으로만 공개됩니다. 검색 엔진 인덱싱은 `robots.txt` 로 전면 차단.
+- **권리자 요청이 있으면 해당 자원을 즉시 삭제**합니다.
+
+### 데이터 소스
+
+| 출처 | 용도 | 라이선스 / 비고 |
+| --- | --- | --- |
+| [serebii.net Pokémon Champions 섹션](https://www.serebii.net/pokemonchampions/) | Champions 고유 라인업 · 종족값 · 특성 · 기술 · 도구 · 입수 경로 · 도구 아이콘 PNG (`web/assets/items/`) | 정보 참조 (비상업 팬 프로젝트 관행). PokeAPI 가 Pokémon Champions 을 미지원하기 때문에 현재로서는 대체 불가. |
+| [PokeAPI](https://pokeapi.co/) | 한국어 이름 · 설명, 기술 메타, HOME 연동 게임 소스 | BSD 3-Clause |
+| [PokeAPI/sprites](https://github.com/PokeAPI/sprites) | 포켓몬 스프라이트 PNG (`web/assets/sprites/`) | 레포지토리 MIT. 원 아트 저작권은 위의 Pokémon 권리자에게 있음. |
+
+serebii.net 의존을 줄이려 하고 있으나 Champions 고유 데이터 (Champions 에서 바뀐 기술 수치 `updatedInChampions`, 신규 특성 `isNewInChampions`, Champions 라인업 등) 는 PokeAPI 에 존재하지 않아 현재 대체가 불가합니다. PokeAPI 가 Champions 을 지원하거나 공식 자료가 공개되면 이전 검토 예정.
 
 ## 문서
 
