@@ -36,6 +36,35 @@ const TYPE_ORDER = [
 const STAT_KEYS = ["hp", "atk", "def", "spAtk", "spDef", "speed"];
 const STORAGE_KEY = "pc.savedParties.v1";
 
+/**
+ * 특성별 방어 배율 수정자. 파티 분석 '방어 프로필' 에서 타입 상성 multiplier 에
+ * 곱해 약점/저항/무효 집계에 반영한다.
+ *
+ * - 무효화(×0): 부유·축전·저수·타오르는불꽃·초식·전기엔진·피뢰침·흙먹기·건조피부(물 한정)
+ * - 반감(×0.5): 두꺼운지방(불꽃/얼음)·내열(불꽃)·수포(불꽃)·정화의소금(고스트)
+ *
+ * 건조피부의 불꽃 1.25× 증가 효과는 분류 경계(≥2×)에 거의 영향 없어 제외.
+ * 필터/하드락(강력한 공격 0.75×) 도 생략 (메커니즘 복잡).
+ * 스톰드레인·좋은밥통·폭신폭신은 Champions pokemon-data 에 없거나 복합 로직이라 미적용.
+ */
+const ABILITY_DEFENSE_EFFECT = {
+  // Immunity (0×)
+  levitate:     { ground: 0 },
+  voltabsorb:   { electric: 0 },
+  waterabsorb:  { water: 0 },
+  flashfire:    { fire: 0 },
+  sapsipper:    { grass: 0 },
+  motordrive:   { electric: 0 },
+  lightningrod: { electric: 0 },
+  eartheater:   { ground: 0 },
+  dryskin:      { water: 0 },
+  // Resistance (0.5×)
+  thickfat:     { fire: 0.5, ice: 0.5 },
+  heatproof:    { fire: 0.5 },
+  waterbubble:  { fire: 0.5 },
+  purifyingsalt:{ ghost: 0.5 },
+};
+
 /** @typedef {{slug:string, formName:string, abilitySlug:string, itemSlug:string|null, moves:string[], sps:number[], nature:string|null}} Slot */
 
 // Populated in init() once items.json is loaded. Keys are form.name ("Mega
@@ -1488,14 +1517,19 @@ function renderDefensiveProfile(members) {
   intro.textContent = t("party.analysis.defenseHint");
   s.appendChild(intro);
 
-  // For each attacker type, how many party members take >=2x from it
+  // For each attacker type, how many party members take >=2x from it.
+  // 특성(부유·축전·저수·두꺼운지방 등) 의 방어 효과도 배율에 반영 — 예를 들어
+  // 땅/바위 포켓몬이라도 부유 특성이면 땅 공격은 0× 로 계산돼 "땅 약점"
+  // 집계에서 제외된다.
   const rows = [];
   for (const atk of TYPE_ORDER) {
     let weak = 0;
     let resist = 0;
     let immune = 0;
     for (const m of members) {
-      const mul = attackMultiplier(atk, m.form.types ?? []);
+      let mul = attackMultiplier(atk, m.form.types ?? []);
+      const abilityMod = ABILITY_DEFENSE_EFFECT[m.slot.abilitySlug]?.[atk];
+      if (abilityMod !== undefined) mul *= abilityMod;
       if (mul === 0) immune++;
       else if (mul >= 2) weak++;
       else if (mul < 1) resist++;
