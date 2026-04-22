@@ -718,6 +718,12 @@ const STRINGS = {
 
 const SUPPORTED_LANGS = ["ko", "en", "ja", "zh"];
 const LANG_LABELS = { ko: "한", en: "EN", ja: "日", zh: "中" };
+const LANG_FULL_NAMES = {
+  ko: "한국어",
+  en: "English",
+  ja: "日本語",
+  zh: "简体中文",
+};
 
 let _lang = localStorage.getItem("lang") || "ko";
 if (!SUPPORTED_LANGS.includes(_lang)) _lang = "ko";
@@ -765,27 +771,115 @@ export function applyTranslations() {
 
 /** Wire up the #lang-toggle button.
  *
- * Phase 1 M2: 기존 2-way 토글(ko↔en)을 4-way 순환(ko→en→ja→zh→ko)으로 확장.
- * HTML 쪽 `[data-lang]` 옵션 마크업은 기존 2개(ko/en) 그대로 두고, 버튼 자체가
- * 현재 언어를 단일 라벨(`한 / EN / 日 / 中`)로 보여준다 — 8개 HTML 에 추가
- * 옵션을 새로 박지 않아도 되는 최소 변경 방식.
+ * 클릭 시 언어 리스트 팝업(listbox) 을 띄우고, 항목 선택 시 `setLang()`
+ * 으로 전환. 기존 HTML 마크업(`<button id="lang-toggle"><span data-lang="ko">한</span>...`)
+ * 은 건드리지 않는다 — 8 개 HTML 에 흩어진 마크업을 손대지 않고 JS 로
+ * 내부 span 을 지워 단일 라벨로 대체하고 팝업은 body 에 붙인다.
  */
 export function initLangToggle() {
   const btn = document.getElementById("lang-toggle");
   if (!btn) return;
 
-  const label = LANG_LABELS[_lang] ?? "?";
-  // 기존 2-way 마크업이 있으면 제거하고 단일 라벨로 대체.
-  btn.textContent = label;
+  // 버튼 내용 단일 라벨로 교체 (기존 2-way span 마크업 덮어씀).
+  const syncLabel = () => {
+    btn.textContent = LANG_LABELS[_lang] ?? "?";
+  };
+  syncLabel();
+  btn.setAttribute("aria-haspopup", "listbox");
+  btn.setAttribute("aria-expanded", "false");
   btn.setAttribute(
     "aria-label",
-    `현재 언어: ${label} (클릭하여 다음 언어로 전환)`,
+    `${LANG_FULL_NAMES[_lang] ?? _lang} — 언어 선택`,
   );
-  btn.setAttribute("title", `Language: ${label}`);
+  btn.setAttribute("title", LANG_FULL_NAMES[_lang] ?? _lang);
+
+  let menu = null;
+
+  const close = () => {
+    if (!menu) return;
+    menu.remove();
+    menu = null;
+    btn.setAttribute("aria-expanded", "false");
+    document.removeEventListener("click", onDocClick, true);
+    document.removeEventListener("keydown", onKey, true);
+  };
+
+  const onDocClick = (e) => {
+    if (!menu) return;
+    if (menu.contains(e.target) || btn.contains(e.target)) return;
+    close();
+  };
+
+  const onKey = (e) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      close();
+      btn.focus();
+    }
+  };
+
+  const open = () => {
+    menu = document.createElement("ul");
+    menu.className = "lang-toggle-menu";
+    menu.setAttribute("role", "listbox");
+    menu.setAttribute("aria-label", "Language");
+
+    for (const lang of SUPPORTED_LANGS) {
+      const li = document.createElement("li");
+      li.className = "lang-toggle-menu__opt"
+        + (lang === _lang ? " lang-toggle-menu__opt--active" : "");
+      li.setAttribute("role", "option");
+      li.setAttribute("aria-selected", lang === _lang ? "true" : "false");
+      li.tabIndex = 0;
+      li.dataset.lang = lang;
+      const mark = document.createElement("span");
+      mark.className = "lang-toggle-menu__mark";
+      mark.textContent = LANG_LABELS[lang];
+      const name = document.createElement("span");
+      name.className = "lang-toggle-menu__name";
+      name.textContent = LANG_FULL_NAMES[lang];
+      li.append(mark, name);
+      li.addEventListener("click", () => {
+        close();
+        if (lang !== _lang) setLang(lang);
+      });
+      li.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          li.click();
+        }
+      });
+      menu.appendChild(li);
+    }
+
+    // 버튼 바로 아래 우측 정렬 — 화면 오른쪽 넘침 방지.
+    const rect = btn.getBoundingClientRect();
+    menu.style.position = "absolute";
+    menu.style.top = `${rect.bottom + window.scrollY + 4}px`;
+    // 메뉴 폭이 버튼보다 넓으므로 버튼의 left 에 맞추되, 오른쪽 경계를 넘으면
+    // 우측 정렬로 전환.
+    menu.style.left = `${rect.left + window.scrollX}px`;
+    document.body.appendChild(menu);
+    // 추가된 뒤 실제 폭 계산해 오른쪽 정렬 보정.
+    const menuRect = menu.getBoundingClientRect();
+    if (menuRect.right > window.innerWidth - 8) {
+      menu.style.left = `${rect.right + window.scrollX - menuRect.width}px`;
+    }
+
+    btn.setAttribute("aria-expanded", "true");
+    // 다음 프레임에 이벤트 등록 — 이번 click 이 곧바로 close 로 잡히는 걸 방지.
+    requestAnimationFrame(() => {
+      document.addEventListener("click", onDocClick, true);
+      document.addEventListener("keydown", onKey, true);
+    });
+
+    // 현재 언어 항목에 포커스.
+    const active = menu.querySelector(".lang-toggle-menu__opt--active");
+    if (active) active.focus();
+  };
 
   btn.addEventListener("click", () => {
-    const i = SUPPORTED_LANGS.indexOf(_lang);
-    const next = SUPPORTED_LANGS[(i + 1) % SUPPORTED_LANGS.length];
-    setLang(next);
+    if (menu) close();
+    else open();
   });
 }

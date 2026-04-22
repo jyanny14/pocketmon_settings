@@ -218,19 +218,33 @@ a:hover {
   gap: var(--space-3);
 }
 
+/* 단일 라벨 버튼 (`한`/`EN`/`日`/`中`) — JS 가 초기화 시 span 마크업을 덮어쓰고
+ * 현재 언어 한 글자만 표시한다. 드롭다운은 `.lang-toggle-menu` 로 body 에 붙음. */
 .lang-toggle {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 28px;
   border: 1px solid var(--border-strong);
   border-radius: 999px;
   background: var(--bg);
-  padding: 2px;
+  padding: 0 10px;
   cursor: pointer;
   font: inherit;
-  font-size: 0.75rem;
-  font-weight: 600;
-  gap: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text);
+  transition: background 0.15s, border-color 0.15s;
+  user-select: none;
 }
+.lang-toggle:hover,
+.lang-toggle[aria-expanded="true"] {
+  background: var(--bg-muted, #f5f5f5);
+  border-color: var(--accent);
+}
+
+/* 레거시 2-way span 스타일 — JS 초기화 후에는 안 쓰지만 초기 렌더 깜빡임 차단용으로 남김. */
 .lang-toggle__opt {
   padding: 3px 10px;
   border-radius: 999px;
@@ -241,6 +255,58 @@ a:hover {
 .lang-toggle__opt--active {
   background: var(--accent);
   color: var(--accent-fg);
+}
+
+/* 드롭다운 리스트 — 버튼 클릭 시 body 에 absolute 로 부착. */
+.lang-toggle-menu {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  min-width: 148px;
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  z-index: 2000;
+  font-size: 0.85rem;
+}
+.lang-toggle-menu__opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text);
+  user-select: none;
+  transition: background 0.1s;
+}
+.lang-toggle-menu__opt:hover,
+.lang-toggle-menu__opt:focus {
+  background: var(--bg-muted, #f5f5f5);
+  outline: none;
+}
+.lang-toggle-menu__opt--active {
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-weight: 600;
+}
+.lang-toggle-menu__opt--active:hover,
+.lang-toggle-menu__opt--active:focus {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+.lang-toggle-menu__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+.lang-toggle-menu__name {
+  font-weight: 500;
 }
 
 .brand {
