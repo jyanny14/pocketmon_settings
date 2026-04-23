@@ -6,6 +6,14 @@
 
 ---
 
+## 2026-04-23
+
+- i18n Phase 2 Part 2 — LLM 번역 744건 실행 완료 (Turn A~D). 사용자 요청: "너 지금 sonnet으로 바꿧는데 너가 번역 진행해봐".
+  - **Turn A** (168건): `data/manual/ability_gameText_ja.json` (16), `ability_gameText_zh.json` (16), `item_effect_ja.json` (24), `item_effect_zh.json` (24), `move_flavorText_ja.json` (44), `move_flavorText_zh.json` (44) — 총 6개 파일 신규 생성. 소스: `gameTextKo`(abilities), `effectKo`(items), `flavorTextEn`(moves). 메가스톤은 기존 abomasite·absolite 등의 ja/zh 템플릿 패턴 그대로 적용. moves 44종은 9세대/Champions 신규로 PokeAPI ja/zh 공백이었던 항목.
+  - **Turn B~D** (576건): `ability_description_ja.json` (192), `ability_description_zh.json` (192), `ability_description_ko.json` (192) — 총 3개 파일 신규 생성. 소스: 영문 Bulbapedia-style `description` 필드 → 3 언어 번역.
+  - **Turn E** (빌드 연동): `scripts/build.py` 에 `ABILITY_DESCRIPTION_{KO,JA,ZH}_PATH` 상수 + `_load_ability_description_{ko,ja,zh}()` 함수 + `build_abilities()` 내 `descriptionKo`/`descriptionJa`/`descriptionZh` 병합 추가. `python scripts/build.py && build_moves.py && build_corpus.py` 재빌드 성공.
+  - 최종 coverage: abilities gameTextJa 0 미수록 → 0, items effectJa 0 → 0, moves flavorTextJa 0 → 0, abilities descriptionKo/Ja/Zh 0 → 192/192/192.
+
 ## 2026-04-22
 
 - 영원의 꽃 플라엣테 / 메가 플라엣테 입수 게임 정정 — 두 폼 모두 `legends-z-a` 전용으로 변경. 기존엔 `scarlet`·`violet` 까지 포함돼 있었으나 실제로는 본편 SV 에서 얻을 수 없고 Legends: Z-A 전용이라는 사용자 지적 반영. `data/manual/game_sources_override.json` `floette.Eternal Floette` / `Mega Floette` 배열에서 scarlet·violet 제거 → 재빌드로 `web/data/pokemon.json`·`corpus.json` 반영.

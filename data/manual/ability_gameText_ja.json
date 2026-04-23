@@ -1,0 +1,19 @@
+{
+  "_comment": "ability.gameText Japanese translations — LLM-translated by Claude Opus 4.7, 2026-04-23. Source: gameTextKo. 16 Champions/Gen9 abilities missing from PokeAPI ja.",
+  "armortail": "頭を 包む 謎の 尻尾が こちらへの 先制技を 使えなくさせる。",
+  "cudchew": "木の実を 食べると 次のターン終了時に もう一度 同じ 木の実を 食べることが できる。",
+  "dragonize": "使う ノーマルタイプの 技が 威力 1.2倍になり すべて ドラゴンタイプに なる。",
+  "eartheater": "じめんタイプの 技で 攻撃されても ダメージを 受けず HPが 回復する。",
+  "electromorphosis": "攻撃を 受けると 一度だけ でんきタイプの 技の 威力が 上がる。",
+  "hospitality": "登場したとき 味方の HPを 少し 回復させる。",
+  "megasol": "この 特性を 持つ ポケモンが 技を 使うと 晴れ状態の ときと 同じ 効果を 受ける。",
+  "opportunist": "相手の 能力が 上がると 自分も 便乗して 同じように 上げる。",
+  "piercingdrill": "貫通する 技を 使うとき 防御などを 無視して 攻撃できるが 技の ダメージが 1/4に 減少する。",
+  "purifyingsalt": "清らかな 塩によって 状態異常に ならない。 ゴーストタイプの 技の ダメージを 半減させる。",
+  "sharpness": "相手を 切りつける 技の 威力が 上がる。",
+  "spicyspray": "技で ダメージを 受けると 相手を やけど状態に する。",
+  "supersweetsyrup": "初めて 登場したとき 甘い 蜜の 香りを 振りまき 相手の 回避率を 下げる。",
+  "supremeoverlord": "登場したとき これまで 倒れた 味方の 数が 多いほど 攻撃と 特攻が 少しずつ 上がる。",
+  "toxicdebris": "物理技で ダメージを 受けると 相手の 足元に どくびしを まく。",
+  "zerotohero": "交代して 引っ込むと 英雄の 姿に 変化する。"
+}

@@ -115,6 +115,11 @@ ABILITY_GAMETEXT_JA_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_
 ABILITY_GAMETEXT_ZH_PATH = PROJECT_ROOT / "data" / "processed" / "ability_gameText_zh.json"
 ABILITY_GAMETEXT_ZH_OVERRIDE_PATH = PROJECT_ROOT / "data" / "manual" / "ability_gameText_zh.json"
 
+# {slug: str} — LLM-translated long descriptions (flat, manual only)
+ABILITY_DESCRIPTION_KO_PATH = PROJECT_ROOT / "data" / "manual" / "ability_description_ko.json"
+ABILITY_DESCRIPTION_JA_PATH = PROJECT_ROOT / "data" / "manual" / "ability_description_ja.json"
+ABILITY_DESCRIPTION_ZH_PATH = PROJECT_ROOT / "data" / "manual" / "ability_description_zh.json"
+
 # Champions-only new abilities list (from newabilities.shtml)
 NEW_ABILITIES_PATH = PROJECT_ROOT / "data" / "processed" / "new_abilities.json"
 
@@ -173,6 +178,18 @@ def _load_ability_gametext_ja() -> dict[str, str]:
 
 def _load_ability_gametext_zh() -> dict[str, str]:
     return _load_string_map(ABILITY_GAMETEXT_ZH_PATH, ABILITY_GAMETEXT_ZH_OVERRIDE_PATH)
+
+
+def _load_ability_description_ko() -> dict[str, str]:
+    return _load_string_map(ABILITY_DESCRIPTION_KO_PATH)
+
+
+def _load_ability_description_ja() -> dict[str, str]:
+    return _load_string_map(ABILITY_DESCRIPTION_JA_PATH)
+
+
+def _load_ability_description_zh() -> dict[str, str]:
+    return _load_string_map(ABILITY_DESCRIPTION_ZH_PATH)
 
 
 def _load_item_names_ja() -> dict[str, str]:
@@ -434,6 +451,9 @@ def build_abilities(pokemon: list[dict]) -> list[dict]:
     desc_ko = _load_ability_descriptions_ko()
     gametext_ja = _load_ability_gametext_ja()
     gametext_zh = _load_ability_gametext_zh()
+    description_ko = _load_ability_description_ko()
+    description_ja = _load_ability_description_ja()
+    description_zh = _load_ability_description_zh()
     new_ability_slugs: set[str] = set()
     if NEW_ABILITIES_PATH.exists():
         try:
@@ -462,7 +482,9 @@ def build_abilities(pokemon: list[dict]) -> list[dict]:
             "nameJa": N(names_ja.get(d.slug, "")),
             "nameZh": N(names_zh.get(d.slug, "")),
             "description": N(d.in_depth),
-            "descriptionKo": N(ko_fields.get("descriptionKo", "")),
+            "descriptionKo": N(description_ko.get(d.slug, "") or ko_fields.get("descriptionKo", "")),
+            "descriptionJa": N(description_ja.get(d.slug, "")),
+            "descriptionZh": N(description_zh.get(d.slug, "")),
             "gameText": N(d.game_text),
             "gameTextKo": N(ko_fields.get("gameTextKo", "")),
             "gameTextJa": N(gametext_ja.get(d.slug, "")),

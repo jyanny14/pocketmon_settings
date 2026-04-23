@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-22T08:34:53Z",
+  "generatedAt": "2026-04-23T01:13:45Z",
   "schemaVersion": "1.0.0",
   "sources": {
     "serebii_champions": "https://www.serebii.net/pokemonchampions/",
@@ -17,13 +17,13 @@
       "name": "items",
       "path": "items.json",
       "count": 117,
-      "sha256": "6cfdd1f2a8e4579783de7ee94fa4a8259a006c09ef90e4d6c54cbe6b4e8be7eb"
+      "sha256": "b09f3ea48e95ca2abe7cfd77fff419011d13162d9d3b3a01dc479f548325ed38"
     },
     {
       "name": "abilities",
       "path": "abilities.json",
       "count": 192,
-      "sha256": "8007d0b68134bba6d5deb68c394517e38bacb7a7302393ab08cfac24249431b3"
+      "sha256": "ec3a96b029a46aa4f8660b8e2e6620414c3b4e21ef854814d3cff4af9acf6e82"
     },
     {
       "name": "type_chart",
@@ -35,7 +35,7 @@
       "name": "moves",
       "path": "moves.json",
       "count": 481,
-      "sha256": "252aac4e4c85c65af3c0663df31e39a4b616252d543388ac8a30fa43a31338c0"
+      "sha256": "cbc7d92552baed66acbfac04d2513ce0b18c8127b35f20d60d676cba07b091a2"
     },
     {
       "name": "natures",

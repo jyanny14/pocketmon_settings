@@ -1,0 +1,19 @@
+{
+  "_comment": "ability.gameText Chinese (Simplified) translations — LLM-translated by Claude Opus 4.7, 2026-04-23. Source: gameTextKo. 16 Champions/Gen9 abilities missing from PokeAPI zh-hans.",
+  "armortail": "包裹头部的神秘尾巴，使对手无法对自己使出先制招式。",
+  "cudchew": "吃掉树果后，在下一回合结束时还能再吃一次相同的树果。",
+  "dragonize": "使出的一般属性招式威力变为1.2倍，且全部变为龙属性。",
+  "eartheater": "被地面属性招式攻击时不受伤害，而是恢复HP。",
+  "electromorphosis": "受到攻击时，仅一次提高电属性招式的威力。",
+  "hospitality": "登场时，少量回复同伴的HP。",
+  "megasol": "拥有此特性的宝可梦使出招式时，享受与晴天相同的效果。",
+  "opportunist": "对手能力提高时，自身也会趁机同样提高。",
+  "piercingdrill": "使用贯穿招式时可以无视防御等进行攻击，但招式伤害减少至1/4。",
+  "purifyingsalt": "凭借纯净的盐不会陷入异常状态。使幽灵属性招式的伤害减半。",
+  "sharpness": "斩击对手的招式威力会提高。",
+  "spicyspray": "受到招式伤害时，使对手陷入灼伤状态。",
+  "supersweetsyrup": "首次登场时，散发出甜蜜蜂蜜的香气，使对手的回避率降低。",
+  "supremeoverlord": "登场时，之前倒下的同伴数量越多，攻击和特攻提高得越多。",
+  "toxicdebris": "受到物理招式伤害时，在对手脚下撒下毒菱。",
+  "zerotohero": "换上并退场后，变为英雄形态。"
+}
