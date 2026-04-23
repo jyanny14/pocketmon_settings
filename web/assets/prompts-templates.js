@@ -1,8 +1,7 @@
 // Prompts are emitted in the user's current UI language. Each template
-// carries both a Korean and an English body; prompts.js picks the right
-// one via getLang() at substitute() time. Rule blocks and the shared
-// disclaimer are likewise split into ko/en variants and baked into the
-// bodies at module-load time.
+// carries ko/en/ja/zh body variants; prompts.js picks the right one via
+// getLang() at substitute() time. Rule blocks and the shared disclaimer
+// are likewise split into ko/en/ja/zh variants and baked in at module-load.
 
 // ── Shared header — disclaimer about Champions vs main series ───
 
@@ -11,6 +10,12 @@ export const SHARED_DISCLAIMER_KO =
 
 export const SHARED_DISCLAIMER_EN =
   "This data is based on **Pokémon Champions**. Balance, abilities, and items differ in places from the main series (Scarlet/Violet etc.). Treat the provided JSON/URLs as the source of truth; if your prior knowledge conflicts with the data, follow the data. Champions-specific change flags: `abilities.json[].isNewInChampions`, `moves.json[].updatedInChampions`.";
+
+export const SHARED_DISCLAIMER_JA =
+  "このデータは **Pokémon Champions** 基準です。本編シリーズ（Scarlet/Violetなど）とはバランス・特性・道具が一部異なります。提供されたJSON/URLを真実の情報源として扱い、事前知識と矛盾する場合はデータに従ってください。Champions固有の変更フラグ：`abilities.json[].isNewInChampions`、`moves.json[].updatedInChampions`。";
+
+export const SHARED_DISCLAIMER_ZH =
+  "本数据基于 **Pokémon Champions**。与本传系列（朱/紫等）在部分平衡性、特性和道具上有所不同。请以提供的JSON/URL作为唯一真实来源；若与既有认知冲突，请以数据为准。Champions专属变更标志：`abilities.json[].isNewInChampions`、`moves.json[].updatedInChampions`。";
 
 // ── Strict pool constraint (ko) ──────────────────────────────────
 
@@ -97,6 +102,92 @@ Every Pokémon name you mention must be matchable to a \`slug\` in pokemon.json 
    - **(a) Pokémon pass first**: for every Pokémon name in your draft, confirm the slug is **actually present** in pokemon.json. If you referenced a form, check \`forms[].name\` too. Any miss = delete the entire paragraph that relied on that Pokémon + substitute a data-file request per rule 6.
    - (b) Repeat the same verification for abilities / items / moves against abilities.json / items.json / moves.json.
    If nothing survives, reply: **"No matches found in the Champions data for this request. Please attach the full data file via {{DATA_BUNDLE_PAGE_URL}} so I can answer precisely."** **Leaking a single unverified name invalidates the whole response.**`;
+
+// ── Strict pool constraint (ja) ──────────────────────────────────
+
+export const STRICT_POOL_RULES_JA = `**データ制約（厳守・違反した場合は回答無効）**
+
+⚠️ **最優先ルール（CORE RULE）— ポケモンはpokemon.jsonの中にのみ存在する**
+あなたが言及する**すべてのポケモン名**は、pokemon.jsonの\`slug\`と即座に一致しなければなりません。一致しない＝Championsに存在しないポケモン＝**言及禁止**。本編シリーズのメタであっても、公式VGCの強豪であっても、有名であっても関係ありません。代替名に変えないでください。類似役割のポケモンを作り出さないでください。新しいフォルムを想像しないでください。**確認できない名前は一文字も書かないでください。**
+
+1. **真実の情報源 — 必ず2ステップで確認（Step 0 → Step 1）**
+
+   **Step 0（最優先・回答を書く前に必ず実施）— このチャットに添付されたデータファイルがあるか確認してください。**
+   ファイル名が\`champions-data\`で始まるJSON添付ファイル（例：\`champions-data-ja-20260422.json\`）がこのチャットに存在する場合、**そのファイルのみ**を真実の情報源として使用してください。以下の行為は禁止：
+   - Step 1のURLを含むfetch試行 — 添付ファイルに同一・最新データがあります。
+   - ユーザーへのデータファイル再添付要求 — すでにアップロードされています。
+   - 過去のfetch結果や要約の再利用 — 毎回答変わらず添付ファイルを直接開いてslugを検索してください。
+
+   **添付ファイルが存在する場合は、Step 1に進まずここで終了してください。**
+
+   **Step 1（添付ファイルが一切ない場合のみ）— フォールバック優先順位：** (a) fetched JSON > (b) fetched HTML参照 > (c) インラインJSON > (d) それ以外は禁止。
+   原本JSON（最も正確・構造化）：
+   - ポケモン：{{POKEMON_JSON_URL}}  （186種 / 267フォルム）
+   - 特性：{{ABILITIES_JSON_URL}}  （192種、\`isNewInChampions\`フラグ）
+   - 道具：{{ITEMS_JSON_URL}}  （117種）
+   - 技：{{MOVES_JSON_URL}}  （481種、\`updatedInChampions\`数値）
+   JSONのfetchができない場合、静的HTML版へ切り替え可：
+   - ポケモン：{{POKEMON_REF_URL}}
+   - 技：{{MOVES_REF_URL}}
+   - 特性：{{ABILITIES_REF_URL}}
+   - 道具：{{ITEMS_REF_URL}}
+2. **Step 1の(a)(b)(c)がすべて不可能な場合**：回答を拒否せず、まずインラインJSONを情報源として使用してください。それでも不十分であればユーザーにこう依頼してください：**「{{DATA_BUNDLE_PAGE_URL}}にアクセスして「[Championsデータファイルをダウンロード]」ボタンからファイルを取得し、このチャットに添付してください。確認後に正確にお答えします。」** 絶対に事前知識で補わないでください。（Step 0の添付ファイルが存在する場合、この再要求は禁止 — そのファイルを直接開いて使用してください。）
+3. **Pokémon Championsに存在するすべて**は上記ソースに含まれています。**あなたの事前知識はこの状況で大いに間違っている可能性があります。** ChampionsはScarlet/Violet・Legends: Z-Aなどの本編とは**異なるラインナップ**です。本編には存在するがChampionsに存在しないポケモン/特性/道具/技が多く、数値が異なる技も16個あります。上記ソースにないものはChampionsに存在しないとみなしてください。
+   - **pokemon.jsonに存在しないポケモンの実例**：\`ウーラオス (urshifu)\`・\`ゴリランダー (rillaboom)\`・\`ボーマンダ (salamence)\`・\`メタグロス (metagross)\`・\`テツノコブシ (iron-hands)\`・\`テツノブジン (iron-valiant)\`・\`flutter-mane\`・\`roaring-moon\`・\`chi-yu\`・\`great-tusk\`・\`ナットレイ (ferrothorn)\`。本編VGCでどれほど頻繁に使われていても、pokemon.jsonにslugがなければ**絶対に提案禁止**。（反対に\`garchomp\`・\`dragapult\`・\`hydreigon\`・\`tyranitar\`・\`kingambit\`・\`tinkaton\`などはChampionsに存在。）
+   - **items.jsonに存在しない道具の実例**：\`assault-vest（とつげきチョッキ）\`・\`life-orb（いのちのたま）\`・\`choice-band（こだわりハチマキ）\`・\`choice-specs（こだわりメガネ）\`・\`rocky-helmet（ゴツゴツメット）\`・\`heavy-duty-boots（あつぞこブーツ）\`・\`eviolite（しんかのきせき）\`。（反対に\`leftovers\`・\`focus-sash\`・\`choice-scarf\`などはChampionsに存在。）
+4. **すべての提案項目にslug記載＋出典明示**：\`コライドン（slug: koraidon、出典: pokemon.json）\`・\`じしん（slug: earthquake、出典: moves.json）\`の形式。slugなし・誤ったslug・出典なしはルール違反。**slugを作り出さないでください** — 実際にソースで確認してから記載してください。
+5. 特性・技を特定のポケモンに割り当てる場合、そのフォルムの\`abilities\` / \`moves\`配列に**実際に存在しなければなりません**。（フォルム外の特性・習得不可の技の提案禁止。）
+6. **不確かな場合は提案せず、ユーザーにデータファイルを要求してください。** あるポケモン/技/特性/道具がChampionsに存在するか**確信できない場合**（＝上記ソースでslugを直接確認できない場合）：
+   - (a) 提供されたソース内に**機能的に類似した代替品**があれば、それで答えてください。
+   - (b) 代替が困難か、ユーザーの質問の大部分がソースにない場合は、**絶対に事前知識で補わず**このように返答してください：**「Championsデータで「{項目名}」が見つかりませんでした。{{DATA_BUNDLE_PAGE_URL}}で「Championsデータファイルをダウンロード」ボタンからファイルを取得して添付してください。確認後に正確にお答えします。」**
+   **「本編にあるからChampionsにもあるはず」/「有名なポケモンだから当然いるはず」/「VGCで強いから当然いるはず」などの推測は絶対禁止。** 本編人気・メタ地位・ファン認知度はChampionsへの収録の根拠に**なりません。**
+7. **自己検証（最終ステップ・送信直前）**：回答中のすべての固有名詞をチェックリストで確認してください。以下の2ステップは**必須**：
+   - **(a) ポケモン確認を優先**：挙げたすべてのポケモン名についてslugがpokemon.jsonに**実際に存在するか**確認。フォルムを言及した場合は\`forms[].name\`も確認。一つでも不一致＝そのポケモンを含む段落全体を削除＋ルール6に従いデータファイル要求に置き換え。
+   - (b) 特性・道具・技も同様に検証（abilities.json / items.json / moves.jsonのslugと一致するか）。
+   削除後に回答が完全に空になった場合は**「このリクエストに対してChampionsデータ内で条件を満たす項目が見つかりませんでした。{{DATA_BUNDLE_PAGE_URL}}からデータファイルを添付してください。」**と答えてください。**確認できない名前を一つでも出力すると、回答全体が無効になります。**`;
+
+// ── Strict pool constraint (zh) ──────────────────────────────────
+
+export const STRICT_POOL_RULES_ZH = `**数据约束（严格遵守·违反则回答无效）**
+
+⚠️ **最高优先规则（CORE RULE）— 宝可梦只存在于pokemon.json中**
+你提及的**所有宝可梦名称**必须能立即匹配到pokemon.json中的\`slug\`。无法匹配＝该宝可梦在Champions中不存在＝**禁止提及**。无论它在本传系列对战中多受欢迎、在官方VGC中多强势、或多知名，都无一例外。不要用替代名称，不要创造功能类似的角色，不要凭空想象新形态。**无法确认的名称，一个字也不要写。**
+
+1. **真实来源 — 必须进行两步确认（Step 0 → Step 1）**
+
+   **Step 0（最高优先·回答前必须先执行）— 确认本对话中是否已有附件数据文件。**
+   若聊天记录中存在文件名以\`champions-data\`开头的JSON附件（例：\`champions-data-zh-20260422.json\`），请**仅以该文件**作为真实来源。以下行为禁止：
+   - 尝试fetch任何URL（包括Step 1中的URL）— 附件已包含相同的最新数据。
+   - 要求用户重新上传数据文件 — 文件已在对话中。
+   - 复用历史fetch结果或摘要 — 长对话可能被压缩导致数据丢失，每次回答都应直接打开附件查询slug。
+
+   **若附件存在，请在此止步，不要进入Step 1。**
+
+   **Step 1（仅在完全没有附件时）— 现有回退优先级：** (a) fetched JSON > (b) fetched HTML参考页 > (c) 内联JSON > (d) 禁止其他一切。
+   原始JSON（最准确·结构化）：
+   - 宝可梦：{{POKEMON_JSON_URL}}  （186种 / 267形态）
+   - 特性：{{ABILITIES_JSON_URL}}  （192种，\`isNewInChampions\`标志）
+   - 道具：{{ITEMS_JSON_URL}}  （117种）
+   - 招式：{{MOVES_JSON_URL}}  （481种，\`updatedInChampions\`数值）
+   若无法fetch JSON，可改用静态HTML版：
+   - 宝可梦：{{POKEMON_REF_URL}}
+   - 招式：{{MOVES_REF_URL}}
+   - 特性：{{ABILITIES_REF_URL}}
+   - 道具：{{ITEMS_REF_URL}}
+2. **若Step 1的(a)(b)(c)均不可行**：不要拒绝回答，先以内联JSON作为来源。若仍不够，请这样告知用户：**「请前往{{DATA_BUNDLE_PAGE_URL}}，点击「[下载Champions数据文件]」按钮获取数据文件并附加到本对话。我将在查看文件后精确作答。」** 绝对不要用已有知识填补。（若Step 0的附件已存在，禁止再次请求 — 直接打开并使用该文件。）
+3. **Pokémon Champions中存在的所有内容**均收录于上述来源。**你的已有知识在这里极有可能是错误的。** Champions与本传系列（Scarlet/Violet、Legends: Z-A等）拥有**不同的阵容**。许多本传中存在的宝可梦/特性/道具/招式在Champions中并不存在，且有16个招式的数值已变更。上述来源中没有的，请视为不存在于Champions。
+   - **pokemon.json中确实不存在的宝可梦示例**：\`武道熊师 (urshifu)\`·\`轰擂金刚猩 (rillaboom)\`·\`暴飞龙 (salamence)\`·\`巨金怪 (metagross)\`·\`铁臂膀 (iron-hands)\`·\`铁武者 (iron-valiant)\`·\`flutter-mane\`·\`roaring-moon\`·\`chi-yu\`·\`great-tusk\`·\`坚果哑铃 (ferrothorn)\`。无论它们在本传VGC中多常见，pokemon.json中没有slug就**绝对禁止推荐**。（反之，\`garchomp\`·\`dragapult\`·\`hydreigon\`·\`tyranitar\`·\`kingambit\`·\`tinkaton\`等在Champions中存在。）
+   - **items.json中确实不存在的道具示例**：\`assault-vest（突击背心）\`·\`life-orb（生命宝珠）\`·\`choice-band（讲究头带）\`·\`choice-specs（讲究眼镜）\`·\`rocky-helmet（凸凸头盔）\`·\`heavy-duty-boots（厚底靴）\`·\`eviolite（进化奇石）\`。（反之\`leftovers\`·\`focus-sash\`·\`choice-scarf\`等在Champions中存在。）
+4. **所有推荐项目须附slug＋出处**：格式如\`铁甲鸦（slug: corviknight，出处: pokemon.json）\`·\`地震（slug: earthquake，出处: moves.json）\`。无slug、错误slug或缺少出处均属违规。**不要凭空创造slug** — 仅在实际从来源中找到后才写。
+5. 为特定宝可梦分配特性·招式时，其形态的\`abilities\` / \`moves\`数组中**必须实际存在**该内容。（禁止推荐形态外特性·不可习得招式。）
+6. **不确定时不要推荐，而是要求用户提供数据文件。** 若**无法确认**某宝可梦/招式/特性/道具是否存在于Champions（＝无法在上述来源中通过slug直接验证）：
+   - (a) 若提供的来源中有**功能类似的替代品**，请以此作答。
+   - (b) 若难以替代，或用户问题的大部分内容不在来源中，**绝对不要用已有知识填补**，请这样回应：**「在Champions数据中未找到「{项目名}」。请前往{{DATA_BUNDLE_PAGE_URL}}点击「下载Champions数据文件」按钮获取文件并附加到本对话，我将精确作答。」**
+   **「本传有所以Champions应该也有」/「知名宝可梦应该在里面」/「VGC强势所以当然有」等推测绝对禁止。** 本传人气·对战地位·粉丝知名度**不是** Champions收录的依据。
+7. **自我核验（最终步骤·发送前）**：对回答中的所有专有名词进行清单检查。以下两步**必须执行**：
+   - **(a) 优先核验宝可梦**：对提及的每个宝可梦名称，确认其slug**实际存在**于pokemon.json。若提及了形态，还需确认\`forms[].name\`。任何不匹配＝删除依赖该宝可梦的整段内容＋按规则6替换为数据文件请求。
+   - (b) 同样核验特性·道具·招式（与abilities.json / items.json / moves.json中的slug匹配）。
+   若删除后回答完全为空，请回答：**「在Champions数据中未找到满足此请求条件的项目。请通过{{DATA_BUNDLE_PAGE_URL}}附加完整数据文件以便精确作答。」** **输出任何一个无法确认的名称都将导致整个回答无效。**`;
 
 // ── Templates ────────────────────────────────────────────────────
 
@@ -193,6 +284,96 @@ Analysis requests (doubles context):
 5. Mitigation via swaps, items, or abilities (must exist in items.json / abilities.json). Prioritise doubles-relevant abilities like Intimidate and pinch-support items like Sitrus Berry.
 
 Party (inline reference data):
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      ja: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+以下のパーティの**防御的弱点**を分析してください。（バトルモード：**シングル1対1**）
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+
+分析リクエスト：
+1. 6匹すべてに2倍以上のダメージを与える攻撃タイプがあるか（ある場合：そのタイプと何匹が弱点を持つか）。
+2. パーティ全体が耐性（0.5倍以下）を共有するタイプ / 逆に誰も耐性を持たないタイプ。
+3. 最も危険な弱点をカバーできる**現在のパーティ内でのスイッチング戦略**を提案。
+4. 交代ではなく**道具・特性の調整**で軽減できる部分があれば合わせて（提案する道具・特性はitems.json / abilities.jsonに実在＋そのフォルムが使えるものに限る）。
+
+パーティ構成（参考インラインデータ）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+以下のパーティの**防御的弱点**を**ダブルバトル（2対2）**の観点から分析してください。2匹が同時にフィールドに立つ前提で。
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+
+分析リクエスト（ダブル文脈）：
+1. 6匹中**3匹以上が同じタイプに2倍以上の弱点**を持つか？ — ダブルでは1ターンに2匹が同時に露出するため、3匹共有弱点は致命的。
+2. スプレッド技（Earthquake / Surf / Heat Wave / Rock Slide / Muddy Water / Dazzling Gleam / Hyper Voice / Discharge等）に**リードペア出し時に脆弱なペア**があるか。例：地面弱点2匹がリードに立つ→相手のEarthquake一発で壊滅。
+3. 誰も耐性を持てない攻撃タイプ / パーティ全体が共有耐性を持つタイプ。
+4. **最も自然なリード2匹の組み合わせ**は弱点面で安全か？ — リード2匹の防御プロファイルが互いを補完すべき。
+5. 交代・道具・特性調整による軽減提案（items.json / abilities.json実在に限る）。特にダブルで有効なIntimidateのような特性 / Sitrus Berryのようなピンチサポート道具を優先考慮。
+
+パーティ構成（参考インラインデータ）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zh: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请分析以下队伍的**防御弱点**。（对战模式：**单打1对1**）
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+
+分析请求：
+1. 是否存在对全部6只宝可梦造成2倍以上伤害的攻击属性（若有：该属性及有几只存在弱点）。
+2. 全队共有耐性（0.5倍以下）的属性 / 反之无任何成员有耐性的属性。
+3. 提出**利用现有队伍应对最危险弱点的换场策略**。
+4. 若有能通过**道具·特性调整**而非换人来缓解的弱点，请一并说明（建议的道具·特性须在items.json / abilities.json中实际存在且该形态可用）。
+
+队伍构成（参考内联数据）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请从**双打（2对2）**角度分析以下队伍的**防御弱点**，以2只宝可梦同时上场为前提。
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+
+分析请求（双打视角）：
+1. 6只中是否有**3只以上对同一属性存在2倍以上弱点**？ — 双打中每回合同时有2只暴露，3只共有弱点将是致命的。
+2. 扩散招式（Earthquake / Surf / Heat Wave / Rock Slide / Muddy Water / Dazzling Gleam / Hyper Voice / Discharge等）是否存在**特定先发组合时的脆弱配对**。例：2只地面弱点宝可梦先发→对方一个Earthquake双倒。
+3. 无任何成员有耐性的攻击属性 / 全队共有耐性的属性。
+4. **最自然的先发2只组合**在防御面是否安全？ — 先发2只的防御分布应相互补充。
+5. 通过换场·道具·特性调整来缓解（须在items.json / abilities.json中实际存在）。重点考虑双打有效特性如Intimidate / 救援道具如Sitrus Berry。
+
+队伍构成（参考内联数据）：
 \`\`\`json
 {{PARTY_INLINE_JSON}}
 \`\`\`
@@ -306,6 +487,110 @@ Analysis requests (doubles context):
 3. Pick the best of the three with a **lead-pair example (this candidate + one existing member)** in one line.
 
 Current party inline data:
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      ja: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+以下のパーティから**1匹だけ交代するとすれば誰を、何と交代するか**を推薦してください。1スロットのみ変更。（バトルモード：**シングル1対1**）
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+- 候補プール：{{POKEMON_JSON_URL}}（上記制約1〜5参照）
+
+分析リクエスト：
+1. 現在のパーティで最も弱いリンク（役割重複・弱点共有・速度不足等）を1スロット指摘。
+2. そのスロットの代替として**3候補**を提示。各候補について：
+   - \`種族名（slug: …）\`・フォルム・推薦特性・推薦道具（全てpokemon.json / items.jsonに実在するものに限る）。
+   - 交代理由（パーティ全体の観点でどの穴を埋めるか）。
+3. 3候補の中から最善を選び理由を一言で。
+
+現在のパーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+以下のパーティから**1匹だけ交代するとすれば誰を、何と交代するか**を**ダブルバトル（2対2）**の観点から推薦してください。
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+- 候補プール：{{POKEMON_JSON_URL}}（上記制約1〜5参照）
+
+分析リクエスト（ダブル文脈）：
+1. ダブルにおける最弱リンクを1スロット指摘 — 基準：
+   - パートナーシナジーが弱いスロット（誰ともリードペアとして上手くマッチしない）
+   - スプレッド技の共有弱点が多すぎるスロット
+   - ダブルで重要な役割（redirect / 天候setter / TR setter / Tailwind / Intimidate / Fake Out先制）が不足しており、そのスロットで補える場合
+2. そのスロットの代替として**3候補**を提示。各候補について：
+   - \`種族名（slug: …）\`・フォルム・推薦特性・推薦道具（pokemon.json / items.json実在＋そのフォルムが使えるものに限る）
+   - この候補が**どのパートナーとリードペアを組むか**（例：「このXXとTailwindシナジー」「Follow MeでYYを守護」等）
+   - ダブル特化の貢献（スプレッド / サポート / 速度調整 / redirect / 天候 / TR等）
+3. 3候補の中から最善を選び**リード組み合わせ例（この候補＋既存メンバー1名）**を一言で。
+
+現在のパーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zh: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请推荐在以下队伍中**只换一只宝可梦，换谁以及换成什么**。仅更改一个槽位。（对战模式：**单打1对1**）
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+- 候选池：{{POKEMON_JSON_URL}}（参见上述约束1–5）
+
+分析请求：
+1. 指出现有队伍中最弱的环节（角色重叠·共有弱点·速度不足等）— 指定一个槽位。
+2. 为该槽位提出**3个替换候选**。对每个候选：
+   - \`种族名（slug: …）\`·形态·推荐特性·推荐道具（须全部实际存在于pokemon.json / items.json）。
+   - 替换理由（从整队角度补足哪处空缺）。
+3. 从3个候选中选出最佳并给出一句理由。
+
+当前队伍内联数据：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请从**双打（2对2）**角度推荐在以下队伍中**只换一只宝可梦，换谁以及换成什么**。
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+- 候选池：{{POKEMON_JSON_URL}}（参见上述约束1–5）
+
+分析请求（双打视角）：
+1. 指出双打中最弱的环节，指定一个槽位 — 标准：
+   - 搭档协同较弱的槽位（与任何成员配对时先发效果均不理想）
+   - 与多名队友共享扩散技弱点的槽位
+   - 缺少双打关键角色（redirect / 天气setter / TR setter / Tailwind / Intimidate / Fake Out先制）而该槽位可补足的情况
+2. 为该槽位提出**3个替换候选**。对每个候选：
+   - \`种族名（slug: …）\`·形态·推荐特性·推荐道具（须在pokemon.json / items.json中实际存在且该形态可用）
+   - **与队中哪位成员搭档先发**（例："与XX形成Tailwind协同"、"用Follow Me保护YY"等）
+   - 双打专属贡献（扩散 / 辅助 / 速度调控 / redirect / 天气 / TR等）
+3. 从3个候选中选出最佳，并附一句**先发组合示例（该候选＋现有一名成员）**。
+
+当前队伍内联数据：
 \`\`\`json
 {{PARTY_INLINE_JSON}}
 \`\`\`
@@ -431,6 +716,120 @@ Party inline data (selected moves/ability/item included; learnable pool is in po
 Output format:
 - Pokémon 1: four move lines (with target tag) + one reason line (**name the partner synergy** this set enables)
 - Pokémon 2: …
+- …
+`,
+      ja: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+以下のパーティの**各ポケモンの4技セット**を提案してください。（バトルモード：**シングル1対1**）
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+
+ルール（上記制約1〜5と重複しますが再強調）：
+- 各ポケモンの推薦技は**pokemon.jsonの該当ポケモンの\`moves\`配列内にあるslugのみ**使用可能。
+- 各技の数値は**moves.jsonから調べた実際の値**で表記（事前知識で作り出さないこと）。
+- STAB（一致）1〜2 + 範囲 + 補助/回復/状態異常のバランスを考慮。
+- 各技の横にタイプ・分類・威力・命中率を括弧で記載（例：\`Flamethrower（Fire / Special / 90 / 100）\`）。
+- Championsで数値が変更された技（\`updatedInChampions: true\`）は**変更後の数値**で評価してください。
+
+パーティインラインデータ（選択済み技・特性・道具含む。習得可能プールはpokemon.json参照）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+出力形式：
+- ポケモン1：技4行 + 選択理由1行
+- ポケモン2：…
+- …
+`,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+以下のパーティの**各ポケモンの4技セット**を**ダブルバトル（2対2）**の観点から提案してください。
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+
+ダブル文脈での技選択基準（+ 上記制約1〜5準拠）：
+- **Protect / Detectはほぼ必須** — ほとんどのポケモンに採用推奨。
+- **スプレッド技**（target: all-opponents / all-other-pokemon）は0.75倍補正ですが相手2匹同時ヒットのため価値が高い（味方へのダメージに注意）。
+- **味方サポート技**を積極考慮：Follow Me / Rage Powder / Helping Hand / Fake Out / Wide Guard / Quick Guard / Tailwind / Trick Room等。該当ポケモンの\`moves\`配列にある場合のみ。
+- STAB2個は過多 — **STAB1 + スプレッド1 + サポート/Protect1 + 範囲1**が標準配分。
+- 各技の横に**タイプ・分類・威力・命中率・（単体/スプレッド/味方/自分）ターゲット**を記載。例：\`Heat Wave（Fire / Special / 95 / 90 / スプレッド）\`。
+- Championsで数値が変更された技（\`updatedInChampions: true\`）は変更後の数値基準。
+
+パーティインラインデータ（選択済み技・特性・道具含む。習得可能プールはpokemon.json参照）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+出力形式：
+- ポケモン1：技4行（ターゲット記載） + 選択理由1行（**どのパートナーとシナジーになるか**明示）
+- ポケモン2：…
+- …
+`,
+      zh: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请为以下队伍的**每只宝可梦提出4招式配置**。（对战模式：**单打1对1**）
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+
+规则（与约束1–5重叠但再次强调）：
+- 每只宝可梦的推荐招式必须来自**pokemon.json中该宝可梦\`moves\`数组的slug**。
+- 每个招式的数值必须使用**从moves.json查询的实际值**（不要凭已有知识捏造）。
+- 兼顾本系属性（1–2个）+ 覆盖面 + 辅助/回复/状态异常的平衡。
+- 每个招式旁请用括号注明属性·分类·威力·命中率（例：\`Flamethrower（Fire / Special / 90 / 100）\`）。
+- Champions中数值已变更的招式（\`updatedInChampions: true\`）请以**变更后的数值**评估。
+
+队伍内联数据（含已选招式·特性·道具；可学习招式池参见pokemon.json）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+输出格式：
+- 宝可梦1：4行招式 + 1行选择理由
+- 宝可梦2：…
+- …
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请从**双打（2对2）**角度为以下队伍的**每只宝可梦提出4招式配置**。
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+
+双打视角的招式选择标准（+ 约束1–5）：
+- **Protect / Detect几乎是必备** — 大多数宝可梦默认推荐携带。
+- **扩散招式**（target: all-opponents / all-other-pokemon）虽有0.75倍修正，但同时命中对方2只，价值通常高于单体招式（注意对队友的伤害）。
+- 积极考虑**队友辅助招式**：Follow Me / Rage Powder / Helping Hand / Fake Out / Wide Guard / Quick Guard / Tailwind / Trick Room等。仅在该宝可梦的\`moves\`数组中存在时适用。
+- 2个本系属性招式往往过多 — 标准分配为**1个本系 + 1个扩散 + 1个Protect/辅助 + 1个覆盖**。
+- 每个招式旁注明**属性·分类·威力·命中率·（单体/扩散/队友/自身）目标**。例：\`Heat Wave（Fire / Special / 95 / 90 / 扩散）\`。
+- Champions中数值已变更的招式（\`updatedInChampions: true\`）使用变更后数值。
+
+队伍内联数据（含已选招式·特性·道具；可学习招式池参见pokemon.json）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+输出格式：
+- 宝可梦1：4行招式（含目标标注）+ 1行选择理由（**注明与哪位搭档形成协同**）
+- 宝可梦2：…
 - …
 `,
     },
@@ -578,6 +977,138 @@ Current party inline data ({{FILLED_COUNT}} members, empty slots excluded):
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
+      ja: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+現在のパーティの**残り{{EMPTY_COUNT}}枠**を埋めるポケモンを推薦してください。（バトルモード：**シングル1対1**）
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+- 候補プール：{{POKEMON_JSON_URL}}（上記制約1〜5参照）
+- 技詳細（type / power / accuracy / pp）：{{MOVES_JSON_URL}} — 推薦する4技の数値はここから調べた実際の値で表記してください。
+
+分析リクエスト：
+1. 現在のパーティ（{{FILLED_COUNT}}匹）の弱点・役割空白を一言で診断。
+2. 残り{{EMPTY_COUNT}}枠それぞれについて、以下の形式で提案：
+   - **スロットN**：\`種族名（slug: …）\`（フォルム）— 役割タグ（先発 / ピボット / 物理アタッカー / 特殊アタッカー / 耐久壁 / スイーパー / サポート等）
+   - 推薦特性・道具・性格（全てfetchしたデータに実在するものに限る）
+   - 4技 — 名称横に（タイプ / 分類 / 威力 / 命中率）を括弧表記。該当フォルムの\`moves\`配列にある技のみ。
+   - Stat Points配分 — \`hp/atk/def/spAtk/spDef/speed\`形式。各スタット0〜32、合計≤66。
+   - 選択理由1〜2文（現在のパーティ観点でどの穴を埋めるか）。
+3. 最後に6匹完成時の**チームコンセプト一言**要約。
+
+追加制約：Championsで数値が変更された技は変更後の数値基準。性格は25種の標準性格のいずれか。
+
+現在のパーティインラインデータ（{{FILLED_COUNT}}匹、空スロット除く）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+現在のパーティの**残り{{EMPTY_COUNT}}枠**を**ダブルバトル（2対2）**基準で埋めるポケモンを推薦してください。
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+- 候補プール：{{POKEMON_JSON_URL}}（上記制約1〜5参照）
+- 技詳細：{{MOVES_JSON_URL}}
+
+分析リクエスト（ダブル文脈）：
+1. 現在のパーティ（{{FILLED_COUNT}}匹）の**ダブル観点**での弱点・役割空白を一言で診断。特に以下の役割で不足しているものを指摘：
+   - **Fake Out**先制 + 1ターン妨害
+   - **Redirect**（Follow Me / Rage Powder）
+   - **天候 / TR / Tailwind**セッター
+   - **Intimidate**物理攻撃弱体化
+   - **スプレッドアタッカー**（Earthquake / Surf / Heat Wave等）
+   - **Protect採用**（ほとんどのポケモンがProtect採用）
+2. 残り{{EMPTY_COUNT}}枠それぞれについて：
+   - **スロットN**：\`種族名（slug: …）\`（フォルム）— **ダブル役割タグ**（例：「redirector」・「TR setter」・「Intimidateサポート」・「スプレッドアタッカー」・「Fake Outリード」等）
+   - 推薦特性・道具・性格
+   - 4技 — ターゲット表記（単体/スプレッド/味方/自分）。該当フォルムの\`moves\`にあるものに限る。
+   - Stat Points配分（各0〜32、合計≤66）。ダブルは耐久・火力優先（Tailwind / TRに依存可能）。
+   - **既存メンバーの誰とリードペアを組むか一言**（最重要）。
+3. 最後に完成6匹の**チームアーキタイプ一言**（例：「Tailwind攻めパ」「Trick Room低速パ」「晴れパ」「スタンダードバランス」等）。
+
+追加制約：Championsリバランス技は変更後の数値。性格は25種のいずれか。
+
+現在のパーティインラインデータ（{{FILLED_COUNT}}匹、空スロット除く）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zh: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请推荐填满当前队伍**剩余{{EMPTY_COUNT}}个空位**的宝可梦。（对战模式：**单打1对1**）
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+- 候选池：{{POKEMON_JSON_URL}}（参见上述约束1–5）
+- 招式详情（type / power / accuracy / pp）：{{MOVES_JSON_URL}} — 推荐的4个招式数值请从此处查询实际值。
+
+分析请求：
+1. 用一句话诊断当前队伍（{{FILLED_COUNT}}只）的弱点和角色空缺。
+2. 对剩余{{EMPTY_COUNT}}个空位分别按以下格式提出建议：
+   - **槽位N**：\`种族名（slug: …）\`（形态）— 角色标签（先发 / 枢纽 / 物理攻击手 / 特殊攻击手 / 防御壁 / 清场手 / 辅助等）
+   - 推荐特性·道具·性格（须全部在获取的数据中实际存在）
+   - 4个招式 — 名称旁用括号注明（属性 / 分类 / 威力 / 命中率）。仅限该形态\`moves\`数组中的招式。
+   - Stat Points分配 — \`hp/atk/def/spAtk/spDef/speed\`格式。各属性0–32，总和≤66。
+   - 1–2句选择理由（从现有队伍角度补足哪处空缺）。
+3. 最后用一句话总结完成后6只队伍的**队伍理念**。
+
+额外约束：Champions中数值已变更的招式使用变更后数值。性格须为25种标准性格之一。
+
+当前队伍内联数据（{{FILLED_COUNT}}只，不含空槽位）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请从**双打（2对2）**角度推荐填满当前队伍**剩余{{EMPTY_COUNT}}个空位**的宝可梦。
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+- 候选池：{{POKEMON_JSON_URL}}（参见上述约束1–5）
+- 招式详情：{{MOVES_JSON_URL}}
+
+分析请求（双打视角）：
+1. 用一句话诊断当前{{FILLED_COUNT}}只队伍的**双打视角**弱点和角色空缺。重点指出以下哪些角色缺失：
+   - **Fake Out**先制 + 第1回合干扰
+   - **Redirect**（Follow Me / Rage Powder）
+   - **天气 / TR / Tailwind** setter
+   - **Intimidate**物理削弱
+   - **扩散攻击手**（Earthquake / Surf / Heat Wave等）
+   - **Protect覆盖**（大多数宝可梦应携带Protect）
+2. 对剩余{{EMPTY_COUNT}}个空位分别提出：
+   - **槽位N**：\`种族名（slug: …）\`（形态）— **双打角色标签**（例："引导手"·"TR setter"·"Intimidate辅助"·"扩散攻击手"·"Fake Out先发"等）
+   - 推荐特性·道具·性格
+   - 4个招式 — 含目标标注（单体/扩散/队友/自身）。仅限该形态\`moves\`中存在的招式。
+   - Stat Points分配（各0–32，总和≤66）。双打通常优先耐久·火力而非速度（可依赖Tailwind / TR）。
+   - **与现有哪名成员搭档先发** — 一句话（最重要）。
+3. 最后用一句话总结完成后6只队伍的**双打风格**（例："Tailwind攻势阵"·"Trick Room低速阵"·"晴天天气阵"·"标准平衡"等）。
+
+额外约束：Champions重平衡招式使用变更后数值；性格须为25种标准性格之一。
+
+当前队伍内联数据（{{FILLED_COUNT}}只，不含空槽位）：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
     },
   },
 
@@ -693,6 +1224,112 @@ My party inline data:
 
 (If you need the opponent's data, fetch OPPONENT_URL or I'll paste JSON. Opposing Pokémon must also exist in pokemon.json.)
 `,
+      ja: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+相手パーティに合わせた**対策戦略**を立ててください。（バトルモード：**シングル1対1**）
+
+- 自分のパーティURL：{{PARTY_URL}}
+- 相手のパーティURL：（下記「OPPONENT_URL」の箇所に貼り付けてください）
+  OPPONENT_URL =
+- サイトガイド：{{LLMS_TXT_URL}}
+
+分析リクエスト：
+1. 相手の6匹の中で自分のパーティに対して**最も危険な2匹**を選び理由を述べてください。
+2. 各脅威に対して自分の**第1・第2担当者と技**（自分のパーティインラインデータ内のみ、各ポケモンの\`moves\`配列にある技のみ）。
+3. 自分のパーティで**先発すべきでないポケモン**とその理由。
+4. 先発として推薦する1匹 + 初ターンプラン。
+
+自分のパーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+（相手のデータが必要な場合はOPPONENT_URLをfetchするか、JSONを貼り付けてください。相手のポケモンもpokemon.jsonに実在する種のみ言及してください。）
+`,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+相手パーティに合わせた**対策戦略**を**ダブルバトル（2対2）**で立ててください。リード2匹が同時出場。
+
+- 自分のパーティURL：{{PARTY_URL}}
+- 相手のパーティURL：（下記「OPPONENT_URL」の箇所に貼り付けてください）
+  OPPONENT_URL =
+- サイトガイド：{{LLMS_TXT_URL}}
+
+分析リクエスト（ダブル文脈）：
+1. 相手の6匹の中で**最も脅威的なリードペア2組**を予想（相手がどの2匹を一緒に出してきやすいか + その組み合わせがなぜ脅威か）。
+2. 各脅威リードペアに対して自分の**カウンターリードペア**を提案 — 2匹の組み合わせで回答。例：「自分のA + Bで先発、AはFake OutでCを妨害し、BはProtectで次ターン...」。
+3. 各相手ポケモンに対して**自分の担当者 + 技 + ターゲット**（スプレッドで一度に / 単体に集中 / redirectで保護等）。
+4. 自分のパーティで**絶対に一緒に先発すべきでない2匹**の組み合わせ（スプレッド共有弱点 / シナジー皆無等）。
+5. 推薦する**リードペア1組 + 初ターンプラン**（自分の2匹それぞれの技とターゲット）。
+
+自分のパーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+（相手のデータが必要な場合はOPPONENT_URLをfetchするか、JSONを貼り付けてください。相手のポケモンもpokemon.json実在種のみ。）
+`,
+      zh: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请为对方队伍制定**应对策略**。（对战模式：**单打1对1**）
+
+- 我的队伍URL：{{PARTY_URL}}
+- 对方队伍URL：（请粘贴在下方"OPPONENT_URL"处）
+  OPPONENT_URL =
+- 网站指南：{{LLMS_TXT_URL}}
+
+分析请求：
+1. 从对方6只中挑出对我方队伍**最具威胁的2只**并说明原因。
+2. 针对每个威胁，指出我方的**第1·第2应对宝可梦及招式**（仅从我方队伍内联数据中选，招式须在各成员的\`moves\`数组中）。
+3. 我方**不应先发的宝可梦**及其原因。
+4. 推荐先发的一只 + 第1回合计划。
+
+我的队伍内联数据：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+（若需要对方数据，请fetch上方OPPONENT_URL，或将JSON一并粘贴。对方宝可梦也仅限pokemon.json中存在的种类。）
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请为对方队伍制定**双打（2对2）应对策略**，2只宝可梦同时先发。
+
+- 我的队伍URL：{{PARTY_URL}}
+- 对方队伍URL：（请粘贴在下方"OPPONENT_URL"处）
+  OPPONENT_URL =
+- 网站指南：{{LLMS_TXT_URL}}
+
+分析请求（双打视角）：
+1. 预测对方6只中**最具威胁的先发组合2组**（对方最可能同时出哪2只 + 该组合威胁性原因）。
+2. 针对每组威胁先发，提出我方的**反制先发组合** — 以2只宝可梦的组合作答。例："我方A+B先发，A用Fake Out干扰对方C，B用Protect探路然后下回合..."。
+3. 针对对方每只宝可梦，指出我方**应对者+招式+目标**（扩散一次性打两只 / 单体集中 / redirect保护等）。
+4. 我方**绝对不能同时先发的2只**组合（共享扩散弱点·零协同等）。
+5. 推荐**1组先发组合 + 第1回合计划**（我方两只各自的招式+目标）。
+
+我的队伍内联数据：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+（若需对方数据，请fetch OPPONENT_URL或粘贴JSON。对方宝可梦也仅限pokemon.json实际存在的种类。）
+`,
     },
   },
 
@@ -782,6 +1419,86 @@ Party inline data:
 
 My question:
 `,
+      ja: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+以下は私のPokémon Championsパーティです。このコンテキストの上で質問します。（バトルモード：**シングル1対1**）
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+
+パーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+---
+
+私の質問：
+`,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+以下は私のPokémon Championsパーティです。**ダブルバトル（2対2）**を前提として回答してください — リード2匹の同時出場、スプレッド・シナジー・パートナーサポート技を全て考慮。
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+
+パーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+---
+
+私の質問：
+`,
+      zh: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+以下是我的Pokémon Champions队伍。我将在此背景下提问。（对战模式：**单打1对1**）
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+
+队伍内联数据：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+---
+
+我的问题：
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+以下是我的Pokémon Champions队伍。请以**双打（2对2）**为前提作答 — 2只宝可梦同时先发，全程考虑扩散、搭档协同和队友辅助招式。
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+
+队伍内联数据：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+
+---
+
+我的问题：
+`,
     },
   },
 
@@ -841,6 +1558,58 @@ Analysis requests:
 4. Name **one lead pair that should never be used together** (shared weakness, no synergy, etc.).
 
 Party inline data:
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+**ダブルバトル（2対2）**でこのパーティの**リード2匹の組み合わせ**を推薦してください。
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+
+分析リクエスト：
+1. 6匹の中から**有力なリードペア2組**を提案。各ペアについて：
+   - \`A（slug） + B（slug）\`形式で組み合わせ名
+   - **シナジータイプ** — Fake Outテンポ · Redirect（Follow Me/Rage Powder）· 天候セッティング/悪用 · Trick Room · Tailwind · Intimidate + 物理アタッカー · その他
+   - このペアが**どんな相手に強いか**（一言）
+   - このペアの**弱点**（スプレッド共有弱点 / 両方遅い / 速度不足等 — 一言）
+2. 初ターンプラン — 各リードの**技 + ターゲット**を明記。例：「AはFake Out → 相手Cを妨害。BはProtectで相手の反応を様子見。」技は該当ポケモンの\`moves\`配列にあるものに限る。
+3. 第2ターン展開の予想（相手が慎重にProtect / 攻撃的にスプレッド / バック交代の3シナリオ各一言）。
+4. リードペアとして**絶対に使ってはいけない2匹の組み合わせ**1組（共有弱点・シナジー皆無等）。
+
+パーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请为此队伍推荐**双打（2对2）**中最佳的**先发2只宝可梦组合**。
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+
+分析请求：
+1. 从6只中提出**2组可行的先发组合**。对每组：
+   - 以\`A（slug）+ B（slug）\`形式命名组合
+   - **协同类型** — Fake Out节奏 · Redirect（Follow Me/Rage Powder）· 天气setter+abuser · Trick Room · Tailwind · Intimidate+物理攻击手 · 其他
+   - 此组合**克制哪类对手**（一句话）
+   - 此组合的**弱点**（共享扩散弱点/两只都慢/速度不足等 — 一句话）
+2. 第1回合计划 — 指明每只先发的**招式+目标**。例："A用Fake Out→干扰对方C。B用Protect探对方反应。"招式须在各宝可梦\`moves\`数组中。
+3. 第2回合走向预测（对方保守用Protect / 激进用扩散 / 换入后排 三种情景各一句）。
+4. 指出1组**绝对不应先发的2只组合**（共享弱点·零协同等）。
+
+队伍内联数据：
 \`\`\`json
 {{PARTY_INLINE_JSON}}
 \`\`\`
@@ -913,6 +1682,64 @@ Party inline data:
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+**ダブルバトル（2対2）**の観点からこのパーティの**スプレッド技効率**を点検してください。
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+- 技詳細：{{MOVES_JSON_URL}}
+
+背景：ダブルではスプレッド技（相手2匹同時ヒット）は0.75倍補正がかかりますが、累積ダメージとテンポの観点で核心です。ただし**味方へのダメージリスク**があるため、パートナーの組み合わせを慎重に選ぶ必要があります。
+
+代表的なスプレッド技（target: all-opponents / all-other-pokemon）：Earthquake / Surf / Muddy Water / Heat Wave / Rock Slide / Dazzling Gleam / Hyper Voice / Discharge / Blizzard / Eruption / Water Spout / Icy Wind / Bulldoze / Razor Leaf等。
+
+分析リクエスト：
+1. パーティメンバーの**実際に選択されている技の中のスプレッド技一覧**（moves.json基準）。各技について：
+   - 誰の技か + \`技名（slug, タイプ/威力/命中率）\`
+   - **味方ダメージリスク**：同じフィールドに出られる味方がこの技に弱いか（例：Earthquake + 飛行・浮遊の味方は安全、地面の味方は危険）
+   - この技を**安全に使えるパートナーの組み合わせ**（既存6匹の中から）
+2. **スプレッドカバレッジの穴**診断 — よく必要とされるスプレッドタイプ（水/火/地/岩/氷/フェアリー）のうち、このパーティにないものは？既存の習得可能技の中で補えそうな候補があれば提案（該当ポケモンの\`moves\`配列にある場合のみ）。
+3. **リードペア + スプレッド組み合わせ例1つ** — 「Aリード + Bリード、AがXスプレッドを使う時BはProtectで回避」のような1ターンコンボ。
+
+パーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请从**双打（2对2）**角度评估此队伍的**扩散招式效率**。
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+- 招式详情：{{MOVES_JSON_URL}}
+
+背景：双打中，扩散招式（同时命中对方2只）有0.75倍修正，但其累积伤害和节奏掌控是大多数战术的核心。代价是**可能伤及队友** — 必须谨慎选择搭档组合。
+
+代表性扩散招式（target: all-opponents / all-other-pokemon）：Earthquake / Surf / Muddy Water / Heat Wave / Rock Slide / Dazzling Gleam / Hyper Voice / Discharge / Blizzard / Eruption / Water Spout / Icy Wind / Bulldoze / Razor Leaf等。
+
+分析请求：
+1. **列出队伍中当前已选的扩散招式**（基于moves.json）。对每个招式：
+   - 属于谁 + \`招式名（slug，属性/威力/命中率）\`
+   - **队友伤害风险**：可能与该宝可梦同时上场的队友是否对此招式有弱点？（例：Earthquake与飞行/飘浮队友同场安全，与地面队友同场危险）
+   - **与哪个搭档组合使用此招式是安全的**（从现有6只中选）
+2. 诊断**扩散属性覆盖空缺** — 常见的扩散属性（水/火/地/岩/冰/妖精）中此队伍缺哪些？现有可学招式中是否有可补充的候选（仅限该宝可梦\`moves\`数组中存在时）。
+3. 给出**1个先发组合+扩散配合示例** — 如"A先发+B先发，A使用X（扩散）时B用Protect躲避溅射"的一回合组合。
+
+队伍内联数据：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
     },
   },
 
@@ -971,6 +1798,58 @@ Analysis requests:
 5. Name the **single highest-priority reinforcement point** (this template does not require suggesting a swap candidate — that's the swap template's job).
 
 Party inline data:
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      jaDouble: `${SHARED_DISCLAIMER_JA}
+
+${STRICT_POOL_RULES_JA}
+
+---
+
+**ダブルバトル（2対2）**の観点からこのパーティの**シナジーと役割構成**を点検してください。
+
+- パーティURL：{{PARTY_URL}}
+- サイトガイド：{{LLMS_TXT_URL}}
+
+背景：ダブルの主要チームアーキタイプ — **Fake Out リード / Redirect / 天候（晴れ・雨・砂嵐・雪）/ Trick Room / Tailwind / Intimidate + 物理 / Screens / スタンダードバランス**。優れたチームは通常1〜2個の明確なシナジーの軸があり、それをサポート・バックアップする役割が組まれています。
+
+分析リクエスト：
+1. このパーティの**アーキタイプ特定**を一言で — 最も有力なコアは？（例：「Tailwind攻めパ」「Trick Room低速パ」「スタンダードバランス（明確な軸なし）」「Intimidateサポート + 物理アタッカー」）
+2. パーティに実際に存在する**シナジーペア**を3個以内で挙げてください（abilities.json / moves.jsonで検証済みのもの）：
+   - \`A + B\` — 「AのXX特性/技がBのYYをサポート」一言
+3. **不足しているダブルの核心役割**（redirect / 速度調整 / Fake Out / Protect未採用等）を列挙。
+4. **補完提案** — 既存6匹の**特性・道具・技の調整だけで**解決できるシナジーがあるか（ポケモン交代なし）。例：「現在Aの特性をXXに変えるとBとredirectシナジーが成立」（該当ポケモンの\`abilities\` / \`moves\`にある場合のみ）。
+5. 交代まで考慮した場合の**最優先強化ポイント**1つ（このプロンプトではswap候補提案は強制しない — swapテンプレートの役割）。
+
+パーティインラインデータ：
+\`\`\`json
+{{PARTY_INLINE_JSON}}
+\`\`\`
+`,
+      zhDouble: `${SHARED_DISCLAIMER_ZH}
+
+${STRICT_POOL_RULES_ZH}
+
+---
+
+请从**双打（2对2）**角度评估此队伍的**协同与角色构成**。
+
+- 队伍URL：{{PARTY_URL}}
+- 网站指南：{{LLMS_TXT_URL}}
+
+背景：常见双打队伍风格 — **Fake Out先发 / Redirect / 天气（晴/雨/沙/雪）/ Trick Room / Tailwind / Intimidate+物理 / Screens / 标准平衡**。优秀的队伍通常有1–2个清晰的核心协同轴，辅以支撑和备份角色。
+
+分析请求：
+1. 用一句话**判断此队伍的风格** — 最可能的核心是什么？（例："Tailwind攻势"·"Trick Room低速阵"·"标准平衡（无明显核心）"·"Intimidate辅助+物理攻击手"）
+2. 指出队伍中实际存在的**协同配对**，最多3组（须经abilities.json / moves.json验证）：
+   - \`A + B\` — "A的XX特性/招式辅助B的YY"（各一句）
+3. 列出**缺失的双打核心角色**（redirect / 速度调控 / Fake Out / 无Protect等）。
+4. **调整建议** — 仅通过**调整现有6只的特性·道具·招式**（不换队员）能否解锁协同？例："若将A的特性换为XX，则与B形成redirect协同"（仅限该特性/招式在A的\`abilities\`/\`moves\`中时适用）。
+5. 若考虑换队员，**最优先的强化点**1个（此模板不要求提出换人候选 — 那是换人模板的职责）。
+
+队伍内联数据：
 \`\`\`json
 {{PARTY_INLINE_JSON}}
 \`\`\`

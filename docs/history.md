@@ -8,6 +8,8 @@
 
 ## 2026-04-23
 
+- i18n Phase 3 (T-i18n-6) — AI 프롬프트 템플릿 ja/zh 바디 번역 완료. `web/assets/prompts-templates.js` 에 `SHARED_DISCLAIMER_JA/ZH`, `STRICT_POOL_RULES_JA/ZH` 상수 신규 추가. 싱글 6종 템플릿(weakness/swap/moveset/fill/counter/free)에 `ja`/`jaDouble`/`zh`/`zhDouble` 4키씩, 더블 전용 3종(leads/spread/synergy)에 `jaDouble`/`zhDouble` 2키씩 추가 — 총 30개 신규 바디. `resolveBody()` 가 ja/zh 모드에서 영문 폴백 없이 자국어 프롬프트 반환. `docs/TODO.md` T-i18n-6 완료 처리.
+
 - SEO 강화 (T34) — ① `web/sitemap.xml` 신규 생성 (6개 URL: index·pokemon·party·abilities·items·moves, prompts.html noindex라 제외). ② `web/robots.txt` 맨 아래 `Sitemap:` 지시자 추가. ③ `<title>` 태그 i18n화 — 6개 HTML에 `data-i18n="page.title.*"` 속성 추가, `i18n.js` ko/en/ja/zh 4개 블록에 `page.title.*` 6키씩 신규 추가 (언어 전환 시 브라우저 탭 제목도 변경됨). ④ `<meta name="description">` 개선 — 각 페이지 기능을 구체적으로 명시 (수량·기능·AI 언급 등).
 
 - `prompts.html` 가이드 섹션 i18n 누락 수정 — 사용 사례 칩·스테퍼·How-to·FAQ가 ko가 아닌 언어에서도 한국어로 표시되는 문제. 원인: 전 커밋에서 추가한 섹션들이 `data-i18n` 속성 없이 한국어 하드코딩. 수정: HTML 각 요소에 `data-i18n` 속성 추가, `i18n.js` ko/en/ja/zh 4개 블록에 `prompts.guide.*` 키군 26개(use-cases 4 + stepper 6 + how-to 7 + FAQ 9) 신규 추가. `web/prompts.html`, `web/assets/i18n.js` 수정.
