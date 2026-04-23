@@ -8,6 +8,8 @@
 
 ## 2026-04-23
 
+- 파티 빌더 포켓몬·기술 피커 검색/표시 ja/zh 미지원 버그 수정 — 일본어·중국어 모드에서 피커 검색 시 한국어·영문으로만 매칭되어 자국어 입력이 안 되는 문제. 원인: `renderPickerList()`의 검색 필터가 `nameKo`·`nameEn`만 체크, 표시 로직도 `getLang()==="ko"` 이분법으로 ja/zh에서 영문이 메인 표시됨. `renderMovePickerList()`도 동일 패턴. 수정: ① 포켓몬 피커 검색 — `nameJa`·`nameZh` 추가. ② 포켓몬 피커 표시 — `getLang()==="ko"` 이분법 제거, `formDisplayName()` 헬퍼(4-way 이미 구현됨) 사용. ③ 기술 피커 검색 — `nameJa`·`nameZh` 추가. ④ 정렬 locale — `"ko" ? "ko" : "en"` 이분법 → ja/zh 분기 추가. `web/assets/party.js` 수정.
+
 - i18n Phase 2 Part 2 — LLM 번역 744건 실행 완료 (Turn A~D). 사용자 요청: "너 지금 sonnet으로 바꿧는데 너가 번역 진행해봐".
   - **Turn A** (168건): `data/manual/ability_gameText_ja.json` (16), `ability_gameText_zh.json` (16), `item_effect_ja.json` (24), `item_effect_zh.json` (24), `move_flavorText_ja.json` (44), `move_flavorText_zh.json` (44) — 총 6개 파일 신규 생성. 소스: `gameTextKo`(abilities), `effectKo`(items), `flavorTextEn`(moves). 메가스톤은 기존 abomasite·absolite 등의 ja/zh 템플릿 패턴 그대로 적용. moves 44종은 9세대/Champions 신규로 PokeAPI ja/zh 공백이었던 항목.
   - **Turn B~D** (576건): `ability_description_ja.json` (192), `ability_description_zh.json` (192), `ability_description_ko.json` (192) — 총 3개 파일 신규 생성. 소스: 영문 Bulbapedia-style `description` 필드 → 3 언어 번역.

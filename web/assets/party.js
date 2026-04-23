@@ -526,7 +526,7 @@ function buildMovesBlock(index, pokemon, slot) {
     .map((s) => state.moveMap.get(s))
     .filter(Boolean);
   learnable.sort((a, b) =>
-    moveDisplayName(a).localeCompare(moveDisplayName(b), getLang() === "ko" ? "ko" : "en"),
+    moveDisplayName(a).localeCompare(moveDisplayName(b), getLang() === "ko" ? "ko" : getLang() === "ja" ? "ja" : getLang() === "zh" ? "zh" : "en"),
   );
 
   const row = document.createElement("div");
@@ -595,7 +595,7 @@ function makeNatureSelect(index, slot) {
   // 20 non-neutral natures, sorted by display name.
   const nonNeutral = state.natures.filter((n) => n.increased && n.decreased);
   nonNeutral.sort((a, b) =>
-    (a.nameKo || a.nameEn).localeCompare(b.nameKo || b.nameEn, getLang() === "ko" ? "ko" : "en"),
+    (a.nameKo || a.nameEn).localeCompare(b.nameKo || b.nameEn, getLang() === "ko" ? "ko" : getLang() === "ja" ? "ja" : getLang() === "zh" ? "zh" : "en"),
   );
   for (const n of nonNeutral) {
     const opt = document.createElement("option");
@@ -942,7 +942,7 @@ function renderMovePickerList() {
     .map((s) => state.moveMap.get(s))
     .filter(Boolean);
   learnable.sort((a, b) =>
-    moveDisplayName(a).localeCompare(moveDisplayName(b), getLang() === "ko" ? "ko" : "en"),
+    moveDisplayName(a).localeCompare(moveDisplayName(b), getLang() === "ko" ? "ko" : getLang() === "ja" ? "ja" : getLang() === "zh" ? "zh" : "en"),
   );
 
   const q = (state.movePickerQuery || "").trim().toLowerCase();
@@ -961,6 +961,8 @@ function renderMovePickerList() {
       const hay = [
         m.slug,
         m.nameKo || "",
+        m.nameJa || "",
+        m.nameZh || "",
         m.nameEn || "",
       ].join(" ").toLowerCase();
       if (!hay.includes(q)) continue;
@@ -1243,11 +1245,11 @@ function renderPickerList() {
         if (!ok) continue;
       }
       if (q) {
-        const displayKo = form.nameKo || p.nameKo;
-        const displayEn = form.name || p.nameEn;
         const hit =
-          displayKo.toLowerCase().includes(q) ||
-          displayEn.toLowerCase().includes(q) ||
+          (form.nameKo || p.nameKo || "").toLowerCase().includes(q) ||
+          (form.nameJa || p.nameJa || "").toLowerCase().includes(q) ||
+          (form.nameZh || p.nameZh || "").toLowerCase().includes(q) ||
+          (form.name  || p.nameEn || "").toLowerCase().includes(q) ||
           p.slug.toLowerCase().includes(q);
         if (!hit) continue;
       }
@@ -1275,15 +1277,12 @@ function renderPickerList() {
 
     const textWrap = document.createElement("span");
     textWrap.className = "picker-row__text";
-    const displayKo = form.nameKo || p.nameKo;
-    const displayEn = form.name || p.nameEn;
     const primaryEl = document.createElement("span");
     primaryEl.className = "picker-row__name";
-    primaryEl.textContent = getLang() === "ko" ? displayKo : displayEn;
+    primaryEl.textContent = formDisplayName(form) || p.nameKo || p.nameEn;
     const subEl = document.createElement("span");
     subEl.className = "picker-row__sub";
-    const sub = getLang() === "ko" ? displayEn : displayKo;
-    subEl.textContent = `${formatDex(p.number)} · ${sub}`;
+    subEl.textContent = `${formatDex(p.number)} · ${form.name || p.nameEn}`;
     textWrap.append(primaryEl, subEl);
 
     const types = document.createElement("span");
