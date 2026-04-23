@@ -119,11 +119,11 @@
       <p class="page-lead" data-i18n="prompts.lead">현재 파티를 Claude·ChatGPT 같은 AI 에게 바로 붙여넣을 수 있도록 만든 질문 템플릿 모음. URL fetch 가 가능한 AI 는 링크로, 그렇지 않으면 인라인 데이터 버전으로 복사하세요.</p>
     </section>
 
-    <ul class="prompts-use-cases" aria-label="이런 상황에 유용합니다">
-      <li>약점이 막연할 때</li>
-      <li>빈 슬롯이 안 떠오를 때</li>
-      <li>상대 파티 대응이 급할 때</li>
-      <li>더블 리드·시너지가 헷갈릴 때</li>
+    <ul class="prompts-use-cases" data-i18n-aria="prompts.guide.usecases.label" aria-label="이런 상황에 유용합니다">
+      <li data-i18n="prompts.guide.usecase1">약점이 막연할 때</li>
+      <li data-i18n="prompts.guide.usecase2">빈 슬롯이 안 떠오를 때</li>
+      <li data-i18n="prompts.guide.usecase3">상대 파티 대응이 급할 때</li>
+      <li data-i18n="prompts.guide.usecase4">더블 리드·시너지가 헷갈릴 때</li>
     </ul>
 
     <p class="prompts-intro">
@@ -131,24 +131,24 @@
       <a href="./party.html" id="back-to-party" data-i18n="prompts.back">← 파티 빌더로 돌아가 구성을 바꾸기</a>
     </p>
 
-    <nav class="prompts-stepper" aria-label="AI 질문 단계">
-      <p class="prompts-stepper__title">진행 단계</p>
+    <nav class="prompts-stepper" data-i18n-aria="prompts.guide.stepper.label" aria-label="AI 질문 단계">
+      <p class="prompts-stepper__title" data-i18n="prompts.guide.stepper.heading">진행 단계</p>
       <ol class="prompts-stepper__list">
         <li class="prompts-stepper__item is-done">
           <span class="prompts-stepper__dot" aria-hidden="true">✓</span>
-          <span class="prompts-stepper__text">파티 구성</span>
+          <span class="prompts-stepper__text" data-i18n="prompts.guide.stepper.step1">파티 구성</span>
         </li>
         <li class="prompts-stepper__item is-done">
           <span class="prompts-stepper__dot" aria-hidden="true">✓</span>
-          <span class="prompts-stepper__text">질문 페이지</span>
+          <span class="prompts-stepper__text" data-i18n="prompts.guide.stepper.step2">질문 페이지</span>
         </li>
         <li class="prompts-stepper__item is-current">
           <span class="prompts-stepper__dot" aria-hidden="true">3</span>
-          <span class="prompts-stepper__text" aria-current="step">질문 선택</span>
+          <span class="prompts-stepper__text" aria-current="step" data-i18n="prompts.guide.stepper.step3">질문 선택</span>
         </li>
         <li class="prompts-stepper__item">
           <span class="prompts-stepper__dot" aria-hidden="true">4</span>
-          <span class="prompts-stepper__text">복사 · 붙여넣기</span>
+          <span class="prompts-stepper__text" data-i18n="prompts.guide.stepper.step4">복사 · 붙여넣기</span>
         </li>
       </ol>
     </nav>
@@ -178,54 +178,54 @@
     <section id="prompt-cards" class="card-grid" data-i18n-aria="prompts.cardsAria" aria-label="프롬프트 카드"></section>
 
     <section class="prompts-howto" aria-labelledby="howto-title">
-      <h2 class="prompts-howto__title" id="howto-title">짧은 사용 팁</h2>
+      <h2 class="prompts-howto__title" id="howto-title" data-i18n="prompts.guide.howto.title">짧은 사용 팁</h2>
       <ol class="prompts-howto__list">
         <li>
-          <strong>파티 빌더에서 바로 넘어오면 URL 자동 입력</strong>
-          파티 빌더에서 "AI에게 물어보기"로 오면 파티 URL이 프롬프트에 자동 반영됩니다. 직접 여기에 왔다면 <a href="./party.html">파티 빌더</a>에서 구성 후 다시 오세요.
+          <strong data-i18n="prompts.guide.tip1.title">파티 빌더에서 바로 넘어오면 URL 자동 입력</strong>
+          <span data-i18n="prompts.guide.tip1.body">파티 빌더에서 "AI에게 물어보기"로 오면 파티 URL이 프롬프트에 자동 반영됩니다. 직접 여기에 왔다면 파티 빌더에서 먼저 구성해주세요.</span>
         </li>
         <li>
-          <strong>질문은 하나씩 나눠서</strong>
-          약점 분석과 멤버 교체를 한 번에 묻기보다 카드 1개 = 질문 1개가 AI 답변 품질이 더 높습니다.
+          <strong data-i18n="prompts.guide.tip2.title">질문은 하나씩 나눠서</strong>
+          <span data-i18n="prompts.guide.tip2.body">약점 분석과 멤버 교체를 한 번에 묻기보다 카드 1개 = 질문 1개가 AI 답변 품질이 더 높습니다.</span>
         </li>
         <li>
-          <strong>AI가 링크를 못 읽으면 데이터 파일 첨부</strong>
-          위쪽 "Champions 데이터 파일 다운로드"로 받은 JSON 파일을 AI 채팅에 첨부하면, 프롬프트 안의 URL fetch 폴백이 자동 작동합니다.
+          <strong data-i18n="prompts.guide.tip3.title">AI가 링크를 못 읽으면 데이터 파일 첨부</strong>
+          <span data-i18n="prompts.guide.tip3.body">위쪽 "Champions 데이터 파일 다운로드"로 받은 JSON 파일을 AI 채팅에 첨부하면, 프롬프트 안의 URL fetch 폴백이 자동 작동합니다.</span>
         </li>
       </ol>
     </section>
 
     <section class="prompts-faq" aria-labelledby="faq-title">
-      <h2 class="prompts-faq__title" id="faq-title">자주 묻는 질문</h2>
+      <h2 class="prompts-faq__title" id="faq-title" data-i18n="prompts.guide.faq.title">자주 묻는 질문</h2>
       <div class="prompts-faq__list">
         <details name="prompts-faq">
-          <summary>파티 URL 없이도 쓸 수 있나요?</summary>
+          <summary data-i18n="prompts.guide.faq1.q">파티 URL 없이도 쓸 수 있나요?</summary>
           <div class="prompts-faq__body">
-            <p>네. 프롬프트 미리보기를 열고 <code>{{PARTY_URL}}</code> 부분을 직접 수정하거나, "프롬프트 복사" 후 AI 채팅에서 파티 정보를 붙여 설명해도 됩니다. 단, 파티를 미리 구성하면 AI가 훨씬 정확하게 분석합니다.</p>
+            <p data-i18n="prompts.guide.faq1.a">네. 프롬프트 미리보기를 열고 {{PARTY_URL}} 부분을 직접 수정하거나, "프롬프트 복사" 후 AI 채팅에서 파티 정보를 붙여 설명해도 됩니다. 단, 파티를 미리 구성하면 AI가 훨씬 정확하게 분석합니다.</p>
           </div>
         </details>
         <details name="prompts-faq">
-          <summary>Claude와 ChatGPT 모두 같은 프롬프트를 써도 되나요?</summary>
+          <summary data-i18n="prompts.guide.faq2.q">Claude와 ChatGPT 모두 같은 프롬프트를 써도 되나요?</summary>
           <div class="prompts-faq__body">
-            <p>대부분 가능합니다. 두 AI 모두 파일 첨부와 URL fetch를 지원합니다. 더 긴 분석(고급 버전)에서는 원하는 출력 형식을 구체적으로 적을수록 답변 품질이 올라갑니다.</p>
+            <p data-i18n="prompts.guide.faq2.a">대부분 가능합니다. 두 AI 모두 파일 첨부와 URL fetch를 지원합니다. 더 긴 분석에서는 원하는 출력 형식을 구체적으로 적을수록 답변 품질이 올라갑니다.</p>
           </div>
         </details>
         <details name="prompts-faq">
-          <summary>복사 버튼이 작동하지 않으면 어떻게 하나요?</summary>
+          <summary data-i18n="prompts.guide.faq3.q">복사 버튼이 작동하지 않으면 어떻게 하나요?</summary>
           <div class="prompts-faq__body">
-            <p>브라우저가 자동 복사를 차단한 경우 프롬프트 미리보기(▸ 미리보기)를 열고 텍스트를 직접 선택해 복사하세요. HTTPS가 아닌 환경에서는 Clipboard API가 동작하지 않습니다.</p>
+            <p data-i18n="prompts.guide.faq3.a">브라우저가 자동 복사를 차단한 경우 프롬프트 미리보기(▸ 미리보기)를 열고 텍스트를 직접 선택해 복사하세요. HTTPS가 아닌 환경에서는 Clipboard API가 동작하지 않습니다.</p>
           </div>
         </details>
         <details name="prompts-faq">
-          <summary>더블 모드는 언제 쓰나요?</summary>
+          <summary data-i18n="prompts.guide.faq4.q">더블 모드는 언제 쓰나요?</summary>
           <div class="prompts-faq__body">
-            <p>더블 배틀로 플레이할 때 상단 "더블" 버튼을 누르면 리드 조합·스프레드·파트너 시너지 관점으로 프롬프트가 재작성되고, 더블 전용 카드 3개(리드·스프레드·시너지)가 추가로 표시됩니다.</p>
+            <p data-i18n="prompts.guide.faq4.a">더블 배틀로 플레이할 때 "더블" 버튼을 누르면 리드 조합·스프레드·파트너 시너지 관점으로 프롬프트가 재작성되고, 더블 전용 카드 3개가 추가로 표시됩니다.</p>
           </div>
         </details>
         <details name="prompts-faq">
-          <summary>AI가 Champions에 없는 포켓몬을 추천하면 어떻게 하나요?</summary>
+          <summary data-i18n="prompts.guide.faq5.q">AI가 Champions에 없는 포켓몬을 추천하면 어떻게 하나요?</summary>
           <div class="prompts-faq__body">
-            <p>프롬프트 안에 Champions 데이터 파일을 첨부하라는 폴백 문구가 포함되어 있습니다. 데이터 파일을 AI에 첨부하면 Champions에 없는 포켓몬을 추천하는 오류가 크게 줄어듭니다.</p>
+            <p data-i18n="prompts.guide.faq5.a">프롬프트 안에 Champions 데이터 파일을 첨부하라는 폴백 문구가 포함되어 있습니다. 데이터 파일을 AI에 첨부하면 Champions에 없는 포켓몬 추천 오류가 크게 줄어듭니다.</p>
           </div>
         </details>
       </div>
