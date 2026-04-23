@@ -8,6 +8,8 @@
 
 ## 2026-04-23
 
+- `prompts.html` 가이드 섹션 i18n 누락 수정 — 사용 사례 칩·스테퍼·How-to·FAQ가 ko가 아닌 언어에서도 한국어로 표시되는 문제. 원인: 전 커밋에서 추가한 섹션들이 `data-i18n` 속성 없이 한국어 하드코딩. 수정: HTML 각 요소에 `data-i18n` 속성 추가, `i18n.js` ko/en/ja/zh 4개 블록에 `prompts.guide.*` 키군 26개(use-cases 4 + stepper 6 + how-to 7 + FAQ 9) 신규 추가. `web/prompts.html`, `web/assets/i18n.js` 수정.
+
 - `prompts.html` UI 개선 — 다른 AI가 제공한 리서치 보고서(하이브리드 가이드 구조 제안) 반영. ① 사용 사례 칩 목록(약점/빈슬롯/상대대책/더블) 페이지 헤더 아래 추가. ② 4단계 스테퍼(파티구성→질문페이지→질문선택→복사·붙여넣기, 완료·현재 단계 시각 구분) intro 위에 추가. ③ How-to 섹션(3단계: URL 자동입력·질문 분리·파일첨부) 템플릿 카드 아래 추가. ④ FAQ 섹션(파티URL없이도 사용 가능 여부·Claude/ChatGPT 공용 여부·복사 오류·더블모드·Champions 부재 포켓몬 대처 등 5개) native `<details>` 로 추가. 기존 기능(9 템플릿 카드·싱글/더블 모드·데이터 번들·i18n) 은 그대로 유지. `web/prompts.html` 수정.
 
 - 파티 빌더 포켓몬·기술 피커 검색/표시 ja/zh 미지원 버그 수정 — 일본어·중국어 모드에서 피커 검색 시 한국어·영문으로만 매칭되어 자국어 입력이 안 되는 문제. 원인: `renderPickerList()`의 검색 필터가 `nameKo`·`nameEn`만 체크, 표시 로직도 `getLang()==="ko"` 이분법으로 ja/zh에서 영문이 메인 표시됨. `renderMovePickerList()`도 동일 패턴. 수정: ① 포켓몬 피커 검색 — `nameJa`·`nameZh` 추가. ② 포켓몬 피커 표시 — `getLang()==="ko"` 이분법 제거, `formDisplayName()` 헬퍼(4-way 이미 구현됨) 사용. ③ 기술 피커 검색 — `nameJa`·`nameZh` 추가. ④ 정렬 locale — `"ko" ? "ko" : "en"` 이분법 → ja/zh 분기 추가. `web/assets/party.js` 수정.
