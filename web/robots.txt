@@ -54,3 +54,5 @@ Allow: /
 # ── Default (search engines, unknown crawlers) — allow ──────────
 User-agent: *
 Allow: /
+
+Sitemap: https://jyanny14.github.io/pocketmon_settings/sitemap.xml

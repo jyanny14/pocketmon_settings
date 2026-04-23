@@ -342,6 +342,14 @@ const STRINGS = {
     "nature.serious": "성실",
     "nature.timid": "겁쟁이",
 
+    // Page titles
+    "page.title.index": "포켓몬 챔피언스 파티 빌더",
+    "page.title.pokemon": "포켓몬 목록 · 포켓몬 챔피언스",
+    "page.title.items": "도구 · 포켓몬 챔피언스",
+    "page.title.abilities": "특성 · 포켓몬 챔피언스",
+    "page.title.moves": "기술 · 포켓몬 챔피언스",
+    "page.title.party": "파티 빌더 · 포켓몬 챔피언스",
+
     // Misc
     "error.loadFailed": "데이터를 불러오지 못했습니다",
     "error.noData": "데이터 없음",
@@ -679,6 +687,14 @@ const STRINGS = {
     "nature.serious": "Serious",
     "nature.timid": "Timid",
 
+    // Page titles
+    "page.title.index": "Pokémon Champions Party Builder",
+    "page.title.pokemon": "Pokémon List · Pokémon Champions",
+    "page.title.items": "Items · Pokémon Champions",
+    "page.title.abilities": "Abilities · Pokémon Champions",
+    "page.title.moves": "Moves · Pokémon Champions",
+    "page.title.party": "Party Builder · Pokémon Champions",
+
     "error.loadFailed": "Failed to load data",
     "error.noData": "No data",
   },
@@ -1012,6 +1028,14 @@ const STRINGS = {
     "nature.serious": "まじめ",
     "nature.timid": "おくびょう",
 
+    // Page titles
+    "page.title.index": "ポケモンチャンピオンズ パーティビルダー",
+    "page.title.pokemon": "ポケモン一覧 · ポケモンチャンピオンズ",
+    "page.title.items": "どうぐ · ポケモンチャンピオンズ",
+    "page.title.abilities": "とくせい · ポケモンチャンピオンズ",
+    "page.title.moves": "わざ · ポケモンチャンピオンズ",
+    "page.title.party": "パーティビルダー · ポケモンチャンピオンズ",
+
     "error.loadFailed": "データの読み込みに失敗しました",
     "error.noData": "データなし",
   },
@@ -1343,6 +1367,14 @@ const STRINGS = {
     "nature.sassy": "自大",
     "nature.serious": "认真",
     "nature.timid": "胆小",
+
+    // Page titles
+    "page.title.index": "宝可梦冠军 队伍构建器",
+    "page.title.pokemon": "宝可梦列表 · 宝可梦冠军",
+    "page.title.items": "道具 · 宝可梦冠军",
+    "page.title.abilities": "特性 · 宝可梦冠军",
+    "page.title.moves": "招式 · 宝可梦冠军",
+    "page.title.party": "队伍构建器 · 宝可梦冠军",
 
     "error.loadFailed": "数据加载失败",
     "error.noData": "无数据",
