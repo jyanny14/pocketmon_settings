@@ -9,7 +9,20 @@ import {
   getLang,
 } from "./app.js";
 import { decodeParty } from "./party-encode.js";
-import { TEMPLATES } from "./prompts-templates.js";
+import {
+  TEMPLATES,
+  DETAILED_RULES_KO,
+  DETAILED_RULES_EN,
+  DETAILED_RULES_JA,
+  DETAILED_RULES_ZH,
+} from "./prompts-templates.js";
+
+const DETAILED_RULES_BY_LANG = {
+  ko: DETAILED_RULES_KO,
+  en: DETAILED_RULES_EN,
+  ja: DETAILED_RULES_JA,
+  zh: DETAILED_RULES_ZH,
+};
 
 const state = {
   pokemonMap: new Map(),
@@ -373,9 +386,9 @@ function syncModeToggleUI() {
 // identifiers (e.g. form.name, which the URL encoder relies on) are
 // never dropped — only the "human-readable name/text" fields for the
 // language the user didn't pick.
-// Phase 1 M2: 4-way 확장. ja/zh 는 ja/zh 이름만 남기고 나머지 name 필드 드롭.
-// Phase 2: gameText / effect / flavorText 에 ja/zh 버전이 추가됨.
-// description 은 여전히 ja/zh 미수집 — 영어 원문만 유지.
+// Coverage as of 2026-04-23: ability gameText/description and item
+// effect and move flavorText are all fully localized in ko/en/ja/zh,
+// so ja/zh bundles drop the English originals too (no fallback needed).
 const LANG_DROP_FIELDS = {
   ko: [
     "nameEn", "nameJa", "nameZh",
@@ -394,16 +407,16 @@ const LANG_DROP_FIELDS = {
   ja: [
     "nameKo", "nameEn", "nameZh",
     "gameText", "gameTextKo", "gameTextZh",
-    "descriptionKo", "descriptionZh",  // description 자체(영어)는 유지 — 폴백용
-    "flavorTextKo", "flavorTextZh",     // flavorTextEn 은 유지 (ja 누락 대비)
-    "effectKo", "effectZh",
+    "description", "descriptionKo", "descriptionZh",
+    "flavorText", "flavorTextEn", "flavorTextKo", "flavorTextZh",
+    "effect", "effectKo", "effectZh",
   ],
   zh: [
     "nameKo", "nameEn", "nameJa",
     "gameText", "gameTextKo", "gameTextJa",
-    "descriptionKo", "descriptionJa",
-    "flavorTextKo", "flavorTextJa",
-    "effectKo", "effectJa",
+    "description", "descriptionKo", "descriptionJa",
+    "flavorText", "flavorTextEn", "flavorTextKo", "flavorTextJa",
+    "effect", "effectKo", "effectJa",
   ],
 };
 const FORM_DROP_FIELDS = {
@@ -493,6 +506,7 @@ async function downloadDataBundle() {
     const wrapper = {
       _readme: bundleReadme(lang),
       _language: lang,
+      _rules: DETAILED_RULES_BY_LANG[lang] || DETAILED_RULES_EN,
       _generatedAt: corpus?.manifest?.generatedAt || null,
       _source: "https://jyanny14.github.io/pocketmon_settings/data/corpus.json",
       ...filtered,

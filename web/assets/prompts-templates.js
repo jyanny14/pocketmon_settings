@@ -21,173 +21,182 @@ export const SHARED_DISCLAIMER_ZH =
 
 export const STRICT_POOL_RULES_KO = `**데이터 제약 (엄격 · 반드시 준수 · 위반 시 답변 무효)**
 
-⚠️ **최우선 규칙 (CORE RULE) — 포켓몬은 pokemon.json 안에서만 언급**
-당신이 언급하는 **모든 포켓몬 이름**은 pokemon.json 의 \`slug\` 로 즉시 매칭되어야 합니다. 매칭 불가 = Champions 에 없는 포켓몬 = **언급 금지**. 본편 시리즈 메타에 있든·공식 VGC 강자이든·유명하든 상관없습니다. 대체어로 바꾸지 말고, 유사 역할군을 만들어 끼워 넣지도 말고, 새 폼을 상상해내지도 마세요. **검증할 수 없는 이름은 한 글자도 쓰지 마세요.**
+⚠️ **CORE RULE — Champions 데이터 밖의 포켓몬·특성·도구·기술은 언급 금지**
+언급하는 모든 고유명사는 첨부된 champions-data JSON 의 \`slug\` 로 검증 가능해야 합니다. 매칭 불가 = Champions 에 없음 = **언급 금지**. 본편(SV, Legends: Z-A 등) 메타·유명도·VGC 강세는 근거가 되지 않습니다. **확인 불가한 이름은 한 글자도 쓰지 마세요.**
 
-1. **진실의 소스 — 반드시 두 단계 체크 (Step 0 → Step 1)**
+**필수 절차:**
+1. 답변 작성 전, 이 챗에 첨부된 \`champions-data-*.json\` 파일을 열고 최상단 \`_rules\` 필드(상세 규칙·부재 예시·자기 검증 체크리스트)를 끝까지 읽고 전부 준수하세요. 매 답변마다 파일을 다시 열어 slug 를 조회하세요 (대화 요약본·이전 턴 기억 의존 금지).
+2. 모든 추천 항목에 slug + 출처 병기: \`아머까오 (slug: corviknight, 출처: pokemon.json)\` 형식. slug 를 지어내지 말고, JSON 에서 조회 후에만 쓰세요.
+3. 불확실하면 제안하지 마세요. \`_rules\` 의 지침대로 유사 대체 항목을 찾거나 유저에게 재확인을 요청하세요.
 
-   **Step 0 (최우선 · 답변 작성 전에 반드시 먼저 수행) — 이 대화에 첨부된 데이터 파일이 있는지 확인하세요.**
-   파일명이 \`champions-data\` 로 시작하는 JSON 첨부(예: \`champions-data-ko-20260422.json\`) 가 이 챗 어딘가에 올라와 있다면, **그 파일만** 진실의 소스로 사용하세요. 다음 행위는 금지:
-   - URL fetch 시도 (Step 1 URL 들 포함) — 이미 첨부 파일에 동일·최신 데이터가 있습니다.
-   - 유저에게 데이터 파일 재-첨부 요청 — 이미 올라와 있습니다.
-   - 이전 턴의 fetch 결과나 요약본 재사용 — 대화가 길어지면 클라이언트가 요약하며 값이 손실됐을 수 있으니, 매 답변마다 첨부 파일을 직접 다시 열어 slug 를 조회하세요.
+**첨부 파일이 없을 때 폴백**: (a) fetch JSON — {{POKEMON_JSON_URL}} · {{ABILITIES_JSON_URL}} · {{ITEMS_JSON_URL}} · {{MOVES_JSON_URL}} > (b) fetch HTML — {{POKEMON_REF_URL}} · {{MOVES_REF_URL}} · {{ABILITIES_REF_URL}} · {{ITEMS_REF_URL}} > (c) 아래 인라인 JSON. 전부 불가하면: **"{{DATA_BUNDLE_PAGE_URL}} 에서 'Champions 데이터 파일 다운로드' 버튼으로 데이터 파일을 받아 이 챗에 첨부해주세요."** 절대 사전 지식으로 메우지 마세요.`;
 
-   **첨부 파일이 존재하면 Step 1 로 넘어가지 말고 여기서 끝내세요.**
+// ── Detailed rules (embedded into champions-data JSON `_rules` field) ──
+// These ship inside the data bundle so the AI reads them alongside the
+// data. The prompt body keeps only the slim CORE RULE + a pointer to
+// this block, saving per-turn tokens while preserving strictness.
 
-   **Step 1 (첨부가 전혀 없을 때에만) — 기존 폴백 우선순위:** (a) fetched JSON > (b) fetched HTML 레퍼런스 > (c) 인라인 JSON > (d) 그 외 어떤 것도 금지.
-   원본 JSON (가장 정확 · 구조화):
-   - 포켓몬: {{POKEMON_JSON_URL}}  (186 species / 267 forms)
-   - 특성: {{ABILITIES_JSON_URL}}  (192종, \`isNewInChampions\` 플래그)
-   - 도구: {{ITEMS_JSON_URL}}  (117종)
-   - 기술: {{MOVES_JSON_URL}}  (481종, \`updatedInChampions\` 수치)
-   JSON fetch 가 안 되는 경우 (AI 도구가 JSON 을 못 다루거나 CORS 차단 등) 정적 HTML 버전으로 대체 가능:
-   - 포켓몬: {{POKEMON_REF_URL}}
-   - 기술: {{MOVES_REF_URL}}
-   - 특성: {{ABILITIES_REF_URL}}
-   - 도구: {{ITEMS_REF_URL}}
-2. **Step 1 의 (a)(b)(c) 가 모두 불가능하면**: 답변을 거부하지 말고, 우선 인라인 JSON 을 진실의 소스로 쓰세요. 인라인만으로 부족하면 유저에게 이렇게 요청하세요: **"{{DATA_BUNDLE_PAGE_URL}} 에 접속해 '[Champions 데이터 파일 다운로드]' 버튼으로 전체 데이터 파일을 받아 이 챗에 첨부해주세요. 그 파일을 보고 정확히 답해드리겠습니다."** 절대 사전 지식으로 때우지 마세요. (단, Step 0 의 첨부 파일이 이미 존재한다면 이 재-요청은 금지 — 그 파일을 바로 열어 쓰세요.)
-3. **Pokémon Champions 에 존재하는 전부**는 위 소스들에 담긴 항목입니다. **당신의 사전 지식은 이 상황에서 틀릴 확률이 매우 높습니다.** Champions 는 본편(Scarlet/Violet, Legends: Z-A 등)과 **다른 라인업**입니다. 본편엔 있지만 Champions 엔 없는 포켓몬/특성/도구/기술이 많으며, 본편과 수치가 다른 기술도 16개 있습니다. 위 소스에 없으면 Champions 에 없다고 간주하세요.
-   - **실제 부재 포켓몬 예시 (pokemon.json 에 없음)**: \`우라오스 (urshifu)\` · \`고릴타 (rillaboom)\` · \`보만다 (salamence)\` · \`메타그로스 (metagross)\` · \`철손 (iron-hands)\` · \`무쇠팔 (iron-valiant)\` · \`무쇠유령 (flutter-mane)\` · \`울부짖는달 (roaring-moon)\` · \`치갈기 (chi-yu)\` · \`땅을치는멧돼지 (great-tusk)\` · \`너트령 (ferrothorn)\`. 본편 VGC 에서 아무리 자주 쓰여도 Champions pokemon.json 에 slug 이 없으면 **절대 제안 금지**. (반대로 \`garchomp\`·\`dragapult\`·\`hydreigon\`·\`tyranitar\`·\`kingambit\`·\`tinkaton\` 등은 Champions 에 존재.)
-   - **실제 부재 도구 예시 (items.json 에 없음)**: \`assault-vest (돌격조끼)\` · \`life-orb (생명의구슬)\` · \`choice-band (구애머리띠)\` · \`choice-specs (구애안경)\` · \`rocky-helmet (울퉁불퉁멧)\` · \`heavy-duty-boots (두꺼운장화)\` · \`eviolite (진화의휘석)\`. (반대로 \`leftovers\`·\`focus-sash\`·\`choice-scarf\` 등은 Champions 에 존재.)
-4. **모든 추천 항목에 slug 병기 + 출처 명시**: \`아머까오 (slug: corviknight, 출처: pokemon.json)\` · \`지진 (slug: earthquake, 출처: moves.json)\` 형식. slug 가 없거나 틀리거나 출처 명시가 없으면 규칙 위반. **slug 을 지어내지 마세요** — 실제로 소스에서 찾아본 뒤에만 적으세요.
-5. 특성·기술을 특정 포켓몬에 붙일 때는 해당 폼의 \`abilities\` / \`moves\` 배열에 **실제로 존재해야** 합니다. (폼 외 특성·비배움 기술 제안 금지.)
-6. **불확실하면 제안하지 말고, 유저에게 데이터 파일을 요청하세요.** 어떤 포켓몬/기술/특성/도구가 Champions 에 있는지 **확신할 수 없다면** (= 위 소스에서 slug 로 직접 확인할 수 없다면):
-   - (a) 제공된 소스 안에서 **기능이 유사한 대체 항목**이 있으면 그것으로 답하세요 (예: 돌격조끼 대신 items.json 내 유사 효과 아이템).
-   - (b) 대체가 어렵거나 유저 질문의 상당 부분이 소스에 없어 보이면, **절대 사전 지식으로 메우지 말고** 이렇게 응답하세요: **"Champions 데이터에서 '{항목명}' 을(를) 찾지 못했습니다. {{DATA_BUNDLE_PAGE_URL}} 에서 'Champions 데이터 파일 다운로드' 버튼으로 전체 데이터 파일을 받아 이 챗에 첨부해주시면 정확히 답해드리겠습니다."**
-   **"본편에 있으니 Champions 에도 있을 것" / "유명한 포켓몬이니 있겠지" / "VGC 에서 강력하니 당연히 있을 것" 식 추측은 절대 금지.** 본편 시리즈 인기 · 메타 위상 · 팬덤 인지도는 Champions 포함 여부의 증거가 **아닙니다.**
-7. **자기 검증 (최종 단계 · 전송 직전)**: 답변에 등장한 모든 고유명사를 체크리스트로 검증하세요. 다음 두 단계는 **반드시** 수행:
-   - **(a) 포켓몬 검증 우선**: 언급한 모든 포켓몬 이름에 대해 그 slug 가 pokemon.json 에 **실제로 있는지** 확인. 폼을 언급했다면 \`forms[].name\` 도 확인. 하나라도 매칭 실패 = 해당 포켓몬 문단 전체 삭제 + 규칙 6 에 따라 데이터 파일 요청으로 대체.
-   - (b) 특성·도구·기술도 동일하게 검증 (abilities.json / items.json / moves.json 의 slug 와 매칭).
-   제거 후 답변이 완전히 비어버리면 **"Champions 데이터 내에서 조건을 만족하는 항목을 찾지 못했습니다. {{DATA_BUNDLE_PAGE_URL}} 에서 데이터 파일을 받아 첨부해주세요."** 로 답하세요. **확신 없는 이름을 하나라도 내보내면 전체 답변이 무효가 됩니다.**`;
+export const DETAILED_RULES_KO = `**데이터 제약 · 상세 규칙 (champions-data JSON 내장 규칙집)**
+
+이 \`_rules\` 는 첨부된 champions-data JSON 에 내장된 상세 규칙입니다. 프롬프트 본문의 CORE RULE 과 함께 반드시 지키세요. 검증 대상은 이 JSON 내부 배열의 \`slug\` 필드입니다.
+
+1. **검증 원칙 — 매 답변마다 직접 조회**
+   - 포켓몬: \`pokemon[]\` 의 \`slug\` 필드 (186종 / 267 폼)
+   - 특성: \`abilities[]\` 의 \`slug\` 필드 (192종; \`isNewInChampions: true\` 인 항목은 Champions 신규)
+   - 도구: \`items[]\` 의 \`slug\` 필드 (117종)
+   - 기술: \`moves[]\` 의 \`slug\` 필드 (481종; \`updatedInChampions\` 필드가 있는 16개는 본편과 수치 상이)
+   - 대화 요약본·이전 턴 기억에 의존하지 말고, 매번 이 파일을 다시 열어 조회하세요. 긴 대화에서는 클라이언트가 내용을 압축하며 값이 손실될 수 있습니다.
+
+2. **Champions 와 본편 라인업 차이**
+   - **부재 포켓몬 예시** (pokemon[] 에 없음): urshifu · rillaboom · salamence · metagross · iron-hands · iron-valiant · flutter-mane · roaring-moon · chi-yu · great-tusk · ferrothorn. 본편 VGC 메타여도 Champions 에 없음.
+   - **존재 포켓몬 예시**: garchomp · dragapult · hydreigon · tyranitar · kingambit · tinkaton.
+   - **부재 도구 예시** (items[] 에 없음): assault-vest · life-orb · choice-band · choice-specs · rocky-helmet · heavy-duty-boots · eviolite.
+   - **존재 도구 예시**: leftovers · focus-sash · choice-scarf.
+   - "본편에 있으니까" / "유명하니까" / "VGC 강자이니까" 식 추측 **절대 금지.** 본편 인기·메타 위상·팬덤 인지도는 Champions 포함 여부의 증거가 아닙니다.
+
+3. **특성/기술의 폼 매칭**: 특성이나 기술을 특정 포켓몬에 붙일 때 해당 폼의 \`forms[].abilities\` / \`forms[].moves\` 배열에 **실제로 존재**해야 합니다. 폼 외 특성 또는 비배움 기술 추천 금지.
+
+4. **불확실 시 대체 또는 재확인**
+   - (a) 기능적으로 유사한 대체가 이 JSON 내에 있으면 그것으로 답하세요 (예: 돌격조끼 부재 → items[] 내 유사 효과 도구).
+   - (b) 대체 불가능하거나 질문의 상당 부분이 JSON 으로 커버 안 되면, 사전 지식으로 메우지 말고: **"Champions 데이터에서 '{항목명}' 을(를) 찾지 못했습니다. 데이터 파일을 다시 확인해주세요."** 로 답변.
+
+5. **자기 검증 (답변 전송 직전 · 필수)**
+   - (a) **포켓몬 패스**: 답변 내 모든 포켓몬 이름의 slug 가 pokemon[] 에 있는지 확인. 폼 언급 시 \`forms[].name\` 도 확인. 하나라도 누락 = 해당 문단 전체 삭제 + 규칙 4 에 따라 재확인 요청.
+   - (b) **특성/도구/기술 패스**: abilities[] / items[] / moves[] 의 slug 와 동일 검증.
+   - 제거 후 답변이 완전히 비면: **"Champions 데이터 내에서 조건을 만족하는 항목을 찾지 못했습니다."** 로 응답.
+   - **확신 없는 이름을 하나라도 출력하면 전체 답변 무효.**`;
 
 // ── Strict pool constraint (en) ──────────────────────────────────
 
 export const STRICT_POOL_RULES_EN = `**Data constraints (strict · must follow · violations invalidate the answer)**
 
-⚠️ **CORE RULE — Pokémon only exist inside pokemon.json**
-Every Pokémon name you mention must be matchable to a \`slug\` in pokemon.json **right now**. No match = this Pokémon is not in Champions = **do not mention it**. Doesn't matter how meta it is in the main series, how strong it is in official VGC, or how famous it is. Do not substitute, do not invent a similar role filler, do not make up new forms. **If you can't verify the name, do not write a single character of it.**
+⚠️ **CORE RULE — Never mention Pokémon/abilities/items/moves outside the Champions data**
+Every proper noun you mention must be verifiable against a \`slug\` in the attached champions-data JSON. No match = not in Champions = **do not mention it**. Main-series meta, fame, or VGC strength are not evidence. **If you can't verify a name, don't write a single character of it.**
 
-1. **Source of truth — two-step check (Step 0 → Step 1)**
+**Required procedure:**
+1. Before writing anything, open the \`champions-data-*.json\` attached to this chat, read its top-level \`_rules\` field (detailed rules, missing-entry examples, self-verification checklist) in full, and follow everything there. Re-open the file every answer to look up slugs directly — don't rely on earlier-turn memory or conversation summaries.
+2. Every recommendation must carry slug + source: \`Corviknight (slug: corviknight, source: pokemon.json)\`. Don't invent slugs — only write one after locating it in the JSON.
+3. If you're unsure, don't recommend. Follow \`_rules\` guidance to pick a functionally similar alternative or ask the user to re-check the data.
 
-   **Step 0 (highest priority · do this before writing anything) — check whether a data file is already attached to this conversation.**
-   If a JSON attachment whose filename starts with \`champions-data\` (e.g. \`champions-data-en-20260422.json\`) is anywhere in this chat, use **that file and only that file** as the source of truth. The following are forbidden:
-   - Trying to fetch the URLs in Step 1 — the same (and newer) data is in the attachment already.
-   - Asking the user to re-attach the data file — it's already there.
-   - Reusing fetch results or summaries from earlier turns — long conversations get compressed by the client, so values may have been lost. Re-open the attachment every answer and look up slugs directly.
+**Fallback when no attachment is present**: (a) fetch JSON — {{POKEMON_JSON_URL}} · {{ABILITIES_JSON_URL}} · {{ITEMS_JSON_URL}} · {{MOVES_JSON_URL}} > (b) fetch HTML — {{POKEMON_REF_URL}} · {{MOVES_REF_URL}} · {{ABILITIES_REF_URL}} · {{ITEMS_REF_URL}} > (c) the inline JSON below. If none work: **"Please open {{DATA_BUNDLE_PAGE_URL}}, click 'Download Champions data file', and attach the file to this chat."** Never fill the gap from prior knowledge.`;
 
-   **If the attachment exists, stop here. Do not proceed to Step 1.**
+export const DETAILED_RULES_EN = `**Data constraints · Detailed rules (embedded in champions-data JSON)**
 
-   **Step 1 (only when there is no attachment at all) — existing fallback priority:** (a) fetched JSON > (b) fetched HTML reference > (c) inline JSON > (d) nothing else is allowed.
-   Original JSON (most accurate · structured):
-   - Pokémon: {{POKEMON_JSON_URL}}  (186 species / 267 forms)
-   - Abilities: {{ABILITIES_JSON_URL}}  (192 entries, \`isNewInChampions\` flag)
-   - Items: {{ITEMS_JSON_URL}}  (117 entries)
-   - Moves: {{MOVES_JSON_URL}}  (481 entries, \`updatedInChampions\` values)
-   If JSON fetch isn't possible (AI tool can't handle JSON, CORS blocks, etc.) the static HTML mirrors are fine substitutes:
-   - Pokémon: {{POKEMON_REF_URL}}
-   - Moves: {{MOVES_REF_URL}}
-   - Abilities: {{ABILITIES_REF_URL}}
-   - Items: {{ITEMS_REF_URL}}
-2. **If (a)(b)(c) in Step 1 are all impossible**: don't refuse to answer — use the inline JSON as the source of truth first. If the inline data isn't enough, ask the user exactly this: **"Please open {{DATA_BUNDLE_PAGE_URL}}, click the '[Download Champions data file]' button, and attach the file to this chat. I'll answer precisely once I can see it."** Never fill the gap from prior knowledge. (But if the Step 0 attachment is already present, this re-request is forbidden — just open that file.)
-3. **Everything that exists in Pokémon Champions** is contained in the sources above. **Your prior knowledge has a very high chance of being wrong here.** Champions has a **different lineup** from the main games (Scarlet/Violet, Legends: Z-A, etc.). Many Pokémon/abilities/items/moves from the main series are absent, and 16 moves have different numbers. If it's not in the sources above, treat it as not existing in Champions.
-   - **Pokémon genuinely missing from pokemon.json**: \`urshifu\`, \`rillaboom\`, \`salamence\`, \`metagross\`, \`iron-hands\`, \`iron-valiant\`, \`flutter-mane\`, \`roaring-moon\`, \`chi-yu\`, \`great-tusk\`, \`ferrothorn\`. No matter how common they are in main-series VGC, if a slug isn't in pokemon.json, **never recommend it**. (On the other hand, \`garchomp\`, \`dragapult\`, \`hydreigon\`, \`tyranitar\`, \`kingambit\`, \`tinkaton\` etc. do exist in Champions.)
-   - **Items genuinely missing from items.json**: \`assault-vest\`, \`life-orb\`, \`choice-band\`, \`choice-specs\`, \`rocky-helmet\`, \`heavy-duty-boots\`, \`eviolite\`. (On the other hand \`leftovers\`, \`focus-sash\`, \`choice-scarf\` etc. do exist in Champions.)
-4. **Every recommendation must carry a slug + source**: format like \`Corviknight (slug: corviknight, source: pokemon.json)\` · \`Earthquake (slug: earthquake, source: moves.json)\`. No slug, wrong slug, or missing source = violation. **Do not invent slugs** — only write a slug after you've actually located it in the source.
-5. When attaching an ability/move to a specific Pokémon, it must **actually exist** in that form's \`abilities\` / \`moves\` array. (No abilities outside the form, no moves the form can't learn.)
-6. **If you're not sure, don't recommend — ask the user for the data file instead.** If you **cannot confirm** a Pokémon/move/ability/item exists in Champions (= can't verify it directly by slug in the sources above):
-   - (a) If a **functionally similar alternative** exists inside the provided sources, use that (e.g. recommend a comparable item from items.json instead of assault-vest).
-   - (b) If no alternative works, or a meaningful portion of the user's request isn't covered by the sources, **do NOT fill the gap from prior knowledge**. Respond: **"I couldn't find '{item}' in the Champions data. Please go to {{DATA_BUNDLE_PAGE_URL}}, click the 'Download Champions data file' button, and attach the file here — I'll answer precisely once I can see it."**
-   **"It's in the main games so Champions probably has it" / "it's a popular Pokémon so it must be there" / "it's VGC-strong so of course it's there" are strictly forbidden.** Main-series popularity · meta status · fandom recognition are **not** evidence of Champions inclusion.
-7. **Self-verification (final step, before sending)**: walk a checklist over every proper noun in your answer. The following two passes are **mandatory**:
-   - **(a) Pokémon pass first**: for every Pokémon name in your draft, confirm the slug is **actually present** in pokemon.json. If you referenced a form, check \`forms[].name\` too. Any miss = delete the entire paragraph that relied on that Pokémon + substitute a data-file request per rule 6.
-   - (b) Repeat the same verification for abilities / items / moves against abilities.json / items.json / moves.json.
-   If nothing survives, reply: **"No matches found in the Champions data for this request. Please attach the full data file via {{DATA_BUNDLE_PAGE_URL}} so I can answer precisely."** **Leaking a single unverified name invalidates the whole response.**`;
+This \`_rules\` block is embedded inside the attached champions-data JSON. Obey it together with the CORE RULE in the prompt. Verification targets are the \`slug\` fields in the arrays of this JSON.
+
+1. **Verification principle — look it up every answer**
+   - Pokémon: \`slug\` in \`pokemon[]\` (186 species / 267 forms)
+   - Abilities: \`slug\` in \`abilities[]\` (192 entries; entries with \`isNewInChampions: true\` are Champions-exclusive)
+   - Items: \`slug\` in \`items[]\` (117 entries)
+   - Moves: \`slug\` in \`moves[]\` (481 entries; entries with an \`updatedInChampions\` field differ numerically from the main games)
+   - Never rely on conversation summaries or earlier-turn memory. Long chats get compressed by the client and values get lost — re-open the file each answer.
+
+2. **Champions vs main-series lineup differences**
+   - **Pokémon missing from pokemon[]** (examples): urshifu · rillaboom · salamence · metagross · iron-hands · iron-valiant · flutter-mane · roaring-moon · chi-yu · great-tusk · ferrothorn. Not in Champions regardless of main-series VGC relevance.
+   - **Pokémon present** (examples): garchomp · dragapult · hydreigon · tyranitar · kingambit · tinkaton.
+   - **Items missing from items[]** (examples): assault-vest · life-orb · choice-band · choice-specs · rocky-helmet · heavy-duty-boots · eviolite.
+   - **Items present** (examples): leftovers · focus-sash · choice-scarf.
+   - "It's in the main games" / "it's famous" / "it's VGC-strong" are **strictly not evidence** of Champions inclusion.
+
+3. **Form-level ability/move matching**: When attaching an ability or move to a specific Pokémon, it must actually exist in that form's \`forms[].abilities\` / \`forms[].moves\` array. No abilities outside the form; no moves the form can't learn.
+
+4. **When unsure — substitute or re-request**
+   - (a) If a functionally similar alternative exists in this JSON, use that (e.g. no assault-vest → pick a similar item from items[]).
+   - (b) If no alternative works or a large part of the request isn't covered, **don't fill the gap from prior knowledge**. Respond: **"I couldn't find '{item}' in the Champions data. Please re-check the data file."**
+
+5. **Self-verification (mandatory before sending)**
+   - (a) **Pokémon pass**: confirm every Pokémon name's slug is present in pokemon[]. If a form was mentioned, also check \`forms[].name\`. Any miss = delete the paragraph depending on that Pokémon + substitute a re-check request per rule 4.
+   - (b) **Ability/item/move pass**: same verification against abilities[] / items[] / moves[].
+   - If nothing survives: **"No matches found in the Champions data for this request."**
+   - **Leaking a single unverified name invalidates the entire answer.**`;
 
 // ── Strict pool constraint (ja) ──────────────────────────────────
 
 export const STRICT_POOL_RULES_JA = `**データ制約（厳守・違反した場合は回答無効）**
 
-⚠️ **最優先ルール（CORE RULE）— ポケモンはpokemon.jsonの中にのみ存在する**
-あなたが言及する**すべてのポケモン名**は、pokemon.jsonの\`slug\`と即座に一致しなければなりません。一致しない＝Championsに存在しないポケモン＝**言及禁止**。本編シリーズのメタであっても、公式VGCの強豪であっても、有名であっても関係ありません。代替名に変えないでください。類似役割のポケモンを作り出さないでください。新しいフォルムを想像しないでください。**確認できない名前は一文字も書かないでください。**
+⚠️ **CORE RULE — Championsデータ外のポケモン・特性・道具・技は言及禁止**
+言及するすべての固有名詞は、添付された champions-data JSON の \`slug\` で検証可能でなければなりません。一致しない＝Championsに存在しない＝**言及禁止**。本編（SV、Legends: Z-Aなど）の人気・メタ地位・VGC強豪は根拠になりません。**確認できない名前は一文字も書かないでください。**
 
-1. **真実の情報源 — 必ず2ステップで確認（Step 0 → Step 1）**
+**必須手順：**
+1. 回答を書く前に、このチャットに添付された \`champions-data-*.json\` を開き、最上部の \`_rules\` フィールド（詳細ルール・不在例・自己検証チェックリスト）を最後まで読み、すべて遵守してください。毎回答ごとにファイルを再度開いて slug を直接検索してください（会話要約・過去ターン記憶への依存禁止）。
+2. すべての推薦項目に slug + 出典を併記：\`アーマーガア (slug: corviknight, 出典: pokemon.json)\` の形式。slug を作り出さず、JSON で確認してから書いてください。
+3. 不確かな場合は提案しないでください。\`_rules\` の指針に従って類似代替品を探すか、ユーザーにデータの再確認を依頼してください。
 
-   **Step 0（最優先・回答を書く前に必ず実施）— このチャットに添付されたデータファイルがあるか確認してください。**
-   ファイル名が\`champions-data\`で始まるJSON添付ファイル（例：\`champions-data-ja-20260422.json\`）がこのチャットに存在する場合、**そのファイルのみ**を真実の情報源として使用してください。以下の行為は禁止：
-   - Step 1のURLを含むfetch試行 — 添付ファイルに同一・最新データがあります。
-   - ユーザーへのデータファイル再添付要求 — すでにアップロードされています。
-   - 過去のfetch結果や要約の再利用 — 毎回答変わらず添付ファイルを直接開いてslugを検索してください。
+**添付ファイルがない場合のフォールバック**：(a) fetch JSON — {{POKEMON_JSON_URL}} · {{ABILITIES_JSON_URL}} · {{ITEMS_JSON_URL}} · {{MOVES_JSON_URL}} > (b) fetch HTML — {{POKEMON_REF_URL}} · {{MOVES_REF_URL}} · {{ABILITIES_REF_URL}} · {{ITEMS_REF_URL}} > (c) 下記のインライン JSON。すべて不可能な場合：**「{{DATA_BUNDLE_PAGE_URL}} で『Championsデータファイルをダウンロード』ボタンからファイルを取得し、このチャットに添付してください。」** 事前知識で補うのは絶対禁止。`;
 
-   **添付ファイルが存在する場合は、Step 1に進まずここで終了してください。**
+export const DETAILED_RULES_JA = `**データ制約・詳細ルール（champions-data JSON 内蔵規則集）**
 
-   **Step 1（添付ファイルが一切ない場合のみ）— フォールバック優先順位：** (a) fetched JSON > (b) fetched HTML参照 > (c) インラインJSON > (d) それ以外は禁止。
-   原本JSON（最も正確・構造化）：
-   - ポケモン：{{POKEMON_JSON_URL}}  （186種 / 267フォルム）
-   - 特性：{{ABILITIES_JSON_URL}}  （192種、\`isNewInChampions\`フラグ）
-   - 道具：{{ITEMS_JSON_URL}}  （117種）
-   - 技：{{MOVES_JSON_URL}}  （481種、\`updatedInChampions\`数値）
-   JSONのfetchができない場合、静的HTML版へ切り替え可：
-   - ポケモン：{{POKEMON_REF_URL}}
-   - 技：{{MOVES_REF_URL}}
-   - 特性：{{ABILITIES_REF_URL}}
-   - 道具：{{ITEMS_REF_URL}}
-2. **Step 1の(a)(b)(c)がすべて不可能な場合**：回答を拒否せず、まずインラインJSONを情報源として使用してください。それでも不十分であればユーザーにこう依頼してください：**「{{DATA_BUNDLE_PAGE_URL}}にアクセスして「[Championsデータファイルをダウンロード]」ボタンからファイルを取得し、このチャットに添付してください。確認後に正確にお答えします。」** 絶対に事前知識で補わないでください。（Step 0の添付ファイルが存在する場合、この再要求は禁止 — そのファイルを直接開いて使用してください。）
-3. **Pokémon Championsに存在するすべて**は上記ソースに含まれています。**あなたの事前知識はこの状況で大いに間違っている可能性があります。** ChampionsはScarlet/Violet・Legends: Z-Aなどの本編とは**異なるラインナップ**です。本編には存在するがChampionsに存在しないポケモン/特性/道具/技が多く、数値が異なる技も16個あります。上記ソースにないものはChampionsに存在しないとみなしてください。
-   - **pokemon.jsonに存在しないポケモンの実例**：\`ウーラオス (urshifu)\`・\`ゴリランダー (rillaboom)\`・\`ボーマンダ (salamence)\`・\`メタグロス (metagross)\`・\`テツノコブシ (iron-hands)\`・\`テツノブジン (iron-valiant)\`・\`flutter-mane\`・\`roaring-moon\`・\`chi-yu\`・\`great-tusk\`・\`ナットレイ (ferrothorn)\`。本編VGCでどれほど頻繁に使われていても、pokemon.jsonにslugがなければ**絶対に提案禁止**。（反対に\`garchomp\`・\`dragapult\`・\`hydreigon\`・\`tyranitar\`・\`kingambit\`・\`tinkaton\`などはChampionsに存在。）
-   - **items.jsonに存在しない道具の実例**：\`assault-vest（とつげきチョッキ）\`・\`life-orb（いのちのたま）\`・\`choice-band（こだわりハチマキ）\`・\`choice-specs（こだわりメガネ）\`・\`rocky-helmet（ゴツゴツメット）\`・\`heavy-duty-boots（あつぞこブーツ）\`・\`eviolite（しんかのきせき）\`。（反対に\`leftovers\`・\`focus-sash\`・\`choice-scarf\`などはChampionsに存在。）
-4. **すべての提案項目にslug記載＋出典明示**：\`コライドン（slug: koraidon、出典: pokemon.json）\`・\`じしん（slug: earthquake、出典: moves.json）\`の形式。slugなし・誤ったslug・出典なしはルール違反。**slugを作り出さないでください** — 実際にソースで確認してから記載してください。
-5. 特性・技を特定のポケモンに割り当てる場合、そのフォルムの\`abilities\` / \`moves\`配列に**実際に存在しなければなりません**。（フォルム外の特性・習得不可の技の提案禁止。）
-6. **不確かな場合は提案せず、ユーザーにデータファイルを要求してください。** あるポケモン/技/特性/道具がChampionsに存在するか**確信できない場合**（＝上記ソースでslugを直接確認できない場合）：
-   - (a) 提供されたソース内に**機能的に類似した代替品**があれば、それで答えてください。
-   - (b) 代替が困難か、ユーザーの質問の大部分がソースにない場合は、**絶対に事前知識で補わず**このように返答してください：**「Championsデータで「{項目名}」が見つかりませんでした。{{DATA_BUNDLE_PAGE_URL}}で「Championsデータファイルをダウンロード」ボタンからファイルを取得して添付してください。確認後に正確にお答えします。」**
-   **「本編にあるからChampionsにもあるはず」/「有名なポケモンだから当然いるはず」/「VGCで強いから当然いるはず」などの推測は絶対禁止。** 本編人気・メタ地位・ファン認知度はChampionsへの収録の根拠に**なりません。**
-7. **自己検証（最終ステップ・送信直前）**：回答中のすべての固有名詞をチェックリストで確認してください。以下の2ステップは**必須**：
-   - **(a) ポケモン確認を優先**：挙げたすべてのポケモン名についてslugがpokemon.jsonに**実際に存在するか**確認。フォルムを言及した場合は\`forms[].name\`も確認。一つでも不一致＝そのポケモンを含む段落全体を削除＋ルール6に従いデータファイル要求に置き換え。
-   - (b) 特性・道具・技も同様に検証（abilities.json / items.json / moves.jsonのslugと一致するか）。
-   削除後に回答が完全に空になった場合は**「このリクエストに対してChampionsデータ内で条件を満たす項目が見つかりませんでした。{{DATA_BUNDLE_PAGE_URL}}からデータファイルを添付してください。」**と答えてください。**確認できない名前を一つでも出力すると、回答全体が無効になります。**`;
+この \`_rules\` は添付された champions-data JSON に内蔵された詳細ルールです。プロンプト本文の CORE RULE と合わせて必ず遵守してください。検証対象はこの JSON 内部配列の \`slug\` フィールドです。
+
+1. **検証原則 — 毎回答ごとに直接検索**
+   - ポケモン：\`pokemon[]\` の \`slug\` フィールド（186種 / 267フォルム）
+   - 特性：\`abilities[]\` の \`slug\` フィールド（192種、\`isNewInChampions: true\` の項目は Champions 新規）
+   - 道具：\`items[]\` の \`slug\` フィールド（117種）
+   - 技：\`moves[]\` の \`slug\` フィールド（481種、\`updatedInChampions\` フィールドがある16個は本編と数値相異）
+   - 会話要約・過去ターン記憶に依存せず、毎回このファイルを再度開いて検索してください。長い会話ではクライアントが内容を圧縮し、値が失われる可能性があります。
+
+2. **Champions と本編のラインナップ差**
+   - **不在ポケモンの例**（pokemon[] にない）：urshifu · rillaboom · salamence · metagross · iron-hands · iron-valiant · flutter-mane · roaring-moon · chi-yu · great-tusk · ferrothorn。本編 VGC メタでも Champions にはいません。
+   - **存在ポケモンの例**：garchomp · dragapult · hydreigon · tyranitar · kingambit · tinkaton。
+   - **不在道具の例**（items[] にない）：assault-vest · life-orb · choice-band · choice-specs · rocky-helmet · heavy-duty-boots · eviolite。
+   - **存在道具の例**：leftovers · focus-sash · choice-scarf。
+   - 「本編にあるから」/「有名だから」/「VGCで強いから」という推測は**絶対禁止**。本編人気・メタ地位・ファン認知度は Champions 収録の根拠になりません。
+
+3. **特性・技のフォルム照合**：特性や技を特定のポケモンに割り当てる場合、そのフォルムの \`forms[].abilities\` / \`forms[].moves\` 配列に**実際に存在**していなければなりません。フォルム外の特性や習得不可の技の推薦禁止。
+
+4. **不確かな場合は代替または再確認**
+   - (a) 機能的に類似した代替品がこの JSON 内にあれば、それで回答（例：とつげきチョッキ不在 → items[] 内の類似効果の道具）。
+   - (b) 代替不可能、または質問の大部分が JSON でカバーされていない場合、事前知識で補わず：**「Championsデータで『{項目名}』が見つかりませんでした。データファイルを再確認してください。」** と回答。
+
+5. **自己検証（送信直前・必須）**
+   - (a) **ポケモンパス**：回答中のすべてのポケモン名の slug が pokemon[] にあるか確認。フォルム言及時は \`forms[].name\` も確認。一つでも不一致 = そのポケモンに依存する段落全体を削除 + ルール4に従い再確認要求に置き換え。
+   - (b) **特性・道具・技パス**：abilities[] / items[] / moves[] の slug と同様に検証。
+   - 削除後に回答が完全に空になった場合：**「Championsデータ内で条件を満たす項目が見つかりませんでした。」** と回答。
+   - **確認できない名前を一つでも出力すると、回答全体が無効。**`;
 
 // ── Strict pool constraint (zh) ──────────────────────────────────
 
 export const STRICT_POOL_RULES_ZH = `**数据约束（严格遵守·违反则回答无效）**
 
-⚠️ **最高优先规则（CORE RULE）— 宝可梦只存在于pokemon.json中**
-你提及的**所有宝可梦名称**必须能立即匹配到pokemon.json中的\`slug\`。无法匹配＝该宝可梦在Champions中不存在＝**禁止提及**。无论它在本传系列对战中多受欢迎、在官方VGC中多强势、或多知名，都无一例外。不要用替代名称，不要创造功能类似的角色，不要凭空想象新形态。**无法确认的名称，一个字也不要写。**
+⚠️ **CORE RULE — 禁止提及 Champions 数据之外的宝可梦·特性·道具·招式**
+你提及的所有专有名词必须能对照附件 champions-data JSON 中的 \`slug\` 完成验证。无法匹配 = 不在 Champions 中 = **禁止提及**。本传（朱紫、Legends: Z-A 等）的人气、对战地位、VGC 强势均不是依据。**无法确认的名称，一个字也不要写。**
 
-1. **真实来源 — 必须进行两步确认（Step 0 → Step 1）**
+**必要流程：**
+1. 撰写回答前，打开本对话中附加的 \`champions-data-*.json\`，完整阅读并遵守顶层 \`_rules\` 字段（详细规则·不在示例·自我核验清单）。每次回答都需重新打开该文件直接查询 slug（禁止依赖会话摘要或历史对话记忆）。
+2. 所有推荐项目须附 slug + 出处：\`铁甲鸦 (slug: corviknight, 出处: pokemon.json)\` 格式。不要凭空编造 slug，必须在 JSON 中找到后才写。
+3. 不确定时不要推荐。按 \`_rules\` 的指引寻找功能类似的替代项，或请用户重新核对数据。
 
-   **Step 0（最高优先·回答前必须先执行）— 确认本对话中是否已有附件数据文件。**
-   若聊天记录中存在文件名以\`champions-data\`开头的JSON附件（例：\`champions-data-zh-20260422.json\`），请**仅以该文件**作为真实来源。以下行为禁止：
-   - 尝试fetch任何URL（包括Step 1中的URL）— 附件已包含相同的最新数据。
-   - 要求用户重新上传数据文件 — 文件已在对话中。
-   - 复用历史fetch结果或摘要 — 长对话可能被压缩导致数据丢失，每次回答都应直接打开附件查询slug。
+**无附件时的回退**：(a) fetch JSON — {{POKEMON_JSON_URL}} · {{ABILITIES_JSON_URL}} · {{ITEMS_JSON_URL}} · {{MOVES_JSON_URL}} > (b) fetch HTML — {{POKEMON_REF_URL}} · {{MOVES_REF_URL}} · {{ABILITIES_REF_URL}} · {{ITEMS_REF_URL}} > (c) 下方内联 JSON。若全部不可行：**「请前往 {{DATA_BUNDLE_PAGE_URL}}，点击『下载 Champions 数据文件』按钮获取文件并附加到本对话。」** 绝对禁止使用已有知识填补空缺。`;
 
-   **若附件存在，请在此止步，不要进入Step 1。**
+export const DETAILED_RULES_ZH = `**数据约束·详细规则（champions-data JSON 内置规则集）**
 
-   **Step 1（仅在完全没有附件时）— 现有回退优先级：** (a) fetched JSON > (b) fetched HTML参考页 > (c) 内联JSON > (d) 禁止其他一切。
-   原始JSON（最准确·结构化）：
-   - 宝可梦：{{POKEMON_JSON_URL}}  （186种 / 267形态）
-   - 特性：{{ABILITIES_JSON_URL}}  （192种，\`isNewInChampions\`标志）
-   - 道具：{{ITEMS_JSON_URL}}  （117种）
-   - 招式：{{MOVES_JSON_URL}}  （481种，\`updatedInChampions\`数值）
-   若无法fetch JSON，可改用静态HTML版：
-   - 宝可梦：{{POKEMON_REF_URL}}
-   - 招式：{{MOVES_REF_URL}}
-   - 特性：{{ABILITIES_REF_URL}}
-   - 道具：{{ITEMS_REF_URL}}
-2. **若Step 1的(a)(b)(c)均不可行**：不要拒绝回答，先以内联JSON作为来源。若仍不够，请这样告知用户：**「请前往{{DATA_BUNDLE_PAGE_URL}}，点击「[下载Champions数据文件]」按钮获取数据文件并附加到本对话。我将在查看文件后精确作答。」** 绝对不要用已有知识填补。（若Step 0的附件已存在，禁止再次请求 — 直接打开并使用该文件。）
-3. **Pokémon Champions中存在的所有内容**均收录于上述来源。**你的已有知识在这里极有可能是错误的。** Champions与本传系列（Scarlet/Violet、Legends: Z-A等）拥有**不同的阵容**。许多本传中存在的宝可梦/特性/道具/招式在Champions中并不存在，且有16个招式的数值已变更。上述来源中没有的，请视为不存在于Champions。
-   - **pokemon.json中确实不存在的宝可梦示例**：\`武道熊师 (urshifu)\`·\`轰擂金刚猩 (rillaboom)\`·\`暴飞龙 (salamence)\`·\`巨金怪 (metagross)\`·\`铁臂膀 (iron-hands)\`·\`铁武者 (iron-valiant)\`·\`flutter-mane\`·\`roaring-moon\`·\`chi-yu\`·\`great-tusk\`·\`坚果哑铃 (ferrothorn)\`。无论它们在本传VGC中多常见，pokemon.json中没有slug就**绝对禁止推荐**。（反之，\`garchomp\`·\`dragapult\`·\`hydreigon\`·\`tyranitar\`·\`kingambit\`·\`tinkaton\`等在Champions中存在。）
-   - **items.json中确实不存在的道具示例**：\`assault-vest（突击背心）\`·\`life-orb（生命宝珠）\`·\`choice-band（讲究头带）\`·\`choice-specs（讲究眼镜）\`·\`rocky-helmet（凸凸头盔）\`·\`heavy-duty-boots（厚底靴）\`·\`eviolite（进化奇石）\`。（反之\`leftovers\`·\`focus-sash\`·\`choice-scarf\`等在Champions中存在。）
-4. **所有推荐项目须附slug＋出处**：格式如\`铁甲鸦（slug: corviknight，出处: pokemon.json）\`·\`地震（slug: earthquake，出处: moves.json）\`。无slug、错误slug或缺少出处均属违规。**不要凭空创造slug** — 仅在实际从来源中找到后才写。
-5. 为特定宝可梦分配特性·招式时，其形态的\`abilities\` / \`moves\`数组中**必须实际存在**该内容。（禁止推荐形态外特性·不可习得招式。）
-6. **不确定时不要推荐，而是要求用户提供数据文件。** 若**无法确认**某宝可梦/招式/特性/道具是否存在于Champions（＝无法在上述来源中通过slug直接验证）：
-   - (a) 若提供的来源中有**功能类似的替代品**，请以此作答。
-   - (b) 若难以替代，或用户问题的大部分内容不在来源中，**绝对不要用已有知识填补**，请这样回应：**「在Champions数据中未找到「{项目名}」。请前往{{DATA_BUNDLE_PAGE_URL}}点击「下载Champions数据文件」按钮获取文件并附加到本对话，我将精确作答。」**
-   **「本传有所以Champions应该也有」/「知名宝可梦应该在里面」/「VGC强势所以当然有」等推测绝对禁止。** 本传人气·对战地位·粉丝知名度**不是** Champions收录的依据。
-7. **自我核验（最终步骤·发送前）**：对回答中的所有专有名词进行清单检查。以下两步**必须执行**：
-   - **(a) 优先核验宝可梦**：对提及的每个宝可梦名称，确认其slug**实际存在**于pokemon.json。若提及了形态，还需确认\`forms[].name\`。任何不匹配＝删除依赖该宝可梦的整段内容＋按规则6替换为数据文件请求。
-   - (b) 同样核验特性·道具·招式（与abilities.json / items.json / moves.json中的slug匹配）。
-   若删除后回答完全为空，请回答：**「在Champions数据中未找到满足此请求条件的项目。请通过{{DATA_BUNDLE_PAGE_URL}}附加完整数据文件以便精确作答。」** **输出任何一个无法确认的名称都将导致整个回答无效。**`;
+本 \`_rules\` 为附件 champions-data JSON 内置的详细规则，必须与提示本文的 CORE RULE 一同遵守。验证对象为本 JSON 内各数组的 \`slug\` 字段。
+
+1. **验证原则 — 每次回答都直接查询**
+   - 宝可梦：\`pokemon[]\` 的 \`slug\` 字段（186种 / 267形态）
+   - 特性：\`abilities[]\` 的 \`slug\` 字段（192种；带 \`isNewInChampions: true\` 的为 Champions 新增）
+   - 道具：\`items[]\` 的 \`slug\` 字段（117种）
+   - 招式：\`moves[]\` 的 \`slug\` 字段（481种；含 \`updatedInChampions\` 字段的16个与本传数值相异）
+   - 不要依赖会话摘要或历史对话记忆，每次都重新打开此文件查询。长对话可能被客户端压缩导致数据丢失。
+
+2. **Champions 与本传阵容差异**
+   - **不在宝可梦示例**（pokemon[] 中没有）：urshifu · rillaboom · salamence · metagross · iron-hands · iron-valiant · flutter-mane · roaring-moon · chi-yu · great-tusk · ferrothorn。本传 VGC 常用与否不影响，Champions 中没有。
+   - **存在宝可梦示例**：garchomp · dragapult · hydreigon · tyranitar · kingambit · tinkaton。
+   - **不在道具示例**（items[] 中没有）：assault-vest · life-orb · choice-band · choice-specs · rocky-helmet · heavy-duty-boots · eviolite。
+   - **存在道具示例**：leftovers · focus-sash · choice-scarf。
+   - 「本传有所以 Champions 也有」/「知名所以在」/「VGC 强所以当然在」等推测**绝对禁止**。本传人气·对战地位·粉丝认知度**不是** Champions 收录依据。
+
+3. **特性/招式的形态匹配**：将特性或招式配给特定宝可梦时，该形态的 \`forms[].abilities\` / \`forms[].moves\` 数组中**必须实际存在**。禁止推荐形态外特性或不可习得招式。
+
+4. **不确定时的替代或重新核对**
+   - (a) 若本 JSON 中有功能类似的替代项，使用该替代项作答（例如突击背心不在 → 从 items[] 中选择效果类似的道具）。
+   - (b) 若难以替代或问题大部分内容不在 JSON 中，不得以已有知识填补，请回应：**「Champions 数据中未找到『{项目名}』。请重新核对数据文件。」**
+
+5. **自我核验（发送前·必须）**
+   - (a) **宝可梦核验**：回答中每个宝可梦名称的 slug 是否存在于 pokemon[]。若提及形态，还需核对 \`forms[].name\`。任一不符 = 删除依赖该宝可梦的整段 + 按规则4替换为重新核对请求。
+   - (b) **特性/道具/招式核验**：对照 abilities[] / items[] / moves[] 的 slug 做同样验证。
+   - 若删除后回答完全为空：**「Champions 数据中未找到满足此请求的项目。」**
+   - **只要输出一个无法确认的名称，整个回答即无效。**`;
 
 // ── Templates ────────────────────────────────────────────────────
 
