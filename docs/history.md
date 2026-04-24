@@ -8,6 +8,8 @@
 
 ## 2026-04-24
 
+- `DETAILED_RULES_{KO,EN,JA,ZH}` 에 Champions 배틀 룰 섹션 5 신규 삽입 (자기 검증을 6으로 이동) — AI 가 파티 분석·추천 시 "6마리 전원 동시 출전" 으로 잘못 가정하는 문제 차단. 포함 룰: ① **싱글 = Pick 3 / 더블 = Pick 4** 선출 포맷 명시 (모드에 따라 출전 수 분기). ② **싱글·더블 공통 메가 진화 1배틀 1회** 제한 — 출전 슬롯 중 최대 1마리만 메가 진화 가능, 파티에 메가 2마리 이상 넣으면 비효율. ③ **아이템 클로즈** — held item 은 파티 내 unique. ④ "선출 vs 상대" 관점으로 분석해야 함을 명시. 자기 검증 체크리스트에도 (c) **배틀 룰 패스** 추가 — 메가 2마리 이상 또는 도구 중복이면 해당 부분 수정. 4 언어 모두 동일 구조로 반영. 프롬프트 본문의 "싱글/더블" 모드 지정을 참조하도록 명시적으로 지시.
+
 - 파티 JSON 에 현재 언어 이름 복원 + 답변 언어 강제 — 이전 식별자-only 슬림화가 역효과였음. 한국어 질문에도 AI 가 `rock-slide` · `focus-sash` 같은 영어 slug 를 그대로 출력하는 문제. `web/assets/prompts.js` `extractSlot()` 를 hybrid 포맷으로 재작성: 최상위 포켓몬 + `ability`/`item` 객체 + `moves[]` 각각에 `slug` + **현재 언어 name 필드**(`nameKo`/`nameEn`/`nameJa`/`nameZh`) 페어. baseStats·gameText·effect·per-move numerics 는 여전히 champions-data JSON 에서 조회하라는 방침 유지 — 파티 6마리 기준 ~1.5KB → ~2.5KB (이전 풀 버전 ~8KB 대비 여전히 슬림). `web/assets/prompts-templates.js` `STRICT_POOL_RULES_{KO,EN,JA,ZH}` 에 "답변의 모든 고유명사는 [한국어/English/日本語/中文] 이름을 먼저 쓰고 괄호 안에 slug+출처 병기" 문구 추가 — AI 에 언어 포맷을 명시적으로 강제.
 
 - 파티 빌더 아이템 클로즈 (Item Clause) 적용 — 한 파티의 같은 도구를 여러 슬롯에 중복 할당할 수 있던 문제. VGC/Champions 룰상 한 파티당 각 held 아이템은 unique 해야 함. `web/assets/party.js` `makeItemSelect()` 에 `takenByOther` Map 구성 (다른 슬롯이 보유 중인 item slug → 1-based slot index) 후 각 option 렌더 시 `disabled` + "(슬롯 N 보유)" 배지. 현재 슬롯 자신의 아이템은 takenByOther 에 포함되지 않으므로 선택 상태 유지. 무도구 옵션은 중복 가능. `web/assets/i18n.js` `party.itemTakenBy` 4 언어 신규 키 추가 (`{n}` 플레이스홀더).

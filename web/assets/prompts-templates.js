@@ -55,9 +55,17 @@ export const DETAILED_RULES_KO = `**데이터 제약 · 상세 규칙 (champions
    - (a) 기능적으로 유사한 대체가 이 JSON 내에 있으면 그것으로 답하세요 (예: 돌격조끼 부재 → items[] 내 유사 효과 도구).
    - (b) 대체 불가능하거나 질문의 상당 부분이 JSON 으로 커버 안 되면, 사전 지식으로 메우지 말고: **"Champions 데이터에서 '{항목명}' 을(를) 찾지 못했습니다. 데이터 파일을 다시 확인해주세요."** 로 답변.
 
-5. **자기 검증 (답변 전송 직전 · 필수)**
+5. **Champions 배틀 룰 (모든 파티 추천·분석 시 필수 반영)**
+   - 파티는 6마리로 구성하되, 모드에 따라 매 배틀 출전 수가 다릅니다: **싱글 배틀 = Pick 3 (3마리 선출), 더블 배틀 = Pick 4 (4마리 선출)**.
+   - **싱글·더블 모두 한 배틀당 메가 진화는 1회만 가능** — 즉 출전 슬롯(싱글 3 / 더블 4) 중 최대 1마리만 메가 진화.
+   - 메가 폼은 스탯·타입 상승으로 밸류가 높아 **1마리 채택을 권장**하지만, 파티에 메가 폼을 2마리 이상 넣으면 동시에 진화할 수 없어 효율이 떨어집니다.
+   - 같은 **보유 도구(held item)는 파티 내 1마리만** 장착할 수 있습니다 (아이템 클로즈). 추천 시 파티 내 다른 슬롯이 이미 같은 도구를 쓰고 있지 않은지 확인하세요.
+   - 파티 분석·교체·리드 추천 시 "출전하는 선출(싱글 3 / 더블 4)이 어떤 상대에 강한가" 를 염두에 두세요. 6마리 전원이 동시에 나가는 관점은 오답입니다. 프롬프트 본문이 "싱글" / "더블" 중 어느 모드를 지정했는지 확인하고 그 룰에 맞춰 답하세요.
+
+6. **자기 검증 (답변 전송 직전 · 필수)**
    - (a) **포켓몬 패스**: 답변 내 모든 포켓몬 이름의 slug 가 pokemon[] 에 있는지 확인. 폼 언급 시 \`forms[].name\` 도 확인. 하나라도 누락 = 해당 문단 전체 삭제 + 규칙 4 에 따라 재확인 요청.
    - (b) **특성/도구/기술 패스**: abilities[] / items[] / moves[] 의 slug 와 동일 검증.
+   - (c) **배틀 룰 패스**: 추천 파티에 메가 폼이 2마리 이상 포함돼 있거나 같은 held 아이템이 중복되면 해당 부분을 수정.
    - 제거 후 답변이 완전히 비면: **"Champions 데이터 내에서 조건을 만족하는 항목을 찾지 못했습니다."** 로 응답.
    - **확신 없는 이름을 하나라도 출력하면 전체 답변 무효.**`;
 
@@ -89,9 +97,17 @@ This \`_rules\` block is embedded inside the attached champions-data JSON. Obey 
    - (a) If a functionally similar alternative exists in this JSON, use that (e.g. no assault-vest → pick a similar item from items[]).
    - (b) If no alternative works or a large part of the request isn't covered, **don't fill the gap from prior knowledge**. Respond: **"I couldn't find '{item}' in the Champions data. Please re-check the data file."**
 
-5. **Self-verification (mandatory before sending)**
+5. **Champions battle rules (must shape every party analysis / recommendation)**
+   - A party has 6 Pokémon but only a subset enters each battle: **Singles = Pick 3, Doubles = Pick 4**.
+   - **At most one Mega Evolution per battle in both Singles and Doubles** — so at most one of the picks (3 in Singles / 4 in Doubles) can Mega Evolve.
+   - Mega forms are strong in stats and typing, so **including one Mega is generally recommended**, but stacking two or more Megas in the same party is inefficient because they can't evolve simultaneously.
+   - Each **held item is unique within the party** (item clause). Before suggesting an item, check that no other party slot already holds it.
+   - Think in terms of "which picks (3 in Singles / 4 in Doubles) of the 6 will be chosen against which opponent", not "all 6 on the field at once". Check whether the prompt specifies Singles or Doubles and answer according to that mode's rules.
+
+6. **Self-verification (mandatory before sending)**
    - (a) **Pokémon pass**: confirm every Pokémon name's slug is present in pokemon[]. If a form was mentioned, also check \`forms[].name\`. Any miss = delete the paragraph depending on that Pokémon + substitute a re-check request per rule 4.
    - (b) **Ability/item/move pass**: same verification against abilities[] / items[] / moves[].
+   - (c) **Battle-rule pass**: if a suggested party contains two or more Mega forms, or two slots share the same held item, fix that section.
    - If nothing survives: **"No matches found in the Champions data for this request."**
    - **Leaking a single unverified name invalidates the entire answer.**`;
 
@@ -123,9 +139,17 @@ export const DETAILED_RULES_JA = `**データ制約・詳細ルール（champion
    - (a) 機能的に類似した代替品がこの JSON 内にあれば、それで回答（例：とつげきチョッキ不在 → items[] 内の類似効果の道具）。
    - (b) 代替不可能、または質問の大部分が JSON でカバーされていない場合、事前知識で補わず：**「Championsデータで『{項目名}』が見つかりませんでした。データファイルを再確認してください。」** と回答。
 
-5. **自己検証（送信直前・必須）**
+5. **Champions バトルルール（すべての推薦・分析に必ず反映）**
+   - パーティは6体で構成しますが、モードによって各バトルの出場数が異なります：**シングル = Pick 3（3体選出）、ダブル = Pick 4（4体選出）**。
+   - **シングル・ダブルともに1バトルにつきメガ進化は1回のみ** — 選出した3体（シングル）/ 4体（ダブル）のうち最大1体だけメガ進化可能。
+   - メガフォルムはステータス・タイプで強力なため **1体の採用を推奨** しますが、パーティに2体以上入れても同時進化できないため効率が落ちます。
+   - **持ち物（held item）はパーティ内で1体のみ**装着可能（アイテムクロース）。推薦時に他スロットが既に同じ道具を持っていないか確認してください。
+   - パーティ分析・交代推薦時は「6体のうちどの選出（シングル3 / ダブル4）を出すか」という観点で考えてください。6体全員が同時出場する前提は誤りです。プロンプト本文が「シングル」／「ダブル」どちらを指定しているか確認し、そのモードのルールに沿って回答してください。
+
+6. **自己検証（送信直前・必須）**
    - (a) **ポケモンパス**：回答中のすべてのポケモン名の slug が pokemon[] にあるか確認。フォルム言及時は \`forms[].name\` も確認。一つでも不一致 = そのポケモンに依存する段落全体を削除 + ルール4に従い再確認要求に置き換え。
    - (b) **特性・道具・技パス**：abilities[] / items[] / moves[] の slug と同様に検証。
+   - (c) **バトルルールパス**：推薦パーティにメガフォルムが2体以上含まれる、または同じ持ち物が2スロットで重複していれば該当箇所を修正。
    - 削除後に回答が完全に空になった場合：**「Championsデータ内で条件を満たす項目が見つかりませんでした。」** と回答。
    - **確認できない名前を一つでも出力すると、回答全体が無効。**`;
 
@@ -157,9 +181,17 @@ export const DETAILED_RULES_ZH = `**数据约束·详细规则（champions-data 
    - (a) 若本 JSON 中有功能类似的替代项，使用该替代项作答（例如突击背心不在 → 从 items[] 中选择效果类似的道具）。
    - (b) 若难以替代或问题大部分内容不在 JSON 中，不得以已有知识填补，请回应：**「Champions 数据中未找到『{项目名}』。请重新核对数据文件。」**
 
-5. **自我核验（发送前·必须）**
+5. **Champions 对战规则（所有推荐·分析必须考虑）**
+   - 队伍由6只宝可梦组成，但每场对战派出的数量因模式而异：**单打 = 选3只 (Pick 3)，双打 = 选4只 (Pick 4)**。
+   - **单打·双打每场对战均仅可超级进化1次** — 即派出的3只（单打）或4只（双打）中最多1只可以超级进化。
+   - 超级进化形态在能力值·属性上较强，**推荐选择1只超级进化**，但在队伍中放入2只以上时无法同时进化，效率降低。
+   - **同一携带道具（held item）在一个队伍中只能由1只持有**（道具条款）。推荐时请确认其他槽位是否已持有同一道具。
+   - 队伍分析·替换推荐时，请以「6只中派出哪几只（单打3只 / 双打4只）应对哪种对手」的视角思考，而非「6只全部同时在场」。请确认提示词指定的是单打还是双打，并按该模式的规则作答。
+
+6. **自我核验（发送前·必须）**
    - (a) **宝可梦核验**：回答中每个宝可梦名称的 slug 是否存在于 pokemon[]。若提及形态，还需核对 \`forms[].name\`。任一不符 = 删除依赖该宝可梦的整段 + 按规则4替换为重新核对请求。
    - (b) **特性/道具/招式核验**：对照 abilities[] / items[] / moves[] 的 slug 做同样验证。
+   - (c) **对战规则核验**：若推荐队伍中包含2只以上超级进化形态，或2个槽位共享同一携带道具，请修正该部分。
    - 若删除后回答完全为空：**「Champions 数据中未找到满足此请求的项目。」**
    - **只要输出一个无法确认的名称，整个回答即无效。**`;
 
