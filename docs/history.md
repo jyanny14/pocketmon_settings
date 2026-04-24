@@ -6,6 +6,10 @@
 
 ---
 
+## 2026-04-24
+
+- `prompts.html` 데이터 번들 UX 전면 강조 — 무료 ChatGPT/Gemini 가 URL fetch 를 못해 AI 가 "데이터 알려달라"고 되묻는 루프를 차단하기 위해, "첨부는 fallback" 톤에서 **"첨부가 기본 권장 1단계"** 톤으로 재구성. ① 데이터 번들 섹션을 파티 요약 **위**로 이동 (프롬프트 카드 바로 직전 → 스텝퍼 직후) — 유저가 프롬프트 카드에 도달하기 전 필수 단계로 인식하게. ② CSS 강조: `.prompts-data-bundle` 을 `border: 2px solid var(--accent) + box-shadow` 로 시각적 팝업. ③ 섹션 제목 톤 변경: "📦 AI 가 데이터 fetch 를 못 하는 경우(조건부)" → "📎 먼저 하세요 — Champions 데이터 파일을 AI 챗에 첨부(필수 권장)". 신규 lede 문단 추가: 무료 AI 는 링크를 못 읽는 경우가 많다는 사실 명시. ④ 스텝퍼 step3/4 재정의: "질문 선택 / 복사·붙여넣기" → "데이터 첨부 / 질문 선택·복사" — 현재 단계 하이라이트가 "첨부" 로 지정돼 건너뛰기 어렵게. ⑤ `prompts.lead` 페이지 리드 문구 갱신: fetch 폴백 비교 설명 제거, "정확한 답 원하면 파일 먼저 첨부" 로 단일 메시지. 모든 문구 변경을 ko/en/ja/zh 4 언어에 동등 반영 (신규 키 `prompts.dataBundleLede` 추가). champions 풀을 프롬프트 본문에 인라인하는 대안은 검토 후 기각 — 무료 GPT 32K 토큰 한도 + 매 질문마다 토큰 재소비 문제로 첨부가 더 경제적이라는 결론. `web/prompts.html`, `web/assets/i18n.js` 수정.
+
 ## 2026-04-23
 
 - i18n Phase 3 (T-i18n-6) — AI 프롬프트 템플릿 ja/zh 바디 번역 완료. `web/assets/prompts-templates.js` 에 `SHARED_DISCLAIMER_JA/ZH`, `STRICT_POOL_RULES_JA/ZH` 상수 신규 추가. 싱글 6종 템플릿(weakness/swap/moveset/fill/counter/free)에 `ja`/`jaDouble`/`zh`/`zhDouble` 4키씩, 더블 전용 3종(leads/spread/synergy)에 `jaDouble`/`zhDouble` 2키씩 추가 — 총 30개 신규 바디. `resolveBody()` 가 ja/zh 모드에서 영문 폴백 없이 자국어 프롬프트 반환. `docs/TODO.md` T-i18n-6 완료 처리.

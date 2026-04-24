@@ -30,8 +30,9 @@
     .prompt-card__preview-wrap[open] > .prompt-card__preview { margin-top: .5rem; }
     .prompts-intro { color: var(--text-muted); margin-bottom: 1.25rem; }
     .prompts-intro code { background: var(--bg); padding: 0 .3rem; border-radius: 4px; }
-    .prompts-data-bundle { margin: 0 0 1.25rem; padding: 1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-elevated); }
-    .prompts-data-bundle__title { margin: 0 0 .5rem; font-size: 1rem; }
+    .prompts-data-bundle { margin: 0 0 1.25rem; padding: 1.1rem 1.25rem; border: 2px solid var(--accent); border-radius: var(--radius-md); background: var(--bg-elevated); box-shadow: 0 2px 10px rgba(0,0,0,.05); }
+    .prompts-data-bundle__title { margin: 0 0 .5rem; font-size: 1.05rem; font-weight: 700; }
+    .prompts-data-bundle__lede { margin: 0 0 .6rem; font-size: .9rem; color: var(--text); line-height: 1.55; }
     .prompts-data-bundle__steps { margin: 0 0 .75rem; padding-left: 1.1rem; color: var(--text-muted); font-size: .9rem; line-height: 1.6; list-style: none; }
     .prompts-data-bundle__steps li { margin: .15rem 0; }
     .mode-toggle-wrap { margin: 0 0 1.25rem; padding: .85rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg-elevated); display: grid; grid-template-columns: auto auto 1fr; gap: .5rem 1rem; align-items: center; }
@@ -116,7 +117,7 @@
   <main id="main" class="container">
     <section class="page-header">
       <h1 class="page-title" data-i18n="prompts.title">AI에게 물어볼 질문 만들기</h1>
-      <p class="page-lead" data-i18n="prompts.lead">현재 파티를 Claude·ChatGPT 같은 AI 에게 바로 붙여넣을 수 있도록 만든 질문 템플릿 모음. URL fetch 가 가능한 AI 는 링크로, 그렇지 않으면 인라인 데이터 버전으로 복사하세요.</p>
+      <p class="page-lead" data-i18n="prompts.lead">현재 파티로 Claude·ChatGPT·Gemini 등에 바로 질문할 수 있는 템플릿 모음. 가장 정확한 답을 받으려면 아래 Champions 데이터 파일을 AI 챗에 먼저 첨부한 뒤 원하는 카드를 복사하세요.</p>
     </section>
 
     <ul class="prompts-use-cases" data-i18n-aria="prompts.guide.usecases.label" aria-label="이런 상황에 유용합니다">
@@ -144,11 +145,11 @@
         </li>
         <li class="prompts-stepper__item is-current">
           <span class="prompts-stepper__dot" aria-hidden="true">3</span>
-          <span class="prompts-stepper__text" aria-current="step" data-i18n="prompts.guide.stepper.step3">질문 선택</span>
+          <span class="prompts-stepper__text" aria-current="step" data-i18n="prompts.guide.stepper.step3">데이터 첨부</span>
         </li>
         <li class="prompts-stepper__item">
           <span class="prompts-stepper__dot" aria-hidden="true">4</span>
-          <span class="prompts-stepper__text" data-i18n="prompts.guide.stepper.step4">복사 · 붙여넣기</span>
+          <span class="prompts-stepper__text" data-i18n="prompts.guide.stepper.step4">질문 선택 · 복사</span>
         </li>
       </ol>
     </nav>
@@ -162,18 +163,19 @@
       <p class="mode-toggle-wrap__hint" data-i18n="prompts.mode.hint">더블 모드는 리드 조합·스프레드 기술·파트너 시너지 관점으로 질문을 재작성하고, 더블 전용 카드 3개를 추가로 보여줍니다.</p>
     </section>
 
-    <section id="party-summary" class="prompts-summary" data-i18n-aria="prompts.summaryAria" aria-label="현재 파티 요약"></section>
-
     <section class="prompts-data-bundle" aria-labelledby="data-bundle-title">
-      <h2 class="prompts-data-bundle__title" id="data-bundle-title" data-i18n="prompts.dataBundleTitle">📦 AI 가 데이터 fetch 를 못 하는 경우</h2>
+      <h2 class="prompts-data-bundle__title" id="data-bundle-title" data-i18n="prompts.dataBundleTitle">📎 먼저 하세요 — Champions 데이터 파일을 AI 챗에 첨부</h2>
+      <p class="prompts-data-bundle__lede" data-i18n="prompts.dataBundleLede">무료 ChatGPT · Gemini 는 링크를 못 읽는 경우가 많습니다. 이 파일을 챗에 미리 첨부해 두면 AI 가 Champions 데이터를 정확히 참조해 답합니다.</p>
       <ol class="prompts-data-bundle__steps">
         <li data-i18n="prompts.dataBundleStep1">1. 아래 버튼으로 Champions 전체 데이터 파일을 다운로드</li>
         <li data-i18n="prompts.dataBundleStep2">2. AI 채팅에 해당 파일을 첨부 (drag & drop 또는 파일 업로드)</li>
-        <li data-i18n="prompts.dataBundleStep3">3. 원하는 카드의 "프롬프트 + 데이터 복사" 로 프롬프트를 따로 복사</li>
-        <li data-i18n="prompts.dataBundleStep4">4. 챗에 붙여넣고 제출 — AI 는 첨부된 데이터를 Champions 의 진실의 소스로 사용합니다</li>
+        <li data-i18n="prompts.dataBundleStep3">3. 아래 카드에서 원하는 "프롬프트 + 데이터 복사" 버튼 클릭</li>
+        <li data-i18n="prompts.dataBundleStep4">4. 챗에 붙여넣고 제출 — AI 가 첨부 파일을 진실의 소스로 사용합니다</li>
       </ol>
       <button type="button" class="button button--primary" id="data-bundle-download" data-i18n="prompts.dataBundleButton">Champions 데이터 파일 다운로드 (~1MB)</button>
     </section>
+
+    <section id="party-summary" class="prompts-summary" data-i18n-aria="prompts.summaryAria" aria-label="현재 파티 요약"></section>
 
     <section id="prompt-cards" class="card-grid" data-i18n-aria="prompts.cardsAria" aria-label="프롬프트 카드"></section>
 
