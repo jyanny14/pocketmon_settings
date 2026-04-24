@@ -15,6 +15,10 @@ import {
   DETAILED_RULES_EN,
   DETAILED_RULES_JA,
   DETAILED_RULES_ZH,
+  FOOTER_FALLBACK_KO,
+  FOOTER_FALLBACK_EN,
+  FOOTER_FALLBACK_JA,
+  FOOTER_FALLBACK_ZH,
 } from "./prompts-templates.js";
 
 const DETAILED_RULES_BY_LANG = {
@@ -22,6 +26,13 @@ const DETAILED_RULES_BY_LANG = {
   en: DETAILED_RULES_EN,
   ja: DETAILED_RULES_JA,
   zh: DETAILED_RULES_ZH,
+};
+
+const FOOTER_FALLBACK_BY_LANG = {
+  ko: FOOTER_FALLBACK_KO,
+  en: FOOTER_FALLBACK_EN,
+  ja: FOOTER_FALLBACK_JA,
+  zh: FOOTER_FALLBACK_ZH,
 };
 
 const state = {
@@ -89,112 +100,22 @@ function showFatal(msg) {
 
 // ── data extraction ──────────────────────────────────────────
 
+// The party JSON now only carries identifiers — the AI looks up types,
+// stats, ability text, item effect, and per-move numerics in the attached
+// champions-data JSON. Keeping this identifier-only keeps a 6-slot party
+// under ~1.5KB instead of ~4-5KB.
 function extractSlot(slot) {
   if (!slot) return null;
   const p = state.pokemonMap.get(slot.slug);
   if (!p) return null;
   const form = findForm(p, slot.formName) || p.forms[0];
-  const ability = state.abilityMap.get(slot.abilitySlug) || null;
-  const item = slot.itemSlug ? state.itemMap.get(slot.itemSlug) || null : null;
-
-  // Emit only the current UI language's display fields so the inline JSON
-  // matches the language-filtered data bundle. Without this the AI tends to
-  // anchor on English names even in Korean prompts. `form.name` stays — it's
-  // an English functional identifier, not a display name.
-  // Phase 1 M2: 4-way 언어 분기 (ko/en/ja/zh).
-  const lang = getLang();
-  const pickName = (obj) => {
-    // obj 는 { nameKo, nameEn, nameJa, nameZh } 를 가진 엔트리.
-    // 현재 언어 값이 없으면 영어로 폴백 (이름은 PokeAPI 공식 지역화만 담김).
-    switch (lang) {
-      case "ja": return { nameJa: obj.nameJa || obj.nameEn };
-      case "zh": return { nameZh: obj.nameZh || obj.nameEn };
-      case "en": return { nameEn: obj.nameEn };
-      default:   return { nameKo: obj.nameKo || obj.nameEn };
-    }
-  };
-
-  // Only the 4 configured moves are expanded inline. The full learnable pool
-  // is intentionally omitted — any template that needs it tells the AI to
-  // fetch pokemon.json + moves.json instead. Without this change the inline
-  // JSON ballooned to ~60KB for a 6-slot party.
-  const configuredMoves = (Array.isArray(slot.moves) ? slot.moves : [])
-    .map((s) => {
-      const m = state.moveMap.get(s);
-      if (!m) return { slug: s };
-      const out = {
-        slug: m.slug,
-        ...pickName(m),
-        type: m.type,
-        category: m.category,
-        power: m.power,
-        accuracy: m.accuracy,
-        pp: m.pp,
-      };
-      if (m.updatedInChampions) out.updatedInChampions = true;
-      return out;
-    });
-
-  const formNameLoc =
-    lang === "ja" ? form.nameJa :
-    lang === "zh" ? form.nameZh :
-    lang === "ko" ? form.nameKo : "";
-
-  // gameText / effect 필드 4-way 분기. ja/zh 는 Phase 2 에서 PokeAPI flavor 수집됨.
-  // 해당 언어 값이 없으면 영어 원문으로 폴백 (AI 가 최소한 읽을 수 있게).
-  const pickLocalized = (obj, koKey, jaKey, zhKey, enKey, descFallback) => {
-    if (!obj) return "";
-    switch (lang) {
-      case "ja": return obj[jaKey] || obj[enKey] || obj[descFallback] || "";
-      case "zh": return obj[zhKey] || obj[enKey] || obj[descFallback] || "";
-      case "en": return obj[enKey] || obj[descFallback] || "";
-      default:   return obj[koKey] || obj[enKey] || obj[descFallback] || "";
-    }
-  };
-  const abilityText = pickLocalized(
-    ability, "gameTextKo", "gameTextJa", "gameTextZh", "gameText", "description",
-  );
-  const abilityTextKey =
-    lang === "ja" ? "gameTextJa"
-    : lang === "zh" ? "gameTextZh"
-    : lang === "en" ? "gameText"
-    : "gameTextKo";
-  const itemEffect = pickLocalized(
-    item, "effectKo", "effectJa", "effectZh", "effect", "",
-  );
-  const itemEffectKey =
-    lang === "ja" ? "effectJa"
-    : lang === "zh" ? "effectZh"
-    : lang === "en" ? "effect"
-    : "effectKo";
 
   return {
     slug: slot.slug,
-    dex: p.number,
-    ...pickName(p),
-    form: {
-      name: form.name, // English functional id — required to distinguish forms
-      ...(formNameLoc ? { [`name${lang[0].toUpperCase() + lang.slice(1)}`]: formNameLoc } : {}),
-      types: form.types,
-      baseStats: form.baseStats,
-      abilities: form.abilities,
-    },
-    ability: ability
-      ? {
-          slug: ability.slug,
-          ...pickName(ability),
-          [abilityTextKey]: abilityText,
-          ...(ability.isNewInChampions ? { isNewInChampions: true } : {}),
-        }
-      : null,
-    item: item
-      ? {
-          slug: item.slug,
-          ...pickName(item),
-          [itemEffectKey]: itemEffect,
-        }
-      : null,
-    moves: configuredMoves,
+    formName: form.name, // English functional id — required to distinguish forms
+    ability: slot.abilitySlug || null,
+    item: slot.itemSlug || null,
+    moves: Array.isArray(slot.moves) ? slot.moves.filter(Boolean) : [],
     sps: Array.isArray(slot.sps) ? slot.sps : [0, 0, 0, 0, 0, 0],
     nature: slot.nature || null,
   };
@@ -248,13 +169,25 @@ function resolveBody(bodySpec) {
   );
 }
 
-function substitute(bodySpec, { includeData }) {
-  const body = resolveBody(bodySpec);
+function substitute(bodySpec) {
+  const body = resolveBody(bodySpec).trim();
   const u = currentUrls();
-  const inline = includeData ? buildInlineJson() : t("prompts.urlOnlyHint");
+  const lang = getLang();
+  const inline = buildInlineJson();
+  const footer = FOOTER_FALLBACK_BY_LANG[lang] || FOOTER_FALLBACK_EN;
   const filled = state.party.filter(Boolean).length;
   const empty = state.party.length - filled;
-  return body
+  // With the data bundle attached, any body line that points the AI at a
+  // fetch URL for the champions data (pokemon/moves/abilities/items JSON
+  // or reference HTML, or the site guide llms.txt) is dead weight — the
+  // attachment already carries every row in those files. Strip those
+  // lines regardless of the language-specific label prefix. PARTY_URL
+  // (user reference) and DATA_BUNDLE_PAGE_URL (used by the footer) stay.
+  const stripped = `${body}\n\n${footer}`.replace(
+    /^.*\{\{(LLMS_TXT_URL|POKEMON_JSON_URL|MOVES_JSON_URL|ITEMS_JSON_URL|ABILITIES_JSON_URL|POKEMON_REF_URL|MOVES_REF_URL|ABILITIES_REF_URL|ITEMS_REF_URL)\}\}.*\r?\n?/gm,
+    "",
+  );
+  return stripped
     .replaceAll("{{PARTY_URL}}", u.partyUrl)
     .replaceAll("{{LLMS_TXT_URL}}", u.llmsUrl)
     .replaceAll("{{POKEMON_JSON_URL}}", u.pokemonJsonUrl)
@@ -306,15 +239,10 @@ function renderCards() {
     const title = t(tpl.titleKey);
     const desc = t(tpl.descKey);
     card.innerHTML = `
-      <h2 class="card__title">${title}${
-        tpl.requiresPokemonPool
-          ? `<span class="prompt-card__tag">${t("prompts.fetchRequired")}</span>`
-          : ""
-      }</h2>
+      <h2 class="card__title">${title}</h2>
       <p class="card__desc">${desc}</p>
       <div class="prompt-card__actions">
-        <button type="button" class="button button--primary" data-action="copy-full">${t("prompts.copyWithData")}</button>
-        <button type="button" class="button" data-action="copy-url">${t("prompts.copyUrlOnly")}</button>
+        <button type="button" class="button button--primary" data-action="copy">${t("prompts.copy")}</button>
       </div>
       <details class="prompt-card__preview-wrap">
         <summary class="prompt-card__toggle">${t("prompts.previewToggle")}</summary>
@@ -323,21 +251,16 @@ function renderCards() {
       </details>
     `;
     const pre = card.querySelector(".prompt-card__preview");
-    const btnUrl = card.querySelector('[data-action="copy-url"]');
-    const btnFull = card.querySelector('[data-action="copy-full"]');
+    const btnCopy = card.querySelector('[data-action="copy"]');
 
-    // Preview = full variant (including inline JSON) so the user sees the heaviest case.
-    pre.textContent = substitute(tpl.body, { includeData: hasParty });
+    pre.textContent = substitute(tpl.body);
 
-    btnUrl.addEventListener("click", () => {
-      copyToClipboard(substitute(tpl.body, { includeData: false }), btnUrl);
-    });
-    btnFull.addEventListener("click", () => {
+    btnCopy.addEventListener("click", () => {
       if (!hasParty) {
         alert(t("prompts.emptyCantCopy"));
         return;
       }
-      copyToClipboard(substitute(tpl.body, { includeData: true }), btnFull);
+      copyToClipboard(substitute(tpl.body), btnCopy);
     });
 
     els.cards.appendChild(card);

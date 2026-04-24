@@ -3,33 +3,28 @@
 // getLang() at substitute() time. Rule blocks and the shared disclaimer
 // are likewise split into ko/en/ja/zh variants and baked in at module-load.
 
-// ── Shared header — disclaimer about Champions vs main series ───
+// Disclaimer about Champions vs main series is embedded in the data
+// bundle's _readme field (see prompts.js bundleReadme), so prompt bodies
+// no longer need to repeat it per-message.
 
-export const SHARED_DISCLAIMER_KO =
-  "이 데이터는 **Pokémon Champions** 기준입니다. 본편 시리즈(Scarlet/Violet 등)와 일부 밸런스·특성·아이템이 다릅니다. 제공된 JSON/URL 을 진실의 소스로 삼고, 사전지식과 충돌하면 제공된 데이터를 따라주세요. Champions 고유 변경점 플래그: `abilities.json[].isNewInChampions`, `moves.json[].updatedInChampions`.";
+// ── Footer fallback (appended to every prompt by substitute()) ──
+// Rescue message for users who skipped the data-file attach step.
 
-export const SHARED_DISCLAIMER_EN =
-  "This data is based on **Pokémon Champions**. Balance, abilities, and items differ in places from the main series (Scarlet/Violet etc.). Treat the provided JSON/URLs as the source of truth; if your prior knowledge conflicts with the data, follow the data. Champions-specific change flags: `abilities.json[].isNewInChampions`, `moves.json[].updatedInChampions`.";
+export const FOOTER_FALLBACK_KO =
+  "첨부 파일이 없다면 {{DATA_BUNDLE_PAGE_URL}} 에서 Champions 데이터 파일을 받아 이 챗에 첨부 후 다시 물어주세요 — Champions 데이터 없이는 정확한 답이 불가합니다.";
 
-export const SHARED_DISCLAIMER_JA =
-  "このデータは **Pokémon Champions** 基準です。本編シリーズ（Scarlet/Violetなど）とはバランス・特性・道具が一部異なります。提供されたJSON/URLを真実の情報源として扱い、事前知識と矛盾する場合はデータに従ってください。Champions固有の変更フラグ：`abilities.json[].isNewInChampions`、`moves.json[].updatedInChampions`。";
+export const FOOTER_FALLBACK_EN =
+  "If there's no attachment yet, grab the Champions data file at {{DATA_BUNDLE_PAGE_URL}}, attach it to this chat, and ask again — without the data an accurate answer isn't possible.";
 
-export const SHARED_DISCLAIMER_ZH =
-  "本数据基于 **Pokémon Champions**。与本传系列（朱/紫等）在部分平衡性、特性和道具上有所不同。请以提供的JSON/URL作为唯一真实来源；若与既有认知冲突，请以数据为准。Champions专属变更标志：`abilities.json[].isNewInChampions`、`moves.json[].updatedInChampions`。";
+export const FOOTER_FALLBACK_JA =
+  "添付ファイルがない場合は {{DATA_BUNDLE_PAGE_URL}} から Champions データファイルを取得してこのチャットに添付し、再度お尋ねください — Champions データなしに正確な回答はできません。";
+
+export const FOOTER_FALLBACK_ZH =
+  "如果还没有附件，请在 {{DATA_BUNDLE_PAGE_URL}} 获取 Champions 数据文件并附加到本对话后再询问 — 没有 Champions 数据无法准确回答。";
 
 // ── Strict pool constraint (ko) ──────────────────────────────────
 
-export const STRICT_POOL_RULES_KO = `**데이터 제약 (엄격 · 반드시 준수 · 위반 시 답변 무효)**
-
-⚠️ **CORE RULE — Champions 데이터 밖의 포켓몬·특성·도구·기술은 언급 금지**
-언급하는 모든 고유명사는 첨부된 champions-data JSON 의 \`slug\` 로 검증 가능해야 합니다. 매칭 불가 = Champions 에 없음 = **언급 금지**. 본편(SV, Legends: Z-A 등) 메타·유명도·VGC 강세는 근거가 되지 않습니다. **확인 불가한 이름은 한 글자도 쓰지 마세요.**
-
-**필수 절차:**
-1. 답변 작성 전, 이 챗에 첨부된 \`champions-data-*.json\` 파일을 열고 최상단 \`_rules\` 필드(상세 규칙·부재 예시·자기 검증 체크리스트)를 끝까지 읽고 전부 준수하세요. 매 답변마다 파일을 다시 열어 slug 를 조회하세요 (대화 요약본·이전 턴 기억 의존 금지).
-2. 모든 추천 항목에 slug + 출처 병기: \`아머까오 (slug: corviknight, 출처: pokemon.json)\` 형식. slug 를 지어내지 말고, JSON 에서 조회 후에만 쓰세요.
-3. 불확실하면 제안하지 마세요. \`_rules\` 의 지침대로 유사 대체 항목을 찾거나 유저에게 재확인을 요청하세요.
-
-**첨부 파일이 없을 때 폴백**: (a) fetch JSON — {{POKEMON_JSON_URL}} · {{ABILITIES_JSON_URL}} · {{ITEMS_JSON_URL}} · {{MOVES_JSON_URL}} > (b) fetch HTML — {{POKEMON_REF_URL}} · {{MOVES_REF_URL}} · {{ABILITIES_REF_URL}} · {{ITEMS_REF_URL}} > (c) 아래 인라인 JSON. 전부 불가하면: **"{{DATA_BUNDLE_PAGE_URL}} 에서 'Champions 데이터 파일 다운로드' 버튼으로 데이터 파일을 받아 이 챗에 첨부해주세요."** 절대 사전 지식으로 메우지 마세요.`;
+export const STRICT_POOL_RULES_KO = `첨부된 champions-data JSON 을 진실의 소스로 사용하세요. 해당 파일 최상단 \`_rules\` 필드(상세 규칙·부재 예시·자기검증 체크리스트)를 먼저 읽고 전부 준수하세요. 모든 추천 항목은 slug+출처 병기 (예: \`아머까오 (slug: corviknight, 출처: pokemon.json)\`). 파티의 상세 수치·효과는 champions-data 의 해당 배열에서 조회하세요. 불확실하면 \`_rules\` 지침대로 대체 항목을 찾거나 유저에게 재확인을 요청하세요.`;
 
 // ── Detailed rules (embedded into champions-data JSON `_rules` field) ──
 // These ship inside the data bundle so the AI reads them alongside the
@@ -68,17 +63,7 @@ export const DETAILED_RULES_KO = `**데이터 제약 · 상세 규칙 (champions
 
 // ── Strict pool constraint (en) ──────────────────────────────────
 
-export const STRICT_POOL_RULES_EN = `**Data constraints (strict · must follow · violations invalidate the answer)**
-
-⚠️ **CORE RULE — Never mention Pokémon/abilities/items/moves outside the Champions data**
-Every proper noun you mention must be verifiable against a \`slug\` in the attached champions-data JSON. No match = not in Champions = **do not mention it**. Main-series meta, fame, or VGC strength are not evidence. **If you can't verify a name, don't write a single character of it.**
-
-**Required procedure:**
-1. Before writing anything, open the \`champions-data-*.json\` attached to this chat, read its top-level \`_rules\` field (detailed rules, missing-entry examples, self-verification checklist) in full, and follow everything there. Re-open the file every answer to look up slugs directly — don't rely on earlier-turn memory or conversation summaries.
-2. Every recommendation must carry slug + source: \`Corviknight (slug: corviknight, source: pokemon.json)\`. Don't invent slugs — only write one after locating it in the JSON.
-3. If you're unsure, don't recommend. Follow \`_rules\` guidance to pick a functionally similar alternative or ask the user to re-check the data.
-
-**Fallback when no attachment is present**: (a) fetch JSON — {{POKEMON_JSON_URL}} · {{ABILITIES_JSON_URL}} · {{ITEMS_JSON_URL}} · {{MOVES_JSON_URL}} > (b) fetch HTML — {{POKEMON_REF_URL}} · {{MOVES_REF_URL}} · {{ABILITIES_REF_URL}} · {{ITEMS_REF_URL}} > (c) the inline JSON below. If none work: **"Please open {{DATA_BUNDLE_PAGE_URL}}, click 'Download Champions data file', and attach the file to this chat."** Never fill the gap from prior knowledge.`;
+export const STRICT_POOL_RULES_EN = `Use the attached champions-data JSON as the source of truth. Read its top-level \`_rules\` field (detailed rules, missing-entry examples, self-verification checklist) in full and follow everything there before writing. Every recommendation must carry slug + source (e.g. \`Corviknight (slug: corviknight, source: pokemon.json)\`). Look up per-move/ability/item numerics in the matching array of champions-data — the party JSON below gives you only identifiers. If unsure, follow \`_rules\` guidance to pick a similar alternative or ask the user to re-check the data.`;
 
 export const DETAILED_RULES_EN = `**Data constraints · Detailed rules (embedded in champions-data JSON)**
 
@@ -112,17 +97,7 @@ This \`_rules\` block is embedded inside the attached champions-data JSON. Obey 
 
 // ── Strict pool constraint (ja) ──────────────────────────────────
 
-export const STRICT_POOL_RULES_JA = `**データ制約（厳守・違反した場合は回答無効）**
-
-⚠️ **CORE RULE — Championsデータ外のポケモン・特性・道具・技は言及禁止**
-言及するすべての固有名詞は、添付された champions-data JSON の \`slug\` で検証可能でなければなりません。一致しない＝Championsに存在しない＝**言及禁止**。本編（SV、Legends: Z-Aなど）の人気・メタ地位・VGC強豪は根拠になりません。**確認できない名前は一文字も書かないでください。**
-
-**必須手順：**
-1. 回答を書く前に、このチャットに添付された \`champions-data-*.json\` を開き、最上部の \`_rules\` フィールド（詳細ルール・不在例・自己検証チェックリスト）を最後まで読み、すべて遵守してください。毎回答ごとにファイルを再度開いて slug を直接検索してください（会話要約・過去ターン記憶への依存禁止）。
-2. すべての推薦項目に slug + 出典を併記：\`アーマーガア (slug: corviknight, 出典: pokemon.json)\` の形式。slug を作り出さず、JSON で確認してから書いてください。
-3. 不確かな場合は提案しないでください。\`_rules\` の指針に従って類似代替品を探すか、ユーザーにデータの再確認を依頼してください。
-
-**添付ファイルがない場合のフォールバック**：(a) fetch JSON — {{POKEMON_JSON_URL}} · {{ABILITIES_JSON_URL}} · {{ITEMS_JSON_URL}} · {{MOVES_JSON_URL}} > (b) fetch HTML — {{POKEMON_REF_URL}} · {{MOVES_REF_URL}} · {{ABILITIES_REF_URL}} · {{ITEMS_REF_URL}} > (c) 下記のインライン JSON。すべて不可能な場合：**「{{DATA_BUNDLE_PAGE_URL}} で『Championsデータファイルをダウンロード』ボタンからファイルを取得し、このチャットに添付してください。」** 事前知識で補うのは絶対禁止。`;
+export const STRICT_POOL_RULES_JA = `添付された champions-data JSON を真実の情報源として使用してください。ファイル最上部の \`_rules\` フィールド（詳細ルール・不在例・自己検証チェックリスト）を最後まで読み、すべて遵守してから回答してください。すべての推薦項目に slug + 出典を併記 (例: \`アーマーガア (slug: corviknight, 出典: pokemon.json)\`)。特性・道具・技の詳細数値や効果は champions-data の該当配列で検索してください — 下のパーティ JSON には識別子のみ含まれます。不確かな場合は \`_rules\` の指針に従い類似代替品を探すか、ユーザーにデータの再確認を依頼してください。`;
 
 export const DETAILED_RULES_JA = `**データ制約・詳細ルール（champions-data JSON 内蔵規則集）**
 
@@ -156,17 +131,7 @@ export const DETAILED_RULES_JA = `**データ制約・詳細ルール（champion
 
 // ── Strict pool constraint (zh) ──────────────────────────────────
 
-export const STRICT_POOL_RULES_ZH = `**数据约束（严格遵守·违反则回答无效）**
-
-⚠️ **CORE RULE — 禁止提及 Champions 数据之外的宝可梦·特性·道具·招式**
-你提及的所有专有名词必须能对照附件 champions-data JSON 中的 \`slug\` 完成验证。无法匹配 = 不在 Champions 中 = **禁止提及**。本传（朱紫、Legends: Z-A 等）的人气、对战地位、VGC 强势均不是依据。**无法确认的名称，一个字也不要写。**
-
-**必要流程：**
-1. 撰写回答前，打开本对话中附加的 \`champions-data-*.json\`，完整阅读并遵守顶层 \`_rules\` 字段（详细规则·不在示例·自我核验清单）。每次回答都需重新打开该文件直接查询 slug（禁止依赖会话摘要或历史对话记忆）。
-2. 所有推荐项目须附 slug + 出处：\`铁甲鸦 (slug: corviknight, 出处: pokemon.json)\` 格式。不要凭空编造 slug，必须在 JSON 中找到后才写。
-3. 不确定时不要推荐。按 \`_rules\` 的指引寻找功能类似的替代项，或请用户重新核对数据。
-
-**无附件时的回退**：(a) fetch JSON — {{POKEMON_JSON_URL}} · {{ABILITIES_JSON_URL}} · {{ITEMS_JSON_URL}} · {{MOVES_JSON_URL}} > (b) fetch HTML — {{POKEMON_REF_URL}} · {{MOVES_REF_URL}} · {{ABILITIES_REF_URL}} · {{ITEMS_REF_URL}} > (c) 下方内联 JSON。若全部不可行：**「请前往 {{DATA_BUNDLE_PAGE_URL}}，点击『下载 Champions 数据文件』按钮获取文件并附加到本对话。」** 绝对禁止使用已有知识填补空缺。`;
+export const STRICT_POOL_RULES_ZH = `请以附件的 champions-data JSON 作为真实来源。撰写回答前，完整阅读并遵守该文件顶层的 \`_rules\` 字段（详细规则·不在示例·自我核验清单）。所有推荐项目须附 slug + 出处（例：\`铁甲鸦 (slug: corviknight, 出处: pokemon.json)\`）。特性·道具·招式的详细数值或效果请在 champions-data 的对应数组中查询 — 下方队伍 JSON 中仅包含识别符。不确定时请按 \`_rules\` 的指引寻找功能类似的替代项，或请用户重新核对数据。`;
 
 export const DETAILED_RULES_ZH = `**数据约束·详细规则（champions-data JSON 内置规则集）**
 
@@ -207,9 +172,7 @@ export const TEMPLATES = [
     descKey: "prompts.tmpl.weakness.desc",
     requiresPokemonPool: false,
     body: {
-      ko: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      ko: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -229,9 +192,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -252,9 +213,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      en: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      en: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -274,9 +233,7 @@ Party (inline reference data):
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -297,9 +254,7 @@ Party (inline reference data):
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      ja: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      ja: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -319,9 +274,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -342,9 +295,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zh: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zh: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -364,9 +315,7 @@ ${STRICT_POOL_RULES_ZH}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -396,9 +345,7 @@ ${STRICT_POOL_RULES_ZH}
     descKey: "prompts.tmpl.swap.desc",
     requiresPokemonPool: true,
     body: {
-      ko: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      ko: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -420,9 +367,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -448,9 +393,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      en: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      en: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -472,9 +415,7 @@ Current party inline data:
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -500,9 +441,7 @@ Current party inline data:
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      ja: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      ja: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -524,9 +463,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -552,9 +489,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zh: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zh: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -576,9 +511,7 @@ ${STRICT_POOL_RULES_ZH}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -613,9 +546,7 @@ ${STRICT_POOL_RULES_ZH}
     descKey: "prompts.tmpl.moveset.desc",
     requiresPokemonPool: false,
     body: {
-      ko: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      ko: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -641,9 +572,7 @@ ${STRICT_POOL_RULES_KO}
 - 포켓몬 2: …
 - …
 `,
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -670,9 +599,7 @@ ${STRICT_POOL_RULES_KO}
 - 포켓몬 2: …
 - …
 `,
-      en: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      en: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -698,9 +625,7 @@ Output format:
 - Pokémon 2: …
 - …
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -727,9 +652,7 @@ Output format:
 - Pokémon 2: …
 - …
 `,
-      ja: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      ja: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -755,9 +678,7 @@ ${STRICT_POOL_RULES_JA}
 - ポケモン2：…
 - …
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -784,9 +705,7 @@ ${STRICT_POOL_RULES_JA}
 - ポケモン2：…
 - …
 `,
-      zh: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zh: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -812,9 +731,7 @@ ${STRICT_POOL_RULES_ZH}
 - 宝可梦2：…
 - …
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -850,9 +767,7 @@ ${STRICT_POOL_RULES_ZH}
     descKey: "prompts.tmpl.fill.desc",
     requiresPokemonPool: true,
     body: {
-      ko: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      ko: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -882,9 +797,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -918,9 +831,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      en: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      en: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -950,9 +861,7 @@ Current party inline data ({{FILLED_COUNT}} members, empty slots excluded):
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -986,9 +895,7 @@ Current party inline data ({{FILLED_COUNT}} members, empty slots excluded):
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      ja: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      ja: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1016,9 +923,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1052,9 +957,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zh: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zh: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -1082,9 +985,7 @@ ${STRICT_POOL_RULES_ZH}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -1127,9 +1028,7 @@ ${STRICT_POOL_RULES_ZH}
     descKey: "prompts.tmpl.counter.desc",
     requiresPokemonPool: false,
     body: {
-      ko: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      ko: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -1153,9 +1052,7 @@ ${STRICT_POOL_RULES_KO}
 
 (상대 파티 데이터가 필요하면 위 OPPONENT_URL 을 fetch 하거나, 내가 JSON 으로 같이 붙여드릴게요. 상대 포켓몬도 pokemon.json 에 존재하는 종만 언급하세요.)
 `,
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -1180,9 +1077,7 @@ ${STRICT_POOL_RULES_KO}
 
 (상대 파티 데이터가 필요하면 OPPONENT_URL 을 fetch 하거나 JSON 을 같이 붙여드릴게요. 상대 포켓몬도 pokemon.json 실존 종만.)
 `,
-      en: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      en: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -1206,9 +1101,7 @@ My party inline data:
 
 (If you need the opponent's data, fetch the OPPONENT_URL above or I'll paste the JSON. Only mention opposing Pokémon that exist in pokemon.json.)
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -1233,9 +1126,7 @@ My party inline data:
 
 (If you need the opponent's data, fetch OPPONENT_URL or I'll paste JSON. Opposing Pokémon must also exist in pokemon.json.)
 `,
-      ja: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      ja: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1259,9 +1150,7 @@ ${STRICT_POOL_RULES_JA}
 
 （相手のデータが必要な場合はOPPONENT_URLをfetchするか、JSONを貼り付けてください。相手のポケモンもpokemon.jsonに実在する種のみ言及してください。）
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1286,9 +1175,7 @@ ${STRICT_POOL_RULES_JA}
 
 （相手のデータが必要な場合はOPPONENT_URLをfetchするか、JSONを貼り付けてください。相手のポケモンもpokemon.json実在種のみ。）
 `,
-      zh: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zh: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -1312,9 +1199,7 @@ ${STRICT_POOL_RULES_ZH}
 
 （若需要对方数据，请fetch上方OPPONENT_URL，或将JSON一并粘贴。对方宝可梦也仅限pokemon.json中存在的种类。）
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -1348,9 +1233,7 @@ ${STRICT_POOL_RULES_ZH}
     descKey: "prompts.tmpl.free.desc",
     requiresPokemonPool: false,
     body: {
-      ko: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      ko: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -1368,9 +1251,7 @@ ${STRICT_POOL_RULES_KO}
 
 내 질문:
 `,
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -1388,9 +1269,7 @@ ${STRICT_POOL_RULES_KO}
 
 내 질문:
 `,
-      en: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      en: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -1408,9 +1287,7 @@ Party inline data:
 
 My question:
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -1428,9 +1305,7 @@ Party inline data:
 
 My question:
 `,
-      ja: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      ja: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1448,9 +1323,7 @@ ${STRICT_POOL_RULES_JA}
 
 私の質問：
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1468,9 +1341,7 @@ ${STRICT_POOL_RULES_JA}
 
 私の質問：
 `,
-      zh: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zh: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -1488,9 +1359,7 @@ ${STRICT_POOL_RULES_ZH}
 
 我的问题：
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -1519,9 +1388,7 @@ ${STRICT_POOL_RULES_ZH}
     descKey: "prompts.tmpl.leads.desc",
     requiresPokemonPool: false,
     body: {
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -1545,9 +1412,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -1571,9 +1436,7 @@ Party inline data:
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1597,9 +1460,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -1633,9 +1494,7 @@ ${STRICT_POOL_RULES_ZH}
     descKey: "prompts.tmpl.spread.desc",
     requiresPokemonPool: false,
     body: {
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -1662,9 +1521,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -1691,9 +1548,7 @@ Party inline data:
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1720,9 +1575,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
@@ -1759,9 +1612,7 @@ ${STRICT_POOL_RULES_ZH}
     descKey: "prompts.tmpl.synergy.desc",
     requiresPokemonPool: false,
     body: {
-      koDouble: `${SHARED_DISCLAIMER_KO}
-
-${STRICT_POOL_RULES_KO}
+      koDouble: `${STRICT_POOL_RULES_KO}
 
 ---
 
@@ -1785,9 +1636,7 @@ ${STRICT_POOL_RULES_KO}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      enDouble: `${SHARED_DISCLAIMER_EN}
-
-${STRICT_POOL_RULES_EN}
+      enDouble: `${STRICT_POOL_RULES_EN}
 
 ---
 
@@ -1811,9 +1660,7 @@ Party inline data:
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      jaDouble: `${SHARED_DISCLAIMER_JA}
-
-${STRICT_POOL_RULES_JA}
+      jaDouble: `${STRICT_POOL_RULES_JA}
 
 ---
 
@@ -1837,9 +1684,7 @@ ${STRICT_POOL_RULES_JA}
 {{PARTY_INLINE_JSON}}
 \`\`\`
 `,
-      zhDouble: `${SHARED_DISCLAIMER_ZH}
-
-${STRICT_POOL_RULES_ZH}
+      zhDouble: `${STRICT_POOL_RULES_ZH}
 
 ---
 
