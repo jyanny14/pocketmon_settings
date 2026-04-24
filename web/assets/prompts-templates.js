@@ -24,7 +24,7 @@ export const FOOTER_FALLBACK_ZH =
 
 // ── Strict pool constraint (ko) ──────────────────────────────────
 
-export const STRICT_POOL_RULES_KO = `첨부된 champions-data JSON 을 진실의 소스로 사용하세요. 해당 파일 최상단 \`_rules\` 필드(상세 규칙·부재 예시·자기검증 체크리스트)를 먼저 읽고 전부 준수하세요. 모든 추천 항목은 slug+출처 병기 (예: \`아머까오 (slug: corviknight, 출처: pokemon.json)\`). 파티의 상세 수치·효과는 champions-data 의 해당 배열에서 조회하세요. 불확실하면 \`_rules\` 지침대로 대체 항목을 찾거나 유저에게 재확인을 요청하세요.`;
+export const STRICT_POOL_RULES_KO = `첨부된 champions-data JSON 을 진실의 소스로 사용하세요. 해당 파일 최상단 \`_rules\` 필드(상세 규칙·부재 예시·자기검증 체크리스트)를 먼저 읽고 전부 준수하세요. **답변의 모든 고유명사(포켓몬·특성·도구·기술)는 한국어 이름을 먼저 쓰고**, 괄호 안에 slug+출처를 병기하세요 (예: \`아머까오 (slug: corviknight, 출처: pokemon.json)\`). 파티의 상세 수치·효과는 champions-data 의 해당 배열에서 조회하세요. 불확실하면 \`_rules\` 지침대로 대체 항목을 찾거나 유저에게 재확인을 요청하세요.`;
 
 // ── Detailed rules (embedded into champions-data JSON `_rules` field) ──
 // These ship inside the data bundle so the AI reads them alongside the
@@ -63,7 +63,7 @@ export const DETAILED_RULES_KO = `**데이터 제약 · 상세 규칙 (champions
 
 // ── Strict pool constraint (en) ──────────────────────────────────
 
-export const STRICT_POOL_RULES_EN = `Use the attached champions-data JSON as the source of truth. Read its top-level \`_rules\` field (detailed rules, missing-entry examples, self-verification checklist) in full and follow everything there before writing. Every recommendation must carry slug + source (e.g. \`Corviknight (slug: corviknight, source: pokemon.json)\`). Look up per-move/ability/item numerics in the matching array of champions-data — the party JSON below gives you only identifiers. If unsure, follow \`_rules\` guidance to pick a similar alternative or ask the user to re-check the data.`;
+export const STRICT_POOL_RULES_EN = `Use the attached champions-data JSON as the source of truth. Read its top-level \`_rules\` field (detailed rules, missing-entry examples, self-verification checklist) in full and follow everything there before writing. **Lead every proper noun (Pokémon / ability / item / move) in your answer with its English display name**, then put slug + source in parentheses (e.g. \`Corviknight (slug: corviknight, source: pokemon.json)\`). Look up per-move/ability/item numerics in the matching array of champions-data — the party JSON below gives you identifiers plus display names. If unsure, follow \`_rules\` guidance to pick a similar alternative or ask the user to re-check the data.`;
 
 export const DETAILED_RULES_EN = `**Data constraints · Detailed rules (embedded in champions-data JSON)**
 
@@ -97,7 +97,7 @@ This \`_rules\` block is embedded inside the attached champions-data JSON. Obey 
 
 // ── Strict pool constraint (ja) ──────────────────────────────────
 
-export const STRICT_POOL_RULES_JA = `添付された champions-data JSON を真実の情報源として使用してください。ファイル最上部の \`_rules\` フィールド（詳細ルール・不在例・自己検証チェックリスト）を最後まで読み、すべて遵守してから回答してください。すべての推薦項目に slug + 出典を併記 (例: \`アーマーガア (slug: corviknight, 出典: pokemon.json)\`)。特性・道具・技の詳細数値や効果は champions-data の該当配列で検索してください — 下のパーティ JSON には識別子のみ含まれます。不確かな場合は \`_rules\` の指針に従い類似代替品を探すか、ユーザーにデータの再確認を依頼してください。`;
+export const STRICT_POOL_RULES_JA = `添付された champions-data JSON を真実の情報源として使用してください。ファイル最上部の \`_rules\` フィールド（詳細ルール・不在例・自己検証チェックリスト）を最後まで読み、すべて遵守してから回答してください。**回答のすべての固有名詞（ポケモン・特性・道具・技）は日本語の名前を先に書き**、括弧内に slug + 出典を併記してください (例: \`アーマーガア (slug: corviknight, 出典: pokemon.json)\`)。特性・道具・技の詳細数値や効果は champions-data の該当配列で検索してください。不確かな場合は \`_rules\` の指針に従い類似代替品を探すか、ユーザーにデータの再確認を依頼してください。`;
 
 export const DETAILED_RULES_JA = `**データ制約・詳細ルール（champions-data JSON 内蔵規則集）**
 
@@ -131,7 +131,7 @@ export const DETAILED_RULES_JA = `**データ制約・詳細ルール（champion
 
 // ── Strict pool constraint (zh) ──────────────────────────────────
 
-export const STRICT_POOL_RULES_ZH = `请以附件的 champions-data JSON 作为真实来源。撰写回答前，完整阅读并遵守该文件顶层的 \`_rules\` 字段（详细规则·不在示例·自我核验清单）。所有推荐项目须附 slug + 出处（例：\`铁甲鸦 (slug: corviknight, 出处: pokemon.json)\`）。特性·道具·招式的详细数值或效果请在 champions-data 的对应数组中查询 — 下方队伍 JSON 中仅包含识别符。不确定时请按 \`_rules\` 的指引寻找功能类似的替代项，或请用户重新核对数据。`;
+export const STRICT_POOL_RULES_ZH = `请以附件的 champions-data JSON 作为真实来源。撰写回答前，完整阅读并遵守该文件顶层的 \`_rules\` 字段（详细规则·不在示例·自我核验清单）。**回答中所有专有名词（宝可梦·特性·道具·招式）请先写中文名称**，再在括号内附上 slug + 出处（例：\`铁甲鸦 (slug: corviknight, 出处: pokemon.json)\`）。特性·道具·招式的详细数值或效果请在 champions-data 的对应数组中查询。不确定时请按 \`_rules\` 的指引寻找功能类似的替代项，或请用户重新核对数据。`;
 
 export const DETAILED_RULES_ZH = `**数据约束·详细规则（champions-data JSON 内置规则集）**
 

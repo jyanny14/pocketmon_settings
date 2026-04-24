@@ -1148,6 +1148,18 @@ function makeItemSelect(index, slot) {
   none.value = "";
   none.textContent = t("party.noItem");
   sel.appendChild(none);
+  // Item clause: a held item can only be on one Pokémon in the party.
+  // Collect item slugs other slots already hold so we can disable them
+  // here. The current slot's own item is never in this map, so the
+  // currently-selected option stays enabled.
+  const takenByOther = new Map(); // slug -> 1-based other slot index
+  state.party.forEach((other, i) => {
+    if (i === index) return;
+    if (!other || !other.itemSlug) return;
+    if (!takenByOther.has(other.itemSlug)) {
+      takenByOther.set(other.itemSlug, i + 1);
+    }
+  });
   const byCategory = { held: [], "mega-stone": [], berry: [] };
   for (const it of state.items) {
     byCategory[it.category]?.push(it);
@@ -1160,7 +1172,13 @@ function makeItemSelect(index, slot) {
     for (const it of list) {
       const opt = document.createElement("option");
       opt.value = it.slug;
-      opt.textContent = itemDisplayName(it);
+      const takenSlot = takenByOther.get(it.slug);
+      if (takenSlot !== undefined) {
+        opt.disabled = true;
+        opt.textContent = `${itemDisplayName(it)} — ${t("party.itemTakenBy").replace("{n}", String(takenSlot))}`;
+      } else {
+        opt.textContent = itemDisplayName(it);
+      }
       if (it.slug === slot.itemSlug) opt.selected = true;
       group.appendChild(opt);
     }

@@ -100,22 +100,48 @@ function showFatal(msg) {
 
 // ── data extraction ──────────────────────────────────────────
 
-// The party JSON now only carries identifiers — the AI looks up types,
-// stats, ability text, item effect, and per-move numerics in the attached
-// champions-data JSON. Keeping this identifier-only keeps a 6-slot party
-// under ~1.5KB instead of ~4-5KB.
+// Identifier + display-name pairs. Stats, effect text, and per-move
+// numerics still live in the attached champions-data JSON — the party
+// JSON only carries what the AI needs to mirror in its reply. Without
+// the localized names inline the AI tends to output raw English slugs
+// even when the user asked in Korean/Japanese/Chinese.
 function extractSlot(slot) {
   if (!slot) return null;
   const p = state.pokemonMap.get(slot.slug);
   if (!p) return null;
   const form = findForm(p, slot.formName) || p.forms[0];
+  const lang = getLang();
+  const nameKey =
+    lang === "ja" ? "nameJa"
+    : lang === "zh" ? "nameZh"
+    : lang === "en" ? "nameEn"
+    : "nameKo";
+  const pickName = (obj) => {
+    if (!obj) return undefined;
+    switch (lang) {
+      case "ja": return obj.nameJa || obj.nameEn;
+      case "zh": return obj.nameZh || obj.nameEn;
+      case "en": return obj.nameEn;
+      default:   return obj.nameKo || obj.nameEn;
+    }
+  };
+
+  const ability = slot.abilitySlug ? state.abilityMap.get(slot.abilitySlug) : null;
+  const item = slot.itemSlug ? state.itemMap.get(slot.itemSlug) : null;
+  const moves = (Array.isArray(slot.moves) ? slot.moves : [])
+    .filter(Boolean)
+    .map((s) => {
+      const m = state.moveMap.get(s);
+      return m ? { slug: s, [nameKey]: pickName(m) } : { slug: s };
+    });
 
   return {
     slug: slot.slug,
+    [nameKey]: pickName(p),
     formName: form.name, // English functional id — required to distinguish forms
-    ability: slot.abilitySlug || null,
-    item: slot.itemSlug || null,
-    moves: Array.isArray(slot.moves) ? slot.moves.filter(Boolean) : [],
+    ability: ability ? { slug: slot.abilitySlug, [nameKey]: pickName(ability) } : null,
+    item: item ? { slug: slot.itemSlug, [nameKey]: pickName(item) } : null,
+    moves,
     sps: Array.isArray(slot.sps) ? slot.sps : [0, 0, 0, 0, 0, 0],
     nature: slot.nature || null,
   };
